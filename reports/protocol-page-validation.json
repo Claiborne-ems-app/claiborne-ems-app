@@ -1,0 +1,2196 @@
+{
+  "pdfPageCount": 295,
+  "validationStatus": "passed",
+  "structuralExceptions": [
+    {
+      "type": "shared-start-page",
+      "startPage": 15,
+      "protocols": [
+        "medical/universal-patient-care",
+        "pediatrics/universal-patient-care",
+        "obstetrics/universal-patient-care"
+      ],
+      "reason": "The PDF intentionally uses one shared Universal Patient Care page for multiple category codes."
+    }
+  ],
+  "protocols": [
+    {
+      "category": "medical",
+      "code": "M-1",
+      "title": "Universal Patient Care",
+      "startPage": 15,
+      "endPage": 15,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-2",
+      "title": "Medical Assessment",
+      "startPage": 16,
+      "endPage": 16,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-3",
+      "title": "Abdominal Pain",
+      "startPage": 17,
+      "endPage": 17,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-4",
+      "title": "Adrenal Insufficiency/Endocrine Shock",
+      "startPage": 18,
+      "endPage": 18,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-5",
+      "title": "Alcohol Emergencies",
+      "startPage": 19,
+      "endPage": 19,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-6",
+      "title": "Allergic Reaction",
+      "startPage": 20,
+      "endPage": 20,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-7",
+      "title": "Altered Mental Status",
+      "startPage": 21,
+      "endPage": 21,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-8",
+      "title": "Aortic Aneurysm/Dissection",
+      "startPage": 22,
+      "endPage": 22,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-9",
+      "title": "Atrial Fibrillation/Flutter",
+      "startPage": 23,
+      "endPage": 23,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-10",
+      "title": "Asystole/PEA",
+      "startPage": 24,
+      "endPage": 24,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-11",
+      "title": "Behavioral Emergencies",
+      "startPage": 25,
+      "endPage": 25,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-12",
+      "title": "Bradycardia",
+      "startPage": 26,
+      "endPage": 26,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-13",
+      "title": "Cardiac Arrest",
+      "startPage": 27,
+      "endPage": 27,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-14",
+      "title": "Cardiogenic Shock",
+      "startPage": 28,
+      "endPage": 28,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-15",
+      "title": "Chest Pain/STEMI",
+      "startPage": 29,
+      "endPage": 30,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-16",
+      "title": "Hyperglycemia",
+      "startPage": 31,
+      "endPage": 32,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-17",
+      "title": "Hypoglycemia",
+      "startPage": 33,
+      "endPage": 33,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-18",
+      "title": "Hyperkalemia",
+      "startPage": 34,
+      "endPage": 34,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-19",
+      "title": "Hypertensive Crisis",
+      "startPage": 35,
+      "endPage": 35,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-20",
+      "title": "Hyperthermia",
+      "startPage": 36,
+      "endPage": 36,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-21",
+      "title": "Hypothermia",
+      "startPage": 37,
+      "endPage": 38,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-22",
+      "title": "Nausea/Vomiting",
+      "startPage": 39,
+      "endPage": 39,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-23",
+      "title": "Organophosphate Poisoning",
+      "startPage": 40,
+      "endPage": 40,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-24",
+      "title": "OD: General",
+      "startPage": 41,
+      "endPage": 41,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-25",
+      "title": "OD: Anticholinergic",
+      "startPage": 42,
+      "endPage": 42,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-26",
+      "title": "OD: Benzodiazepine",
+      "startPage": 43,
+      "endPage": 43,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-27",
+      "title": "OD: Betablocker",
+      "startPage": 44,
+      "endPage": 44,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-28",
+      "title": "OD: Calcium Channel Blocker",
+      "startPage": 45,
+      "endPage": 45,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-29",
+      "title": "OD: Hallucinogen",
+      "startPage": 46,
+      "endPage": 46,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-30",
+      "title": "OD: Narcotic/Opioid",
+      "startPage": 47,
+      "endPage": 47,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-31",
+      "title": "OD: Selective serotonin reuptake inhibitors",
+      "startPage": 48,
+      "endPage": 48,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-32",
+      "title": "OD: Stimulant",
+      "startPage": 49,
+      "endPage": 49,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-33",
+      "title": "OD: Tricyclic Antidepressants",
+      "startPage": 50,
+      "endPage": 50,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-34",
+      "title": "Post Arrest",
+      "startPage": 51,
+      "endPage": 51,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-35",
+      "title": "Pulmonary Edema",
+      "startPage": 52,
+      "endPage": 52,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-36",
+      "title": "PVCs",
+      "startPage": 53,
+      "endPage": 53,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-37",
+      "title": "Respiratory Distress",
+      "startPage": 54,
+      "endPage": 54,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-38",
+      "title": "Seizure",
+      "startPage": 55,
+      "endPage": 55,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-39",
+      "title": "Sepsis",
+      "startPage": 56,
+      "endPage": 56,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-40",
+      "title": "Shock",
+      "startPage": 57,
+      "endPage": 57,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-41",
+      "title": "Snake Bite",
+      "startPage": 58,
+      "endPage": 58,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-42",
+      "title": "Stroke",
+      "startPage": 59,
+      "endPage": 60,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-43",
+      "title": "Tachycardia",
+      "startPage": 61,
+      "endPage": 61,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medical",
+      "code": "M-44",
+      "title": "V fib/Pulseless V Tach",
+      "startPage": 62,
+      "endPage": 62,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-1",
+      "title": "Trauma Assessment",
+      "startPage": 63,
+      "endPage": 63,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-2",
+      "title": "Abdominal Trauma",
+      "startPage": 64,
+      "endPage": 64,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-3",
+      "title": "Amputations",
+      "startPage": 65,
+      "endPage": 65,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-4",
+      "title": "Burns General",
+      "startPage": 66,
+      "endPage": 66,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-5",
+      "title": "Burns Chemical",
+      "startPage": 67,
+      "endPage": 67,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-6",
+      "title": "Burns Electrical",
+      "startPage": 68,
+      "endPage": 68,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-7",
+      "title": "Burns Inhalation",
+      "startPage": 69,
+      "endPage": 69,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-8",
+      "title": "Burns Thermal",
+      "startPage": 70,
+      "endPage": 70,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-9",
+      "title": "Crush Injury",
+      "startPage": 71,
+      "endPage": 71,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-10",
+      "title": "Facial Injury",
+      "startPage": 72,
+      "endPage": 72,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-11",
+      "title": "Flail Chest",
+      "startPage": 73,
+      "endPage": 73,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-12",
+      "title": "Head Injury",
+      "startPage": 74,
+      "endPage": 75,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-13",
+      "title": "Hemorrhagic Shock",
+      "startPage": 76,
+      "endPage": 76,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-14",
+      "title": "Ocular Injury",
+      "startPage": 77,
+      "endPage": 77,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-15",
+      "title": "Orthopedic Injuries",
+      "startPage": 78,
+      "endPage": 78,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-16",
+      "title": "Thoracic Injury",
+      "startPage": 79,
+      "endPage": 79,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "trauma",
+      "code": "T-17",
+      "title": "Traumatic Cardiac Arrest",
+      "startPage": 80,
+      "endPage": 80,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-1",
+      "title": "Universal Patient Care",
+      "startPage": 15,
+      "endPage": 15,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-2",
+      "title": "Pediatric Assessment",
+      "startPage": 81,
+      "endPage": 81,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-3",
+      "title": "Adrenal Insufficiency/Endocrine Shock",
+      "startPage": 82,
+      "endPage": 82,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-4",
+      "title": "Allergic Reaction",
+      "startPage": 83,
+      "endPage": 83,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-5",
+      "title": "Asthma",
+      "startPage": 84,
+      "endPage": 84,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-6",
+      "title": "Asystole/PEA",
+      "startPage": 85,
+      "endPage": 85,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-7",
+      "title": "Bradycardia",
+      "startPage": 86,
+      "endPage": 86,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-8",
+      "title": "Cardiac Arrest",
+      "startPage": 87,
+      "endPage": 87,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-9",
+      "title": "Croup",
+      "startPage": 88,
+      "endPage": 88,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-10",
+      "title": "Epiglottis",
+      "startPage": 89,
+      "endPage": 89,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-11",
+      "title": "Hyperglycemia",
+      "startPage": 90,
+      "endPage": 90,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-12",
+      "title": "Hypoglycemia",
+      "startPage": 91,
+      "endPage": 91,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-13",
+      "title": "Hyperkalemia",
+      "startPage": 92,
+      "endPage": 92,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-14",
+      "title": "Neonatal Resuscitation",
+      "startPage": 93,
+      "endPage": 94,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-15",
+      "title": "Organophosphate",
+      "startPage": 95,
+      "endPage": 95,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-16",
+      "title": "OD: General",
+      "startPage": 96,
+      "endPage": 96,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-17",
+      "title": "OD: Anticholinergic",
+      "startPage": 97,
+      "endPage": 97,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-18",
+      "title": "OD: Betablocker",
+      "startPage": 98,
+      "endPage": 98,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-19",
+      "title": "OD: Benzodiazepine",
+      "startPage": 99,
+      "endPage": 99,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-20",
+      "title": "OD: Calcium Channel Blocker",
+      "startPage": 100,
+      "endPage": 100,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-21",
+      "title": "OD: Hallucinogen",
+      "startPage": 101,
+      "endPage": 101,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-22",
+      "title": "OD: Narcotic/Opioid",
+      "startPage": 102,
+      "endPage": 102,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-23",
+      "title": "OD: Stimulant",
+      "startPage": 103,
+      "endPage": 103,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-24",
+      "title": "OD: Selective serotonin reuptake inhibitors",
+      "startPage": 104,
+      "endPage": 104,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-25",
+      "title": "OD: Tricyclic Antidepressant",
+      "startPage": 105,
+      "endPage": 105,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-26",
+      "title": "Pneumonia",
+      "startPage": 106,
+      "endPage": 106,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-27",
+      "title": "Post Resuscitation",
+      "startPage": 107,
+      "endPage": 107,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-28",
+      "title": "Respiratory Distress",
+      "startPage": 108,
+      "endPage": 108,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-29",
+      "title": "Seizure",
+      "startPage": 109,
+      "endPage": 110,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-30",
+      "title": "Sepsis",
+      "startPage": 111,
+      "endPage": 111,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-31",
+      "title": "Tachycardia",
+      "startPage": 112,
+      "endPage": 113,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-32",
+      "title": "Traumatic Arrest",
+      "startPage": 114,
+      "endPage": 114,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "pediatrics",
+      "code": "P-33",
+      "title": "V Fib/ V Tach",
+      "startPage": 115,
+      "endPage": 115,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-1",
+      "title": "Universal Patient Care",
+      "startPage": 15,
+      "endPage": 15,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-2",
+      "title": "OB Assessment",
+      "startPage": 116,
+      "endPage": 116,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-3",
+      "title": "OB: General",
+      "startPage": 117,
+      "endPage": 117,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-4",
+      "title": "Abortion",
+      "startPage": 118,
+      "endPage": 118,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-5",
+      "title": "Abruptio Placentae",
+      "startPage": 119,
+      "endPage": 119,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-6",
+      "title": "Amniotic Fluid Embolism",
+      "startPage": 120,
+      "endPage": 120,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-7",
+      "title": "Cardiac Arrest",
+      "startPage": 121,
+      "endPage": 121,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-8",
+      "title": "Childbirth: General",
+      "startPage": 122,
+      "endPage": 122,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-9",
+      "title": "Childbirth: Braxton-Hicks",
+      "startPage": 123,
+      "endPage": 123,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-10",
+      "title": "Childbirth: Breech",
+      "startPage": 124,
+      "endPage": 124,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-11",
+      "title": "Childbirth: Cephalopelvic Disproportion",
+      "startPage": 125,
+      "endPage": 125,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-12",
+      "title": "Childbirth: Limb Presentation",
+      "startPage": 126,
+      "endPage": 126,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-13",
+      "title": "Childbirth: Multiple Births",
+      "startPage": 127,
+      "endPage": 127,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-14",
+      "title": "Childbirth: Occiput Posterior Position",
+      "startPage": 128,
+      "endPage": 128,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-15",
+      "title": "Childbirth: Preterm Labor",
+      "startPage": 129,
+      "endPage": 129,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-16",
+      "title": "Childbirth: Prolapsed Cord",
+      "startPage": 130,
+      "endPage": 130,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-17",
+      "title": "Childbirth: Shoulder Dystocia",
+      "startPage": 131,
+      "endPage": 131,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-18",
+      "title": "Childbirth: Vaginal Delivery",
+      "startPage": 132,
+      "endPage": 133,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-19",
+      "title": "Eclampsia",
+      "startPage": 134,
+      "endPage": 134,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-20",
+      "title": "Ectopic Pregnancy",
+      "startPage": 135,
+      "endPage": 135,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-21",
+      "title": "Placenta Previa",
+      "startPage": 136,
+      "endPage": 136,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-22",
+      "title": "Postpartum Hemorrhage",
+      "startPage": 137,
+      "endPage": 137,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "obstetrics",
+      "code": "O-23",
+      "title": "Preeclampsia",
+      "startPage": 138,
+      "endPage": 138,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-1",
+      "title": "C-spine Clearance",
+      "startPage": 139,
+      "endPage": 139,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-2",
+      "title": "Hemorrhage Control",
+      "startPage": 140,
+      "endPage": 140,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-3",
+      "title": "Limb Realignment",
+      "startPage": 141,
+      "endPage": 142,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-4",
+      "title": "Mechanical Traction",
+      "startPage": 143,
+      "endPage": 143,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-5",
+      "title": "Intraosseous Needle Placement",
+      "startPage": 144,
+      "endPage": 146,
+      "pageCount": 3,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-6",
+      "title": "Intranasal Atomizer",
+      "startPage": 147,
+      "endPage": 147,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-7",
+      "title": "12-Lead EKG",
+      "startPage": 148,
+      "endPage": 148,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-8",
+      "title": "Defibrillation",
+      "startPage": 149,
+      "endPage": 149,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-9",
+      "title": "Synchronized Cardioversion",
+      "startPage": 150,
+      "endPage": 150,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-10",
+      "title": "External Pacing",
+      "startPage": 151,
+      "endPage": 151,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-11",
+      "title": "ICP Monitoring",
+      "startPage": 152,
+      "endPage": 153,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-12",
+      "title": "Blood Product Administration",
+      "startPage": 154,
+      "endPage": 154,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-13",
+      "title": "Needle Decompression",
+      "startPage": 155,
+      "endPage": 155,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-14",
+      "title": "Wayne Pneumothorax Catheter",
+      "startPage": 156,
+      "endPage": 157,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-15",
+      "title": "Finger Thoracostomy",
+      "startPage": 158,
+      "endPage": 158,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-16",
+      "title": "POCUS",
+      "startPage": 159,
+      "endPage": 159,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-17",
+      "title": "Intentionally Left Blank",
+      "startPage": 160,
+      "endPage": 160,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-18",
+      "title": "Indwelling Port Access",
+      "startPage": 161,
+      "endPage": 161,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-19",
+      "title": "Sedation & Pain Management",
+      "startPage": 162,
+      "endPage": 162,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-20",
+      "title": "Procedural Sedation",
+      "startPage": 163,
+      "endPage": 163,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-21",
+      "title": "Airway Management",
+      "startPage": 164,
+      "endPage": 164,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-22",
+      "title": "Needle Cricothyrotomy",
+      "startPage": 165,
+      "endPage": 166,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-23",
+      "title": "Surgical Cricothyrotomy",
+      "startPage": 167,
+      "endPage": 168,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-24",
+      "title": "RSI",
+      "startPage": 169,
+      "endPage": 169,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-25",
+      "title": "Post Intubation Management",
+      "startPage": 170,
+      "endPage": 170,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-26",
+      "title": "Ventilator Circuit Setup",
+      "startPage": 171,
+      "endPage": 171,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-27",
+      "title": "Adult Ventilator Management",
+      "startPage": 172,
+      "endPage": 172,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-28",
+      "title": "Pediatric Ventilator Management",
+      "startPage": 173,
+      "endPage": 173,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-29",
+      "title": "Protective Strategy",
+      "startPage": 174,
+      "endPage": 174,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-30",
+      "title": "Obstructive/High Resistant Strategy",
+      "startPage": 175,
+      "endPage": 176,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-31",
+      "title": "Severe Hypoxia/ARDS Strategy",
+      "startPage": 177,
+      "endPage": 178,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-32",
+      "title": "ASV",
+      "startPage": 179,
+      "endPage": 179,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-33",
+      "title": "BiPAP/CPAP",
+      "startPage": 180,
+      "endPage": 181,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-34",
+      "title": "Tourniquet Take Down",
+      "startPage": 182,
+      "endPage": 182,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "procedures",
+      "code": "C-35",
+      "title": "Backboard Removal",
+      "startPage": 183,
+      "endPage": 183,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-1",
+      "title": "Acetaminophen",
+      "startPage": 184,
+      "endPage": 184,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-2",
+      "title": "Adenosine",
+      "startPage": 185,
+      "endPage": 185,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-3",
+      "title": "Albuterol",
+      "startPage": 186,
+      "endPage": 186,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-4",
+      "title": "Amiodarone",
+      "startPage": 187,
+      "endPage": 187,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-5",
+      "title": "Aspirin",
+      "startPage": 188,
+      "endPage": 188,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-6",
+      "title": "Atropine",
+      "startPage": 189,
+      "endPage": 189,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-7",
+      "title": "Betamethasone",
+      "startPage": 190,
+      "endPage": 190,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-8",
+      "title": "Calcium Chloride",
+      "startPage": 191,
+      "endPage": 191,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-9",
+      "title": "Calcium Gluconate",
+      "startPage": 192,
+      "endPage": 192,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-10",
+      "title": "Ceftriaxone",
+      "startPage": 193,
+      "endPage": 193,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-11",
+      "title": "Clevidipine",
+      "startPage": 194,
+      "endPage": 194,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-12",
+      "title": "Dexamethasone",
+      "startPage": 195,
+      "endPage": 195,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-13",
+      "title": "Dextrose",
+      "startPage": 196,
+      "endPage": 196,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-14",
+      "title": "Diltiazem",
+      "startPage": 197,
+      "endPage": 197,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-15",
+      "title": "Diphenhydramine",
+      "startPage": 198,
+      "endPage": 198,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-16",
+      "title": "Dobutamine",
+      "startPage": 199,
+      "endPage": 199,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-17",
+      "title": "Droperidol",
+      "startPage": 200,
+      "endPage": 200,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-18",
+      "title": "Epinephrine 1:1000",
+      "startPage": 201,
+      "endPage": 201,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-19",
+      "title": "Epinephrine 1:10,000",
+      "startPage": 202,
+      "endPage": 202,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-20",
+      "title": "Epinephrine Infusion & PDP",
+      "startPage": 203,
+      "endPage": 203,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-21",
+      "title": "Esmolol",
+      "startPage": 204,
+      "endPage": 204,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-22",
+      "title": "Etomidate",
+      "startPage": 205,
+      "endPage": 205,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-23",
+      "title": "Fentanyl",
+      "startPage": 206,
+      "endPage": 206,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-24",
+      "title": "Glucagon",
+      "startPage": 207,
+      "endPage": 207,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-25",
+      "title": "Hydralazine",
+      "startPage": 208,
+      "endPage": 208,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-26",
+      "title": "Hydrocortisone",
+      "startPage": 209,
+      "endPage": 209,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-27",
+      "title": "Hypertonic Saline",
+      "startPage": 210,
+      "endPage": 210,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-28",
+      "title": "Ketamine - ADULT",
+      "startPage": 211,
+      "endPage": 211,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-29",
+      "title": "Ketamine - PEDS",
+      "startPage": 212,
+      "endPage": 212,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-30",
+      "title": "Ketorolac",
+      "startPage": 213,
+      "endPage": 213,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-31",
+      "title": "Labetalol",
+      "startPage": 214,
+      "endPage": 214,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-32",
+      "title": "Levetiracetam",
+      "startPage": 215,
+      "endPage": 215,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-33",
+      "title": "Lidocaine",
+      "startPage": 216,
+      "endPage": 216,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-34",
+      "title": "Lorazepam",
+      "startPage": 217,
+      "endPage": 217,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-35",
+      "title": "Magnesium Sulfate - ADULT",
+      "startPage": 218,
+      "endPage": 218,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-36",
+      "title": "Magnesium Sulfate - PEDS",
+      "startPage": 219,
+      "endPage": 219,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-37",
+      "title": "Methylprednisolone",
+      "startPage": 220,
+      "endPage": 220,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-38",
+      "title": "Metoprolol",
+      "startPage": 221,
+      "endPage": 221,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-39",
+      "title": "Midazolam - ADULT",
+      "startPage": 222,
+      "endPage": 222,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-40",
+      "title": "Midazolam - PEDS",
+      "startPage": 223,
+      "endPage": 223,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-41",
+      "title": "Misoprostol",
+      "startPage": 224,
+      "endPage": 224,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-42",
+      "title": "Naloxone",
+      "startPage": 225,
+      "endPage": 225,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-43",
+      "title": "Nifedipine",
+      "startPage": 226,
+      "endPage": 226,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-44",
+      "title": "Nitroglycerin",
+      "startPage": 227,
+      "endPage": 227,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-45",
+      "title": "Norepinephrine",
+      "startPage": 228,
+      "endPage": 228,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-46",
+      "title": "Ondansetron",
+      "startPage": 229,
+      "endPage": 229,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-47",
+      "title": "Oxytocin",
+      "startPage": 230,
+      "endPage": 230,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-48",
+      "title": "Phenylephrine",
+      "startPage": 231,
+      "endPage": 231,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-49",
+      "title": "Potassium",
+      "startPage": 232,
+      "endPage": 232,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-50",
+      "title": "Racemic Epi",
+      "startPage": 233,
+      "endPage": 233,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-51",
+      "title": "Regular Insulin",
+      "startPage": 234,
+      "endPage": 234,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-52",
+      "title": "Rocuronium",
+      "startPage": 235,
+      "endPage": 235,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-53",
+      "title": "Sodium Bicarbonate",
+      "startPage": 236,
+      "endPage": 236,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-54",
+      "title": "Terbutaline",
+      "startPage": 237,
+      "endPage": 237,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-55",
+      "title": "Tranexamic Acid",
+      "startPage": 238,
+      "endPage": 238,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-56",
+      "title": "Vasopressin",
+      "startPage": 239,
+      "endPage": 239,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "medications",
+      "code": "MED-57",
+      "title": "Vecuronium",
+      "startPage": 240,
+      "endPage": 240,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-1",
+      "title": "Medical Director Authorization",
+      "startPage": 241,
+      "endPage": 241,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-2",
+      "title": "NC to NC Transports",
+      "startPage": 242,
+      "endPage": 242,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-3",
+      "title": "Approved References List",
+      "startPage": 243,
+      "endPage": 243,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-4",
+      "title": "Impella Overview",
+      "startPage": 244,
+      "endPage": 249,
+      "pageCount": 6,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-5",
+      "title": "Impella Alarms",
+      "startPage": 250,
+      "endPage": 253,
+      "pageCount": 4,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-6",
+      "title": "IABP Overview",
+      "startPage": 254,
+      "endPage": 257,
+      "pageCount": 4,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-7",
+      "title": "IABP Alarms",
+      "startPage": 258,
+      "endPage": 260,
+      "pageCount": 3,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-8",
+      "title": "VAD FAQs",
+      "startPage": 261,
+      "endPage": 261,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-9",
+      "title": "Pt. Management for VADs",
+      "startPage": 262,
+      "endPage": 262,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-10",
+      "title": "Heartmate II",
+      "startPage": 263,
+      "endPage": 263,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-11",
+      "title": "Heartmate III",
+      "startPage": 264,
+      "endPage": 264,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-12",
+      "title": "Heartware",
+      "startPage": 265,
+      "endPage": 265,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-13",
+      "title": "Jarvik 2000",
+      "startPage": 266,
+      "endPage": 266,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-14",
+      "title": "Total Artificial Hearts (TAH) FAQs",
+      "startPage": 267,
+      "endPage": 267,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-15",
+      "title": "Pt. management TAH",
+      "startPage": 268,
+      "endPage": 268,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-16",
+      "title": "TAH IBW RSI/Post Intubation Management",
+      "startPage": 269,
+      "endPage": 269,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-17",
+      "title": "MEND Supraglottic Airway",
+      "startPage": 270,
+      "endPage": 270,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-18",
+      "title": "CIWA Shock Index",
+      "startPage": 271,
+      "endPage": 272,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-19",
+      "title": "Infusion Guidelines",
+      "startPage": 273,
+      "endPage": 277,
+      "pageCount": 5,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-20",
+      "title": "Push Dose Pressors",
+      "startPage": 278,
+      "endPage": 278,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-21",
+      "title": "Area Hospitals and Associated Capabilities",
+      "startPage": 279,
+      "endPage": 281,
+      "pageCount": 3,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-22",
+      "title": "Middle Tennessee",
+      "startPage": 282,
+      "endPage": 282,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-23",
+      "title": "Burn Centers Burn Centers",
+      "startPage": 283,
+      "endPage": 283,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-24",
+      "title": "Area Hospital Capabilities",
+      "startPage": 284,
+      "endPage": 284,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-25",
+      "title": "Middle TN Hospital Capabilities",
+      "startPage": 285,
+      "endPage": 285,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-26",
+      "title": "Burn Centers",
+      "startPage": 286,
+      "endPage": 286,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-27",
+      "title": "Adult Burn Reference",
+      "startPage": 287,
+      "endPage": 288,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-28",
+      "title": "Peds Burn Reference",
+      "startPage": 289,
+      "endPage": 289,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-29",
+      "title": "RASS",
+      "startPage": 290,
+      "endPage": 290,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-30",
+      "title": "RSI Checklist",
+      "startPage": 291,
+      "endPage": 291,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-31",
+      "title": "IBW Tidal Volume",
+      "startPage": 292,
+      "endPage": 292,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-32",
+      "title": "IBW Pain/Anxiolysis Management",
+      "startPage": 293,
+      "endPage": 294,
+      "pageCount": 2,
+      "validationStatus": "passed"
+    },
+    {
+      "category": "references",
+      "code": "R-33",
+      "title": "IBW Procedural Sedation",
+      "startPage": 295,
+      "endPage": 295,
+      "pageCount": 1,
+      "validationStatus": "passed"
+    }
+  ]
+}
