@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import BottomNav from "../../../components/navigation/BottomNav";
 import AppHeader from "../../../components/navigation/AppHeader";
 import { protocolCategories } from "../../../data/protocols";
-import { getProtocolPageLabel } from "../../../lib/protocols/page-range";
 import CategorySearch from "../../../components/protocols/CategorySearch";
 import { getPrimaryProtocolHref } from "../../../data/structured-protocols";
 
@@ -68,7 +67,7 @@ export default async function CategoryProtocolsPage({
                 </div>
 
                 <div className="mt-1 text-sm text-slate-400">
-                  {getProtocolPageLabel(protocol)}
+                  {protocol.code} · {protocol.pages ? `${protocol.pages} ${protocol.pages === 1 ? "page" : "pages"}` : "PDF"}
                 </div>
               </Link>
             ))

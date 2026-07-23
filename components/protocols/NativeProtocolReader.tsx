@@ -9,7 +9,6 @@ import {
   getProtocolFallbackHref,
   getProtocolViewerHref,
 } from "../../lib/protocols/structured-content";
-import { getProtocolPageLabel } from "../../lib/protocols/page-range";
 import NativeFavoriteControl from "./NativeFavoriteControl";
 import NativeReaderNavigation from "./NativeReaderNavigation";
 
@@ -33,7 +32,7 @@ export default function NativeProtocolReader({ category, protocol, content }: { 
   const sections = content ? getNativeProtocolSections(content) : [{ id: "source", title: "Source Information" }];
   const viewerHref = getProtocolViewerHref(category.id, protocol.id);
   const status = content?.reviewStatus ?? "Draft";
-  const sourcePdf = content?.sourcePdf ?? "covenant-health-air-protocols.pdf";
+  const sourcePdf = content?.sourcePdf ?? protocol.pdfPath;
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
@@ -49,7 +48,7 @@ export default function NativeProtocolReader({ category, protocol, content }: { 
             <span className={`ml-auto rounded-full px-2.5 py-1 text-xs ${status === "Approved" ? "bg-emerald-500/10 text-emerald-300" : status === "Reviewed" ? "bg-sky-500/10 text-sky-300" : "bg-amber-500/10 text-amber-300"}`}>{status}</span>
           </div>
           <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">{protocol.title}</h1>
-          <p className="mt-2 text-sm text-slate-400">{getProtocolPageLabel(protocol)}</p>
+          <p className="mt-2 text-sm text-slate-400">{protocol.pages ? `${protocol.pages} PDF ${protocol.pages === 1 ? "page" : "pages"}` : "PDF protocol"}</p>
         </header>
 
         <aside className="mt-6 rounded-2xl border border-rose-500/40 bg-rose-950/40 p-5" aria-label="Beta clinical disclaimer">
@@ -86,7 +85,7 @@ export default function NativeProtocolReader({ category, protocol, content }: { 
             <dl className="space-y-3 text-sm">
               <div className="flex justify-between gap-4"><dt className="text-slate-400">Protocol revision</dt><dd className="text-right">{content?.revisionDate ?? "Not yet structured"}</dd></div>
               <div className="flex justify-between gap-4"><dt className="text-slate-400">Source PDF</dt><dd className="text-right">{sourcePdf}</dd></div>
-              <div className="flex justify-between gap-4"><dt className="text-slate-400">Source page</dt><dd>{content ? content.sourcePages.start === content.sourcePages.end ? content.sourcePages.start : `${content.sourcePages.start}–${content.sourcePages.end}` : `${protocol.startPage}${protocol.startPage === protocol.endPage ? "" : `–${protocol.endPage}`}`}</dd></div>
+              <div className="flex justify-between gap-4"><dt className="text-slate-400">PDF pages</dt><dd>{protocol.pages ?? "Unknown"}</dd></div>
               <div className="flex justify-between gap-4"><dt className="text-slate-400">Last verified</dt><dd className="text-right">{content?.lastVerifiedDate ?? "Not verified"}</dd></div>
               <div className="flex justify-between gap-4"><dt className="text-slate-400">Review status</dt><dd>{status}</dd></div>
             </dl>

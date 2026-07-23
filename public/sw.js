@@ -1,8 +1,8 @@
-/* Air Protocols transactional offline service worker. */
-const SHELL_PREFIX = "air-protocols-shell-";
-const DOCUMENT_PREFIX = "air-protocols-documents-";
-const METADATA_CACHE = "air-protocols-offline-metadata";
-const STATE_KEY = "/__air_protocols_offline_state__";
+/* Claiborne EMS Protocols transactional offline service worker. */
+const SHELL_PREFIX = "claiborne-protocols-shell-";
+const DOCUMENT_PREFIX = "claiborne-protocols-documents-";
+const METADATA_CACHE = "claiborne-protocols-offline-metadata";
+const STATE_KEY = "/__claiborne_protocols_offline_state__";
 const MANIFEST_URL = "/offline-resources.json";
 const DOWNLOAD_CONCURRENCY = 3;
 const MAX_ATTEMPTS = 3;
@@ -354,7 +354,7 @@ if (typeof self !== "undefined" && self.addEventListener) {
           } catch {
             if (cached) return cached;
             const fallback = await activeCacheMatch(new Request(`${url.origin}/offline`), state);
-            return fallback || new Response("Air Protocols is offline and this page was not downloaded.", { status: 503, headers: { "Content-Type": "text/plain" } });
+            return fallback || new Response("Claiborne EMS Protocols is offline and this page was not downloaded.", { status: 503, headers: { "Content-Type": "text/plain" } });
           }
         }
 

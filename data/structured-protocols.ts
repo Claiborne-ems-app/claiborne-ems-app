@@ -2,10 +2,10 @@ import type { StructuredProtocolContent } from "../lib/protocols/structured-cont
 
 export const structuredProtocols: StructuredProtocolContent[] = [
   {
-    id: "universal-patient-care",
+    id: "up-01",
     title: "Universal Patient Care",
-    categoryId: "medical",
-    category: "Medical",
+    categoryId: "up",
+    category: "Universal Patient Care",
     overview: ["Universal Patient Care Guideline"],
     indications: [],
     contraindications: [],
@@ -81,8 +81,8 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
     ],
     references: ["IBW Reference Chart", "Medical Assessment", "Trauma Assessment", "Obstetrical Assessment", "Pediatric Assessment"],
-    sourcePdf: "covenant-health-air-protocols.pdf",
-    sourcePages: { start: 15, end: 15 },
+    sourcePdf: "/protocols/claiborne/up-01-universal-patient-care-protocol.pdf",
+    sourcePages: { start: 1, end: 1 },
     revisionDate: "July 2026",
     lastVerifiedDate: "July 20, 2026",
     reviewStatus: "Draft",

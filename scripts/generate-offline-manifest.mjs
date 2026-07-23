@@ -1,12 +1,45 @@
-import { copyFile, stat, writeFile } from "node:fs/promises";
+import { copyFile, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { appConfig } from "../lib/app-config.ts";
-import { protocolCategories } from "../data/protocols.ts";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = path.join(projectRoot, "public");
-const operationsPageCount = 442;
+const appConfig = {
+  appVersion: "1.0.0",
+  protocolVersion: "July 2026",
+};
+
+function slugify(value) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export function createProtocolCategories(protocols) {
+  const categories = new Map();
+  for (const protocol of protocols) {
+    const id = slugify(protocol.categoryCode || protocol.category);
+    const category = categories.get(id) ?? {
+      id,
+      title: protocol.category,
+      protocols: [],
+    };
+    category.protocols.push({ ...protocol, id: slugify(protocol.id) });
+    categories.set(id, category);
+  }
+  return [...categories.values()];
+}
+
+async function readProtocolCatalog() {
+  const source = await readFile(
+    path.join(projectRoot, "src/data/claiborne-protocols.json"),
+    "utf8"
+  );
+  return JSON.parse(source);
+}
 
 export function createOfflineVersion(config = appConfig) {
   return `${config.appVersion}-${config.protocolVersion}`
@@ -15,8 +48,8 @@ export function createOfflineVersion(config = appConfig) {
     .replace(/(^-|-$)/g, "");
 }
 
-export function createOfflineRoutes(categories = protocolCategories) {
-  const routes = ["/", "/protocols", "/operations", "/settings", "/offline"];
+export function createOfflineRoutes(categories) {
+  const routes = ["/", "/protocols", "/settings", "/offline"];
 
   for (const category of categories) {
     routes.push(`/protocols/${category.id}`);
@@ -26,25 +59,17 @@ export function createOfflineRoutes(categories = protocolCategories) {
     }
   }
 
-  for (let page = 1; page <= operationsPageCount; page += 1) {
-    routes.push(`/operations/viewer?page=${page}`);
-  }
-
   return [...new Set(routes)];
 }
 
-const publicResources = [
-  "/protocols/covenant-health-air-protocols.pdf",
-  "/documents/operations/medical-operations-manual.pdf",
+const staticResources = [
   "/offline-data.json",
   "/manifest.webmanifest",
   "/icon.png",
   "/apple-icon.png",
-  "/branding/covenant-health-air-logo.png",
-  "/branding/covenant-health-air-logo-cropped.png",
-  "/icons/covenant-health-air-192.png",
-  "/icons/covenant-health-air-512.png",
-  "/icons/covenant-health-air-apple-touch.png",
+  "/icons/claiborne-ems-192.png",
+  "/icons/claiborne-ems-512.png",
+  "/icons/claiborne-ems-apple-touch.png",
   "/pdfjs/pdf.worker.min.mjs",
   "/pdfjs/wasm/jbig2.wasm",
   "/pdfjs/wasm/jbig2_nowasm_fallback.js",
@@ -69,6 +94,8 @@ export async function generateOfflineManifest() {
     path.join(projectRoot, "node_modules/pdfjs-dist/legacy/build/pdf.worker.min.mjs"),
     path.join(publicRoot, "pdfjs/pdf.worker.min.mjs")
   );
+  const catalog = await readProtocolCatalog();
+  const protocolCategories = createProtocolCategories(catalog);
   const offlineData = {
     version: createOfflineVersion(),
     categories: protocolCategories,
@@ -78,7 +105,11 @@ export async function generateOfflineManifest() {
     `${JSON.stringify(offlineData)}\n`
   );
 
-  const routes = createOfflineRoutes();
+  const routes = createOfflineRoutes(protocolCategories);
+  const publicResources = [
+    ...catalog.map((protocol) => protocol.pdfPath),
+    ...staticResources,
+  ];
   const resources = [
     ...routes.map((url) => ({ url, kind: "route", bytes: null })),
     ...(await Promise.all(

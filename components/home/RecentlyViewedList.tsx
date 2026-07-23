@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useMemo } from "react";
 import { protocolCategories } from "../../data/protocols";
-import { getProtocolPageLabel } from "../../lib/protocols/page-range";
 import { useRecentlyViewed } from "../recently-viewed/useRecentlyViewed";
 import { History } from "lucide-react";
 import { getPrimaryProtocolHref } from "../../data/structured-protocols";
@@ -44,7 +43,7 @@ export default function RecentlyViewedList() {
           <div className="font-semibold text-white">{protocol.title}</div>
 
           <div className="mt-1 text-sm text-slate-400">
-            {category.title} · {getProtocolPageLabel(protocol)}
+            {category.title} · {protocol.code}
           </div>
         </Link>
       ))}

@@ -4,8 +4,8 @@ import type { PdfViewingMode } from "../../lib/protocols/viewing-mode";
 import { usePdfViewingMode } from "./usePdfViewingMode";
 
 const options: { value: PdfViewingMode; title: string; description: string }[] = [
-  { value: "protocol", title: "Protocol View", description: "Show only pages that belong to the selected protocol." },
-  { value: "manual", title: "Full Manual View", description: "Use the browser PDF viewer with document links and full-manual navigation." },
+  { value: "protocol", title: "Protocol View", description: "Render every page in the selected protocol." },
+  { value: "browser", title: "Browser PDF View", description: "Open the selected protocol in the browser PDF viewer." },
 ];
 
 export default function PdfViewingModeSelector() {

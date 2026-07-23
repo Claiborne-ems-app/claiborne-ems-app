@@ -4,7 +4,6 @@ import BottomNav from "../../../../../components/navigation/BottomNav";
 import AppHeader from "../../../../../components/navigation/AppHeader";
 import RecentlyViewedTracker from "../../../../../components/recently-viewed/RecentlyViewedTracker";
 import { protocolCategories } from "../../../../../data/protocols";
-import { getProtocolPdfUrl } from "../../../../../lib/protocols/pdf-url";
 import { getStructuredProtocol, hasReviewedNativeContent } from "../../../../../data/structured-protocols";
 
 export const dynamicParams = false;
@@ -48,12 +47,11 @@ export default async function ProtocolViewerPage({
         <PdfViewer
           fallbackHref={`/protocols/${category.id}`}
           detailsHref={`/protocols/${category.id}/${protocol.id}`}
-          pdfUrl={protocol.pdfPath || getProtocolPdfUrl(protocol.startPage)}
+          pdfUrl={protocol.pdfPath}
           protocolTitle={protocol.title}
           protocolCode={protocol.code}
           categoryTitle={category.title}
-          startPage={protocol.startPage}
-          endPage={protocol.endPage}
+          pages={protocol.pages}
           nativeContentAvailable={hasReviewedNativeContent(
             getStructuredProtocol(category.id, protocol.id)
           )}

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { protocolCategories } from "../../data/protocols";
-import { getProtocolPageLabel } from "../../lib/protocols/page-range";
 import { searchProtocols } from "../../lib/protocols/search";
 import { Search, X } from "lucide-react";
 import { getPrimaryProtocolHref } from "../../data/structured-protocols";
@@ -49,7 +48,7 @@ export default function SearchBar() {
                 </div>
 
                 <div className="mt-1 text-sm text-slate-400">
-                  {categoryTitle} · {getProtocolPageLabel(protocol)}
+                  {categoryTitle} · {protocol.code}
                 </div>
               </Link>
             ))

@@ -4,30 +4,26 @@ import SinglePagePdfViewer from "./SinglePagePdfViewer";
 import { usePdfViewingMode } from "../settings/usePdfViewingMode";
 
 type PdfViewingModeProps = {
-  startPage: number;
-  endPage: number;
   pdfUrl: string;
   protocolTitle: string;
   fallbackHref: string;
 };
 
 export default function PdfViewingMode({
-  startPage,
-  endPage,
   pdfUrl,
   protocolTitle,
   fallbackHref,
 }: PdfViewingModeProps) {
   const { mode } = usePdfViewingMode();
 
-  if (mode === "manual") {
+  if (mode === "browser") {
     return (
-      <section aria-label={`${protocolTitle} full PDF manual`}>
-        <p className="mb-3 text-sm text-slate-400">Full manual view</p>
+      <section aria-label={`${protocolTitle} PDF document`}>
+        <p className="mb-3 text-sm text-slate-400">Browser PDF view</p>
         <iframe
           key={pdfUrl}
           src={pdfUrl}
-          title={`${protocolTitle} full PDF manual`}
+          title={`${protocolTitle} PDF document`}
           className="h-[70vh] min-h-96 w-full rounded-2xl border border-slate-800 bg-slate-900"
         />
       </section>
@@ -36,9 +32,7 @@ export default function PdfViewingMode({
 
   return (
     <SinglePagePdfViewer
-      key={`${startPage}-${endPage}`}
-      startPage={startPage}
-      endPage={endPage}
+      key={pdfUrl}
       pdfUrl={pdfUrl}
       protocolTitle={protocolTitle}
       fallbackHref={fallbackHref}

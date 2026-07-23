@@ -4,9 +4,14 @@ export interface Protocol {
   id: string;
   code: string;
   title: string;
-  startPage: number;
-  endPage: number;
+  category: string;
+  categoryCode: string;
   pdfPath: string;
+  pages: number | null;
+  year: number;
+  source: string;
+  agency: string;
+  status: "draft-import" | "approved";
 }
 
 export interface Category {
@@ -43,15 +48,18 @@ for (const sourceProtocol of claiborneProtocols) {
     categories.set(categoryId, category);
   }
 
-  const pageCount = Math.max(1, sourceProtocol.pages ?? 1);
-
   category.protocols.push({
     id: slugify(sourceProtocol.id),
     code: sourceProtocol.code,
     title: sourceProtocol.title,
-    startPage: 1,
-    endPage: pageCount,
+    category: sourceProtocol.category,
+    categoryCode: sourceProtocol.categoryCode,
     pdfPath: sourceProtocol.pdfPath,
+    pages: sourceProtocol.pages,
+    year: sourceProtocol.year,
+    source: sourceProtocol.source,
+    agency: sourceProtocol.agency,
+    status: sourceProtocol.status,
   });
 }
 

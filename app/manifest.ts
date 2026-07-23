@@ -3,8 +3,8 @@ import type { MetadataRoute } from "next";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Claiborne County EMS Protocols",
-    short_name: "Claiborne County EMS Protocols",
-    description: "Covenant Health Air protocol reference.",
+    short_name: "Claiborne EMS",
+    description: "Claiborne County EMS protocol reference.",
     id: "/",
     start_url: "/",
     scope: "/",
@@ -13,12 +13,12 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#020617",
     icons: [
       {
-        src: "/icons/covenant-health-air-192.png",
+        src: "/icons/claiborne-ems-192.png",
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/icons/covenant-health-air-512.png",
+        src: "/icons/claiborne-ems-512.png",
         sizes: "512x512",
         type: "image/png",
       },

@@ -7,15 +7,12 @@ import type {
 } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { ExternalLink, RefreshCw, RotateCcw, ZoomIn, ZoomOut } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { getProtocolPagePositionLabel } from "../../lib/protocols/page-range";
 
 const MIN_ZOOM = 0.75;
 const MAX_ZOOM = 2.5;
 const ZOOM_STEP = 0.25;
 
 type ProtocolPdfViewerProps = {
-  startPage: number;
-  endPage: number;
   pdfUrl: string;
   protocolTitle: string;
   fallbackHref: string;
@@ -81,7 +78,7 @@ function PdfPageCanvas({
   return <canvas ref={canvasRef} aria-label={`${protocolTitle}, PDF page ${page}`} className="mx-auto block bg-white shadow-lg" />;
 }
 
-export default function SinglePagePdfViewer({ startPage, endPage, pdfUrl, protocolTitle, fallbackHref }: ProtocolPdfViewerProps) {
+export default function SinglePagePdfViewer({ pdfUrl, protocolTitle, fallbackHref }: ProtocolPdfViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [document, setDocument] = useState<PDFDocumentProxy | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -90,7 +87,9 @@ export default function SinglePagePdfViewer({ startPage, endPage, pdfUrl, protoc
   const [renderedPages, setRenderedPages] = useState<number[]>([]);
   const [reloadKey, setReloadKey] = useState(0);
   const sourceUrl = pdfUrl.split("#")[0];
-  const pages = Array.from({ length: endPage - startPage + 1 }, (_, index) => startPage + index);
+  const pages = document
+    ? Array.from({ length: document.numPages }, (_, index) => index + 1)
+    : [];
 
   useEffect(() => {
     const container = containerRef.current;
@@ -149,7 +148,7 @@ export default function SinglePagePdfViewer({ startPage, endPage, pdfUrl, protoc
         {error ? <div className="p-4 text-sm text-rose-300"><p>Unable to load this protocol: {error}</p><div className="mt-4 flex flex-wrap gap-3"><button type="button" onClick={retry} className="min-h-11 rounded-lg bg-sky-600 px-4 font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"><RefreshCw aria-hidden="true" className="mr-2 inline h-4 w-4" />Retry</button><a href={pdfUrl} target="_blank" rel="noreferrer" className="min-h-11 rounded-lg border border-slate-700 px-4 py-3 text-sky-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"><ExternalLink aria-hidden="true" className="mr-2 inline h-4 w-4" />Open Full PDF</a><a href={fallbackHref} className="min-h-11 rounded-lg border border-slate-700 px-4 py-3 text-sky-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Protocol list</a></div></div> : (
           <div className="relative min-h-96 space-y-3">
             {loading && <p aria-live="polite" className="absolute inset-0 z-10 flex items-center justify-center text-sm text-slate-400">{loadingLabel}</p>}
-            {document && containerWidth > 0 && pages.map((page, index) => <figure key={`${page}-${zoom}`} className="space-y-2"><figcaption className="text-center text-xs font-medium text-slate-400">{getProtocolPagePositionLabel(index + 1, pages.length)}</figcaption><PdfPageCanvas document={document} page={page} width={containerWidth} zoom={zoom} protocolTitle={protocolTitle} onRendered={markRendered} onError={renderError} /></figure>)}
+            {document && containerWidth > 0 && pages.map((page) => <figure key={`${page}-${zoom}`} className="space-y-2"><figcaption className="text-center text-xs font-medium text-slate-400">Page {page} of {pages.length}</figcaption><PdfPageCanvas document={document} page={page} width={containerWidth} zoom={zoom} protocolTitle={protocolTitle} onRendered={markRendered} onError={renderError} /></figure>)}
           </div>
         )}
       </div>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import ProtocolBackButton from "../navigation/ProtocolBackButton";
 import PdfViewingMode from "./PdfViewingMode";
-import { getProtocolPageLabel } from "../../lib/protocols/page-range";
 import { ExternalLink, FileText, House } from "lucide-react";
 
 type PdfViewerProps = {
@@ -11,8 +10,7 @@ type PdfViewerProps = {
   protocolTitle: string;
   protocolCode: string;
   categoryTitle: string;
-  startPage: number;
-  endPage: number;
+  pages: number | null;
   nativeContentAvailable: boolean;
 };
 
@@ -23,8 +21,7 @@ export default function PdfViewer({
   protocolTitle,
   protocolCode,
   categoryTitle,
-  startPage,
-  endPage,
+  pages,
   nativeContentAvailable,
 }: PdfViewerProps) {
   return (
@@ -45,7 +42,7 @@ export default function PdfViewer({
       </h1>
 
       <p className="mt-1 mb-4 text-slate-400">
-        {categoryTitle} · {protocolCode} · {getProtocolPageLabel({ startPage, endPage })}
+        {categoryTitle} · {protocolCode} · {pages ? `${pages} PDF ${pages === 1 ? "page" : "pages"}` : "PDF protocol"}
       </p>
 
       {!nativeContentAvailable && (
@@ -55,8 +52,6 @@ export default function PdfViewer({
       )}
 
       <PdfViewingMode
-        startPage={startPage}
-        endPage={endPage}
         pdfUrl={pdfUrl}
         protocolTitle={protocolTitle}
         fallbackHref={fallbackHref}

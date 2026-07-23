@@ -8,7 +8,6 @@ import {
 import { protocolCategories } from "./protocols";
 import { getStructuredProtocol } from "./structured-protocols";
 
-const defaultSourcePdf = "/protocols/covenant-health-air-protocols.pdf";
 const importDate = appConfig.protocolLastUpdated;
 
 export const adminProtocols = createProtocolReviewInventory({
@@ -16,7 +15,6 @@ export const adminProtocols = createProtocolReviewInventory({
   getStructuredContent: getStructuredProtocol,
   reviewRepository: reviewMetadataRepository,
   importDate,
-  defaultSourcePdf,
 });
 
 export const adminDashboardStats = calculateAdminDashboardStats(adminProtocols, importDate);

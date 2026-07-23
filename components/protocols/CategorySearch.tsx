@@ -5,7 +5,6 @@ import { Search, X } from "lucide-react";
 import { useMemo, useState } from "react";
 import type { Protocol } from "../../data/protocols";
 import { normalizeCategorySearchQuery, searchCategoryProtocols } from "../../lib/protocols/category-search";
-import { getProtocolPageLabel } from "../../lib/protocols/page-range";
 import { getPrimaryProtocolHref } from "../../data/structured-protocols";
 
 type CategorySearchProps = {
@@ -35,7 +34,7 @@ export default function CategorySearch({ categoryId, categoryTitle, protocols }:
           {matches.length ? matches.map((protocol) => (
             <Link key={protocol.id} href={getPrimaryProtocolHref(categoryId, protocol.id)} className="block rounded-2xl border border-slate-800 bg-slate-900 p-4 transition hover:border-sky-500 hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
               <span className="block font-semibold text-white">{protocol.title}</span>
-              <span className="mt-1 block text-sm text-slate-400">{protocol.code} · {getProtocolPageLabel(protocol)}</span>
+              <span className="mt-1 block text-sm text-slate-400">{protocol.code} · {protocol.pages ? `${protocol.pages} ${protocol.pages === 1 ? "page" : "pages"}` : "PDF"}</span>
             </Link>
           )) : <p className="rounded-2xl border border-slate-800 bg-slate-900 p-4 text-slate-400">No matching medications</p>}
         </div>

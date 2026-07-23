@@ -4,9 +4,9 @@ import BottomNav from "../../components/navigation/BottomNav";
 import PdfViewingModeSelector from "../../components/settings/PdfViewingModeSelector";
 import PwaInstallInstructions from "../../components/settings/PwaInstallInstructions";
 import { appConfig } from "../../lib/app-config";
-import { getProtocolPdfUrl } from "../../lib/protocols/pdf-url";
-import CovenantHealthAirLogo from "../../components/branding/CovenantHealthAirLogo";
 import OfflineAccess from "../../components/settings/OfflineAccess";
+import { protocolCategories } from "../../data/protocols";
+import { ShieldPlus } from "lucide-react";
 
 export default function SettingsPage() {
   return (
@@ -14,7 +14,7 @@ export default function SettingsPage() {
       <div className="mx-auto max-w-md p-6">
         <AppHeader />
         <section className="text-center">
-          <CovenantHealthAirLogo className="mx-auto h-auto w-full max-w-[260px] object-contain" priority />
+          <ShieldPlus aria-hidden="true" className="mx-auto h-14 w-14 text-sky-300" />
           <h1 className="mt-3 text-3xl font-bold">Claiborne County EMS Protocols</h1>
           <p className="mt-1 text-sm text-slate-400">Settings and application information</p>
         </section>
@@ -30,7 +30,7 @@ export default function SettingsPage() {
               <div className="flex justify-between gap-4"><dt className="text-slate-400">App Version</dt><dd>{appConfig.appVersion}</dd></div>
             </dl>
             <p className="mt-5 text-sm leading-6 text-slate-400">{appConfig.betaNotice}</p>
-            <Link href={getProtocolPdfUrl(1)} target="_blank" className="mt-5 inline-block text-sm font-semibold text-sky-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Open full manual</Link>
+            <Link href={protocolCategories[0]?.protocols[0]?.pdfPath ?? "/protocols"} target="_blank" className="mt-5 inline-block text-sm font-semibold text-sky-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">Open a protocol PDF</Link>
           </section>
           <PwaInstallInstructions />
         </div>

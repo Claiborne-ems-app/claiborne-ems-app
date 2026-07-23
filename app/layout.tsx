@@ -18,19 +18,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icons/covenant-health-air-192.png",
+        url: "/icons/claiborne-ems-192.png",
         sizes: "192x192",
         type: "image/png",
       },
       {
-        url: "/icons/covenant-health-air-512.png",
+        url: "/icons/claiborne-ems-512.png",
         sizes: "512x512",
         type: "image/png",
       },
     ],
     apple: [
       {
-        url: "/icons/covenant-health-air-apple-touch.png",
+        url: "/icons/claiborne-ems-apple-touch.png",
         sizes: "180x180",
         type: "image/png",
       },

@@ -24,7 +24,6 @@ export type ProtocolReviewAdapterOptions = {
   getStructuredContent: (categoryId: string, protocolId: string) => StructuredProtocolContent | undefined;
   reviewRepository: ReviewMetadataRepository;
   importDate: string;
-  defaultSourcePdf: string;
 };
 
 export type AdminDashboardStats = {
@@ -103,7 +102,6 @@ export function createProtocolReviewInventory({
   getStructuredContent,
   reviewRepository,
   importDate,
-  defaultSourcePdf,
 }: ProtocolReviewAdapterOptions): AdminProtocol[] {
   return categories.flatMap((category) =>
     category.protocols.map((protocol) => {
@@ -119,8 +117,8 @@ export function createProtocolReviewInventory({
         code: protocol.code,
         title: protocol.title,
         category: category.title,
-        sourcePdf: sourcePdfPath(content?.sourcePdf, defaultSourcePdf),
-        sourcePage: content?.sourcePages.start ?? protocol.startPage,
+        sourcePdf: sourcePdfPath(content?.sourcePdf, protocol.pdfPath),
+        sourcePage: content?.sourcePages.start ?? 1,
         importDate,
         review,
         sections: content ? createSections(protocolKey, content, review, reviewRepository) : [],

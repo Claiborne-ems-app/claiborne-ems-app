@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useMemo } from "react";
 import { protocolCategories } from "../../data/protocols";
-import { getProtocolPageLabel } from "../../lib/protocols/page-range";
 import { useFavorites } from "../favorites/useFavorites";
 import { Star } from "lucide-react";
 import { getPrimaryProtocolHref } from "../../data/structured-protocols";
@@ -49,7 +48,7 @@ export default function FavoritesList() {
           </div>
 
           <div className="mt-1 text-sm text-slate-400">
-            {category.title} · {getProtocolPageLabel(protocol)}
+            {category.title} · {protocol.code}
           </div>
         </Link>
       ))}

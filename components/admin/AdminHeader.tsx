@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
-import CovenantHealthAirLogo from "../branding/CovenantHealthAirLogo";
+import { ShieldCheck, ShieldPlus } from "lucide-react";
 
 export default function AdminHeader() {
   return (
     <header className="border-b border-slate-800 bg-slate-950/90 backdrop-blur">
       <div className="mx-auto flex max-w-screen-2xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
         <Link href="/admin" className="flex items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
-          <CovenantHealthAirLogo className="h-8 w-auto max-w-36 object-contain" priority />
+          <span className="flex items-center gap-2 font-bold text-white"><ShieldPlus aria-hidden="true" className="h-6 w-6 text-sky-300" />Claiborne EMS</span>
           <span className="hidden h-6 w-px bg-slate-700 sm:block" />
           <span className="hidden text-sm font-semibold text-slate-200 sm:block">Review Admin</span>
         </Link>

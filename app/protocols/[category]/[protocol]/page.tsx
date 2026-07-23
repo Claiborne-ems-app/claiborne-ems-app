@@ -1,9 +1,15 @@
 import { redirect } from "next/navigation";
+import { protocolCategories } from "../../../../data/protocols";
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return [];
+  return protocolCategories.flatMap((category) =>
+    category.protocols.map((protocol) => ({
+      category: category.id,
+      protocol: protocol.id,
+    }))
+  );
 }
 
 export default async function ProtocolPage({

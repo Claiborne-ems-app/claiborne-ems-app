@@ -40,7 +40,7 @@ export type NativeProtocolSection = {
 };
 
 export const BETA_CLINICAL_DISCLAIMER =
-  "This beta application is for evaluation and reference purposes only. It does not contain the current official Covenant Health Air patient care guidelines or treatment standards and must not be used for clinical decision-making or patient care.";
+  "This beta application is for evaluation and reference purposes only. Verify all clinical decisions against the current approved Claiborne County EMS protocols.";
 
 export function getNativeProtocolSections(content: StructuredProtocolContent) {
   const sections: NativeProtocolSection[] = [];
