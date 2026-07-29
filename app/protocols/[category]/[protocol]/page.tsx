@@ -1,5 +1,10 @@
-import { redirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import NativeProtocolReader from "../../../../components/protocols/NativeProtocolReader";
 import { protocolCategories } from "../../../../data/protocols";
+import {
+  getStructuredProtocol,
+  hasReviewedNativeContent,
+} from "../../../../data/structured-protocols";
 
 export const dynamicParams = false;
 
@@ -17,6 +22,25 @@ export default async function ProtocolPage({
 }: {
   params: Promise<{ category: string; protocol: string }>;
 }) {
-  const { category, protocol } = await params;
-  redirect(`/protocols/${category}/${protocol}/viewer`);
+  const { category: categoryId, protocol: protocolId } = await params;
+  const category = protocolCategories.find((item) => item.id === categoryId);
+  const protocol = category?.protocols.find((item) => item.id === protocolId);
+
+  if (!category || !protocol) {
+    notFound();
+  }
+
+  const content = getStructuredProtocol(category.id, protocol.id);
+
+  if (!hasReviewedNativeContent(content)) {
+    redirect(`/protocols/${category.id}/${protocol.id}/viewer`);
+  }
+
+  return (
+    <NativeProtocolReader
+      category={category}
+      protocol={protocol}
+      content={content}
+    />
+  );
 }

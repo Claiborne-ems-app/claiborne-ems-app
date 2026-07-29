@@ -16,7 +16,7 @@ export default function SearchBar() {
   const hasQuery = query.trim().length > 0;
 
   return (
-    <section aria-label="Search protocols">
+    <section id="protocol-search" aria-label="Search protocols">
       <label
         htmlFor="protocol-search"
         className="sr-only"
@@ -37,7 +37,7 @@ export default function SearchBar() {
           aria-live="polite"
         >
           {results.length > 0 ? (
-            results.map(({ categoryId, categoryTitle, protocol }) => (
+            results.map(({ categoryId, categoryTitle, protocol, matchLabel, snippet }) => (
               <Link
                 key={`${categoryId}-${protocol.id}`}
                 href={getPrimaryProtocolHref(categoryId, protocol.id)}
@@ -48,8 +48,9 @@ export default function SearchBar() {
                 </div>
 
                 <div className="mt-1 text-sm text-slate-400">
-                  {categoryTitle} · {protocol.code}
+                  {categoryTitle} · {protocol.code}{matchLabel ? ` · ${matchLabel}` : ""}
                 </div>
+                {snippet ? <p className="mt-2 line-clamp-2 text-sm leading-5 text-slate-300">{snippet}</p> : null}
               </Link>
             ))
           ) : (

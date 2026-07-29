@@ -21,10 +21,10 @@ export default function BottomNav() {
           <span className={iconClass(pathname.startsWith("/protocols"))}><BookOpen aria-hidden="true" className="h-5 w-5" strokeWidth={1.8} /></span>
           <span>Protocols</span>
         </Link>
-        <span aria-label="Tools unavailable" className={`${itemClass} cursor-not-allowed text-slate-600`}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900"><Wrench aria-hidden="true" className="h-5 w-5" strokeWidth={1.8} /></span>
+        <Link href="/tools" aria-current={pathname === "/tools" ? "page" : undefined} className={linkClass(pathname === "/tools")}>
+          <span className={iconClass(pathname === "/tools")}><Wrench aria-hidden="true" className="h-5 w-5" strokeWidth={1.8} /></span>
           <span>Tools</span>
-        </span>
+        </Link>
         <Link href="/settings" aria-current={pathname === "/settings" ? "page" : undefined} className={linkClass(pathname === "/settings")}>
           <span className={iconClass(pathname === "/settings")}><Settings aria-hidden="true" className="h-5 w-5" strokeWidth={1.8} /></span>
           <span>Settings</span>

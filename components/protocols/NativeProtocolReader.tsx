@@ -11,6 +11,7 @@ import {
 } from "../../lib/protocols/structured-content";
 import NativeFavoriteControl from "./NativeFavoriteControl";
 import NativeReaderNavigation from "./NativeReaderNavigation";
+import { CareLevelModules, ProtocolQuickFlow } from "./ProtocolQuickFlow";
 
 function TextList({ items }: { items: string[] }) {
   return <ul className="space-y-2 pl-5 text-[0.98rem] leading-7 text-slate-200 marker:text-sky-400">{items.map((item) => <li key={item} className="list-disc pl-1">{item}</li>)}</ul>;
@@ -70,6 +71,8 @@ export default function NativeProtocolReader({ category, protocol, content }: { 
             </section>
           )}
 
+          {content?.flow?.length ? <ProtocolQuickFlow nodes={content.flow} /> : null}
+          {content?.careModules?.length ? <CareLevelModules modules={content.careModules} /> : null}
           {content?.overview.length ? <ReaderSection id="overview" title="Overview" open><TextList items={content.overview} /></ReaderSection> : null}
           {content?.indications.length ? <ReaderSection id="indications" title="Indications"><TextList items={content.indications} /></ReaderSection> : null}
           {content?.contraindications.length ? <ReaderSection id="contraindications" title="Contraindications" tone="warning"><TextList items={content.contraindications} /></ReaderSection> : null}

@@ -1,6 +1,6 @@
 {
-  "version": "1-0-0-july-2026",
-  "appVersion": "1.0.0",
+  "version": "1-1-0-july-2026",
+  "appVersion": "1.1.0",
   "protocolVersion": "July 2026",
   "resources": [
     {
@@ -10,6 +10,11 @@
     },
     {
       "url": "/protocols",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/tools",
       "kind": "route",
       "bytes": null
     },
@@ -1476,7 +1481,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 31607
+      "bytes": 31553
     },
     {
       "url": "/manifest.webmanifest",
@@ -1549,7 +1554,7 @@
       "bytes": 469105
     }
   ],
-  "resourceCount": 309,
-  "knownBytes": 34286596,
-  "estimatedBytes": 47459332
+  "resourceCount": 310,
+  "knownBytes": 34286542,
+  "estimatedBytes": 47524814
 }

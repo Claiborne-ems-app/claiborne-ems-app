@@ -11,12 +11,29 @@ export type ProtocolSectionGroup = {
   items: string[];
 };
 
+export type ProviderLevel = "EMT" | "AEMT" | "Paramedic" | "Medical Control";
+
+export type ProtocolFlowNode = {
+  title: string;
+  text: string;
+  levels?: ProviderLevel[];
+  tone?: "start" | "action" | "decision" | "urgent" | "transport";
+};
+
+export type ProtocolCareModule = {
+  title: string;
+  summary: string;
+  levels: { level: ProviderLevel; actions: string[] }[];
+};
+
 export type StructuredProtocolContent = {
   id: string;
   title: string;
   categoryId: string;
   category: string;
   overview: string[];
+  flow?: ProtocolFlowNode[];
+  careModules?: ProtocolCareModule[];
   indications: string[];
   contraindications: string[];
   assessment: ProtocolSectionGroup[];
@@ -44,6 +61,8 @@ export const BETA_CLINICAL_DISCLAIMER =
 
 export function getNativeProtocolSections(content: StructuredProtocolContent) {
   const sections: NativeProtocolSection[] = [];
+  if (content.flow?.length) sections.push({ id: "quick-flow", title: "Quick Flow" });
+  if (content.careModules?.length) sections.push({ id: "care-levels", title: "Care Levels" });
   if (content.overview.length) sections.push({ id: "overview", title: "Overview" });
   if (content.indications.length) sections.push({ id: "indications", title: "Indications" });
   if (content.contraindications.length) sections.push({ id: "contraindications", title: "Contraindications" });
