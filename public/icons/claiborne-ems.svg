@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#020617"/>
+  <path d="M256 72 404 126v112c0 92-57 165-148 202-91-37-148-110-148-202V126z" fill="#0c4a6e" stroke="#38bdf8" stroke-width="16"/>
+  <path d="M234 132h44v92h92v44h-92v92h-44v-92h-92v-44h92z" fill="#f8fafc"/>
+  <text x="256" y="414" fill="#7dd3fc" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">CLAIBORNE EMS</text>
+</svg>

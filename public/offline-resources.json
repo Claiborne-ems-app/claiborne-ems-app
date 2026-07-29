@@ -1,0 +1,1560 @@
+{
+  "version": "1-1-0-july-2026",
+  "appVersion": "1.1.0",
+  "protocolVersion": "July 2026",
+  "resources": [
+    {
+      "url": "/",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/tools",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/settings",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/offline",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-01",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-01/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-02",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-02/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-03",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-03/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-04",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-04/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-05",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-05/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-06",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-06/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-07",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-07/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-08",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-08/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-09",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-09/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-10",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-10/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-11",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-11/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-12",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-12/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-13",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-13/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-14",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-14/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-15",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-15/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-16",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ac/ac-16/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-01",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-01/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-02",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-02/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-03",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-03/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-04",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-04/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-05",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-05/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-06",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-06/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-07",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/am/am-07/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ao",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ao/ao-01",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ao/ao-01/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ao/ao-02",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ao/ao-02/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ao/ao-03",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ao/ao-03/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-01",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-01/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-02",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-02/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-03",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-03/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-04",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-04/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-05",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-05/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-06",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-06/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-07",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-07/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-08",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-08/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-09",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-09/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-10",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-10/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-11",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/ar/ar-11/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-01",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-01/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-02",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-02/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-03",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-03/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-04",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-04/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-05",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-05/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-06",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-06/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-07",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-07/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-08",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pc/pc-08/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pm",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pm/pm-01",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pm/pm-01/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pm/pm-02",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pm/pm-02/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pm/pm-03",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pm/pm-03/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/sc",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/sc/sc-01",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/sc/sc-01/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/sc/sc-02",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/sc/sc-02/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/sc/sc-03",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/sc/sc-03/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/sc/sc-04",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/sc/sc-04/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/sc/sc-05",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/sc/sc-05/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/so",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/so/so-01",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/so/so-01/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/so/so-02",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/so/so-02/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-01",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-01/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-02",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-02/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-03",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-03/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-04",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-04/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-05",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-05/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-06",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-06/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-07",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-07/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-08",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-08/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-09",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-09/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-10",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-10/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-01",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-01/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-02",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-02/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-03",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-03/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-04",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-04/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-05",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-05/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-06",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-06/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-07",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-07/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-08",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-08/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-01",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-01/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-02",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-02/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-03",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-03/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-04",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-04/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-05",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-05/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-06",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-06/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-07",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-07/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-08",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-08/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-09",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-09/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-10",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-10/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-11",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-11/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-12",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-12/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-13",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-13/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-14",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-14/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-15",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-15/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-16",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-16/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-17",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-17/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-18",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-18/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-19",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-19/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-20",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-20/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/claiborne/ac-01-asystole-pulseless-electrical-activity-protocol.pdf",
+      "kind": "document",
+      "bytes": 358369
+    },
+    {
+      "url": "/protocols/claiborne/ac-02-bradycardia-pulse-present-protocol.pdf",
+      "kind": "document",
+      "bytes": 409741
+    },
+    {
+      "url": "/protocols/claiborne/ac-03-cardiac-arrest-adult-protocol.pdf",
+      "kind": "document",
+      "bytes": 439588
+    },
+    {
+      "url": "/protocols/claiborne/ac-04-chest-pain-and-stemi-protocol.pdf",
+      "kind": "document",
+      "bytes": 353311
+    },
+    {
+      "url": "/protocols/claiborne/ac-05-chf-pulmonary-edema-protocol.pdf",
+      "kind": "document",
+      "bytes": 306459
+    },
+    {
+      "url": "/protocols/claiborne/ac-06-adult-tachycardia-narrow-protocol.pdf",
+      "kind": "document",
+      "bytes": 370271
+    },
+    {
+      "url": "/protocols/claiborne/ac-07-adult-tachycardia-monomorphic-wide-protocol.pdf",
+      "kind": "document",
+      "bytes": 419057
+    },
+    {
+      "url": "/protocols/claiborne/ac-08-adult-tachycardia-polymorphic-wide-protocol.pdf",
+      "kind": "document",
+      "bytes": 363040
+    },
+    {
+      "url": "/protocols/claiborne/ac-09-vf-pulseless-vt-protocol.pdf",
+      "kind": "document",
+      "bytes": 300487
+    },
+    {
+      "url": "/protocols/claiborne/ac-10-post-resuscitation-protocol.pdf",
+      "kind": "document",
+      "bytes": 460579
+    },
+    {
+      "url": "/protocols/claiborne/ac-11-team-focused-cpr-protocol.pdf",
+      "kind": "document",
+      "bytes": 280181
+    },
+    {
+      "url": "/protocols/claiborne/ac-12-termination-of-cpr-protocol.pdf",
+      "kind": "document",
+      "bytes": 319318
+    },
+    {
+      "url": "/protocols/claiborne/ac-13-targeted-temperature-management-protocol.pdf",
+      "kind": "document",
+      "bytes": 406427
+    },
+    {
+      "url": "/protocols/claiborne/ac-14-lvad-emergency-protocol.pdf",
+      "kind": "document",
+      "bytes": 453541
+    },
+    {
+      "url": "/protocols/claiborne/ac-15-total-mechanic-circulation-protocol.pdf",
+      "kind": "document",
+      "bytes": 360461
+    },
+    {
+      "url": "/protocols/claiborne/ac-16-wearable-cardioverter-defibrillator-vest-protocol.pdf",
+      "kind": "document",
+      "bytes": 475545
+    },
+    {
+      "url": "/protocols/claiborne/am-01-allergic-reaction-anaphylaxis-protocol.pdf",
+      "kind": "document",
+      "bytes": 166492
+    },
+    {
+      "url": "/protocols/claiborne/am-02-diabetic-adult-protocol.pdf",
+      "kind": "document",
+      "bytes": 285698
+    },
+    {
+      "url": "/protocols/claiborne/am-03-dialysis-renal-failure-protocol.pdf",
+      "kind": "document",
+      "bytes": 395593
+    },
+    {
+      "url": "/protocols/claiborne/am-04-hypertension-protocol.pdf",
+      "kind": "document",
+      "bytes": 335566
+    },
+    {
+      "url": "/protocols/claiborne/am-05-hypotension-shock-protocol.pdf",
+      "kind": "document",
+      "bytes": 200001
+    },
+    {
+      "url": "/protocols/claiborne/am-06-suspected-stroke-activase-t-pa-transfer-protocol.pdf",
+      "kind": "document",
+      "bytes": 174125
+    },
+    {
+      "url": "/protocols/claiborne/am-07-crashing-patient-protocol.pdf",
+      "kind": "document",
+      "bytes": 168342
+    },
+    {
+      "url": "/protocols/claiborne/ao-01-childbirth-labor-protocol.pdf",
+      "kind": "document",
+      "bytes": 285833
+    },
+    {
+      "url": "/protocols/claiborne/ao-02-newly-born-protocol.pdf",
+      "kind": "document",
+      "bytes": 418105
+    },
+    {
+      "url": "/protocols/claiborne/ao-03-ob-gyn-emergency-protocol.pdf",
+      "kind": "document",
+      "bytes": 306515
+    },
+    {
+      "url": "/protocols/claiborne/ar-01-adult-airway-protocol.pdf",
+      "kind": "document",
+      "bytes": 440166
+    },
+    {
+      "url": "/protocols/claiborne/ar-02-adult-failed-airway-protocol.pdf",
+      "kind": "document",
+      "bytes": 329026
+    },
+    {
+      "url": "/protocols/claiborne/ar-03-airway-drug-assisted-intubation-protocol.pdf",
+      "kind": "document",
+      "bytes": 214945
+    },
+    {
+      "url": "/protocols/claiborne/ar-04-copd-asthma-protocol.pdf",
+      "kind": "document",
+      "bytes": 253739
+    },
+    {
+      "url": "/protocols/claiborne/ar-05-pediatric-airway-protocol.pdf",
+      "kind": "document",
+      "bytes": 420501
+    },
+    {
+      "url": "/protocols/claiborne/ar-06-pediatric-failed-airway-protocol.pdf",
+      "kind": "document",
+      "bytes": 336966
+    },
+    {
+      "url": "/protocols/claiborne/ar-07-pediatric-respiratory-distress-protocol.pdf",
+      "kind": "document",
+      "bytes": 238188
+    },
+    {
+      "url": "/protocols/claiborne/ar-08-post-intubation-biad-management-protocol.pdf",
+      "kind": "document",
+      "bytes": 358590
+    },
+    {
+      "url": "/protocols/claiborne/ar-09-ventilator-emergencies-protocol.pdf",
+      "kind": "document",
+      "bytes": 256684
+    },
+    {
+      "url": "/protocols/claiborne/ar-10-tracheostomy-tube-emergencies-protocol.pdf",
+      "kind": "document",
+      "bytes": 270127
+    },
+    {
+      "url": "/protocols/claiborne/ar-11-mechanical-ventilation-adult.pdf",
+      "kind": "document",
+      "bytes": 635965
+    },
+    {
+      "url": "/protocols/claiborne/pc-01-pediatric-asytole-pea-protocol.pdf",
+      "kind": "document",
+      "bytes": 363018
+    },
+    {
+      "url": "/protocols/claiborne/pc-02-pediatric-bradycardia-poor-perfusion-protocol.pdf",
+      "kind": "document",
+      "bytes": 266221
+    },
+    {
+      "url": "/protocols/claiborne/pc-03-pediatric-chf-pulmonary-edema-protocol.pdf",
+      "kind": "document",
+      "bytes": 292537
+    },
+    {
+      "url": "/protocols/claiborne/pc-04-pediatric-pulseless-arrest-protocol.pdf",
+      "kind": "document",
+      "bytes": 411107
+    },
+    {
+      "url": "/protocols/claiborne/pc-05-pediatrictachycardia-narrow-complex.pdf",
+      "kind": "document",
+      "bytes": 313400
+    },
+    {
+      "url": "/protocols/claiborne/pc-06-pediatric-tachycardia-wide-complex-protocol.pdf",
+      "kind": "document",
+      "bytes": 275754
+    },
+    {
+      "url": "/protocols/claiborne/pc-07-pediatric-vf-pulseless-vt-protocol.pdf",
+      "kind": "document",
+      "bytes": 304631
+    },
+    {
+      "url": "/protocols/claiborne/pc-08-pediatric-post-resuscitation-protocol.pdf",
+      "kind": "document",
+      "bytes": 472364
+    },
+    {
+      "url": "/protocols/claiborne/pm-01-pediatric-allergic-reaction-protocol.pdf",
+      "kind": "document",
+      "bytes": 187981
+    },
+    {
+      "url": "/protocols/claiborne/pm-02-pediatric-diabetic-protocol.pdf",
+      "kind": "document",
+      "bytes": 243386
+    },
+    {
+      "url": "/protocols/claiborne/pm-03-pediatric-hypotension-shock-protocol.pdf",
+      "kind": "document",
+      "bytes": 294910
+    },
+    {
+      "url": "/protocols/claiborne/sc-01-suspected-ebola-protocol.pdf",
+      "kind": "document",
+      "bytes": 259837
+    },
+    {
+      "url": "/protocols/claiborne/sc-02-respiratory-disease.pdf",
+      "kind": "document",
+      "bytes": 623358
+    },
+    {
+      "url": "/protocols/claiborne/sc-03-hospice-or-palliative-care-patient-protocol.pdf",
+      "kind": "document",
+      "bytes": 370930
+    },
+    {
+      "url": "/protocols/claiborne/sc-04-vaccination-medication-protocol.pdf",
+      "kind": "document",
+      "bytes": 88680
+    },
+    {
+      "url": "/protocols/claiborne/sc-05-sars-cov2-monoclonal-antibody-infusion.pdf",
+      "kind": "document",
+      "bytes": 145498
+    },
+    {
+      "url": "/protocols/claiborne/so-01-scene-rehabilitation-general-protocol.pdf",
+      "kind": "document",
+      "bytes": 269579
+    },
+    {
+      "url": "/protocols/claiborne/so-02-scene-rehabilitation-responder-protocol.pdf",
+      "kind": "document",
+      "bytes": 211809
+    },
+    {
+      "url": "/protocols/claiborne/tb-01-blast-injury-protocol.pdf",
+      "kind": "document",
+      "bytes": 513710
+    },
+    {
+      "url": "/protocols/claiborne/tb-02-chemical-and-electrical-burn-protocol.pdf",
+      "kind": "document",
+      "bytes": 409620
+    },
+    {
+      "url": "/protocols/claiborne/tb-03-crush-syndrome-protocol.pdf",
+      "kind": "document",
+      "bytes": 406056
+    },
+    {
+      "url": "/protocols/claiborne/tb-04-extremity-trauma-protocol.pdf",
+      "kind": "document",
+      "bytes": 128675
+    },
+    {
+      "url": "/protocols/claiborne/tb-05-head-trauma-protocol.pdf",
+      "kind": "document",
+      "bytes": 591452
+    },
+    {
+      "url": "/protocols/claiborne/tb-06-multiple-trauma-protocol.pdf",
+      "kind": "document",
+      "bytes": 309242
+    },
+    {
+      "url": "/protocols/claiborne/tb-07-radiation-incident-protocol.pdf",
+      "kind": "document",
+      "bytes": 428695
+    },
+    {
+      "url": "/protocols/claiborne/tb-08-selective-spinal-immobilization-protocol.pdf",
+      "kind": "document",
+      "bytes": 191862
+    },
+    {
+      "url": "/protocols/claiborne/tb-09-thermal-burn-protocol.pdf",
+      "kind": "document",
+      "bytes": 442126
+    },
+    {
+      "url": "/protocols/claiborne/tb-10-traumatic-arrest-protocol.pdf",
+      "kind": "document",
+      "bytes": 287381
+    },
+    {
+      "url": "/protocols/claiborne/te-01-bites-and-envenomations-protocol.pdf",
+      "kind": "document",
+      "bytes": 398533
+    },
+    {
+      "url": "/protocols/claiborne/te-02-carbon-monoxide-cyanide-protocol.pdf",
+      "kind": "document",
+      "bytes": 344101
+    },
+    {
+      "url": "/protocols/claiborne/te-03-drowning-submersion-injury-protocol.pdf",
+      "kind": "document",
+      "bytes": 436536
+    },
+    {
+      "url": "/protocols/claiborne/te-04-hyperthermia-protocol.pdf",
+      "kind": "document",
+      "bytes": 373159
+    },
+    {
+      "url": "/protocols/claiborne/te-05-hypothermia-protocol.pdf",
+      "kind": "document",
+      "bytes": 406025
+    },
+    {
+      "url": "/protocols/claiborne/te-06-marine-envenomations-protocol.pdf",
+      "kind": "document",
+      "bytes": 384063
+    },
+    {
+      "url": "/protocols/claiborne/te-07-overdose-toxic-ingestion-protocol.pdf",
+      "kind": "document",
+      "bytes": 479541
+    },
+    {
+      "url": "/protocols/claiborne/te-08-wmd-nerve-agent-protocol.pdf",
+      "kind": "document",
+      "bytes": 435375
+    },
+    {
+      "url": "/protocols/claiborne/up-01-universal-patient-care-protocol.pdf",
+      "kind": "document",
+      "bytes": 299600
+    },
+    {
+      "url": "/protocols/claiborne/up-02-triage-protocol.pdf",
+      "kind": "document",
+      "bytes": 175250
+    },
+    {
+      "url": "/protocols/claiborne/up-03-abd-pain-vomiting-and-diarrhea-protocol.pdf",
+      "kind": "document",
+      "bytes": 282695
+    },
+    {
+      "url": "/protocols/claiborne/up-04-altered-mental-status-protocol.pdf",
+      "kind": "document",
+      "bytes": 432188
+    },
+    {
+      "url": "/protocols/claiborne/up-05-back-pain-protocol.pdf",
+      "kind": "document",
+      "bytes": 399485
+    },
+    {
+      "url": "/protocols/claiborne/up-06-iv-or-io-access-protocol.pdf",
+      "kind": "document",
+      "bytes": 305697
+    },
+    {
+      "url": "/protocols/claiborne/up-07-dental-problems-protocol.pdf",
+      "kind": "document",
+      "bytes": 147311
+    },
+    {
+      "url": "/protocols/claiborne/up-08-emergency-indwelling-central-lines-protocol.pdf",
+      "kind": "document",
+      "bytes": 238901
+    },
+    {
+      "url": "/protocols/claiborne/up-09-epistaxis-protocol.pdf",
+      "kind": "document",
+      "bytes": 168168
+    },
+    {
+      "url": "/protocols/claiborne/up-10-fever-protocol.pdf",
+      "kind": "document",
+      "bytes": 257635
+    },
+    {
+      "url": "/protocols/claiborne/up-11-pain-control-adult-protocol.pdf",
+      "kind": "document",
+      "bytes": 241702
+    },
+    {
+      "url": "/protocols/claiborne/up-12-police-custody-protocol.pdf",
+      "kind": "document",
+      "bytes": 322593
+    },
+    {
+      "url": "/protocols/claiborne/up-13-seizure-protocol.pdf",
+      "kind": "document",
+      "bytes": 350933
+    },
+    {
+      "url": "/protocols/claiborne/up-14-suspected-stroke-protocol.pdf",
+      "kind": "document",
+      "bytes": 452221
+    },
+    {
+      "url": "/protocols/claiborne/up-15-suspected-sepsis-protocol.pdf",
+      "kind": "document",
+      "bytes": 380597
+    },
+    {
+      "url": "/protocols/claiborne/up-16-syncope-protocol.pdf",
+      "kind": "document",
+      "bytes": 454122
+    },
+    {
+      "url": "/protocols/claiborne/up-17-behavioral-health-crisis-protocol.pdf",
+      "kind": "document",
+      "bytes": 473981
+    },
+    {
+      "url": "/protocols/claiborne/up-18-behavioral-agitation-sedation-guide-protocol.pdf",
+      "kind": "document",
+      "bytes": 336179
+    },
+    {
+      "url": "/protocols/claiborne/up-19-hyperactive-delirium-with-severe-agitation-protocol.pdf",
+      "kind": "document",
+      "bytes": 370400
+    },
+    {
+      "url": "/protocols/claiborne/up-20-sickle-cell-crisis-protocol.pdf",
+      "kind": "document",
+      "bytes": 374456
+    },
+    {
+      "url": "/offline-data.json",
+      "kind": "static",
+      "bytes": 31553
+    },
+    {
+      "url": "/manifest.webmanifest",
+      "kind": "static",
+      "bytes": null
+    },
+    {
+      "url": "/icon.png",
+      "kind": "static",
+      "bytes": null
+    },
+    {
+      "url": "/apple-icon.png",
+      "kind": "static",
+      "bytes": null
+    },
+    {
+      "url": "/icons/claiborne-ems-192.png",
+      "kind": "static",
+      "bytes": 7552
+    },
+    {
+      "url": "/icons/claiborne-ems-512.png",
+      "kind": "static",
+      "bytes": 24317
+    },
+    {
+      "url": "/icons/claiborne-ems-apple-touch.png",
+      "kind": "static",
+      "bytes": 7065
+    },
+    {
+      "url": "/pdfjs/pdf.worker.min.mjs",
+      "kind": "static",
+      "bytes": 1304896
+    },
+    {
+      "url": "/pdfjs/wasm/jbig2.wasm",
+      "kind": "static",
+      "bytes": 104852
+    },
+    {
+      "url": "/pdfjs/wasm/jbig2_nowasm_fallback.js",
+      "kind": "static",
+      "bytes": 145703
+    },
+    {
+      "url": "/pdfjs/wasm/openjpeg.wasm",
+      "kind": "static",
+      "bytes": 252032
+    },
+    {
+      "url": "/pdfjs/wasm/openjpeg_nowasm_fallback.js",
+      "kind": "static",
+      "bytes": 451590
+    },
+    {
+      "url": "/pdfjs/wasm/qcms_bg.wasm",
+      "kind": "static",
+      "bytes": 88837
+    },
+    {
+      "url": "/pdfjs/wasm/quickjs-eval.js",
+      "kind": "static",
+      "bytes": 6232
+    },
+    {
+      "url": "/pdfjs/wasm/quickjs-eval.wasm",
+      "kind": "static",
+      "bytes": 469105
+    }
+  ],
+  "resourceCount": 310,
+  "knownBytes": 34286542,
+  "estimatedBytes": 47524814
+}

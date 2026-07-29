@@ -1,0 +1,43 @@
+{
+  "name": "claiborne-ems-app",
+  "version": "2.3.0",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "generate:offline": "node scripts/generate-offline-manifest.mjs",
+    "predev": "npm run generate:offline",
+    "dev": "next dev",
+    "prebuild": "npm run generate:offline",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "import:structured-protocol": "node scripts/import-structured-protocol.mjs",
+    "test:protocol-search": "node --test tests/protocol-search.test.mjs",
+    "test:favorites": "node --test tests/favorites.test.mjs",
+    "test:recently-viewed": "node --test tests/recently-viewed.test.mjs",
+    "test:viewing-mode": "node --test tests/viewing-mode.test.mjs",
+    "test:category-search": "node --test tests/category-search.test.mjs",
+    "test:release-config": "node --test tests/release-config.test.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.24.0",
+    "next": "16.2.10",
+    "pdf-parse": "^2.4.5",
+    "pdfjs-dist": "^6.1.200",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
