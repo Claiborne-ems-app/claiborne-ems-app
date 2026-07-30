@@ -26,7 +26,7 @@ const QUERY_ALIASES: Record<string, string[]> = {
   dyspnea: ["respiratory distress", "shortness of breath"],
   epi: ["epinephrine"],
   mi: ["myocardial infarction", "acute coronary syndrome", "stemi"],
-  narcan: ["naloxone"],
+  narcan: ["naloxone", "overdose"],
   od: ["overdose", "toxic ingestion"],
   rosc: ["return of spontaneous circulation", "post-resuscitation"],
   sob: ["shortness of breath", "respiratory distress", "dyspnea"],
@@ -136,7 +136,7 @@ function matchesAllTerms(text: string, terms: string[]) {
 
 function firstMatchingOption(text: string, terms: string[]) {
   const normalizedText = normalize(text);
-  for (const term of terms) {
+  for (const term of [...terms].reverse()) {
     const option = queryOptions(term).find((candidate) =>
       normalizedText.includes(candidate)
     );
