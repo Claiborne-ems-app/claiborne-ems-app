@@ -1,4 +1,5 @@
 import type { StructuredProtocolContent } from "../lib/protocols/structured-content";
+import { structuredTraumaProtocols } from "./structured-trauma-protocols";
 
 export const structuredProtocols: StructuredProtocolContent[] = [
   {
@@ -1828,6 +1829,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "The original imported North Carolina PDF remains available as a source-comparison document.",
     ],
   },
+  ...structuredTraumaProtocols,
 ];
 
 export function getStructuredProtocol(categoryId: string, protocolId: string) {
