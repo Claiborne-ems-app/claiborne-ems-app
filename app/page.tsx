@@ -9,6 +9,7 @@ import BottomNav from "../components/navigation/BottomNav";
 import { protocolCategories } from "../data/protocols";
 import { Baby, BookOpen, HeartHandshake, HeartPulse, Pill, ShieldAlert, Syringe, type LucideIcon } from "lucide-react";
 import OfflineStatusIndicator from "../components/offline/OfflineStatusIndicator";
+import { CovenantHealthEmsLogo } from "../components/branding/CovenantHealthEmsLogo";
 
 const categoryPresentation: Record<string, { icon: LucideIcon; accent: string; subtitle: string }> = {
   medical: {
@@ -55,7 +56,12 @@ export default function Home() {
         <AppHeader />
 
         <section className="mb-8 text-center">
-          <h1 className="mt-3 text-3xl font-bold tracking-tight">Claiborne EMS Protocols</h1>
+          <CovenantHealthEmsLogo
+            priority
+            className="mx-auto w-full max-w-sm border border-white/10 p-3 shadow-2xl shadow-black/30"
+          />
+          <h1 className="mt-5 text-3xl font-bold tracking-tight">Claiborne County EMS Protocols</h1>
+          <div aria-hidden="true" className="mx-auto mt-3 h-1 w-20 rounded-full bg-red-700" />
           <OfflineStatusIndicator />
         </section>
 
