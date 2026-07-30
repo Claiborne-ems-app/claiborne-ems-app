@@ -1,14 +1,16 @@
 import Link from "next/link";
 import {
+  AlertTriangle,
   Baby,
   BookOpen,
   Calculator,
   ChevronRight,
   HeartHandshake,
   HeartPulse,
-  Pill,
   ShieldAlert,
   Syringe,
+  Users,
+  Wind,
   type LucideIcon,
 } from "lucide-react";
 import AppHeader from "../components/navigation/AppHeader";
@@ -24,40 +26,60 @@ import { CovenantHealthEmsLogo } from "../components/branding/CovenantHealthEmsL
 import { protocolCategories } from "../data/protocols";
 
 const categoryPresentation: Record<string, { icon: LucideIcon; accent: string; subtitle: string }> = {
-  medical: {
+  ac: {
     icon: HeartPulse,
-    accent: "bg-sky-500/12 text-sky-300 ring-sky-400/20",
-    subtitle: "Adult medical care",
-  },
-  trauma: {
-    icon: ShieldAlert,
     accent: "bg-rose-500/12 text-rose-300 ring-rose-400/20",
-    subtitle: "Trauma assessment & care",
+    subtitle: "Adult cardiac emergencies",
   },
-  pediatrics: {
-    icon: Baby,
-    accent: "bg-pink-500/12 text-pink-300 ring-pink-400/20",
-    subtitle: "Pediatric patient care",
+  am: {
+    icon: Syringe,
+    accent: "bg-sky-500/12 text-sky-300 ring-sky-400/20",
+    subtitle: "Adult medical emergencies",
   },
-  obstetrics: {
+  ao: {
     icon: HeartHandshake,
     accent: "bg-violet-500/12 text-violet-300 ring-violet-400/20",
     subtitle: "Maternal & newborn care",
   },
-  procedures: {
-    icon: Syringe,
-    accent: "bg-amber-500/12 text-amber-300 ring-amber-400/20",
-    subtitle: "Clinical procedures",
+  ar: {
+    icon: Wind,
+    accent: "bg-cyan-500/12 text-cyan-300 ring-cyan-400/20",
+    subtitle: "Airway & respiratory care",
   },
-  medications: {
-    icon: Pill,
+  pc: {
+    icon: HeartPulse,
+    accent: "bg-pink-500/12 text-pink-300 ring-pink-400/20",
+    subtitle: "Pediatric cardiac care",
+  },
+  pm: {
+    icon: Baby,
+    accent: "bg-teal-500/12 text-teal-300 ring-teal-400/20",
+    subtitle: "Pediatric medical care",
+  },
+  sc: {
+    icon: ShieldAlert,
+    accent: "bg-violet-500/12 text-violet-300 ring-violet-400/20",
+    subtitle: "Special circumstances",
+  },
+  so: {
+    icon: Users,
+    accent: "bg-orange-500/12 text-orange-300 ring-orange-400/20",
+    subtitle: "Scene operations",
+  },
+  tb: {
+    icon: ShieldAlert,
+    accent: "bg-red-500/12 text-red-300 ring-red-400/20",
+    subtitle: "Trauma & burn care",
+  },
+  te: {
+    icon: AlertTriangle,
     accent: "bg-emerald-500/12 text-emerald-300 ring-emerald-400/20",
-    subtitle: "Medication reference",
+    subtitle: "Toxicology & environmental",
   },
-  references: {
+  up: {
     icon: BookOpen,
     accent: "bg-blue-500/12 text-blue-300 ring-blue-400/20",
-    subtitle: "Clinical reference guides",
+    subtitle: "Universal patient care",
   },
 };
 
