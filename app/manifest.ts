@@ -13,6 +13,12 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#020617",
     icons: [
       {
+        src: "/branding/covenant-health-ems-app-icon.svg",
+        sizes: "any",
+        type: "image/svg+xml",
+        purpose: "any",
+      },
+      {
         src: "/icons/claiborne-ems-192.png",
         sizes: "192x192",
         type: "image/png",
