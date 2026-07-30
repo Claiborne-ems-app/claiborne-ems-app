@@ -3,6 +3,10 @@ import { structuredTraumaProtocols } from "./structured-trauma-protocols";
 import { structuredObstetricsProtocols } from "./structured-obstetrics-protocols";
 import { structuredAirwayProtocols } from "./structured-airway-protocols";
 import { structuredPediatricCardiacProtocols } from "./structured-pediatric-cardiac-protocols";
+import { structuredPediatricMedicalProtocols } from "./structured-pediatric-medical-protocols";
+import { structuredSpecialCircumstancesProtocols } from "./structured-special-circumstances-protocols";
+import { structuredSceneOperationsProtocols } from "./structured-scene-operations-protocols";
+import { structuredToxicologyEnvironmentalProtocols } from "./structured-toxicology-environmental-protocols";
 
 export const structuredProtocols: StructuredProtocolContent[] = [
   {
@@ -1836,6 +1840,10 @@ export const structuredProtocols: StructuredProtocolContent[] = [
   ...structuredObstetricsProtocols,
   ...structuredAirwayProtocols,
   ...structuredPediatricCardiacProtocols,
+  ...structuredPediatricMedicalProtocols,
+  ...structuredSpecialCircumstancesProtocols,
+  ...structuredSceneOperationsProtocols,
+  ...structuredToxicologyEnvironmentalProtocols,
 ];
 
 export function getStructuredProtocol(categoryId: string, protocolId: string) {
