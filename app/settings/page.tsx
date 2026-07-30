@@ -6,7 +6,7 @@ import PwaInstallInstructions from "../../components/settings/PwaInstallInstruct
 import { appConfig } from "../../lib/app-config";
 import OfflineAccess from "../../components/settings/OfflineAccess";
 import { protocolCategories } from "../../data/protocols";
-import { ShieldPlus } from "lucide-react";
+import { CovenantHealthEmsLogo } from "../../components/branding/CovenantHealthEmsLogo";
 
 export default function SettingsPage() {
   return (
@@ -14,8 +14,9 @@ export default function SettingsPage() {
       <div className="mx-auto max-w-md p-6">
         <AppHeader />
         <section className="text-center">
-          <ShieldPlus aria-hidden="true" className="mx-auto h-14 w-14 text-sky-300" />
-          <h1 className="mt-3 text-3xl font-bold">Claiborne County EMS Protocols</h1>
+          <CovenantHealthEmsLogo className="mx-auto w-full max-w-sm border border-white/10 p-3 shadow-xl shadow-black/20" />
+          <h1 className="mt-5 text-3xl font-bold">Claiborne County EMS Protocols</h1>
+          <div aria-hidden="true" className="mx-auto mt-3 h-1 w-20 rounded-full bg-red-700" />
           <p className="mt-1 text-sm text-slate-400">Settings and application information</p>
         </section>
         <div className="mt-8 space-y-8">
