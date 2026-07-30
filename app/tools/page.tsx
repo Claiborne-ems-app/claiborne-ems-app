@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Baby, BookOpenCheck, ShieldAlert } from "lucide-react";
+import { ArrowRight, Baby, BookOpenCheck, Pill, ShieldAlert } from "lucide-react";
 import AppHeader from "../../components/navigation/AppHeader";
 import BottomNav from "../../components/navigation/BottomNav";
 import SceneTimer from "../../components/tools/SceneTimer";
@@ -28,6 +28,17 @@ export default function ToolsPage() {
         <div className="mt-6">
           <ProtocolSearchTool />
         </div>
+
+        <Link href="/medications" className="mt-6 flex items-center gap-4 rounded-2xl border border-sky-400/35 bg-gradient-to-br from-sky-950/55 to-slate-900 p-5 hover:border-sky-300">
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-500/15 text-sky-300 ring-1 ring-sky-400/25">
+            <Pill aria-hidden="true" className="h-6 w-6" />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-lg font-extrabold">Medication Quick Reference</span>
+            <span className="mt-1 block text-sm leading-5 text-slate-400">Searchable adult and pediatric doses by provider level</span>
+          </span>
+          <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 text-sky-300" />
+        </Link>
 
         <Link href="/tools/pediatric-resuscitation" className="mt-6 flex items-center gap-4 rounded-2xl border border-pink-500/30 bg-gradient-to-br from-pink-950/40 to-slate-900 p-5 hover:border-pink-400">
           <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-pink-500/15 text-pink-300 ring-1 ring-pink-400/25">
