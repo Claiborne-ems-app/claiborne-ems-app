@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        url: "/branding/covenant-health-ems-app-icon.svg",
+        sizes: "any",
+        type: "image/svg+xml",
+      },
+      {
         url: "/icons/claiborne-ems-192.png",
         sizes: "192x192",
         type: "image/png",
