@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = path.join(projectRoot, "public");
 const appConfig = {
-  appVersion: "2.9.0",
+  appVersion: "2.10.0",
   protocolVersion: "July 2026",
 };
 
@@ -52,6 +52,7 @@ export function createOfflineRoutes(categories) {
   const routes = [
     "/",
     "/protocols",
+    "/medications",
     "/tools",
     "/tools/pediatric-resuscitation",
     "/settings",
