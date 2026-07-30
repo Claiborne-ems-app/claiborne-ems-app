@@ -1,5 +1,6 @@
 import type { StructuredProtocolContent } from "../lib/protocols/structured-content";
 import { structuredTraumaProtocols } from "./structured-trauma-protocols";
+import { structuredObstetricsProtocols } from "./structured-obstetrics-protocols";
 
 export const structuredProtocols: StructuredProtocolContent[] = [
   {
@@ -1830,6 +1831,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     ],
   },
   ...structuredTraumaProtocols,
+  ...structuredObstetricsProtocols,
 ];
 
 export function getStructuredProtocol(categoryId: string, protocolId: string) {
