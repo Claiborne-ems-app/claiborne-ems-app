@@ -2,7 +2,7 @@
 
 **Claiborne County EMS Protocol App**  
 **Comparison date:** July 30, 2026  
-**App catalog reviewed:** 96 Claiborne protocols  
+**App catalog reviewed:** 97 Claiborne protocols  
 **Primary state source:** Tennessee BLS/ALS State EMS Protocol Guidelines 2024–2025 (linked by the Tennessee EMS Board as “TN EMS Protocol Guidelines — Sept 2025”)
 
 ## Important source note
@@ -24,7 +24,7 @@ The July 2017 Tennessee PDF is a historical reference. The current Tennessee EMS
 | Sexual assault | Added as UP-22 Sexual Assault | Universal workflow now covers consent, trauma-informed care, evidence preservation, destination, competent-adult choice, child and vulnerable-adult reporting, qualifying-injury reporting, and Tennessee first-responder duties. Medical-director and agency approval remain required. |
 | Chemical exposure / substance-specific HazMat | Added as TE-09 Chemical / HazMat Exposure | Master decontamination and responder-safety workflow now includes field quick cards for chlorine/chloramine, ammonia, organophosphate/carbamate, hydrogen sulfide, hydrofluoric acid, and unknown/corrosive exposures; it cross-links overdose/opioid, CO/cyanide, nerve-agent, and chemical-burn pathways. |
 | Abdominal / pelvic trauma | Multiple Trauma is broad; pelvic trauma is not explicit | Add a focused abdominal/pelvic section including hemorrhage risk, pelvic stabilization criteria, pregnancy considerations, and trauma destination. |
-| Eye trauma | No explicit protocol found | Add penetrating/blunt/chemical eye injury workflow with shield/irrigation distinctions and pressure-avoidance warnings. |
+| Eye trauma | Added as TB-11 Eye Trauma | TN-aligned blunt, penetrating/open-globe, thermal, chemical, superficial-foreign-body, and vision-threat workflow with EMT/AEMT/Paramedic actions, rigid-shield/irrigation distinctions, medication cautions, and pressure-avoidance warnings. Medical-director, ophthalmology, trauma-system, pharmacy, and destination-plan review remain required. |
 | Spinal cord injury / neurogenic shock | Selective spinal immobilization exists; no explicit cord injury or neurogenic shock content found | Add a focused spinal cord/neurogenic shock module linked to spinal protection and hypotension/shock. |
 | Physical restraint | Behavioral protocols discuss agitation and safety, but no explicit physical-restraint workflow was found | Add least-restrictive restraint, positioning, monitoring, documentation, and reassessment requirements. |
 | Medications at schools / non-formulary medication | No explicit operational pathway found | Add local-policy cards for assisting with emergency school medications and for patient-specific/non-formulary drugs with Medical Control. |
@@ -104,7 +104,7 @@ Before approval, reconcile every medication against the final Claiborne formular
 
 1. Safeguarding: family violence/abuse and sexual assault.
 2. Chemical/HazMat Exposure with substance cards — completed as TE-09.
-3. Eye Trauma and Abdominal/Pelvic Trauma.
+3. Eye Trauma — completed as TB-11; Abdominal/Pelvic Trauma remains.
 4. Spinal Cord Injury / Neurogenic Shock.
 5. Physical Restraint and consent/POST operational references.
 6. Radio report, trauma destination, chest decompression, and pediatric-reference cards.

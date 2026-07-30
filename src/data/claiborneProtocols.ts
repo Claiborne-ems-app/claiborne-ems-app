@@ -823,6 +823,19 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "status": "draft-import"
   },
   {
+    "id": "TB-11",
+    "code": "TB 11",
+    "title": "Eye Trauma",
+    "category": "Trauma & Burns",
+    "categoryCode": "TB",
+    "pdfPath": "/protocols/claiborne/tb-11-eye-trauma-protocol.pdf",
+    "pages": 2,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
+    "agency": "Claiborne County EMS",
+    "status": "draft-import"
+  },
+  {
     "id": "TE-01",
     "code": "TE 1",
     "title": "Bites and Envenomations Protocol",
