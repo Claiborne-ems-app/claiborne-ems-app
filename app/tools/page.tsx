@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Activity, ArrowRight, BookOpenCheck, Search, ShieldAlert } from "lucide-react";
+import { Activity, ArrowRight, Baby, BookOpenCheck, Search, ShieldAlert } from "lucide-react";
 import AppHeader from "../../components/navigation/AppHeader";
 import BottomNav from "../../components/navigation/BottomNav";
 import SceneTimer from "../../components/tools/SceneTimer";
@@ -26,6 +26,17 @@ export default function ToolsPage() {
         <div className="mt-6">
           <ProviderViewTool />
         </div>
+
+        <Link href="/tools/pediatric-resuscitation" className="mt-6 flex items-center gap-4 rounded-2xl border border-pink-500/30 bg-gradient-to-br from-pink-950/40 to-slate-900 p-5 hover:border-pink-400">
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-pink-500/15 text-pink-300 ring-1 ring-pink-400/25">
+            <Baby aria-hidden="true" className="h-6 w-6" />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-lg font-extrabold">Pediatric Resuscitation</span>
+            <span className="mt-1 block text-sm leading-5 text-slate-400">Weight-based medications, fluids, and electrical energy</span>
+          </span>
+          <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 text-pink-300" />
+        </Link>
 
         <div className="mt-6 grid grid-cols-2 gap-3">
           <Link href="/#protocol-search" className="rounded-2xl border border-slate-800 bg-slate-900 p-4 hover:border-sky-500">
