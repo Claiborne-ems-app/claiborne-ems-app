@@ -9,6 +9,7 @@ export default function BottomNav() {
   const itemClass = "relative flex min-h-14 min-w-16 flex-1 flex-col items-center justify-center gap-1 rounded-xl px-1 text-[0.69rem] font-medium transition duration-150 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400";
   const linkClass = (active: boolean) => `${itemClass} ${active ? "text-sky-300" : "text-slate-500 hover:text-slate-300"}`;
   const iconClass = (active: boolean) => `flex h-7 items-center justify-center transition-colors ${active ? "text-sky-300" : "text-slate-400"}`;
+  const protocolsActive = pathname.startsWith("/protocols") || pathname.startsWith("/medications");
   const toolsActive = pathname.startsWith("/tools");
 
   return (
@@ -18,8 +19,8 @@ export default function BottomNav() {
           <span className={iconClass(pathname === "/")}><Home aria-hidden="true" className="h-[1.35rem] w-[1.35rem]" strokeWidth={pathname === "/" ? 2.25 : 1.8} /></span>
           <span>Home</span>
         </Link>
-        <Link href="/protocols" aria-current={pathname.startsWith("/protocols") ? "page" : undefined} className={linkClass(pathname.startsWith("/protocols"))}>
-          <span className={iconClass(pathname.startsWith("/protocols"))}><BookOpen aria-hidden="true" className="h-[1.35rem] w-[1.35rem]" strokeWidth={pathname.startsWith("/protocols") ? 2.25 : 1.8} /></span>
+        <Link href="/protocols" aria-current={protocolsActive ? "page" : undefined} className={linkClass(protocolsActive)}>
+          <span className={iconClass(protocolsActive)}><BookOpen aria-hidden="true" className="h-[1.35rem] w-[1.35rem]" strokeWidth={protocolsActive ? 2.25 : 1.8} /></span>
           <span>Protocols</span>
         </Link>
         <Link href="/tools" aria-current={toolsActive ? "page" : undefined} className={linkClass(toolsActive)}>
