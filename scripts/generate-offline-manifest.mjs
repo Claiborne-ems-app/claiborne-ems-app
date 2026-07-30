@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = path.join(projectRoot, "public");
 const appConfig = {
-  appVersion: "1.1.0",
+  appVersion: "1.2.0",
   protocolVersion: "July 2026",
 };
 
@@ -70,6 +70,8 @@ const staticResources = [
   "/icons/claiborne-ems-192.png",
   "/icons/claiborne-ems-512.png",
   "/icons/claiborne-ems-apple-touch.png",
+  "/branding/covenant-health-ems-logo.svg",
+  "/branding/covenant-health-ems-app-icon.svg",
   "/pdfjs/pdf.worker.min.mjs",
   "/pdfjs/wasm/jbig2.wasm",
   "/pdfjs/wasm/jbig2_nowasm_fallback.js",
