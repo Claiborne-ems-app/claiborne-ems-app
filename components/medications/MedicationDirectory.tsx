@@ -58,7 +58,7 @@ export default function MedicationDirectory() {
         <div className="flex gap-3">
           <AlertTriangle aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-red-300" />
           <div>
-            <p className="font-extrabold">Draft medication reference — not yet an approved formulary</p>
+            <p className="font-extrabold">Draft mobile formulary transcription — protocol verification required</p>
             <p className="mt-1 text-red-100/80">
               Confirm the indication, concentration, route, dose, repeat interval, contraindications,
               and provider authorization in the current approved Claiborne standing order. The
@@ -195,9 +195,9 @@ export default function MedicationDirectory() {
           rel="noreferrer"
           className="mt-2 inline-flex min-h-10 items-center font-bold text-sky-300"
         >
-          Open Tennessee source PDF
+          Open Tennessee supporting guideline
         </a>
-        <p>Source comparison reviewed {medicationReferenceSource.reviewed}.</p>
+        <p>Local formulary transcribed and Tennessee comparison reviewed {medicationReferenceSource.reviewed}.</p>
       </footer>
     </>
   );

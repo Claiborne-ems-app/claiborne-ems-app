@@ -89,16 +89,17 @@ The best app additions are compact reference cards rather than more full protoco
 
 ## Medication reference
 
-Version 2.11.0 includes a searchable medication section with:
+Version 2.16.0 includes a searchable transcription of the 42 active medications in the Claiborne Covenant EMS Formulary RX-R1 table:
 
-- 24 core medication monographs derived from the current Tennessee medication-dosage reference.
+- Exact adult and pediatric dose text from the submitted local formulary.
 - Adult and pediatric dose rows organized by indication.
 - EMT, AEMT, and Paramedic filtering.
-- High-alert concentration/indication warnings.
-- Links back to the applicable Claiborne protocol.
-- A visible draft/approval warning.
+- High-alert concentration, route, sedation, paralysis, and indication warnings.
+- Brand-name and indication search.
+- Links back to applicable Claiborne protocols.
+- A visible draft/protocol-verification warning.
 
-Before approval, reconcile every medication against the final Claiborne formulary and standing orders. Phase two should add locally adopted drugs not fully represented in the state’s compact dosage table, including ketamine, tranexamic acid, oxytocin, ipratropium, hydroxocobalamin, paralytics, and any approved agitation agents. Optional Tennessee agents such as ketorolac, droperidol, and haloperidol should appear only if Claiborne formally adopts them.
+Before clinical approval, verify every provider-level assignment, concentration, route, repeat interval, maximum dose, contraindication, and entry marked "See protocol," "Varies," "Age based," or "Medical Control" against the final signed Claiborne standing orders. The original XLSX and signed formulary should replace the screenshots as the permanent archival source when available.
 
 ## Recommended build order
 
@@ -109,7 +110,7 @@ Before approval, reconcile every medication against the final Claiborne formular
 5. Physical Restraint and consent/POST operational references.
 6. Radio report, trauma destination, chest decompression, and pediatric-reference cards.
 7. Cardiac refinements: refractory VF, irregular narrow tachycardia, and PVC decision.
-8. Medication formulary reconciliation and medical-director signoff.
+8. Medication formulary transcription completed in version 2.16.0; final protocol reconciliation and medical-director signoff remain.
 
 ## Sources
 

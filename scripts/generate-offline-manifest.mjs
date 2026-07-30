@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = path.join(projectRoot, "public");
 const appConfig = {
-  appVersion: "2.15.0",
+  appVersion: "2.16.0",
   protocolVersion: "July 2026",
 };
 
