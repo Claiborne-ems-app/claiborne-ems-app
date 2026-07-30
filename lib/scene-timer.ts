@@ -1,4 +1,5 @@
 export const SCENE_STORAGE_KEY = "claiborne-ems:scene-workspace:v1";
+export const SCENE_WORKSPACE_EVENT = "claiborne-ems:scene-workspace-change";
 
 export type SceneEntry = {
   id: string;

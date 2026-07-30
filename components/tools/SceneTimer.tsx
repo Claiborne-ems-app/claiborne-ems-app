@@ -21,6 +21,7 @@ import {
   getSceneElapsedSeconds,
   normalizeSceneWorkspace,
   SCENE_STORAGE_KEY,
+  SCENE_WORKSPACE_EVENT,
   type SceneEntry,
   type SceneWorkspace,
 } from "../../lib/scene-timer";
@@ -100,6 +101,9 @@ export default function SceneTimer() {
     window.localStorage.setItem(
       SCENE_STORAGE_KEY,
       JSON.stringify(workspace)
+    );
+    window.dispatchEvent(
+      new CustomEvent(SCENE_WORKSPACE_EVENT, { detail: workspace })
     );
   }, [hydrated, workspace]);
 

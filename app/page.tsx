@@ -1,13 +1,9 @@
-import Link from "next/link";
 import {
   AlertTriangle,
   Baby,
   BookOpen,
-  Calculator,
-  ChevronRight,
   HeartHandshake,
   HeartPulse,
-  Pill,
   ShieldAlert,
   Syringe,
   Users,
@@ -16,6 +12,7 @@ import {
 } from "lucide-react";
 import AppHeader from "../components/navigation/AppHeader";
 import SearchBar from "../components/home/SearchBar";
+import QuickActions from "../components/home/QuickActions";
 import FavoritesList from "../components/home/FavoritesList";
 import RecentlyViewedList from "../components/home/RecentlyViewedList";
 import CategoryCard from "../components/home/CategoryCard";
@@ -111,38 +108,7 @@ export default function Home() {
           <SearchBar />
         </div>
 
-        <div className="mt-4 grid grid-cols-2 gap-3">
-          <Link
-            href="/protocols"
-            className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3 font-semibold text-slate-100 transition active:scale-[0.98] active:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
-          >
-            <BookOpen aria-hidden="true" className="h-5 w-5 text-sky-300" />
-            <span className="flex-1 text-sm">All Protocols</span>
-            <ChevronRight aria-hidden="true" className="h-4 w-4 text-slate-500" />
-          </Link>
-          <Link
-            href="/tools"
-            className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3 font-semibold text-slate-100 transition active:scale-[0.98] active:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
-          >
-            <Calculator aria-hidden="true" className="h-5 w-5 text-emerald-300" />
-            <span className="flex-1 text-sm">Clinical Tools</span>
-            <ChevronRight aria-hidden="true" className="h-4 w-4 text-slate-500" />
-          </Link>
-        </div>
-
-        <Link
-          href="/medications"
-          className="mt-3 flex min-h-[4.5rem] items-center gap-4 rounded-2xl border border-sky-400/30 bg-gradient-to-r from-sky-600/25 via-blue-600/15 to-slate-900 px-4 py-3 shadow-lg shadow-sky-950/20 transition active:scale-[0.985] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
-        >
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-400/15 text-sky-200 ring-1 ring-sky-300/25">
-            <Pill aria-hidden="true" className="h-5 w-5" />
-          </span>
-          <span className="min-w-0 flex-1">
-            <span className="block font-extrabold text-white">Medication Quick Reference</span>
-            <span className="mt-1 block text-xs text-sky-100/70">Search by drug, brand, indication, or provider level</span>
-          </span>
-          <ChevronRight aria-hidden="true" className="h-5 w-5 shrink-0 text-sky-300" />
-        </Link>
+        <QuickActions />
 
         <SectionTitle title="Favorites" />
         <FavoritesList />

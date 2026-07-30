@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Home, Settings, Wrench } from "lucide-react";
+import { BookOpen, Home, Settings, Timer, Wrench } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function BottomNav() {
@@ -11,6 +11,7 @@ export default function BottomNav() {
   const iconClass = (active: boolean) => `flex h-7 items-center justify-center transition-colors ${active ? "text-sky-300" : "text-slate-400"}`;
   const protocolsActive = pathname.startsWith("/protocols") || pathname.startsWith("/medications");
   const toolsActive = pathname.startsWith("/tools");
+  const timerActive = pathname.startsWith("/scene-timer");
 
   return (
     <nav aria-label="Primary navigation" className="fixed inset-x-0 bottom-0 z-30 border-t border-white/10 bg-slate-950/86 pb-[env(safe-area-inset-bottom)] shadow-[0_-12px_30px_rgba(0,0,0,0.22)] backdrop-blur-xl">
@@ -26,6 +27,10 @@ export default function BottomNav() {
         <Link href="/tools" aria-current={toolsActive ? "page" : undefined} className={linkClass(toolsActive)}>
           <span className={iconClass(toolsActive)}><Wrench aria-hidden="true" className="h-[1.35rem] w-[1.35rem]" strokeWidth={toolsActive ? 2.25 : 1.8} /></span>
           <span>Tools</span>
+        </Link>
+        <Link href="/scene-timer" aria-current={timerActive ? "page" : undefined} className={linkClass(timerActive)}>
+          <span className={iconClass(timerActive)}><Timer aria-hidden="true" className="h-[1.35rem] w-[1.35rem]" strokeWidth={timerActive ? 2.25 : 1.8} /></span>
+          <span>Timer</span>
         </Link>
         <Link href="/settings" aria-current={pathname === "/settings" ? "page" : undefined} className={linkClass(pathname === "/settings")}>
           <span className={iconClass(pathname === "/settings")}><Settings aria-hidden="true" className="h-[1.35rem] w-[1.35rem]" strokeWidth={pathname === "/settings" ? 2.25 : 1.8} /></span>

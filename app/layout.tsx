@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import ServiceWorkerRegistration from "../components/offline/ServiceWorkerRegistration";
 import OfflineNavigationFallback from "../components/offline/OfflineNavigationFallback";
+import AppUpdatePrompt from "../components/offline/AppUpdatePrompt";
+import ActiveSceneTimerBar from "../components/tools/ActiveSceneTimerBar";
 
 export const metadata: Metadata = {
   title: "Claiborne EMS Protocols",
@@ -56,6 +58,8 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
         {children}
+        <ActiveSceneTimerBar />
+        <AppUpdatePrompt />
         <ServiceWorkerRegistration />
         <OfflineNavigationFallback />
       </body>
