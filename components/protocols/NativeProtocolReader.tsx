@@ -71,10 +71,10 @@ export default function NativeProtocolReader({ category, protocol, content }: { 
             </section>
           )}
 
-          {content && (content.flow.length || content.careModules.length) ? (
+          {content && ((content.flow?.length ?? 0) || (content.careModules?.length ?? 0)) ? (
             <ProviderProtocolView
-              nodes={content.flow}
-              modules={content.careModules}
+              nodes={content.flow ?? []}
+              modules={content.careModules ?? []}
             />
           ) : null}
           {content?.overview.length ? <ReaderSection id="overview" title="Overview" open><TextList items={content.overview} /></ReaderSection> : null}
