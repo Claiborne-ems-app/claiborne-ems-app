@@ -641,19 +641,6 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "status": "draft-import"
   },
   {
-    "id": "SC-02",
-    "code": "SC 2",
-    "title": "Respiratory Disease",
-    "category": "Special Circumstances",
-    "categoryCode": "SC",
-    "pdfPath": "/protocols/claiborne/sc-02-respiratory-disease.pdf",
-    "pages": 4,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
-    "agency": "Claiborne County EMS",
-    "status": "draft-import"
-  },
-  {
     "id": "SC-03",
     "code": "SC 3",
     "title": "Hospice or Palliative Care Patient Protocol",
@@ -674,19 +661,6 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "categoryCode": "SC",
     "pdfPath": "/protocols/claiborne/sc-04-vaccination-medication-protocol.pdf",
     "pages": 1,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
-    "agency": "Claiborne County EMS",
-    "status": "draft-import"
-  },
-  {
-    "id": "SC-05",
-    "code": "SC 5",
-    "title": "SARS CoV2 Monoclonal Antibody Infusion",
-    "category": "Special Circumstances",
-    "categoryCode": "SC",
-    "pdfPath": "/protocols/claiborne/sc-05-sars-cov2-monoclonal-antibody-infusion.pdf",
-    "pages": 2,
     "year": 2025,
     "source": "North Carolina College of Emergency Physicians",
     "agency": "Claiborne County EMS",
