@@ -10,6 +10,7 @@ import { structuredSceneOperationsProtocols } from "./structured-scene-operation
 import { structuredToxicologyEnvironmentalProtocols } from "./structured-toxicology-environmental-protocols";
 import { structuredChemicalHazmatAdditions } from "./structured-chemical-hazmat-additions";
 import { structuredEyeTraumaAdditions } from "./structured-eye-trauma-additions";
+import { structuredAbdominalPelvicTraumaAdditions } from "./structured-abdominal-pelvic-trauma-additions";
 
 export const structuredProtocols: StructuredProtocolContent[] = [
   {
@@ -1850,6 +1851,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
   ...structuredToxicologyEnvironmentalProtocols,
   ...structuredChemicalHazmatAdditions,
   ...structuredEyeTraumaAdditions,
+  ...structuredAbdominalPelvicTraumaAdditions,
 ];
 
 export function getStructuredProtocol(categoryId: string, protocolId: string) {

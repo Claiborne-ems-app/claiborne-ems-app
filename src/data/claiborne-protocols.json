@@ -858,6 +858,19 @@
     "status": "draft-import"
   },
   {
+    "id": "TB-12",
+    "code": "TB 12",
+    "title": "Abdominal / Pelvic Trauma",
+    "category": "Trauma & Burns",
+    "categoryCode": "TB",
+    "pdfPath": "/protocols/claiborne/tb-12-abdominal-pelvic-trauma-protocol.pdf",
+    "pages": 2,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
+    "agency": "Claiborne County EMS",
+    "status": "draft-import"
+  },
+  {
     "id": "TE-01",
     "code": "TE 1",
     "title": "Bites and Envenomations Protocol",
