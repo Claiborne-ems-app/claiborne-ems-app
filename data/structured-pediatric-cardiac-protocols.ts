@@ -1,0 +1,429 @@
+import type {
+  ProviderLevel,
+  ProtocolCareModule,
+  ProtocolFlowNode,
+  StructuredProtocolContent,
+} from "../lib/protocols/structured-content";
+
+const ALL_LEVELS: ProviderLevel[] = ["EMT", "AEMT", "Paramedic"];
+
+type PediatricCardiacInput = {
+  id: string;
+  title: string;
+  sourcePdf: string;
+  pages: number;
+  revisionDate: string;
+  overview: string[];
+  flow: ProtocolFlowNode[];
+  emt: string[];
+  aemt: string[];
+  paramedic: string[];
+  indications: string[];
+  treatmentSteps?: string[];
+  medications?: { name: string; dose: string; notes?: string[] }[];
+  warnings?: string[];
+  clinicalPearls?: string[];
+};
+
+function pediatricCardiacProtocol(
+  input: PediatricCardiacInput
+): StructuredProtocolContent {
+  const careModules: ProtocolCareModule[] = [
+    {
+      title: "Provider-Level Actions",
+      summary:
+        "Use a length- or weight-based pediatric resuscitation system and perform immediate lifesaving care without delaying oxygenation, ventilation, CPR, or defibrillation.",
+      levels: [
+        { level: "EMT", actions: input.emt },
+        { level: "AEMT", actions: input.aemt },
+        { level: "Paramedic", actions: input.paramedic },
+      ],
+    },
+  ];
+
+  return {
+    id: input.id,
+    title: input.title,
+    categoryId: "pc",
+    category: "Pediatric Cardiac",
+    overview: input.overview,
+    flow: input.flow,
+    careModules,
+    indications: input.indications,
+    contraindications: [],
+    assessment: [],
+    treatmentSteps: input.treatmentSteps ?? [],
+    medications: input.medications ?? [],
+    warnings: input.warnings ?? [],
+    clinicalPearls: input.clinicalPearls ?? [],
+    specialPopulations: [],
+    references: [
+      "Claiborne County EMS approved protocol manual.",
+      "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    ],
+    sourcePdf: input.sourcePdf,
+    sourcePages: { start: 1, end: input.pages },
+    revisionDate: input.revisionDate,
+    lastVerifiedDate: "2026-07-29",
+    reviewStatus: "Reviewed",
+    reviewFlags: [
+      "Medical-director approval is required before clinical release.",
+      "Verify all pediatric doses, energy settings, and advanced procedures against the current length/weight system and Claiborne County standing orders.",
+      "The original imported PDF remains available for source comparison.",
+    ],
+  };
+}
+
+export const structuredPediatricCardiacProtocols: StructuredProtocolContent[] = [
+  pediatricCardiacProtocol({
+    id: "pc-01",
+    title: "Pediatric Asystole / PEA",
+    sourcePdf: "/protocols/claiborne/pc-01-pediatric-asytole-pea-protocol.pdf",
+    pages: 2,
+    revisionDate: "2025-09-01",
+    overview: [
+      "Pediatric asystole and PEA are commonly the end result of hypoxia or respiratory failure; ventilation and high-quality CPR are central interventions.",
+      "Search aggressively for reversible causes while minimizing interruptions in compressions.",
+    ],
+    indications: [
+      "Pediatric patient in pulseless arrest with asystole or pulseless electrical activity.",
+    ],
+    flow: [
+      { title: "Pulseless Arrest", text: "Confirm apnea/pulselessness, rhythm, DNR/MOST, and obvious-death criteria.", levels: ALL_LEVELS, tone: "start" },
+      { title: "High-Quality CPR", text: "100–120/min • depth at least ⅓ chest AP diameter • full recoil • pauses under 10 sec.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Oxygenate + Ventilate", text: "BVM/BIAD rapidly; 15:2 without advanced airway and avoid hyperventilation.", levels: ALL_LEVELS, tone: "action" },
+      { title: "IV/IO + Epinephrine", text: "Give weight-based dose every 3–5 minutes without interrupting CPR.", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "Reversible Cause?", text: "Hypoxia • hypovolemia • acidosis • temperature • electrolytes • tension • toxins • thrombosis.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "ROSC?", text: "Yes: Pediatric Post-Resuscitation. No: continue cycles and reassessment.", levels: ALL_LEVELS, tone: "transport" },
+    ],
+    emt: [
+      "Begin continuous high-quality CPR, apply AED, provide oxygenation/ventilation, and use 15:2 with two rescuers when no advanced airway is present.",
+      "Use a pediatric resuscitation system, change compressors every 2 minutes, and limit rhythm/pulse checks to less than 10 seconds.",
+    ],
+    aemt: [
+      "Perform all EMT care plus IV/IO access, weight-based epinephrine and crystalloid, glucose analysis, and authorized advanced airway support.",
+    ],
+    paramedic: [
+      "Perform all prior care plus rhythm confirmation, continuous EtCO₂, advanced reversible-cause treatment, and post-ROSC transition.",
+      "Do not interrupt compressions to intubate; consider BIAD first when it reduces pauses.",
+    ],
+    medications: [
+      { name: "Epinephrine 1:10,000", dose: "0.01 mg/kg IV/IO every 3–5 minutes; maximum single dose 1 mg" },
+      { name: "Normal saline", dose: "20 mL/kg IV/IO; may repeat as needed to maximum 60 mL/kg" },
+    ],
+    treatmentSteps: [
+      "With an advanced airway, ventilate approximately every 2 seconds when younger than 1 year and every 3 seconds when age 1 year or older.",
+      "EtCO₂ below 10 mmHg should prompt improved CPR; a sudden rise, often above 40 mmHg, may indicate ROSC.",
+    ],
+    warnings: [
+      "Do not hyperventilate or pause compressions for endotracheal intubation.",
+      "IV/IO access and medications are secondary to CPR, ventilation, and defibrillation when indicated.",
+    ],
+  }),
+
+  pediatricCardiacProtocol({
+    id: "pc-02",
+    title: "Pediatric Bradycardia With Poor Perfusion",
+    sourcePdf: "/protocols/claiborne/pc-02-pediatric-bradycardia-poor-perfusion-protocol.pdf",
+    pages: 2,
+    revisionDate: "2026-02-15",
+    overview: [
+      "Pediatric bradycardia is usually caused by hypoxia; correct airway, oxygenation, and ventilation before medication.",
+      "Begin CPR when heart rate remains below 60/min with poor perfusion despite adequate oxygenation and ventilation.",
+    ],
+    indications: [
+      "Pediatric patient with bradycardia and hypotension, altered mental status, shock, poor perfusion, or impending arrest.",
+    ],
+    flow: [
+      { title: "Bradycardia + Poor Perfusion", text: "Typically HR <60 with hypotension, AMS, shock, or weak perfusion.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Airway / Oxygenation", text: "Identify and correct respiratory failure, obstruction, hypoxia, and reversible causes.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "HR Still <60?", text: "Reassess after effective oxygenation and ventilation.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Pulse Present?", text: "No: pulseless arrest pathway. Yes with poor perfusion: begin CPR.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Epinephrine ± Atropine", text: "Epinephrine first; atropine for vagal cause/AV block; consider pacing if refractory.", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "Reassess + Transport", text: "Treat cause, monitor rhythm/perfusion, and notify pediatric-capable destination.", levels: ALL_LEVELS, tone: "transport" },
+    ],
+    emt: [
+      "Open and support the airway, oxygenate and ventilate effectively, assess glucose when authorized, and begin CPR for persistent HR below 60 with poor perfusion.",
+      "Check pulse and response approximately every 2 minutes and transition immediately to the arrest pathway if pulseless.",
+    ],
+    aemt: [
+      "Perform all EMT care plus IV/IO access, crystalloid, weight-based epinephrine, and authorized advanced airway support.",
+    ],
+    paramedic: [
+      "Perform all prior care plus cardiac monitoring, atropine for increased vagal tone/primary AV block, and transcutaneous pacing when unstable bradycardia is refractory.",
+      "Consider immediate pacing for high-degree AV block when vascular access is not immediately available.",
+    ],
+    medications: [
+      { name: "Epinephrine 1:10,000", dose: "0.01 mg/kg IV/IO; maximum single dose 1 mg; repeat every 5 minutes" },
+      { name: "Normal saline", dose: "20 mL/kg IV/IO; repeat as needed ×3, maximum 60 mL/kg" },
+      { name: "Atropine", dose: "0.02 mg/kg IV/IO; may repeat once; minimum 0.1 mg, maximum single dose 0.5 mg" },
+    ],
+    warnings: [
+      "Do not delay oxygenation and ventilation for vascular access or medication.",
+      "Atropine may be ineffective or harmful after cardiac transplantation and may cause paradoxical bradycardia.",
+      "Interpret the rate in clinical context; asymptomatic bradycardia requires monitoring and treatment of the cause, not automatic medication.",
+    ],
+  }),
+
+  pediatricCardiacProtocol({
+    id: "pc-03",
+    title: "Pediatric Pulmonary Edema / CHF",
+    sourcePdf: "/protocols/claiborne/pc-03-pediatric-chf-pulmonary-edema-protocol.pdf",
+    pages: 1,
+    revisionDate: "2025-09-01",
+    overview: [
+      "Most pediatric CHF reflects congenital or acquired heart disease and may present differently by age.",
+      "Support airway and oxygenation, use careful positioning, and contact Medical Control early for cause-specific treatment.",
+    ],
+    indications: [
+      "Pediatric patient with known or suspected CHF/pulmonary edema, respiratory distress with crackles/rales, poor feeding, cyanosis, edema, orthopnea, or shock.",
+    ],
+    flow: [
+      { title: "Suspected CHF / Edema", text: "Congenital history • crackles/rales • poor feeding • cyanosis • edema • orthopnea.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Airway / Ventilation Adequate?", text: "If no, follow pediatric airway and respiratory distress pathways.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Anaphylaxis?", text: "If suspected, treat immediately using pediatric anaphylaxis protocol.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Position + Monitor", text: "Head elevated 25–40° • hips/knees supported • SpO₂ • EtCO₂ • ECG.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Medical Control", text: "Obtain early consultation for diuretic, vasodilator, analgesic, or vasopressor strategy.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Specialty Transport", text: "Transport to pediatric-capable center when available and notify early.", levels: ALL_LEVELS, tone: "transport" },
+    ],
+    emt: [
+      "Position with head elevated, provide oxygen and ventilation support, continuously monitor SpO₂, and obtain a precise congenital/cardiac history from caregivers.",
+      "Avoid assuming all wheeze is asthma in a child with cardiac disease.",
+    ],
+    aemt: [
+      "Perform all EMT care plus IV/IO access, EtCO₂ monitoring, and carefully titrated supportive treatment within current standing orders.",
+    ],
+    paramedic: [
+      "Perform all prior care plus cardiac/12-lead monitoring and Medical-Control-directed CHF therapy based on the child's anatomy and physiology.",
+      "Treat shock and dysrhythmia under the appropriate pediatric protocols.",
+    ],
+    medications: [
+      { name: "Morphine", dose: "0.1 mg/kg IV/IO; maximum single dose 5 mg", notes: ["Medical Control consultation recommended by the imported source."] },
+      { name: "Fentanyl", dose: "1 mcg/kg IV/IO; maximum single dose 50 mcg", notes: ["Medical Control consultation recommended by the imported source."] },
+      { name: "Furosemide", dose: "1 mg/kg IV/IO", notes: ["Medical Control consultation recommended by the imported source."] },
+      { name: "Nitroglycerin / vasopressor", dose: "Dose and indication determined with Medical Control" },
+    ],
+    warnings: [
+      "Do not administer albuterol solely for wheezing in a child with suspected cardiac disease unless pulmonary bronchospasm is strongly supported.",
+      "Pediatric CHF treatment varies with the underlying congenital lesion; contact Medical Control early.",
+    ],
+  }),
+
+  pediatricCardiacProtocol({
+    id: "pc-04",
+    title: "Pediatric Pulseless Arrest",
+    sourcePdf: "/protocols/claiborne/pc-04-pediatric-pulseless-arrest-protocol.pdf",
+    pages: 2,
+    revisionDate: "2025-09-01",
+    overview: [
+      "Use this routing protocol for pediatric pulseless arrest from 3 days through 15 years, then follow the shockable or nonshockable rhythm pathway.",
+      "Oxygenation and ventilation are especially important because most pediatric arrests begin with respiratory failure or hypoxia.",
+    ],
+    indications: [
+      "Pulseless patient age 3 days through 15 years.",
+      "Use Newly Born protocol through 3 days of age and Adult Cardiac Arrest at age 16 years or older.",
+    ],
+    flow: [
+      { title: "Pediatric Arrest", text: "Confirm pulselessness, age pathway, DNR/MOST, and obvious-death criteria.", levels: ALL_LEVELS, tone: "start" },
+      { title: "High-Quality CPR + Ventilation", text: "100–120/min • ⅓ AP depth • 15:2 without advanced airway • avoid pauses.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "AED / Monitor", text: "Apply immediately without delaying CPR or airway support.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Shockable Rhythm?", text: "Yes: VF/pulseless VT. No: asystole/PEA.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Opioid Cause?", text: "Give naloxone when suspected while continuing CPR, oxygenation, and ventilation.", levels: ["AEMT", "Paramedic"], tone: "decision" },
+      { title: "ROSC?", text: "Transition immediately to Pediatric Post-Resuscitation and destination planning.", levels: ALL_LEVELS, tone: "transport" },
+    ],
+    emt: [
+      "Begin high-quality CPR and age-appropriate ventilation, apply AED, and route to the shockable or nonshockable algorithm.",
+      "Do not delay CPR, ventilation, or defibrillation for advanced procedures.",
+    ],
+    aemt: [
+      "Perform all EMT care plus IV/IO access, protocol medications, glucose assessment, and authorized advanced airway support.",
+    ],
+    paramedic: [
+      "Perform all prior care plus rhythm-specific manual treatment, reversible-cause management, continuous EtCO₂, and post-ROSC transition.",
+    ],
+    medications: [
+      { name: "Naloxone", dose: "0.1 mg/kg IV/IO/IM/IN/ETT when opioid cause is suspected; maximum 4 mg" },
+    ],
+    warnings: [
+      "Naloxone does not replace ventilation or high-quality CPR.",
+      "Do not interrupt compressions for endotracheal intubation; consider BIAD when it minimizes pauses.",
+    ],
+  }),
+
+  pediatricCardiacProtocol({
+    id: "pc-05",
+    title: "Pediatric Narrow-Complex Tachycardia",
+    sourcePdf: "/protocols/claiborne/pc-05-pediatrictachycardia-narrow-complex.pdf",
+    pages: 2,
+    revisionDate: "2026-05-01",
+    overview: [
+      "Interpret tachycardia in clinical context and distinguish sinus tachycardia from SVT.",
+      "Unstable tachycardia requires prompt synchronized cardioversion; sedation must not delay the shock.",
+    ],
+    indications: [
+      "Pediatric narrow-complex tachycardia at or below 0.09 seconds with suspected SVT or serious symptoms.",
+    ],
+    flow: [
+      { title: "Narrow Tachycardia", text: "Assess perfusion, mental status, respiratory status, BP, onset, P waves, and R-R variability.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Unstable?", text: "AMS • shock • hypotension • respiratory failure • sudden collapse.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Synchronized Cardioversion", text: "0.5–1 J/kg; repeat at 2 J/kg. Consider sedation without delaying shock.", levels: ["Paramedic"], tone: "urgent" },
+      { title: "Stable + Regular?", text: "No: Medical Control. Yes: distinguish sinus tachycardia from probable SVT.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Probable SVT", text: "Vagal maneuvers, rapid adenosine, and continuous rhythm documentation.", levels: ["Paramedic"], tone: "action" },
+      { title: "Reassess + Transport", text: "Treat underlying cause, monitor continuously, and notify destination.", levels: ALL_LEVELS, tone: "transport" },
+    ],
+    emt: [
+      "Support airway/oxygenation, obtain vital signs and rhythm strip when available, treat fever/pain/hypovolemia/hypoxia, and identify serious signs.",
+      "Keep the caregiver with the child when possible and prepare for immediate cardioversion if deterioration occurs.",
+    ],
+    aemt: [
+      "Perform all EMT care plus IV/IO access and supportive treatment of the underlying cause within standing orders.",
+    ],
+    paramedic: [
+      "Perform all prior care plus synchronized cardioversion for instability and vagal maneuvers/adenosine for stable regular SVT.",
+      "Document rhythm before and after each intervention; obtain 12-lead when stable without delaying treatment.",
+    ],
+    medications: [
+      { name: "Adenosine", dose: "0.1 mg/kg rapid IV/IO, maximum 6 mg; repeat 0.2 mg/kg, maximum 12 mg" },
+      { name: "Midazolam", dose: "0.1–0.2 mg/kg IV/IO/IN for cardioversion; maximum single 2 mg, maximum total 5 mg", notes: ["Do not delay cardioversion."] },
+    ],
+    treatmentSteps: [
+      "Sinus tachycardia usually has visible P waves and variable R-R intervals; infant rate usually below 220 and child below 180.",
+      "SVT is usually abrupt, regular, with absent/abnormal P waves; infant rate often above 220 and child above 180.",
+    ],
+    warnings: [
+      "Do not delay synchronized cardioversion for sedation in an unstable child.",
+      "Continuous pulse oximetry is required for SVT when available.",
+      "If pulseless at any time, move immediately to Pediatric Pulseless Arrest.",
+    ],
+  }),
+
+  pediatricCardiacProtocol({
+    id: "pc-06",
+    title: "Pediatric Wide-Complex Tachycardia",
+    sourcePdf: "/protocols/claiborne/pc-06-pediatric-tachycardia-wide-complex-protocol.pdf",
+    pages: 2,
+    revisionDate: "2026-05-01",
+    overview: [
+      "Treat unstable wide-complex tachycardia with synchronized cardioversion.",
+      "In a stable child, adenosine is considered only when the rhythm is regular and monomorphic; expert consultation is recommended for antiarrhythmics.",
+    ],
+    indications: [
+      "Pediatric tachycardia with QRS wider than 0.09 seconds and suspected VT, SVT with aberrancy, or polymorphic tachycardia.",
+    ],
+    flow: [
+      { title: "Wide Tachycardia", text: "Assess perfusion, mental status, respiratory status, BP, QRS pattern, and underlying cause.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Unstable?", text: "AMS • shock • hypotension • respiratory failure • sudden collapse.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Synchronized Cardioversion", text: "0.5–1 J/kg; repeat at 2 J/kg. Sedation must not delay treatment.", levels: ["Paramedic"], tone: "urgent" },
+      { title: "Stable + Regular?", text: "Irregular/polymorphic: Medical Control. Regular: determine monomorphic pattern.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Regular Monomorphic", text: "Consider adenosine; obtain expert consultation for antiarrhythmic strategy.", levels: ["Paramedic"], tone: "action" },
+      { title: "Reassess + Transport", text: "Continuous monitoring, rhythm strips, cause treatment, and early notification.", levels: ALL_LEVELS, tone: "transport" },
+    ],
+    emt: [
+      "Support airway/oxygenation, identify serious signs, obtain rhythm strip when available, treat reversible causes, and prepare for cardioversion.",
+    ],
+    aemt: [
+      "Perform all EMT care plus IV/IO access and supportive treatment within current standing orders.",
+    ],
+    paramedic: [
+      "Perform all prior care plus synchronized cardioversion for instability and adenosine only for a stable, regular, monomorphic wide-complex rhythm.",
+      "Consult Medical Control before amiodarone or procainamide; never administer both together.",
+    ],
+    medications: [
+      { name: "Adenosine", dose: "0.1 mg/kg rapid IV/IO, maximum 6 mg; repeat 0.2 mg/kg, maximum 12 mg", notes: ["Only for a regular monomorphic rhythm."] },
+      { name: "Midazolam", dose: "0.1–0.2 mg/kg IV/IO/IN for cardioversion; maximum single 2 mg, maximum total 5 mg", notes: ["Do not delay cardioversion."] },
+      { name: "Amiodarone", dose: "5 mg/kg IV/IO over 20–60 minutes with expert consultation" },
+      { name: "Procainamide", dose: "15 mg/kg IV/IO over 30–60 minutes with expert consultation" },
+    ],
+    warnings: [
+      "Do not give amiodarone and procainamide together.",
+      "Do not use adenosine for an irregular or polymorphic wide-complex rhythm.",
+      "If pulseless at any time, move immediately to Pediatric Pulseless Arrest.",
+    ],
+  }),
+
+  pediatricCardiacProtocol({
+    id: "pc-07",
+    title: "Pediatric VF / Pulseless VT",
+    sourcePdf: "/protocols/claiborne/pc-07-pediatric-vf-pulseless-vt-protocol.pdf",
+    pages: 2,
+    revisionDate: "2025-09-01",
+    overview: [
+      "High-quality CPR and early defibrillation are the central treatments for pediatric VF/pulseless VT.",
+      "Charge during compressions and resume CPR immediately after every shock without an immediate pulse check.",
+    ],
+    indications: [
+      "Pediatric pulseless arrest with ventricular fibrillation or pulseless ventricular tachycardia.",
+    ],
+    flow: [
+      { title: "VF / Pulseless VT", text: "Begin continuous CPR, oxygenation/ventilation, and attach defibrillator.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Shock 2 J/kg", text: "Defibrillate and immediately resume CPR for 2 minutes.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Shock 4 J/kg", text: "Resume CPR immediately; obtain IV/IO and give epinephrine.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Refractory Rhythm", text: "Subsequent shocks at least 4 J/kg, maximum 10 J/kg or adult dose.", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "Antiarrhythmic + Causes", text: "Use agency-specific antiarrhythmic; magnesium for torsades; treat reversible causes.", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "ROSC?", text: "Yes: Pediatric Post-Resuscitation. No: continue drug-shock cycles.", levels: ALL_LEVELS, tone: "transport" },
+    ],
+    emt: [
+      "Begin high-quality CPR and ventilation, apply AED, minimize pauses, and resume compressions immediately after every shock.",
+    ],
+    aemt: [
+      "Perform all EMT care plus manual defibrillation when authorized, IV/IO access, epinephrine, and magnesium within current standing orders.",
+    ],
+    paramedic: [
+      "Perform all prior care plus manual defibrillation, agency-specific antiarrhythmic treatment, EtCO₂-guided CPR improvement, and reversible-cause management.",
+      "Charge during compressions and minimize the peri-shock pause.",
+    ],
+    medications: [
+      { name: "Epinephrine 1:10,000", dose: "0.01 mg/kg IV/IO every 3–5 minutes; maximum 1 mg" },
+      { name: "Magnesium sulfate", dose: "40 mg/kg IV/IO over 2–3 minutes; maximum 2 g" },
+      { name: "Agency-specific antiarrhythmic", dose: "Use current Claiborne pediatric shockable-arrest standing order" },
+    ],
+    warnings: [
+      "Do not pause CPR after a shock to check a pulse; resume immediately until the next planned rhythm check.",
+      "Do not interrupt compressions for endotracheal intubation.",
+    ],
+  }),
+
+  pediatricCardiacProtocol({
+    id: "pc-08",
+    title: "Pediatric Post-Resuscitation",
+    sourcePdf: "/protocols/claiborne/pc-08-pediatric-post-resuscitation-protocol.pdf",
+    pages: 2,
+    revisionDate: "2025-09-01",
+    overview: [
+      "After ROSC, prevent recurrent arrest and secondary neurologic or organ injury through controlled oxygenation, ventilation, perfusion, glucose, temperature, and rhythm management.",
+      "Choose a destination capable of pediatric intensive care and the child's likely cardiac, neurologic, and temperature-management needs.",
+    ],
+    indications: [
+      "Pediatric patient with return of spontaneous circulation after respiratory or cardiac arrest.",
+    ],
+    flow: [
+      { title: "ROSC", text: "Confirm pulse/perfusion and immediately stabilize airway, breathing, circulation, and temperature.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Optimize Oxygenation", text: "Target SpO₂ 92–98%; use age-appropriate ventilation and avoid hyperventilation.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Support Perfusion", text: "Age-based BP target • IV/IO • glucose • fluid/vasopressor pathway as indicated.", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "Persistent Arrhythmia?", text: "Follow rhythm-specific pathway and continue antiarrhythmic used during arrest when indicated.", levels: ["Paramedic"], tone: "decision" },
+      { title: "Pain + Sedation", text: "Treat pain first; maintain post-intubation monitoring and ventilation.", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "Pediatric-Capable Destination", text: "Early notification, frequent reassessment, and Medical Control consultation.", levels: ALL_LEVELS, tone: "transport" },
+    ],
+    emt: [
+      "Maintain airway and age-appropriate ventilation, titrate oxygen to SpO₂ 92–98%, monitor vital signs frequently, check glucose when authorized, and prevent temperature extremes.",
+      "Elevate the head 10–20 degrees when feasible and reassess for recurrent arrest.",
+    ],
+    aemt: [
+      "Perform all EMT care plus IV/IO access, glucose correction, age-based hypotension treatment, and authorized post-airway analgesia/sedation.",
+    ],
+    paramedic: [
+      "Perform all prior care plus cardiac/12-lead and continuous EtCO₂ monitoring, rhythm-specific treatment, vasopressor support, and advanced post-intubation management.",
+      "Select a destination with pediatric ICU, cardiology, neurology, and temperature-management capabilities when available.",
+    ],
+    treatmentSteps: [
+      "Minimum systolic targets from the imported source: newborn–31 days at least 60 mmHg; 1 month–1 year at least 70 mmHg; older than 1 year at least 70 + (2 × age) mmHg.",
+      "Target EtCO₂ near 35–45 mmHg but do not hyperventilate to force the number.",
+      "Use approximately 6 mL/kg tidal volume and keep airway pressures below 30 cmH₂O when mechanically ventilated, individualized to the patient.",
+    ],
+    warnings: [
+      "Hyperventilation can cause hypotension and recurrent arrest after ROSC.",
+      "A paralyzed or ventilated patient may be awake and in pain; treat pain before anxiety and maintain sedation.",
+      "Post-ROSC condition can change rapidly; reassess continuously.",
+    ],
+  }),
+];
