@@ -1185,6 +1185,19 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
     "status": "draft-import"
+  },
+  {
+    "id": "UP-21",
+    "code": "UP 21",
+    "title": "Family Violence / Abuse",
+    "category": "Universal Patient Care",
+    "categoryCode": "UP",
+    "pdfPath": "/protocols/claiborne/up-21-family-violence-abuse-protocol.pdf",
+    "pages": 2,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
+    "agency": "Claiborne County EMS",
+    "status": "draft-import"
   }
 ] as ClaiborneProtocol[];
 
