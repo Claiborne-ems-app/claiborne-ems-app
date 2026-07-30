@@ -6,6 +6,7 @@ import {
   ChevronRight,
   HeartHandshake,
   HeartPulse,
+  Pill,
   ShieldAlert,
   Syringe,
   Users,
@@ -103,6 +104,20 @@ export default function ProtocolsPage() {
             Select a category to open its field protocols.
           </p>
         </header>
+
+        <Link
+          href="/medications"
+          className="mb-5 flex min-h-[5.25rem] items-center gap-4 rounded-2xl border border-sky-400/35 bg-gradient-to-r from-sky-600/25 via-blue-600/15 to-transparent p-4 shadow-lg shadow-sky-950/20 transition active:scale-[0.985] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+        >
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-500/20 text-sky-200 ring-1 ring-sky-300/30">
+            <Pill aria-hidden="true" className="h-6 w-6" />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-[1.05rem] font-extrabold text-white">Medication Quick Reference</span>
+            <span className="mt-1 block text-xs leading-4 text-sky-100/70">Searchable adult and pediatric dose cards</span>
+          </span>
+          <ChevronRight aria-hidden="true" className="h-5 w-5 shrink-0 text-sky-300" />
+        </Link>
 
         <section aria-label="Protocol categories" className="space-y-3">
           {protocolCategories.map((category) => {
