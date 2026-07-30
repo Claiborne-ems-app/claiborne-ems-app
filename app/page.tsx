@@ -1,3 +1,16 @@
+import Link from "next/link";
+import {
+  Baby,
+  BookOpen,
+  Calculator,
+  ChevronRight,
+  HeartHandshake,
+  HeartPulse,
+  Pill,
+  ShieldAlert,
+  Syringe,
+  type LucideIcon,
+} from "lucide-react";
 import AppHeader from "../components/navigation/AppHeader";
 import SearchBar from "../components/home/SearchBar";
 import FavoritesList from "../components/home/FavoritesList";
@@ -6,82 +19,106 @@ import CategoryCard from "../components/home/CategoryCard";
 import SectionTitle from "../components/home/SectionTitle";
 import VersionFooter from "../components/home/VersionFooter";
 import BottomNav from "../components/navigation/BottomNav";
-import { protocolCategories } from "../data/protocols";
-import { Baby, BookOpen, HeartHandshake, HeartPulse, Pill, ShieldAlert, Syringe, type LucideIcon } from "lucide-react";
 import OfflineStatusIndicator from "../components/offline/OfflineStatusIndicator";
 import { CovenantHealthEmsLogo } from "../components/branding/CovenantHealthEmsLogo";
+import { protocolCategories } from "../data/protocols";
 
 const categoryPresentation: Record<string, { icon: LucideIcon; accent: string; subtitle: string }> = {
   medical: {
     icon: HeartPulse,
-    accent: "bg-sky-500/10 text-sky-300 ring-sky-400/20",
+    accent: "bg-sky-500/12 text-sky-300 ring-sky-400/20",
     subtitle: "Adult medical care",
   },
   trauma: {
     icon: ShieldAlert,
-    accent: "bg-red-500/10 text-red-300 ring-red-400/20",
+    accent: "bg-rose-500/12 text-rose-300 ring-rose-400/20",
     subtitle: "Trauma assessment & care",
   },
   pediatrics: {
     icon: Baby,
-    accent: "bg-pink-500/10 text-pink-300 ring-pink-400/20",
+    accent: "bg-pink-500/12 text-pink-300 ring-pink-400/20",
     subtitle: "Pediatric patient care",
   },
   obstetrics: {
     icon: HeartHandshake,
-    accent: "bg-violet-500/10 text-violet-300 ring-violet-400/20",
+    accent: "bg-violet-500/12 text-violet-300 ring-violet-400/20",
     subtitle: "Maternal & newborn care",
   },
   procedures: {
     icon: Syringe,
-    accent: "bg-amber-500/10 text-amber-300 ring-amber-400/20",
+    accent: "bg-amber-500/12 text-amber-300 ring-amber-400/20",
     subtitle: "Clinical procedures",
   },
   medications: {
     icon: Pill,
-    accent: "bg-emerald-500/10 text-emerald-300 ring-emerald-400/20",
+    accent: "bg-emerald-500/12 text-emerald-300 ring-emerald-400/20",
     subtitle: "Medication reference",
   },
   references: {
     icon: BookOpen,
-    accent: "bg-blue-500/10 text-blue-300 ring-blue-400/20",
+    accent: "bg-blue-500/12 text-blue-300 ring-blue-400/20",
     subtitle: "Clinical reference guides",
   },
 };
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 pb-[calc(6rem+env(safe-area-inset-bottom))] text-white">
-      <div className="mx-auto max-w-md p-6">
+    <main className="min-h-screen pb-[calc(6rem+env(safe-area-inset-bottom))] text-white">
+      <div className="mx-auto max-w-md px-5">
         <AppHeader />
 
-        <section className="mb-8 text-center">
+        <section className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-slate-800/95 via-slate-900/95 to-slate-950 p-5 shadow-2xl shadow-black/20">
           <CovenantHealthEmsLogo
             priority
-            className="mx-auto w-full max-w-sm border border-white/10 p-3 shadow-2xl shadow-black/30"
+            className="w-full max-w-[15rem] border border-white/10 p-2 shadow-lg shadow-black/20"
           />
-          <h1 className="mt-5 text-3xl font-bold tracking-tight">Claiborne County EMS Protocols</h1>
-          <div aria-hidden="true" className="mx-auto mt-3 h-1 w-20 rounded-full bg-red-700" />
+          <div className="mt-5 flex items-end justify-between gap-4">
+            <div>
+              <p className="text-sm font-semibold text-sky-300">Field reference</p>
+              <h1 className="mt-1 text-[1.75rem] font-bold leading-8 tracking-[-0.025em]">
+                Claiborne County EMS Protocols
+              </h1>
+            </div>
+            <div aria-hidden="true" className="mb-1 h-12 w-1 shrink-0 rounded-full bg-rose-700" />
+          </div>
           <OfflineStatusIndicator />
         </section>
 
-        <SearchBar />
+        <div className="mt-5">
+          <SearchBar />
+        </div>
+
+        <div className="mt-4 grid grid-cols-2 gap-3">
+          <Link
+            href="/protocols"
+            className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3 font-semibold text-slate-100 transition active:scale-[0.98] active:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+          >
+            <BookOpen aria-hidden="true" className="h-5 w-5 text-sky-300" />
+            <span className="flex-1 text-sm">All Protocols</span>
+            <ChevronRight aria-hidden="true" className="h-4 w-4 text-slate-500" />
+          </Link>
+          <Link
+            href="/tools"
+            className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3 font-semibold text-slate-100 transition active:scale-[0.98] active:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+          >
+            <Calculator aria-hidden="true" className="h-5 w-5 text-emerald-300" />
+            <span className="flex-1 text-sm">Clinical Tools</span>
+            <ChevronRight aria-hidden="true" className="h-4 w-4 text-slate-500" />
+          </Link>
+        </div>
 
         <SectionTitle title="Favorites" />
-
         <FavoritesList />
 
         <SectionTitle title="Recently Viewed" />
-
         <RecentlyViewedList />
 
-        <SectionTitle title="Categories" />
-
-        <div className="grid grid-cols-2 gap-4">
+        <SectionTitle title="Protocol Categories" />
+        <div className="grid grid-cols-2 gap-3">
           {protocolCategories.map((category) => {
             const presentation = categoryPresentation[category.id] ?? {
               icon: BookOpen,
-              accent: "bg-sky-500/10 text-sky-300 ring-sky-400/20",
+              accent: "bg-sky-500/12 text-sky-300 ring-sky-400/20",
               subtitle: `${category.protocols.length} protocols`,
             };
 
