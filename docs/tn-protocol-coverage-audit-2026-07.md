@@ -2,7 +2,7 @@
 
 **Claiborne County EMS Protocol App**  
 **Comparison date:** July 30, 2026  
-**App catalog reviewed:** 91 Claiborne protocols  
+**App catalog reviewed:** 92 Claiborne protocols  
 **Primary state source:** Tennessee BLS/ALS State EMS Protocol Guidelines 2024–2025 (linked by the Tennessee EMS Board as “TN EMS Protocol Guidelines — Sept 2025”)
 
 ## Important source note
@@ -20,7 +20,7 @@ The July 2017 Tennessee PDF is a historical reference. The current Tennessee EMS
 
 | Tennessee topic | Current Claiborne coverage | Recommendation |
 |---|---|---|
-| Family violence / suspected abuse | No explicit structured section found | Add a universal safeguarding workflow covering children, vulnerable adults, mandatory reporting, documentation, scene safety, and destination coordination. |
+| Family violence / suspected abuse | Added as UP-21 Family Violence / Abuse | Universal safeguarding workflow now covers intimate-partner violence, children, older/vulnerable adults, trafficking concerns, mandated reporting, documentation, scene safety, and destination coordination. Medical-director and agency approval remain required. |
 | Sexual assault | No explicit structured section found | Add a trauma/medical protocol emphasizing consent, evidence preservation, minimal necessary examination, patient choice, law-enforcement coordination, and appropriate destination. |
 | Chemical exposure / substance-specific HazMat | Chemical burn, radiation, cyanide/CO, overdose, and nerve-agent pathways exist; ammonia, chlorine, heavy metals, hydrogen fluoride, hydrogen sulfide, methyl bromide, and nitrogen oxides are not explicit | Add one Chemical/HazMat Exposure protocol plus searchable substance quick cards. Avoid eight largely duplicative full protocols. |
 | Abdominal / pelvic trauma | Multiple Trauma is broad; pelvic trauma is not explicit | Add a focused abdominal/pelvic section including hemorrhage risk, pelvic stabilization criteria, pregnancy considerations, and trauma destination. |
@@ -89,7 +89,7 @@ The best app additions are compact reference cards rather than more full protoco
 
 ## Medication reference
 
-Version 2.10.0 adds a searchable medication section with:
+Version 2.11.0 includes a searchable medication section with:
 
 - 24 core medication monographs derived from the current Tennessee medication-dosage reference.
 - Adult and pediatric dose rows organized by indication.
