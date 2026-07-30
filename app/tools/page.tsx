@@ -3,6 +3,7 @@ import { Activity, ArrowRight, BookOpenCheck, Search, ShieldAlert } from "lucide
 import AppHeader from "../../components/navigation/AppHeader";
 import BottomNav from "../../components/navigation/BottomNav";
 import SceneTimer from "../../components/tools/SceneTimer";
+import ProviderViewTool from "../../components/tools/ProviderViewTool";
 import { structuredProtocols } from "../../data/structured-protocols";
 
 export default function ToolsPage() {
@@ -21,6 +22,10 @@ export default function ToolsPage() {
         <aside className="mt-6 rounded-2xl border border-amber-500/30 bg-amber-950/20 p-4 text-sm leading-6 text-amber-100">
           <div className="flex gap-3"><ShieldAlert aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0" /><p>Beta tools are decision-support aids only. Confirm information against the current approved protocol and clinical judgment.</p></div>
         </aside>
+
+        <div className="mt-6">
+          <ProviderViewTool />
+        </div>
 
         <div className="mt-6 grid grid-cols-2 gap-3">
           <Link href="/#protocol-search" className="rounded-2xl border border-slate-800 bg-slate-900 p-4 hover:border-sky-500">
