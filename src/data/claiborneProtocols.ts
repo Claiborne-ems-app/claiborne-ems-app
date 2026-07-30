@@ -1211,6 +1211,19 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
     "status": "draft-import"
+  },
+  {
+    "id": "TE-09",
+    "code": "TE 9",
+    "title": "Chemical / HazMat Exposure",
+    "category": "Toxicology & Environmental",
+    "categoryCode": "TE",
+    "pdfPath": "/protocols/claiborne/te-09-chemical-hazmat-exposure-protocol.pdf",
+    "pages": 4,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
+    "agency": "Claiborne County EMS",
+    "status": "draft-import"
   }
 ] as ClaiborneProtocol[];
 

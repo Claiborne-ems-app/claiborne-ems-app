@@ -11,6 +11,7 @@ type Input = {
   overview: string[]; indications: string[]; flow: ProtocolFlowNode[];
   emt: string[]; aemt: string[]; paramedic: string[];
   medications?: { name: string; dose: string; notes?: string[] }[];
+  actionLinks?: StructuredProtocolContent["actionLinks"];
   warnings?: string[]; pearls?: string[];
 };
 function protocol(input: Input): StructuredProtocolContent {
@@ -28,9 +29,10 @@ function protocol(input: Input): StructuredProtocolContent {
     overview: input.overview, flow: input.flow, careModules, indications: input.indications,
     contraindications: [], assessment: [], treatmentSteps: [], medications: input.medications ?? [],
     warnings: input.warnings ?? [], clinicalPearls: input.pearls ?? [], specialPopulations: [],
+    actionLinks: input.actionLinks,
     references: [
       "Claiborne County EMS approved protocol manual.",
-      "Carolinas Poison Control: 1-800-222-1222.",
+      "Poison Help national line: 1-800-222-1222.",
       "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
     ],
     sourcePdf: input.sourcePdf, sourcePages: { start: 1, end: input.pages },
@@ -204,6 +206,20 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
       "Naloxone is titrated to adequate ventilation—not restoration of consciousness—and toxin-specific treatment follows the clinical toxidrome and ECG.",
     ],
     indications: ["Known or suspected overdose, poisoning, or toxic ingestion/exposure."],
+    actionLinks: [
+      {
+        label: "Call Poison Help",
+        description: "National Poison Control line",
+        href: "tel:+18002221222",
+        kind: "call",
+      },
+      {
+        label: "Chemical / HazMat",
+        description: "Decontamination and agent quick cards",
+        href: "/protocols/te/te-09",
+        kind: "protocol",
+      },
+    ],
     flow: [
       { title: "ABCs + Exposure History", text: "Substance, route, amount, time, co-ingestants, intent; bring containers when safe.", levels: ALL_LEVELS, tone: "start" },
       { title: "Inadequate Ventilation?", text: "Ventilate first; suspected opioid: naloxone titrated to breathing.", levels: ALL_LEVELS, tone: "urgent" },

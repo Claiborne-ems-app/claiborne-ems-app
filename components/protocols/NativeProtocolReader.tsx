@@ -1,8 +1,10 @@
 import Link from "next/link";
 import {
   AlertTriangle,
+  ArrowRight,
   ChevronDown,
   FileText,
+  Phone,
   Pill,
   ShieldAlert,
   Sparkles,
@@ -162,6 +164,45 @@ export default function NativeProtocolReader({
             {BETA_CLINICAL_DISCLAIMER}
           </p>
         </aside>
+
+        {content?.actionLinks?.length ? (
+          <section
+            aria-label="Protocol quick actions"
+            className="mt-4 grid gap-2 sm:grid-cols-2"
+          >
+            {content.actionLinks.map((action) => {
+              const isCall = action.kind === "call";
+              const ActionIcon = isCall ? Phone : ArrowRight;
+              return (
+                <a
+                  key={`${action.href}-${action.label}`}
+                  href={action.href}
+                  className={`flex min-h-16 items-center gap-3 rounded-2xl border px-4 py-3 transition active:scale-[0.985] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
+                    isCall
+                      ? "border-emerald-400/35 bg-emerald-500/15 text-emerald-100"
+                      : "border-sky-400/25 bg-sky-500/10 text-sky-100"
+                  }`}
+                >
+                  <span
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
+                      isCall ? "bg-emerald-400/15" : "bg-sky-400/15"
+                    }`}
+                  >
+                    <ActionIcon aria-hidden="true" className="h-5 w-5" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block font-bold">{action.label}</span>
+                    {action.description ? (
+                      <span className="mt-0.5 block text-xs leading-5 text-slate-300">
+                        {action.description}
+                      </span>
+                    ) : null}
+                  </span>
+                </a>
+              );
+            })}
+          </section>
+        ) : null}
 
         <nav
           aria-label="Protocol sections"

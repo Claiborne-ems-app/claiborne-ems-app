@@ -2,7 +2,7 @@
 
 **Claiborne County EMS Protocol App**  
 **Comparison date:** July 30, 2026  
-**App catalog reviewed:** 95 Claiborne protocols  
+**App catalog reviewed:** 96 Claiborne protocols  
 **Primary state source:** Tennessee BLS/ALS State EMS Protocol Guidelines 2024–2025 (linked by the Tennessee EMS Board as “TN EMS Protocol Guidelines — Sept 2025”)
 
 ## Important source note
@@ -22,7 +22,7 @@ The July 2017 Tennessee PDF is a historical reference. The current Tennessee EMS
 |---|---|---|
 | Family violence / suspected abuse | Added as UP-21 Family Violence / Abuse | Universal safeguarding workflow now covers intimate-partner violence, children, older/vulnerable adults, trafficking concerns, mandated reporting, documentation, scene safety, and destination coordination. Medical-director and agency approval remain required. |
 | Sexual assault | Added as UP-22 Sexual Assault | Universal workflow now covers consent, trauma-informed care, evidence preservation, destination, competent-adult choice, child and vulnerable-adult reporting, qualifying-injury reporting, and Tennessee first-responder duties. Medical-director and agency approval remain required. |
-| Chemical exposure / substance-specific HazMat | Chemical burn, radiation, cyanide/CO, overdose, and nerve-agent pathways exist; ammonia, chlorine, heavy metals, hydrogen fluoride, hydrogen sulfide, methyl bromide, and nitrogen oxides are not explicit | Add one Chemical/HazMat Exposure protocol plus searchable substance quick cards. Avoid eight largely duplicative full protocols. |
+| Chemical exposure / substance-specific HazMat | Added as TE-09 Chemical / HazMat Exposure | Master decontamination and responder-safety workflow now includes field quick cards for chlorine/chloramine, ammonia, organophosphate/carbamate, hydrogen sulfide, hydrofluoric acid, and unknown/corrosive exposures; it cross-links overdose/opioid, CO/cyanide, nerve-agent, and chemical-burn pathways. |
 | Abdominal / pelvic trauma | Multiple Trauma is broad; pelvic trauma is not explicit | Add a focused abdominal/pelvic section including hemorrhage risk, pelvic stabilization criteria, pregnancy considerations, and trauma destination. |
 | Eye trauma | No explicit protocol found | Add penetrating/blunt/chemical eye injury workflow with shield/irrigation distinctions and pressure-avoidance warnings. |
 | Spinal cord injury / neurogenic shock | Selective spinal immobilization exists; no explicit cord injury or neurogenic shock content found | Add a focused spinal cord/neurogenic shock module linked to spinal protection and hypotension/shock. |
@@ -103,7 +103,7 @@ Before approval, reconcile every medication against the final Claiborne formular
 ## Recommended build order
 
 1. Safeguarding: family violence/abuse and sexual assault.
-2. Chemical/HazMat Exposure with substance cards.
+2. Chemical/HazMat Exposure with substance cards — completed as TE-09.
 3. Eye Trauma and Abdominal/Pelvic Trauma.
 4. Spinal Cord Injury / Neurogenic Shock.
 5. Physical Restraint and consent/POST operational references.

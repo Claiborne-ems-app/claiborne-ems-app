@@ -26,6 +26,13 @@ export type ProtocolCareModule = {
   levels: { level: ProviderLevel; actions: string[] }[];
 };
 
+export type ProtocolActionLink = {
+  label: string;
+  description?: string;
+  href: string;
+  kind?: "call" | "protocol" | "external";
+};
+
 export type StructuredProtocolContent = {
   id: string;
   title: string;
@@ -42,6 +49,7 @@ export type StructuredProtocolContent = {
   warnings: string[];
   clinicalPearls: string[];
   specialPopulations: ProtocolSectionGroup[];
+  actionLinks?: ProtocolActionLink[];
   references: string[];
   sourcePdf: string;
   sourcePages: { start: number; end: number };
