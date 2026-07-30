@@ -1,4 +1,5 @@
 import type { StructuredProtocolContent } from "../lib/protocols/structured-content";
+import { structuredUniversalAdditions } from "./structured-universal-additions";
 import { structuredTraumaProtocols } from "./structured-trauma-protocols";
 import { structuredObstetricsProtocols } from "./structured-obstetrics-protocols";
 import { structuredAirwayProtocols } from "./structured-airway-protocols";
@@ -1836,6 +1837,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "The original imported North Carolina PDF remains available as a source-comparison document.",
     ],
   },
+  ...structuredUniversalAdditions,
   ...structuredTraumaProtocols,
   ...structuredObstetricsProtocols,
   ...structuredAirwayProtocols,
