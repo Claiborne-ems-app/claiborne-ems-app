@@ -192,4 +192,200 @@ export const structuredUniversalAdditions: StructuredProtocolContent[] = [
       "Current Tennessee law, provider scope, and Claiborne County policy control if any conflict exists.",
     ],
   },
+  {
+    id: "up-22",
+    title: "Sexual Assault",
+    categoryId: "up",
+    category: "Universal Patient Care",
+    overview: [
+      "Provide immediate medical care, safety, privacy, patient control, and trauma-informed support after a suspected or disclosed sexual assault.",
+      "For a competent adult who is not a vulnerable adult, sexual assault is not automatically reported to law enforcement when the patient objects to release of identifying information. Mandatory child, vulnerable-adult, and qualifying-injury reporting requirements still apply.",
+      "Use the least intrusive assessment needed for emergency care, preserve potential evidence without delaying treatment, and transport to an appropriate facility for medical and forensic options.",
+    ],
+    flow: [
+      {
+        title: "Scene Safe + Private?",
+        text: "Separate from suspected assailant • request law enforcement for danger • use a qualified interpreter",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "start",
+      },
+      {
+        title: "Treat Immediate Threats",
+        text: "XABCDE • hemorrhage • airway • shock • pain • pregnancy or strangulation risk",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "urgent",
+      },
+      {
+        title: "Minor or Vulnerable Adult?",
+        text: "Yes: protect patient and initiate the required DCS or APS reporting pathway",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Mandatory Injury Report?",
+        text: "Life-threatening injury • strangulation • knife, firearm, or other deadly weapon",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Competent Adult Preference",
+        text: "Explain options • respect choice about law enforcement unless a mandatory exception applies",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Preserve + Transport",
+        text: "Minimal handling • preserve clothing when possible • appropriate medical/forensic destination",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Private Handoff + Document",
+        text: "Exact words • objective findings • consent and reporting decisions • evidence handled • notifications",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "transport",
+      },
+    ],
+    careModules: [
+      {
+        title: "Provider-Level Actions",
+        summary: "All providers protect safety, consent, privacy, evidence, and access to appropriate medical and forensic care.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Treat immediate threats, obtain only the history needed for care and safety, and avoid a detailed forensic interview or unnecessary genital examination.",
+              "Explain actions before touching the patient, obtain consent throughout care, preserve clothing or other potential evidence when feasible, and transport to an appropriate facility.",
+              "If transporting, privately notify receiving ED staff of the suspected cause of injury. For nontransport, follow the current Tennessee first-responder and agency reporting pathway.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT actions plus authorized vascular access, fluid, analgesia, antiemetic, and monitoring care for associated illness or injury.",
+              "Reassess for occult shock, strangulation, intoxication, pregnancy-related concern, and injuries requiring a mandatory injury report.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform all prior actions; lead capacity assessment, destination selection, Medical Control consultation, and the reporting decision pathway.",
+              "Address high-risk refusal, questionable capacity, serious injury, unsafe disposition, or disagreement involving a parent, guardian, caregiver, or authorities.",
+              "Ensure the receiving clinician receives a private handoff that distinguishes patient-authorized law-enforcement involvement from mandatory protective-services or injury reporting.",
+            ],
+          },
+        ],
+      },
+    ],
+    indications: [
+      "A patient reports or is suspected of experiencing nonconsensual sexual contact, penetration, coercion, drug-facilitated assault, forced sexual activity, or sexual exploitation.",
+      "A child or vulnerable adult may have experienced sexual abuse, including concerning statements, behavior, injury, caregiver interaction, or scene findings.",
+      "A patient requests medical evaluation, evidence-preservation guidance, forensic examination, advocacy, or transport after a sexual assault.",
+    ],
+    contraindications: [],
+    assessment: [
+      {
+        title: "Immediate medical and safety assessment",
+        items: [
+          "Assess scene safety, immediate danger, need for law enforcement, suicidal thoughts, significant bleeding, head injury, strangulation, intoxication, overdose, pregnancy-related emergency, and other time-critical illness or injury.",
+          "When safe, separate the patient from the suspected assailant, controlling person, or unnecessary bystanders. Use a qualified interpreter and ask whom the patient wants present.",
+          "Determine age, decision-making capacity, and whether the patient meets the current definition of a vulnerable adult. These factors change reporting and consent requirements.",
+        ],
+      },
+      {
+        title: "Trauma-informed history",
+        items: [
+          "Ask only what is needed for immediate treatment, safety, destination, and evidence-preservation decisions. Useful questions include when the event occurred, areas of pain or injury, possible strangulation, bleeding, loss of consciousness, weapon use, possible drugging, pregnancy possibility, and whether the patient has bathed, changed clothes, eaten, drunk, urinated, or defecated.",
+          "Use the patient's own language and exact words. Do not demand a chronological account, challenge inconsistencies, ask “why,” or repeat questions already answered unless clinically necessary.",
+          "Explain that trauma can affect memory and that the patient does not need to decide in the field whether to make a police report in order to receive medical care.",
+        ],
+      },
+      {
+        title: "Focused examination",
+        items: [
+          "Perform only the exposure and examination necessary to identify and treat emergency conditions. Preserve dignity and obtain consent before each step.",
+          "Do not perform a genital or internal examination solely to look for evidence. A negative or normal field examination does not exclude sexual assault or significant injury.",
+          "Look for associated head, neck, thoracic, abdominal, pelvic, extremity, bite, burn, restraint, injection, and defensive injuries. Visible injury may be absent after strangulation or sexual assault.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Address immediate life threats and medical needs first. Use the appropriate airway, shock, trauma, obstetric, behavioral, pediatric, or toxicology protocol concurrently.",
+      "Provide privacy, calm reassurance, and control. Explain each action, ask permission before touching or exposing the patient, and allow the patient to decline any nonessential assessment or procedure.",
+      "Do not confront the suspected assailant or attempt to investigate the crime. Request law enforcement when there is immediate danger, a mandatory report, or the patient requests assistance.",
+      "Advise the patient that bathing, showering, changing clothes, eating, drinking, smoking, brushing teeth, urinating, defecating, or cleaning the scene may affect evidence, but never withhold medical care, comfort, food, drink, toileting, or necessary treatment.",
+      "Avoid unnecessary handling of clothing or personal items. If clothing must be removed for care, handle as little as possible, keep separate items separate, use clean dry paper bags when available, and document transfer according to agency policy. Do not use plastic for damp biological evidence.",
+      "Transport to an appropriate medical facility with sexual-assault forensic capability when available and consistent with the patient's medical needs and choices. Notify the destination privately and limit radio details to necessary clinical information.",
+      "For a patient under 18, personally initiate the current Tennessee child-abuse reporting pathway. For suspected sexual abuse of a vulnerable adult, initiate the current Adult Protective Services pathway. Hospital notification alone does not replace a personally required protective-services report.",
+      "For a competent adult age 18 or older who is not a vulnerable adult, do not make a blanket law-enforcement report of the sexual assault if the patient objects to release of identifying information.",
+      "Report injuries as required when they are considered life-threatening or were inflicted by strangulation, a knife, firearm, or other deadly weapon. Explain the required report to the patient when safe; the injury report does not require the patient to speak with law enforcement.",
+      "When transporting, privately notify the receiving physician or ED staff of the suspected cause of injury. If the patient is not transported, follow the current Tennessee requirement and agency procedure for reporting the result of the call to the 911 center.",
+      "Document the patient's exact words, objective assessment, consent or refusal for each element of care, patient preference regarding law enforcement, reporting criteria considered, required reports and notifications, potential evidence handled, destination, and handoff.",
+    ],
+    medications: [],
+    warnings: [
+      "Do not describe every adult sexual assault as a mandatory law-enforcement report. Age, vulnerability, capacity, patient objection, and qualifying injuries determine the reporting pathway.",
+      "Do not promise complete confidentiality. Explain child, vulnerable-adult, and mandatory injury-reporting limits in plain language.",
+      "Do not conduct a forensic interview, pressure the patient to report, ask accusatory or repetitive questions, or require law-enforcement cooperation as a condition of care.",
+      "Do not perform an unnecessary genital examination, collect swabs, or independently assemble a sexual-assault evidence kit in the field.",
+      "Do not delay lifesaving treatment, necessary toileting, patient comfort, or transport solely to preserve evidence.",
+      "Strangulation can produce delayed airway compromise, vascular injury, or neurologic deterioration despite minimal or absent external findings.",
+    ],
+    clinicalPearls: [
+      "Use validating language: “I am sorry this happened,” “I believe you,” “This is not your fault,” and “You are in control of what happens next.”",
+      "An adult may receive a medical forensic examination without immediately filing a police report. Tennessee permits a non-reporting sexual-assault kit to be retained as a hold kit under the receiving facility and law-enforcement process.",
+      "Patient behavior after trauma varies widely. Calmness, emotional distress, fragmented memory, intoxication, delayed reporting, or reluctance to involve law enforcement does not determine whether an assault occurred.",
+      "Medical stabilization and patient well-being take priority over evidence. Preserve what is reasonably possible without compromising care.",
+      "Use private verbal handoff and objective documentation; avoid stigmatizing labels or unnecessary details over open radio channels.",
+    ],
+    specialPopulations: [
+      {
+        title: "Children and adolescents",
+        items: [
+          "Everyone in Tennessee is a mandated reporter of suspected child abuse, including sexual abuse. Initiate the approved reporting pathway promptly.",
+          "Use developmentally appropriate open-ended questions only as needed for immediate medical care and safety. Avoid repeated questioning and preserve the child's exact words.",
+          "Coordinate destination with pediatric and child-advocacy resources under local policy; do not allow evidence concerns to delay emergency care.",
+        ],
+      },
+      {
+        title: "Vulnerable adults",
+        items: [
+          "Sexual abuse of an adult unable to protect or care for themselves because of mental or physical dysfunction or advanced age requires the vulnerable-adult reporting pathway.",
+          "Assess baseline cognition, capacity, dependency, caregiver control, communication barriers, and immediate safety without assuming that age or disability alone eliminates autonomy.",
+        ],
+      },
+      {
+        title: "Competent adults",
+        items: [
+          "Explain medical, forensic, advocacy, and law-enforcement options without coercion. The patient may accept medical care and forensic evidence collection while declining an immediate police report.",
+          "Respect an objection to releasing identifying information unless mandatory child, vulnerable-adult, qualifying-injury, or immediate-safety requirements apply.",
+        ],
+      },
+      {
+        title: "Possible strangulation",
+        items: [
+          "Assess for voice change, dysphagia, dyspnea, neck pain or tenderness, petechiae, loss of consciousness, incontinence, seizure, confusion, focal neurologic symptoms, and memory gaps.",
+          "Treat strangulation as a high-risk mechanism requiring urgent evaluation and a mandatory injury report under the current Tennessee injury-reporting statute.",
+        ],
+      },
+    ],
+    references: [
+      "Tennessee Code Annotated § 38-1-101 — reporting of certain injuries and first-responder duties",
+      "Tennessee Department of Children's Services — child-abuse and mandated-reporter guidance",
+      "Tennessee Adult Protection Act and Department of Human Services — Adult Protective Services",
+      "Tennessee Office of Criminal Justice Programs — Best Practice Guidelines for Sexual Assault Response",
+      "Tennessee Bureau of Investigation — Sexual Assault Kit and Hold Kit guidance",
+      "Claiborne County EMS safeguarding, reporting, evidence-preservation, law-enforcement, destination, and refusal policies",
+    ],
+    sourcePdf: "/protocols/claiborne/up-22-sexual-assault-protocol.pdf",
+    sourcePages: { start: 1, end: 2 },
+    revisionDate: "July 2026",
+    lastVerifiedDate: "July 30, 2026",
+    reviewStatus: "Reviewed",
+    reviewFlags: [
+      "Medical-director and agency legal/administrative approval are required before clinical release.",
+      "Final reporting contacts, forensic-capable destinations, advocacy resources, refusal process, evidence procedures, and documentation requirements must be completed in Claiborne County policy.",
+      "Current Tennessee law, provider scope, patient privacy law, and Claiborne County policy control if any conflict exists.",
+    ],
+  },
 ];

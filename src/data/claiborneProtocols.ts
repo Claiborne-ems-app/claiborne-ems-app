@@ -1198,6 +1198,19 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
     "status": "draft-import"
+  },
+  {
+    "id": "UP-22",
+    "code": "UP 22",
+    "title": "Sexual Assault",
+    "category": "Universal Patient Care",
+    "categoryCode": "UP",
+    "pdfPath": "/protocols/claiborne/up-22-sexual-assault-protocol.pdf",
+    "pages": 2,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
+    "agency": "Claiborne County EMS",
+    "status": "draft-import"
   }
 ] as ClaiborneProtocol[];
 

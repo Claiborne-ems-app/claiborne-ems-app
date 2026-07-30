@@ -2,7 +2,7 @@
 
 **Claiborne County EMS Protocol App**  
 **Comparison date:** July 30, 2026  
-**App catalog reviewed:** 92 Claiborne protocols  
+**App catalog reviewed:** 95 Claiborne protocols  
 **Primary state source:** Tennessee BLS/ALS State EMS Protocol Guidelines 2024–2025 (linked by the Tennessee EMS Board as “TN EMS Protocol Guidelines — Sept 2025”)
 
 ## Important source note
@@ -21,7 +21,7 @@ The July 2017 Tennessee PDF is a historical reference. The current Tennessee EMS
 | Tennessee topic | Current Claiborne coverage | Recommendation |
 |---|---|---|
 | Family violence / suspected abuse | Added as UP-21 Family Violence / Abuse | Universal safeguarding workflow now covers intimate-partner violence, children, older/vulnerable adults, trafficking concerns, mandated reporting, documentation, scene safety, and destination coordination. Medical-director and agency approval remain required. |
-| Sexual assault | No explicit structured section found | Add a trauma/medical protocol emphasizing consent, evidence preservation, minimal necessary examination, patient choice, law-enforcement coordination, and appropriate destination. |
+| Sexual assault | Added as UP-22 Sexual Assault | Universal workflow now covers consent, trauma-informed care, evidence preservation, destination, competent-adult choice, child and vulnerable-adult reporting, qualifying-injury reporting, and Tennessee first-responder duties. Medical-director and agency approval remain required. |
 | Chemical exposure / substance-specific HazMat | Chemical burn, radiation, cyanide/CO, overdose, and nerve-agent pathways exist; ammonia, chlorine, heavy metals, hydrogen fluoride, hydrogen sulfide, methyl bromide, and nitrogen oxides are not explicit | Add one Chemical/HazMat Exposure protocol plus searchable substance quick cards. Avoid eight largely duplicative full protocols. |
 | Abdominal / pelvic trauma | Multiple Trauma is broad; pelvic trauma is not explicit | Add a focused abdominal/pelvic section including hemorrhage risk, pelvic stabilization criteria, pregnancy considerations, and trauma destination. |
 | Eye trauma | No explicit protocol found | Add penetrating/blunt/chemical eye injury workflow with shield/irrigation distinctions and pressure-avoidance warnings. |
