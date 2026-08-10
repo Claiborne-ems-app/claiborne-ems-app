@@ -968,7 +968,7 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
   {
     "id": "UP-02",
     "code": "UP 2",
-    "title": "Triage Protocol",
+    "title": "Mass-Casualty Incident (MCI) Triage",
     "category": "Universal Patient Care",
     "categoryCode": "UP",
     "pdfPath": "/protocols/claiborne/up-02-triage-protocol.pdf",
