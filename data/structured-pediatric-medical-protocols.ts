@@ -126,16 +126,16 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
       { title: "Check Blood Glucose", text: "Assess airway, mental status, medications, intake, diabetes history, and perfusion.", levels: ALL_LEVELS, tone: "start" },
       { title: "Glucose ≤69 mg/dL?", text: "Yes: treat hypoglycemia. No: evaluate other causes and hyperglycemia.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Can Swallow Safely?", text: "Yes: oral glucose/food. No: IV dextrose or IM glucagon.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Age-Based Dextrose", text: "<1 yr D10 5 mL/kg • 1–2 yr D25 2 mL/kg • >2 yr D50 1 mL/kg (max 25 g).", levels: ["AEMT", "Paramedic"], tone: "urgent" },
+      { title: "D10 for All Pediatric Ages", text: "D10 2 mL/kg IV/IO (0.2 g/kg) • recheck glucose and neurologic status after 5 minutes • repeat once if hypoglycemia persists", levels: ["AEMT", "Paramedic"], tone: "urgent" },
       { title: "Glucose ≥250 mg/dL?", text: "If dehydrated/poor perfusion, NS 10–20 mL/kg; maximum 20 mL/kg.", levels: ["AEMT", "Paramedic"], tone: "action" },
-      { title: "Recheck Every 5 Minutes", text: "Continue until glucose ≥80 mg/dL and mental status/perfusion improve; transport as indicated.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "Recheck After 5 Minutes", text: "Repeat glucose and neurologic assessment • repeat D10 once if glucose remains <70 mg/dL with symptoms or unreliable symptom assessment", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
       "Check glucose and give oral glucose only if the child is awake, follows commands, and can swallow/protect the airway.",
       "If oral treatment is unsafe, support airway/ventilation and request ALS promptly.",
     ],
     aemt: [
-      "Perform all EMT care plus IV/IO access and age-based dextrose; use glucagon when vascular access is unavailable and oral therapy is unsafe.",
+      "Perform all EMT care plus IV/IO access and D10 2 mL/kg (0.2 g/kg); recheck after 5 minutes and repeat once for persistent hypoglycemia. Use glucagon when vascular access is unavailable and oral therapy is unsafe.",
       "For marked hyperglycemia with dehydration, give a cautious normal-saline bolus and reassess.",
     ],
     paramedic: [
@@ -143,8 +143,8 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
     ],
     medications: [
       { name: "Oral glucose", dose: "Per local product and weight-based system; give only when the child can swallow and protect the airway" },
-      { name: "Dextrose", dose: "<1 yr: D10 5 mL/kg; 1–2 yr: D25 2 mL/kg; >2 yr: D50 1 mL/kg, maximum 25 g" },
-      { name: "Glucagon", dose: "0.1 mg/kg IM; maximum 1 mg; may repeat every 15 minutes until glucose >60 mg/dL" },
+      { name: "Dextrose 10% (D10)", dose: "2 mL/kg IV/IO (0.2 g/kg); recheck glucose and neurologic status after 5 minutes and repeat once for persistent hypoglycemia. Contact Medical Control for additional dextrose dosing or infusion." },
+      { name: "Glucagon", dose: "<20 kg: 0.5 mg IM; ≥20 kg: 1 mg IM when oral glucose is unsafe and vascular access cannot be obtained promptly" },
       { name: "Normal saline", dose: "Hyperglycemia ≥250 mg/dL: 10–20 mL/kg IV/IO; maximum 20 mL/kg" },
     ],
     warnings: [
