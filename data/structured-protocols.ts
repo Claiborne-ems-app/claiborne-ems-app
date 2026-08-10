@@ -1032,35 +1032,157 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     title: "IV / IO Access",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["Use the least invasive access that meets the patient’s clinical need."],
+    overview: [
+      "Establish vascular access only when needed for medication, fluid, blood sampling, or anticipated time-critical treatment. Use the least invasive route that meets the patient’s immediate clinical need.",
+      "Do not delay transport or a time-critical medication solely to obtain peripheral IV access. In cardiac arrest, profound shock, or another immediately life-threatening condition, IO access may be established without preceding IV attempts.",
+    ],
     flow: [
-      { title: "Is vascular access needed?", text: "Medication, fluid, critical illness, or anticipated deterioration", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Peripheral IV attempt", text: "Choose best site; do not delay transport", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Urgent + unsuccessful?", text: "Maximum 3 total peripheral attempts, then IO", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Confirm + secure", text: "Flush, label, monitor site, document attempts", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      {
+        title: "Is Vascular Access Needed?",
+        text: "Medication • fluid • time-critical treatment • anticipated deterioration",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "start",
+      },
+      {
+        title: "Immediate IO Indication?",
+        text: "Cardiac arrest • profound shock • critical treatment cannot wait",
+        levels: ["AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Peripheral IV / Saline Lock",
+        text: "Best conventional site • maximum 3 total attempts across the crew • do not delay transport",
+        levels: ["AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Critical Access Still Needed?",
+        text: "After unsuccessful peripheral attempts, proceed to IO",
+        levels: ["AEMT", "Paramedic"],
+        tone: "urgent",
+      },
+      {
+        title: "Preferred IO Site",
+        text: "Proximal tibia • adult humeral head only when tibial access is contraindicated",
+        levels: ["AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Confirm + Secure + Reassess",
+        text: "Patency • flush • secure • inspect for infiltration • document site and every attempt",
+        levels: ["AEMT", "Paramedic"],
+        tone: "transport",
+      },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Provider-Level Actions",
+        summary: "Higher provider levels include the actions listed for the preceding levels.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Identify whether the patient may require medication, fluid, blood sampling, or another time-critical treatment and notify the AEMT or Paramedic.",
+              "Prepare and assist with vascular-access equipment, position the extremity, maintain aseptic technique, monitor the patient, and document assistance as appropriate. EMT personnel do not insert IV or IO catheters under this protocol.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Establish a peripheral IV or saline lock when clinically indicated. Select a conventional peripheral site appropriate for the treatment and avoid an injured extremity, an extremity with a dialysis fistula or graft, or a site with infection or impaired circulation.",
+              "Limit peripheral IV attempts to three total attempts across the entire crew. Do not allow repeated attempts by successive providers to restart the count. If vascular access is critical after unsuccessful attempts, proceed to IO access.",
+              "In cardiac arrest, profound shock, or another immediately life-threatening condition in which peripheral attempts would delay critical treatment, proceed directly to IO access without a required preceding IV attempt.",
+              "Use the proximal tibia as the preferred IO site. In adults, the humeral head may be used as an alternative when tibial access is contraindicated and appropriate landmarks can be identified. Use proximal tibial access for pediatric patients younger than 16 years.",
+              "For a conscious patient, administer 2% lidocaine slowly through the IO before the initial forceful flush: adult 20–40 mg; pediatric 0.5 mg/kg, maximum 40 mg. Flush and operate the device according to manufacturer instructions, using pressure-assisted infusion when needed.",
+              "Confirm catheter stability and flow, secure the catheter, and inspect repeatedly for swelling, leakage, displacement, increasing pain, resistance, or impaired distal perfusion. Stop using the site immediately if infiltration or another complication is suspected.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform the AEMT vascular-access actions and select access according to the medication, resuscitation, anticipated flow requirement, patient anatomy, and transport priority.",
+              "When conventional peripheral access is unsuccessful or unavailable and IV access remains clinically necessary, establish an external-jugular IV. Do not use the external jugular as a routine first site and do not place a saline lock in an external-jugular vein.",
+              "Do not access a PICC, central venous catheter, implanted port, or dialysis catheter under UP-06. Existing central-device use during interfacility transport is governed by the separate interfacility-transfer policy.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Need for vascular access for medication, fluids, or anticipated emergency care."],
-    contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
-    medications: [],
-    warnings: ["Do not place IO through infected skin, fractured bone, prior IO site, or prosthetic joint when avoidable."],
-    clinicalPearls: ["In shock or arrest, proceed directly to IO when IV success is unlikely.", "Reassess patency before every medication."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    indications: [
+      "Medication, fluid, or blood sampling required by the applicable treatment protocol.",
+      "Critical illness, cardiac arrest, profound shock, or anticipated deterioration for which vascular access is needed.",
+    ],
+    contraindications: [
+      "Do not place an IO through infection at the insertion site, into a fractured target bone, through a site with a prosthetic joint or prior orthopedic procedure involving the target bone, or into a bone used for IO access within the preceding 24 hours.",
+      "Do not place an IO when landmarks cannot be identified or the device needle is not appropriate for the patient’s tissue depth.",
+      "Do not place a peripheral IV in an injured extremity, an extremity with a dialysis fistula or graft, or a site with infection or severely impaired circulation when another site is available.",
+    ],
+    assessment: [
+      {
+        title: "Access decision",
+        items: [
+          "Determine the treatment that requires access, the urgency of that treatment, expected flow needs, transport priority, and whether a nonvascular route can provide the required medication without delay.",
+          "Before IO placement, inspect the proposed bone and overlying tissue for fracture, infection, orthopedic hardware or prosthesis, recent IO use, excessive tissue depth, and identifiable landmarks.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Use a peripheral IV or saline lock when access is needed and the patient’s condition permits the attempt.",
+      "Limit peripheral IV attempts to three total attempts across the entire crew; proceed to IO when access remains critical.",
+      "Proceed directly to IO in cardiac arrest, profound shock, or another immediately life-threatening condition when IV attempts would delay treatment.",
+      "Use the proximal tibia as the preferred IO site. Use the adult humeral head only when tibial access is contraindicated; use the proximal tibia for pediatric patients.",
+      "For a conscious IO patient, administer 2% lidocaine before flushing, then flush, secure, and monitor the site continuously.",
+      "Document the indication, provider, site, catheter or needle size, number and location of every attempt, medications administered, patency, complications, and response.",
+    ],
+    medications: [
+      {
+        name: "Lidocaine 2% — conscious IO infusion pain",
+        dose: "Adult: 20–40 mg IO administered slowly before the initial forceful flush. Pediatric: 0.5 mg/kg IO administered slowly before the initial forceful flush; maximum 40 mg.",
+        notes: [
+          "This dose is for IO infusion pain, not dysrhythmia treatment.",
+          "Confirm the IO is appropriately positioned and secure before medication administration.",
+        ],
+      },
+    ],
+    warnings: [
+      "Three peripheral attempts is the maximum across the entire crew, not a requirement to perform three attempts before IO access.",
+      "Do not delay transport, resuscitation, or a time-critical medication for repeated vascular-access attempts.",
+      "IO infusion is painful in conscious patients. Administer lidocaine before the initial forceful flush unless an immediate life threat prevents delay.",
+      "Stop using an IV or IO immediately for swelling, leakage, displacement, increasing pain, resistance, loss of flow, or suspected infiltration or compartment syndrome.",
+      "Central venous devices and dialysis catheters are outside UP-06 and may be used only under the separate interfacility-transfer policy.",
+    ],
+    clinicalPearls: [
+      "A functioning IO provides access for resuscitation medications and fluids when peripheral access is not rapidly available, but pressure-assisted infusion is commonly required.",
+      "Aspiration of marrow or blood may support placement but is not required when the catheter is stable, flushes appropriately, and there is no evidence of infiltration.",
+      "For trauma patients, establish access during transport whenever feasible rather than extending scene time solely for an IV.",
+    ],
+    specialPopulations: [
+      {
+        title: "Pediatrics — younger than 16 years",
+        items: [
+          "Use the proximal tibia for IO access and select needle length according to patient size and manufacturer guidance.",
+          "For a conscious child, administer lidocaine 0.5 mg/kg IO slowly before the initial forceful flush; maximum 40 mg.",
+        ],
+      },
+    ],
+    references: [
+      "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — Vascular Access, Intraosseous Access, and Indwelling IV Port Access procedures",
+      "Claiborne County EMS UP-06 source PDF — IV or IO Access, revised April 6, 2026",
+      "Claiborne County EMS UP-01 Universal Patient Care and separate interfacility-transfer policy",
+    ],
     sourcePdf: "/protocols/claiborne/up-06-iv-or-io-access-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 10, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "Medical-director approved a maximum of three total peripheral IV attempts across the entire crew and direct IO access when IV attempts would delay treatment of cardiac arrest, profound shock, or another immediately life-threatening condition.",
+      "Medical-director approved proximal tibia as the preferred IO site; adult humeral-head access is an alternative only when tibial access is contraindicated. Pediatric IO access uses the proximal tibia.",
+      "Medical-director approved 2% lidocaine for conscious IO patients: adult 20–40 mg; pediatric 0.5 mg/kg, maximum 40 mg, administered slowly before the initial forceful flush.",
+      "Medical-director directed that PICC lines, central venous catheters, implanted ports, and dialysis catheters be governed by a separate interfacility-transfer policy rather than UP-06.",
+      "Medical-director approved external-jugular IV access by Paramedics only after conventional access is unsuccessful or unavailable; the EJ is not a routine first site and must not be used as a saline lock.",
+      "UP-06 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process.",
+    ],
   },
   {
     id: "up-07",
