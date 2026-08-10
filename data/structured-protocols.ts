@@ -93,7 +93,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
         levels: [
           { level: "EMT", actions: ["Scene safety, verbal de-escalation, medical cause assessment, and safe restraint assistance."] },
           { level: "AEMT", actions: ["All EMT care plus monitoring, vascular access when safe, and support of authorized sedation pathway."] },
-          { level: "Paramedic", actions: ["Midazolam or ketamine may be used only under the finalized agitation protocol; continuous airway and cardiac monitoring required."] },
+          { level: "Paramedic", actions: ["Midazolam or ketamine may be used per agitation protocol. Continuous airway and cardiac monitoring required."] },
         ],
       },
       {
