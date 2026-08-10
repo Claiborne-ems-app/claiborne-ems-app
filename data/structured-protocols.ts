@@ -290,38 +290,189 @@ export const structuredProtocols: StructuredProtocolContent[] = [
   },
   {
     id: "up-02",
-    title: "Triage",
+    title: "Mass-Casualty Incident (MCI) Triage",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["Use the current agency MCI triage system and incident command structure."],
+    overview: [
+      "Use this protocol when patient numbers, incident complexity, or available resources require rapid prioritization rather than routine one-patient care.",
+      "Activate the Claiborne MCI plan and incident command system early. Primary triage assigns priority rapidly; secondary triage, treatment, destination, and transport occur through the assigned incident structure.",
+      "Use START for adults and JumpSTART for pediatric patients according to the agency-adopted age or appearance definition. Triage categories are dynamic and must be reassessed after movement, treatment, deterioration, or a change in resources.",
+    ],
     flow: [
-      { title: "Walking?", text: "Direct ambulatory patients to MINOR area", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Breathing?", text: "Open airway; pediatric patients receive 2 rescue breaths when appropriate", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Perfusion / mental status abnormal?", text: "Classify IMMEDIATE; otherwise DELAYED", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Repeat triage", text: "Reassess after movement or change", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      {
+        title: "MCI / Resource Imbalance?",
+        text: "Scene safety • establish command • declare MCI level • request resources • identify hazards and ingress/egress",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "start",
+      },
+      {
+        title: "Global Sort",
+        text: "Patients who can walk follow commands to the MINOR (Green) area • rapidly identify patients who are not moving or have an obvious life threat",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Adult START",
+        text: "Breathing • respiratory rate • perfusion • follows commands",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Pediatric JumpSTART",
+        text: "Breathing • pulse if apneic • 5 rescue breaths when pulse present • respiratory rate • peripheral pulse • age-appropriate AVPU",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Immediate Lifesaving Intervention Only",
+        text: "Open airway • control major hemorrhage • authorized antidote • chest decompression by Paramedic when immediately indicated",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "urgent",
+      },
+      {
+        title: "Tag / Mark + Move",
+        text: "Immediate Red • Delayed Yellow • Minor Green • Expectant/Deceased Black • record intervention and time when feasible",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Repeat Triage",
+        text: "Reassess in treatment and transport areas, after intervention or movement, with deterioration, and when resource availability changes",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "transport",
+      },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Provider-Level Actions",
+        summary: "Every provider uses the same triage criteria; provider level determines which immediate lifesaving interventions are authorized.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Perform START or JumpSTART primary triage as assigned, attach or clearly mark the triage category, and communicate patient location and immediate needs through the incident structure.",
+              "Perform only rapid lifesaving interventions authorized at the EMT level during primary triage: open or position the airway, control life-threatening external hemorrhage including tourniquet use, provide JumpSTART rescue breaths, and administer an authorized antidote auto-injector when indicated.",
+              "Move to the next patient after assigning a category and completing the permitted immediate intervention; do not delay primary sorting for a complete assessment, routine vital signs, splinting, IV access, or noncritical treatment.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT triage actions using the same START or JumpSTART criteria; do not change a category solely because an advanced provider is available.",
+              "Do not initiate routine IV/IO access, fluids, or medications during primary triage. When assigned to a treatment or transport function, provide AEMT care within Tennessee scope, local credentialing, and the incident treatment plan.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform all prior triage actions and, when immediately indicated and consistent with the MCI plan, perform needle chest decompression within current Tennessee Paramedic scope.",
+              "When assigned a clinical incident role, coordinate secondary triage, treatment priorities, destination distribution, transport sequencing, Medical Control communication, and reassessment as resources permit.",
+              "Do not allow advanced procedures, routine monitoring, vascular access, or medication administration to delay completion of primary triage unless the intervention is an immediately lifesaving action authorized by the MCI plan.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Mass-casualty incident or multiple patients requiring rapid prioritization."],
-    contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
+    indications: [
+      "A declared or suspected mass-casualty incident.",
+      "Multiple patients whose immediate needs exceed, or may soon exceed, available personnel, equipment, treatment space, or transport capacity.",
+      "An incident in which command requests standardized primary or secondary triage.",
+    ],
+    contraindications: [
+      "Do not use MCI triage categories as a substitute for routine patient assessment when resources are adequate for individual care.",
+    ],
+    assessment: [
+      {
+        title: "Adult START primary triage",
+        items: [
+          "Able to walk: direct to the designated MINOR (Green) area for secondary triage; reassess infants, patients with mobility limitations, and anyone unable to follow the global instruction rather than assigning a category from ambulation alone.",
+          "Not breathing: open or reposition the airway. If spontaneous breathing begins, classify IMMEDIATE (Red). If the adult remains apneic, classify EXPECTANT/DECEASED (Black) according to the MCI plan.",
+          "Breathing with a respiratory rate greater than 30/min: classify IMMEDIATE (Red). If 30/min or less, assess perfusion.",
+          "Absent radial pulse or capillary refill greater than 2 seconds: control major hemorrhage and classify IMMEDIATE (Red). Use radial pulse preferentially when cold, poor lighting, skin characteristics, or other conditions make capillary refill unreliable.",
+          "Unable to follow simple commands: classify IMMEDIATE (Red). If respiratory rate, perfusion, and command-following criteria are adequate, classify DELAYED (Yellow).",
+        ],
+      },
+      {
+        title: "Pediatric JumpSTART primary triage",
+        items: [
+          "Able to walk: direct to the MINOR (Green) area for secondary triage. Infants and developmentally nonambulatory children are not automatically Immediate; assess them through the JumpSTART sequence.",
+          "Not breathing: open or reposition the airway. If spontaneous breathing begins, classify IMMEDIATE (Red).",
+          "Still apneic: check for a palpable pulse. If no pulse is present, classify EXPECTANT/DECEASED (Black) according to the MCI plan. If a pulse is present, provide 5 rescue breaths. If spontaneous breathing begins, classify IMMEDIATE (Red); if apnea persists, classify EXPECTANT/DECEASED (Black).",
+          "Spontaneously breathing with a respiratory rate less than 15/min or greater than 45/min: classify IMMEDIATE (Red).",
+          "No palpable peripheral pulse: classify IMMEDIATE (Red).",
+          "Mental status inappropriate for age, inappropriate response to pain, posturing, or unresponsiveness: classify IMMEDIATE (Red). If respiratory rate, pulse, and age-appropriate mental status are adequate, classify DELAYED (Yellow).",
+        ],
+      },
+      {
+        title: "Scene and incident assessment",
+        items: [
+          "Ensure responder safety, appropriate PPE, hazard-zone control, decontamination needs, and law-enforcement or rescue support before patient entry.",
+          "Estimate patient count and injury pattern, declare or request the appropriate MCI response level, establish or join incident command, and identify triage, treatment, transport, staging, ingress, and egress functions as resources permit.",
+          "Multiple patients with similar unexplained symptoms should prompt immediate consideration of hazardous-material, carbon-monoxide, infectious, radiologic, or intentional exposure and movement to a safe assessment area.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Complete rapid global sorting and primary triage using START or JumpSTART under the incident command structure.",
+      "During primary triage, limit treatment to immediate lifesaving interventions that can be performed rapidly: airway opening or positioning, control of life-threatening external hemorrhage, JumpSTART rescue breaths, authorized antidote administration, and Paramedic needle chest decompression when immediately indicated and permitted by the MCI plan.",
+      "Attach or clearly mark the triage category, record critical interventions when feasible, communicate immediate hazards or resource needs, and move to the next patient.",
+      "Move patients to assigned treatment areas when safe and directed. Begin complaint-specific care, monitoring, vascular access, medications, splinting, and complete assessment only after primary triage or when assigned to the treatment function.",
+      "Repeat triage after movement, decontamination, treatment, clinical change, arrival in the treatment or transport area, and whenever resource availability changes.",
+      "Coordinate transport priority, destination distribution, and patient tracking through the Transport Unit and the current regional MCI plan; prevent uncoordinated transport from overwhelming a single facility.",
+    ],
     medications: [],
-    warnings: ["Do not delay lifesaving hemorrhage control or airway positioning to complete tagging."],
-    clinicalPearls: ["Use age-appropriate respiratory and perfusion criteria.", "Triage category may change; repeat after treatment and transport staging."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    warnings: [
+      "Primary MCI triage is not routine Universal Patient Care. Two complete vital-sign sets, ECG acquisition, IV/IO access, routine medications, splinting, and detailed documentation must not delay primary sorting.",
+      "Triage category is based on current physiology and available resources and may change. Repeat assessment is mandatory throughout the incident.",
+      "A Black category communicates MCI resource priority; it does not by itself replace Tennessee and local requirements for field determination or pronouncement of death.",
+      "Do not enter a hazardous or contaminated area without appropriate PPE, hazard control, and decontamination coordination.",
+      "Reverse triage may be required for lightning incidents; use the applicable environmental protocol and incident plan.",
+    ],
+    clinicalPearls: [
+      "The goal of MCI triage is the greatest overall benefit with the resources available, not delivery of complete individual care during the first pass.",
+      "Use objective criteria consistently. Do not upgrade or downgrade based only on injury appearance, age, provider intuition, or pressure from bystanders.",
+      "Radial pulse may be more reliable than capillary refill in cold environments or when capillary refill is difficult to interpret.",
+      "Clearly separate the triage, treatment, and transport functions. Uncoordinated care or transport can create a second resource bottleneck.",
+      "Green patients require secondary triage; walking does not guarantee absence of serious injury or delayed deterioration.",
+    ],
+    specialPopulations: [
+      {
+        title: "Children",
+        items: [
+          "Use JumpSTART according to the adopted agency cutoff or appearance definition. The standard JumpSTART rescue-breath sequence uses 5 breaths, not 2.",
+          "Infants or children who cannot walk because of normal development are not automatically Immediate; carry them through the JumpSTART breathing, pulse, respiratory-rate, and mental-status sequence.",
+        ],
+      },
+      {
+        title: "Mobility, communication, and developmental limitations",
+        items: [
+          "A patient who cannot walk, hear the instruction, understand the language, follow commands at baseline, or move because of a preexisting disability requires direct physiologic assessment rather than automatic category assignment.",
+          "Use caregivers, interpreters, baseline information, and adaptive communication when immediately available without delaying the triage pass.",
+        ],
+      },
+      {
+        title: "Hazardous-material or infectious incidents",
+        items: [
+          "Perform contamination and medical triage in coordination with the HazMat branch. Do not move contaminated patients into the cold zone, treatment area, or transport unit before required decontamination unless an immediate lifesaving exception is directed by command.",
+        ],
+      },
+    ],
+    references: [
+      "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — Reference: S.T.A.R.T. Triage and MCI Plan Response Levels",
+      "U.S. Department of Health and Human Services, CHEMM — START Adult Triage Algorithm",
+      "U.S. Department of Health and Human Services, CHEMM — JumpSTART Pediatric Triage Algorithm",
+      "Tennessee Comprehensive Rules and Regulations 1200-12-01-.04 — EMS personnel scope of practice",
+      "Claiborne County EMS — current MCI response plan, triage tags, incident command policy, destination distribution plan, and mutual-aid procedures",
+    ],
     sourcePdf: "/protocols/claiborne/up-02-triage-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 10, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "Confirm the local MCI declaration levels, notification chain, triage-tag system, treatment-area layout, patient-tracking method, destination distribution process, mutual-aid plan, and regional communications channels.",
+      "UP-02 may be used as Reviewed beta content, but it must not be marked Approved until the signed Claiborne MCI response plan and related operational policies are reconciled with this protocol.",
+    ],
   },
   {
     id: "up-03",
