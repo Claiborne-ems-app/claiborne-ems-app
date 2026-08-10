@@ -684,35 +684,211 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     title: "Altered Mental Status",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["AMS is a symptom; search for a reversible life threat."],
+    overview: [
+      "Altered mental status is a symptom, not a diagnosis. Assume a time-critical medical, traumatic, toxicologic, neurologic, metabolic, environmental, or obstetric cause until reversible threats have been assessed and treated.",
+      "Prioritize oxygenation and ventilation, blood glucose, temperature, trauma assessment, opioid toxicity, seizure, stroke, shock, sepsis, toxic exposure, and dysrhythmia. Treat identified causes immediately while continuing the diagnostic assessment.",
+      "Do not attribute altered mental status solely to alcohol, recreational drugs, dementia, or psychiatric illness until medical and traumatic causes have been evaluated.",
+    ],
     flow: [
-      { title: "Immediate threats", text: "Airway • oxygenation/ventilation • trauma • temperature", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Check glucose", text: "Treat hypoglycemia per age-specific protocol", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Reversible cause?", text: "Consider opioid toxicity, seizure, stroke, sepsis, toxic exposure", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Transport + reassess", text: "Continuous monitoring; protect patient and document baseline", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      {
+        title: "Immediate Stabilization",
+        text: "Airway • suction • oxygenation • ventilation • circulation • severe hemorrhage • trauma precautions when indicated",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "start",
+      },
+      {
+        title: "Rapid Reversible-Cause Check",
+        text: "Glucose • temperature • pupils • medication/ingestion clues • opioid toxidrome • seizure • pregnancy possibility",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Hypoglycemia?",
+        text: "Safe swallow: oral glucose • unsafe swallow: AEMT/Paramedic D10 or glucagon • recheck glucose and neurologic status",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Respiratory Depression + Suspected Opioid?",
+        text: "Ventilate first • naloxone titrated to adequate ventilation • avoid abrupt full withdrawal when possible",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "urgent",
+      },
+      {
+        title: "Stroke / Seizure / Trauma / Shock / Sepsis / Toxic Exposure?",
+        text: "FAST then C-STAT if positive • document last known well • transition immediately to the cause-specific protocol",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Monitor + Transport",
+        text: "Serial GCS/AVPU • repeat glucose/vital signs • cardiac monitor/ECG • EtCO₂ when ventilation is impaired • early notification",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "transport",
+      },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Provider-Level Actions",
+        summary: "Higher provider levels include the actions listed for the preceding levels.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Open and suction the airway as needed; insert an OPA or NPA when indicated; provide BVM ventilation for apnea, inadequate respiratory effort, or ineffective ventilation. Administer oxygen for hypoxemia, respiratory distress, shock, or another clinical indication.",
+              "Assess AVPU/GCS, orientation and behavior compared with baseline, pupils, speech, facial symmetry, extremity strength, sensation, skin, trauma, medical-alert information, medication access, and exposure clues. Obtain complete vital signs, SpO₂, blood glucose, and temperature early; obtain at least two complete vital-sign sets.",
+              "Perform FAST for acute or unexplained neurologic change; if positive, complete C-STAT and document last known well, anticoagulant use, baseline function, and witness contact information. Acquire and transmit a 12-lead ECG for adult acute or unexplained altered mental status, unresponsiveness, suspected ingestion, or postictal state.",
+              "If symptomatic hypoglycemia is present and the patient is awake, follows commands, can swallow, and protects the airway, administer oral glucose according to the packaged dose. Do not administer anything orally when airway protection or swallowing is impaired.",
+              "When opioid toxicity is suspected with respiratory depression, support ventilation and administer naloxone 2 mg IN. Repeat every 2–3 minutes as needed to restore adequate ventilation; do not delay BVM ventilation while awaiting medication response.",
+              "Protect the patient from injury during seizure or agitation. Use the least restrictive safe approach and transition to the seizure, agitation, trauma, stroke, diabetic, sepsis, shock, environmental, or toxicology protocol as soon as the syndrome is recognized.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Establish IV access when parenteral dextrose, naloxone, fluid, or another time-critical intervention is indicated. Use IO access when vascular access is urgently required and IV access cannot be obtained within the Universal Patient Care attempt limit.",
+              "For glucose below 70 mg/dL with symptoms, or when symptoms cannot be assessed reliably because of altered mental status, administer D10 when oral glucose is unsafe or ineffective: adult up to 250 mL IV/IO, titrated to improving mental status and glucose at least 70 mg/dL, maximum 25 g; pediatric initial dose 2 mL/kg IV/IO (0.2 g/kg). Recheck glucose and neurologic status after 5 minutes. The pediatric dose may be repeated once for persistent hypoglycemia; contact Medical Control for additional dextrose dosing or infusion.",
+              "If vascular access cannot be obtained promptly, administer glucagon IM: adult 1 mg; pediatric 0.5 mg when less than 20 kg or 1 mg when 20 kg or greater. Position for aspiration protection and continue airway monitoring because vomiting may occur.",
+              "For suspected opioid toxicity, administer adult naloxone 0.4–2 mg IV/IO/IM or 2 mg IN; repeat every 2–3 minutes and titrate to adequate ventilation rather than complete arousal, maximum cumulative dose 8 mg. For pediatric patients, begin with 0.01 mg/kg IV/IO/IM/IN; if ventilation remains inadequate, escalate to 0.1 mg/kg, maximum 2 mg per dose, and repeat every 2–3 minutes as needed, maximum cumulative dose 8 mg. If ventilation remains inadequate after 8 mg, continue airway/ventilatory support and reassess the diagnosis.",
+              "For hypotension, administer normal saline: adult 500 mL IV/IO; pediatric 10 mL/kg IV/IO. Reassess blood pressure, perfusion, and lung sounds after each bolus and transition to the cause-specific shock, sepsis, diabetic, cardiac, or trauma protocol before additional fluid. Do not administer a fluid bolus for altered mental status without hypotension.",
+              "Insert a supraglottic airway when BVM ventilation is inadequate or prolonged airway support is required and the patient meets airway-protocol indications. Use continuous waveform capnography when available after advanced airway placement or when ventilation is impaired.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Interpret the ECG, institute continuous cardiac monitoring, and treat a dysrhythmia, ischemia, hyperkalemia pattern, or other identified cardiac cause under the applicable cardiac protocol.",
+              "Use waveform capnography for impaired ventilation, suspected opioid or sedative toxicity, advanced airway management, or chemical sedation. Perform endotracheal intubation when the patient cannot protect the airway or cannot be adequately oxygenated or ventilated with less invasive measures.",
+              "Complete a focused differential for neurologic, metabolic, infectious, toxicologic, environmental, traumatic, obstetric, and behavioral causes; direct treatment and destination according to the time-critical syndrome identified.",
+              "If agitation creates an immediate danger and verbal de-escalation and physical safety measures are insufficient, use midazolam or ketamine under the agitation protocol. Continuous airway, SpO₂, EtCO₂, ECG, and blood-pressure monitoring are required after chemical sedation.",
+              "Provide early destination notification for persistent coma, airway compromise, suspected stroke, status epilepticus, sepsis/shock, severe toxic exposure, or unexplained deterioration. Minimize scene time when definitive treatment is time sensitive.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Any acute change in awareness, cognition, behavior, or responsiveness."],
-    contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
-    medications: [],
-    warnings: ["Do not assume intoxication or psychiatric illness until medical causes are assessed."],
-    clinicalPearls: ["Obtain collateral history and medication list when possible.", "Use capnography when ventilation is impaired or sedatives/opioids are involved."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    indications: [
+      "Any acute or unexplained change in awareness, responsiveness, cognition, speech, behavior, orientation, or baseline neurologic function.",
+      "Unconsciousness, unresponsiveness, delirium, confusion, lethargy, postictal state, unexplained agitation, or suspected metabolic/toxic encephalopathy.",
+    ],
+    contraindications: [
+      "Do not administer oral glucose, food, fluid, or oral medication when the patient cannot swallow reliably or protect the airway.",
+      "Do not use naloxone solely for altered mental status without respiratory depression or a reasonable suspicion of opioid effect.",
+    ],
+    assessment: [
+      {
+        title: "Immediate assessment",
+        items: [
+          "Airway patency and protective reflexes; respiratory rate, depth, effort, SpO₂, and EtCO₂ when ventilation is impaired; pulse, perfusion, blood pressure, and major hemorrhage.",
+          "AVPU/GCS and serial neurologic examination including pupils, gaze, facial symmetry, speech, arm drift, grip, extremity movement/sensation, seizure findings, and meningeal or infectious clues.",
+          "Blood glucose and temperature in every patient with acute or unexplained altered mental status.",
+          "Full head-to-toe examination when the patient cannot provide a reliable history, including occult trauma, infection, pressure injury, maltreatment, abuse, or neglect.",
+        ],
+      },
+      {
+        title: "History and scene information",
+        items: [
+          "Last known well and onset/progression; baseline cognition and function; seizure, stroke, diabetes, renal/hepatic disease, infection, pregnancy, psychiatric history, trauma, and recent illness.",
+          "Prescription and nonprescription medications, insulin or oral diabetic agents, anticoagulants, opioids/sedatives, medication changes, alcohol/recreational substances, possible intentional ingestion, and access to toxins.",
+          "Witness description, recent fall or injury, oral intake, vomiting/diarrhea, fever, environmental temperature, carbon-monoxide risk, occupational or hazardous-material exposure, and whether others have similar symptoms.",
+        ],
+      },
+      {
+        title: "Cause-directed screening",
+        items: [
+          "Hypoxia/hypercapnia; hypo- or hyperglycemia; opioid/sedative toxicity; seizure/postictal state; stroke or intracranial hemorrhage; head trauma; shock; sepsis/meningitis; hypo- or hyperthermia; dysrhythmia/ACS; electrolyte or renal/hepatic failure; pregnancy-related emergency; and toxic exposure.",
+          "Do not stop after finding alcohol, drugs, dementia, or psychiatric illness. These conditions may coexist with hypoglycemia, trauma, infection, stroke, overdose, or another life threat.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Stabilize airway, oxygenation, ventilation, and circulation; treat severe hemorrhage and apply trauma precautions when indicated.",
+      "Obtain glucose and temperature early. Treat symptomatic hypoglycemia immediately and repeat glucose and neurologic assessment after treatment.",
+      "Ventilate suspected opioid toxicity and administer naloxone only when respiratory depression is present; titrate to adequate ventilation.",
+      "Perform FAST and C-STAT when indicated, acquire/transmit the appropriate ECG, and identify seizure, shock, sepsis, toxic exposure, environmental illness, or trauma.",
+      "Transition to the identified cause-specific protocol without delaying transport. Continue serial GCS/AVPU, vital signs, glucose, ventilation, and response-to-treatment assessment.",
+    ],
+    medications: [
+      {
+        name: "Oral Glucose",
+        dose: "One packaged adult or weight-appropriate product dose PO; repeat based on glucose and clinical response.",
+        notes: ["EMT/AEMT/Paramedic.", "Give only when the patient can follow commands, swallow reliably, and protect the airway."],
+      },
+      {
+        name: "Dextrose 10% (D10)",
+        dose: "Adult: up to 250 mL IV/IO, titrated to improving mental status and glucose ≥70 mg/dL; maximum 25 g. Pediatric: initial dose 2 mL/kg IV/IO (0.2 g/kg); recheck after 5 minutes and repeat once for persistent hypoglycemia. Contact Medical Control for additional pediatric dextrose dosing or infusion.",
+        notes: ["AEMT/Paramedic.", "Recheck glucose and neurologic status 5 minutes after administration."],
+      },
+      {
+        name: "Glucagon",
+        dose: "Adult: 1 mg IM. Pediatric: <20 kg, 0.5 mg IM; ≥20 kg, 1 mg IM.",
+        notes: ["AEMT/Paramedic when oral glucose is unsafe and vascular access cannot be obtained promptly.", "Protect against aspiration; vomiting may occur."],
+      },
+      {
+        name: "Naloxone",
+        dose: "Adult: 0.4–2 mg IV/IO/IM or 2 mg IN; EMT route is 2 mg IN. Pediatric: begin with 0.01 mg/kg IV/IO/IM/IN; if ventilation remains inadequate, escalate to 0.1 mg/kg, maximum 2 mg per dose. Repeat every 2–3 minutes to adequate ventilation; maximum cumulative dose 8 mg.",
+        notes: ["Ventilation is the treatment priority.", "If ventilation remains inadequate after 8 mg, continue airway support and reassess the diagnosis."],
+      },
+      {
+        name: "Normal Saline",
+        dose: "For hypotension: adult 500 mL IV/IO; pediatric 10 mL/kg IV/IO, then reassess and use the cause-specific protocol.",
+        notes: ["Use 250 mL adult increments when heart failure, renal failure, liver failure, pulmonary edema, known volume overload, or another high risk for fluid intolerance is present."],
+      },
+    ],
+    warnings: [
+      "Ventilation takes priority over naloxone. The goal is adequate ventilation, not complete arousal; abrupt reversal may cause vomiting, aspiration, severe agitation, withdrawal, or sympathetic surge.",
+      "A normal glucose, temperature, ECG, or initial neurologic examination does not exclude a serious cause. Continue reassessment and transport unexplained or persistent altered mental status.",
+      "Do not assume intoxication, dementia, psychiatric illness, or postictal state is the sole diagnosis until trauma and medical causes have been assessed.",
+      "Physical or chemical restraint may worsen occult hypoxia, hypercapnia, acidosis, hyperthermia, or shock. Use the agitation/restraint protocol and continuous monitoring when restraint is necessary.",
+      "Glucagon may be ineffective in malnutrition, chronic alcohol use, severe liver disease, or depleted glycogen states.",
+    ],
+    clinicalPearls: [
+      "Collateral history, medication containers, medical-alert identification, witness contact information, and the exact scene circumstances may be diagnostically critical and should accompany the handoff.",
+      "Persistent focal neurologic deficit after glucose correction is stroke until proven otherwise.",
+      "Pinpoint pupils alone do not establish opioid toxicity; respiratory depression and response to ventilation/naloxone are more important.",
+      "Multiple patients with headache, nausea, confusion, or syncope should prompt immediate consideration of carbon monoxide or another environmental exposure.",
+      "Patients who regain consciousness after treatment still require evaluation for recurrence, long-acting agents, co-ingestion, trauma, or an alternative diagnosis.",
+    ],
+    specialPopulations: [
+      {
+        title: "Pediatrics — younger than 16 years",
+        items: [
+          "Use measured weight when reliable or the length-based tool for dosing. Consider ingestion, infection, seizure, trauma, hypoglycemia, metabolic disease, intussusception, and nonaccidental trauma.",
+          "Caregiver observations of baseline behavior and the timing of change are important, but do not delay assessment of airway, glucose, temperature, perfusion, and trauma.",
+        ],
+      },
+      {
+        title: "Pregnancy",
+        items: [
+          "Consider eclampsia, hemorrhage/ectopic pregnancy, medication toxicity, hypoglycemia, stroke, and other pregnancy-related causes. Use left uterine displacement when later pregnancy and hypotension are present.",
+        ],
+      },
+      {
+        title: "Dementia, developmental disability, or communication limitation",
+        items: [
+          "Establish baseline status through caregivers or records when immediately available. An acute deviation from baseline requires the same reversible-cause assessment as any other patient.",
+        ],
+      },
+    ],
+    references: [
+      "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — SOP 318 Unconscious / Unresponsive / Altered Mental Status and SOP 603 Mandatory EKG",
+      "Claiborne Covenant EMS Formulary — current medical-director source workbook",
+      "Claiborne County EMS UP-04 source PDF — Altered Mental Status, revised September 1, 2025",
+      "Claiborne County EMS UP-01 Universal Patient Care, age-appropriate diabetic emergency, stroke, seizure, shock, sepsis, toxicology, agitation, and airway protocols",
+    ],
     sourcePdf: "/protocols/claiborne/up-04-altered-mental-status-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 10, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "Medical-director approved glucose treatment below 70 mg/dL with symptoms or when symptoms cannot be assessed reliably because of altered mental status; adult D10 up to 250 mL/25 g and pediatric D10 2 mL/kg initial dose with one repeat after 5 minutes for persistent hypoglycemia.",
+      "Medical-director approved glucagon: adult 1 mg IM; pediatric 0.5 mg IM below 20 kg or 1 mg IM at 20 kg or greater when oral glucose is unsafe and vascular access is unavailable.",
+      "Medical-director approved naloxone: adult 0.4–2 mg IV/IO/IM or 2 mg IN; pediatric begins at 0.01 mg/kg and escalates to 0.1 mg/kg when ventilation remains inadequate; repeat every 2–3 minutes to adequate ventilation, maximum cumulative dose 8 mg.",
+      "Medical-director approved 12-lead ECG for adult acute/unexplained altered mental status and FAST followed by C-STAT when positive.",
+      "Medical-director approved fluid only for hypotension: adult 500 mL and pediatric 10 mL/kg initial bolus with the UP-03 fluid-intolerance caveat.",
+      "UP-04 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process.",
+    ],
   },
   {
     id: "up-05",
