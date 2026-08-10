@@ -479,35 +479,205 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     title: "Abdominal Pain / Vomiting / Diarrhea",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["Evaluate abdominal pain broadly and avoid anchoring on a GI diagnosis."],
+    overview: [
+      "Evaluate nontraumatic abdominal or genitourinary pain, nausea, vomiting, and diarrhea broadly. Prehospital symptom control must occur together with active screening for shock, hemorrhage, pregnancy-related emergencies, acute coronary syndrome, aortic disease, sepsis, metabolic disease, obstruction, perforation, and toxic exposure.",
+      "Do not withhold analgesia or antiemetic treatment solely to preserve the abdominal examination. Reassess the examination, vital signs, perfusion, pain, nausea, and response after every intervention.",
+      "Patients younger than 16 years use the pediatric doses and considerations in this protocol together with the appropriate pediatric medical protocol.",
+    ],
     flow: [
-      { title: "Primary survey", text: "Identify shock, GI bleeding, pregnancy-related emergency, or surgical abdomen", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Focused history + exam", text: "OPQRST • last intake/output • emesis/stool blood • pregnancy possibility", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "High-risk features?", text: "Treat shock, obtain ECG/glucose as indicated, expedite transport", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Symptom control", text: "Pain/nausea treatment within provider scope; reassess", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      {
+        title: "Primary Survey",
+        text: "Airway • breathing • perfusion • mental status • major GI bleeding • pregnancy emergency • peritonitis",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "start",
+      },
+      {
+        title: "Focused Assessment",
+        text: "OPQRST/SAMPLE • abdominal and back exam • emesis/stool/urine blood • LMP/pregnancy • intake/output • surgery • medications • exposures",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Glucose + Cardiac Screen",
+        text: "Check blood glucose • acquire and transmit 12-lead ECG for adult abdominal pain or unexplained nausea/vomiting",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Shock / High-Risk Features?",
+        text: "Hypotension • poor perfusion • GI bleeding • rigid/guarded abdomen • pain out of proportion • suspected AAA/ACS/ectopic/sepsis",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Treat Symptoms + Cause",
+        text: "AEMT: vascular access, fluid, ondansetron • Paramedic: ECG interpretation, analgesia, second-line antiemetic, cause-specific protocol",
+        levels: ["AEMT", "Paramedic"],
+        tone: "urgent",
+      },
+      {
+        title: "Reassess + Transport",
+        text: "Repeat vital signs, perfusion, pain, nausea, mental status, and abdominal exam • notify early for time-critical findings",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "transport",
+      },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Provider-Level Actions",
+        summary: "Higher provider levels include the actions listed for the preceding levels.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Perform the primary survey; place the patient in a position of comfort unless hypotension, respiratory compromise, or another condition requires different positioning. Administer oxygen for hypoxemia, respiratory distress, or shock.",
+              "Obtain and document pain score, complete initial vital signs, temperature when infection is possible, blood glucose, and a focused abdominal, back, cardiopulmonary, skin, and neurologic examination. Obtain at least two complete vital-sign sets and reassess after each intervention.",
+              "Acquire and transmit a 12-lead ECG for adult abdominal pain or otherwise unexplained nausea/vomiting. Expedite transport for hypotension, poor perfusion, GI bleeding, syncope, altered mental status, rigid or guarded abdomen, pain out of proportion, pulsatile mass, pregnancy-related pain or bleeding, or suspected ACS, AAA, sepsis, obstruction, or perforation.",
+              "Keep the patient NPO except for an authorized oral or ODT medication. Use enteric/contact precautions when infectious vomiting or diarrhea is suspected and protect the patient from heat loss.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Establish IV access when the patient has shock, dehydration, persistent vomiting, significant bleeding, an anticipated need for parenteral medication, or another time-critical condition. Use IO access when vascular access is urgently required and IV access cannot be obtained within the Universal Patient Care attempt limit.",
+              "For adult hypotension or poor perfusion, administer normal saline 500 mL IV/IO, reassess, and repeat as needed to restore adequate perfusion or systolic blood pressure of at least 90 mmHg; maximum 2 L in this protocol. Use 250 mL increments with frequent lung and perfusion reassessment in patients with heart failure, renal failure, liver failure, known volume overload, pulmonary edema, or another high risk for fluid intolerance.",
+              "For pediatric hypotension or poor perfusion, administer normal saline 20 mL/kg IV/IO and reassess after each bolus for perfusion and fluid overload; continue under the applicable pediatric shock protocol when poor perfusion persists.",
+              "For nausea or vomiting, administer ondansetron: adult 4 mg IV/IO/IM/PO/ODT; pediatric 0.15 mg/kg IV/IO/IM/PO/ODT, maximum 4 mg. One repeat dose may be given after 15 minutes for persistent symptoms after reassessment.",
+              "Treat hypoglycemia or hyperglycemic emergency under the age-appropriate diabetic emergency protocol. Do not delay transport for IV access or symptom-control medication.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Interpret the 12-lead ECG and immediately transition to the acute coronary syndrome protocol when ischemia or STEMI is suspected; obtain continuous cardiac monitoring for high-risk presentation, significant electrolyte loss, dysrhythmia, or parenteral QT-prolonging medication.",
+              "Treat moderate or severe pain under UP-11 Pain Management. Do not withhold analgesia solely because a surgical abdomen is possible; document the examination and pain score before and after medication.",
+              "If adult nausea or vomiting persists after ondansetron and no contraindication is present, administer promethazine 12.5 mg by deep IM injection once. Do not administer promethazine IV or IO in this protocol.",
+              "For shock, major GI bleeding, suspected ruptured AAA or ectopic pregnancy, or another time-critical presentation, consider a second large-bore IV, provide cause-specific resuscitation, notify the receiving facility early, and minimize scene time.",
+              "Provide advanced airway management when vomiting, aspiration, altered mental status, or clinical deterioration threatens airway protection or ventilation.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Abdominal pain, nausea, vomiting, or diarrhea."],
-    contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
-    medications: [],
-    warnings: ["Avoid oral intake when surgery, aspiration, or altered mental status is possible."],
-    clinicalPearls: ["Consider ACS, AAA, ectopic pregnancy, sepsis, DKA, obstruction, and GI bleed.", "Older adults may have serious disease with minimal tenderness."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    indications: [
+      "Nontraumatic abdominal, flank, pelvic, or genitourinary pain.",
+      "Nausea, vomiting, diarrhea, dehydration, or suspected nontraumatic gastrointestinal bleeding.",
+      "Unexplained symptoms in which a gastrointestinal, genitourinary, metabolic, cardiac, obstetric, infectious, or toxicologic cause is possible.",
+    ],
+    contraindications: [
+      "Use the abdominal/pelvic trauma protocol when recent trauma is the likely cause.",
+      "Do not give oral or ODT medication when the patient cannot protect the airway, has active uncontrolled vomiting that prevents administration, or has another aspiration risk.",
+    ],
+    assessment: [
+      {
+        title: "History",
+        items: [
+          "Onset, provocation/palliation, quality, region/radiation, severity, progression, and duration of pain or nausea; timing and character of vomiting or diarrhea.",
+          "Last oral intake, urine output, bowel movement, flatus, and emesis; blood or coffee-ground material in emesis; melena, hematochezia, hematuria, dysuria, vaginal bleeding, or discharge.",
+          "Prior abdominal disease or surgery, aneurysm, cardiac disease, diabetes, renal disease, pregnancy history, immunocompromise, recent antibiotics or hospitalization, sick contacts, travel, unusual foods, alcohol, cannabis, medications, anticoagulants, and possible toxic exposure.",
+          "For patients who could be pregnant: last menstrual period, pregnancy possibility, gestational age if known, prior ectopic pregnancy, fertility treatment, pain, syncope, and vaginal bleeding.",
+        ],
+      },
+      {
+        title: "Examination",
+        items: [
+          "General appearance, mental status, skin temperature/color/moisture, hydration, pulses, perfusion, orthostatic symptoms when safe, and evidence of shock.",
+          "Inspect and gently palpate the abdomen for distention, focal or diffuse tenderness, guarding, rigidity, rebound/peritoneal signs, mass, hernia, bruising, and pulsation. Assess back and flank pain, distal pulses, and cardiopulmonary findings.",
+          "When available without delaying care, note the appearance and approximate amount of emesis or stool and preserve objective descriptions rather than assigning a final diagnosis.",
+        ],
+      },
+      {
+        title: "High-risk findings",
+        items: [
+          "Hypotension, shock index greater than 1, altered mental status, syncope, ongoing GI bleeding, anticoagulant use with bleeding, severe dehydration, or persistent tachycardia.",
+          "Rigid or guarded abdomen, pain out of proportion to examination, pulsatile abdominal mass, sudden tearing abdominal/back pain, absent or unequal distal pulses, or rapidly worsening pain.",
+          "Pregnancy possibility with pain, bleeding, syncope, shoulder pain, or shock; severe pelvic or testicular pain; fever with poor perfusion; or vomiting with neurologic findings.",
+          "Epigastric or upper abdominal symptoms with dyspnea, diaphoresis, weakness, syncope, diabetes, known coronary disease, or ischemic ECG changes.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Complete the Universal Patient Care assessment and immediately address airway compromise, hypoxemia, shock, major bleeding, severe hypoglycemia, or another life threat.",
+      "Obtain blood glucose and the indicated 12-lead ECG early. Transition to the diabetic, acute coronary syndrome, shock, sepsis, obstetric, toxicology, or trauma protocol as soon as a time-critical syndrome is recognized.",
+      "Provide vascular access, fluid resuscitation, ondansetron, and analgesia according to the provider-level actions and medication doses in this protocol.",
+      "Repeat vital signs, perfusion, lung sounds after fluid, pain score, nausea/vomiting, mental status, and abdominal examination after treatment and during transport.",
+      "Notify the receiving facility early and minimize scene time for suspected AAA, ectopic pregnancy, ACS, major GI bleeding, bowel ischemia, obstruction/perforation, sepsis, or persistent shock.",
+    ],
+    medications: [
+      {
+        name: "Normal Saline",
+        dose: "Adult: 500 mL IV/IO bolus; reassess and repeat to adequate perfusion or SBP ≥90 mmHg, maximum 2 L. Pediatric: 20 mL/kg IV/IO; reassess after each bolus.",
+        notes: ["Use 250 mL increments with frequent lung and perfusion reassessment in patients with heart failure, renal failure, liver failure, known volume overload, pulmonary edema, or another high risk for fluid intolerance."],
+      },
+      {
+        name: "Ondansetron",
+        dose: "Adult: 4 mg IV/IO/IM/PO/ODT. Pediatric: 0.15 mg/kg IV/IO/IM/PO/ODT, maximum 4 mg. May repeat once after 15 minutes.",
+        notes: ["Avoid when the patient has known congenital long-QT syndrome or clinically significant QT prolongation; use caution with electrolyte loss, bradyarrhythmia, or other QT-prolonging medications."],
+      },
+      {
+        name: "Promethazine",
+        dose: "Adult: 12.5 mg deep IM once for persistent nausea/vomiting after ondansetron.",
+        notes: ["Paramedic only in this protocol.", "Do not administer IV or IO.", "Avoid with significant CNS depression, inability to protect the airway, or known hypersensitivity."],
+      },
+      {
+        name: "Analgesia",
+        dose: "Use the medication and dose selected under UP-11 Pain Management.",
+        notes: ["Document examination and pain score before and after medication."],
+      },
+    ],
+    warnings: [
+      "Abdominal pain may be an atypical presentation of acute coronary syndrome, particularly in older adults, patients with diabetes, and women. Acquire and transmit the ECG early.",
+      "A normal blood pressure does not exclude significant hemorrhage or evolving shock. Trend mental status, pulse quality, skin, shock index, and serial vital signs.",
+      "Do not give food or unrestricted oral fluids. An approved PO/ODT medication may be used when the airway is protected and administration is feasible.",
+      "Promethazine can cause sedation, hypotension, respiratory depression, and severe tissue injury. Deep IM is the only authorized route in this protocol; IV and IO administration are prohibited.",
+      "Use ondansetron cautiously in patients with substantial electrolyte loss, bradyarrhythmia, congenital long-QT syndrome, significant QT prolongation, or concurrent QT-prolonging medication.",
+      "Do not use NSAID analgesia when GI bleeding, significant renal dysfunction, severe dehydration, anticoagulation, pregnancy, or another contraindication is present.",
+    ],
+    clinicalPearls: [
+      "Pain severity and abdominal tenderness do not reliably predict disease severity. Mesenteric ischemia, ectopic pregnancy, AAA, and early sepsis may initially have limited examination findings.",
+      "Pain treatment does not need to be delayed until a hospital examination and should not be withheld solely because a surgical diagnosis is possible.",
+      "Nausea without active vomiting may still benefit from antiemetic treatment.",
+      "Diarrhea with recent antibiotic exposure or hospitalization should raise concern for C. difficile; use appropriate contact precautions and communicate the risk during handoff.",
+      "Recurrent vomiting may reflect obstruction, increased intracranial pressure, DKA, ACS, carbon monoxide exposure, cannabinoid hyperemesis, organophosphate exposure, or another non-GI emergency.",
+    ],
+    specialPopulations: [
+      {
+        title: "Pediatrics — younger than 16 years",
+        items: [
+          "Use actual measured weight when reliable or the length-based tool for medication and equipment dosing. Reassess carefully after each fluid bolus.",
+          "Bilious emesis, hematemesis, persistent focal pain, distention, guarding, altered mental status, signs of dehydration, or vomiting in a young infant requires prompt transport and early notification.",
+          "Do not administer promethazine to a pediatric patient under this standing protocol; contact Medical Control if exceptional use is considered.",
+        ],
+      },
+      {
+        title: "Pregnancy possibility",
+        items: [
+          "Treat abdominal, pelvic, or back pain with vaginal bleeding, syncope, shoulder pain, or shock as ectopic pregnancy or obstetric hemorrhage until excluded. Expedite transport and transition to the obstetric protocol.",
+        ],
+      },
+      {
+        title: "Fluid-intolerant patients",
+        items: [
+          "Patients with heart failure, renal failure, liver failure, known volume overload, pulmonary edema, or another high risk for fluid intolerance receive 250 mL fluid increments with frequent lung and perfusion reassessment.",
+          "Older adults may have serious disease with minimal tenderness or normal initial vital signs; reassess frequently and use clinical judgment regarding fluid tolerance.",
+        ],
+      },
+    ],
+    references: [
+      "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — SOP 301 Abdominal/GU Pain (non-traumatic) / Nausea and Vomiting; SOP 603 Mandatory EKG",
+      "Claiborne Covenant EMS Formulary — current medical-director source workbook",
+      "Claiborne County EMS UP-03 source PDF — Abdominal Pain, Vomiting and Diarrhea, revised September 1, 2025",
+      "Claiborne County EMS UP-01 Universal Patient Care and UP-11 Pain Management",
+    ],
     sourcePdf: "/protocols/claiborne/up-03-abd-pain-vomiting-and-diarrhea-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 10, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "UP-11 Pain Management must be finalized so the internal analgesia reference has one authoritative dose source.",
+      "UP-03 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process.",
+    ],
   },
   {
     id: "up-04",
