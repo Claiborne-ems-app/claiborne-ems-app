@@ -895,35 +895,137 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     title: "Back Pain",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["Differentiate uncomplicated musculoskeletal pain from spinal, vascular, infectious, or renal emergencies."],
+    overview: [
+      "Assess patients with back pain for trauma and new neurologic dysfunction, provide appropriate analgesia, and reassess the response to treatment.",
+      "Saddle anesthesia is assessed by history. A routine perineal examination is not required in the prehospital setting.",
+    ],
     flow: [
-      { title: "Primary survey", text: "Identify trauma, shock, neurologic deficit, or vascular emergency", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Red flags?", text: "Weakness, saddle anesthesia, urinary retention, fever, pulsatile mass, tearing pain", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "High-risk present?", text: "Spinal precautions only when indicated; rapid transport and early notification", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Pain management", text: "Position of comfort; treat within scope; reassess", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      {
+        title: "Initial Assessment",
+        text: "Primary survey • vital signs • pain score • relevant history • traumatic or atraumatic onset",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "start",
+      },
+      {
+        title: "Focused Neurologic Assessment",
+        text: "Bilateral leg strength and sensation • distal pulses • gait when safe • ask about saddle anesthesia and bowel/bladder dysfunction",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "New Neurologic Deficit?",
+        text: "Weakness, sensory loss, saddle anesthesia by history, urinary retention/incontinence, or bowel dysfunction",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Time-Critical Finding",
+        text: "Prompt transport • early receiving-facility notification • repeat neurologic examination",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "urgent",
+      },
+      {
+        title: "Treat Pain",
+        text: "Position of comfort • spinal protection only when indicated • analgesia per UP-11 • cardiac monitoring when medication is administered",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Reassess + Transport",
+        text: "Pain score • vital signs • neurologic findings • medication response",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "transport",
+      },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Provider-Level Actions",
+        summary: "Higher provider levels include the actions listed for the preceding levels.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Obtain the history, pain score, complete vital signs, and a focused examination. Determine whether the pain followed trauma.",
+              "Assess bilateral lower-extremity strength and sensation, distal pulses, and the ability to stand or walk when safe. Ask about new saddle anesthesia, urinary retention or incontinence, and bowel dysfunction. Do not perform a routine perineal examination.",
+              "For traumatic back pain, apply spinal protection when indicated. For uncomplicated atraumatic pain, place the patient in a position of comfort and avoid unnecessary immobilization.",
+              "Provide nonpharmacologic care and administer oral analgesia according to UP-11 Pain Control. Apply cardiac monitoring when analgesic medication is administered.",
+              "Transport promptly and notify the receiving facility early for a new or progressive neurologic deficit, saddle anesthesia, or new bowel or bladder dysfunction.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Establish IV access only when needed for parenteral analgesia, hemodynamic instability, or another specific clinical indication. Do not start an IV or administer fluid routinely for isolated back pain.",
+              "Administer analgesia authorized in UP-11, maintain cardiac monitoring after medication administration, and reassess pain, vital signs, neurologic findings, and medication response.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Interpret the cardiac rhythm and administer parenteral analgesia according to UP-11 when indicated. Continue the medication-specific airway, respiratory, hemodynamic, and cardiac monitoring required by that protocol.",
+              "Acquire a 12-lead ECG or transition to the appropriate cardiac, abdominal, vascular, trauma, or obstetric protocol only when the history, examination, or clinical condition provides a separate indication.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Acute or chronic back pain."],
+    indications: ["Acute or chronic back pain without a more specific immediately apparent treatment pathway."],
     contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
-    medications: [],
-    warnings: ["Avoid unnecessary spinal immobilization in nontraumatic pain."],
-    clinicalPearls: ["Consider AAA, aortic dissection, epidural abscess, cauda equina, renal colic, and ACS.", "New neurologic deficit or bowel/bladder dysfunction is time critical."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    assessment: [
+      {
+        title: "Focused assessment",
+        items: [
+          "Pain onset, location, radiation, severity, provoking or relieving factors, trauma, prior episodes, and relevant medications or anticoagulants.",
+          "Bilateral lower-extremity strength and sensation, distal pulses, and gait when safe.",
+          "Ask about new saddle anesthesia, urinary retention or incontinence, and bowel dysfunction. Saddle anesthesia is a historical symptom; routine prehospital examination of the perineum is not required.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Complete the focused neurologic assessment and identify any traumatic mechanism.",
+      "Use spinal protection only when indicated; otherwise position the patient for comfort.",
+      "Administer analgesia according to UP-11 and apply cardiac monitoring when medication is administered.",
+      "Reassess the pain score, vital signs, neurologic examination, and treatment response.",
+      "Transport promptly with early notification for any new or progressive neurologic deficit, saddle anesthesia, or bowel/bladder dysfunction.",
+    ],
+    medications: [
+      {
+        name: "Analgesia",
+        dose: "Use the medication, dose, route, contraindications, and repeat-dose limits specified in UP-11 Pain Control.",
+        notes: ["Apply cardiac monitoring when analgesic medication is administered.", "Reassess pain, vital signs, neurologic findings, and medication response."],
+      },
+    ],
+    warnings: [
+      "Do not perform a routine perineal examination solely to assess saddle anesthesia; obtain this finding by history.",
+      "Do not routinely immobilize atraumatic back pain or delay transport for nonessential procedures.",
+      "Do not routinely establish IV access or administer fluid for isolated back pain. Apply cardiac monitoring when analgesic medication is administered; obtain a 12-lead ECG only for a separate clinical indication.",
+    ],
+    clinicalPearls: [
+      "New weakness, sensory loss, saddle anesthesia, urinary retention/incontinence, or bowel dysfunction requires prompt transport and early notification.",
+      "A normal initial neurologic examination does not replace reassessment after analgesia or when symptoms change.",
+    ],
+    specialPopulations: [
+      {
+        title: "Pediatrics — younger than 16 years",
+        items: ["Use weight-based pediatric analgesic dosing from the applicable pain protocol and reassess after treatment."],
+      },
+    ],
+    references: [
+      "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — SOP 300 Medical Complaint Not Specified, SOP 608 Spinal Protection, and Pain Management reference",
+      "Claiborne County EMS UP-05 source PDF — Back Pain",
+      "Claiborne County EMS UP-11 Pain Control",
+    ],
     sourcePdf: "/protocols/claiborne/up-05-back-pain-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 10, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "Medical-director approved a concise pathway centered on focused lower-extremity neurologic assessment, analgesia, reassessment, and transport.",
+      "Medical-director directed that saddle anesthesia be assessed by history without a routine prehospital perineal examination.",
+      "Medical-director approved cardiac monitoring when analgesic medication is administered. IV access is used only when required for the medication route or another clinical indication; a 12-lead ECG requires a separate clinical indication.",
+      "UP-05 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process.",
+    ],
   },
   {
     id: "up-06",
