@@ -1898,35 +1898,268 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     title: "Pain Control — Adult",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["Treat pain early while preserving airway, ventilation, and hemodynamic safety."],
+    overview: [
+      "Assess and treat acute pain early while preserving airway protection, ventilation, perfusion, and neurologic assessment. Use the least invasive effective option and tailor treatment to pain severity, clinical condition, contraindications, and patient preference.",
+      "UP-11 applies to patients 16 years of age or older. Mild pain may be treated with oral nonopioid medication. AEMTs and Paramedics may use approved parenteral nonopioids; opioids and analgesic-dose ketamine are Paramedic-only treatments.",
+    ],
     flow: [
-      { title: "Assess pain + cause", text: "Pain score • allergies • hemodynamics • respiratory status", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Nonpharmacologic care", text: "Position, splint, ice/heat when appropriate, reassurance", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Medication by level", text: "EMT: acetaminophen/ibuprofen • Paramedic: fentanyl, morphine, hydromorphone, ketamine", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Reassess", text: "Pain score, sedation, BP, respirations, SpO₂; EtCO₂ when indicated", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      {
+        title: "Assess Pain + Cause",
+        text: "Pain score • location • quality • onset • cause • allergies • airway • respirations • perfusion • mental status",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "start",
+      },
+      {
+        title: "Immediate Cause-Specific Care",
+        text: "Airway care • hemorrhage control • splinting • positioning • ice when appropriate • calm reassurance",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Mild Pain / Oral Route Appropriate?",
+        text: "EMT/AEMT/Paramedic: acetaminophen 650–1,000 mg PO OR ibuprofen 400 mg PO",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Parenteral Nonopioid Appropriate?",
+        text: "AEMT/Paramedic: acetaminophen 1 g IV/IO OR ketorolac 15 mg IV/IO or 30 mg IM",
+        levels: ["AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Moderate–Severe Pain?",
+        text: "Paramedic: select one opioid OR analgesic-dose ketamine • titrate to meaningful improvement",
+        levels: ["Paramedic"],
+        tone: "urgent",
+      },
+      {
+        title: "Monitor + Reassess",
+        text: "Cardiac monitor for systemic nonoral analgesia • continuous SpO₂/EtCO₂ for opioid or ketamine • reassess every 5–10 minutes",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Transport + Handoff",
+        text: "Do not delay airway care, hemorrhage control, splinting, or transport • document medication response and adverse effects",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "transport",
+      },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Provider-Level Actions",
+        summary: "Higher provider levels include the actions listed for the preceding levels.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Identify and treat immediate threats before analgesia. Provide airway support, hemorrhage control, wound coverage, splinting, positioning, ice when appropriate, and reassurance without delaying transport.",
+              "Assess onset, location, quality, radiation, severity, aggravating or relieving factors, cause, associated symptoms, allergies, current medications, previous analgesics, substance or opioid tolerance, and relevant renal, hepatic, respiratory, cardiovascular, bleeding, and pregnancy history.",
+              "Record a numeric 0–10 pain score when the patient can self-report. Use a descriptive severity assessment when reliable numeric reporting is not possible. Obtain airway, respiratory, perfusion, mental-status, and complete vital-sign assessments before medication.",
+              "For mild pain when the patient is alert, protects the airway, can swallow safely, and has no contraindication, administer one oral medication: acetaminophen 650–1,000 mg PO once or ibuprofen 400 mg PO once. Do not routinely administer both.",
+              "Do not administer aspirin for pain under UP-11. Aspirin remains limited to its approved cardiac indication. Nitrous oxide is not authorized because it is not on the Claiborne formulary.",
+              "Reassess pain, airway, respiratory status, perfusion, mental status, and vital signs after treatment and at handoff. Request the higher provider level when pain remains moderate to severe or oral medication is inappropriate or ineffective.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "For pain requiring a parenteral nonopioid, administer one of the following: acetaminophen 1 g IV/IO once or ketorolac 15 mg IV/IO once or 30 mg IM once. Do not routinely combine IV acetaminophen with an additional acetaminophen dose.",
+              "Do not administer ketorolac when ibuprofen or another NSAID has already been given during the current treatment interval. Screen for NSAID hypersensitivity, renal disease, renal transplant, significant dehydration, hypotension, active gastrointestinal bleeding, clinically significant anticoagulant-associated bleeding risk, and known or suspected pregnancy.",
+              "Establish IV access when needed for parenteral treatment or another clinical indication. Do not establish IO access solely to treat pain in an otherwise stable patient; use an approved oral or nonvascular option or request Paramedic treatment when appropriate.",
+              "Apply cardiac monitoring before IV/IO/IM analgesia and continue through reassessment and transport. Reassess pain, BP, heart rate, respiratory rate, SpO₂, mental status, and adverse effects after medication.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "For moderate to severe pain, select one opioid or analgesic-dose ketamine based on the clinical situation, contraindications, prior response, and patient preference. Titrate to meaningful improvement rather than complete elimination of pain.",
+              "Fentanyl: 50 mcg slow IV/IO; repeat 25–50 mcg every 5 minutes as needed; maximum total 100 mcg.",
+              "Morphine: 5 mg slow IV/IO; repeat 5 mg after 10 minutes as needed; maximum total 10 mg. If vascular access is unavailable, administer 5–10 mg IM once.",
+              "Hydromorphone: 0.5 mg slow IV/IO; repeat 0.5 mg after 10 minutes as needed; maximum total 1 mg. If vascular access is unavailable, administer 0.5–1 mg IM once.",
+              "Select one opioid. Do not combine fentanyl, morphine, and hydromorphone. Additional opioid dosing beyond the approved total limits requires medical-control authorization.",
+              "Ketamine: 0.3 mg/kg IV/IO slowly over 10 minutes, maximum 30 mg per dose. May repeat every 20 minutes as needed for a maximum of three total doses. Do not administer by rapid IV push.",
+              "If vascular access is unavailable, administer ketamine 0.5–1 mg/kg IN once, maximum 100 mg. Intranasal ketamine is a single-dose option under UP-11.",
+              "Do not routinely initiate weight-based ketamine and an opioid together. If the initial medication is inadequate, fully reassess airway, ventilation, hemodynamics, sedation, pain, and adverse effects before changing agents.",
+              "Apply cardiac monitoring before systemic nonoral analgesia. Maintain continuous SpO₂ and waveform EtCO₂ with any opioid or ketamine, keep suction and ventilation equipment immediately available, and reassess at least every 5–10 minutes.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Moderate to severe acute pain or painful procedures."],
-    contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
-    medications: [],
-    warnings: ["Medication-specific allergy, contraindication, or unstable airway/ventilation."],
-    clinicalPearls: ["Use multimodal analgesia when appropriate.", "Do not withhold indicated analgesia solely because abdominal pain is undifferentiated."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    indications: [
+      "Acute pain in a patient 16 years of age or older when treatment can be provided without delaying management of immediate threats or time-sensitive transport.",
+      "Painful procedures or movement when analgesia is appropriate and the patient can be safely monitored.",
+    ],
+    contraindications: [
+      "Do not give oral medication when the patient cannot protect the airway, cannot swallow safely, is actively vomiting, or has another aspiration risk.",
+      "Do not administer acetaminophen with known hypersensitivity, severe liver disease or liver failure, suspected acetaminophen overdose, a recent maximum dose, or an uncertain prior acetaminophen dose or administration time.",
+      "Do not administer ibuprofen or ketorolac with NSAID hypersensitivity, renal disease or renal transplant, significant dehydration, hypotension, active gastrointestinal bleeding, clinically significant anticoagulant-associated bleeding risk, known or suspected pregnancy, or recent NSAID administration.",
+      "Do not administer an opioid with respiratory depression, inability to protect the airway, severe hypotension, or significant uncorrected hypoxemia.",
+      "Do not administer analgesic-dose ketamine with known hypersensitivity, uncontrolled hypertension, active severe cardiac ischemia, or active psychosis.",
+    ],
+    assessment: [
+      {
+        title: "Pain and medication-safety assessment",
+        items: [
+          "Use patient self-report whenever possible. Record pain severity before medication, after each intervention, during transport, and at handoff. Pain score alone does not determine medication selection.",
+          "Assess airway protection, respiratory rate and effort, SpO₂, perfusion, BP, heart rate and rhythm, mental status, sedation level, injury or illness severity, and whether pain may represent a time-sensitive cardiac, vascular, neurologic, surgical, obstetric, or traumatic emergency.",
+          "Review allergies, analgesics already taken or administered, alcohol or sedative use, opioid tolerance, obstructive sleep apnea, COPD, renal or hepatic impairment, anticoagulant use, GI bleeding, pregnancy, and prior adverse responses to opioids, NSAIDs, acetaminophen, or ketamine.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Treat airway compromise, hemorrhage, shock, and other immediate threats first. Provide appropriate positioning, splinting, wound care, ice, and reassurance.",
+      "For mild pain, administer acetaminophen 650–1,000 mg PO or ibuprofen 400 mg PO when the oral route is safe and medication-specific contraindications are absent.",
+      "For parenteral nonopioid treatment, an AEMT or Paramedic may administer acetaminophen 1 g IV/IO once or ketorolac 15 mg IV/IO or 30 mg IM once.",
+      "For moderate to severe pain, a Paramedic may select fentanyl, morphine, hydromorphone, or analgesic-dose ketamine using the approved dose, interval, route, and maximum. Do not combine different opioids or routinely initiate opioid/ketamine combination therapy.",
+      "Apply cardiac monitoring for all systemic nonoral analgesia. Use continuous SpO₂ and waveform EtCO₂ with opioids or ketamine and keep suction and ventilation equipment immediately available.",
+      "Reassess pain, sedation, airway, respiratory rate and effort, SpO₂, EtCO₂ when used, BP, cardiac rhythm, and adverse effects at least every 5–10 minutes after parenteral medication and at handoff.",
+      "Do not delay airway treatment, hemorrhage control, splinting, or transport to complete pain treatment or reach a specific pain score.",
+    ],
+    medications: [
+      {
+        name: "Acetaminophen — oral",
+        dose: "EMT/AEMT/Paramedic: 650–1,000 mg PO once.",
+        notes: [
+          "Use when the patient protects the airway and can swallow safely.",
+          "Do not administer with severe liver disease or liver failure, suspected acetaminophen overdose, a recent maximum dose, or an uncertain prior dose/time.",
+        ],
+      },
+      {
+        name: "Ibuprofen — oral",
+        dose: "EMT/AEMT/Paramedic: 400 mg PO once.",
+        notes: [
+          "Do not administer with NSAID hypersensitivity, renal disease/transplant, significant dehydration, hypotension, active GI bleeding, clinically significant anticoagulant-associated bleeding risk, pregnancy, or recent NSAID administration.",
+          "Do not combine with ketorolac.",
+        ],
+      },
+      {
+        name: "Acetaminophen — IV/IO",
+        dose: "AEMT/Paramedic: 1 g IV/IO once.",
+        notes: [
+          "Include all acetaminophen taken before EMS arrival when screening for a recent maximum dose.",
+          "Do not administer an additional oral acetaminophen dose routinely.",
+        ],
+      },
+      {
+        name: "Ketorolac",
+        dose: "AEMT/Paramedic: 15 mg IV/IO once or 30 mg IM once.",
+        notes: [
+          "Do not administer with the NSAID contraindications listed above.",
+          "Do not combine with ibuprofen or another NSAID.",
+        ],
+      },
+      {
+        name: "Fentanyl",
+        dose: "Paramedic: 50 mcg slow IV/IO; repeat 25–50 mcg every 5 minutes as needed; maximum total 100 mcg.",
+        notes: [
+          "Use continuous SpO₂ and waveform EtCO₂ and monitor airway, ventilation, sedation, and hemodynamics.",
+          "Do not combine with morphine or hydromorphone.",
+        ],
+      },
+      {
+        name: "Morphine",
+        dose: "Paramedic: 5 mg slow IV/IO; repeat 5 mg after 10 minutes as needed; maximum total 10 mg. If no vascular access, 5–10 mg IM once.",
+        notes: [
+          "Use continuous SpO₂ and waveform EtCO₂ and monitor airway, ventilation, sedation, and hemodynamics.",
+          "Do not combine with fentanyl or hydromorphone.",
+        ],
+      },
+      {
+        name: "Hydromorphone",
+        dose: "Paramedic: 0.5 mg slow IV/IO; repeat 0.5 mg after 10 minutes as needed; maximum total 1 mg. If no vascular access, 0.5–1 mg IM once.",
+        notes: [
+          "Use continuous SpO₂ and waveform EtCO₂ and monitor airway, ventilation, sedation, and hemodynamics.",
+          "Do not combine with fentanyl or morphine.",
+        ],
+      },
+      {
+        name: "Ketamine — analgesic dose",
+        dose: "Paramedic: 0.3 mg/kg IV/IO slowly over 10 minutes, maximum 30 mg per dose; repeat every 20 minutes as needed, maximum three total doses. If no vascular access, 0.5–1 mg/kg IN once, maximum 100 mg.",
+        notes: [
+          "Do not administer by rapid IV push.",
+          "Do not routinely initiate ketamine with an opioid. Fully reassess before changing agents.",
+          "Use continuous SpO₂ and waveform EtCO₂ and monitor airway, ventilation, sedation, cardiac rhythm, and hemodynamics.",
+        ],
+      },
+      {
+        name: "Ondansetron — analgesia-associated nausea",
+        dose: "AEMT/Paramedic: 4 mg IV/IO, IM, or PO.",
+        notes: [
+          "Use when clinically indicated for nausea or vomiting associated with pain or analgesic administration.",
+          "Continue cardiac and respiratory monitoring required by the analgesic medication.",
+        ],
+      },
+      {
+        name: "Naloxone — opioid-induced hypoventilation",
+        dose: "Paramedic: after airway support and ventilation, administer 0.1–0.2 mg IV/IO/IM and titrate to adequate ventilation. If vascular access is unavailable, administer 2 mg IN.",
+        notes: [
+          "Ventilate first and titrate to adequate spontaneous ventilation rather than complete reversal of analgesia when clinically safe.",
+          "Transition to the naloxone/overdose protocol if overdose rather than an analgesic adverse effect is suspected.",
+        ],
+      },
+    ],
+    warnings: [
+      "Analgesia must not delay airway management, hemorrhage control, shock treatment, splinting, or time-sensitive transport.",
+      "A fall in respiratory rate, increasing sedation, abnormal EtCO₂, hypoxemia, or loss of airway protection after an opioid requires immediate airway support and assisted ventilation; administer naloxone when indicated.",
+      "Use the lower end of the approved opioid dose range and careful titration in older or frail patients, obstructive sleep apnea, severe COPD, renal or hepatic impairment, or concurrent alcohol, opioid, benzodiazepine, or other sedative exposure.",
+      "Do not routinely combine ketamine with a benzodiazepine. Treat a clinically significant emergence reaction or other adverse effect according to the applicable protocol and medical-control direction.",
+      "Analgesic response does not exclude a serious underlying cause. Continue complaint-specific evaluation and transport.",
+    ],
+    clinicalPearls: [
+      "Pain is subjective. Patient self-report should guide assessment when reliable; appearance, diagnosis, or concern for drug-seeking behavior must not be used as the sole reason to withhold appropriate analgesia.",
+      "Meaningful improvement in pain and function is the goal; complete elimination of pain is not required.",
+      "Do not withhold indicated analgesia solely because abdominal pain is undifferentiated, the patient has opioid tolerance, the injury is a burn, or the patient has sickle-cell disease.",
+      "Nonopioid options may provide analgesia comparable to opioids for selected acute pain while avoiding opioid-associated respiratory depression. Medication selection should match the patient and clinical circumstance.",
+      "Document the pain score or descriptive assessment, medication choice, dose, route, time, monitoring, reassessment findings, adverse effects, and response.",
+    ],
+    specialPopulations: [
+      {
+        title: "Older, frail, respiratory-risk, or organ-impaired patients",
+        items: [
+          "Use the lower end of the approved dose range, allow adequate time for effect, and reassess before repeating medication.",
+          "Maintain continuous respiratory monitoring with any opioid or ketamine and be prepared to support ventilation.",
+        ],
+      },
+      {
+        title: "Pregnancy",
+        items: [
+          "Avoid ibuprofen and ketorolac. Use acetaminophen or carefully titrated Paramedic analgesia when indicated and transition to the applicable obstetric or complaint-specific protocol.",
+        ],
+      },
+      {
+        title: "Pediatrics — younger than 16 years",
+        items: [
+          "Do not use UP-11 for patients younger than 16 years. Use UP-12 Pediatric Pain Control and actual or length-based weight.",
+        ],
+      },
+    ],
+    references: [
+      "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — Opiate Reference and Pain Management Protocol",
+      "Evidence-Based Guidelines for Prehospital Pain Management: Recommendations, Prehospital Emergency Care, 2022",
+      "Agency for Healthcare Research and Quality, Comparative Effectiveness of Analgesics to Reduce Acute Pain in the Prehospital Setting, 2019",
+      "Claiborne Covenant EMS Formulary — current medical-director source workbook",
+      "Claiborne County EMS UP-11 source PDF — Pain Control, revised February 15, 2026",
+      "Claiborne County EMS UP-06 IV / IO Access and applicable complaint-specific protocols",
+    ],
     sourcePdf: "/protocols/claiborne/up-11-pain-control-adult-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 10, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "Medical-director approved adult UP-11 for patients 16 years of age or older and directed provider-specific care: oral acetaminophen/ibuprofen by EMT, AEMT, or Paramedic; IV acetaminophen/ketorolac by AEMT or Paramedic; and opioids/analgesic-dose ketamine by Paramedic only.",
+      "Medical-director removed nitrous oxide because it is not on the Claiborne formulary and removed aspirin as an analgesic while retaining aspirin only for its approved cardiac indication.",
+      "Medical-director approved acetaminophen 650–1,000 mg PO, ibuprofen 400 mg PO, acetaminophen 1 g IV/IO once, and ketorolac 15 mg IV/IO or 30 mg IM once with the medication-specific contraindications documented in UP-11.",
+      "Medical-director approved Paramedic opioid limits: fentanyl maximum total 100 mcg, morphine maximum total 10 mg, and hydromorphone maximum total 1 mg; one opioid is selected and different opioids are not combined.",
+      "Medical-director approved analgesic ketamine 0.3 mg/kg IV/IO slowly over 10 minutes to maximum 30 mg per dose, repeat every 20 minutes for maximum three doses; or 0.5–1 mg/kg IN once to maximum 100 mg when vascular access is unavailable.",
+      "Medical-director directed against routine initial opioid/ketamine combination therapy and required full reassessment before changing agents.",
+      "Medical-director required cardiac monitoring for all systemic nonoral analgesia and continuous SpO₂ and waveform EtCO₂ for opioid or ketamine administration, with reassessment at least every 5–10 minutes and at handoff.",
+      "Medical-director approved ventilatory support before titrated naloxone for opioid-induced hypoventilation, ondansetron 4 mg for associated nausea, and the documented medication-specific contraindications and safety exclusions.",
+      "UP-11 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process.",
+    ],
   },
   {
     id: "up-12",
