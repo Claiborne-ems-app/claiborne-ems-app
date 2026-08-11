@@ -2260,6 +2260,16 @@ export const structuredProtocols: StructuredProtocolContent[] = [
           "Do not delay care or transport to complete law-enforcement questioning, evidence collection, charging, or confinement paperwork.",
         ],
       },
+      {
+        title: "Required custody documentation",
+        items: [
+          "Document custody status; chief complaint; patient statements; capacity assessment; vital signs; examination; treatment; response; and disposition.",
+          "Document the reported mechanism, force, restraint, chemical agent, CEW mode, number or duration of cycles when known, falls, and probe locations.",
+          "Record restraint type, position, application time when known, serial airway and circulation checks, adjustments, and the officer accompanying the patient with immediate access to the key.",
+          "Record names or identifying numbers of involved officers when available, receiving personnel, refusal discussion, signatures, Medical Control contact, and any assessment or treatment the patient declined.",
+          "Clearly identify which information EMS directly observed and which information was reported by the patient, law enforcement, or witnesses.",
+        ],
+      },
     ],
     treatmentSteps: [
       "Treat immediate life threats and follow the applicable complaint-specific, trauma, airway, cardiac, toxicology, behavioral, pediatric, or obstetric protocol.",
@@ -2305,18 +2315,6 @@ export const structuredProtocols: StructuredProtocolContent[] = [
           "For a known pregnant inmate in correctional custody, use the least restrictive restraint and request removal whenever the restraint interferes with medical assessment, treatment, positioning, or transport.",
           "Do not restrain the patient's hands behind her back. During labor or delivery, do not use restraints around the ankles, legs, or waist.",
           "Under Tennessee Code § 41-51-202, a healthcare professional responsible for the inmate's health and safety may request that correctional restraints not be used or be removed.",
-        ],
-      },
-    ],
-    documentation: [
-      {
-        title: "Required custody documentation",
-        items: [
-          "Custody status; chief complaint; patient statements; capacity assessment; vital signs; examination; treatment; response; and disposition.",
-          "Reported mechanism, force, restraint, chemical agent, CEW mode, number or duration of cycles when known, falls, and probe locations.",
-          "Restraint type, position, application time when known, serial airway and circulation checks, adjustments, and the officer accompanying the patient with immediate access to the key.",
-          "Names or identifying numbers of involved officers when available, receiving personnel, refusal discussion, signatures, Medical Control contact, and any assessment or treatment the patient declined.",
-          "Clearly identify which information EMS directly observed and which information was reported by the patient, law enforcement, or witnesses.",
         ],
       },
     ],
