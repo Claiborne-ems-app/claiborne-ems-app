@@ -3273,7 +3273,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     flow: [
       { title: "Scene Safe?", text: "Stage or withdraw when unsafe • request law enforcement and sufficient resources • identify weapons or hazards", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
       { title: "Medical Emergency?", text: "Airway • breathing • circulation • vitals • SpO₂ • glucose • temperature • trauma • neurologic and toxicologic causes", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
-      { title: "Assign BARS", text: "1–3: altered mental status/overdose • 4: cooperative • 5: de-escalate • 6–7: UP-18; severe delirium: UP-19", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "Assign BARS", text: "1–3: altered mental status/overdose • 4: cooperative • 5: de-escalate • 6–7: UP-18 combined agitation pathway", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
       { title: "Assess Safety Risk", text: "Suicide • homicide • plan • intent • access to means • prior attempts • command hallucinations • ability to protect self", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
       { title: "De-escalate", text: "One calm speaker • reduce stimulation • maintain personal space and exit • acknowledge emotions • offer safe choices", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
       { title: "Immediate Danger?", text: "Direct observation • remove accessible hazards when safe • request authorized custody assistance • do not rely on a safety contract", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
@@ -3305,9 +3305,9 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             level: "Paramedic",
             actions: [
               "Perform all prior care. Obtain and interpret a 12-lead ECG, use EtCO₂, and provide advanced airway or cause-specific treatment when the presentation or intervention indicates.",
-              "For BARS 6–7, transition to UP-18 Behavioral Agitation / Sedation Guide. Use UP-19 when severe agitation is accompanied by delirium, hyperthermia, unusual strength, or prolonged struggle.",
-              "Agitation medication and dosing are contained only in UP-18 and UP-19. UP-17 contains no standing-order sedative treatment.",
-              "After restraint or medication, provide continuous airway, ventilation, SpO₂, EtCO₂, and cardiac monitoring as required by UP-18 or UP-19.",
+              "For BARS 6–7, transition to UP-18 Behavioral Agitation and Severe Agitation. Use the severe-agitation branch when delirium, hyperthermia, unusual strength, or prolonged struggle is present.",
+              "Agitation medication and dosing are contained only in the combined UP-18 protocol. UP-17 contains no standing-order sedative treatment.",
+              "After restraint or medication, provide continuous airway, ventilation, SpO₂, EtCO₂, and cardiac monitoring as required by UP-18.",
             ],
           },
         ],
@@ -3338,7 +3338,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             level: "Paramedic",
             actions: [
               "BARS 7: violent with immediate danger and restraint required. Initiate the UP-18 safety and restraint pathway without delaying for nonessential assessment.",
-              "Use UP-19 when agitation includes delirium, hyperthermia, unusual strength, pain tolerance, or continued/prolonged struggle.",
+              "Use the UP-18 severe-agitation branch when agitation includes delirium, hyperthermia, unusual strength, pain tolerance, or continued/prolonged struggle.",
               "Repeat and document BARS after physical restraint, medication, and each clinically important change.",
             ],
           },
@@ -3492,11 +3492,11 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     treatmentSteps: [
       "Ensure scene safety; stage or withdraw when unsafe and request law enforcement and sufficient personnel before contact or intervention.",
       "Perform the medical screen and immediately treat hypoxia, hypoventilation, hypoglycemia, opioid respiratory depression, shock, hyperthermia, trauma, seizure, stroke, overdose, or another identified emergency under the applicable Claiborne protocol.",
-      "Assign BARS and route BARS 1–3 to altered mental status/overdose evaluation, BARS 4 to the cooperative behavioral assessment, BARS 5 to de-escalation, BARS 6–7 to UP-18, and severe agitation with delirium or hyperthermia to UP-19.",
+      "Assign BARS and route BARS 1–3 to altered mental status/overdose evaluation, BARS 4 to the cooperative behavioral assessment, BARS 5 to de-escalation, and BARS 6–7 to the appropriate branch of the combined UP-18 protocol.",
       "Complete the suicide/homicide assessment. Maintain direct observation and remove accessible dangerous objects when this can be done safely.",
       "Attempt verbal and environmental de-escalation before restraint whenever the situation permits.",
       "When an imminent substantial likelihood of serious harm exists, request an authorized Tennessee custody professional and continue medically necessary care and safe transport.",
-      "Use UP-18 for any physical or pharmacologic restraint and UP-19 for hyperactive delirium with severe agitation. Never restrain or transport a patient prone.",
+      "Use UP-18 for any physical or pharmacologic restraint, including severe agitation with delirium or hyperthermia. Never restrain or transport a patient prone.",
       "Transport to an emergency department for medical abnormality, injury, overdose, delirium, recent self-harm, current suicide or homicide risk, dangerous psychosis, restraint, or pharmacologic management.",
       "Use a psychiatric or crisis alternative destination only under a separately approved destination policy and only after required medical and safety screening criteria are met.",
       "A patient with intact capacity and no identified immediate danger may use the standard refusal process. Contact Medical Control whenever capacity or risk is uncertain and document a clear safety and follow-up plan.",
@@ -3559,7 +3559,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Tennessee Code Annotated §§ 33-6-401 through 33-6-404 and § 33-6-501 — emergency detention and substantial likelihood of serious harm.",
       "National Institute of Mental Health — Ask Suicide-Screening Questions (ASQ) Toolkit for youth and adults.",
       "National Association of EMS Physicians and partner organizations — Clinical Care and Restraint of Agitated or Combative Patients by EMS Practitioners, 2021.",
-      "Claiborne EMS UP-18 Behavioral Agitation / Sedation Guide and UP-19 Hyperactive Delirium With Severe Agitation.",
+      "Claiborne EMS UP-18 Behavioral Agitation and Severe Agitation.",
       "North Carolina College of Emergency Physicians UP-17 Behavioral Health Crisis source protocol retained for historical comparison.",
     ],
     sourcePdf: "/protocols/claiborne/up-17-behavioral-health-crisis-protocol.pdf",
@@ -3576,73 +3576,381 @@ export const structuredProtocols: StructuredProtocolContent[] = [
   },
   {
     id: "up-18",
-    title: "Behavioral Agitation / Sedation Guide",
+    title: "Behavioral Agitation and Severe Agitation",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["Use the least restrictive intervention that rapidly achieves safety."],
+    overview: [
+      "Agitation is a clinical spectrum. Use BARS to select the least restrictive effective intervention while rapidly identifying medical, traumatic, toxicologic, and environmental causes.",
+      "The treatment goal is a calm, arousable patient who can be safely assessed and transported—not unconsciousness.",
+      "BARS 6 follows the moderate-agitation midazolam pathway. BARS 7 with immediate danger follows the severe-agitation ketamine or alternative midazolam pathway.",
+    ],
     flow: [
-      { title: "Score agitation", text: "Use BARS and identify immediate danger", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "BARS 5–6", text: "Verbal de-escalation; offer oral medication when appropriate", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "BARS 7 / violent?", text: "Rapid team plan, restraint, Paramedic chemical sedation per finalized protocol", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Monitor continuously", text: "Airway, SpO₂, ECG, EtCO₂, temperature; reassess BARS", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      { title: "Scene Safe?", text: "Stage or withdraw when unsafe • request law enforcement and sufficient personnel • coordinate one team plan", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
+      { title: "Assign BARS", text: "1–3: medical/overdose • 4: cooperative • 5: de-escalate • 6: moderate agitation • 7: severe immediate danger", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "BARS 5", text: "One calm speaker • reduce stimulation • maintain personal space and exit • offer safe choices", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "BARS 6", text: "Paramedic: midazolam pathway • use physical restraint only when needed for immediate safety or necessary care", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "BARS 7 / Immediate Danger", text: "Rapid coordinated control • Paramedic ketamine 2–4 mg/kg IM, max 400 mg • adult alternative midazolam 10 mg IM", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Safe Position", text: "Approved soft restraints • supine with head elevated or lateral • never prone, hog-tied, or compressed at neck/chest", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "Find + Treat Cause", text: "Airway • ventilation • glucose • temperature • trauma • neurologic emergency • toxidrome • hypoxia", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "Continuous Monitoring", text: "Direct observation • ECG • SpO₂ • waveform EtCO₂ after sedation • BP, respirations, airway, and restraint checks every 5 minutes", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "ED Transport", text: "Every physical restraint or chemical sedation patient • early notification • document BARS, interventions, response, and complications", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Provider Actions",
+        summary: "Use explicit provider-level roles while maintaining one coordinated safety plan.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Establish scene safety, request law enforcement and additional personnel when indicated, and withdraw when responders cannot safely engage.",
+              "Use verbal and environmental de-escalation, assess BARS, and assist with approved physical restraint only when necessary to prevent immediate harm or permit emergency care.",
+              "Position the patient supine with the head elevated or lateral when clinically appropriate. Maintain airway positioning, oxygenation, suction, BVM readiness, direct observation, SpO₂, restraint checks, and serial vital signs.",
+              "Assess glucose, temperature, trauma, oxygenation, neurologic findings, medication or substance exposure, and other reversible causes as soon as safely possible.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT care. Establish IV/IO access only when safely achievable and clinically indicated; do not provoke additional struggle or delay rapid control attempting vascular access.",
+              "Administer IV fluid only for hypotension, poor perfusion, or suspected heat illness. Follow the applicable shock or environmental protocol and reassess for fluid overload risk.",
+              "Assist ventilation, continuous monitoring, restraint reassessment, active cooling, and rapid transport. AEMTs do not administer chemical sedation under UP-18.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform all prior care. Select the BARS 6 or BARS 7 medication pathway, administer the approved sedative, and direct post-sedation airway, ventilation, hemodynamic, temperature, and neurologic assessment.",
+              "Apply continuous ECG, SpO₂, and waveform EtCO₂ as soon as safely possible after parenteral sedation. Keep suction, oxygen, BVM, and advanced-airway equipment immediately available.",
+              "Do not administer a sedative for convenience, punishment, to force cooperation with a nonessential procedure, or to facilitate arrest or law-enforcement custody.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "BARS 6 — Moderate Agitation",
+        summary: "Use de-escalation first when feasible; medication is intended to achieve safe calm while preserving airway and arousability.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Continue one-speaker verbal de-escalation, reduce noise and spectators, maintain personal space and a clear exit, and avoid provocative procedures.",
+              "Prepare monitoring, airway equipment, approved restraints, and a coordinated team approach before medication when circumstances allow.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Obtain IV/IO access only when already tolerated or clinically necessary. Do not delay IM medication attempting vascular access.",
+              "Provide continuous physiologic monitoring and support after medication; no AEMT chemical-sedation administration.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Adult: midazolam 2.5 mg IV/IO or 5 mg IM/IN. If dangerous agitation persists, repeat once after 5 minutes following complete airway and hemodynamic reassessment. Maximum 5 mg IV/IO or 10 mg IM/IN.",
+              "Adult age 65 or older, frail, significant respiratory disease, or suspected CNS-depressant intoxication: midazolam 1–2.5 mg IV/IO or 2.5 mg IM/IN. Repeat once only after reassessment; maximum cumulative dose 5 mg.",
+              "Pediatric patient younger than 16: midazolam 0.1 mg/kg IV/IO or 0.2 mg/kg IM/IN, maximum initial dose 5 mg. Contact Medical Control when feasible before administration; a repeat dose requires Medical Control. Maximum cumulative dose 10 mg.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "BARS 7 — Severe Agitation With Immediate Danger",
+        summary: "Use rapid coordinated control to end dangerous exertion and permit emergency assessment and transport.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Request adequate personnel and law enforcement, remove bystanders and hazards, prepare approved restraints and monitoring, and execute one coordinated plan.",
+              "Do not delay an immediately necessary safety intervention to obtain routine measurements. Begin medical assessment as soon as control permits.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Assist the coordinated restraint and immediate airway, ventilation, circulatory, temperature, glucose, trauma, and toxidrome assessment.",
+              "Do not attempt vascular access in a violently struggling patient. Establish access after control only when a clinical indication remains.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Primary adult treatment: ketamine 2–4 mg/kg IM, maximum 400 mg. Do not delay treatment attempting IV access.",
+              "If IV/IO access is already safely established: ketamine 1 mg/kg IV/IO slowly, maximum 100 mg.",
+              "If ketamine is unavailable or contraindicated: midazolam 10 mg IM is preferred. If IM administration is not feasible, midazolam 10 mg IN may be considered. For patients age 65 or older, frail, or at increased respiratory risk, use midazolam 5 mg IM.",
+              "Do not routinely combine ketamine and midazolam or administer prophylactic midazolam after ketamine. If dangerous agitation persists 10 minutes after ketamine, contact Medical Control before repeating ketamine or adding another sedative.",
+              "For every pediatric BARS 7 patient, contact Medical Control and obtain a direct order before chemical sedation. Medical Control will specify the medication and dose.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Physical Restraint Safety",
+        summary: "Restraint is a medical safety intervention and must remain the least restrictive method that protects the patient and responders.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Use only approved soft restraints that can be rapidly removed. Secure the patient to the stretcher frame according to agency training, never to movable side rails.",
+              "Position supine with the head elevated or lateral when clinically appropriate. Never restrain or transport prone, hog-tied, with hands and feet tied together behind the back, or with pressure that constricts the neck, chest, diaphragm, or airway.",
+              "Do not place hands, knees, equipment, backboards, mattresses, or body weight on the patient's neck, chest, back, or abdomen.",
+              "Assess airway, breathing, circulation, distal neurovascular status, restraint security, skin, and position at least every 5 minutes and whenever the patient or restraint position changes.",
+              "Never use an oxygen mask as a spit-control device. If an agency-approved breathable spit hood is used, maintain continuous airway observation and remove it immediately for vomiting, respiratory compromise, or airway concern.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Continue all restraint assessments and transition to the least restrictive safe method when the clinical condition permits.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Direct restraint positioning and physiologic reassessment. If rigid law-enforcement restraints must remain, require an accompanying officer with immediate access to the key and transition to approved soft restraints when safely possible.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Monitoring, Transport, and Documentation",
+        summary: "Every restraint or sedation encounter requires close physiologic monitoring, emergency-department transport, and quality review.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Maintain continuous direct observation. Obtain two complete vital-sign sets when feasible and repeat airway, respiratory rate and effort, blood pressure, mental status, BARS, position, and distal neurovascular checks every 5 minutes until stable.",
+              "Document the behavior creating immediate danger, initial and repeat BARS, de-escalation attempts, personnel involved, restraint type and position, assessment findings, and response.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Document vascular access, fluids, cooling, physiologic trends, adverse events, and every restraint reassessment.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "After parenteral sedation, maintain continuous ECG, SpO₂, and waveform EtCO₂. Document medication, dose, route, exact time, indication, response, repeat assessment, and any airway or hemodynamic intervention.",
+              "Transport every physically restrained or chemically sedated patient to an emergency department with early notification. Interfacility sedation remains governed by the separate transfer policy.",
+              "Submit every physical-restraint or chemical-sedation encounter for medical-director or quality-assurance review.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Agitation that threatens patient, crew, or public safety."],
-    contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
-    medications: [],
-    warnings: ["Medication doses remain pending final medical-director approval."],
-    clinicalPearls: ["Droperidol, ketamine, and midazolam are available on Claiborne units; final indication/dose table is provisional.", "Never use prone restraint; reposition promptly and monitor ventilation."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    indications: [
+      "BARS 6 agitation that remains disruptive or creates a safety risk despite verbal and environmental de-escalation.",
+      "BARS 7 violent behavior with immediate danger to the patient, responders, or others.",
+      "Physical restraint or pharmacologic management required to permit assessment, treatment, or safe transport of a medical patient.",
+    ],
+    contraindications: [
+      "Do not use physical restraint or chemical sedation solely for refusal, verbal hostility, convenience, punishment, noncompliance, or to facilitate arrest or custody.",
+      "Do not use a paralyzing medication solely for behavioral control.",
+      "Do not administer pediatric BARS 7 chemical sedation without direct Medical Control authorization and dosing.",
+    ],
+    assessment: [
+      {
+        title: "Immediate safety and medical assessment",
+        items: [
+          "Determine BARS, whether an immediate threat exists, available personnel, weapons or hazards, law-enforcement involvement, and the safest approach.",
+          "Assess airway, breathing, circulation, oxygenation, glucose, temperature, trauma, neurologic findings, medication exposure, alcohol or substance use, pregnancy, and relevant medical or psychiatric history as soon as safely possible.",
+          "Consider hypoxia, hypoglycemia, stroke, seizure or postictal state, traumatic brain injury, infection or sepsis, medication effect, alcohol or sedative withdrawal, stimulant or sympathomimetic toxicity, anticholinergic toxicity, and heat illness.",
+          "Do not label severe agitation as a psychiatric condition until urgent medical, traumatic, toxicologic, and environmental causes have been considered.",
+        ],
+      },
+      {
+        title: "Post-control physiologic assessment",
+        items: [
+          "Immediately reassess airway patency, respiratory rate and effort, ventilation, SpO₂, waveform EtCO₂, cardiac rhythm, blood pressure, perfusion, temperature, glucose, mental status, pupils, trauma, restraint position, and distal neurovascular status.",
+          "Obtain a 12-lead ECG when feasible after control, particularly with suspected stimulant exposure, abnormal rhythm, chest symptoms, hyperthermia, significant tachycardia, or another medical concern. Do not delay immediate safety intervention or transport solely for the tracing.",
+          "Repeat BARS and complete physiologic assessment after each medication, restraint change, or clinically important change.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Establish scene safety, request law enforcement and sufficient personnel, and use one coordinated team plan.",
+      "Assign BARS and begin verbal and environmental de-escalation whenever safely feasible.",
+      "For BARS 6, use the approved adult or pediatric midazolam pathway when medication is required.",
+      "For adult BARS 7 with immediate danger, administer ketamine 2–4 mg/kg IM, maximum 400 mg. If IV/IO access is already safely established, ketamine 1 mg/kg IV/IO slowly, maximum 100 mg.",
+      "When ketamine is unavailable or contraindicated in an adult BARS 7 patient, use midazolam 10 mg IM preferentially; use 10 mg IN only when IM is not feasible. Use 5 mg IM for patients age 65 or older, frail, or at increased respiratory risk.",
+      "For pediatric BARS 7, contact Medical Control and obtain a direct medication and dose order before chemical sedation.",
+      "Apply approved soft restraints only when necessary, position supine with the head elevated or lateral, and prohibit prone or airway-compromising restraint.",
+      "Once safe, immediately identify and treat hypoxia, hypoglycemia, hyperthermia, trauma, toxidrome, shock, and other reversible causes. Use active cooling for clinically significant hyperthermia. Administer fluid only for hypotension, poor perfusion, or suspected heat illness.",
+      "After parenteral sedation, maintain continuous ECG, SpO₂, waveform EtCO₂, direct observation, airway equipment readiness, and 5-minute physiologic and restraint reassessment.",
+      "Transport every physically restrained or chemically sedated patient to an emergency department, notify early, document completely, and submit the encounter for quality review.",
+    ],
+    medications: [
+      {
+        name: "Midazolam — Adult BARS 6",
+        dose: "2.5 mg IV/IO or 5 mg IM/IN; repeat once after 5 minutes if dangerous agitation persists",
+        notes: [
+          "Complete airway, ventilation, blood-pressure, and sedation reassessment before repeat dosing.",
+          "Maximum: 5 mg IV/IO or 10 mg IM/IN.",
+          "Age 65 or older, frail, respiratory disease, or suspected CNS-depressant intoxication: 1–2.5 mg IV/IO or 2.5 mg IM/IN; maximum cumulative dose 5 mg.",
+          "Paramedic only.",
+        ],
+      },
+      {
+        name: "Midazolam — Pediatric BARS 6",
+        dose: "0.1 mg/kg IV/IO or 0.2 mg/kg IM/IN; maximum initial dose 5 mg",
+        notes: [
+          "Patient younger than 16 years. Use actual or length-based weight.",
+          "Contact Medical Control when feasible before administration. A repeat dose requires Medical Control.",
+          "Maximum cumulative dose 10 mg.",
+          "Paramedic only.",
+        ],
+      },
+      {
+        name: "Ketamine — Adult BARS 7 IM",
+        dose: "2–4 mg/kg IM; maximum 400 mg",
+        notes: [
+          "Primary medication for adult severe agitation with immediate danger.",
+          "Do not delay treatment attempting vascular access.",
+          "Do not routinely administer prophylactic midazolam after ketamine.",
+          "If dangerous agitation persists after 10 minutes, contact Medical Control before repeat ketamine or another sedative.",
+          "Paramedic only.",
+        ],
+      },
+      {
+        name: "Ketamine — Adult BARS 7 IV/IO",
+        dose: "1 mg/kg IV/IO slowly; maximum 100 mg",
+        notes: [
+          "Use only when vascular access is already safely established.",
+          "Do not attempt IV access in a violently struggling patient solely to use this route.",
+          "Paramedic only.",
+        ],
+      },
+      {
+        name: "Midazolam — Adult BARS 7 Alternative",
+        dose: "10 mg IM preferred; 10 mg IN only when IM is not feasible",
+        notes: [
+          "Use when ketamine is unavailable or contraindicated.",
+          "Age 65 or older, frail, or increased respiratory risk: 5 mg IM.",
+          "Do not routinely combine with ketamine.",
+          "Paramedic only.",
+        ],
+      },
+      {
+        name: "Pediatric BARS 7 Chemical Sedation",
+        dose: "Direct Medical Control order required; Medical Control specifies medication and dose",
+        notes: [
+          "Applies to every patient younger than 16 years with BARS 7 severe agitation.",
+          "Continuous ECG, SpO₂, waveform EtCO₂, airway readiness, and emergency-department transport are required.",
+        ],
+      },
+    ],
+    warnings: [
+      "Midazolam and ketamine can cause apnea, hypoventilation, airway obstruction, vomiting, hypersalivation, laryngospasm, or hemodynamic change. Maintain immediate suction, BVM, oxygen, and advanced-airway readiness.",
+      "Do not routinely combine ketamine and midazolam. Additional sedation after the approved pathway requires Medical Control.",
+      "Flumazenil should not be used routinely for post-midazolam respiratory depression; support airway and ventilation.",
+      "Never use prone, hog-tie, neck/chest-compression, sandwich, or backboard/mattress restraint techniques.",
+      "Continued physical struggle may worsen hyperthermia, acidosis, rhabdomyolysis, dysrhythmia, and sudden deterioration; coordinate rapid safe control and prompt medical assessment.",
+    ],
+    clinicalPearls: [
+      "BARS is an assessment and reassessment tool, not an automatic medication order.",
+      "Target safe calm and preserved airway—not deep unconsciousness.",
+      "One calm speaker, fewer stimuli, personal space, and safe choices may prevent escalation when the patient is not an immediate danger.",
+      "IM midazolam is preferred over IN midazolam for a severely agitated adult when ketamine cannot be used.",
+      "Lorazepam remains on the formulary but is not part of the primary UP-18 agitation algorithm. Droperidol and haloperidol are not included.",
+      "Ketamine administration alone is not an indication for endotracheal intubation; intubate only for clinical airway or ventilation failure or another independent indication.",
+      "Exact medication times, serial BARS scores, ventilation findings, EtCO₂, positioning, and adverse events are essential for safe handoff and quality review.",
+    ],
+    specialPopulations: [
+      {
+        title: "Pediatrics",
+        items: [
+          "Pediatric patients are younger than 16 years and medication dosing uses actual or length-based weight.",
+          "BARS 6 midazolam may be used as listed; contact Medical Control when feasible and obtain Medical Control authorization before any repeat dose.",
+          "Every pediatric BARS 7 chemical-sedation medication and dose requires direct Medical Control authorization.",
+          "Evaluate for ingestion, hypoglycemia, hypoxia, fever or infection, seizure, trauma, developmental disability, abuse, and an unsafe environment.",
+        ],
+      },
+      {
+        title: "Older or Frail Adults",
+        items: [
+          "Use the reduced midazolam doses listed for patients age 65 or older, frail, or at increased respiratory risk.",
+          "Give particular attention to delirium, infection, stroke, hypoxia, medication toxicity, urinary retention, pain, and occult trauma.",
+        ],
+      },
+      {
+        title: "Pregnancy",
+        items: [
+          "Use de-escalation and the least restrictive safe intervention whenever possible. Maternal and fetal safety may require immediate control when violent agitation creates danger.",
+          "Contact Medical Control when feasible, but do not permit prolonged dangerous struggle while awaiting consultation in an adult with immediate danger.",
+          "Position with left uterine displacement when gestational age and circumstances make aortocaval compression possible.",
+        ],
+      },
+      {
+        title: "Law-Enforcement Custody",
+        items: [
+          "EMS sedation is a medical decision and must never be administered solely to facilitate arrest, interrogation, transport to jail, or law-enforcement compliance.",
+          "If rigid restraints must remain, a law-enforcement officer and the release key must accompany the patient. Transition to the least restrictive safe restraint when feasible.",
+        ],
+      },
+    ],
+    references: [
+      "Tennessee EMS BLS/ALS State Protocol Guidelines, September 2025 — agitated or combative patient guidance.",
+      "National Association of EMS Physicians and partner organizations — Clinical Care and Restraint of Agitated or Combative Patients by EMS Practitioners, 2021.",
+      "American College of Emergency Physicians — Severe Agitation Clinical Policy.",
+      "North Carolina College of Emergency Physicians UP-18 and UP-19 source protocols retained for historical comparison.",
+      "Claiborne Covenant EMS Formulary.",
+    ],
     sourcePdf: "/protocols/claiborne/up-18-behavioral-agitation-sedation-guide-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 11, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "Medical-director content decisions approved August 11, 2026.",
+      "UP-18 and UP-19 are clinically merged into one BARS-based protocol; UP-19 remains only as a compatibility redirect.",
+      "Droperidol and haloperidol are not included. Pediatric BARS 7 chemical sedation requires direct Medical Control authorization and dosing.",
+      "Final system-wide clinical release remains pending completion of the full Claiborne protocol reconciliation.",
+    ],
   },
   {
     id: "up-19",
-    title: "Hyperactive Delirium With Severe Agitation",
+    title: "Severe Agitation — Merged Into UP-18",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["Severe agitation with delirium is a medical emergency with high risk of sudden deterioration."],
+    overview: [
+      "UP-19 has been merged into UP-18 Behavioral Agitation and Severe Agitation.",
+      "Use the BARS 7 severe-agitation branch in UP-18 for medication, restraint, monitoring, transport, and documentation requirements.",
+    ],
     flow: [
-      { title: "Scene safe?", text: "Wait for adequate resources; coordinate a single rapid plan", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Immediate control", text: "Paramedic sedation per finalized pathway; avoid prolonged struggle", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Restrain + monitor", text: "Supine or lateral; airway, EtCO₂, ECG, SpO₂, temperature", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Treat complications", text: "Cooling, fluids when indicated, glucose, trauma assessment, rapid transport", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      { title: "Use UP-18", text: "BARS 7 severe agitation and all historical UP-19 presentations now follow the combined UP-18 pathway", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Compatibility Redirect",
+        summary: "This entry preserves the historical UP-19 number while directing all care to the approved combined protocol.",
+        levels: [
+          { level: "EMT", actions: ["Open UP-18 Behavioral Agitation and Severe Agitation and follow the applicable BARS branch."] },
+          { level: "AEMT", actions: ["Open UP-18 Behavioral Agitation and Severe Agitation and follow the applicable BARS branch."] },
+          { level: "Paramedic", actions: ["Open UP-18 Behavioral Agitation and Severe Agitation. Do not use historical UP-19 medication dosing."] },
+        ],
+      },
     ],
-    indications: ["Extreme agitation, delirium, unusual strength, hyperthermia, pain tolerance, or continued struggle."],
+    indications: ["Historical UP-19 link, bookmark, or reference."],
     contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
+    assessment: [],
+    treatmentSteps: ["Use UP-18 Behavioral Agitation and Severe Agitation."],
     medications: [],
-    warnings: ["Medication doses remain pending final medical-director approval."],
-    clinicalPearls: ["Minimize physical struggle and scene time.", "Search for stimulant toxicity, hypoxia, hypoglycemia, head injury, sepsis, and excited/hyperactive delirium."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    warnings: ["Do not use the historical standalone UP-19 medication pathway; all current agitation care and dosing are contained in UP-18."],
+    clinicalPearls: ["UP-19 is retained temporarily only to prevent broken links and numbering confusion."],
+    specialPopulations: [],
+    references: ["Claiborne EMS UP-18 Behavioral Agitation and Severe Agitation."],
     sourcePdf: "/protocols/claiborne/up-19-hyperactive-delirium-with-severe-agitation-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 11, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "Compatibility redirect only.",
+      "All clinical treatment is contained in UP-18.",
+    ],
   },
   {
     id: "up-20",
@@ -4591,6 +4899,10 @@ export function hasReviewedNativeContent(content?: StructuredProtocolContent) {
 }
 
 export function getPrimaryProtocolHref(categoryId: string, protocolId: string) {
+  if (categoryId === "up" && protocolId === "up-19") {
+    return "/protocols/up/up-18";
+  }
+
   return hasReviewedNativeContent(getStructuredProtocol(categoryId, protocolId))
     ? `/protocols/${categoryId}/${protocolId}`
     : `/protocols/${categoryId}/${protocolId}/viewer`;
