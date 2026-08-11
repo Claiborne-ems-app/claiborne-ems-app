@@ -64,11 +64,13 @@ export const medicationReferences: MedicationReference[] = [
     uses: ["Narrow-complex tachycardia", "Wide-complex tachycardia"],
     level: "Paramedic",
     indication: "Narrow-tach; wide-tach",
-    adult: "6-12 mg rapid IV push",
+    adult: "First dose 6 mg rapid IV/IO push with immediate flush; second dose 12 mg once after 1–2 minutes if needed",
     pediatric: "0.2 mg/kg",
     cautions: [
-      "Use only for the rhythm and sequence specified by the applicable protocol.",
-      "Give as a rapid push through proximal access with an immediate flush.",
+      "Use only for a stable regular rhythm under the applicable tachycardia protocol.",
+      "Give as a rapid push through the most proximal practical access with an immediate flush and continuous rhythm recording.",
+      "Do not use for an irregular rhythm, sinus tachycardia, or active severe bronchospasm.",
+      "Contact Medical Control before reduced-dose administration in a heart-transplant patient or through central venous access.",
     ],
     protocolLinks: [
       { label: "Adult Narrow-Complex Tachycardia", href: "/protocols/ac/ac-06" },
