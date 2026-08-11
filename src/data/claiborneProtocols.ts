@@ -1180,7 +1180,7 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "category": "Universal Patient Care",
     "categoryCode": "UP",
     "pdfPath": "/protocols/claiborne/up-18-behavioral-agitation-sedation-guide-protocol.pdf",
-    "pages": 3,
+    "pages": 1,
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
