@@ -4195,37 +4195,262 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     title: "Bradycardia With a Pulse",
     categoryId: "ac",
     category: "Adult Cardiac",
-    overview: ["Native Claiborne County adult cardiac pathway using Tennessee scope and standing orders with a concise NC-style field algorithm.", "Use Universal Patient Care and the rhythm- or complaint-specific pathway together."],
+    overview: [
+      "Adult bradycardia pathway for patients 16 years of age and older. Bradycardia is typically a heart rate below 50/min, but treatment is determined by the patient's clinical condition rather than the rate alone.",
+      "Treat cardiopulmonary compromise attributable to bradycardia while simultaneously identifying and correcting reversible causes.",
+    ],
     flow: [
-      { title: "Assess + Oxygenate", text: "Airway, breathing, monitor, 12-lead, IV/IO, and correct hypoxia.", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Symptomatic / Unstable?", text: "Treat only when poor perfusion or serious symptoms are attributable to bradycardia.", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Atropine", text: "Paramedic: administer per Tennessee protocol when appropriate.", levels: ["Paramedic"], tone: "action" },
-      { title: "Pacing", text: "If atropine ineffective or high-grade block: transcutaneous pacing; provide analgesia/sedation when safe.", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
-      { title: "Pressor Support", text: "Consider epinephrine infusion per Tennessee protocol when pacing is delayed or ineffective.", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Reassess + Transport", text: "Repeat ECG/vitals; treat causes; notify destination early.", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      {
+        title: "Assess + Support",
+        text: "Airway • oxygen for hypoxemia • assist ventilation as needed • monitor pulse, rhythm, SpO₂, and blood pressure • apply pacing/defibrillation pads.",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "start",
+      },
+      {
+        title: "Cardiopulmonary Compromise?",
+        text: "Hypotension • acutely altered mental status • shock • ischemic chest discomfort • acute heart failure. Confirm symptoms are caused by the bradycardia.",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "No Compromise",
+        text: "Monitor, obtain 12-lead ECG and glucose, identify and treat the cause, obtain 2 complete vital-sign sets, and transport as clinically indicated.",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "transport",
+      },
+      {
+        title: "Severe Instability / High-Grade Block?",
+        text: "If severe instability or high-grade AV block is present and vascular access is unavailable, begin transcutaneous pacing immediately while access is pursued.",
+        levels: ["Paramedic"],
+        tone: "urgent",
+      },
+      {
+        title: "Atropine",
+        text: "Paramedic: atropine 1 mg IV/IO. Repeat every 3–5 minutes to a maximum total dose of 3 mg. Do not delay pacing when atropine is unlikely to be effective.",
+        levels: ["Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Persistent Instability",
+        text: "Transcutaneous pacing and/or epinephrine infusion 2–10 mcg/min or dopamine infusion 5–20 mcg/kg/min; titrate to clinical response.",
+        levels: ["Paramedic"],
+        tone: "urgent",
+      },
+      {
+        title: "Reassess + Transport",
+        text: "Confirm mechanical capture, repeat ECG and vital signs, continue cause-directed care, and notify the receiving facility early.",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "transport",
+      },
     ],
     careModules: [
-      { title: "Provider-Level Actions", summary: "Act at the highest authorized level present without delaying lifesaving BLS care.", levels: [
-        { level: "EMT", actions: ["Immediate assessment, CPR/AED when indicated, oxygenation/ventilation, pads, vital signs, and rapid transport.", "Assist with medications and procedures authorized by Tennessee EMT scope."] },
-        { level: "AEMT", actions: ["All EMT care plus IV/IO access and authorized medications within Tennessee AEMT scope.", "Do not delay defibrillation, pacing, cardioversion, or transport for access attempts."] },
-        { level: "Paramedic", actions: ["Rhythm interpretation, manual defibrillation, synchronized cardioversion, pacing, advanced airway, and Tennessee-authorized cardiac medications.", "Lead destination, Medical Control, and post-intervention reassessment decisions."] },
-      ] },
+      {
+        title: "EMT Care",
+        summary: "BLS stabilization, monitoring, ECG acquisition, pacing-pad placement, and rapid transport.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Assess airway, breathing, circulation, mental status, perfusion, and whether the bradycardia is causing the patient's symptoms.",
+              "Provide oxygen for hypoxemia and assist ventilation with BVM when respirations are inadequate.",
+              "Apply cardiac monitor and pacing/defibrillation pads, monitor pulse, blood pressure, and SpO₂, and obtain blood glucose.",
+              "Acquire and transmit a 12-lead ECG when it will not delay urgent treatment or transport.",
+              "Obtain 2 complete vital-sign sets when feasible, assist the ALS provider, and initiate prompt transport for cardiopulmonary compromise or high-grade block.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "AEMT Care",
+        summary: "All EMT care plus IV/IO access and cautious isotonic fluid support for appropriate hypotension.",
+        levels: [
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT actions and establish IV access without delaying pacing, ALS intercept, or transport.",
+              "For severe instability, make one rapid IV attempt and proceed to IO if unsuccessful or access is otherwise infeasible or delayed.",
+              "For hypotension when volume administration is clinically appropriate, give isotonic fluid in 250–500 mL aliquots with reassessment.",
+              "Use smaller fluid volumes or avoid additional fluid when pulmonary edema, CHF, renal failure, liver failure, or volume overload is suspected.",
+              "Prepare and assist with transcutaneous pacing, medication administration, serial ECGs, and continuous reassessment.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Paramedic Care",
+        summary: "All AEMT care plus rhythm interpretation, atropine, transcutaneous pacing, pacing analgesia/sedation, and vasopressor infusions.",
+        levels: [
+          {
+            level: "Paramedic",
+            actions: [
+              "Interpret the rhythm and identify sinus bradycardia, junctional escape, Mobitz I, Mobitz II, complete heart block, or pacemaker malfunction.",
+              "Give atropine 1 mg IV/IO every 3–5 minutes to a maximum total dose of 3 mg when bradycardia is producing cardiopulmonary compromise.",
+              "Do not delay transcutaneous pacing for atropine in severe instability, Mobitz II, complete heart block, or a new wide-QRS escape rhythm.",
+              "If atropine is ineffective, use transcutaneous pacing and/or an epinephrine or dopamine infusion titrated to clinical response.",
+              "Provide analgesia and sedation for pacing when the patient's condition permits, without delaying lifesaving pacing; use continuous cardiac, blood-pressure, respiratory, SpO₂, and EtCO₂ monitoring after sedation.",
+              "Confirm and continually reassess mechanical capture, treat reversible causes, and coordinate early receiving-facility notification.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Adult bradycardia causing hypotension, altered mental status, ischemic chest discomfort, acute heart failure, syncope, seizure, or shock."],
-    contraindications: [],
-    assessment: [{ title: "Focused cardiac assessment", items: ["Apply Universal Patient Care and obtain two complete vital-sign sets when feasible.", "Place on continuous cardiac monitoring; obtain a 12-lead ECG when pulse is present and it will not delay urgent treatment.", "Assess onset, symptoms, medications, implanted devices, anticoagulants, prior cardiac disease, and reversible causes.", "Reassess after every shock, medication, pacing/cardioversion attempt, or major clinical change."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm and the current Tennessee adult cardiac protocol.", "Prioritize CPR quality, defibrillation, oxygenation/ventilation, and treatment of reversible causes.", "Notify the receiving facility early for unstable patients and time-sensitive cardiac conditions.", "Do not delay transport for nonessential procedures."],
-    medications: [{ name: "Atropine", dose: "Per current Tennessee symptomatic-bradycardia protocol", notes: ["Follow current Tennessee scope, contraindications, and Medical Control requirements."] }],
-    warnings: ["Asymptomatic bradycardia generally does not require rate-directed treatment.", "Do not delay pacing in severe instability or high-grade AV block."],
-    clinicalPearls: ["Look for beta-blocker, calcium-channel blocker, digoxin, hypothermia, hyperkalemia, MI, and pacemaker failure."],
-    specialPopulations: [{ title: "Special circumstances", items: ["Pregnancy, hypothermia, toxicologic arrest, electrocution, drowning, implanted mechanical support, and traumatic arrest may require a modified pathway and early Medical Control."] }],
-    references: ["Tennessee EMS ALS/BLS Blended Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison.", "Claiborne County EMS Clinical Protocols."],
+    indications: [
+      "Patient 16 years of age or older with clinically significant bradycardia, typically a heart rate below 50/min.",
+      "Bradycardia associated with hypotension, acutely altered mental status, signs of shock, ischemic chest discomfort, or acute heart failure.",
+      "High-grade AV block or another bradyarrhythmia at risk for rapid deterioration.",
+    ],
+    contraindications: [
+      "Do not provide rate-directed treatment solely for an asymptomatic low heart rate that is appropriate for the clinical condition.",
+      "Do not use this pathway when the patient has no pulse; use the appropriate cardiac-arrest protocol.",
+    ],
+    assessment: [
+      {
+        title: "Clinical Stability",
+        items: [
+          "Determine whether bradycardia is causing hypotension, acutely altered mental status, shock, ischemic chest discomfort, or acute heart failure.",
+          "Assess the relationship between symptom onset and the rhythm; a low heart rate may be normal in healthy adults, athletes, or during sleep.",
+          "Continuously monitor pulse, blood pressure, rhythm, SpO₂, respiratory status, and mental status.",
+        ],
+      },
+      {
+        title: "Rhythm + Cardiac Evaluation",
+        items: [
+          "Acquire a 12-lead ECG when it will not delay urgent pacing, medication treatment, or transport.",
+          "Identify high-grade AV block, wide-QRS escape rhythms, ischemia/infarction, pacemaker spikes without capture, and rhythm progression.",
+          "Obtain serial ECGs and 2 complete vital-sign sets when feasible, including reassessment after each intervention.",
+        ],
+      },
+      {
+        title: "Reversible Causes",
+        items: [
+          "Hypoxia, myocardial ischemia or infarction, hyperkalemia or another electrolyte disturbance, acidosis, hypothermia, increased vagal tone, and pacemaker malfunction.",
+          "Medication or toxicologic causes, including beta-blockers, calcium-channel blockers, digoxin, and other rate-slowing agents.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Maintain a patent airway, provide oxygen for hypoxemia, assist ventilation as needed, and attach a cardiorespiratory monitor.",
+      "Apply pacing/defibrillation pads early, monitor the pulse continuously, obtain blood glucose, and acquire a 12-lead ECG when it will not delay treatment.",
+      "If no cardiopulmonary compromise is present, monitor and observe, identify and treat the cause, and transport as clinically indicated.",
+      "For cardiopulmonary compromise, establish vascular access while supporting airway, breathing, and perfusion. In severe instability, make one rapid IV attempt and proceed to IO if unsuccessful or delayed.",
+      "Give atropine 1 mg IV/IO every 3–5 minutes to a maximum total dose of 3 mg when appropriate.",
+      "Begin immediate transcutaneous pacing for severe instability or high-grade AV block when vascular access is unavailable. Do not delay pacing for atropine in Mobitz II, complete heart block, or a new wide-QRS escape rhythm.",
+      "For transcutaneous pacing, set a rate of 60–80/min and increase current until electrical capture occurs. Confirm mechanical capture with a palpable pulse, improved blood pressure, pulse-ox waveform, or EtCO₂ response—not ECG appearance alone.",
+      "When the patient's condition permits, provide analgesia and sedation using the pain/procedural-sedation protocol; do not delay lifesaving pacing.",
+      "If atropine is ineffective, continue pacing and/or begin epinephrine infusion 2–10 mcg/min or dopamine infusion 5–20 mcg/kg/min, titrated to clinical response.",
+      "Give isotonic fluid only for hypotension when clinically appropriate, using 250–500 mL aliquots with reassessment and reduced volumes for patients at risk of overload.",
+      "Identify and treat reversible causes and use the applicable ACS, CHF, hypothermia, or toxicology pathway when identified.",
+      "Begin transport after immediate stabilization measures, continue serial ECGs and vital signs, and notify the receiving facility early.",
+    ],
+    medications: [
+      {
+        name: "Atropine",
+        dose: "1 mg IV/IO; repeat every 3–5 minutes to a maximum total dose of 3 mg",
+        notes: [
+          "Paramedic standing order for bradycardia causing cardiopulmonary compromise.",
+          "Do not delay pacing when atropine is unlikely to be effective or the patient is severely unstable.",
+        ],
+      },
+      {
+        name: "Epinephrine Infusion",
+        dose: "2–10 mcg/min IV/IO infusion; titrate to clinical response",
+        notes: [
+          "Paramedic standing order for persistent unstable bradycardia when atropine is ineffective.",
+          "Push-dose epinephrine is not included in this protocol.",
+        ],
+      },
+      {
+        name: "Dopamine Infusion",
+        dose: "5–20 mcg/kg/min IV/IO infusion; titrate to clinical response",
+        notes: [
+          "Paramedic standing order for persistent unstable bradycardia when atropine is ineffective.",
+          "Taper slowly after clinical stabilization when appropriate.",
+        ],
+      },
+      {
+        name: "Isotonic Crystalloid",
+        dose: "250–500 mL IV/IO aliquots for hypotension when clinically appropriate; reassess after each aliquot",
+        notes: [
+          "Use smaller volumes or avoid additional fluid in pulmonary edema, CHF, renal failure, liver failure, or suspected volume overload.",
+        ],
+      },
+    ],
+    warnings: [
+      "Treat the patient, not the monitor or a heart-rate number. Asymptomatic bradycardia generally does not require rate-directed treatment.",
+      "Do not delay transcutaneous pacing in severe instability, Mobitz II, complete heart block, or a new wide-QRS escape rhythm.",
+      "Electrical pacing artifacts do not prove perfusion. Confirm mechanical capture and reassess it continuously.",
+      "Transcutaneous pacing is painful in a conscious patient; provide analgesia and sedation when feasible, but never delay lifesaving pacing.",
+      "Do not use push-dose epinephrine under this protocol.",
+      "Avoid routine fluid loading in acute heart failure, pulmonary edema, renal failure, liver failure, or suspected volume overload.",
+    ],
+    clinicalPearls: [
+      "Correction of hypoxia, hyperkalemia, hypothermia, ischemia, or toxicologic causes may be more important than simply increasing the heart rate.",
+      "In severe instability without vascular access, pacing can begin while another clinician pursues IV or IO access.",
+      "Mechanical capture is supported by a pulse corresponding to paced complexes, improved blood pressure or perfusion, a pulse-ox waveform, or an EtCO₂ response.",
+      "Prepare for clinical deterioration and cardiac arrest whenever high-grade AV block, a wide escape rhythm, or recurrent loss of capture is present.",
+    ],
+    specialPopulations: [
+      {
+        title: "Acute Coronary Syndrome",
+        items: [
+          "Obtain serial 12-lead ECGs, avoid delaying stabilization, and use AC-04 when ischemia or infarction is suspected.",
+        ],
+      },
+      {
+        title: "Medication or Toxicologic Bradycardia",
+        items: [
+          "Use TE-07 and contact Poison Control for suspected beta-blocker, calcium-channel blocker, digoxin, or other toxic exposure; antidotal treatment may be required in addition to pacing and pressor support.",
+        ],
+      },
+      {
+        title: "Hypothermia",
+        items: [
+          "Use TE-05 because medication response, pacing response, handling, and transport priorities may differ in significant hypothermia.",
+        ],
+      },
+    ],
+    actionLinks: [
+      {
+        label: "AC-04 Acute Coronary Syndrome / STEMI",
+        description: "Use when myocardial ischemia or infarction is suspected.",
+        href: "/protocols/ac/ac-04",
+        kind: "protocol",
+      },
+      {
+        label: "AC-05 CHF / Acute Pulmonary Edema",
+        description: "Use when acute heart failure or pulmonary edema is present.",
+        href: "/protocols/ac/ac-05",
+        kind: "protocol",
+      },
+      {
+        label: "TE-05 Hypothermia / Frostbite",
+        description: "Use for significant hypothermia-associated bradycardia.",
+        href: "/protocols/te/te-05",
+        kind: "protocol",
+      },
+      {
+        label: "TE-07 Overdose / Toxic Ingestion",
+        description: "Use for medication- or toxin-associated bradycardia.",
+        href: "/protocols/te/te-07",
+        kind: "protocol",
+      },
+    ],
+    references: [
+      "American Heart Association. 2025 Adult Bradycardia With a Pulse Algorithm.",
+      "American Heart Association. 2025 Guidelines for CPR and ECC: Adult Advanced Life Support, Initial Management of Bradycardia.",
+      "American Heart Association. ACLS Provider Manual Change Notice, updated February 6, 2026.",
+      "Tennessee Emergency Medical Services Board. Tennessee EMS Protocol Guidelines, September 2025.",
+      "Claiborne EMS medication formulary and related cardiac, toxicology, environmental, pain, and sedation protocols.",
+    ],
     sourcePdf: "/protocols/claiborne/ac-02-bradycardia-pulse-present-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 11, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Current Tennessee scope, medication dosing, and standing orders control if any conflict exists.", "The imported North Carolina PDF remains available for source comparison."],
+    reviewFlags: [
+      "Clinical content approved by the Claiborne EMS medical director during protocol review.",
+      "App content remains a beta field reference until formal agency release and implementation approval.",
+    ],
   },
   {
     id: "ac-03",
