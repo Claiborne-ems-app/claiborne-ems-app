@@ -3957,37 +3957,238 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     title: "Asystole / Pulseless Electrical Activity",
     categoryId: "ac",
     category: "Adult Cardiac",
-    overview: ["Native Claiborne County adult cardiac pathway using Tennessee scope and standing orders with a concise NC-style field algorithm.", "Use Universal Patient Care and the rhythm- or complaint-specific pathway together."],
+    overview: [
+      "Adult nonshockable cardiac-arrest pathway for patients 16 years of age and older.",
+      "Prioritize uninterrupted high-quality CPR, early epinephrine, oxygenation and ventilation, and rapid treatment of reversible causes.",
+    ],
     flow: [
-      { title: "Confirm Arrest", text: "Check responsiveness, breathing, pulse, rhythm, and valid DNR/MOST or obvious-death criteria.", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "High-Quality CPR", text: "Continuous compressions 100–120/min • minimize pauses • ventilate appropriately.", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
-      { title: "IV / IO + Epinephrine", text: "Establish access without interrupting CPR; give per Tennessee cardiac-arrest protocol.", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Find Reversible Cause", text: "Treat Hs and Ts; use history, exam, glucose, EtCO₂, and rhythm clues.", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "ROSC?", text: "Yes → Post-Resuscitation. No → continue cycles and consider termination criteria.", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Transport / Terminate", text: "Follow Claiborne termination policy and Medical Control requirements.", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      {
+        title: "Confirm Cardiac Arrest",
+        text: "Unresponsive • absent or abnormal breathing • no definite pulse within 10 seconds • honor valid DNR/MOST and obvious-death criteria.",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "start",
+      },
+      {
+        title: "Begin TEAM-Focused CPR",
+        text: "Compressions 100–120/min, depth 2–2.4 in, full recoil, minimal pauses; change compressor every 2 minutes. Use 30:2 before an advanced airway.",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "urgent",
+      },
+      {
+        title: "Confirm Nonshockable Rhythm",
+        text: "Check rhythm every 2 minutes. Confirm asystole in 2 leads and exclude loose leads, low gain, and fine VF. Do not defibrillate or pace asystole/PEA.",
+        levels: ["AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Access + Epinephrine",
+        text: "Give epinephrine 1 mg IV/IO as soon as possible and repeat every 3–5 minutes. Make one rapid IV attempt, then proceed to IO if unsuccessful or delayed.",
+        levels: ["AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Airway + Ventilation",
+        text: "Two-person BVM first. Do not interrupt compressions for airway placement. After an advanced airway, continue compressions and give 1 breath every 6 seconds with waveform capnography.",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Treat Reversible Causes",
+        text: "Evaluate and treat hypovolemia, hypoxia, acidosis, potassium abnormality, hypothermia, tension pneumothorax, tamponade, toxins, and coronary or pulmonary thrombosis.",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Rhythm Changes?",
+        text: "If VF/pulseless VT develops, transition immediately to AC-09. If ROSC occurs, transition to AC-10. Otherwise continue 2-minute cycles and consider AC-12 termination criteria.",
+        levels: ["EMT", "AEMT", "Paramedic", "Medical Control"],
+        tone: "transport",
+      },
     ],
     careModules: [
-      { title: "Provider-Level Actions", summary: "Act at the highest authorized level present without delaying lifesaving BLS care.", levels: [
-        { level: "EMT", actions: ["Immediate assessment, CPR/AED when indicated, oxygenation/ventilation, pads, vital signs, and rapid transport.", "Assist with medications and procedures authorized by Tennessee EMT scope."] },
-        { level: "AEMT", actions: ["All EMT care plus IV/IO access and authorized medications within Tennessee AEMT scope.", "Do not delay defibrillation, pacing, cardioversion, or transport for access attempts."] },
-        { level: "Paramedic", actions: ["Rhythm interpretation, manual defibrillation, synchronized cardioversion, pacing, advanced airway, and Tennessee-authorized cardiac medications.", "Lead destination, Medical Control, and post-intervention reassessment decisions."] },
-      ] },
+      {
+        title: "EMT Care",
+        summary: "Recognition, high-quality CPR, BLS airway care, AED/monitor support, and cause-directed basic care.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Confirm unresponsiveness, abnormal or absent breathing, and no definite pulse within 10 seconds; identify valid DNR/MOST or obvious-death criteria.",
+              "Start TEAM-focused CPR immediately: 100–120 compressions/min, depth 2–2.4 inches, complete recoil, minimal interruptions, and compressor change every 2 minutes.",
+              "Apply AED/monitor pads, follow rhythm prompts, and resume compressions immediately after every rhythm or pulse check.",
+              "Use a two-person BVM with oxygen and an airway adjunct when available; maintain 30:2 until an advanced airway is in place.",
+              "Assist with scene organization, medication timing, documentation, reversible-cause treatment, and safe movement only when indicated.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "AEMT Care",
+        summary: "All EMT care plus vascular access, epinephrine, supraglottic airway, and quantitative capnography when available.",
+        levels: [
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT actions and confirm the rhythm is nonshockable; if apparent asystole, verify in 2 leads and correct lead, cable, and gain problems.",
+              "Make one rapid IV attempt without interrupting CPR. If unsuccessful, infeasible, or delayed, establish IO access; use proximal tibia preferentially and humeral head only when tibial access is contraindicated.",
+              "Give epinephrine 1 mg IV/IO as soon as possible and repeat every 3–5 minutes while arrest continues.",
+              "Place a supraglottic airway without interrupting compressions when BVM ventilation is ineffective or an advanced airway will improve care.",
+              "After advanced-airway placement, ventilate once every 6 seconds during continuous compressions and monitor waveform capnography when available.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Paramedic Care",
+        summary: "All AEMT care plus rhythm confirmation, definitive airway options, continuous waveform capnography, and advanced treatment of reversible causes.",
+        levels: [
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform all EMT and AEMT actions; confirm PEA has no palpable pulse and confirm asystole in 2 leads, excluding fine VF.",
+              "Choose supraglottic airway or endotracheal intubation according to patient and scene conditions; airway placement must not interrupt compressions.",
+              "Use continuous waveform capnography after any advanced airway to confirm and monitor placement, assess ventilation, and follow trends in CPR effectiveness.",
+              "Identify and treat reversible causes. Give calcium or sodium bicarbonate only for a specific suspected or confirmed indication, not routinely.",
+              "Direct on-scene resuscitation, transition immediately to AC-09 for VF/pulseless VT or AC-10 after ROSC, and apply AC-12 when termination criteria are met.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Pulseless and apneic patient with asystole or PEA after confirming rhythm in more than one lead when feasible."],
-    contraindications: [],
-    assessment: [{ title: "Focused cardiac assessment", items: ["Apply Universal Patient Care and obtain two complete vital-sign sets when feasible.", "Place on continuous cardiac monitoring; obtain a 12-lead ECG when pulse is present and it will not delay urgent treatment.", "Assess onset, symptoms, medications, implanted devices, anticoagulants, prior cardiac disease, and reversible causes.", "Reassess after every shock, medication, pacing/cardioversion attempt, or major clinical change."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm and the current Tennessee adult cardiac protocol.", "Prioritize CPR quality, defibrillation, oxygenation/ventilation, and treatment of reversible causes.", "Notify the receiving facility early for unstable patients and time-sensitive cardiac conditions.", "Do not delay transport for nonessential procedures."],
-    medications: [{ name: "Epinephrine", dose: "Per current Tennessee adult cardiac-arrest protocol", notes: ["Follow current Tennessee scope, contraindications, and Medical Control requirements."] }],
-    warnings: ["Do not begin resuscitation when valid obvious-death or authorized DNR/MOST criteria are met.", "Confirm true asystole and exclude fine VF, lead failure, hypoxia, and hypothermia."],
-    clinicalPearls: ["Prioritize uninterrupted compressions and reversible causes over nonessential procedures."],
-    specialPopulations: [{ title: "Special circumstances", items: ["Pregnancy, hypothermia, toxicologic arrest, electrocution, drowning, implanted mechanical support, and traumatic arrest may require a modified pathway and early Medical Control."] }],
-    references: ["Tennessee EMS ALS/BLS Blended Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison.", "Claiborne County EMS Clinical Protocols."],
+    indications: [
+      "Patient 16 years of age or older in cardiac arrest with asystole or pulseless electrical activity.",
+      "No definite central pulse detected within a pulse check of no more than 10 seconds.",
+    ],
+    contraindications: [
+      "Valid DNR, MOST, or other recognized order directing that resuscitation not be attempted.",
+      "Obvious-death findings or circumstances addressed by agency policy.",
+      "A palpable pulse is present; manage the perfusing rhythm and underlying condition instead.",
+    ],
+    assessment: [
+      {
+        title: "Arrest Confirmation",
+        items: [
+          "Assess responsiveness, breathing, and central pulse simultaneously; limit the pulse check to 10 seconds.",
+          "For organized electrical activity, verify the absence of a palpable pulse before diagnosing PEA.",
+          "For apparent asystole, confirm in 2 leads and check electrodes, cables, monitor gain, and the possibility of fine VF.",
+        ],
+      },
+      {
+        title: "CPR Quality",
+        items: [
+          "Compression rate 100–120/min and depth 2–2.4 inches with complete recoil.",
+          "Keep rhythm and pulse checks under 10 seconds and change compressors approximately every 2 minutes.",
+          "Use real-time audiovisual CPR feedback when available.",
+        ],
+      },
+      {
+        title: "Reversible Causes — Hs and Ts",
+        items: [
+          "Hypovolemia, hypoxia, hydrogen ion excess/acidosis, hypo-/hyperkalemia, and hypothermia.",
+          "Tension pneumothorax, cardiac tamponade, toxins, coronary thrombosis, and pulmonary thrombosis.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Begin high-quality CPR immediately and follow the TEAM-Focused CPR pathway in AC-11.",
+      "Apply monitor/defibrillator pads. Treat asystole and PEA as nonshockable rhythms; do not defibrillate or perform transcutaneous pacing.",
+      "Perform rhythm checks every 2 minutes and resume compressions immediately after each check.",
+      "Give epinephrine 1 mg IV/IO as soon as possible and every 3–5 minutes thereafter while arrest continues.",
+      "Use one rapid IV attempt, then proceed to IO when IV access is unsuccessful, infeasible, or delayed. Proximal tibia is preferred; humeral head is an alternate only when tibial access is contraindicated.",
+      "Provide two-person BVM ventilation first. Maintain 30:2 before an advanced airway and avoid excessive ventilation.",
+      "After advanced-airway placement, give 1 breath every 6 seconds during continuous compressions and use waveform capnography.",
+      "Continuously evaluate and treat reversible causes. Use cause-specific therapy rather than empiric routine arrest medications.",
+      "Use changes in waveform EtCO2 as one component of assessment; an abrupt sustained rise may indicate ROSC. Never use a single EtCO2 value alone to terminate resuscitation.",
+      "If VF/pulseless VT develops, move to AC-09. If ROSC occurs, move to AC-10.",
+      "Continue resuscitation on scene for most out-of-hospital arrests. Transport during CPR only for a defined special circumstance or after ROSC; apply AC-12 termination guidance when appropriate.",
+      "Use mechanical CPR only when high-quality manual compressions are unsafe or impractical and placement can occur with minimal interruption.",
+    ],
+    medications: [
+      {
+        name: "Epinephrine 1 mg/10 mL (0.1 mg/mL)",
+        dose: "1 mg IV/IO as soon as possible; repeat every 3–5 minutes",
+        notes: [
+          "AEMT and Paramedic standing-order medication for adult nonshockable cardiac arrest.",
+          "Flush the vascular line and continue CPR without interruption after administration.",
+        ],
+      },
+    ],
+    warnings: [
+      "Asystole and PEA are nonshockable. Do not defibrillate or pace unless the rhythm changes to an appropriate perfusing or shockable rhythm.",
+      "Do not delay or interrupt CPR for vascular access, medication administration, airway placement, or patient movement.",
+      "Do not routinely administer calcium, sodium bicarbonate, magnesium, or antiarrhythmics in asystole/PEA. Use only for a specific protocol-supported cause.",
+      "Naloxone must not delay standard resuscitation in confirmed cardiac arrest.",
+      "Do not use point-of-care ultrasound during arrest unless separately approved by the agency medical director and governed by a dedicated protocol.",
+      "Do not use a single EtCO2 cutoff or any single finding as the sole basis for terminating resuscitation.",
+    ],
+    clinicalPearls: [
+      "Early, high-quality CPR and prompt epinephrine are the central therapies for nonshockable arrest.",
+      "A sudden sustained increase in EtCO2 may signal ROSC; pause only for the scheduled brief rhythm and pulse check.",
+      "Low or falling EtCO2 should prompt reassessment of compression quality, ventilation, airway placement, and reversible causes—not automatic termination.",
+      "Moving a patient during active CPR commonly worsens compression quality and creates safety risk; favor on-scene resuscitation unless a special circumstance clearly supports transport.",
+    ],
+    specialPopulations: [
+      {
+        title: "Suspected Opioid-Associated Arrest",
+        items: [
+          "Prioritize CPR, ventilation, and standard cardiac-arrest care. Naloxone may be considered only when it does not delay or interrupt those interventions.",
+        ],
+      },
+      {
+        title: "Pregnancy",
+        items: [
+          "Begin standard resuscitation immediately and use the applicable pregnancy cardiac-arrest pathway for left uterine displacement and time-critical perimortem delivery decisions.",
+        ],
+      },
+      {
+        title: "Hypothermia or Toxicologic Arrest",
+        items: [
+          "Apply the relevant environmental or toxicology pathway because medication timing, resuscitation duration, and transport decisions may differ.",
+        ],
+      },
+    ],
+    actionLinks: [
+      {
+        label: "AC-09 VF / Pulseless VT",
+        description: "Use immediately if the rhythm becomes shockable.",
+        href: "/protocols/ac/ac-09",
+        kind: "protocol",
+      },
+      {
+        label: "AC-10 Post Resuscitation",
+        description: "Use after return of spontaneous circulation.",
+        href: "/protocols/ac/ac-10",
+        kind: "protocol",
+      },
+      {
+        label: "AC-11 TEAM Focused CPR",
+        description: "Team roles and high-performance CPR workflow.",
+        href: "/protocols/ac/ac-11",
+        kind: "protocol",
+      },
+      {
+        label: "AC-12 Termination of CPR",
+        description: "Apply when ongoing resuscitation remains unsuccessful.",
+        href: "/protocols/ac/ac-12",
+        kind: "protocol",
+      },
+    ],
+    references: [
+      "American Heart Association. 2025 Adult Cardiac Arrest Algorithm.",
+      "American Heart Association. 2025 Guidelines for CPR and ECC: Adult Basic Life Support and Adult Advanced Life Support.",
+      "American Heart Association. 2025 Guidelines for CPR and ECC: Systems of Care.",
+      "Tennessee Emergency Medical Services Board. Tennessee EMS Protocol Guidelines, September 2025.",
+      "Claiborne EMS AC-11 TEAM Focused CPR, AC-12 Termination of CPR, and agency formulary.",
+    ],
     sourcePdf: "/protocols/claiborne/ac-01-asystole-pulseless-electrical-activity-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 11, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Current Tennessee scope, medication dosing, and standing orders control if any conflict exists.", "The imported North Carolina PDF remains available for source comparison."],
+    reviewFlags: [
+      "Clinical content approved by the Claiborne EMS medical director during protocol review.",
+      "App content remains a beta field reference until formal agency release and implementation approval.",
+    ],
   },
   {
     id: "ac-02",
