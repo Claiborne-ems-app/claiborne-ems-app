@@ -2531,35 +2531,215 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     title: "Suspected Stroke",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["Time of last known well and rapid destination selection are critical."],
+    overview: [
+      "Treat every acute focal neurologic deficit or sudden unexplained neurologic change as a time-critical stroke until proven otherwise.",
+      "Use the Cincinnati Prehospital Stroke Scale for recognition and C-STAT for stroke severity and suspected large-vessel occlusion.",
+      "Record the exact last-known-well time, symptom-discovery time, baseline neurologic function, and witness contact information.",
+    ],
     flow: [
-      { title: "FAST-ED / stroke screen", text: "Establish last known well and baseline function", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Glucose + mimics", text: "Treat hypoglycemia; assess seizure, migraine, intoxication", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Large-vessel signs?", text: "Early stroke alert; destination per regional stroke plan", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Rapid transport", text: "Minimize scene time; serial neuro exams; transmit information", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      { title: "Recognize Stroke", text: "Cincinnati screen • posterior-circulation warning signs • exact last known well", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
+      { title: "Complete C-STAT", text: "Gaze 2 • LOC questions + commands 1 • arm weakness 1 • score ≥2 suggests LVO", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "Glucose + Mimics", text: "Check glucose • treat hypoglycemia under UP-4 • repeat neurologic examination", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "Protect Brain + Airway", text: "NPO • manage secretions • protect affected side • oxygen only for hypoxemia", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "Stroke Alert + Destination", text: "Follow current Claiborne Stroke Destination Plan • consider C-STAT and transport time", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Monitor + Access", text: "Cardiac monitor • 12-lead if no delay • one IV preferred • NS TKO", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "Rapid Transport", text: "Scene target ≤15 minutes • serial neurologic exams • transmit stroke report", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Provider Actions",
+        summary: "Recognize stroke, determine timing and severity, protect the airway, and transport rapidly.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Perform the Cincinnati Prehospital Stroke Scale and document facial droop, arm drift, and speech findings.",
+              "Complete and document C-STAT when stroke is suspected. Check glucose and treat hypoglycemia under UP-4.",
+              "Determine exact last known well, symptom-discovery time, baseline function, witness contact information, and current anticoagulant or antiplatelet use.",
+              "Keep the patient NPO, protect the affected side, manage secretions, provide oxygen only for hypoxemia, and ventilate with BVM when indicated.",
+              "Activate the stroke alert and begin transport according to the current Claiborne Stroke Destination Plan.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT care. Establish one IV when it can be accomplished without delaying transport.",
+              "Administer normal saline at TKO. Give fluid only for hypotension and reassess for pulmonary edema or volume overload.",
+              "Apply continuous cardiac monitoring when available and support serial vital signs and neurologic examinations.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform all prior care. Obtain a 12-lead ECG when it will not delay transport, particularly when atrial fibrillation or another cardiac cause is suspected.",
+              "Manage airway or ventilation failure and use waveform EtCO₂ whenever ventilation is impaired, assisted, or an advanced airway is placed.",
+              "Repeat an extreme blood pressure manually. For SBP ≥220 mm Hg or DBP ≥120 mm Hg, contact Medical Control without delaying transport; do not routinely lower blood pressure in the field.",
+              "Coordinate early destination notification and transmit the complete stroke report, including C-STAT score and anticoagulant or antiplatelet last-dose information.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "C-STAT Stroke Severity",
+        summary: "Maximum score 4; a score of 2 or greater suggests possible large-vessel occlusion.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Conjugate gaze deviation: 2 points.",
+              "Incorrectly answers at least one orientation question—age or current month—and fails at least one command—close eyes or open and close hand: 1 point.",
+              "Cannot hold either arm up for 10 seconds: 1 point.",
+              "Document the individual findings and total C-STAT score. A low score does not exclude stroke or eliminate the need for stroke-system transport.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Confirm the documented C-STAT findings during reassessment and report any improvement or deterioration.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Use C-STAT severity with the current Claiborne Stroke Destination Plan and estimated transport time; do not use the score alone to exclude a patient from stroke activation.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Medication and Bleeding-Risk History",
+        summary: "Identify the exact medication, prescribed dose, and last dose time when known.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Anticoagulants: warfarin (Coumadin), apixaban (Eliquis), rivaroxaban (Xarelto), dabigatran (Pradaxa), edoxaban (Savaysa), enoxaparin (Lovenox), and heparin injections or infusion.",
+              "Antiplatelet medications: aspirin, clopidogrel (Plavix), ticagrelor (Brilinta), prasugrel (Effient), and aspirin/dipyridamole (Aggrenox).",
+              "Bring medication containers or an accurate medication list when available, but do not delay transport.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Confirm medication name, dose, indication, exact last dose time, missed doses, and any recent bleeding, surgery, trauma, or anticoagulant reversal.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Include anticoagulant and antiplatelet details in the stroke alert and receiving-facility report because they may affect thrombolysis and hemorrhage treatment decisions.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Acute focal neurologic deficit or sudden unexplained neurologic change."],
+    indications: [
+      "Acute facial droop, unilateral weakness or numbness, speech or language disturbance, gaze deviation, visual loss, or another focal neurologic deficit.",
+      "Sudden unexplained ataxia, severe vertigo, diplopia, dysarthria, unilateral hearing loss, persistent vomiting, or other possible posterior-circulation symptom.",
+      "Resolved focal neurologic symptoms or suspected transient ischemic attack.",
+      "Pediatric patient with a sudden focal neurologic deficit or unexplained acute neurologic change.",
+    ],
     contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
+    assessment: [
+      {
+        title: "Time and Baseline",
+        items: [
+          "Record exact last known well, exact symptom-discovery time, and the time EMS first assessed the patient.",
+          "For a wake-up stroke, last known well is the last time the patient was observed neurologically normal—not the time symptoms were discovered.",
+          "Document baseline speech, cognition, mobility, dominant hand, functional status, and preexisting neurologic deficits.",
+          "Obtain the witness or caregiver name and telephone number. Bring the witness when practical without delaying transport.",
+          "Do not exclude stroke activation solely because the last-known-well time exceeds 6 hours or is unknown.",
+        ],
+      },
+      {
+        title: "Neurologic Examination",
+        items: [
+          "Perform and document the Cincinnati screen and C-STAT. Repeat after glucose correction and with any clinical change.",
+          "Assess pupils, gaze, facial symmetry, speech, language, arm and leg strength, sensation, coordination, gait only when safe, and level of consciousness.",
+          "A negative Cincinnati screen does not exclude posterior-circulation stroke. Evaluate sudden severe dizziness or vertigo, ataxia, diplopia, dysarthria, visual loss, unilateral hearing loss, and persistent vomiting.",
+          "Consider seizure or Todd paralysis, hypoglycemia, migraine, intoxication or overdose, trauma, infection, and other stroke mimics without delaying stroke-system transport for persistent focal deficits.",
+        ],
+      },
+      {
+        title: "Medication and Bleeding History",
+        items: [
+          "Document all current medications, with special attention to anticoagulants and antiplatelet medications.",
+          "For warfarin, apixaban, rivaroxaban, dabigatran, edoxaban, enoxaparin, or heparin, record the prescribed dose and exact last dose time when known.",
+          "For aspirin, clopidogrel, ticagrelor, prasugrel, or aspirin/dipyridamole, record the prescribed dose and exact last dose time when known.",
+          "Ask about prior intracranial hemorrhage, recent surgery or invasive procedure, recent trauma, active bleeding, known bleeding disorder, and recent anticoagulant reversal.",
+        ],
+      },
+      {
+        title: "Monitoring",
+        items: [
+          "Obtain glucose and at least two complete sets of vital signs when feasible without delaying transport.",
+          "Use continuous cardiac monitoring and obtain a 12-lead ECG when it will not delay transport.",
+          "Use continuous SpO₂. Apply waveform EtCO₂ whenever ventilation is impaired or assisted or an advanced airway is placed.",
+          "Repeat the neurologic examination and C-STAT during transport and after every significant clinical change.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Support airway and ventilation, suction as needed, and keep the patient NPO. Elevate the head approximately 30 degrees when tolerated and when hypotension or another contraindication is absent.",
+      "Provide oxygen only for hypoxemia and titrate to maintain SpO₂ at or above 94%. Avoid unnecessary hyperoxia.",
+      "Check glucose immediately. Treat confirmed hypoglycemia under UP-4 and repeat the neurologic examination; persistent focal findings remain a stroke alert.",
+      "Activate the stroke alert early and transport according to the current Claiborne Stroke Destination Plan, considering C-STAT severity and estimated transport time.",
+      "Target a scene time of 15 minutes or less. Do not delay transport for nonessential IV attempts, ECG acquisition, blood collection, or an exhaustive mimic investigation.",
+      "Establish one IV when feasible without delaying transport. Use normal saline at TKO and give fluid only for hypotension.",
+      "Do not routinely lower blood pressure in suspected stroke. Repeat extreme readings manually and contact Medical Control for SBP ≥220 mm Hg or DBP ≥120 mm Hg without delaying transport.",
+      "Transmit glucose, exact last known well, symptom-discovery time, Cincinnati findings, individual C-STAT findings and total score, baseline function, anticoagulant and antiplatelet use with last dose, and witness contact information.",
+      "Transport patients with resolved symptoms or suspected transient ischemic attack because symptom resolution does not eliminate the risk of completed or recurrent stroke.",
+    ],
     medications: [],
-    warnings: ["Do not delay transport for nonessential procedures."],
-    clinicalPearls: ["Record anticoagulants, glucose, last known well, symptoms, and baseline function.", "Posterior circulation stroke may present with severe dizziness, ataxia, diplopia, or dysarthria."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    warnings: [
+      "Do not administer aspirin, an anticoagulant, a thrombolytic, or an antihypertensive medication for undifferentiated suspected stroke under this protocol.",
+      "Do not administer nitroglycerin solely to lower blood pressure in suspected stroke.",
+      "Naloxone is indicated only when opioid exposure and clinically significant respiratory depression are suspected; do not use it empirically for an isolated focal neurologic deficit.",
+      "Do not delay transport for nonessential procedures, a second IV, blood collection, or complete resolution of diagnostic uncertainty.",
+      "A normal Cincinnati screen, low C-STAT score, symptom improvement, young age, or last-known-well time beyond 6 hours does not exclude a treatment-eligible stroke.",
+    ],
+    clinicalPearls: [
+      "Time is brain, but modern stroke treatment decisions are not limited to the traditional 6-hour window; accurate timing and rapid transport remain essential.",
+      "C-STAT is a severity and destination-support tool, not a rule-out test for stroke.",
+      "Posterior-circulation stroke may present without facial droop or arm weakness and may be missed by common anterior-circulation screens.",
+      "Hypoglycemia may mimic stroke. Correct the glucose abnormality and repeat the examination, but continue the stroke alert when focal deficits persist.",
+      "Avoid hypotension. Routine prehospital blood-pressure reduction may reduce cerebral perfusion and should not be performed for uncomplicated suspected stroke.",
+      "Medication names alone are insufficient: the exact last dose time of an anticoagulant may directly affect receiving-facility treatment.",
+    ],
+    specialPopulations: [
+      {
+        title: "Pediatrics",
+        items: [
+          "Use pediatric protocols for patients younger than 16 years and dose any required supportive medication by actual or length-based weight.",
+          "Stroke occurs in children. Sudden focal weakness, facial asymmetry, speech change, seizure with persistent focal deficit, severe headache, or unexplained acute neurologic change requires stroke-capable evaluation.",
+          "Do not delay transport while attempting to prove an alternative pediatric diagnosis.",
+        ],
+      },
+      {
+        title: "Posterior-circulation stroke",
+        items: [
+          "Maintain suspicion with sudden severe vertigo or dizziness, inability to walk, marked ataxia, diplopia, dysarthria, visual loss, unilateral hearing loss, persistent vomiting, or crossed neurologic findings.",
+          "A negative Cincinnati screen does not exclude posterior stroke. Activate the stroke system when the overall examination and onset are concerning.",
+        ],
+      },
+    ],
+    references: [
+      "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — SOP 304 CVA / Stroke.",
+      "American Heart Association / American Stroke Association — 2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke.",
+      "McMullan et al. — Prospective Prehospital Evaluation of the Cincinnati Stroke Triage Assessment Tool, Prehospital Emergency Care, 2017.",
+      "Claiborne EMS UP-4 Diabetic / Glucose Emergencies protocol.",
+      "North Carolina College of Emergency Physicians UP-14 Suspected Stroke source protocol retained for historical comparison.",
+    ],
     sourcePdf: "/protocols/claiborne/up-14-suspected-stroke-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 10, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "Medical-director content decisions approved August 10, 2026.",
+      "Final Claiborne Stroke Destination Plan and facility-specific destination rules remain pending later review.",
+      "Final system-wide clinical release remains pending completion of the full Claiborne protocol reconciliation.",
+    ],
   },
   {
     id: "up-15",
