@@ -2746,35 +2746,279 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     title: "Suspected Sepsis",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["Recognize infection plus organ dysfunction and begin time-sensitive supportive care."],
+    overview: [
+      "Recognize suspected infection with evolving organ dysfunction, hypoperfusion, or shock and begin time-sensitive supportive care.",
+      "Use a standardized adult or pediatric sepsis screen, but do not use a single vital sign, fever, qSOFA, or EtCO₂ threshold to rule sepsis in or out.",
+      "Activate a Sepsis Alert for suspected infection with organ dysfunction, hypotension, or abnormal perfusion.",
+    ],
     flow: [
-      { title: "Suspect infection", text: "History, temperature, exam, and source clues", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Organ dysfunction?", text: "AMS • hypotension • tachypnea • hypoxia • poor perfusion", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Sepsis alert", text: "IV/IO, glucose, ECG/EtCO₂ as indicated, early notification", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Fluid + reassess", text: "Titrate fluids to perfusion; avoid overload; rapid transport", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      { title: "Suspect Infection", text: "History • source clues • temperature may be high, normal, or low", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
+      { title: "Screen for Sepsis", text: "Abnormal physiology • altered mental status • hypotension • hypoxia • poor perfusion", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "Sepsis Alert?", text: "Suspected infection plus organ dysfunction, hypotension, or hypoperfusion", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Support + Monitor", text: "Infection precautions • glucose • temperature • SpO₂ • cardiac monitor • ECG if no delay", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "Crystalloid + Reassess", text: "Adult 500 mL • high overload risk 250 mL • pediatric 10–20 mL/kg", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "Persistent Shock?", text: "Adult norepinephrine • pediatric epinephrine or norepinephrine after Medical Control", levels: ["Paramedic", "Medical Control"], tone: "decision" },
+      { title: "Rapid Transport", text: "Early notification • reassess unstable patient every 3–5 minutes • document response", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Provider Actions",
+        summary: "Recognize sepsis early, support oxygenation and perfusion, and transport without delay.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Use appropriate standard, contact, droplet, or airborne precautions based on the suspected infection and exposure risk.",
+              "Assess airway, breathing, circulation, mental status, skin temperature and perfusion, and possible source of infection.",
+              "Obtain temperature, glucose, SpO₂, and complete vital signs. Apply oxygen only when indicated and assist ventilation when needed.",
+              "Identify adult or pediatric sepsis-screen findings, activate a Sepsis Alert when criteria are met, and initiate rapid transport.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT care. Establish IV access; use IO access when shock is present and IV access cannot be obtained promptly.",
+              "For adult hypotension or hypoperfusion, administer LR or normal saline in 500 mL boluses, or 250 mL increments when volume-overload risk is present.",
+              "For pediatric shock, administer LR or normal saline 10–20 mL/kg per bolus and reassess after every bolus.",
+              "Apply continuous cardiac monitoring when available and repeat complete vital signs and perfusion assessment after each intervention.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform all prior care. Obtain a 12-lead ECG when it will not delay resuscitation or transport.",
+              "For persistent adult septic shock after an initial crystalloid bolus, or concurrently with fluid in profound unstable shock, start norepinephrine.",
+              "For persistent pediatric septic shock, contact Medical Control and initiate epinephrine for low-output or cold shock or norepinephrine for vasodilatory or warm shock.",
+              "Use waveform EtCO₂ when ventilation is impaired or assisted or an advanced airway is placed; do not use an EtCO₂ threshold as a sepsis-screen criterion.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Adult Sepsis Screen",
+        summary: "Suspected infection plus abnormal physiology or organ dysfunction; clinical concern may override the screen.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Suspected infection plus two or more screening abnormalities: temperature ≥38°C or ≤36°C, heart rate >90/min, or respiratory rate >20/min.",
+              "Alternatively, suspected infection plus any organ dysfunction: new altered mental status, SBP ≤100 mm Hg, MAP <65 mm Hg, SpO₂ <92% or new oxygen requirement, delayed capillary refill, mottling, or other abnormal perfusion.",
+              "Fever is not required. Older adults and immunocompromised patients may be normothermic or hypothermic.",
+              "Do not use qSOFA alone and do not use EtCO₂ <25 mm Hg as a sepsis-screen criterion.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "A positive physiology screen without organ dysfunction identifies possible infection and requires close reassessment. Activate the Sepsis Alert when organ dysfunction, hypotension, or hypoperfusion is present.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Evaluate for alternative causes of shock or abnormal vital signs, including hemorrhage, cardiogenic shock, pulmonary embolism, anaphylaxis, toxicologic causes, heat illness, adrenal crisis, and medication effects, without delaying resuscitation.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Adult Hemodynamic Support",
+        summary: "Give individualized crystalloid boluses and begin norepinephrine early when shock persists.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Position for perfusion and respiratory comfort, prevent heat loss, and reassess mental status, skin perfusion, and blood pressure frequently.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "LR is preferred when available; normal saline is acceptable.",
+              "Administer 500 mL IV/IO and reassess blood pressure, MAP, mental status, capillary refill, lung sounds, and oxygen requirement.",
+              "Additional crystalloid may be given toward 30 mL/kg for continuing hypotension or hypoperfusion.",
+              "Use 250 mL increments for heart failure, renal failure, liver failure, pulmonary edema, or existing volume overload. Stop or reduce fluid for worsening respiratory status or pulmonary edema.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Norepinephrine: start 0.1 mcg/kg/min IV/IO and titrate to MAP ≥65 mm Hg or SBP ≥90 mm Hg; maximum 2 mcg/kg/min.",
+              "Norepinephrine may be started after an initial crystalloid bolus when hypotension persists or concurrently with crystalloid in profound unstable shock.",
+              "A proximal peripheral IV may be used. Confirm patency, inspect the site frequently, and do not delay norepinephrine solely to obtain central access.",
+              "Continuous cardiac monitoring and frequent blood-pressure measurement are required during vasopressor infusion.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Pediatric Sepsis and Shock",
+        summary: "Pediatric patients are younger than 16 years; recognize organ dysfunction because hypotension is a late finding.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Suspect pediatric sepsis with infection plus altered mental status, capillary refill >3 seconds, weak pulses, mottling, abnormal temperature, tachycardia or bradycardia, respiratory distress, hypoxemia, or hypotension.",
+              "Pediatric hypotension: birth–28 days, SBP <60 mm Hg; 1–12 months, SBP <70 mm Hg; 1–10 years, SBP <70 plus twice the age in years; older than 10 years, SBP <90 mm Hg.",
+              "Use pediatric airway equipment and actual or length-based weight. Do not apply the adult SIRS screen to pediatric patients.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Administer LR or normal saline 10–20 mL/kg IV/IO and reassess after every bolus.",
+              "Repeat as needed for ongoing shock, generally not exceeding 40 mL/kg prehospital.",
+              "Stop fluid boluses for resolved shock, pulmonary edema, new hepatomegaly, worsening oxygenation, or other evidence of fluid overload.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "For persistent pediatric shock, contact Medical Control and initiate epinephrine 0.05–0.1 mcg/kg/min for low-output or cold shock or norepinephrine 0.05–0.1 mcg/kg/min for vasodilatory or warm shock.",
+              "Titrate the selected infusion to improving mental status, pulses, capillary refill, age-appropriate blood pressure, and other perfusion findings.",
+              "Continuous cardiac monitoring, SpO₂, frequent blood-pressure measurement, and IV/IO-site assessment are required.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Suspected infection with abnormal perfusion, mental status, respiration, or vital signs."],
+    indications: [
+      "Suspected or confirmed infection with abnormal vital signs, new altered mental status, hypoxemia, abnormal perfusion, hypotension, or other organ dysfunction.",
+      "Suspected septic shock with hypotension or hypoperfusion requiring fluid or vasopressor support.",
+      "High-risk infection in an older adult, pediatric patient, immunocompromised patient, recently hospitalized patient, or patient with an indwelling vascular, urinary, or prosthetic device.",
+    ],
     contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
-    medications: [],
-    warnings: ["Use caution with large fluid volumes in heart failure or renal failure."],
-    clinicalPearls: ["Do not rely on fever alone; older or immunocompromised patients may be afebrile.", "Document suspected source, lactate if locally available, and response to fluids."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    assessment: [
+      {
+        title: "History and Source",
+        items: [
+          "Ask about onset and progression, fever or chills, cough, dyspnea, chest pain, dysuria, abdominal or flank pain, vomiting or diarrhea, headache or neck stiffness, rash, wounds, pressure injuries, recent surgery, and indwelling devices.",
+          "Identify recent antibiotics, hospitalization, healthcare exposure, known resistant organisms, chemotherapy, transplant, immune suppression, diabetes, pregnancy or postpartum status, and sick contacts.",
+          "Review medications that may blunt tachycardia or fever, including beta-blockers, antipyretics, corticosteroids, and immunosuppressants.",
+        ],
+      },
+      {
+        title: "Examination",
+        items: [
+          "Assess mental status, airway, work of breathing, lung sounds, pulse quality, skin temperature and color, capillary refill, mottling, edema, and urine output when known.",
+          "Examine for pulmonary, urinary, abdominal, skin or soft-tissue, neurologic, device-related, postoperative, obstetric, or other potential infection sources.",
+          "Obtain temperature, glucose, SpO₂, and complete vital signs. Calculate MAP when hypotension or shock is present.",
+          "Obtain at least two complete vital-sign sets when feasible and reassess an unstable patient every 3–5 minutes.",
+        ],
+      },
+      {
+        title: "Monitoring and Diagnostics",
+        items: [
+          "Use continuous cardiac monitoring for a Sepsis Alert, shock, vasopressor administration, abnormal rhythm, or significant physiologic instability.",
+          "Obtain a 12-lead ECG when clinically indicated and when it will not delay resuscitation or transport.",
+          "Use waveform EtCO₂ only for impaired or assisted ventilation or advanced-airway monitoring; no EtCO₂ value is required for the sepsis screen.",
+          "Blood tubes may be collected when available and coordinated with the receiving facility, but collection must not delay transport.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Use infection precautions appropriate to the suspected disease and exposure risk.",
+      "Support airway and ventilation. Titrate oxygen to SpO₂ 92–96%; target 88–92% in a patient with known chronic hypercapnic respiratory failure unless other clinical circumstances require a higher target.",
+      "Check glucose and treat hypoglycemia under UP-4. Obtain temperature, but do not exclude sepsis when fever is absent.",
+      "Activate a Sepsis Alert for suspected infection with organ dysfunction, hypotension, or hypoperfusion and notify the receiving facility early.",
+      "For adult hypotension or hypoperfusion, give LR or normal saline 500 mL IV/IO and reassess; use 250 mL increments when volume-overload risk is present. Additional fluid may be given toward 30 mL/kg when clinically appropriate.",
+      "For persistent adult septic shock, start norepinephrine 0.1 mcg/kg/min and titrate to MAP ≥65 mm Hg or SBP ≥90 mm Hg, maximum 2 mcg/kg/min. In profound unstable shock, norepinephrine may begin concurrently with initial crystalloid.",
+      "For pediatric shock, give LR or normal saline 10–20 mL/kg IV/IO per bolus with reassessment after every bolus, generally not exceeding 40 mL/kg prehospital.",
+      "For persistent pediatric shock, contact Medical Control and initiate epinephrine for low-output or cold shock or norepinephrine for vasodilatory or warm shock at the approved dose.",
+      "Do not administer a prehospital antibiotic under this protocol. Piperacillin/tazobactam has been removed from the Claiborne formulary and no replacement sepsis antibiotic is approved.",
+      "Transport rapidly, continue resuscitation en route, and reassess an unstable patient every 3–5 minutes.",
+    ],
+    medications: [
+      {
+        name: "Norepinephrine — Adult Septic Shock",
+        dose: "Start 0.1 mcg/kg/min IV/IO; titrate to MAP ≥65 mm Hg or SBP ≥90 mm Hg; maximum 2 mcg/kg/min",
+        notes: [
+          "Start after an initial crystalloid bolus when hypotension persists, or concurrently with crystalloid in profound unstable shock.",
+          "A proximal peripheral IV may be used with frequent patency and site assessment.",
+          "Continuous cardiac monitoring and frequent blood-pressure measurement are required.",
+          "Paramedic only.",
+        ],
+      },
+      {
+        name: "Epinephrine — Pediatric Low-Output / Cold Septic Shock",
+        dose: "0.05–0.1 mcg/kg/min IV/IO infusion after Medical Control contact",
+        notes: [
+          "Titrate to improving mental status, pulses, capillary refill, age-appropriate blood pressure, and other perfusion findings.",
+          "Continuous cardiac monitoring, SpO₂, frequent blood-pressure measurement, and IV/IO-site assessment are required.",
+          "Paramedic only.",
+        ],
+      },
+      {
+        name: "Norepinephrine — Pediatric Vasodilatory / Warm Septic Shock",
+        dose: "0.05–0.1 mcg/kg/min IV/IO infusion after Medical Control contact",
+        notes: [
+          "Titrate to improving mental status, pulses, capillary refill, age-appropriate blood pressure, and other perfusion findings.",
+          "Continuous cardiac monitoring, SpO₂, frequent blood-pressure measurement, and IV/IO-site assessment are required.",
+          "Paramedic only.",
+        ],
+      },
+    ],
+    warnings: [
+      "Do not delay transport for IV attempts, ECG acquisition, blood collection, or completion of every possible diagnostic evaluation.",
+      "Do not use qSOFA alone, fever alone, or an EtCO₂ threshold to exclude or confirm sepsis.",
+      "Hypotension is a late and ominous finding in pediatric sepsis; treat abnormal perfusion before hypotension develops.",
+      "Stop or reduce fluid administration for pulmonary edema, worsening oxygenation, new hepatomegaly, or other evidence of fluid overload.",
+      "Do not administer piperacillin/tazobactam or another prehospital antibiotic under this protocol.",
+      "Norepinephrine and epinephrine require continuous cardiac monitoring, frequent blood-pressure assessment, and careful IV/IO-site surveillance.",
+    ],
+    clinicalPearls: [
+      "Sepsis is infection associated with life-threatening organ dysfunction. The term severe sepsis is not used in this protocol.",
+      "Older adults, immunocompromised patients, and patients taking antipyretics or beta-blockers may lack fever or marked tachycardia.",
+      "Capillary refill, mental status, pulse quality, skin findings, blood pressure, and response to a fluid bolus should be interpreted together.",
+      "Balanced crystalloid is preferred when available, but appropriate resuscitation should not be delayed when only normal saline is available.",
+      "Early norepinephrine may be safer than repeated large fluid boluses in patients at risk for pulmonary edema or volume overload.",
+      "A positive screening tool supports recognition but does not replace clinical judgment or evaluation for alternative causes of shock.",
+    ],
+    specialPopulations: [
+      {
+        title: "Volume-overload risk",
+        items: [
+          "Use 250 mL adult fluid increments for heart failure, renal failure, liver failure, pulmonary edema, or existing volume overload.",
+          "Reassess lung sounds, SpO₂, respiratory effort, edema, blood pressure, and perfusion after every bolus.",
+          "Consider earlier norepinephrine rather than repeated crystalloid when hypotension persists and fluid tolerance is limited.",
+        ],
+      },
+      {
+        title: "Pediatrics",
+        items: [
+          "Use pediatric protocols for patients younger than 16 years and actual or length-based weight for all weight-based treatment.",
+          "Do not rely on hypotension alone. Altered mental status, weak pulses, delayed capillary refill, mottling, and respiratory abnormalities may identify shock earlier.",
+          "Limit prehospital crystalloid to repeated 10–20 mL/kg boluses with reassessment, generally not exceeding 40 mL/kg.",
+        ],
+      },
+      {
+        title: "Refusal / Non-Transport",
+        items: [
+          "Rapid transport is indicated for any Sepsis Alert or suspected septic shock.",
+          "A patient with suspected infection plus organ dysfunction, hypotension, or abnormal perfusion should not be managed as a routine refusal.",
+          "If a capable patient continues to refuse after risks and alternatives are explained, contact Medical Control and complete the Refusal / Non-Transport protocol with detailed documentation.",
+        ],
+      },
+    ],
+    references: [
+      "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — SOP 410 Septic Shock and Sepsis Identification Tool.",
+      "Surviving Sepsis Campaign — International Guidelines for Management of Sepsis and Septic Shock, 2026.",
+      "Surviving Sepsis Campaign — International Guidelines for Management of Septic Shock and Sepsis-Associated Organ Dysfunction in Children, 2020.",
+      "Society of Critical Care Medicine — International Consensus Criteria for Pediatric Sepsis and Septic Shock, 2024.",
+      "Claiborne Covenant EMS Formulary — norepinephrine and epinephrine.",
+      "North Carolina College of Emergency Physicians UP-15 Suspected Sepsis source protocol retained for historical comparison.",
+    ],
     sourcePdf: "/protocols/claiborne/up-15-suspected-sepsis-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 11, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "Medical-director content decisions approved August 11, 2026.",
+      "Pediatric vasopressor initiation requires Medical Control contact.",
+      "No prehospital antibiotic is authorized under this protocol.",
+      "Final system-wide clinical release remains pending completion of the full Claiborne protocol reconciliation.",
+    ],
   },
   {
     id: "up-16",
