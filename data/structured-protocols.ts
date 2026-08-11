@@ -3504,10 +3504,8 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     medications: [
       {
         name: "Diphenhydramine",
-        indications: ["Acute dystonic or extrapyramidal reaction"],
-        adultDose: "50 mg IV/IO/IM",
-        pediatricDose: "1 mg/kg IV/IO/IM; maximum 50 mg",
-        notes: ["AEMT or Paramedic. Assess for airway involvement and monitor after administration."],
+        dose: "Adult: 50 mg IV/IO/IM. Pediatric patient younger than 16 years: 1 mg/kg IV/IO/IM; maximum 50 mg.",
+        notes: ["AEMT or Paramedic.", "Indication: acute dystonic or extrapyramidal reaction.", "Assess for airway involvement and monitor after administration."],
       },
     ],
     warnings: [
