@@ -3025,35 +3025,240 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     title: "Syncope",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["Syncope is transient loss of consciousness from reduced cerebral perfusion until proven otherwise."],
+    overview: [
+      "Syncope is abrupt, transient loss of consciousness and postural tone caused by temporary global cerebral hypoperfusion, followed by rapid spontaneous recovery.",
+      "Near-syncope may carry similar risk and receives the same initial evaluation.",
+      "Do not label persistent altered mental status, seizure, hypoglycemia, intoxication, stroke, or traumatic loss of consciousness as uncomplicated syncope.",
+    ],
     flow: [
-      { title: "Primary survey", text: "Assess injury, hemorrhage, pregnancy, and persistent instability", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Glucose + ECG", text: "Check orthostatic symptoms only when safe and useful", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "High-risk features?", text: "Exertional event, chest pain, abnormal ECG, family history, hypotension, bleeding", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Transport + monitor", text: "Treat cause; serial vitals and rhythm monitoring", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      { title: "Primary Assessment", text: "Airway • breathing • circulation • injury • hemorrhage • pregnancy • persistent instability", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
+      { title: "Recovered to Baseline?", text: "Persistent altered mental status or focal deficit requires the appropriate emergency pathway", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "Glucose + Cardiac Evaluation", text: "Glucose on every patient • 12-lead ECG • continuous cardiac monitoring", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "High-Risk Features?", text: "Exertional or supine • abrupt • cardiopulmonary symptoms • abnormal ECG • bleeding • abnormal vitals", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Treat Identified Cause", text: "Hypoglycemia • dysrhythmia • hemorrhage • shock • opioid respiratory depression • trauma", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "Transport + Reassess", text: "Repeat vitals and ECG when indicated • monitor for recurrent symptoms • early notification", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Provider Actions",
+        summary: "Identify life threats and high-risk cardiac or systemic causes before considering benign syncope.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Assess airway, breathing, circulation, mental status, injury from the fall, possible hemorrhage, pregnancy, and persistent instability.",
+              "Obtain glucose, SpO₂, two complete vital-sign sets when feasible, and a focused neurologic examination.",
+              "Acquire and transmit a 12-lead ECG and apply continuous cardiac monitoring for every syncope or near-syncope patient.",
+              "Give oxygen only for hypoxemia or respiratory distress and initiate rapid transport when any high-risk feature is present.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT care. Establish IV access when hypotension, poor perfusion, clear volume depletion, recurrent symptoms, or another high-risk finding is present.",
+              "Administer LR or normal saline only for hypotension, poor perfusion, or clear volume depletion, using the approved adult or pediatric bolus.",
+              "Monitor the rhythm continuously, repeat complete vital signs after intervention, and prepare for cause-specific treatment.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform all prior care. Interpret the initial 12-lead ECG and repeat it for recurrent symptoms, rhythm change, chest discomfort, or a concerning initial tracing.",
+              "Treat bradycardia, tachycardia, ischemia, shock, hypoglycemia, respiratory failure, or another identified cause under the applicable Claiborne protocol.",
+              "Evaluate persistent altered mental status, focal neurologic findings, suspected seizure, bleeding, ectopic pregnancy, pulmonary embolism, aortic emergency, and toxicologic causes.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "High-Risk Syncope",
+        summary: "Any high-risk feature requires continuous monitoring and prompt emergency-department evaluation.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Syncope during exertion or while supine, or abrupt syncope without warning.",
+              "Chest pain, dyspnea, palpitations, persistent headache, or recurrent symptoms.",
+              "Persistent hypotension, hypoxia, bradycardia, tachycardia, abnormal perfusion, or failure to return completely to baseline.",
+              "Known coronary disease, heart failure, cardiomyopathy, significant valvular disease, pacemaker, or implanted cardioverter-defibrillator.",
+              "Family history of sudden unexplained death before age 50.",
+              "GI bleeding, vaginal bleeding, abdominal or back pain, pregnancy, anticoagulant use, significant trauma, or focal neurologic deficit.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Establish vascular access when clinically indicated and transport without delaying for orthostatic vital signs or nonessential procedures.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Treat an abnormal rhythm or identified life threat under the applicable protocol and provide early receiving-facility notification.",
+              "Concerning ECG findings include acute ischemia, significant bradycardia or tachycardia, high-grade AV block, ventricular dysrhythmia, prolonged QT, pre-excitation, Brugada pattern, or other new conduction abnormality.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Orthostatic Vital Signs",
+        summary: "Orthostatic testing is optional and must not provoke injury or delay transport.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Consider only when the patient is stable, completely recovered, able to stand safely, and has no injury, pregnancy-related concern, or high-risk feature.",
+              "A positive test is recurrent symptoms or a fall in SBP of at least 20 mm Hg or DBP of at least 10 mm Hg after standing.",
+              "Stop immediately for dizziness, weakness, recurrent near-syncope, syncope, chest pain, dyspnea, or instability.",
+              "Do not use normal orthostatic vital signs to exclude a serious cause and do not delay transport to obtain them.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "When testing is appropriate, ensure monitoring and immediate assistance are available before standing the patient.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Interpret orthostatic findings in the context of the full history, medication list, examination, ECG, glucose, and volume status.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Fluid Support",
+        summary: "Fluids are for hypotension, poor perfusion, or clear volume depletion—not routine syncope treatment.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Position the patient safely, prevent recurrent falls, and reassess perfusion while vascular access is prepared when indicated.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Adult: LR or normal saline 500 mL IV/IO, then reassess.",
+              "Heart failure, renal failure, liver failure, pulmonary edema, or volume-overload risk: use 250 mL increments.",
+              "Pediatric patient younger than 16 years: LR or normal saline 10–20 mL/kg IV/IO, then reassess.",
+              "Stop or reduce fluid for pulmonary edema, worsening oxygenation, or resolved hypotension and poor perfusion.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "If hypotension or poor perfusion persists, reassess for hemorrhagic, cardiogenic, distributive, obstructive, or toxicologic shock and transition to the appropriate shock pathway.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Syncope, near-syncope, or unexplained transient loss of consciousness."],
+    indications: [
+      "Syncope with transient loss of consciousness and postural tone followed by rapid spontaneous recovery.",
+      "Near-syncope with transient lightheadedness, weakness, or impending loss of consciousness without complete loss of consciousness.",
+      "Unexplained collapse with apparent spontaneous recovery when syncope remains possible.",
+    ],
     contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
+    assessment: [
+      {
+        title: "Event History",
+        items: [
+          "Determine body position and activity at onset, prodrome, precipitating trigger, abruptness, duration, witnessed movements, color change, breathing, injuries, and time to complete recovery.",
+          "Ask about exertion, standing, heat exposure, pain, emotional stress, urination, defecation, coughing, swallowing, dehydration, vomiting, diarrhea, and recent illness.",
+          "Ask about chest pain, dyspnea, palpitations, headache, neck pain, abdominal or back pain, GI or vaginal bleeding, pregnancy possibility, and neurologic symptoms.",
+          "Obtain cardiac, neurologic, seizure, bleeding, and thromboembolic history; family history of sudden death; and all medications, including antihypertensives, diuretics, QT-prolonging medications, and anticoagulants.",
+        ],
+      },
+      {
+        title: "Examination",
+        items: [
+          "Assess mental status and confirm complete return to neurologic baseline. Examine pupils, speech, gaze, facial symmetry, strength, sensation, and coordination when appropriate.",
+          "Evaluate pulse rate and regularity, blood pressure, heart and lung findings, perfusion, hydration, abdominal or back tenderness, evidence of bleeding, and injury from the fall.",
+          "Obtain glucose on every patient. Obtain temperature when infection or environmental illness is suspected.",
+          "Evaluate pregnancy and postpartum status when applicable. Abdominal, pelvic, or back pain with syncope in a patient who may be pregnant requires urgent ectopic-pregnancy evaluation.",
+        ],
+      },
+      {
+        title: "Cardiac Monitoring",
+        items: [
+          "Acquire and transmit a 12-lead ECG and use continuous cardiac monitoring for every syncope or near-syncope patient.",
+          "Repeat the ECG for recurrent symptoms, rhythm change, chest discomfort, or a concerning initial tracing.",
+          "A single normal ECG or brief period of normal monitoring does not exclude intermittent dysrhythmia or another cardiac cause.",
+          "Document monitor rhythm, ECG interpretation, recurrent symptoms, and any rhythm associated with those symptoms.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Support airway and ventilation and provide oxygen only for hypoxemia or respiratory distress.",
+      "Check glucose immediately and treat hypoglycemia under UP-4.",
+      "Acquire and transmit a 12-lead ECG and maintain continuous cardiac monitoring.",
+      "Assess and treat injury, hemorrhage, pregnancy-related emergency, dysrhythmia, ACS, pulmonary embolism, aortic emergency, seizure, stroke, sepsis, shock, or toxicologic cause under the applicable protocol.",
+      "Administer naloxone only when opioid exposure and clinically significant respiratory depression are suspected; do not use naloxone empirically for isolated syncope.",
+      "Give LR or normal saline only for hypotension, poor perfusion, or clear volume depletion: adult 500 mL; volume-overload risk 250 mL; pediatric 10–20 mL/kg. Reassess after every bolus.",
+      "Do not perform routine orthostatic vital signs. When they are safe and clinically useful, stop immediately for recurrent symptoms or instability.",
+      "Transport every high-risk, first unexplained, recurrent, injured, pregnant, anticoagulated, abnormal-vital-sign, abnormal-glucose, or abnormal-ECG patient with continuous reassessment.",
+    ],
     medications: [],
-    warnings: ["Do not assume benign vasovagal syncope when high-risk features are present."],
-    clinicalPearls: ["Consider dysrhythmia, ACS, PE, hemorrhage, ectopic pregnancy, seizure, and stroke.", "Older adults and patients with abnormal ECG require heightened concern."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    warnings: [
+      "Do not assume benign vasovagal syncope until cardiac, hemorrhagic, obstetric, neurologic, metabolic, toxicologic, and traumatic causes have been considered.",
+      "A normal ECG does not exclude intermittent dysrhythmia or cardiac syncope.",
+      "Do not stand an unstable, injured, pregnant, anticoagulated, or high-risk patient for orthostatic vital signs.",
+      "Do not give routine oxygen, IV fluid, aspirin, or naloxone solely because syncope occurred.",
+      "Syncope during exertion or while supine is high risk and requires transport for cardiac evaluation.",
+      "Persistent altered mental status or focal neurologic deficit is not uncomplicated syncope.",
+    ],
+    clinicalPearls: [
+      "Near-syncope may carry risk similar to complete syncope and warrants the same initial evaluation.",
+      "A detailed event history, examination, glucose, ECG, and risk assessment are more useful than routine indiscriminate testing.",
+      "Brief myoclonic movements can occur during cerebral hypoperfusion. Persistent postictal confusion, prolonged convulsions, or lateral tongue injury increases concern for seizure.",
+      "Isolated syncope without focal neurologic findings is not usually a stroke presentation; persistent focal findings require stroke evaluation.",
+      "Syncope associated with dyspnea, unexplained hypoxemia, pleuritic pain, tachycardia, or thromboembolic risk requires consideration of pulmonary embolism.",
+      "Abdominal or back pain, diminished pulses, bleeding, hypotension, or pregnancy may identify life-threatening occult hemorrhage or an aortic emergency.",
+    ],
+    specialPopulations: [
+      {
+        title: "Pediatrics and athletes",
+        items: [
+          "Pediatric patients are younger than 16 years and medication or fluid doses use actual or length-based weight.",
+          "Exertional or supine syncope, chest pain, palpitations, abnormal ECG, congenital heart disease, or family history of sudden death is high risk.",
+          "Do not permit return to sports or exertion. Transport for cardiac evaluation.",
+        ],
+      },
+      {
+        title: "Pregnancy and bleeding risk",
+        items: [
+          "Syncope with abdominal, pelvic, or back pain or vaginal bleeding in a patient who may be pregnant requires urgent evaluation for ectopic pregnancy or other hemorrhage.",
+          "Anticoagulant use increases concern for occult bleeding and intracranial injury after a fall.",
+          "Do not delay transport for orthostatic vital signs when bleeding, pregnancy complication, or significant trauma is possible.",
+        ],
+      },
+      {
+        title: "Refusal / Non-Transport",
+        items: [
+          "Transport is required for any high-risk feature, first unexplained or recurrent event, abnormal ECG, glucose or vital signs, injury, pregnancy, anticoagulant use, persistent symptoms, or incomplete return to baseline.",
+          "A capable adult with a classic vasovagal trigger and prodrome, complete recovery, normal examination, glucose, vital signs, and ECG, and no injury or high-risk feature may refuse only after Medical Control consultation.",
+          "Complete the Refusal / Non-Transport protocol and document capacity, event history, examination, ECG and glucose results, risks explained, Medical Control consultation, responsible adult supervision, and return precautions.",
+        ],
+      },
+    ],
+    references: [
+      "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — SOP 319 Syncope.",
+      "ACC / AHA / HRS — Guideline for the Evaluation and Management of Patients With Syncope, 2017.",
+      "Claiborne EMS UP-4 Diabetic / Glucose Emergencies and applicable cardiac, shock, trauma, obstetric, stroke, seizure, and toxicology protocols.",
+      "North Carolina College of Emergency Physicians UP-16 Syncope source protocol retained for historical comparison.",
+    ],
     sourcePdf: "/protocols/claiborne/up-16-syncope-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 11, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "Medical-director content decisions approved August 11, 2026.",
+      "Medical Control consultation is required before refusal after true syncope.",
+      "Final system-wide clinical release remains pending completion of the full Claiborne protocol reconciliation.",
+    ],
   },
   {
     id: "up-17",
