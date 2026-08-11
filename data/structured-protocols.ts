@@ -3577,7 +3577,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     ],
   },
   {
-
+    id: "up-18",
     title: "Behavioral Agitation / Sedation Guide",
     categoryId: "up",
     category: "Universal Patient Care",
