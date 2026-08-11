@@ -3265,38 +3265,319 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     title: "Behavioral Health Crisis",
     categoryId: "up",
     category: "Universal Patient Care",
-    overview: ["Treat behavioral symptoms as a possible medical emergency until reversible causes are assessed."],
+    overview: [
+      "Treat behavioral symptoms as a possible medical emergency until reversible medical, traumatic, toxicologic, and environmental causes have been assessed.",
+      "The Behavioral Activity Rating Scale (BARS) measures current activity and agitation; it does not determine suicide risk or decision-making capacity.",
+      "Protect the patient, public, and responders while preserving dignity and using the least restrictive effective intervention.",
+    ],
     flow: [
-      { title: "Scene safety", text: "Remove hazards; request law enforcement only when needed", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Medical screen", text: "Glucose, oxygenation, trauma, overdose, delirium, and capacity", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "De-escalate", text: "One calm speaker • reduce stimuli • offer choices • maintain exit", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Disposition", text: "Transport safely; least restrictive measures; document risk assessment", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      { title: "Scene Safe?", text: "Stage or withdraw when unsafe • request law enforcement and sufficient resources • identify weapons or hazards", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
+      { title: "Medical Emergency?", text: "Airway • breathing • circulation • vitals • SpO₂ • glucose • temperature • trauma • neurologic and toxicologic causes", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Assign BARS", text: "1–3: altered mental status/overdose • 4: cooperative • 5: de-escalate • 6–7: UP-18; severe delirium: UP-19", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "Assess Safety Risk", text: "Suicide • homicide • plan • intent • access to means • prior attempts • command hallucinations • ability to protect self", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "De-escalate", text: "One calm speaker • reduce stimulation • maintain personal space and exit • acknowledge emotions • offer safe choices", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "Immediate Danger?", text: "Direct observation • remove accessible hazards when safe • request authorized custody assistance • do not rely on a safety contract", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Safe Disposition", text: "Emergency department for medical risk, self-harm, restraint, or sedation • alternative destination only under approved policy", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
     ],
     careModules: [
-      { title: "Provider Actions", summary: "Fast role-specific actions.", levels: [
-        { level: "EMT", actions: ["Perform BLS assessment, immediate lifesaving care, indicated monitoring, and prompt transport."] },
-        { level: "AEMT", actions: ["Perform all EMT care plus IV access, fluids, and medications authorized within Tennessee and local scope."] },
-        { level: "Paramedic", actions: ["Perform all prior care plus advanced assessment, monitoring, medication, airway, and destination decisions under standing orders."] },
-      ] },
+      {
+        title: "Provider Actions",
+        summary: "Use explicit provider-level actions without substituting a generic scope statement.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Establish scene safety, request law enforcement or additional personnel when indicated, and do not enter or remain in an unsafe environment.",
+              "Assess airway, breathing, circulation, mental status, trauma, oxygenation, glucose, temperature, medications, substance exposure, and focused neurologic findings.",
+              "Assign and document BARS, complete the suicide/homicide safety assessment, begin verbal and environmental de-escalation, and maintain direct observation when risk is present.",
+              "Provide indicated BLS treatment, obtain two complete vital-sign sets when feasible, and transport to the appropriate emergency destination.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT care. Establish IV/IO access only when a medical condition, poor perfusion, significant overdose, or anticipated emergency treatment creates a clinical indication.",
+              "Administer dextrose, naloxone, or IV fluid only when indicated under the applicable Claiborne medical, toxicology, or shock protocol; do not medicate solely for a psychiatric diagnosis.",
+              "Continue physiologic monitoring, direct observation, and reassessment during transport.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform all prior care. Obtain and interpret a 12-lead ECG, use EtCO₂, and provide advanced airway or cause-specific treatment when the presentation or intervention indicates.",
+              "For BARS 6–7, transition to UP-18 Behavioral Agitation / Sedation Guide. Use UP-19 when severe agitation is accompanied by delirium, hyperthermia, unusual strength, or prolonged struggle.",
+              "Agitation medication and dosing are contained only in UP-18 and UP-19. UP-17 contains no standing-order sedative treatment.",
+              "After restraint or medication, provide continuous airway, ventilation, SpO₂, EtCO₂, and cardiac monitoring as required by UP-18 or UP-19.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "BARS Routing",
+        summary: "BARS standardizes observation and reassessment but never replaces medical evaluation or suicide-risk assessment.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "BARS 1: difficult or unable to awaken. Treat as an airway, altered mental status, overdose, or other medical emergency.",
+              "BARS 2: asleep but responds normally to verbal or physical stimulation. Evaluate for medication, alcohol, overdose, hypoglycemia, or another medical cause.",
+              "BARS 3: drowsy or appears sedated. Evaluate altered mental status, monitor airway and ventilation, and consider overdose or other CNS depression.",
+              "BARS 4: quiet and awake with normal activity. Continue the complete behavioral, suicide/homicide, capacity, and medical assessment.",
+              "BARS 5: increased verbal or physical activity but not disruptive. Continue UP-17, reduce stimulation, and attempt verbal de-escalation.",
+              "Document the initial score and repeat BARS after de-escalation or any change in condition.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "BARS 6: extremely or continuously active and disruptive but not violent. Request sufficient resources, continue de-escalation when safe, and initiate UP-18.",
+              "Do not allow vascular access or nonessential procedures to provoke additional struggle or delay safe transport.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "BARS 7: violent with immediate danger and restraint required. Initiate the UP-18 safety and restraint pathway without delaying for nonessential assessment.",
+              "Use UP-19 when agitation includes delirium, hyperthermia, unusual strength, pain tolerance, or continued/prolonged struggle.",
+              "Repeat and document BARS after physical restraint, medication, and each clinically important change.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Suicide and Violence Safety Assessment",
+        summary: "A calm or cooperative patient may remain at high risk; BARS does not clear a patient for refusal or release.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "For medically able patients age 8 years and older, use the ASQ framework: recent wish to be dead; belief that self or family would be better off if dead; recent thoughts of suicide; prior suicide attempt; and current thoughts of suicide.",
+              "Ask directly about plan, intent, timing, access to medications or weapons, preparations already made, previous attempts, recent self-harm, homicidal thoughts, command hallucinations, substance use, and ability to remain safe.",
+              "If feasible and developmentally appropriate, interview pediatric patients privately for part of the assessment, then obtain collateral history from the parent or guardian.",
+              "Any current suicidal intent, credible homicidal threat, recent serious attempt, dangerous command hallucination, or inability to protect oneself requires direct observation and emergency evaluation.",
+              "Do not leave a high-risk patient unattended and do not use a verbal or written safety contract as proof of safety.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Maintain continuous observation and repeat mental-status, vital-sign, and risk assessment after any medical treatment or change in behavior.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Integrate the safety assessment with medical findings and decision-making capacity. Contact Medical Control whenever risk, capacity, custody, or destination is uncertain.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "De-escalation and Restraint Safety",
+        summary: "Use restraint only to prevent harm or permit medically necessary assessment, treatment, and transport.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Use one calm speaker, open-ended questions, active listening, emotional acknowledgment, nonthreatening posture, personal space, reduced noise and spectators, and reasonable choices.",
+              "Maintain a clear exit and avoid confrontation, sudden movements, deceptive promises, crowding, or arguing about delusions.",
+              "Do not use prone restraint, hog-tying, neck or chest compression, or any position or device that compromises airway, breathing, circulation, or rapid release.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Assess respiratory and hemodynamic status and the neurovascular status of restrained extremities as soon as safely possible and at recurring intervals.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Physical or pharmacologic restraint requires the UP-18 pathway, appropriate physiologic monitoring, recurring reassessment, and transport to an emergency department.",
+              "EMS medications must never be administered solely to facilitate arrest or law-enforcement custody.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Tennessee Emergency Detention and Capacity",
+        summary: "Coordinate emergency custody through the authorized Tennessee process while continuing necessary medical care.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Request law enforcement or another authorized professional when mental illness or serious emotional disturbance creates an imminent substantial likelihood of serious harm.",
+              "EMS personnel do not independently initiate a Tennessee emergency mental-health detention solely by virtue of EMS licensure.",
+              "Maintain observation and do not abandon a patient who presents an immediate safety threat or cannot make an informed decision.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Continue medically necessary care and transport while the authorized officer, physician, psychologist, or commissioner-designated professional manages the custody process.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Assess whether the patient can understand relevant information, appreciate the condition and consequences, reason about options, and communicate a stable choice.",
+              "A psychiatric diagnosis, unusual belief, intoxication, or refusal alone does not automatically establish incapacity; document the specific functional impairment when capacity is absent.",
+              "Contact Medical Control and request authorized custody assistance whenever capacity or immediate risk is uncertain.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Acute Dystonic / Extrapyramidal Reaction",
+        summary: "Recognize medication-induced dystonia as a medical condition that may be mistaken for behavioral illness.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Suspect an acute dystonic reaction with involuntary facial, jaw, neck, trunk, or extremity spasm after an antipsychotic or other dopamine-blocking medication.",
+              "Assess for tongue, pharyngeal, or laryngeal involvement and support airway and ventilation immediately when present.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Adult: diphenhydramine 50 mg IV/IO/IM.",
+              "Pediatric patient younger than 16 years: diphenhydramine 1 mg/kg IV/IO/IM; maximum 50 mg.",
+              "Monitor airway, SpO₂, vital signs, and cardiac rhythm after parenteral medication and reassess the muscular symptoms.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform all prior care. Treat airway compromise immediately and evaluate for serotonin syndrome, neuroleptic malignant syndrome, seizure, tetany, toxic exposure, or another cause when findings are atypical.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Suicidal ideation, psychosis, severe anxiety, mania, depression, or behavioral crisis."],
+    indications: [
+      "Suicidal thoughts, suicide attempt, self-harm, homicidal thoughts, psychosis, hallucinations, delusions, severe anxiety, mania, depression, or another behavioral-health crisis.",
+      "Agitation, threatening behavior, impaired judgment, inability to protect oneself, or concern for danger to the patient or others.",
+      "Behavioral change that may be caused by a medical, traumatic, toxicologic, medication-related, or environmental emergency.",
+    ],
     contraindications: [],
-    assessment: [{ title: "Focused assessment", items: ["Apply Universal Patient Care, obtain two complete vital-sign sets when feasible, and reassess after every intervention.", "Use complaint-specific history, focused examination, glucose/ECG/temperature/EtCO₂ when indicated."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm.", "Do not delay transport for nonessential procedures.", "Escalate to the appropriate complaint-specific, airway, cardiac, trauma, pediatric, or operational protocol when indicated."],
-    medications: [],
-    warnings: ["Do not leave a high-risk patient unattended or rely solely on a verbal safety contract."],
-    clinicalPearls: ["Ask directly about suicidal and homicidal thoughts, plan, means, and intent.", "Avoid confrontation; preserve dignity and personal space."],
-    specialPopulations: [{ title: "Pediatrics", items: ["Use pediatric protocols for patients younger than 16 years and dose medications by actual or length-based weight."] }],
-    references: ["Tennessee EMS Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison."],
+    assessment: [
+      {
+        title: "Medical and Traumatic Causes",
+        items: [
+          "Assess airway, ventilation, oxygenation, circulation, complete vital signs, glucose, temperature, pupils, focused neurologic status, trauma, pain, pregnancy when applicable, medication adherence or changes, substance exposure, and withdrawal.",
+          "Consider hypoxia, hypoglycemia or hyperglycemia, stroke, seizure or postictal state, head injury, shock, sepsis, hyperthermia, intoxication, overdose, withdrawal, medication reaction, endocrine/metabolic disease, dementia, and delirium.",
+          "Obtain a 12-lead ECG when overdose, stimulant use, syncope, chest discomfort, dyspnea, palpitations, abnormal pulse, electrolyte disorder, QT-prolonging medication, or parenteral agitation medication is suspected or used.",
+          "Use EtCO₂ for hypoventilation, suspected overdose, significant altered mental status, restraint, or pharmacologic management.",
+        ],
+      },
+      {
+        title: "Behavior and Safety Risk",
+        items: [
+          "Assign BARS from 1 through 7 and document objective observed behavior rather than conclusory labels such as uncooperative, crazy, or violent without supporting facts.",
+          "Ask directly about suicidal and homicidal thoughts, plan, intent, access to means, prior attempts, self-harm, command hallucinations, substance use, supports, and ability to remain safe.",
+          "Obtain collateral information from family, caregivers, witnesses, law enforcement, medication containers, and prior records when available, while maintaining patient dignity and necessary privacy.",
+          "Identify abuse, neglect, exploitation, domestic violence, sexual assault, trafficking, or an unsafe living environment and follow the applicable reporting protocol.",
+        ],
+      },
+      {
+        title: "Capacity and Reassessment",
+        items: [
+          "Assess whether the patient understands the situation and proposed care, appreciates likely consequences, can reason about options, and communicates a stable choice.",
+          "Obtain two complete vital-sign sets when feasible. Reassess high-acuity, restrained, sedated, or clinically unstable patients at least every 3–5 minutes.",
+          "Repeat BARS and the focused medical, airway, perfusion, neurologic, and safety assessment after every intervention or significant change.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Ensure scene safety; stage or withdraw when unsafe and request law enforcement and sufficient personnel before contact or intervention.",
+      "Perform the medical screen and immediately treat hypoxia, hypoventilation, hypoglycemia, opioid respiratory depression, shock, hyperthermia, trauma, seizure, stroke, overdose, or another identified emergency under the applicable Claiborne protocol.",
+      "Assign BARS and route BARS 1–3 to altered mental status/overdose evaluation, BARS 4 to the cooperative behavioral assessment, BARS 5 to de-escalation, BARS 6–7 to UP-18, and severe agitation with delirium or hyperthermia to UP-19.",
+      "Complete the suicide/homicide assessment. Maintain direct observation and remove accessible dangerous objects when this can be done safely.",
+      "Attempt verbal and environmental de-escalation before restraint whenever the situation permits.",
+      "When an imminent substantial likelihood of serious harm exists, request an authorized Tennessee custody professional and continue medically necessary care and safe transport.",
+      "Use UP-18 for any physical or pharmacologic restraint and UP-19 for hyperactive delirium with severe agitation. Never restrain or transport a patient prone.",
+      "Transport to an emergency department for medical abnormality, injury, overdose, delirium, recent self-harm, current suicide or homicide risk, dangerous psychosis, restraint, or pharmacologic management.",
+      "Use a psychiatric or crisis alternative destination only under a separately approved destination policy and only after required medical and safety screening criteria are met.",
+      "A patient with intact capacity and no identified immediate danger may use the standard refusal process. Contact Medical Control whenever capacity or risk is uncertain and document a clear safety and follow-up plan.",
+    ],
+    medications: [
+      {
+        name: "Diphenhydramine",
+        indications: ["Acute dystonic or extrapyramidal reaction"],
+        adultDose: "50 mg IV/IO/IM",
+        pediatricDose: "1 mg/kg IV/IO/IM; maximum 50 mg",
+        notes: ["AEMT or Paramedic. Assess for airway involvement and monitor after administration."],
+      },
+    ],
+    warnings: [
+      "A calm, cooperative, or BARS 4 patient may still have imminent suicide or homicide risk.",
+      "Never assume a psychiatric diagnosis until medical, traumatic, toxicologic, medication-related, and environmental causes have been assessed.",
+      "Do not leave a high-risk patient unattended or rely on a verbal or written safety contract.",
+      "Do not use prone restraint, hog-tying, neck or chest compression, or a restraint that cannot be rapidly released for airway, breathing, or circulatory compromise.",
+      "EMS medication must not be used solely to facilitate arrest or law-enforcement custody.",
+      "Any patient receiving physical restraint or pharmacologic management requires continuous observation, physiologic monitoring, recurring reassessment, and emergency-department transport.",
+      "Do not place a psychiatric-only patient at an alternative destination unless a separately approved destination policy is active and all criteria are met.",
+    ],
+    clinicalPearls: [
+      "Ask directly about suicide and homicide; asking does not create suicidal thoughts and may identify concealed risk.",
+      "BARS is a rapid observational communication tool, not a diagnosis, suicide-risk scale, capacity assessment, or automatic medication order.",
+      "Medical causes are especially important with new behavioral change, atypical age of onset, abnormal vital signs, fluctuating attention, focal neurologic findings, trauma, or no established psychiatric history.",
+      "One calm speaker and fewer stimuli often work better than multiple responders issuing simultaneous commands.",
+      "Current suicidal thoughts, a feasible plan with access to means, a recent attempt, dangerous command hallucinations, or inability to protect oneself requires immediate safety precautions and emergency evaluation.",
+      "If law-enforcement restraints that require a key must remain, law enforcement and the key must accompany the patient; transition to the least restrictive safe restraint when feasible.",
+      "Exact patient statements are more clinically useful than paraphrases when documenting threats, hallucinations, intent, or refusal.",
+    ],
+    specialPopulations: [
+      {
+        title: "Pediatrics",
+        items: [
+          "Pediatric patients are younger than 16 years and medication doses use actual or length-based weight.",
+          "The ASQ framework may be used for medically able patients age 8 years and older. Suspected suicide risk in a child younger than 8 years requires comprehensive emergency mental-health evaluation rather than relying on a screening score.",
+          "When feasible and developmentally appropriate, ask the safety questions privately for part of the encounter and then obtain collateral information from the parent or guardian.",
+          "Evaluate for abuse, neglect, exploitation, bullying, trafficking, medication ingestion, developmental disability, and an unsafe home environment.",
+        ],
+      },
+      {
+        title: "Law-Enforcement Custody",
+        items: [
+          "A patient restrained by law enforcement remains an EMS patient when medical assessment or treatment is provided; EMS advocates for airway, breathing, circulation, positioning, monitoring, and dignity.",
+          "Law enforcement should accompany a patient when law-enforcement restraints must remain during ambulance transport, and the required release key must be immediately available.",
+          "Do not transport with hands restrained behind the back when that position interferes with assessment, monitoring, airway protection, or safe positioning.",
+        ],
+      },
+      {
+        title: "Refusal / Non-Transport",
+        items: [
+          "Do not permit refusal based solely on a calm appearance, a low BARS score, denial after a documented threat, or a verbal safety contract.",
+          "Current suicidal intent, credible homicidal threat, recent serious attempt, dangerous command hallucinations, inability to protect oneself, impaired capacity, medical instability, restraint, or sedation requires emergency evaluation and safe transport.",
+          "A patient with intact capacity and no identified immediate danger may refuse only under the standard Refusal / Non-Transport protocol. Contact Medical Control whenever capacity or risk is uncertain.",
+          "Document capacity, risk assessment, exact statements, collateral information, alternatives offered, risks explained, Medical Control or law-enforcement involvement, responsible support person, crisis resources, and return precautions.",
+        ],
+      },
+    ],
+    references: [
+      "Tennessee EMS BLS/ALS State Protocol Guidelines, September 2025.",
+      "Tennessee Code Annotated §§ 33-6-401 through 33-6-404 and § 33-6-501 — emergency detention and substantial likelihood of serious harm.",
+      "National Institute of Mental Health — Ask Suicide-Screening Questions (ASQ) Toolkit for youth and adults.",
+      "National Association of EMS Physicians and partner organizations — Clinical Care and Restraint of Agitated or Combative Patients by EMS Practitioners, 2021.",
+      "Claiborne EMS UP-18 Behavioral Agitation / Sedation Guide and UP-19 Hyperactive Delirium With Severe Agitation.",
+      "North Carolina College of Emergency Physicians UP-17 Behavioral Health Crisis source protocol retained for historical comparison.",
+    ],
     sourcePdf: "/protocols/claiborne/up-17-behavioral-health-crisis-protocol.pdf",
-    sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    sourcePages: { start: 1, end: 3 },
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 11, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Tennessee scope and approved Claiborne policy control if any conflict exists."],
+    reviewFlags: [
+      "Medical-director content decisions approved August 11, 2026.",
+      "BARS is adopted as the Claiborne EMS agitation assessment and reassessment scale; it does not replace suicide-risk, medical, or capacity assessment.",
+      "Behavioral-health alternative-destination criteria require a separately approved destination policy.",
+      "Final system-wide clinical release remains pending completion of the full Claiborne protocol reconciliation.",
+    ],
   },
   {
-    id: "up-18",
+
     title: "Behavioral Agitation / Sedation Guide",
     categoryId: "up",
     category: "Universal Patient Care",
