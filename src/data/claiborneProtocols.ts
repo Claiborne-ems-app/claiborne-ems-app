@@ -1176,20 +1176,20 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
   {
     "id": "UP-18",
     "code": "UP 18",
-    "title": "Behavioral Agitation Sedation Guide Protocol",
+    "title": "Behavioral Agitation and Severe Agitation Protocol",
     "category": "Universal Patient Care",
     "categoryCode": "UP",
     "pdfPath": "/protocols/claiborne/up-18-behavioral-agitation-sedation-guide-protocol.pdf",
-    "pages": 1,
+    "pages": 3,
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "UP-19",
     "code": "UP 19",
-    "title": "Hyperactive Delirium With Severe Agitation Protocol",
+    "title": "Severe Agitation — Merged Into UP-18",
     "category": "Universal Patient Care",
     "categoryCode": "UP",
     "pdfPath": "/protocols/claiborne/up-19-hyperactive-delirium-with-severe-agitation-protocol.pdf",
@@ -1197,7 +1197,7 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "UP-20",
