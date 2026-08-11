@@ -23,6 +23,11 @@ export default async function ProtocolPage({
   params: Promise<{ category: string; protocol: string }>;
 }) {
   const { category: categoryId, protocol: protocolId } = await params;
+
+  if (categoryId === "up" && protocolId === "up-19") {
+    redirect("/protocols/up/up-18");
+  }
+
   const category = protocolCategories.find((item) => item.id === categoryId);
   const protocol = category?.protocols.find((item) => item.id === protocolId);
 
