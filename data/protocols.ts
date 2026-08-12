@@ -29,12 +29,17 @@ function slugify(value: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+const removedCategoryIds = new Set(["sc", "so"]);
 const categories = new Map<string, Category>();
 
 for (const sourceProtocol of claiborneProtocols) {
   const categoryId = slugify(
     sourceProtocol.categoryCode || sourceProtocol.category
   );
+
+  if (removedCategoryIds.has(categoryId)) {
+    continue;
+  }
 
   let category = categories.get(categoryId);
 
