@@ -7799,7 +7799,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
     ],
     actionLinks: [
-      { label: "Push-Dose Epinephrine — Medication Reference", description: "Open the medication section for the approved indication, preparation, concentration, and dosing.", href: "/medications", kind: "medication" },
+      { label: "Push-Dose Epinephrine — Medication Reference", description: "Open the medication section for the approved indication, preparation, concentration, and dosing.", href: "/medications", kind: "external" },
       { label: "UP-01 Universal Patient Care", description: "Open universal assessment, monitoring, vascular-access, reassessment, and transport requirements.", href: "/protocols/up/up-01", kind: "protocol" },
       { label: "AM-01 Allergic Reaction / Anaphylaxis", description: "Open for anaphylactic shock and immediate IM epinephrine treatment.", href: "/protocols/am/am-01", kind: "protocol" },
       { label: "AM-03 Dialysis / Renal Failure", description: "Open for renal-failure considerations and fluid-risk guidance.", href: "/protocols/am/am-03", kind: "protocol" },
