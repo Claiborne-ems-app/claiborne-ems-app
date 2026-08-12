@@ -77,6 +77,7 @@ export function getNativeProtocolSections(content: StructuredProtocolContent) {
   if (content.assessment.length) sections.push({ id: "assessment", title: "Assessment" });
   if (content.treatmentSteps.length) sections.push({ id: "treatment", title: "Treatment" });
   if (content.medications.length) sections.push({ id: "medications", title: "Medications" });
+  if (content.actionLinks?.length) sections.push({ id: "related-links", title: "Related Links" });
   if (content.warnings.length) sections.push({ id: "warnings", title: "Warnings" });
   if (content.clinicalPearls.length) sections.push({ id: "clinical-pearls", title: "Clinical Pearls" });
   if (content.specialPopulations.length) sections.push({ id: "special-populations", title: "Special Populations" });
