@@ -7564,29 +7564,276 @@ export const structuredProtocols: StructuredProtocolContent[] = [
   {
     id: "am-05",
     title: "Hypotension / Shock",
-    categoryId: "am", category: "Adult Medical",
-    overview: ["Recognize shock from perfusion findings, not blood pressure alone.", "Treat the cause while establishing clinically meaningful vascular access and avoiding delays in resuscitation."],
-    flow: [
-      { title: "Recognize Shock", text: "SBP <90 or poor perfusion, altered mentation, cool/mottled skin, weak pulses, delayed refill", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Identify Cause", text: "Hemorrhagic • septic • cardiogenic • obstructive • anaphylactic • medication", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Immediate Support", text: "Airway/oxygenation, temperature control, supine as tolerated, control bleeding", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
-      { title: "IV/IO + Fluids", text: "No more than 3 IV attempts in urgent cases; reassess after each aliquot", levels: ["AEMT", "Paramedic"], tone: "action" },
-      { title: "Persistent Shock?", text: "Paramedic vasopressor pathway and cause-specific treatment", levels: ["Paramedic"], tone: "decision" },
-      { title: "Rapid Transport", text: "Early notification; do not delay definitive hemorrhage or obstructive care", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+    categoryId: "am",
+    category: "Adult Medical",
+    overview: [
+      "Recognize shock from perfusion findings and trends, not blood pressure alone.",
+      "Identify and treat the cause while supporting perfusion, avoiding harmful fluid loading, and moving rapidly toward definitive care.",
     ],
-    careModules: [{ title: "Provider Actions", summary: "Perfusion first; cause-specific resuscitation.", levels: [
-      { level: "EMT", actions: ["Control bleeding, airway/ventilation support, prevent heat loss, rapid transport, frequent vitals."] },
-      { level: "AEMT", actions: ["Large proximal IV or IO when urgent, isotonic fluid in reassessed aliquots, authorized cause-specific care."] },
-      { level: "Paramedic", actions: ["Advanced hemodynamic assessment, vasopressor treatment, ECG, ultrasound if locally approved, and obstructive/cardiogenic differential."] },
-    ]}],
-    indications: ["Hypotension or clinical evidence of inadequate perfusion."], contraindications: ["Avoid indiscriminate large-volume crystalloid in pulmonary edema, cardiogenic shock, or uncontrolled hemorrhage."],
-    assessment: [{ title: "Shock assessment", items: ["Trend mental status, pulse quality, skin, capillary refill, BP, respiratory pattern, EtCO₂, and urine/dialysis history when relevant.", "Search for bleeding, infection, anaphylaxis, cardiac ischemia, PE, tension pneumothorax, tamponade, overdose, adrenal crisis, and ectopic pregnancy."] }],
-    treatmentSteps: ["Correct immediate airway, breathing, or hemorrhage threats.", "Obtain IV/IO access without delaying transport; move to IO rapidly when IV access fails in urgent shock.", "Give fluid in clinically appropriate aliquots with reassessment.", "Use vasopressors only per the current Tennessee/Claiborne protocol and after addressing reversible causes.", "Transport to definitive care with early notification."],
-    medications: [{ name: "Isotonic crystalloid", dose: "Per current Tennessee EMS shock protocol" }, { name: "Vasopressor", dose: "Per current Tennessee EMS protocol and Claiborne formulary" }],
-    warnings: ["GCS 15 does not equal hemodynamic stability.", "Hypotension requires treatment regardless of mental status.", "Do not delay transport for repeated peripheral IV attempts."],
-    clinicalPearls: ["A falling EtCO₂ in a spontaneously breathing patient may signal worsening perfusion.", "Use smaller fluid aliquots with frequent reassessment in heart failure, renal failure, and suspected cardiogenic shock."],
-    specialPopulations: [{ title: "Adrenal insufficiency", items: ["Ask about prescribed stress-dose steroids and follow the patient-specific emergency plan when authorized."] }],
-    references: ["Tennessee EMS ALS/BLS Blended Protocol Guidelines", "NC College of Emergency Physicians AM-5 source protocol"], sourcePdf: "/protocols/claiborne/am-05-hypotension-shock-protocol.pdf", sourcePages: { start: 1, end: 2 }, revisionDate: "July 2026", lastVerifiedDate: "July 29, 2026", reviewStatus: "Reviewed", reviewFlags: ["Final vasopressor choice, concentration, dosing, and provider scope require Claiborne approval."],
+    flow: [
+      {
+        title: "Recognize Shock",
+        text: "SBP <90 mmHg or inadequate perfusion regardless of BP • confirm an abnormal automated reading manually when feasible",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "start",
+      },
+      {
+        title: "Identify the Cause",
+        text: "Hemorrhagic • septic • hypovolemic • cardiogenic • obstructive • anaphylactic • toxicologic • adrenal • obstetric",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Immediate Support",
+        text: "Airway/ventilation • oxygen when indicated • control bleeding • prevent heat loss • position for condition",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "urgent",
+      },
+      {
+        title: "Monitor + Obtain Access",
+        text: "Cardiac monitor • glucose • repeat vitals • IV access; move rapidly to IO when critically unstable",
+        levels: ["AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Cause-Directed Resuscitation",
+        text: "Reassessed fluid aliquots when appropriate • avoid indiscriminate crystalloid • treat reversible causes",
+        levels: ["AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Persistent Shock?",
+        text: "Paramedic norepinephrine pathway • use epinephrine infusion when indicated • reassess continuously",
+        levels: ["Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "Rapid Transport",
+        text: "Early notification • appropriate destination • consider Covenant Health Air when it provides meaningful advantage",
+        levels: ["EMT", "AEMT", "Paramedic"],
+        tone: "transport",
+      },
+    ],
+    careModules: [
+      {
+        title: "EMT Care",
+        summary: "Recognize shock, support airway and ventilation, control hemorrhage, prevent heat loss, and prioritize transport.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Follow Universal Patient Care; assess mental status, pulse quality, skin signs, capillary refill, blood-pressure trend, respiratory status, and evidence of inadequate perfusion.",
+              "Repeat an abnormal automated blood pressure manually when feasible using the correct cuff size; do not delay treatment or transport when shock is clinically evident.",
+              "Maintain the airway, assist ventilation when needed, and give oxygen for hypoxemia, respiratory distress, shock, or another clinical indication.",
+              "Position supine when tolerated unless respiratory distress, pulmonary edema, pregnancy, or another condition requires alternate positioning.",
+              "Control external hemorrhage immediately using direct pressure, wound packing, tourniquets, pelvic stabilization, and other approved measures when indicated.",
+              "Prevent heat loss, obtain frequent vital signs, identify time-critical causes, and begin rapid transport with early receiving-facility notification.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "AEMT Care",
+        summary: "All EMT care plus monitoring, vascular access, glucose assessment, and cause-appropriate crystalloid with frequent reassessment.",
+        levels: [
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT actions; apply continuous cardiac monitoring, obtain blood glucose, and obtain temperature when infection, sepsis, or environmental illness is suspected.",
+              "Establish IV access without delaying transport. When the patient is critically unstable and IV access cannot be obtained rapidly, proceed to IO access under the approved vascular-access protocol.",
+              "For nonhemorrhagic shock without fluid-overload risk, give isotonic crystalloid 500 mL IV/IO and reassess after every aliquot.",
+              "For heart failure, renal failure, liver failure, suspected cardiogenic shock, or another risk of volume overload, use 250 mL aliquots with reassessment after each aliquot.",
+              "For suspected hemorrhagic shock without traumatic brain injury, minimize crystalloid and give only enough to maintain a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg.",
+              "Immediately report persistent hypotension, pulmonary edema, worsening respiratory status, altered mental status, dysrhythmia, or other deterioration to the Paramedic and receiving facility.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Paramedic Care",
+        summary: "All AEMT care plus advanced hemodynamic assessment, cause-specific intervention, vasopressor treatment, and critical destination decisions.",
+        levels: [
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform all EMT and AEMT actions; obtain and interpret a 12-lead ECG when cardiac ischemia, dysrhythmia, pulmonary embolism, or cardiogenic shock is possible.",
+              "Use waveform capnography when ventilation is assisted and when clinically useful for trending perfusion in severe shock.",
+              "Treat immediately reversible causes, including tension pneumothorax and unstable dysrhythmia, using the applicable linked protocol.",
+              "For persistent hypotension or inadequate perfusion after an appropriate fluid trial—or earlier when further fluid is contraindicated—begin norepinephrine 0.05–0.5 mcg/kg/min IV/IO and titrate to adequate perfusion and MAP at least 65 mmHg.",
+              "When norepinephrine is unavailable or significant bradycardia accompanies shock, begin epinephrine infusion 2–10 mcg/min IV/IO and titrate to adequate perfusion and MAP at least 65 mmHg.",
+              "Use continuous ECG monitoring and frequent blood-pressure reassessment during vasopressor treatment.",
+              "Begin transport early, notify the receiving facility, choose the closest appropriate destination for the suspected cause, and consider Covenant Health Air when it provides a meaningful time or capability advantage.",
+            ],
+          },
+        ],
+      },
+    ],
+    indications: [
+      "Adult with SBP below 90 mmHg.",
+      "Adult with clinical evidence of inadequate perfusion regardless of blood pressure, including altered mental status, weak pulses, cool or mottled skin, delayed capillary refill, or progressive deterioration.",
+    ],
+    contraindications: [
+      "Do not give indiscriminate large-volume crystalloid in uncontrolled hemorrhage, pulmonary edema, cardiogenic shock, or suspected volume overload.",
+      "Do not use permissive hypotension when traumatic brain injury is suspected.",
+      "Do not treat a single automated blood-pressure value without considering the patient's complete perfusion assessment and BP trend.",
+    ],
+    assessment: [
+      {
+        title: "Confirm Shock + Trend Perfusion",
+        items: [
+          "Repeat the blood pressure manually when feasible and use the correct cuff size.",
+          "Trend mental status, pulse quality, skin temperature and color, capillary refill, blood pressure or MAP, heart rate, respiratory pattern, SpO₂, and EtCO₂ when available.",
+          "A normal mental status or GCS of 15 does not establish hemodynamic stability.",
+        ],
+      },
+      {
+        title: "Identify the Cause",
+        items: [
+          "Assess for external or internal hemorrhage, infection or sepsis, anaphylaxis, dehydration or gastrointestinal loss, cardiac ischemia, dysrhythmia, cardiogenic shock, pulmonary embolism, tension pneumothorax, and cardiac tamponade.",
+          "Consider medication effect or overdose, adrenal crisis, ectopic pregnancy, and obstetric or postpartum hemorrhage.",
+          "Treat immediately reversible causes through the appropriate linked protocol.",
+        ],
+      },
+      {
+        title: "Monitoring",
+        items: [
+          "Use continuous cardiac monitoring, pulse oximetry, serial vital signs, blood glucose, and temperature when indicated.",
+          "Obtain a 12-lead ECG when cardiac ischemia, dysrhythmia, pulmonary embolism, or cardiogenic shock is possible.",
+          "Use waveform capnography when ventilation is assisted and when clinically useful in severe shock.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Follow Universal Patient Care, maintain the airway, support ventilation, provide oxygen when clinically indicated, prevent heat loss, and position according to the patient's condition.",
+      "Control external hemorrhage immediately and prioritize rapid transport for suspected internal bleeding or another time-critical cause.",
+      "Establish IV access without delaying transport. In critical instability, move rapidly to IO when IV access cannot be obtained; the approved three-attempt vascular-access limitation remains applicable.",
+      "For nonhemorrhagic shock without fluid-overload risk, give isotonic crystalloid 500 mL IV/IO, then reassess mental status, lung sounds, work of breathing, peripheral perfusion, BP or MAP, heart rate, and EtCO₂ when available.",
+      "Repeat 500 mL aliquots only while hypotension or poor perfusion persists and the patient remains fluid responsive.",
+      "Use 250 mL aliquots with reassessment in heart failure, renal failure, liver failure, suspected cardiogenic shock, or another condition with increased risk of volume overload.",
+      "Stop routine fluid boluses when perfusion adequately improves, SBP reaches approximately 90–100 mmHg, MAP reaches at least 65 mmHg, pulmonary edema develops, respiratory status worsens, or additional fluid is unlikely to improve the shock state.",
+      "For suspected sepsis with hypotension or inadequate perfusion, use 500 mL isotonic crystalloid aliquots and target a cumulative initial volume up to 30 mL/kg only while the patient remains fluid responsive and free of pulmonary edema. Individualize volume in patients at risk of overload and do not delay transport to complete the target volume.",
+      "For hemorrhagic shock without suspected traumatic brain injury, minimize crystalloid and give only enough to maintain a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg.",
+      "For suspected traumatic brain injury, avoid permissive hypotension and maintain SBP at least 110 mmHg. Avoid hypoxemia and excessive crystalloid; use normal saline when crystalloid is required.",
+      "For pregnancy beyond approximately 20 weeks, use left uterine displacement or left lateral positioning when feasible, avoid prolonged supine positioning, treat hemorrhage or another cause, and follow AO-03.",
+      "For cardiogenic or obstructive shock, avoid repeated large-volume fluid boluses. Consider a cautious 250 mL trial only when volume depletion is possible and pulmonary edema is absent; treat tension pneumothorax or causative dysrhythmia immediately.",
+      "For anaphylactic shock, give IM epinephrine immediately under AM-01; do not delay epinephrine for IV access or fluid administration.",
+      "For persistent hypotension or inadequate perfusion after an appropriate fluid trial—or earlier when additional fluid is contraindicated—begin a Paramedic vasopressor infusion with continuous ECG and frequent blood-pressure monitoring.",
+      "Use norepinephrine 0.05–0.5 mcg/kg/min IV/IO as the preferred vasopressor and titrate to adequate perfusion and MAP at least 65 mmHg.",
+      "Use epinephrine infusion 2–10 mcg/min IV/IO when norepinephrine is unavailable or significant bradycardia accompanies shock; titrate to adequate perfusion and MAP at least 65 mmHg.",
+      "Begin transport early, notify the receiving facility, and do not delay for repeated IV attempts, completion of a fluid target, or normalization of blood pressure.",
+    ],
+    medications: [
+      {
+        name: "Isotonic Crystalloid",
+        dose: "500 mL IV/IO aliquots for nonhemorrhagic shock; use 250 mL aliquots when fluid-overload risk is present",
+        notes: [
+          "Reassess perfusion, BP or MAP, lung sounds, work of breathing, and response after every aliquot.",
+          "For suspected sepsis, cumulative initial fluid may approach 30 mL/kg only while the patient remains fluid responsive and free of pulmonary edema.",
+          "Minimize crystalloid in uncontrolled hemorrhage and suspected cardiogenic shock.",
+        ],
+      },
+      {
+        name: "Norepinephrine Infusion",
+        dose: "0.05–0.5 mcg/kg/min IV/IO; titrate to adequate perfusion and MAP at least 65 mmHg",
+        notes: [
+          "Paramedic standing order for persistent shock after an appropriate fluid trial or when additional fluid is contraindicated.",
+          "Use continuous ECG and frequent blood-pressure monitoring.",
+        ],
+      },
+      {
+        name: "Epinephrine Infusion",
+        dose: "2–10 mcg/min IV/IO; titrate to adequate perfusion and MAP at least 65 mmHg",
+        notes: [
+          "Paramedic alternative when norepinephrine is unavailable or significant bradycardia accompanies shock.",
+          "Use continuous ECG and frequent blood-pressure monitoring.",
+        ],
+      },
+      {
+        name: "Push-Dose Epinephrine",
+        dose: "Open the Push-Dose Epinephrine medication reference for the approved indication, preparation, concentration, and dosing",
+        notes: [
+          "Use the linked medication reference rather than preparing or dosing from memory.",
+          "This medication reference is linked below within AM-05.",
+        ],
+      },
+    ],
+    warnings: [
+      "A normal mental status or GCS of 15 does not exclude shock.",
+      "Hypotension may be a late sign of severe shock; use the complete perfusion assessment and trend.",
+      "The treatment goal is adequate perfusion—not normalization of blood pressure.",
+      "Do not use indiscriminate large-volume crystalloid in uncontrolled hemorrhage, pulmonary edema, cardiogenic shock, or suspected volume overload.",
+      "Do not use permissive hypotension when traumatic brain injury is suspected.",
+      "Do not delay transport for repeated peripheral-IV attempts, completion of a fluid target, or normalization of blood pressure.",
+      "Fluids and vasopressors support perfusion but do not replace correction of the underlying cause.",
+    ],
+    clinicalPearls: [
+      "A falling EtCO₂ in a spontaneously breathing patient may indicate worsening perfusion.",
+      "Reassess after every fluid aliquot and vasopressor adjustment; response to treatment is part of the diagnosis.",
+      "Early vasopressor support may be preferable to repeated fluid in cardiogenic shock, pulmonary edema, or a patient who is no longer fluid responsive.",
+      "Control hemorrhage, decompress tension pneumothorax, treat anaphylaxis, and correct causative dysrhythmia without waiting for blood-pressure normalization.",
+    ],
+    specialPopulations: [
+      {
+        title: "Heart, Renal, or Liver Failure",
+        items: [
+          "Use 250 mL crystalloid aliquots with frequent reassessment and stop for pulmonary edema, worsening respiratory status, or lack of fluid responsiveness.",
+        ],
+      },
+      {
+        title: "Suspected Traumatic Brain Injury",
+        items: [
+          "Avoid permissive hypotension, hypoxemia, and excessive crystalloid; maintain SBP at least 110 mmHg and use normal saline when crystalloid is required.",
+        ],
+      },
+      {
+        title: "Pregnancy",
+        items: [
+          "Beyond approximately 20 weeks, use left uterine displacement or left lateral positioning when feasible and follow AO-03 for pregnancy-related causes.",
+        ],
+      },
+      {
+        title: "Adrenal Insufficiency",
+        items: [
+          "Ask about prescribed stress-dose steroids and follow the patient-specific emergency plan when authorized.",
+        ],
+      },
+    ],
+    actionLinks: [
+      { label: "Push-Dose Epinephrine — Medication Reference", description: "Open the medication section for the approved indication, preparation, concentration, and dosing.", href: "/medications", kind: "medication" },
+      { label: "UP-01 Universal Patient Care", description: "Open universal assessment, monitoring, vascular-access, reassessment, and transport requirements.", href: "/protocols/up/up-01", kind: "protocol" },
+      { label: "AM-01 Allergic Reaction / Anaphylaxis", description: "Open for anaphylactic shock and immediate IM epinephrine treatment.", href: "/protocols/am/am-01", kind: "protocol" },
+      { label: "AM-03 Dialysis / Renal Failure", description: "Open for renal-failure considerations and fluid-risk guidance.", href: "/protocols/am/am-03", kind: "protocol" },
+      { label: "AM-07 Crashing Patient", description: "Open for peri-arrest deterioration and resuscitation priorities.", href: "/protocols/am/am-07", kind: "protocol" },
+      { label: "AC-04 Acute Coronary Syndrome / STEMI", description: "Open when myocardial ischemia or infarction may be causing shock.", href: "/protocols/ac/ac-04", kind: "protocol" },
+      { label: "AC-05 CHF / Acute Pulmonary Edema", description: "Open for pulmonary edema or suspected acute heart failure.", href: "/protocols/ac/ac-05", kind: "protocol" },
+      { label: "AC-02 Bradycardia", description: "Open for bradycardia causing cardiopulmonary compromise.", href: "/protocols/ac/ac-02", kind: "protocol" },
+      { label: "AC-06 Narrow-Complex Tachycardia", description: "Open for unstable narrow-complex tachycardia.", href: "/protocols/ac/ac-06", kind: "protocol" },
+      { label: "AC-07 Monomorphic Wide-Complex Tachycardia", description: "Open for unstable monomorphic wide-complex tachycardia.", href: "/protocols/ac/ac-07", kind: "protocol" },
+      { label: "AO-03 OB/GYN Emergency", description: "Open for ectopic pregnancy, obstetric hemorrhage, or pregnancy-related shock.", href: "/protocols/ao/ao-03", kind: "protocol" },
+      { label: "TB-07 Multiple Trauma", description: "Open for traumatic shock, hemorrhage control, and trauma destination decisions.", href: "/protocols/tb/tb-07", kind: "protocol" },
+      { label: "TE-07 Overdose / Toxic Ingestion", description: "Open for medication effect, overdose, or another toxicologic cause.", href: "/protocols/te/te-07", kind: "protocol" },
+      { label: "AR-01 Adult Airway Management", description: "Open for advanced airway and ventilation support.", href: "/protocols/ar/ar-01", kind: "protocol" },
+    ],
+    references: [
+      "Surviving Sepsis Campaign. International Guidelines for Management of Sepsis and Septic Shock, 2026.",
+      "American College of Surgeons Committee on Trauma, American College of Emergency Physicians, and National Association of EMS Physicians. Prehospital Hemorrhage Control and Treatment by Clinicians.",
+      "Brain Trauma Foundation. Guidelines for the Management of Severe Traumatic Brain Injury.",
+      "American Heart Association. Guidelines for CPR and Emergency Cardiovascular Care.",
+      "National Association of State EMS Officials. National Model EMS Clinical Guidelines, Version 3, 2022.",
+      "North Carolina College of Emergency Physicians. AM-05 Hypotension / Shock source protocol.",
+      "Claiborne Covenant EMS Formulary and medical-director decisions, August 2026.",
+    ],
+    sourcePdf: "/protocols/claiborne/am-05-hypotension-shock-protocol.pdf",
+    sourcePages: { start: 1, end: 2 },
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 12, 2026",
+    reviewStatus: "Reviewed",
+    reviewFlags: [
+      "Clinical content, fluid strategy, provider permissions, norepinephrine weight-based dosing, epinephrine alternative, and linked pathways approved by the Claiborne EMS medical director during protocol review.",
+      "Norepinephrine uses only the approved weight-based dose of 0.05–0.5 mcg/kg/min; the proposed non-weight-based alternative was removed.",
+      "Push-Dose Epinephrine is linked from the AM-05 medication section as directed.",
+      "App content remains a beta field reference until formal agency release and implementation approval.",
+    ],
   },
   {
     id: "am-06",
