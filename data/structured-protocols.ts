@@ -6154,7 +6154,6 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     ],
   },
 
-export const ac1113Protocols: StructuredProtocolContent[] = [
   {
     id: "ac-11",
     title: "TEAM-Focused CPR",
