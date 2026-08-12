@@ -6,7 +6,6 @@ import {
   HeartPulse,
   ShieldAlert,
   Syringe,
-  Users,
   Wind,
   type LucideIcon,
 } from "lucide-react";
@@ -53,16 +52,6 @@ const categoryPresentation: Record<string, { icon: LucideIcon; accent: string; s
     icon: Baby,
     accent: "bg-teal-500/12 text-teal-300 ring-teal-400/20",
     subtitle: "Pediatric medical care",
-  },
-  sc: {
-    icon: ShieldAlert,
-    accent: "bg-violet-500/12 text-violet-300 ring-violet-400/20",
-    subtitle: "Special circumstances",
-  },
-  so: {
-    icon: Users,
-    accent: "bg-orange-500/12 text-orange-300 ring-orange-400/20",
-    subtitle: "Scene operations",
   },
   tb: {
     icon: ShieldAlert,

@@ -5,8 +5,6 @@ import { structuredObstetricsProtocols } from "./structured-obstetrics-protocols
 import { structuredAirwayProtocols } from "./structured-airway-protocols";
 import { structuredPediatricCardiacProtocols } from "./structured-pediatric-cardiac-protocols";
 import { structuredPediatricMedicalProtocols } from "./structured-pediatric-medical-protocols";
-import { structuredSpecialCircumstancesProtocols } from "./structured-special-circumstances-protocols";
-import { structuredSceneOperationsProtocols } from "./structured-scene-operations-protocols";
 import { structuredToxicologyEnvironmentalProtocols } from "./structured-toxicology-environmental-protocols";
 import { structuredChemicalHazmatAdditions } from "./structured-chemical-hazmat-additions";
 import { structuredEyeTraumaAdditions } from "./structured-eye-trauma-additions";
@@ -7636,8 +7634,6 @@ export const structuredProtocols: StructuredProtocolContent[] = [
   ...structuredAirwayProtocols,
   ...structuredPediatricCardiacProtocols,
   ...structuredPediatricMedicalProtocols,
-  ...structuredSpecialCircumstancesProtocols,
-  ...structuredSceneOperationsProtocols,
   ...structuredToxicologyEnvironmentalProtocols,
   ...structuredChemicalHazmatAdditions,
   ...structuredEyeTraumaAdditions,

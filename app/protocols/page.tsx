@@ -9,7 +9,6 @@ import {
   Pill,
   ShieldAlert,
   Syringe,
-  Users,
   Wind,
   type LucideIcon,
 } from "lucide-react";
@@ -56,18 +55,6 @@ const categoryPresentation: Record<
     accent: "bg-teal-500/15 text-teal-300 ring-teal-400/25",
     surface: "from-teal-500/[0.08] to-transparent",
     description: "Pediatric medical emergencies",
-  },
-  sc: {
-    icon: ShieldAlert,
-    accent: "bg-violet-500/15 text-violet-300 ring-violet-400/25",
-    surface: "from-violet-500/[0.08] to-transparent",
-    description: "Special patient circumstances",
-  },
-  so: {
-    icon: Users,
-    accent: "bg-orange-500/15 text-orange-300 ring-orange-400/25",
-    surface: "from-orange-500/[0.08] to-transparent",
-    description: "Scene and responder operations",
   },
   tb: {
     icon: ShieldAlert,
