@@ -6153,117 +6153,469 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "App content remains a beta field reference until formal agency release and implementation approval.",
     ],
   },
+
+export const ac1113Protocols: StructuredProtocolContent[] = [
   {
     id: "ac-11",
     title: "TEAM-Focused CPR",
     categoryId: "ac",
     category: "Adult Cardiac",
-    overview: ["Native Claiborne County adult cardiac pathway using Tennessee scope and standing orders with a concise NC-style field algorithm.", "Use Universal Patient Care and the rhythm- or complaint-specific pathway together."],
+    overview: [
+      "Operational high-performance CPR pathway for coordinated adult cardiac-arrest care by Claiborne EMS.",
+      "Use AC-11 with AC-03 and the applicable rhythm-specific protocol; this page assigns team functions and CPR-quality expectations without replacing the clinical arrest algorithm.",
+    ],
     flow: [
-      { title: "Assign Roles", text: "Team lead • compressor 1/2 • airway • monitor • IV/meds • recorder.", levels: ["Paramedic"], tone: "start" },
-      { title: "Start Core Actions", text: "CPR, pads, rhythm analysis, ventilation, timer, and early shock.", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
-      { title: "Closed-Loop Communication", text: "Orders repeated back; interventions and times announced.", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Two-Minute Rhythm", text: "Rotate compressors, assess rhythm, shock if indicated, resume CPR.", levels: ["Paramedic"], tone: "decision" },
-      { title: "Quality Check", text: "Rate, depth, recoil, pauses, ventilation, EtCO₂, fatigue.", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "ROSC / Termination", text: "Transition deliberately to AC-10 or AC-12.", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      { title: "Recognize Arrest", text: "Start CPR • apply pads/AED • BVM with oxygen • start scene timer", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
+      { title: "Assign Team Functions", text: "Leader • compressor 1/2 • airway • monitor/defibrillator • IV/medications • recorder/timer", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "Deliver High-Quality CPR", text: "100–120/min • depth 2–2.4 in • full recoil • compression fraction >80%", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Manage Ventilation", text: "30:2 before advanced airway • then continuous CPR with 1 breath every 6 sec • avoid hyperventilation", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "Two-Minute Cycle", text: "Precharge when possible • rhythm/pulse check ≤10 sec • shock if indicated • immediately resume CPR", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "Communicate + Record", text: "Closed-loop orders • announce rhythms, shocks, medications, airway, EtCO₂, and times", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "ROSC or Termination", text: "ROSC: AC-10/AC-13 • persistent arrest: evaluate AC-12", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
     ],
     careModules: [
-      { title: "Provider-Level Actions", summary: "Act at the highest authorized level present without delaying lifesaving BLS care.", levels: [
-        { level: "EMT", actions: ["Immediate assessment, CPR/AED when indicated, oxygenation/ventilation, pads, vital signs, and rapid transport.", "Assist with medications and procedures authorized by Tennessee EMT scope."] },
-        { level: "AEMT", actions: ["All EMT care plus IV/IO access and authorized medications within Tennessee AEMT scope.", "Do not delay defibrillation, pacing, cardioversion, or transport for access attempts."] },
-        { level: "Paramedic", actions: ["Rhythm interpretation, manual defibrillation, synchronized cardioversion, pacing, advanced airway, and Tennessee-authorized cardiac medications.", "Lead destination, Medical Control, and post-intervention reassessment decisions."] },
-      ] },
+      {
+        title: "Provider-Level Team Actions",
+        summary: "Every provider may fill more than one team function when staffing is limited; lifesaving BLS care begins immediately.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Begin compressions, BVM ventilation, AED/monitor pad placement, scene timing, and event documentation without waiting for ALS.",
+              "Rotate compressors every two minutes or sooner for fatigue and provide real-time feedback on rate, depth, recoil, and pauses.",
+              "Repeat assigned tasks and treatment orders back to the team leader and announce when each is complete.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT actions and assume vascular-access/medication or airway functions as assigned.",
+              "Establish IV access first; use IO when IV access is unsuccessful, not feasible, or would delay required arrest medication.",
+              "Administer treatments authorized by the active cardiac-arrest protocol and announce medication, dose, route, and time.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Serve as team leader when assigned, preserve global oversight, and avoid task fixation.",
+              "Direct rhythm interpretation, manual defibrillation, advanced-airway decisions, medication timing, reversible-cause treatment, ROSC transition, and termination evaluation.",
+              "Use waveform capnography and available CPR feedback to identify correctable ventilation or compression problems.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Operational team model for adult cardiac arrest."],
+    indications: [
+      "Any adult cardiac arrest managed by two or more Claiborne EMS responders.",
+      "Training, simulation, and quality-improvement review of adult cardiac-arrest team performance.",
+    ],
     contraindications: [],
-    assessment: [{ title: "Focused cardiac assessment", items: ["Apply Universal Patient Care and obtain two complete vital-sign sets when feasible.", "Place on continuous cardiac monitoring; obtain a 12-lead ECG when pulse is present and it will not delay urgent treatment.", "Assess onset, symptoms, medications, implanted devices, anticoagulants, prior cardiac disease, and reversible causes.", "Reassess after every shock, medication, pacing/cardioversion attempt, or major clinical change."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm and the current Tennessee adult cardiac protocol.", "Prioritize CPR quality, defibrillation, oxygenation/ventilation, and treatment of reversible causes.", "Notify the receiving facility early for unstable patients and time-sensitive cardiac conditions.", "Do not delay transport for nonessential procedures."],
+    assessment: [
+      {
+        title: "Team assignment",
+        items: [
+          "Identify one team leader and assign compressor 1, compressor 2, airway, monitor/defibrillator, IV/medications, and recorder/timer functions as personnel arrive.",
+          "Combine functions when staffing is limited, but do not combine tasks in a way that interrupts compressions, delays defibrillation, or prevents the leader from maintaining oversight.",
+          "Use predetermined equipment positioning and role cards when available.",
+        ],
+      },
+      {
+        title: "CPR quality",
+        items: [
+          "Compress at 100–120/min to a depth of at least 2 inches while avoiding depth greater than 2.4 inches.",
+          "Allow complete chest recoil, minimize interruptions, and target a chest-compression fraction greater than 80%.",
+          "Change compressors every two minutes or sooner for fatigue; complete the change during the planned rhythm check in 10 seconds or less.",
+          "Use an audiovisual CPR feedback device when available and correct low or decreasing EtCO₂ by reassessing CPR quality, airway, and ventilation.",
+        ],
+      },
+      {
+        title: "Airway and rhythm-cycle coordination",
+        items: [
+          "Use 30:2 compressions to ventilations before placement of an advanced airway.",
+          "With an advanced airway in place, provide continuous compressions and one breath every six seconds with continuous waveform capnography.",
+          "Prepare the next intervention before each two-minute rhythm check and precharge the defibrillator during compressions when feasible.",
+          "Keep rhythm and pulse checks at 10 seconds or less and immediately resume compressions after any shock or no-shock decision.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Begin high-quality CPR, BVM ventilation with oxygen, pad placement, and the event timer immediately.",
+      "Assign team functions as personnel arrive; the team leader states the working rhythm pathway and the next expected intervention.",
+      "Use closed-loop communication: address the assigned provider, give one clear instruction, require repeat-back, and announce completion.",
+      "The recorder announces the approaching two-minute rhythm check and tracks CPR cycles, rhythms, shocks, medications, airway events, EtCO₂, ROSC, transport, and termination times.",
+      "At each two-minute cycle, rotate compressors, perform a rhythm/pulse check in 10 seconds or less, deliver a shock when indicated, and immediately resume CPR.",
+      "Continuously reassess compression quality, ventilation rate, pad contact, airway position, vascular access, medication timing, and reversible causes.",
+      "After ROSC, deliberately transition to AC-10 and AC-13. When field termination is being considered, open AC-12.",
+      "After the event, complete a brief team debrief, preserve monitor/CPR data when available, and restore equipment readiness.",
+    ],
     medications: [],
-    warnings: ["The team leader should avoid performing a task that prevents global oversight.", "Limit compressor changes and rhythm checks to 10 seconds or less."],
-    clinicalPearls: ["Predetermined positioning and role cards reduce delays and duplicated work."],
-    specialPopulations: [{ title: "Special circumstances", items: ["Pregnancy, hypothermia, toxicologic arrest, electrocution, drowning, implanted mechanical support, and traumatic arrest may require a modified pathway and early Medical Control."] }],
-    references: ["Tennessee EMS ALS/BLS Blended Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison.", "Claiborne County EMS Clinical Protocols."],
+    warnings: [
+      "The team leader must avoid performing a task that prevents global oversight.",
+      "Do not interrupt compressions for IV/IO access, airway placement, medication preparation, or nonessential movement.",
+      "Avoid excessive ventilation before and after advanced-airway placement.",
+      "Do not allow compressor rotation, rhythm analysis, pulse checks, charging, or shock delivery to create a pause longer than 10 seconds.",
+      "Do not delay movement when transport is indicated by the active arrest, special-circumstance, or termination protocol.",
+    ],
+    clinicalPearls: [
+      "Predetermined positioning and role cards reduce duplicated work and delays.",
+      "The next compressor should be in position before the two-minute cycle ends.",
+      "Charging during compressions and resuming compressions immediately after shock delivery shortens the peri-shock pause.",
+      "Structured post-event feedback and debriefing can improve CPR quality and team performance.",
+    ],
+    specialPopulations: [
+      {
+        title: "Limited staffing",
+        items: [
+          "Prioritize compressions, defibrillation, and effective ventilation before access, advanced airway, or documentation tasks.",
+          "Request additional personnel early and reassign functions explicitly as responders arrive.",
+        ],
+      },
+      {
+        title: "Arrest during movement or transport",
+        items: [
+          "Stop vehicle movement when required to safely deliver manual CPR or defibrillation.",
+          "Reconfirm team functions and equipment security before patient movement and after every transfer between surfaces.",
+        ],
+      },
+    ],
+    actionLinks: [
+      { label: "AC-03 Adult Cardiac Arrest", description: "Open for the primary adult cardiac-arrest algorithm.", href: "/protocols/ac/ac-03", kind: "protocol" },
+      { label: "AC-09 VF / Pulseless VT", description: "Open for shockable VF/pVT arrest treatment.", href: "/protocols/ac/ac-09", kind: "protocol" },
+      { label: "AC-10 Post-Resuscitation Care", description: "Open immediately after sustained ROSC.", href: "/protocols/ac/ac-10", kind: "protocol" },
+      { label: "AC-12 Termination of Resuscitation", description: "Open when persistent adult OHCA meets evaluation criteria.", href: "/protocols/ac/ac-12", kind: "protocol" },
+      { label: "AC-13 Post-Arrest Temperature Management", description: "Open after ROSC when the adult remains unresponsive to verbal commands.", href: "/protocols/ac/ac-13", kind: "protocol" },
+      { label: "TB-10 Traumatic Arrest", description: "Open for cardiac arrest caused by trauma.", href: "/protocols/tb/tb-10", kind: "protocol" },
+    ],
+    references: [
+      "American Heart Association. 2025 Guidelines for CPR and ECC: Adult Basic Life Support.",
+      "American Heart Association. 2025 Guidelines for CPR and ECC: Adult Advanced Life Support.",
+      "American Heart Association. 2025 Guidelines for CPR and ECC: Systems of Care.",
+      "Claiborne EMS adult cardiac-arrest, rhythm, airway, post-resuscitation, and termination protocols.",
+    ],
     sourcePdf: "/protocols/claiborne/ac-11-team-focused-cpr-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 12, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Current Tennessee scope, medication dosing, and standing orders control if any conflict exists.", "The imported North Carolina PDF remains available for source comparison."],
+    reviewFlags: [
+      "Clinical content approved by the Claiborne EMS medical director during protocol review.",
+      "This operational pathway supplements rather than replaces the applicable clinical cardiac-arrest protocol.",
+      "App content remains a beta field reference until formal agency release and implementation approval.",
+    ],
   },
   {
     id: "ac-12",
     title: "Termination of Resuscitation",
     categoryId: "ac",
     category: "Adult Cardiac",
-    overview: ["Native Claiborne County adult cardiac pathway using Tennessee scope and standing orders with a concise NC-style field algorithm.", "Use Universal Patient Care and the rhythm- or complaint-specific pathway together."],
+    overview: [
+      "Field termination pathway for an adult, nontraumatic, out-of-hospital cardiac arrest after a complete resuscitation and application of the Universal Termination of Resuscitation rule.",
+      "Termination requires Medical Control authorization. When any required criterion is absent or an exclusion is present, continue resuscitation and consider transport.",
+    ],
     flow: [
-      { title: "Confirm Eligibility", text: "Adult arrest • adequate resuscitation • no exclusion requiring continued care.", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Complete Resuscitation", text: "High-quality CPR, rhythm-specific care, airway/ventilation, access, reversible causes.", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Persistent Arrest?", text: "No ROSC and termination criteria met after required effort/time.", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Medical Control", text: "Contact when required by Tennessee or Claiborne policy; document discussion.", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
-      { title: "Terminate + Support", text: "Stop resuscitation, confirm death, support family, preserve scene when indicated.", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Documentation", text: "Times, rhythms, interventions, EtCO₂, causes considered, decision, disposition.", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      { title: "Adult Nontraumatic OHCA", text: "Begin AC-03/AC-11 care • confirm no special-circumstance exclusion", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
+      { title: "Complete Resuscitation", text: "At least 20 min high-quality care • rhythm pathway • airway/ventilation • access/medications • reversible causes", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "Universal TOR Criteria", text: "Not witnessed by EMS • no shock before transport • no ROSC before transport", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "All 3 Present?", text: "No: continue resuscitation and consider transport • Yes: evaluate full clinical context", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "Medical Control Required", text: "Report criteria, exclusions, resuscitation, rhythms, EtCO₂ trend, and reversible causes", levels: ["EMT", "AEMT", "Paramedic", "Medical Control"], tone: "urgent" },
+      { title: "Termination Authorized?", text: "Yes: stop CPR, record time, support family, preserve scene • No/unavailable: continue and transport", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "Document + Disposition", text: "Times • criteria • interventions • physician order • notifications • family support • scene disposition", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
     ],
     careModules: [
-      { title: "Provider-Level Actions", summary: "Act at the highest authorized level present without delaying lifesaving BLS care.", levels: [
-        { level: "EMT", actions: ["Immediate assessment, CPR/AED when indicated, oxygenation/ventilation, pads, vital signs, and rapid transport.", "Assist with medications and procedures authorized by Tennessee EMT scope."] },
-        { level: "AEMT", actions: ["All EMT care plus IV/IO access and authorized medications within Tennessee AEMT scope.", "Do not delay defibrillation, pacing, cardioversion, or transport for access attempts."] },
-        { level: "Paramedic", actions: ["Rhythm interpretation, manual defibrillation, synchronized cardioversion, pacing, advanced airway, and Tennessee-authorized cardiac medications.", "Lead destination, Medical Control, and post-intervention reassessment decisions."] },
-      ] },
+      {
+        title: "Provider-Level Actions",
+        summary: "All levels continue resuscitation while criteria are evaluated; no provider stops CPR solely from the checklist.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Continue high-quality CPR, AED use, ventilation, timing, and documentation while determining EMS witness status, shocks delivered, and any ROSC.",
+              "Identify special circumstances and immediately report any exclusion or possible reversible cause.",
+              "Do not terminate resuscitation without a documented Medical Control order unless a separate obvious-death or valid DNR policy applies.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT actions plus indicated vascular access, arrest medication, airway support, and reversible-cause treatment.",
+              "Confirm the duration and adequacy of resuscitation and assist with the Medical Control report and order read-back.",
+              "Continue resuscitation and transport when any Universal TOR criterion is absent, an exclusion is present, or Medical Control is unavailable.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Confirm that at least 20 minutes of documented resuscitation, rhythm-specific care, and reversible-cause evaluation have been completed.",
+              "Confirm all three Universal TOR criteria and absence of exclusions before requesting termination authorization.",
+              "Provide the complete resuscitation summary to Medical Control, repeat the order back, direct termination when authorized, and coordinate disposition.",
+            ],
+          },
+          {
+            level: "Medical Control",
+            actions: [
+              "Review eligibility, Universal TOR criteria, exclusions, resuscitation course, rhythms, shocks, ROSC, EtCO₂ trend, reversible causes, and operational circumstances before authorizing termination.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Adult nontraumatic cardiac arrest being considered for field termination under Tennessee and Claiborne policy."],
-    contraindications: [],
-    assessment: [{ title: "Focused cardiac assessment", items: ["Apply Universal Patient Care and obtain two complete vital-sign sets when feasible.", "Place on continuous cardiac monitoring; obtain a 12-lead ECG when pulse is present and it will not delay urgent treatment.", "Assess onset, symptoms, medications, implanted devices, anticoagulants, prior cardiac disease, and reversible causes.", "Reassess after every shock, medication, pacing/cardioversion attempt, or major clinical change."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm and the current Tennessee adult cardiac protocol.", "Prioritize CPR quality, defibrillation, oxygenation/ventilation, and treatment of reversible causes.", "Notify the receiving facility early for unstable patients and time-sensitive cardiac conditions.", "Do not delay transport for nonessential procedures."],
+    indications: [
+      "Adult, nontraumatic, out-of-hospital cardiac arrest with persistent pulselessness after at least 20 minutes of documented high-quality resuscitation.",
+      "All three Universal TOR criteria are present and Medical Control authorization is available.",
+    ],
+    contraindications: [
+      "EMS-witnessed arrest, any shock delivered before transport, or any ROSC before transport.",
+      "Pediatric cardiac arrest, traumatic arrest, overdose or suspected toxicologic arrest, pregnancy, hypothermia, drowning/submersion, lightning/electrocution, or in-hospital cardiac arrest.",
+      "A reversible special circumstance that warrants continued treatment or transport.",
+      "Medical Control declines termination or cannot be reached.",
+    ],
+    assessment: [
+      {
+        title: "Universal Termination of Resuscitation rule",
+        items: [
+          "The arrest was not witnessed by EMS personnel.",
+          "No shock was delivered before transport.",
+          "No return of spontaneous circulation occurred before transport.",
+          "All three criteria must be present. If any criterion is absent, continue resuscitation and consider transport.",
+        ],
+      },
+      {
+        title: "Required resuscitation before consideration",
+        items: [
+          "Complete at least 20 minutes of documented high-quality CPR and rhythm-specific resuscitation before applying the Claiborne termination pathway.",
+          "Provide appropriate defibrillation, ventilation, airway management, vascular access, arrest medications, and reversible-cause treatment without interrupting compressions.",
+          "Review witness information, bystander care, downtime, all rhythms, shocks, transient pulse or movement, medication response, airway position, EtCO₂ trend, and possible reversible causes.",
+          "The 20-minute safeguard does not independently establish futility and does not replace the Universal TOR criteria or Medical Control decision.",
+        ],
+      },
+      {
+        title: "Exclusion screen",
+        items: [
+          "Do not use this pathway for pediatric, traumatic, overdose/toxicologic, pregnancy-associated, hypothermic, drowning/submersion, lightning/electrocution, or in-hospital arrest.",
+          "Use separate obvious-death, valid DNR/advance-directive, traumatic-arrest, and special-circumstance protocols when applicable.",
+          "When history or circumstances are uncertain, continue resuscitation, consult Medical Control, and transport as directed.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Continue AC-03 and AC-11 resuscitation while termination eligibility is evaluated.",
+      "After at least 20 minutes of documented high-quality resuscitation, confirm that the arrest was not witnessed by EMS, no shock was delivered before transport, and no ROSC occurred before transport.",
+      "If any Universal TOR criterion is absent, continue resuscitation and consider transport.",
+      "Confirm that no exclusion or reversible special circumstance requires continued treatment or transport.",
+      "Contact Medical Control and report the patient, circumstances, Universal TOR criteria, exclusions, duration, rhythms, shocks, medications, airway, EtCO₂ trend, reversible causes, and response to treatment.",
+      "If termination is authorized, repeat the order back, stop resuscitation, confirm persistent apnea and pulselessness, and document the termination time.",
+      "If termination is declined or Medical Control is unavailable, continue resuscitation and transport unless a separate obvious-death or valid DNR policy applies.",
+      "Support family and witnesses, explain the process compassionately, preserve the scene when investigation is possible, and coordinate disposition and required notifications.",
+    ],
     medications: [],
-    warnings: ["Do not terminate when hypothermia, pregnancy, toxicologic cause, electrocution, lightning, drowning, or another reversible special circumstance warrants continued resuscitation.", "Follow separate traumatic-arrest and obvious-death policies when applicable."],
-    clinicalPearls: ["Termination should be a team decision grounded in protocol, clinical context, and complete documentation."],
-    specialPopulations: [{ title: "Special circumstances", items: ["Pregnancy, hypothermia, toxicologic arrest, electrocution, drowning, implanted mechanical support, and traumatic arrest may require a modified pathway and early Medical Control."] }],
-    references: ["Tennessee EMS ALS/BLS Blended Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison.", "Claiborne County EMS Clinical Protocols."],
+    warnings: [
+      "EtCO₂ must never be the sole reason to terminate resuscitation.",
+      "In an intubated adult, EtCO₂ below 10 mmHg after 20 minutes may contribute only as one component of a multimodal decision.",
+      "Do not apply a specific EtCO₂ cutoff to a nonintubated patient or a patient ventilated through a supraglottic airway.",
+      "Do not terminate when any Universal TOR criterion is absent, an exclusion is present, or Medical Control authorization has not been obtained.",
+      "Do not remove tubes, vascular access, clothing, or other potential evidence when the death may require medical-examiner or law-enforcement investigation.",
+    ],
+    clinicalPearls: [
+      "The Universal TOR rule is intended for a mixed BLS/ALS or tiered EMS response system.",
+      "A delivered shock, transient ROSC, or EMS-witnessed arrest removes the patient from this field-termination pathway.",
+      "Low EtCO₂ should first prompt reassessment of compression quality, ventilation rate, airway placement, and reversible causes.",
+      "Use clear team communication and compassionate family support before and after the termination decision.",
+    ],
+    specialPopulations: [
+      {
+        title: "Separate pathways required",
+        items: [
+          "Use TB-10 for traumatic arrest, TE-07 for suspected overdose/toxicologic arrest, TE-05 for hypothermia, TE-03 for drowning/submersion, and AO-03 for pregnancy-associated emergencies.",
+          "Consult Medical Control early for any uncertain cause or exceptional circumstance.",
+        ],
+      },
+      {
+        title: "Obvious death or valid DNR",
+        items: [
+          "Obvious-death criteria and valid DNR/advance-directive decisions are governed by separate policy and do not require completion of the Universal TOR pathway.",
+        ],
+      },
+    ],
+    actionLinks: [
+      { label: "AC-03 Adult Cardiac Arrest", description: "Continue the primary adult cardiac-arrest pathway while eligibility is evaluated.", href: "/protocols/ac/ac-03", kind: "protocol" },
+      { label: "AC-09 VF / Pulseless VT", description: "Open for any shockable rhythm; a delivered shock excludes Universal TOR.", href: "/protocols/ac/ac-09", kind: "protocol" },
+      { label: "AC-11 TEAM-Focused CPR", description: "Open for role assignment, CPR quality, timing, and documentation.", href: "/protocols/ac/ac-11", kind: "protocol" },
+      { label: "TB-10 Traumatic Arrest", description: "Use instead for arrest caused by trauma.", href: "/protocols/tb/tb-10", kind: "protocol" },
+      { label: "TE-03 Drowning / Submersion", description: "Use instead for drowning or submersion-related arrest.", href: "/protocols/te/te-03", kind: "protocol" },
+      { label: "TE-05 Hypothermia", description: "Use instead for suspected hypothermic arrest.", href: "/protocols/te/te-05", kind: "protocol" },
+      { label: "TE-07 Overdose / Toxic Ingestion", description: "Use instead for suspected overdose or toxicologic arrest.", href: "/protocols/te/te-07", kind: "protocol" },
+      { label: "AO-03 OB-GYN Emergency", description: "Open for pregnancy-associated arrest or another obstetric emergency.", href: "/protocols/ao/ao-03", kind: "protocol" },
+    ],
+    references: [
+      "American Heart Association. 2025 Guidelines for CPR and ECC: Adult Advanced Life Support—Termination of Resuscitative Measures.",
+      "American Heart Association. 2025 BLS/Universal Termination of Resuscitation Rules.",
+      "American Heart Association. 2025 ALS Termination of Resuscitation Rule.",
+      "American Heart Association. 2025 Guidelines for CPR and ECC: Ethics.",
+      "Claiborne EMS adult cardiac-arrest, special-circumstance, death-in-the-field, and disposition policies.",
+    ],
     sourcePdf: "/protocols/claiborne/ac-12-termination-of-cpr-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 12, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Current Tennessee scope, medication dosing, and standing orders control if any conflict exists.", "The imported North Carolina PDF remains available for source comparison."],
+    reviewFlags: [
+      "Clinical content approved by the Claiborne EMS medical director during protocol review.",
+      "Formal implementation requires alignment with the agency death-in-the-field, DNR, medical-examiner, law-enforcement, documentation, and disposition policies.",
+      "App content remains a beta field reference until formal agency release and implementation approval.",
+    ],
   },
   {
     id: "ac-13",
-    title: "Targeted Temperature Management",
+    title: "Post-Arrest Temperature Management",
     categoryId: "ac",
     category: "Adult Cardiac",
-    overview: ["Native Claiborne County adult cardiac pathway using Tennessee scope and standing orders with a concise NC-style field algorithm.", "Use Universal Patient Care and the rhythm- or complaint-specific pathway together."],
+    overview: [
+      "Prehospital temperature-management pathway for an adult with sustained ROSC who remains unresponsive to verbal commands.",
+      "Field priorities are accurate temperature assessment, prevention of fever and further heat loss, avoidance of rapid cold-fluid cooling or rapid rewarming, and uninterrupted post-resuscitation stabilization and transport.",
+    ],
     flow: [
-      { title: "Post-ROSC Stabilize", text: "Airway, ventilation, perfusion, ECG, glucose, and treat immediate threats.", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
-      { title: "Measure Temperature", text: "Use reliable core or approved temperature measurement when available.", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Prevent Fever", text: "Remove excessive insulation; use passive measures and destination plan.", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
-      { title: "Active Cooling Authorized?", text: "Use only the Tennessee/Claiborne approved method; avoid uncontrolled cold-fluid loading.", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Treat Shivering / Complications", text: "Per protocol and Medical Control; monitor rhythm, BP, and glucose.", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
-      { title: "Transport", text: "Early receiving notification and continuous post-arrest care.", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
+      { title: "Sustained ROSC", text: "Open AC-10 • stabilize airway, ventilation, perfusion, rhythm, ECG, and glucose", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
+      { title: "Follows Verbal Commands?", text: "Yes: continue AC-10 and prevent fever • No: enter temperature-management pathway", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "Measure Temperature", text: "Use a reliable core or approved temperature method when available • document site and trend", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "Prevent Fever / Exposure", text: "Remove excessive heat sources • maintain normal environment • prevent further heat loss if cold", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
+      { title: "No Routine Field Cooling", text: "Do not rapidly infuse cold IV fluids or initiate uncontrolled active cooling", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Spontaneously Hypothermic?", text: "Prevent additional heat loss • avoid rapid active rewarming", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
+      { title: "Monitor + Transport", text: "ECG • SpO₂ • BP/MAP • temperature • EtCO₂ with advanced airway • early receiving notification", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
     ],
     careModules: [
-      { title: "Provider-Level Actions", summary: "Act at the highest authorized level present without delaying lifesaving BLS care.", levels: [
-        { level: "EMT", actions: ["Immediate assessment, CPR/AED when indicated, oxygenation/ventilation, pads, vital signs, and rapid transport.", "Assist with medications and procedures authorized by Tennessee EMT scope."] },
-        { level: "AEMT", actions: ["All EMT care plus IV/IO access and authorized medications within Tennessee AEMT scope.", "Do not delay defibrillation, pacing, cardioversion, or transport for access attempts."] },
-        { level: "Paramedic", actions: ["Rhythm interpretation, manual defibrillation, synchronized cardioversion, pacing, advanced airway, and Tennessee-authorized cardiac medications.", "Lead destination, Medical Control, and post-intervention reassessment decisions."] },
-      ] },
+      {
+        title: "Provider-Level Actions",
+        summary: "Temperature management supplements AC-10 and must not delay post-ROSC stabilization or transport.",
+        levels: [
+          {
+            level: "EMT",
+            actions: [
+              "Assess response to verbal commands, obtain and document temperature when equipment is available, and prevent fever, excessive heat exposure, or further heat loss.",
+              "Continue cardiac/AED monitoring, SpO₂, serial blood pressure, glucose assessment, airway support, and frequent reassessment.",
+              "Do not initiate rapid cold-fluid cooling or uncontrolled active surface cooling.",
+            ],
+          },
+          {
+            level: "AEMT",
+            actions: [
+              "Perform all EMT actions and establish IV access without delaying transport.",
+              "Administer fluids only for the hemodynamic indications and doses in AC-10; do not use chilled crystalloid for temperature control.",
+              "Trend temperature, glucose, blood pressure, rhythm, oxygenation, and response to treatment.",
+            ],
+          },
+          {
+            level: "Paramedic",
+            actions: [
+              "Perform all prior actions and direct advanced airway, waveform capnography, ventilation, hemodynamic support, serial ECG, and re-arrest preparedness under AC-10.",
+              "Document neurologic responsiveness before sedative or paralytic medication when feasible and report the temperature trend and neurologic findings to the receiving hospital.",
+              "Communicate that an adult remaining unresponsive requires a deliberate receiving-hospital temperature-control strategy.",
+            ],
+          },
+        ],
+      },
     ],
-    indications: ["Comatose adult after ROSC when temperature management is indicated by current Tennessee/receiving-system policy."],
-    contraindications: [],
-    assessment: [{ title: "Focused cardiac assessment", items: ["Apply Universal Patient Care and obtain two complete vital-sign sets when feasible.", "Place on continuous cardiac monitoring; obtain a 12-lead ECG when pulse is present and it will not delay urgent treatment.", "Assess onset, symptoms, medications, implanted devices, anticoagulants, prior cardiac disease, and reversible causes.", "Reassess after every shock, medication, pacing/cardioversion attempt, or major clinical change."] }],
-    treatmentSteps: ["Follow the quick-flow algorithm and the current Tennessee adult cardiac protocol.", "Prioritize CPR quality, defibrillation, oxygenation/ventilation, and treatment of reversible causes.", "Notify the receiving facility early for unstable patients and time-sensitive cardiac conditions.", "Do not delay transport for nonessential procedures."],
+    indications: [
+      "Adult with sustained ROSC after cardiac arrest who remains unresponsive to verbal commands, regardless of arrest location or initial rhythm.",
+    ],
+    contraindications: [
+      "No separate active prehospital temperature-control pathway is indicated for an adult who follows verbal commands after ROSC; continue AC-10 and prevent fever.",
+      "Routine prehospital cooling with rapid cold-IV-fluid infusion is not indicated.",
+    ],
+    assessment: [
+      {
+        title: "Eligibility and neurologic assessment",
+        items: [
+          "Confirm sustained ROSC and immediately begin or continue AC-10 post-resuscitation care.",
+          "Assess whether the patient follows verbal commands and document the neurologic examination before sedatives or paralytics when feasible.",
+          "Do not make an early neurologic prognosis in the field.",
+        ],
+      },
+      {
+        title: "Temperature assessment",
+        items: [
+          "Measure temperature as soon as practical using a reliable core or approved device when available.",
+          "Document the measurement site, value, time, environmental exposure, wet clothing, and temperature trend.",
+          "Assess for fever, spontaneous hypothermia, shivering, environmental heat or cold exposure, and treatments performed before EMS arrival.",
+        ],
+      },
+      {
+        title: "Concurrent post-ROSC monitoring",
+        items: [
+          "Continue cardiac monitoring, defibrillation-pad placement, SpO₂, serial blood pressure/MAP, glucose, and temperature trending.",
+          "Use continuous waveform capnography when an advanced airway is present and reassess airway position after every movement.",
+          "Obtain and transmit a 12-lead ECG, treat hypotension under AC-10, and remain prepared for immediate re-arrest.",
+        ],
+      },
+    ],
+    treatmentSteps: [
+      "Open AC-10 and prioritize airway, physiologic ventilation, oxygenation, MAP at least 65 mmHg, glucose assessment, 12-lead ECG, and treatment of the arrest cause.",
+      "If the adult remains unresponsive to verbal commands, measure and trend temperature while preventing fever and avoidable environmental heat exposure.",
+      "Do not routinely initiate active prehospital cooling and do not rapidly infuse cold IV fluids for temperature control.",
+      "If the patient is spontaneously hypothermic, remove wet clothing, insulate from further heat loss, handle gently, and avoid rapid active rewarming.",
+      "Continue continuous monitoring and frequent reassessment; treat re-arrest, dysrhythmia, hypotension, hypoglycemia, airway problems, or seizures under the applicable linked protocol.",
+      "Notify the receiving hospital early and report arrest details, ROSC time, neurologic responsiveness, temperature value/site/trend, airway, EtCO₂, ECG, blood pressure, glucose, and treatments.",
+      "Document that the receiving-hospital AHA temperature-control strategy for adults remaining unresponsive is 32°C–37.5°C for at least 36 hours; this is destination guidance and not a field target EMS must achieve.",
+    ],
     medications: [],
-    warnings: ["Do not allow temperature interventions to delay airway, perfusion, ECG, or transport.", "Avoid routine rapid infusion of large volumes of cold crystalloid."],
-    clinicalPearls: ["Fever prevention begins immediately, even when active cooling is not initiated in the field."],
-    specialPopulations: [{ title: "Special circumstances", items: ["Pregnancy, hypothermia, toxicologic arrest, electrocution, drowning, implanted mechanical support, and traumatic arrest may require a modified pathway and early Medical Control."] }],
-    references: ["Tennessee EMS ALS/BLS Blended Protocol Guidelines, current edition.", "North Carolina College of Emergency Physicians EMS Protocols, 2025 organization and source comparison.", "Claiborne County EMS Clinical Protocols."],
+    warnings: [
+      "Do not let temperature measurement or intervention delay airway management, ventilation, perfusion support, ECG acquisition, destination notification, or transport.",
+      "Do not rapidly infuse cold IV fluids for routine prehospital temperature control.",
+      "Do not use uncontrolled ice packs, immersion, or another active-cooling method that cannot be continuously monitored and regulated.",
+      "Avoid rapid active rewarming of a spontaneously hypothermic post-arrest patient.",
+      "Do not make early neurologic prognostication in the field.",
+    ],
+    clinicalPearls: [
+      "AHA recommends a deliberate hospital temperature-control strategy for every adult who remains unresponsive to verbal commands after ROSC.",
+      "The recommended hospital temperature range is 32°C–37.5°C and the strategy should continue for at least 36 hours while the adult remains unresponsive.",
+      "Prehospital priorities are stabilization, fever prevention, accurate communication, and avoidance of harmful rapid cooling or rewarming.",
+      "A normal initial temperature does not eliminate the need for ongoing fever prevention and hospital temperature control.",
+    ],
+    specialPopulations: [
+      {
+        title: "Spontaneous hypothermia after ROSC",
+        items: [
+          "Prevent further heat loss and avoid rapid active rewarming.",
+          "Open TE-05 when hypothermia contributed to the arrest or remains a primary clinical problem.",
+        ],
+      },
+      {
+        title: "Responsive after ROSC",
+        items: [
+          "Continue AC-10 care and avoid fever, but do not place a patient who follows verbal commands into the unresponsive post-arrest temperature-control pathway.",
+        ],
+      },
+      {
+        title: "Post-intubation care",
+        items: [
+          "Open AR-08 for advanced-airway confirmation, ventilation, sedation, analgesia, and reassessment after movement.",
+        ],
+      },
+    ],
+    actionLinks: [
+      { label: "AC-10 Post-Resuscitation Care", description: "Primary pathway for all immediate post-ROSC stabilization.", href: "/protocols/ac/ac-10", kind: "protocol" },
+      { label: "AC-09 VF / Pulseless VT", description: "Open immediately for re-arrest in VF or pulseless VT.", href: "/protocols/ac/ac-09", kind: "protocol" },
+      { label: "AC-04 ACS / STEMI", description: "Open for persistent STEMI, acute coronary occlusion, or ongoing ischemia after ROSC.", href: "/protocols/ac/ac-04", kind: "protocol" },
+      { label: "AR-08 Post-Intubation / BIAD Management", description: "Open for advanced-airway confirmation, ventilation, sedation, and analgesia.", href: "/protocols/ar/ar-08", kind: "protocol" },
+      { label: "UP-04 Altered Mental Status", description: "Open for glucose below 70 mg/dL or another persistent altered-mental-status cause.", href: "/protocols/up/up-04", kind: "protocol" },
+      { label: "TE-05 Hypothermia", description: "Open when hypothermia contributed to the arrest or remains clinically significant.", href: "/protocols/te/te-05", kind: "protocol" },
+    ],
+    references: [
+      "American Heart Association. 2025 Guidelines for CPR and ECC: Post-Cardiac Arrest Care—Temperature Control After Cardiac Arrest in Adults.",
+      "American Heart Association. 2025 Adult Post-Cardiac Arrest Care Algorithm.",
+      "Claiborne EMS post-resuscitation, airway, glucose, hypothermia, and rhythm protocols.",
+    ],
     sourcePdf: "/protocols/claiborne/ac-13-targeted-temperature-management-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 29, 2026",
+    revisionDate: "August 2026",
+    lastVerifiedDate: "August 12, 2026",
     reviewStatus: "Reviewed",
-    reviewFlags: ["Medical-director approval is required before clinical release.", "Current Tennessee scope, medication dosing, and standing orders control if any conflict exists.", "The imported North Carolina PDF remains available for source comparison."],
+    reviewFlags: [
+      "Clinical content approved by the Claiborne EMS medical director during protocol review.",
+      "The 32°C–37.5°C range and at-least-36-hour duration describe the receiving-hospital temperature-control strategy, not a prehospital target EMS must achieve.",
+      "App content remains a beta field reference until formal agency release and implementation approval.",
+    ],
   },
+
   {
     id: "ac-14",
     title: "LVAD Emergency",
