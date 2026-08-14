@@ -1,5 +1,6 @@
 import type {
   ProviderLevel,
+  ProtocolActionLink,
   ProtocolCareModule,
   ProtocolFlowNode,
   StructuredProtocolContent,
@@ -22,6 +23,7 @@ type AirwayProtocolInput = {
   medications?: { name: string; dose: string; notes?: string[] }[];
   warnings?: string[];
   clinicalPearls?: string[];
+  actionLinks?: ProtocolActionLink[];
   reviewStatus?: "Draft" | "Reviewed" | "Approved";
   reviewFlags?: string[];
   lastVerifiedDate?: string;
@@ -59,6 +61,7 @@ function airwayProtocol(
     warnings: input.warnings ?? [],
     clinicalPearls: input.clinicalPearls ?? [],
     specialPopulations: [],
+    actionLinks: input.actionLinks ?? [],
     references: [
       "Claiborne County EMS approved protocol manual.",
       "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
@@ -182,46 +185,75 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     sourcePdf: "/protocols/claiborne/ar-03-airway-drug-assisted-intubation-protocol.pdf",
     pages: 2,
     overview: [
-      "Drug-assisted airway is optional and requires specific agency authorization, competency, performance improvement, and at least two Paramedics on scene.",
-      "Correct hypoxia and hypotension before administering a sedative-paralytic sequence whenever possible.",
+      "Drug-assisted airway (DAI) is an optional, high-risk procedure requiring specific agency authorization, documented competency, performance improvement, and at least two Paramedics on scene.",
+      "Correct hypoxia and hypotension before administering a sedative-paralytic sequence whenever possible; resuscitation takes priority over intubation.",
     ],
     indications: [
-      "Failure to protect the airway, inability to oxygenate, inability to ventilate, or impending airway compromise when drug-assisted airway is authorized.",
+      "Failure to protect the airway, inability to oxygenate, inability to ventilate, or impending airway compromise when less-invasive care is inadequate and DAI is authorized.",
     ],
     flow: [
-      { title: "DAI Indicated + Authorized?", text: "Airway protection failure • oxygenation/ventilation failure • impending compromise.", levels: ["Paramedic"], tone: "start" },
-      { title: "Prepare Completely", text: "Preoxygenate • suction • two IV/IO sites • primary and rescue devices • two Paramedics.", levels: ["Paramedic"], tone: "urgent" },
-      { title: "Hypoxic / Hypotensive / Combative?", text: "Use resuscitation-first pathway and correct physiology before paralysis.", levels: ["Paramedic"], tone: "decision" },
-      { title: "Induction + Paralysis", text: "Use authorized agent and dose; immediately proceed to airway placement.", levels: ["Paramedic"], tone: "action" },
-      { title: "Verify Placement", text: "Continuous waveform EtCO₂, bilateral exam, tube depth, SpO₂, and securement.", levels: ["Paramedic"], tone: "urgent" },
-      { title: "Post-Airway Management", text: "Analgesia/sedation, ventilation, monitoring, airway form, and transport.", levels: ["Paramedic"], tone: "transport" },
+      { title: "DAI Indicated + Authorized?", text: "Airway protection failure • oxygenation/ventilation failure • impending compromise; not for convenience.", levels: ["Paramedic"], tone: "start" },
+      { title: "Prepare Completely", text: "Two Paramedics • monitor • suction • BVM/PEEP • primary and rescue airway • surgical-airway plan.", levels: ["Paramedic"], tone: "urgent" },
+      { title: "Preoxygenate + Resuscitate", text: "High-flow oxygen, NIPPV or BVM/PEEP; correct hypoxia and hypotension before paralysis.", levels: ["Paramedic"], tone: "action" },
+      { title: "Induction + Paralysis", text: "Select one induction agent, use the appropriate paralytic, and proceed immediately to airway placement.", levels: ["Paramedic"], tone: "action" },
+      { title: "Airway Successful?", text: "Waveform EtCO₂, bilateral exam, tube depth, SpO₂, and securement. If not: BVM/BIAD and AR-02.", levels: ["Paramedic"], tone: "decision" },
+      { title: "Post-Airway Management", text: "Pain-first analgesia/sedation • ventilate 10–12/min • continuous monitoring • transport.", levels: ["Paramedic"], tone: "transport" },
     ],
     emt: [
-      "Assist with preoxygenation, suction, BVM, equipment preparation, physiologic monitoring, and backup airway readiness.",
+      "Assist with preoxygenation, suction, BVM, equipment preparation, physiologic monitoring, and backup-airway readiness.",
       "Continue oxygenation and ventilation throughout preparation and between attempts.",
     ],
     aemt: [
       "Perform all EMT care plus authorized vascular access, rescue BIAD support, monitoring, and assistance with the failed-airway plan.",
     ],
     paramedic: [
-      "Confirm indications, authorization, two-Paramedic staffing, preoxygenation, two access points, suction, backup airway, and failed-airway plan before medication.",
-      "Correct hypoxia/hypotension before paralytic administration, limit attempts, verify with waveform capnography, and begin pain-first post-intubation care.",
+      "Confirm indications, authorization, two-Paramedic staffing, monitoring, preoxygenation, suction, primary device, rescue BIAD, surgical-airway equipment, and a failed-airway plan before medication.",
+      "Obtain two IV/IO access points when feasible, but do not delay life-saving oxygenation or ventilation for a second access attempt.",
+      "Correct hypoxia and hypotension before paralytic administration, limit laryngoscopy attempts, verify with waveform capnography, and begin pain-first post-intubation care immediately.",
+    ],
+    treatmentSteps: [
+      "Do not perform DAI solely for convenience, because BVM is effective, or for a short transport when BVM or BIAD safely maintains oxygenation and ventilation.",
+      "Preoxygenate with high-flow oxygen, NIPPV when appropriate, or two-person BVM with PEEP. Prepare suction, an appropriately sized primary airway device, BIAD, and surgical-airway rescue before medication.",
+      "Use the AM-05 or AM-07 resuscitation pathway for peri-intubation shock. Treat hypotension before paralysis; use norepinephrine when indicated and see Medication Reference for the approved push-dose epinephrine preparation.",
+      "Select one induction medication, then give the appropriate paralytic and proceed immediately to airway placement. Do not routinely repeat rocuronium before post-intubation analgesia and sedation are established.",
+      "Limit laryngoscopy to three total attempts. Each subsequent attempt must change the provider, approach, positioning, or equipment; move immediately to AR-02 when oxygenation or ventilation is ineffective.",
+      "Confirm every advanced airway with continuous waveform EtCO₂, bilateral chest assessment, SpO₂, tube depth, and securement. Reassess after each movement.",
+      "After airway placement, treat pain first, then sedation. Ventilate an adult at approximately 10–12 breaths/min with visible chest rise and use EtCO₂ and clinical response to avoid hyperventilation.",
+      "Document indication, authorization, staffing, preoxygenation, medications and doses, oxygenation/hemodynamics before and after medication, attempt count, airway confirmation, ventilatory support, sedation/analgesia, and required quality-improvement form.",
     ],
     medications: [
-      { name: "Ketamine", dose: "1–2 mg/kg IV/IO; may repeat once. If no access: 4 mg/kg IM, maximum 400 mg.", notes: ["Pediatric use requires direct online order from the Medical Director or Assistant Medical Director under the imported source."] },
-      { name: "Etomidate", dose: "0.3 mg/kg IV/IO" },
+      { name: "Ketamine", dose: "1–2 mg/kg IV/IO", notes: ["Select one induction agent. Ketamine is generally preferred when hypotension or bronchospasm is present.", "If vascular access is unavailable: 4 mg/kg IM, maximum 400 mg; establish IV/IO access and proceed with airway management.", "Pediatric use requires direct online order from the Medical Director or Assistant Medical Director under the imported source."] },
+      { name: "Etomidate", dose: "0.3 mg/kg IV/IO", notes: ["Select one induction agent when hemodynamic response is uncertain."] },
       { name: "Succinylcholine", dose: "2 mg/kg IV/IO" },
-      { name: "Rocuronium", dose: "1 mg/kg IV/IO; may repeat once when succinylcholine is contraindicated" },
+      { name: "Rocuronium", dose: "1 mg/kg IV/IO when succinylcholine is contraindicated or a longer duration is needed", notes: ["Do not routinely repeat before post-intubation analgesia and sedation are established."] },
+      { name: "Fentanyl", dose: "25–50 mcg IV/IO; repeat cautiously as needed, maximum 100 mcg", notes: ["Use lower or fractionated doses with shock, older age, or other hemodynamic risk."] },
+      { name: "Midazolam", dose: "2–5 mg IV/IO; repeat cautiously as needed", notes: ["Use after analgesia when sedation is needed."] },
+    ],
+    actionLinks: [
+      { label: "AM-05 Hypotension / Shock", description: "Open for peri-intubation hypotension or shock.", href: "/protocols/am/am-05", kind: "protocol" },
+      { label: "AM-07 Crashing Medical Patient", description: "Open for immediate physiologic resuscitation when the patient is critically unstable.", href: "/protocols/am/am-07", kind: "protocol" },
+      { label: "AR-02 Adult Failed Airway", description: "Open immediately when oxygenation or ventilation is ineffective or further laryngoscopy is unsafe.", href: "/protocols/ar/ar-02", kind: "protocol" },
+      { label: "AR-08 Post-Intubation / BIAD Management", description: "Open for continued analgesia, sedation, ventilation, and monitoring after airway placement.", href: "/protocols/ar/ar-08", kind: "protocol" },
+      { label: "Medication Reference", description: "Open for the approved push-dose epinephrine preparation and medication details.", href: "/medications", kind: "protocol" },
+    ],
+    reviewStatus: "Approved",
+    lastVerifiedDate: "2026-08-14",
+    reviewFlags: [
+      "Clinical DAI indications, staffing and preparation requirements, medications, rescue threshold, confirmation, post-airway care, documentation, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
+      "Pediatric DAI remains restricted to the direct online Medical Director or Assistant Medical Director order specified in the imported source.",
     ],
     warnings: [
       "This procedure removes protective airway reflexes and spontaneous breathing; do not begin without complete rescue capability.",
-      "At least two Paramedics must be present under the imported source.",
+      "At least two Paramedics must be present under the approved protocol.",
       "DAI during unresolved hypoxia or hypotension substantially increases cardiac-arrest risk.",
+      "No more than three total laryngoscopy attempts. Effective BVM is an acceptable definitive field airway.",
+      "A paralyzed patient may be awake and in pain without visible movement; establish analgesia and sedation promptly after airway placement.",
       "Complete the required airway evaluation and performance-improvement documentation.",
     ],
     clinicalPearls: [
       "When BVM maintains saturation at least 90%, continued basic airway management may be safer than DAI during a short transport.",
       "BIAD is preferred while resuscitating severe hypoxia or hypotension.",
+      "Norepinephrine may be used for peri-intubation hypotension; follow AM-05 and the Medication Reference for push-dose epinephrine.",
     ],
   }),
 
