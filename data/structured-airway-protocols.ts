@@ -22,6 +22,9 @@ type AirwayProtocolInput = {
   medications?: { name: string; dose: string; notes?: string[] }[];
   warnings?: string[];
   clinicalPearls?: string[];
+  reviewStatus?: "Draft" | "Reviewed" | "Approved";
+  reviewFlags?: string[];
+  lastVerifiedDate?: string;
 };
 
 function airwayProtocol(
@@ -63,9 +66,9 @@ function airwayProtocol(
     sourcePdf: input.sourcePdf,
     sourcePages: { start: 1, end: input.pages },
     revisionDate: "2025-09-01",
-    lastVerifiedDate: "2026-07-29",
-    reviewStatus: "Reviewed",
-    reviewFlags: [
+    lastVerifiedDate: input.lastVerifiedDate ?? "2026-07-29",
+    reviewStatus: input.reviewStatus ?? "Reviewed",
+    reviewFlags: input.reviewFlags ?? [
       "Medical-director approval is required before clinical release.",
       "Verify medication dosing, advanced airway authorization, and invasive procedures against current Claiborne County standing orders.",
       "The original imported PDF remains available for source comparison.",
@@ -99,21 +102,25 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       "Continue basic airway care when it maintains adequate oxygenation and ventilation; do not delay transport solely to place an advanced airway.",
     ],
     aemt: [
-      "Perform all EMT care plus authorized BIAD placement, intubation procedures within current scope, and continuous waveform capnography once available.",
+      "Perform all EMT care plus authorized BIAD placement and continuous waveform capnography once available. Endotracheal intubation is not included as an AEMT procedure in this protocol.",
       "After a failed intubation attempt, change the approach or equipment and strongly consider a BIAD.",
     ],
     paramedic: [
-      "Perform all prior care plus advanced airway selection, DAI when authorized, chest decompression when indicated, and surgical airway for cannot-oxygenate/cannot-ventilate failure.",
+      "Perform all prior care plus ETT, advanced airway selection, DAI when authorized, chest decompression when indicated, and surgical airway for cannot-oxygenate/cannot-ventilate failure.",
       "Use waveform capnography continuously and transition immediately to the failed-airway protocol when criteria are met.",
     ],
     treatmentSteps: [
       "Target adult ventilation at approximately 10–12 breaths/min and use EtCO₂ and clinical response to avoid hyperventilation.",
-      "Use ROMAN, LEON, RODS, and SMART to anticipate difficulty with BVM, laryngoscopy, BIAD, and cricothyrotomy.",
+      "Before an advanced-airway attempt, assess for difficult BVM ventilation, difficult laryngoscopy, inability to place a BIAD, and potential surgical-airway need. Prepare backup equipment and a rescue plan before beginning.",
     ],
+    reviewStatus: "Approved",
+    lastVerifiedDate: "2026-08-14",
+    reviewFlags: ["Clinical airway assessment, provider permissions, BVM/advanced-airway pathway, failed-airway threshold, confirmation, and cross-links approved by the Claiborne EMS medical director on August 14, 2026.", "Airway-difficulty acronym item removed at medical-director direction."],
     warnings: [
       "Failed airway includes inability to oxygenate at least 90% after an unsuccessful attempt, anatomy unsuitable for further attempts, or three total unsuccessful attempts.",
       "No more than three total intubation attempts by the most experienced AEMT/Paramedic.",
-      "Waveform capnography is mandatory after ETT placement and after BIAD placement once available.",
+      "Waveform capnography is mandatory after ETT and BIAD placement once available.",
+      "Effective BVM is an acceptable definitive field airway; do not delay oxygenation or ventilation for intubation or repeated laryngoscopy.",
     ],
     clinicalPearls: [
       "DOPE: displacement, obstruction, pneumothorax, and equipment failure.",
