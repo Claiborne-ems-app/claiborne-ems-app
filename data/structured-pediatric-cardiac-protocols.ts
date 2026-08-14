@@ -1,5 +1,6 @@
 import type {
   ProviderLevel,
+  ProtocolActionLink,
   ProtocolCareModule,
   ProtocolFlowNode,
   StructuredProtocolContent,
@@ -23,6 +24,10 @@ type PediatricCardiacInput = {
   medications?: { name: string; dose: string; notes?: string[] }[];
   warnings?: string[];
   clinicalPearls?: string[];
+  actionLinks?: ProtocolActionLink[];
+  reviewStatus?: "Draft" | "Reviewed" | "Approved";
+  reviewFlags?: string[];
+  lastVerifiedDate?: string;
 };
 
 function pediatricCardiacProtocol(
@@ -57,6 +62,7 @@ function pediatricCardiacProtocol(
     warnings: input.warnings ?? [],
     clinicalPearls: input.clinicalPearls ?? [],
     specialPopulations: [],
+    actionLinks: input.actionLinks ?? [],
     references: [
       "Claiborne County EMS approved protocol manual.",
       "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
@@ -64,9 +70,9 @@ function pediatricCardiacProtocol(
     sourcePdf: input.sourcePdf,
     sourcePages: { start: 1, end: input.pages },
     revisionDate: input.revisionDate,
-    lastVerifiedDate: "2026-07-29",
-    reviewStatus: "Reviewed",
-    reviewFlags: [
+    lastVerifiedDate: input.lastVerifiedDate ?? "2026-07-29",
+    reviewStatus: input.reviewStatus ?? "Reviewed",
+    reviewFlags: input.reviewFlags ?? [
       "Medical-director approval is required before clinical release.",
       "Verify all pediatric doses, energy settings, and advanced procedures against the current length/weight system and Claiborne County standing orders.",
       "The original imported PDF remains available for source comparison.",
@@ -82,42 +88,66 @@ export const structuredPediatricCardiacProtocols: StructuredProtocolContent[] = 
     pages: 2,
     revisionDate: "2025-09-01",
     overview: [
-      "Pediatric asystole and PEA are commonly the end result of hypoxia or respiratory failure; ventilation and high-quality CPR are central interventions.",
+      "For infants and children after the newly born period, asystole and PEA are commonly the end result of hypoxia or respiratory failure; ventilation and high-quality CPR are central interventions.",
       "Search aggressively for reversible causes while minimizing interruptions in compressions.",
     ],
     indications: [
       "Pediatric patient in pulseless arrest with asystole or pulseless electrical activity.",
     ],
     flow: [
-      { title: "Pulseless Arrest", text: "Confirm apnea/pulselessness, rhythm, DNR/MOST, and obvious-death criteria.", levels: ALL_LEVELS, tone: "start" },
-      { title: "High-Quality CPR", text: "100–120/min • depth at least ⅓ chest AP diameter • full recoil • pauses under 10 sec.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Oxygenate + Ventilate", text: "BVM/BIAD rapidly; 15:2 without advanced airway and avoid hyperventilation.", levels: ALL_LEVELS, tone: "action" },
-      { title: "IV/IO + Epinephrine", text: "Give weight-based dose every 3–5 minutes without interrupting CPR.", levels: ["AEMT", "Paramedic"], tone: "action" },
-      { title: "Reversible Cause?", text: "Hypoxia • hypovolemia • acidosis • temperature • electrolytes • tension • toxins • thrombosis.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "ROSC?", text: "Yes: Pediatric Post-Resuscitation. No: continue cycles and reassessment.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "Pulseless Arrest", text: "Confirm apnea/pulselessness, DNR/MOST, and obvious-death criteria; apply monitor/AED and check leads before treating apparent asystole.", levels: ALL_LEVELS, tone: "start" },
+      { title: "High-Quality CPR", text: "100–120/min • depth at least ⅓ chest AP diameter • full recoil • pauses under 10 sec • change compressor every 2 min.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Oxygenate + Ventilate", text: "BVM first; 15:2 with two rescuers or 30:2 with one rescuer when no advanced airway; avoid hyperventilation.", levels: ALL_LEVELS, tone: "action" },
+      { title: "IV/IO + Early Epinephrine", text: "Obtain rapid vascular access without delaying CPR; give 0.01 mg/kg IV/IO every 3–5 min.", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "Reversible Cause?", text: "Hypoxia • hypovolemia • acidosis • temperature • metabolic/electrolyte cause • tension • toxins • thrombosis.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "ROSC?", text: "Yes: PC-08 Pediatric Post-Resuscitation. No: continue 2-min cycles, reassessment, and treatment of cause.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
-      "Begin continuous high-quality CPR, apply AED, provide oxygenation/ventilation, and use 15:2 with two rescuers when no advanced airway is present.",
-      "Use a pediatric resuscitation system, change compressors every 2 minutes, and limit rhythm/pulse checks to less than 10 seconds.",
+      "Begin continuous high-quality CPR, apply AED/monitor, provide oxygenation/ventilation, and use 15:2 with two rescuers or 30:2 with one rescuer when no advanced airway is present.",
+      "Use a pediatric length-based resuscitation system, change compressors every 2 minutes, and limit rhythm/pulse checks to less than 10 seconds.",
     ],
     aemt: [
-      "Perform all EMT care plus IV/IO access, weight-based epinephrine and crystalloid, glucose analysis, and authorized advanced airway support.",
+      "Perform all EMT care plus IV/IO access, weight-based epinephrine, glucose analysis, crystalloid when hypovolemia is suspected, and authorized advanced airway support.",
+      "Do not delay CPR or ventilation for repeated IV attempts; use IO promptly when IV access is not rapidly available.",
     ],
     paramedic: [
-      "Perform all prior care plus rhythm confirmation, continuous EtCO₂, advanced reversible-cause treatment, and post-ROSC transition.",
-      "Do not interrupt compressions to intubate; consider BIAD first when it reduces pauses.",
+      "Perform all prior care plus rhythm confirmation, continuous waveform EtCO₂, advanced reversible-cause treatment, and post-ROSC transition.",
+      "Do not interrupt compressions to intubate; use effective BVM or an authorized BIAD when it reduces pauses.",
     ],
     medications: [
-      { name: "Epinephrine 1:10,000", dose: "0.01 mg/kg IV/IO every 3–5 minutes; maximum single dose 1 mg" },
-      { name: "Normal saline", dose: "20 mL/kg IV/IO; may repeat as needed to maximum 60 mL/kg" },
+      { name: "Epinephrine 0.1 mg/mL (1:10,000)", dose: "0.01 mg/kg IV/IO as early as possible; maximum single dose 1 mg; repeat every 3–5 minutes" },
+      { name: "Normal saline", dose: "10–20 mL/kg IV/IO only when hypovolemia is suspected; reassess perfusion, lungs, and suspected cause after each bolus" },
     ],
     treatmentSteps: [
-      "With an advanced airway, ventilate approximately every 2 seconds when younger than 1 year and every 3 seconds when age 1 year or older.",
-      "EtCO₂ below 10 mmHg should prompt improved CPR; a sudden rise, often above 40 mmHg, may indicate ROSC.",
+      "Asystole/PEA is nonshockable. Continue CPR and treat reversible causes; defibrillate only if the rhythm changes to VF/pulseless VT.",
+      "With an advanced airway, use continuous compressions and ventilate 20–30/min (1 breath every 2–3 seconds). Avoid hyperventilation.",
+      "Check glucose, temperature, and likely reversible causes during CPR: hypoxia, hypovolemia, acidosis, hypo/hyperkalemia or metabolic disturbance, hypothermia, tension pneumothorax, tamponade, toxins, and thrombosis.",
+      "Use continuous waveform EtCO₂ when available. Use trends to improve CPR; an unexpected sustained increase may indicate ROSC, but do not use a single EtCO₂ value alone to make termination decisions.",
+      "Perform rhythm/pulse checks no more than every 2 minutes and keep each pause under 10 seconds.",
+      "After ROSC, move immediately to PC-08 Pediatric Post-Resuscitation Care; maintain airway support, oxygenation, ventilation, glucose/temperature management, blood pressure support, and early notification.",
+    ],
+    actionLinks: [
+      { label: "AR-05 Pediatric Airway", description: "Open for pediatric BVM and airway support.", href: "/protocols/ar/ar-05", kind: "protocol" },
+      { label: "AR-06 Pediatric Failed Airway", description: "Open for ineffective oxygenation/ventilation or unsafe further airway attempts.", href: "/protocols/ar/ar-06", kind: "protocol" },
+      { label: "PC-02 Pediatric Bradycardia / Poor Perfusion", description: "Open if a pulse returns but bradycardia with poor perfusion persists.", href: "/protocols/pc/pc-02", kind: "protocol" },
+      { label: "PC-08 Pediatric Post-Resuscitation Care", description: "Open immediately after ROSC.", href: "/protocols/pc/pc-08", kind: "protocol" },
+      { label: "AO-02 Newly Born", description: "Open for neonatal resuscitation immediately after birth.", href: "/protocols/ao/ao-02", kind: "protocol" },
+    ],
+    reviewStatus: "Approved",
+    lastVerifiedDate: "2026-08-14",
+    reviewFlags: [
+      "Clinical pediatric nonshockable-arrest recognition, CPR/ventilation, epinephrine, vascular access, fluid safeguards, reversible causes, ROSC transition, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
+      "Routine calcium and sodium bicarbonate are excluded unless a specific indication exists.",
     ],
     warnings: [
       "Do not hyperventilate or pause compressions for endotracheal intubation.",
-      "IV/IO access and medications are secondary to CPR, ventilation, and defibrillation when indicated.",
+      "IV/IO access and medications are secondary to CPR and ventilation.",
+      "Do not routinely give calcium or sodium bicarbonate unless a specific indication exists.",
+      "Do not delay transport for repeated airway attempts.",
+    ],
+    clinicalPearls: [
+      "Pediatric nonshockable arrest is often hypoxic/asphyxial; effective ventilation is a central intervention.",
+      "Use waveform EtCO₂ trends to improve CPR quality and detect possible ROSC, not as a stand-alone termination decision.",
     ],
   }),
 
