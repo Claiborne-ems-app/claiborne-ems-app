@@ -269,7 +269,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
     id: "ao-03",
     title: "OB-GYN Emergency",
     sourcePdf: "/protocols/claiborne/ao-03-ob-gyn-emergency-protocol.pdf",
-    revisionDate: "2026-04-06",
+    revisionDate: "August 2026",
     overview: [
       "Evaluate pregnancy-related and gynecologic emergencies including hemorrhage, ectopic pregnancy, miscarriage, preeclampsia, eclampsia, shock, and trauma.",
       "Use left lateral positioning, early hemorrhage recognition, seizure control, and rapid destination notification.",
@@ -284,7 +284,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       { title: "Position + Assess", text: "Left lateral • ABCs • glucose • vitals • bleeding amount • neurologic findings.", levels: ALL_LEVELS, tone: "action" },
       { title: "Shock / Hemorrhage?", text: "Control external bleeding, establish access, resuscitate, and consider TXA pathway.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
       { title: "Field Delivery?", text: "Use Childbirth/Labor; after delivery address uterine atony and postpartum bleeding.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Seizure / Eclampsia?", text: "Protect airway; benzodiazepine first for active seizure, then magnesium pathway.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Seizure / Eclampsia?", text: "Protect airway • treat active convulsion • magnesium is the cause-directed eclampsia therapy.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
       { title: "Rapid Transport", text: "Continuous reassessment and early OB/trauma-capable destination notification.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
@@ -294,11 +294,11 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       "Treat all pregnant trauma patients as requiring physician evaluation and transport.",
     ],
     aemt: [
-      "Perform all EMT care plus IV/IO access, shock resuscitation, and authorized tranexamic acid or magnesium sulfate within current standing orders.",
+      "Perform all EMT care plus IV/IO access, AM-05 shock resuscitation, and authorized IM midazolam for active seizure without delaying treatment for vascular access.",
       "Do not delay an authorized IM benzodiazepine for active seizure while attempting IV/IO access.",
     ],
     paramedic: [
-      "Perform all prior care plus cardiac monitoring, protocol-directed seizure control, magnesium treatment, oxytocin after delivery, TXA for qualifying hemorrhagic shock, and advanced resuscitation.",
+      "Perform all prior care plus cardiac monitoring, magnesium treatment, TXA for qualifying postpartum hemorrhage, calcium-gluconate rescue for magnesium toxicity, and advanced resuscitation.",
       "Identify ectopic pregnancy, placental abruption/previa, preeclampsia/eclampsia, and non-obstetric causes while minimizing transport delay.",
     ],
     assessment: [
@@ -319,24 +319,17 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       },
     ],
     treatmentSteps: [
-      "For active seizure, administer the authorized benzodiazepine promptly before magnesium sulfate.",
+      "For eclampsia or suspected eclampsia, use magnesium sulfate as the cause-directed therapy while treating an ongoing convulsion promptly with midazolam when required.",
       "After placental delivery, perform uterine massage and follow postpartum hemorrhage treatment.",
       "A pregnant patient after motor-vehicle collision requires immediate physician evaluation; pregnancy beyond 20 weeks commonly requires 4–6 hours of fetal monitoring.",
     ],
     medications: [
       {
         name: "Tranexamic acid",
-        dose: "2 g IV/IO over 10 minutes; maximum 2 g",
+        dose: "1 g IV/IO over 10 minutes for postpartum hemorrhage with shock when within 3 hours of delivery",
         notes: [
           "For uncontrolled vaginal or postpartum hemorrhage with signs of shock under the imported source.",
           "Postpartum use is contraindicated when birth occurred more than 3 hours before EMS arrival.",
-        ],
-      },
-      {
-        name: "Oxytocin",
-        dose: "10 IU IM after field delivery when available; maximum 10 IU",
-        notes: [
-          "Used to promote uterine contraction and reduce postpartum hemorrhage.",
         ],
       },
       {
@@ -349,19 +342,24 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       },
       {
         name: "Magnesium sulfate",
-        dose: "2–4 g IV/IO over 2–3 minutes; may repeat once",
+        dose: "4 g IV/IO over 5–10 minutes; for recurrent seizure, 2 g IV/IO over 5 minutes with Medical Control or receiving-facility direction",
         notes: [
-          "For eclamptic seizure after priority benzodiazepine treatment of active seizure.",
-          "Monitor for hypotension and respiratory depression.",
+          "Primary cause-directed therapy for eclampsia or suspected eclampsia.",
+          "Continuously monitor ECG, BP, respiratory status, SpO₂, and EtCO₂.",
         ],
       },
     ],
+    actionLinks: [{ label: "AO-01 Childbirth / Labor", href: "/protocols/ao/ao-01", kind: "protocol" }, { label: "AO-02 Newly Born", href: "/protocols/ao/ao-02", kind: "protocol" }, { label: "AM-05 Hypotension / Shock", href: "/protocols/am/am-05", kind: "protocol" }, { label: "UP-13 Seizure", href: "/protocols/up/up-13", kind: "protocol" }, { label: "AM-04 Hypertension", href: "/protocols/am/am-04", kind: "protocol" }],
+    reviewStatus: "Approved",
+    lastVerifiedDate: "2026-08-14",
+    reviewFlags: ["Clinical maternal emergency, postpartum hemorrhage, eclampsia, medication, provider-scope, transport, and linked-pathway content approved by the Claiborne EMS medical director on August 14, 2026.", "Oxytocin removed because it is not on the Claiborne formulary.", "Pregnancy with any chance of delivery remains ground transport; do not place on aircraft."],
     warnings: [
-      "Active seizure treatment with a benzodiazepine takes priority over magnesium sulfate.",
-      "Magnesium sulfate may cause hypotension and respiratory depression; continuously monitor ventilation and perfusion.",
+      "For suspected eclampsia, magnesium sulfate is the cause-directed therapy; give midazolam promptly for an ongoing convulsive seizure when needed.",
+      "Magnesium sulfate may cause hypotension and respiratory depression; stop it for clinically significant toxicity and give calcium gluconate 1 g IV slowly with Medical Control.",
       "Do not suggest that a normal ultrasound alone would exclude injury after maternal trauma; appropriate fetal monitoring and physician evaluation are required.",
       "Vaginal bleeding may be absent in ectopic pregnancy or placental abruption.",
     ],
+    specialPopulations: [{ title: "Transport", items: ["Use the closest appropriate emergency/OB-capable facility with early notification for hemorrhage, ectopic rupture, eclampsia, severe hypertension, trauma, or shock.", "Pregnancy with any chance of delivery should remain on ground transport and not be placed on an aircraft."] }],
     clinicalPearls: [
       "Maintain a high index of suspicion for ectopic pregnancy in any patient of childbearing age with abdominal pain, syncope, or shock.",
       "Supine hypotensive syndrome is reduced by left lateral positioning with the right side elevated.",
