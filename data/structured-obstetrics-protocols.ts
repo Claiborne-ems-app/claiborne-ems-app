@@ -24,6 +24,9 @@ type ObstetricProtocolInput = {
   warnings?: string[];
   clinicalPearls?: string[];
   specialPopulations?: { title: string; items: string[] }[];
+  reviewStatus?: "Draft" | "Reviewed" | "Approved";
+  reviewFlags?: string[];
+  lastVerifiedDate?: string;
 };
 
 function providerActions(
@@ -69,9 +72,9 @@ function obstetricProtocol(
     sourcePdf: input.sourcePdf,
     sourcePages: { start: 1, end: 2 },
     revisionDate: input.revisionDate,
-    lastVerifiedDate: "2026-07-29",
-    reviewStatus: "Reviewed",
-    reviewFlags: [
+    lastVerifiedDate: input.lastVerifiedDate ?? "2026-07-29",
+    reviewStatus: input.reviewStatus ?? "Reviewed",
+    reviewFlags: input.reviewFlags ?? [
       "Medical-director approval is required before clinical release.",
       "Verify medication dosing and invasive procedures against current Claiborne County standing orders.",
       "The original imported PDF remains available for source comparison.",
@@ -113,7 +116,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
     ],
     paramedic: [
       "Perform all prior care plus advanced management of maternal shock, seizure, airway compromise, and complicated delivery.",
-      "After field delivery, administer oxytocin and/or tranexamic acid only when indicated and authorized by the current Claiborne protocol.",
+      "After field delivery, administer tranexamic acid for postpartum hemorrhage with shock when indicated; oxytocin is not carried on the Claiborne formulary.",
     ],
     assessment: [
       {
@@ -140,18 +143,10 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
     ],
     medications: [
       {
-        name: "Oxytocin",
-        dose: "10 IU IM after field delivery when available; maximum 10 IU",
-        notes: [
-          "Used to promote uterine contraction and decrease postpartum hemorrhage.",
-          "IV/IO administration requires specific local medical-director authorization.",
-        ],
-      },
-      {
         name: "Tranexamic acid",
-        dose: "Use the current OB-GYN Emergency protocol when postpartum hemorrhage is accompanied by shock.",
+        dose: "1 g IV/IO over 10 minutes for postpartum hemorrhage with shock when within 3 hours of delivery.",
         notes: [
-          "Contraindicated when birth occurred more than 3 hours before EMS arrival under the imported source.",
+          "Use with AM-05 Hypotension/Shock and AO-03 OB/GYN Emergency.",
         ],
       },
     ],
@@ -161,6 +156,10 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       "Uterine massage is performed only after delivery of the placenta.",
       "Large-volume or free vaginal bleeding is abnormal and requires urgent hemorrhage management.",
     ],
+    specialPopulations: [{ title: "Postpartum hemorrhage", items: ["After placental delivery, perform uterine massage for excessive bleeding. For shock, use AM-05 and tranexamic acid 1 g IV/IO over 10 minutes when within 3 hours of delivery."] }],
+    reviewStatus: "Approved",
+    lastVerifiedDate: "2026-08-14",
+    reviewFlags: ["Clinical delivery, maternal/newborn care, complication management, tranexamic acid use, provider permissions, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.", "Oxytocin was removed because it is not on the Claiborne formulary."],
     clinicalPearls: [
       "Transport is generally preferred, but crowning, urge to push, frequent contractions, parity, and prior rapid labor may make field delivery safer.",
       "Twins are commonly premature and at higher risk for hypothermia; request additional resources early.",
