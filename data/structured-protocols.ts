@@ -877,15 +877,15 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     sourcePdf: "/protocols/claiborne/up-04-altered-mental-status-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
     revisionDate: "August 2026",
-    lastVerifiedDate: "August 10, 2026",
-    reviewStatus: "Reviewed",
+    lastVerifiedDate: "August 14, 2026",
+    reviewStatus: "Approved",
     reviewFlags: [
       "Medical-director approved glucose treatment below 70 mg/dL with symptoms or when symptoms cannot be assessed reliably because of altered mental status; adult D10 up to 250 mL/25 g and pediatric D10 2 mL/kg initial dose with one repeat after 5 minutes for persistent hypoglycemia.",
       "Medical-director approved glucagon: adult 1 mg IM; pediatric 0.5 mg IM below 20 kg or 1 mg IM at 20 kg or greater when oral glucose is unsafe and vascular access is unavailable.",
       "Medical-director approved naloxone: adult 0.4–2 mg IV/IO/IM or 2 mg IN; pediatric begins at 0.01 mg/kg and escalates to 0.1 mg/kg when ventilation remains inadequate; repeat every 2–3 minutes to adequate ventilation, maximum cumulative dose 8 mg.",
       "Medical-director approved 12-lead ECG for adult acute/unexplained altered mental status and FAST followed by C-STAT when positive.",
       "Medical-director approved fluid only for hypotension: adult 500 mL and pediatric 10 mL/kg initial bolus with the UP-03 fluid-intolerance caveat.",
-      "UP-04 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process.",
+      "Clinical content, dosing, provider permissions, warnings, and cross-links approved by the Claiborne EMS medical director on August 14, 2026.",
     ],
   },
   {
