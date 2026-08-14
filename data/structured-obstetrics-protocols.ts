@@ -24,6 +24,7 @@ type ObstetricProtocolInput = {
   warnings?: string[];
   clinicalPearls?: string[];
   specialPopulations?: { title: string; items: string[] }[];
+  actionLinks?: StructuredProtocolContent["actionLinks"];
   reviewStatus?: "Draft" | "Reviewed" | "Approved";
   reviewFlags?: string[];
   lastVerifiedDate?: string;
@@ -65,6 +66,7 @@ function obstetricProtocol(
     warnings: input.warnings ?? [],
     clinicalPearls: input.clinicalPearls ?? [],
     specialPopulations: input.specialPopulations ?? [],
+    actionLinks: input.actionLinks,
     references: [
       "Claiborne County EMS approved protocol manual.",
       "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
@@ -239,14 +241,6 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
         dose: "10 mL/kg IV/IO; may repeat once when not responding to epinephrine",
         notes: ["Consider suspected hypovolemia."],
       },
-      {
-        name: "Dextrose 10%",
-        dose: "2 mL/kg IV/IO; repeat as needed to achieve glucose at least 40 mg/dL",
-        notes: [
-          "Use when newborn blood glucose is below 40 mg/dL.",
-          "The neonatal dose differs from dosing after the first month of life.",
-        ],
-      },
     ],
     warnings: [
       "Do not routinely suction the airway; suction only when needed for obstruction.",
@@ -254,6 +248,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       "Naloxone is not recommended for neonatal respiratory depression from maternal narcotics; provide ventilatory support.",
       "Ventilation must be effective before chest compressions are started.",
     ],
+    actionLinks: [{ label: "PM-02 Pediatric Diabetic / Hypoglycemia", description: "Open for newborn hypoglycemia management and the approved pediatric dextrose pathway.", href: "/protocols/pm/pm-02", kind: "protocol" }],
     clinicalPearls: [
       "A rising heart rate is the best indicator that newborn ventilation and resuscitation are effective.",
       "Skin-to-skin contact with the mother is the preferred warming method for a vigorous infant.",
