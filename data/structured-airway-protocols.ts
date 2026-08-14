@@ -161,9 +161,14 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       "Perform all prior care and proceed to surgical cricothyrotomy only when less invasive methods cannot oxygenate or ventilate.",
       "Avoid additional laryngoscopy after three total attempts or when anatomy makes success unlikely.",
     ],
+    treatmentSteps: ["Optimize two-person BVM with positioning, suction, OPA/NPA as appropriate, high-flow oxygen, and PEEP when indicated.", "If BVM maintains SpO₂ at least 92% and adequate ventilation, continue it as the definitive field airway and begin transport.", "Place an authorized BIAD when BVM is ineffective or prolonged ventilation is required; confirm and secure it before movement.", "Proceed to surgical cricothyrotomy only for a Paramedic-managed cannot-oxygenate/cannot-ventilate patient after less-invasive rescue measures fail or cannot be used.", "Ventilate approximately 10–12 breaths/min with visible chest rise; use EtCO₂ and clinical response to avoid hyperventilation."],
+    reviewStatus: "Approved",
+    lastVerifiedDate: "2026-08-14",
+    reviewFlags: ["Clinical failed-airway definition, rescue sequence, provider permissions, confirmation, ventilation, transport, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026."],
     warnings: [
       "No more than three total intubation attempts; every repeated attempt must change the provider, approach, positioning, or equipment.",
       "Do not abandon effective BVM merely to obtain an advanced airway.",
+      "Do not delay transport for repeated advanced-airway attempts once oxygenation and ventilation are effective.",
     ],
     clinicalPearls: [
       "The clinical goal is oxygenation and ventilation, not endotracheal intubation.",
