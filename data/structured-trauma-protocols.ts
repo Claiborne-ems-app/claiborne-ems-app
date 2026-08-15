@@ -197,14 +197,14 @@ export const structuredTraumaProtocols: StructuredProtocolContent[] = [
     flow: [
       { title: "Extremity Injury", text: "Expose, identify life-threatening hemorrhage, and assess associated trauma.", levels: ALL_LEVELS, tone: "start" },
       { title: "Major Hemorrhage?", text: "Direct pressure • wound packing • tourniquet when indicated.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Check CSM", text: "Circulation, sensation, and movement before manipulation or splinting.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Align / Splint", text: "Cover open wounds, stabilize joints above and below, and reassess CSM.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Check CSM", text: "Document distal pulse, capillary refill, skin color/temperature, sensation, and movement before and after every alignment, splint, or tourniquet.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Align / Splint", text: "Cover open wounds, stabilize joints above and below, and reassess CSM. Gently realign only for absent distal perfusion or when needed to splint; stop for resistance or worsening pain. Do not force reduction.", levels: ALL_LEVELS, tone: "action" },
       { title: "Pain / Shock Care", text: "Prevent hypothermia and provide authorized analgesia and vascular access.", levels: ["AEMT", "Paramedic"], tone: "action" },
-      { title: "Appropriate Destination", text: "Rapid transport for vascular compromise, amputation, crush, or multisystem trauma.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "Appropriate Destination", text: "For vascular compromise, amputation, crush, or multisystem trauma, transport to the nearest appropriate facility for stabilization when direct trauma-center transport would create an unsafe ground-transport delay; notify early and arrange higher-level transfer as needed.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
-      "Control bleeding, cover open wounds, assess distal circulation/sensation/movement, splint, and reassess after every intervention.",
-      "Wrap amputated tissue in moist sterile gauze, seal in a bag, and keep cool without direct contact with ice.",
+      "Control bleeding using direct pressure, wound packing, or tourniquet as indicated; document distal pulse, capillary refill, skin color/temperature, sensation, and movement before and after every intervention.",
+      "For open fractures, cover with a sterile dressing; do not probe the wound or push exposed bone back in. Wrap amputated tissue in moist sterile gauze, seal it in a labeled bag with patient/time, send it with the patient, and keep cool without direct contact with ice or water.",
     ],
     aemt: [
       "Perform all EMT care plus vascular access, fluid therapy for shock, and authorized analgesia.",
@@ -215,8 +215,8 @@ export const structuredTraumaProtocols: StructuredProtocolContent[] = [
       "Coordinate direct trauma-center transport when limb or life is threatened.",
     ],
     warnings: [
-      "Do not delay transport attempting perfect anatomic alignment.",
-      "A pulseless extremity, expanding hematoma, severe pain out of proportion, or tense swelling requires urgent specialty care.",
+      "Do not delay transport attempting perfect anatomic alignment. Do not force fracture or dislocation reduction; attempt gentle realignment only for absent distal perfusion or when needed to splint, and stop for resistance or worsening pain.",
+      "Record tourniquet application time. Do not periodically loosen or remove a tourniquet. A pulseless extremity, expanding hematoma, severe pain out of proportion, or tense swelling requires urgent specialty care.",
     ],
   }),
 
