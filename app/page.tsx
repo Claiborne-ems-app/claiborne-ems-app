@@ -22,6 +22,17 @@ import OfflineStatusIndicator from "../components/offline/OfflineStatusIndicator
 import { CovenantHealthEmsLogo } from "../components/branding/CovenantHealthEmsLogo";
 import { protocolCategories } from "../data/protocols";
 
+const categoryTileTones = [
+  {
+    surface: "border-[#68b5e4] bg-[#0e71b8]",
+    accent: "bg-[#075b9a] text-white ring-white/25",
+  },
+  {
+    surface: "border-[#ed7b9f] bg-[#c4174d]",
+    accent: "bg-[#98113b] text-white ring-white/25",
+  },
+] as const;
+
 const categoryPresentation: Record<string, { icon: LucideIcon; accent: string; subtitle: string }> = {
   ac: {
     icon: HeartPulse,
@@ -102,17 +113,15 @@ export default function Home() {
         <SectionTitle title="Favorites" />
         <FavoritesList />
 
-        <SectionTitle title="Recently Viewed" />
-        <RecentlyViewedList />
-
         <SectionTitle title="Protocol Categories" />
         <div className="grid grid-cols-2 gap-3">
-          {protocolCategories.map((category) => {
+          {protocolCategories.map((category, index) => {
             const presentation = categoryPresentation[category.id] ?? {
               icon: BookOpen,
               accent: "bg-sky-500/12 text-sky-300 ring-sky-400/20",
               subtitle: `${category.protocols.length} protocols`,
             };
+            const tone = categoryTileTones[index % categoryTileTones.length];
 
             return (
               <CategoryCard
@@ -121,11 +130,15 @@ export default function Home() {
                 title={category.title}
                 subtitle={presentation.subtitle}
                 icon={presentation.icon}
-                accent={presentation.accent}
+                accent={tone.accent}
+                surface={tone.surface}
               />
             );
           })}
         </div>
+
+        <SectionTitle title="Recently Viewed" />
+        <RecentlyViewedList />
 
         <VersionFooter />
       </div>
