@@ -87,19 +87,19 @@ export default function Home() {
       <div className="mx-auto max-w-md px-5">
         <AppHeader />
 
-        <section className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-slate-800/95 via-slate-900/95 to-slate-950 p-5 shadow-2xl shadow-black/20">
+        <section className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-slate-800/95 via-slate-900/95 to-slate-950 p-4 shadow-2xl shadow-black/20">
           <CovenantHealthEmsLogo
             priority
-            className="w-full max-w-[15rem] border border-white/10 p-2 shadow-lg shadow-black/20"
+            className="w-full max-w-[10.5rem] border border-white/10 p-1.5 shadow-lg shadow-black/20"
           />
-          <div className="mt-5 flex items-end justify-between gap-4">
+          <div className="mt-3 flex items-end justify-between gap-4">
             <div>
               <p className="text-sm font-semibold text-sky-300">Field reference</p>
-              <h1 className="mt-1 text-[1.75rem] font-bold leading-8 tracking-[-0.025em]">
+              <h1 className="mt-1 text-[1.45rem] font-bold leading-7 tracking-[-0.025em]">
                 Claiborne County EMS Protocols
               </h1>
             </div>
-            <div aria-hidden="true" className="mb-1 h-12 w-1 shrink-0 rounded-full bg-rose-700" />
+            <div aria-hidden="true" className="mb-1 h-9 w-1 shrink-0 rounded-full bg-rose-700" />
           </div>
           <OfflineStatusIndicator />
         </section>
