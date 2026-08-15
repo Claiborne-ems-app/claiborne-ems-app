@@ -20,6 +20,7 @@ type TraumaProtocolInput = {
   treatmentSteps?: string[];
   warnings?: string[];
   clinicalPearls?: string[];
+  actionLinks?: StructuredProtocolContent["actionLinks"];
 };
 
 function providerActions(input: TraumaProtocolInput): ProtocolCareModule[] {
@@ -58,6 +59,7 @@ function traumaProtocol(
     warnings: input.warnings ?? [],
     clinicalPearls: input.clinicalPearls ?? [],
     specialPopulations: [],
+    actionLinks: input.actionLinks,
     references: [
       "Claiborne County EMS approved protocol manual.",
       "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
@@ -263,19 +265,19 @@ export const structuredTraumaProtocols: StructuredProtocolContent[] = [
     title: "Multiple Trauma",
     sourcePdf: "/protocols/claiborne/tb-06-multiple-trauma-protocol.pdf",
     overview: [
-      "Use a rapid XABCDE approach, treat immediate threats, and minimize scene time for serious or critical trauma.",
+      "Use a rapid XABCDE approach, treat immediate threats, and minimize scene time for high-risk trauma.",
       "Destination selection and early notification are part of treatment.",
     ],
     flow: [
-      { title: "Major Trauma", text: "Scene safety • mechanism • resources • consider air medical / rescue.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Major Trauma", text: "Scene safety • mechanism • resources • request air medical early when it meaningfully improves time to needed care or provides unavailable capability; never delay ground transport.", levels: ALL_LEVELS, tone: "start" },
       { title: "XABCDE", text: "Exsanguination • airway • breathing • circulation • disability • exposure.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Critical / Serious?", text: "Physiology, anatomy, mechanism, age, anticoagulants, and special considerations.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Treat Immediate Threats", text: "Hemorrhage control • ventilation • chest seal/decompression • pelvic stabilization.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Resuscitate En Route", text: "Access, shock care, analgesia, monitoring, warming, and serial reassessment.", levels: ["AEMT", "Paramedic"], tone: "action" },
-      { title: "Trauma Destination", text: "Limit scene time, use destination plan, and notify early.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "High-Risk Trauma?", text: "Physiologic abnormality • high-risk anatomy • special considerations (age, anticoagulants, pregnancy, burns with trauma, suspected abuse) • concerning mechanism.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Treat Immediate Threats", text: "Catastrophic hemorrhage control • airway/ventilation • chest seal/decompression • pelvic stabilization only for suspected pelvic fracture or significant pelvic mechanism • warming • reassessment.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Resuscitate En Route", text: "Access, shock care, analgesia, splinting, monitoring, warming, and serial reassessment.", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "Appropriate Destination", text: "Use the nearest appropriate stabilization facility when direct trauma-center ground transport is unsafe or would delay essential resuscitation; notify early and coordinate higher-level transfer.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
-      "Perform rapid XABCDE, control hemorrhage, support airway/ventilation, seal open chest wounds, stabilize the pelvis and fractures, and prevent hypothermia.",
+      "Perform rapid XABCDE, control hemorrhage, support airway/ventilation, seal open chest wounds, stabilize the pelvis only for suspected pelvic fracture or significant pelvic mechanism, stabilize fractures, and prevent hypothermia.",
       "Package promptly; complete the secondary examination during transport when possible.",
     ],
     aemt: [
@@ -285,6 +287,10 @@ export const structuredTraumaProtocols: StructuredProtocolContent[] = [
     paramedic: [
       "Perform all prior care plus advanced airway treatment, chest decompression, analgesia, and protocol-directed hemorrhagic-shock resuscitation.",
       "Lead destination, air-medical, and Medical Control decisions without extending scene time.",
+    ],
+    actionLinks: [
+      { label: "TB-08 Spinal Motion", description: "Open when selective spinal motion restriction is indicated.", href: "/protocols/tb/tb-08", kind: "protocol" },
+      { label: "TB-10 Traumatic Arrest", description: "Open for traumatic pulseless arrest.", href: "/protocols/tb/tb-10", kind: "protocol" },
     ],
     warnings: [
       "Do not delay transport for IV attempts, detailed examination, splinting, or procedures that can be completed en route.",
@@ -297,32 +303,33 @@ export const structuredTraumaProtocols: StructuredProtocolContent[] = [
     title: "Radiation Incident",
     sourcePdf: "/protocols/claiborne/tb-07-radiation-incident-protocol.pdf",
     overview: [
-      "Radiation exposure, external contamination, and internal contamination are distinct problems.",
+      "Radiation exposure, external contamination, and internal contamination are distinct problems; exposure alone does not make the patient or ambulance contaminated.",
       "Treat life threats first while using time, distance, shielding, PPE, and contamination control.",
     ],
     flow: [
-      { title: "Radiation Hazard", text: "Stage until incident command identifies a safe zone and appropriate PPE.", levels: ALL_LEVELS, tone: "start" },
-      { title: "Life Threat?", text: "Do not delay lifesaving airway, breathing, or hemorrhage care.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Contaminated?", text: "Remove clothing, contain belongings, survey if equipped, and decontaminate.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Assess Exposure", text: "Source • time • distance • shielding • symptoms • associated blast/burn/trauma.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Coordinate Experts", text: "HazMat, radiation safety, Poison Control, receiving facility, and Medical Control.", levels: ["AEMT", "Paramedic"], tone: "action" },
-      { title: "Controlled Transport", text: "Notify destination before departure and prevent ambulance contamination.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "Radiation Hazard", text: "Stage until Incident Command identifies a safe zone and the appropriate PPE and radiation monitoring/dosimetry when required.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Life Threat?", text: "Do not delay lifesaving airway, breathing, hemorrhage care, or transport for decontamination.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Contaminated?", text: "If radioactive material is on clothing or skin, carefully remove outer clothing, bag and label belongings, then gently wash with soap and lukewarm water. Do not decontaminate an exposure-only patient.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Assess Exposure", text: "Source • time • distance • shielding • symptoms • associated blast/burn/trauma • survey or dose information provided by radiation authorities.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Coordinate Experts", text: "Incident Command/HazMat • local radiation safety • receiving facility • Medical Control.", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "Controlled Transport", text: "Notify the destination early. If unstable, transport promptly with contamination precautions rather than delaying for completed decontamination.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
-      "Use PPE and contamination control, remove clothing when directed, bag belongings, treat immediate threats, and prevent spread.",
-      "Record source information, exposure time, distance, shielding, symptoms, and decontamination performed.",
+      "Use appropriate PPE and contamination control, treat immediate threats, and prevent spread. Exposure without contamination does not require patient or ambulance decontamination.",
+      "For known or suspected external contamination, carefully remove outer clothing, bag and label belongings, and gently wash exposed skin or hair with soap and lukewarm water; do not scrub or injure the skin.",
+      "Record source information, exposure time, distance, shielding, symptoms, decontamination performed, and any survey or dose information provided by radiation authorities.",
     ],
     aemt: [
       "Perform all EMT care plus vascular access and supportive treatment within standing orders.",
-      "Coordinate monitoring and ambulance preparation with incident command.",
+      "Coordinate monitoring, ambulance preparation, and transport precautions with Incident Command.",
     ],
     paramedic: [
-      "Perform all prior care plus advanced supportive care and consultation with Medical Control and radiation experts.",
-      "Manage associated trauma, burns, airway injury, shock, or dysrhythmia under the appropriate protocols.",
+      "Perform all prior care plus advanced supportive care and consultation with Medical Control, HazMat, local radiation safety, and the receiving facility.",
+      "Manage associated trauma, burns, airway injury, shock, or dysrhythmia under the appropriate protocols. Do not give potassium iodide or other radiation countermeasures unless specifically directed by public-health or radiation authorities.",
     ],
     warnings: [
-      "Do not enter a radiation hot zone without authorization, monitoring, training, and appropriate PPE.",
-      "Contamination alone is not a reason to withhold lifesaving care.",
+      "Do not enter a radiation hot zone without authorization, training, appropriate PPE, and required monitoring/dosimetry.",
+      "Contamination alone is not a reason to withhold lifesaving care or delay transport of a seriously injured patient.",
     ],
   }),
 
@@ -331,31 +338,32 @@ export const structuredTraumaProtocols: StructuredProtocolContent[] = [
     title: "Selective Spinal Immobilization",
     sourcePdf: "/protocols/claiborne/tb-08-selective-spinal-immobilization-protocol.pdf",
     overview: [
-      "Apply spinal motion restriction selectively after blunt trauma based on reliability, symptoms, examination, and mechanism.",
-      "The goal is motion restriction and safe handling, not routine prolonged placement on a rigid long board.",
+      "Apply spinal motion restriction (SMR) selectively after blunt trauma based on a reliable clinical examination and high-risk findings.",
+      "The goal is to minimize unwanted spinal movement and provide safe handling, not routine prolonged placement on a rigid long board.",
     ],
     flow: [
       { title: "Blunt Trauma", text: "Manually stabilize when spinal injury is reasonably suspected.", levels: ALL_LEVELS, tone: "start" },
       { title: "Reliable Exam?", text: "Normal alertness • no intoxication • no distracting injury • effective communication.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "High-Risk Finding?", text: "Midline pain/tenderness • neurologic deficit • deformity • concerning mechanism.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Restriction Indicated", text: "Use cervical collar when appropriate and minimize spinal movement.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Restriction Not Indicated", text: "Document negative assessment and reassess if symptoms change.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Transport + Reassess", text: "Use the safest patient position and repeat neurologic examination.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "SMR Indicated?", text: "Altered mental status • midline neck/back pain or tenderness • focal neurologic symptom/deficit • spinal deformity • unreliable examination.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "SMR Indicated", text: "Use an appropriately fitted cervical collar and keep head, neck, and torso aligned and secured on the cot, scoop, vacuum device, or similar device.", levels: ALL_LEVELS, tone: "action" },
+      { title: "SMR Not Indicated", text: "Mechanism alone does not mandate SMR in an alert, reliable patient with no pain/tenderness or neurologic finding. Document the negative assessment and reassess if symptoms change.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Transport + Reassess", text: "Use the safest position that preserves airway and ventilation; repeat motor and sensory examinations and document findings at handoff.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
-      "Assess reliability, midline pain/tenderness, neurologic findings, deformity, distracting injury, intoxication, and mechanism.",
-      "Apply motion restriction and collar when indicated; pad voids, protect pressure points, and reassess CSM.",
+      "Assess alertness, reliability, midline neck/back pain or tenderness, neurologic findings, deformity, distracting injury, intoxication, and communication barriers.",
+      "Apply SMR when indicated using an appropriately fitted cervical collar and aligned securement; pad voids, protect pressure points, and reassess motor/sensory findings and distal perfusion before and after movement.",
     ],
     aemt: [
       "Perform all EMT care and support safe positioning, airway care, analgesia, and serial neurologic reassessment within scope.",
     ],
     paramedic: [
       "Perform all prior care, resolve equivocal examinations, and manage airway or ventilation while minimizing cervical motion.",
-      "Document the clinical basis for applying or clearing spinal motion restriction.",
+      "Document the clinical basis for applying or clearing SMR and repeat neurologic findings before transfer of care.",
     ],
     warnings: [
-      "Do not force the head or neck into neutral alignment when pain, resistance, neurologic change, or airway compromise occurs.",
-      "Penetrating trauma without neurologic deficit generally does not benefit from routine spinal immobilization and should not have transport delayed.",
+      "Do not force the head or neck into neutral alignment when pain, resistance, neurologic change, airway compromise, or a position that cannot be tolerated occurs.",
+      "A rigid long board is primarily an extrication or transfer device, not routine transport packaging; remove it when safely feasible.",
+      "Routine SMR is not indicated for penetrating trauma without neurologic deficit and should not delay transport.",
     ],
   }),
 
