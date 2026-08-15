@@ -192,28 +192,6 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
   }),
 
   protocol({
-    id: "te-06", title: "Marine Envenomations",
-    sourcePdf: "/protocols/claiborne/te-06-marine-envenomations-protocol.pdf", pages: 2,
-    overview: [
-      "Remove the patient from water safely, prevent further envenomation, treat anaphylaxis/shock, and use organism-specific wound care.",
-      "Hot-water immersion at 110–114°F (43–46°C) can inactivate heat-labile venom and reduce pain.",
-    ],
-    indications: ["Jellyfish, man-of-war, anemone, stingray, lionfish, urchin, coral, or other marine injury."],
-    flow: [
-      { title: "Rescue + Scene Safety", text: "Remove from water and avoid contact with organism or fragments.", levels: ALL_LEVELS, tone: "start" },
-      { title: "ABCs / Anaphylaxis / Shock", text: "Treat respiratory or cardiovascular collapse immediately.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Identify Injury Pattern", text: "Tentacles • barb/spine • large-organism trauma.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Tentacles", text: "Lift away—do not rub; vinegar if available, otherwise clean seawater; no fresh water or ice.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Barb / Spine", text: "Remove unless in thorax/abdomen; stabilize retained central barb and immobilize.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Hot Water + Transport", text: "Immerse 110–114°F when available; wound care, pain control, Poison Control, reassess.", levels: ALL_LEVELS, tone: "transport" },
-    ],
-    emt: ["Prevent drowning, provide wound care/immobilization, carefully remove tentacles, and treat anaphylaxis when indicated."],
-    aemt: ["Perform all EMT care plus IV/IO access, fluids, and authorized analgesia/anaphylaxis treatment."],
-    paramedic: ["Perform all prior care plus cardiac monitoring and advanced management of shock, seizure, respiratory failure, or cardiovascular collapse."],
-    warnings: ["Do not use fresh water or ice on jellyfish/man-of-war tentacles.", "Do not remove a large barb embedded in the thorax or abdomen; stabilize it."],
-  }),
-
-  protocol({
     id: "te-07", title: "Overdose / Toxic Ingestion",
     sourcePdf: "/protocols/claiborne/te-07-overdose-toxic-ingestion-protocol.pdf", pages: 3,
     overview: [
