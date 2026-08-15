@@ -113,25 +113,25 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
     sourcePdf: "/protocols/claiborne/te-03-drowning-submersion-injury-protocol.pdf", pages: 1,
     overview: [
       "Drowning is respiratory impairment after submersion or immersion; reversal of hypoxia is the priority.",
-      "Begin with five rescue breaths, then support ventilation and circulation without delaying for routine spinal restriction or copious airway foam.",
+      "Begin with two initial breaths/ventilations, then support ventilation and circulation without delaying for routine spinal restriction or copious airway foam.",
     ],
     indications: ["Any submersion/immersion event with respiratory symptoms, altered mental status, apnea, or arrest."],
     flow: [
-      { title: "Safe Water Rescue", text: "Only trained/equipped rescuers enter hazardous water; remove patient and assess ABCs.", levels: ALL_LEVELS, tone: "start" },
-      { title: "Five Rescue Breaths", text: "For AMS or unresponsive patient, begin BVM/mouth-to-mouth breaths as tolerated.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Pulse?", text: "No: pediatric/adult arrest pathway. Yes: continue oxygenation and airway support.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Safe Water Rescue", text: "Only trained/equipped rescuers enter hazardous water. Trained responders may provide in-water breaths only when safe and without delaying removal.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Two Initial Breaths", text: "For apnea or unresponsiveness, provide two initial breaths/ventilations by the first effective means available; do not delay for routine suctioning.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Pulse?", text: "No: begin CPR with breaths and compressions, then use the adult or pediatric arrest pathway. Yes: continue oxygenation and airway support.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Trauma Indication?", text: "Use spinal-motion restriction only when indicated and never at the expense of ventilation/CPR.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Dry + Warm + Monitor", text: "Remove wet clothing; assess glucose, ECG, hypothermia, and pulmonary status.", levels: ALL_LEVELS, tone: "action" },
       { title: "Transport / Observe", text: "Encourage evaluation, especially for cough, foam, dyspnea, abnormal sounds, or hypoxia.", levels: ALL_LEVELS, tone: "transport" },
     ],
-    emt: ["Prioritize rescue safety, give five initial breaths when indicated, ventilate through foam, begin CPR if pulseless, and dry/warm the patient."],
+    emt: ["Prioritize rescue safety, give two initial breaths/ventilations when indicated, ventilate through foam without routine suctioning, begin CPR with breaths and compressions if pulseless, and dry/warm the patient."],
     aemt: ["Perform all EMT care plus IV/IO access and treatment of glucose abnormality, shock, or associated hypothermia."],
     paramedic: ["Perform all prior care plus advanced airway/cardiac monitoring and consultation for dive-related barotrauma or decompression illness."],
     warnings: [
       "Do not waste time suctioning airway foam; ventilate through it and suction water/vomit only when needed.",
       "Spinal-motion restriction should never delay oxygenation, ventilation, or CPR.",
     ],
-    pearls: ["Regardless of water temperature, resuscitate when known submersion time is 25 minutes or less unless obvious death criteria apply."],
+    pearls: ["Do not use a single submersion-time cutoff alone to determine whether to begin or continue resuscitation; use the applicable cardiac-arrest and termination pathway with the full clinical context."],
   }),
 
   protocol({
