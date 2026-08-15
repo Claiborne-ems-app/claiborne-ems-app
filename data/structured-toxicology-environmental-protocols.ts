@@ -58,22 +58,26 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
     flow: [
       { title: "Scene Safe?", text: "Stage or request resources until animal, insect, or environmental hazard is controlled.", levels: ALL_LEVELS, tone: "start" },
       { title: "ABCs / Anaphylaxis / Shock", text: "Treat immediate threats and route to age-appropriate allergy or shock protocol.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Wound + Immobilize", text: "Clean/cover, remove constricting items, immobilize, and keep bite near heart level.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Snake Bite?", text: "Mark swelling/redness with time. Do not apply ice, tourniquet, suction, or incision.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Spider / Sting?", text: "Ice packs for local injury; treat severe muscle spasm per ALS scope.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Poison Control + Transport", text: "Call 1-800-222-1222; report mammal bites to Animal Control even if transport declined.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "Wound + Immobilize", text: "Clean/cover, remove constricting items, and immobilize the extremity in a neutral position of comfort.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Snake Bite?", text: "Mark swelling/redness with time; keep the patient calm and transport promptly. Do not apply ice, tourniquet, suction, or incision.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Spider / Sting?", text: "For a visible stinger, scrape it away; wash the area and use a cold pack for 10–20 minutes. Treat anaphylaxis immediately when present.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Consult + Transport", text: "For suspected envenomation, unknown toxic bite/sting, or concerning symptoms, call Poison Control (1-800-222-1222). Follow local public-health/animal-control reporting process for possible rabies exposure.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
-      "Provide wound care, remove rings/bands, immobilize the extremity, mark progression, and treat anaphylaxis with epinephrine when indicated.",
-      "Document animal-control notification for mammal bites when transport is refused.",
+      "Provide wound care, remove rings/bands, immobilize the extremity in a neutral position of comfort, mark progression, and treat anaphylaxis with epinephrine when indicated.",
+      "For a visible insect stinger, scrape it away; wash the area and use a cold pack for 10–20 minutes.",
+      "For possible rabies exposure, follow the local public-health/animal-control reporting process.",
     ],
     aemt: ["Perform all EMT care plus IV/IO access, fluids, and authorized pain/anaphylaxis treatment."],
-    paramedic: ["Perform all prior care plus cardiac monitoring and midazolam for severe venom-associated muscle spasm."],
-    medications: [
-      { name: "Midazolam", dose: "Adult 2–2.5 mg IV/IO over 2–3 min or protocol IN dose; maximum 10 mg" },
-      { name: "Midazolam—pediatric", dose: "0.1–0.2 mg/kg IV/IO/IM/IN; maximum 5 mg IM" },
+    paramedic: ["Perform all prior care plus cardiac monitoring and treat severe venom-associated muscle spasm or seizure under the applicable medication and seizure protocol."],
+    actionLinks: [
+      { label: "Medication Reference", description: "Open for approved midazolam indications, dosing, and monitoring.", href: "/medications", kind: "external" },
     ],
-    warnings: ["Do not capture or transport a snake for identification.", "Do not apply ice to a snake bite."],
+    warnings: [
+      "Do not capture or transport a snake for identification.",
+      "Do not apply ice to a snake bite.",
+      "Do not delay transport for snake-bite interventions or identification.",
+    ],
   }),
 
   protocol({
