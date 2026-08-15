@@ -485,7 +485,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       { title: "Wheeze, Stridor, or Another Cause?", text: "Consider asthma, croup, bronchiolitis, epiglottitis, anaphylaxis, foreign body, or respiratory failure.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Initial Support", text: "Least distressing effective oxygen method • suction when needed • pathway-specific bronchodilator/epinephrine.", levels: ALL_LEVELS, tone: "action" },
       { title: "Improving?", text: "Reassess after each treatment; obtain access when severe or persistent.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Severe / Impending Failure?", text: "PM-01 epinephrine when indicated • steroid • magnesium • BVM/airway escalation.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Severe / Impending Failure?", text: "PM-01 epinephrine when indicated • Medical-Control-directed steroid • magnesium • BVM/airway escalation.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
       { title: "Reassess + Transport", text: "Continuous SpO₂; EtCO₂ when indicated; maintain warmth and notify early.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
@@ -497,7 +497,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       "Perform all EMT care plus vascular access, repeated albuterol and weight-appropriate initial ipratropium for moderate or severe bronchospasm, nebulized epinephrine for croup/stridor, and PM-01-directed IM epinephrine.",
     ],
     paramedic: [
-      "Perform all prior care plus steroid, magnesium for severe asthma, cardiac/EtCO₂ monitoring, and BVM/advanced-airway support for impending failure.",
+      "Perform all prior care plus Medical-Control-directed corticosteroid consideration, magnesium for severe asthma, cardiac/EtCO₂ monitoring, and BVM/advanced-airway support for impending failure.",
       "Move promptly to AR-05/AR-06 for silent chest, cyanosis, exhaustion, declining mental status, bradycardia, or ineffective ventilation; do not continue repeated medications in a tiring child.",
     ],
     treatmentSteps: [
@@ -506,7 +506,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       "For croup/stridor, keep the child calm, avoid unnecessary airway manipulation, give nebulized epinephrine for stridor at rest or moderate/severe upper-airway obstruction, and transport after treatment because symptoms can recur.",
       "For suspected epiglottitis or bacterial tracheitis—drooling, tripod position, toxic appearance, or rapidly progressive upper-airway symptoms—do not force the child supine or examine the tongue/airway; prepare for a controlled airway response and notify the receiving facility early.",
       "For anaphylaxis or life-threatening asthma, use the approved PM-01 Pediatric Allergic Reaction epinephrine pathway; do not use a conflicting separate epinephrine dose in this protocol.",
-      "Use methylprednisolone for moderate or severe asthma/reactive-airway disease; it is adjunctive and must not delay bronchodilator therapy.",
+      "For moderate or severe asthma/reactive-airway disease, contact Medical Control for corticosteroid consideration; it is adjunctive and must not delay bronchodilator therapy.",
       "Use magnesium sulfate for severe asthma not improving after initial bronchodilator therapy; monitor blood pressure.",
       "If heart rate remains below 60/min with poor perfusion despite effective oxygenation and ventilation, start CPR and follow PC-02.",
     ],
@@ -515,7 +515,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       { name: "Ipratropium", dose: "Under 20 kg: 0.25 mg nebulized; 20 kg or greater: 0.5 mg nebulized, with initial albuterol for moderate or severe bronchospasm" },
       { name: "Nebulized epinephrine", dose: "0.5 mL/kg of 1 mg/mL (1:1,000) epinephrine, maximum 5 mL (5 mg), nebulized for croup/stridor" },
       { name: "Epinephrine 1 mg/mL (1:1,000)", dose: "Use the approved PM-01 Pediatric Allergic Reaction pathway for anaphylaxis or life-threatening asthma dosing" },
-      { name: "Methylprednisolone", dose: "2 mg/kg IV/IO/IM; maximum 125 mg, for moderate or severe asthma/reactive-airway disease" },
+      { name: "Methylprednisolone", dose: "Medical Control only; no standing pediatric dose, for moderate or severe asthma/reactive-airway disease" },
       { name: "Magnesium sulfate", dose: "40 mg/kg IV/IO over 10–20 minutes; maximum 2 g, for severe asthma not improving after initial bronchodilators" },
     ],
     actionLinks: [
