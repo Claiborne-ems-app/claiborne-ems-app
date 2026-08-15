@@ -105,14 +105,14 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
     ],
     paramedic: [
       "Perform all prior care plus advanced airway management and Medical-Control-directed epinephrine infusion for refractory anaphylaxis after repeated IM doses.",
-      "Consider methylprednisolone only as an adjunct; never substitute it for epinephrine. Do not use a routine IV/IO epinephrine bolus for refractory anaphylaxis.",
+      "Consider methylprednisolone only with Medical Control as an adjunct; never substitute it for epinephrine. Do not use a routine IV/IO epinephrine bolus for refractory anaphylaxis.",
     ],
     medications: [
       { name: "Epinephrine 1 mg/mL (1:1,000)", dose: "0.01 mg/kg IM in the mid-outer thigh; maximum 0.3 mg prepubertal child / 0.5 mg adolescent; repeat every 5 minutes as needed" },
       { name: "Albuterol", dose: "2.5–5 mg nebulized for lower-airway bronchospasm; may repeat up to 3 treatments", notes: ["Adjunct only; does not treat upper-airway edema, hypotension, or anaphylaxis itself."] },
       { name: "Diphenhydramine", dose: "1 mg/kg PO/IV/IO/IM; maximum 50 mg", notes: ["Adjunct for cutaneous symptoms only. EMT route is oral only."] },
       { name: "Normal saline", dose: "20 mL/kg IV/IO for anaphylactic shock; reassess perfusion and lungs after each bolus" },
-      { name: "Methylprednisolone", dose: "2 mg/kg IV/IO/IM; maximum 125 mg", notes: ["Adjunct only; do not delay epinephrine."] },
+      { name: "Methylprednisolone", dose: "Medical Control only; no standing pediatric dose", notes: ["Adjunct only; do not delay epinephrine."] },
       { name: "Epinephrine infusion", dose: "Medical-Control-directed for refractory anaphylaxis after repeated IM epinephrine; do not use a routine IV/IO epinephrine bolus" },
     ],
     treatmentSteps: [
