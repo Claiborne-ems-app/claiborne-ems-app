@@ -231,26 +231,26 @@ export const structuredTraumaProtocols: StructuredProtocolContent[] = [
     flow: [
       { title: "Head Injury", text: "Assess mechanism, loss of consciousness, anticoagulants, seizure, vomiting, and baseline.", levels: ALL_LEVELS, tone: "start" },
       { title: "Primary Survey", text: "Protect airway and spine as indicated; control bleeding without compressing unstable skull injury.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "GCS + Pupils", text: "Document GCS components, pupils, focal deficits, and repeated neurologic examinations.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Prevent Secondary Injury", text: "Maintain oxygenation, ventilation, perfusion, glucose, and temperature.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Herniation Signs?", text: "Falling GCS • unilateral dilated pupil • abnormal posturing • Cushing response.", levels: ["AEMT", "Paramedic"], tone: "decision" },
-      { title: "Trauma-Center Transport", text: "Minimize scene time and provide serial GCS and early notification.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "GCS + Pupils", text: "Document GCS components, pupils, focal deficits, and repeated neurologic examinations; use continuous SpO₂ and serial blood pressure monitoring.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Prevent Secondary Injury", text: "Correct SpO₂ below 90% immediately; maintain oxygenation, age-appropriate perfusion, glucose, and temperature. For adults, target SBP ≥110 (age 15–49 or >70) and ≥100 (age 50–69); use age-specific targets for children.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Herniation Signs?", text: "Falling GCS • unilateral dilated pupil • abnormal posturing • Cushing response. Position the head midline and elevate about 20–30° when this does not worsen hypotension or interfere with spinal precautions; use brief controlled hyperventilation only for clear herniation while expediting transport.", levels: ["AEMT", "Paramedic"], tone: "decision" },
+      { title: "Appropriate Destination", text: "Minimize scene time and provide serial GCS and early notification, especially for anticoagulant/antiplatelet use, repeated vomiting, seizure, worsening GCS, focal deficit, skull signs, or abnormal pupils. Use the nearest appropriate stabilization facility when direct trauma-center ground transport would be unsafe or substantially delay needed resuscitation, with early transfer coordination.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
-      "Maintain airway, oxygenation, spinal motion restriction when indicated, bleeding control, serial GCS/pupils, and rapid transport.",
-      "Identify anticoagulants, antiplatelets, seizure, vomiting, skull signs, and neurologic deterioration.",
+      "Maintain airway, correct SpO₂ below 90% immediately, use spinal motion restriction when indicated, control bleeding, obtain serial GCS/pupils, and transport promptly.",
+      "Identify anticoagulants, antiplatelets, seizure, repeated vomiting, skull signs, focal deficit, abnormal pupils, and neurologic deterioration.",
     ],
     aemt: [
-      "Perform all EMT care plus vascular access and protocol-directed treatment of hypotension without delaying transport.",
+      "Perform all EMT care plus vascular access and protocol-directed treatment of hypotension without delaying transport; for adults target SBP ≥110 (age 15–49 or >70) and ≥100 (age 50–69), with age-specific pediatric targets.",
       "Use authorized airway adjuncts and EtCO₂ monitoring when available.",
     ],
     paramedic: [
-      "Perform all prior care plus advanced airway management and controlled ventilation when the patient cannot protect the airway.",
-      "Use protocol-directed herniation management only when clinical signs are present; avoid routine hyperventilation.",
+      "Perform all prior care plus advanced airway management and controlled ventilation when the patient cannot protect the airway; after advanced airway placement, use EtCO₂ 35–40 mmHg.",
+      "Use protocol-directed herniation management only when clinical signs are present; avoid routine hyperventilation. Treat active seizure under the seizure/medication pathway; do not provide prophylactic antiseizure medication in the field.",
     ],
     warnings: [
       "A single normal examination does not exclude intracranial hemorrhage, especially in anticoagulated or older patients.",
-      "Do not aggressively control hypertension in suspected traumatic brain injury unless another approved protocol requires it.",
+      "Do not aggressively control hypertension in suspected traumatic brain injury unless another approved protocol requires it. After advanced airway placement, avoid routine hyperventilation; use brief controlled hyperventilation only for clear herniation signs while expediting transport.",
     ],
     clinicalPearls: [
       "Hypotension in isolated head injury should prompt a search for extracranial hemorrhage.",
