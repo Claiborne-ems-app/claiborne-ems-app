@@ -11,7 +11,7 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
     overview: [
       "Use for blunt or penetrating injury to the abdomen, flank, pelvis, groin, perineum, or lower torso, including suspected internal hemorrhage, pelvic fracture, evisceration, or an impaled object.",
       "A normal initial examination or blood pressure does not exclude major abdominal, retroperitoneal, pelvic, solid-organ, hollow-viscus, vascular, genitourinary, or pregnancy-related injury.",
-      "Prioritize hemorrhage control, pelvic stabilization when indicated, prevention of hypothermia, rapid trauma-center transport, and resuscitation that does not delay definitive hemorrhage control.",
+      "Prioritize hemorrhage control, pelvic stabilization when indicated, prevention of hypothermia, rapid transport to definitive or necessary stabilization care, and resuscitation that does not delay definitive hemorrhage control.",
     ],
     flow: [
       {
@@ -34,13 +34,13 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
       },
       {
         title: "Pelvic Injury Suspected?",
-        text: "High-energy mechanism - pelvic pain/deformity - instability/shock - binder at greater trochanters",
+        text: "Significant mechanism plus pelvic pain, deformity, shock, or unreliable examination - binder at greater trochanters",
         levels: [...ALL_LEVELS],
         tone: "decision",
       },
       {
         title: "Resuscitate En Route",
-        text: "IV/IO - warming - analgesia/antiemetic - shock pathway - blood/TXA only if locally adopted",
+        text: "IV/IO - warming - analgesia/antiemetic - shock care - TXA for life-threatening hemorrhage",
         levels: ["AEMT", "Paramedic"],
         tone: "action",
       },
@@ -78,7 +78,7 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
             level: "Paramedic",
             actions: [
               "Perform all prior actions; lead advanced airway/ventilation, cardiac and EtCO2 monitoring, shock resuscitation, Medical Control, trauma-center destination, and air-medical decisions.",
-              "Use prehospital blood products, tranexamic acid, vasopressors, or other advanced hemorrhage interventions only under a separately finalized Claiborne County standing order with the required training, monitoring, and destination coordination.",
+              "Administer TXA for life-threatening hemorrhage within provider scope and standing orders. Use prehospital blood products, vasopressors, or other advanced hemorrhage interventions only when authorized with the required training, monitoring, and destination coordination.",
               "For a pregnant patient beyond approximately 20 weeks, relieve aortocaval compression with manual left uterine displacement or left lateral tilt when compatible with spinal and trauma care.",
             ],
           },
@@ -121,10 +121,10 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
       "Evisceration: do not replace organs into the abdomen. Cover loosely with sterile saline-moistened dressings and an occlusive layer when available, protect from heat loss, and avoid direct pressure.",
       "Impaled object: do not remove. Stabilize in place with bulky dressings without pressure on exposed organs. Modify or remove only when essential for an immediate lifesaving intervention or safe transport and under rescue/Medical Control coordination.",
       "Control external or junctional hemorrhage with direct pressure, wound packing, hemostatic gauze, or tourniquet when anatomically appropriate. Do not blindly pack material into the abdominal cavity.",
-      "Establish IV/IO access when indicated without delaying transport. Use warmed crystalloid, blood products, TXA, and other shock interventions only according to the current Claiborne traumatic-shock and provider-level standing orders.",
+      "Establish IV/IO access when indicated without delaying transport. Administer TXA for life-threatening hemorrhage within provider scope and standing orders; use warmed crystalloid, blood products, and other shock interventions as indicated.",
       "Provide authorized analgesia and antiemetic treatment without masking deterioration or delaying transport. Keep the patient NPO and reassess frequently.",
       "Pregnancy beyond approximately 20 weeks: prioritize maternal resuscitation and relieve aortocaval compression with left uterine displacement or left lateral tilt when compatible with trauma care. Notify an appropriate trauma/obstetric-capable destination early.",
-      "Transport to the most appropriate trauma center under the current Tennessee trauma destination criteria and Claiborne plan. Consider air medical only when it is expected to reduce time to definitive care and does not delay ground movement.",
+      "Transport to the most appropriate trauma center under the current Tennessee trauma destination criteria and Claiborne plan. Use the nearest appropriate stabilization facility when direct trauma-center ground transport is unsafe or would delay essential resuscitation. Consider air medical only when it is expected to reduce time to definitive care and does not delay ground movement.",
       "Document mechanism, examination, serial vital signs, suspected bleeding source, pelvic-binder indication/position/time, distal neurovascular findings, open-injury care, medications/fluids/blood, response, pregnancy status, consultation, and destination rationale.",
     ],
     medications: [
@@ -150,8 +150,15 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
         ],
       },
       {
-        name: "Blood products / tranexamic acid",
-        dose: "Only under a separately approved Claiborne County protocol with defined indications, exclusions, dosing, monitoring, and destination requirements.",
+        name: "Tranexamic acid (TXA)",
+        dose: "For life-threatening hemorrhage within provider scope and standing orders.",
+        notes: [
+          "Do not delay transport or definitive hemorrhage control for TXA administration.",
+        ],
+      },
+      {
+        name: "Blood products",
+        dose: "Use when authorized with the required training, monitoring, and destination coordination.",
       },
     ],
     warnings: [
@@ -228,7 +235,7 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
     reviewFlags: [
       "Medical-director approval is required before this protocol is released for clinical use.",
       "Confirm the agency's commercial pelvic binder model, adult/pediatric sizing, placement training, evisceration supplies, hemorrhagic-shock pathway, and trauma destination plan.",
-      "Blood products, TXA, crystalloid endpoints, analgesic/antiemetic choices, and air-medical criteria require final formulary and operational approval.",
+      "Confirm blood-product availability, crystalloid endpoints, analgesic/antiemetic choices, and air-medical criteria during periodic operational review.",
       "Trauma-system, emergency medicine, surgery, obstetric, pediatric, pharmacy, and education review are recommended before final approval.",
       "The beta application remains a reference tool; the current approved Claiborne County protocol manual controls patient care.",
     ],

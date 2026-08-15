@@ -21,10 +21,16 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
         tone: "start",
       },
       {
-        title: "Chemical / Thermal?",
+        title: "Chemical Exposure?",
         text: "Start immediate copious irrigation - remove contact lens if easy - do not neutralize",
         levels: [...ALL_LEVELS],
         tone: "urgent",
+      },
+      {
+        title: "Thermal Eye Injury?",
+        text: "Briefly cool or gently irrigate with room-temperature water or saline - protect the eye - do not use ice",
+        levels: [...ALL_LEVELS],
+        tone: "action",
       },
       {
         title: "Penetrating / Open Globe?",
@@ -114,7 +120,7 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
     ],
     treatmentSteps: [
       "Treat immediate life threats and associated head, face, cervical-spine, burn, or multisystem trauma. Eye care must not delay critical trauma transport.",
-      "Chemical exposure: begin copious water or normal-saline irrigation immediately and continue for at least 15 minutes and during transport as needed. Remove contact lenses when easily possible, irrigate from the inner corner outward, and prevent runoff into the unaffected eye or onto responders.",
+      "Chemical exposure: begin copious water or normal-saline irrigation immediately and continue during transport as needed. Remove contact lenses when easily possible, irrigate from the inner corner outward, and prevent runoff into the unaffected eye or onto responders.",
       "Brush away a dry chemical before irrigation when safe and appropriate. Do not attempt acid-base neutralization. Follow TE-09 Chemical / HazMat Exposure and Poison Help guidance for unusual or water-reactive agents.",
       "Thermal injury: gently cool or irrigate with room-temperature water or saline, protect the eye, and avoid ice, ointment, or pressure.",
       "Suspected penetrating/open-globe injury: do not remove an impaled object, manipulate the eye, apply pressure, irrigate, or instill medication. Stabilize a protruding object with bulky material around it without pressure, then protect with a rigid shield.",
@@ -154,7 +160,7 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
       "Do not remove an impaled or embedded object and do not attempt field repair of an eyelid or globe injury.",
       "Do not delay chemical irrigation to identify the product, obtain visual acuity, locate saline, or contact Poison Help.",
       "Do not neutralize a chemical on the eye and do not use ice, ointment, cotton swabs, magnets, or instruments.",
-      "Do not patch both eyes routinely. If covering the unaffected eye is considered to reduce conjugate movement, do so only when tolerated and when fall, anxiety, airway, neurologic, and monitoring risks are controlled.",
+      "Do not patch either eye. For suspected open-globe injury, protect the affected eye with a rigid shield without pressure.",
       "Sudden painless non-traumatic vision loss is not eye trauma. Contact Medical Control and use the appropriate medical pathway; do not apply ocular pressure when trauma or globe rupture is possible.",
     ],
     clinicalPearls: [
