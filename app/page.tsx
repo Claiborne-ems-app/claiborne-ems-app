@@ -121,7 +121,7 @@ export default function Home() {
               accent: "bg-sky-500/12 text-sky-300 ring-sky-400/20",
               subtitle: `${category.protocols.length} protocols`,
             };
-            const tone = categoryTileTones[index % categoryTileTones.length];
+            const tone = categoryTileTones[(Math.floor(index / 2) + (index % 2)) % categoryTileTones.length];
 
             return (
               <CategoryCard
