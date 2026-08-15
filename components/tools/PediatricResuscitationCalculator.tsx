@@ -19,7 +19,7 @@ import ProviderLevelSelector, {
 } from "../provider/ProviderLevelSelector";
 
 type WeightSource = "Measured" | "Length-based tape" | "Estimated";
-type AgeBand = "Under 1 year" | "1–2 years" | "Over 2 years";
+type PediatricCapGroup = "Prepubertal child" | "Adolescent";
 type Category = "Cardiac" | "Allergy / Respiratory" | "Metabolic / Shock";
 
 type DoseResult = {
@@ -39,7 +39,7 @@ type DoseCard = {
   protocolHref: string;
   protocolDose: string;
   caution?: string;
-  calculate: (weightKg: number, ageBand: AgeBand) => DoseResult;
+  calculate: (weightKg: number, pediatricCapGroup: PediatricCapGroup) => DoseResult;
 };
 
 const providerRank: Record<ClinicalProviderLevel, number> = {
@@ -102,13 +102,16 @@ const doseCards: DoseCard[] = [
     protocol: "PC-02",
     protocolHref: "/protocols/pc/pc-02",
     protocolDose:
-      "0.02 mg/kg; minimum 0.1 mg, maximum single dose 0.5 mg; may repeat once.",
-    calculate: (weightKg) => {
+      "0.02 mg/kg; minimum 0.1 mg; child maximum single/total 0.5 mg / 1 mg; adolescent maximum single/total 1 mg / 2 mg; may repeat once.",
+    calculate: (weightKg, pediatricCapGroup) => {
+      const maximumSingle = pediatricCapGroup === "Adolescent" ? 1 : 0.5;
+      const maximumTotal = pediatricCapGroup === "Adolescent" ? 2 : 1;
       const rawDose = weightKg * 0.02;
-      const dose = Math.min(Math.max(rawDose, 0.1), 0.5);
+      const dose = Math.min(Math.max(rawDose, 0.1), maximumSingle);
       return {
         primary: `${rounded(dose)} mg`,
-        calculation: `0.02 mg/kg × ${rounded(weightKg)} kg; min 0.1 mg, max 0.5 mg`,
+        secondary: `Maximum total: ${rounded(maximumTotal)} mg`,
+        calculation: `0.02 mg/kg × ${rounded(weightKg)} kg; min 0.1 mg, max ${rounded(maximumSingle)} mg for ${pediatricCapGroup.toLowerCase()}`,
       };
     },
   },
@@ -175,21 +178,18 @@ const doseCards: DoseCard[] = [
     protocol: "PM-01",
     protocolHref: "/protocols/pm/pm-01",
     protocolDose:
-      "Under 30 kg: 0.15 mg. At least 30 kg: 0.3–0.5 mg. Repeat every 5 minutes as needed.",
+      "0.01 mg/kg IM in the mid-outer thigh; maximum 0.3 mg prepubertal child / 0.5 mg adolescent. Repeat every 5 minutes as needed.",
     caution:
-      "PM-01 and AR-07 use different pediatric IM epinephrine wording. This result follows PM-01; verify the clinical pathway and current standing order.",
-    calculate: (weightKg) =>
-      weightKg < 30
-        ? {
-            primary: "0.15 mg",
-            secondary: "0.15 mL of 1 mg/mL",
-            calculation: `${rounded(weightKg)} kg is under the PM-01 30 kg threshold`,
-          }
-        : {
-            primary: "0.3–0.5 mg",
-            secondary: "0.3–0.5 mL of 1 mg/mL",
-            calculation: `${rounded(weightKg)} kg meets the PM-01 30 kg threshold`,
-          },
+      "Confirm the pediatric cap group and use the approved PM-01 pathway before administration.",
+    calculate: (weightKg, pediatricCapGroup) => {
+      const maximumDose = pediatricCapGroup === "Adolescent" ? 0.5 : 0.3;
+      const dose = Math.min(weightKg * 0.01, maximumDose);
+      return {
+        primary: `${rounded(dose)} mg`,
+        secondary: `${rounded(dose)} mL of 1 mg/mL`,
+        calculation: `0.01 mg/kg × ${rounded(weightKg)} kg; max ${rounded(maximumDose)} mg for ${pediatricCapGroup.toLowerCase()}`,
+      };
+    },
   },
   {
     id: "diphenhydramine",
@@ -217,10 +217,12 @@ const doseCards: DoseCard[] = [
     route: "IV / IO / IM",
     protocol: "AR-07",
     protocolHref: "/protocols/ar/ar-07",
-    protocolDose: "2 mg/kg; maximum 125 mg.",
-    calculate: (weightKg) => ({
-      primary: `${rounded(Math.min(weightKg * 2, 125))} mg`,
-      calculation: `2 mg/kg × ${rounded(weightKg)} kg; max 125 mg`,
+    protocolDose: "Medical Control required; no standing pediatric calculated dose.",
+    caution:
+      "Methylprednisolone is an adjunct and must not delay bronchodilator therapy or airway support.",
+    calculate: () => ({
+      primary: "Medical Control required",
+      calculation: "No standing pediatric methylprednisolone dose is displayed in the calculator.",
     }),
   },
   {
@@ -251,29 +253,12 @@ const doseCards: DoseCard[] = [
     protocol: "PM-02",
     protocolHref: "/protocols/pm/pm-02",
     protocolDose:
-      "Under 1 year: D10 5 mL/kg. 1–2 years: D25 2 mL/kg. Over 2 years: D50 1 mL/kg, maximum 25 g.",
-    calculate: (weightKg, ageBand) => {
-      if (ageBand === "Under 1 year") {
-        return {
-          primary: `${rounded(weightKg * 5)} mL D10`,
-          secondary: `${rounded(weightKg * 0.5)} g dextrose`,
-          calculation: `5 mL/kg × ${rounded(weightKg)} kg`,
-        };
-      }
-      if (ageBand === "1–2 years") {
-        return {
-          primary: `${rounded(weightKg * 2)} mL D25`,
-          secondary: `${rounded(weightKg * 0.5)} g dextrose`,
-          calculation: `2 mL/kg × ${rounded(weightKg)} kg`,
-        };
-      }
-      const grams = Math.min(weightKg * 0.5, 25);
-      return {
-        primary: `${rounded(grams / 0.5)} mL D50`,
-        secondary: `${rounded(grams)} g dextrose`,
-        calculation: `1 mL/kg × ${rounded(weightKg)} kg; max 25 g (50 mL)`,
-      };
-    },
+      "D10 2 mL/kg IV/IO (0.2 g/kg); recheck glucose and neurologic status after 5 minutes; repeat once if hypoglycemia persists.",
+    calculate: (weightKg) => ({
+      primary: `${rounded(weightKg * 2)} mL D10`,
+      secondary: `${rounded(weightKg * 0.2)} g dextrose`,
+      calculation: `2 mL/kg × ${rounded(weightKg)} kg`,
+    }),
   },
   {
     id: "glucagon",
@@ -285,11 +270,14 @@ const doseCards: DoseCard[] = [
     protocol: "PM-02",
     protocolHref: "/protocols/pm/pm-02",
     protocolDose:
-      "0.1 mg/kg; maximum 1 mg. May repeat every 15 minutes until glucose is over 60 mg/dL.",
-    calculate: (weightKg) => ({
-      primary: `${rounded(Math.min(weightKg * 0.1, 1))} mg`,
-      calculation: `0.1 mg/kg × ${rounded(weightKg)} kg; max 1 mg`,
-    }),
+      "<20 kg: 0.5 mg IM. 20 kg or greater: 1 mg IM when oral glucose is unsafe and vascular access cannot be obtained promptly.",
+    calculate: (weightKg) => {
+      const dose = weightKg < 20 ? 0.5 : 1;
+      return {
+        primary: `${rounded(dose)} mg IM`,
+        calculation: `${rounded(weightKg)} kg is ${weightKg < 20 ? "under" : "at least"} 20 kg`,
+      };
+    },
   },
   {
     id: "normal-saline-shock",
@@ -300,11 +288,12 @@ const doseCards: DoseCard[] = [
     route: "IV / IO",
     protocol: "PM-03",
     protocolHref: "/protocols/pm/pm-03",
-    protocolDose: "20 mL/kg; repeat as needed to maximum 60 mL/kg.",
+    protocolDose:
+      "10–20 mL/kg IV/IO aliquots; reassess perfusion, lungs, and suspected cause after each aliquot. Further fluid is Medical-Control-directed.",
     calculate: (weightKg) => ({
-      primary: `${rounded(weightKg * 20)} mL bolus`,
-      secondary: `Maximum cumulative: ${rounded(weightKg * 60)} mL`,
-      calculation: `20 mL/kg × ${rounded(weightKg)} kg`,
+      primary: `${rounded(weightKg * 10)}–${rounded(weightKg * 20)} mL aliquot`,
+      secondary: "Reassess after each aliquot; further fluid requires Medical Control.",
+      calculation: `10–20 mL/kg × ${rounded(weightKg)} kg`,
     }),
   },
   {
@@ -316,27 +305,13 @@ const doseCards: DoseCard[] = [
     route: "IV / IO",
     protocol: "PM-03",
     protocolHref: "/protocols/pm/pm-03",
-    protocolDose: "5–10 mL/kg; maximum total 10 mL/kg.",
+    protocolDose:
+      "5–10 mL/kg IV/IO cautiously with early Medical Control and reassessment after each aliquot.",
     caution: "Avoid routine 20 mL/kg boluses; pulmonary edema may worsen rapidly.",
     calculate: (weightKg) => ({
-      primary: `${rounded(weightKg * 5)}–${rounded(weightKg * 10)} mL`,
-      secondary: `Maximum total: ${rounded(weightKg * 10)} mL`,
+      primary: `${rounded(weightKg * 5)}–${rounded(weightKg * 10)} mL aliquot`,
+      secondary: "Reassess after each aliquot and contact Medical Control early.",
       calculation: `5–10 mL/kg × ${rounded(weightKg)} kg`,
-    }),
-  },
-  {
-    id: "hydrocortisone",
-    name: "Hydrocortisone",
-    indication: "Suspected adrenal crisis",
-    category: "Metabolic / Shock",
-    minimumLevel: "AEMT",
-    route: "IV / IO / IM",
-    protocol: "PM-03",
-    protocolHref: "/protocols/pm/pm-03",
-    protocolDose: "2 mg/kg; maximum 100 mg.",
-    calculate: (weightKg) => ({
-      primary: `${rounded(Math.min(weightKg * 2, 100))} mg`,
-      calculation: `2 mg/kg × ${rounded(weightKg)} kg; max 100 mg`,
     }),
   },
 ];
@@ -347,10 +322,9 @@ const sourceOptions: WeightSource[] = [
   "Estimated",
 ];
 
-const ageOptions: AgeBand[] = [
-  "Under 1 year",
-  "1–2 years",
-  "Over 2 years",
+const pediatricCapGroupOptions: PediatricCapGroup[] = [
+  "Prepubertal child",
+  "Adolescent",
 ];
 
 function EnergyPanel({ weightKg }: { weightKg: number | null }) {
@@ -398,7 +372,8 @@ export default function PediatricResuscitationCalculator() {
   const { providerLevel, setProviderLevel } = useProviderLevel();
   const [weightInput, setWeightInput] = useState("");
   const [weightSource, setWeightSource] = useState<WeightSource>("Measured");
-  const [ageBand, setAgeBand] = useState<AgeBand>("Over 2 years");
+  const [pediatricCapGroup, setPediatricCapGroup] =
+    useState<PediatricCapGroup>("Prepubertal child");
   const [category, setCategory] = useState<Category>("Cardiac");
 
   const parsedWeight = Number(weightInput);
@@ -495,21 +470,21 @@ export default function PediatricResuscitationCalculator() {
         </fieldset>
 
         <fieldset className="mt-5">
-          <legend className="text-sm font-bold text-slate-200">Age band</legend>
-          <p className="mt-1 text-xs text-slate-500">Required for the protocol-specific dextrose concentration.</p>
-          <div className="mt-2 grid grid-cols-3 gap-2">
-            {ageOptions.map((age) => (
+          <legend className="text-sm font-bold text-slate-200">Pediatric dose cap group</legend>
+          <p className="mt-1 text-xs text-slate-500">Used only when the approved pathway has different child and adolescent maximum doses.</p>
+          <div className="mt-2 grid grid-cols-2 gap-2">
+            {pediatricCapGroupOptions.map((group) => (
               <button
-                key={age}
+                key={group}
                 type="button"
-                onClick={() => setAgeBand(age)}
+                onClick={() => setPediatricCapGroup(group)}
                 className={`min-h-12 rounded-xl border px-2 py-2 text-xs font-bold ${
-                  ageBand === age
+                  pediatricCapGroup === group
                     ? "border-emerald-400 bg-emerald-600 text-white"
                     : "border-slate-700 bg-slate-950 text-slate-300"
                 }`}
               >
-                {age}
+                {group}
               </button>
             ))}
           </div>
@@ -521,7 +496,7 @@ export default function PediatricResuscitationCalculator() {
           <div className="flex items-center gap-3">
             <CheckCircle2 aria-hidden="true" className="h-5 w-5 shrink-0 text-emerald-300" />
             <div className="min-w-0 flex-1">
-              <p className="font-extrabold text-white">{rounded(weightKg)} kg · {ageBand}</p>
+              <p className="font-extrabold text-white">{rounded(weightKg)} kg · {pediatricCapGroup}</p>
               <p className="truncate text-xs text-slate-400">{weightSource} weight · {providerLevel} view</p>
             </div>
             <button
@@ -568,7 +543,7 @@ export default function PediatricResuscitationCalculator() {
 
         <div className="mt-3 space-y-4">
           {visibleCards.map((card) => {
-            const result = weightKg ? card.calculate(weightKg, ageBand) : null;
+            const result = weightKg ? card.calculate(weightKg, pediatricCapGroup) : null;
             return (
               <article key={card.id} className="overflow-hidden rounded-2xl border border-slate-700 bg-slate-900">
                 <div className="p-5">
