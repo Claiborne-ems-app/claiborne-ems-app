@@ -7,28 +7,28 @@ const actions = [
     label: "Protocol Search",
     description: "Find symptoms, drugs, or protocol numbers",
     icon: Search,
-    accent: "bg-sky-500/15 text-sky-200 ring-sky-400/25",
+    accent: "bg-[#0e71b8] text-white ring-[#075b9a]",
   },
   {
     href: "/medications",
     label: "Medications",
     description: "Adult and pediatric quick reference",
     icon: Pill,
-    accent: "bg-blue-500/15 text-blue-200 ring-blue-400/25",
+    accent: "bg-[#c4174d] text-white ring-[#98113b]",
   },
   {
     href: "/scene-timer",
     label: "Scene Timer",
     description: "Time and timestamp treatments",
     icon: Timer,
-    accent: "bg-emerald-500/15 text-emerald-200 ring-emerald-400/25",
+    accent: "bg-[#c4174d] text-white ring-[#98113b]",
   },
   {
     href: "/tools/pediatric-resuscitation",
-    label: "Pediatric",
+    label: "Peds Calculator",
     description: "Weight-based resuscitation calculator",
     icon: Baby,
-    accent: "bg-pink-500/15 text-pink-200 ring-pink-400/25",
+    accent: "bg-[#0e71b8] text-white ring-[#075b9a]",
   },
 ] as const;
 
@@ -48,7 +48,7 @@ export default function QuickActions() {
             <Link
               key={action.href}
               href={action.href}
-              className="flex min-h-32 flex-col rounded-2xl border border-white/10 bg-white/[0.055] p-4 text-white transition active:scale-[0.98] active:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+              className="flex min-h-32 flex-col rounded-2xl border border-slate-200 bg-white p-4 text-slate-900 shadow-sm transition active:scale-[0.98] active:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0e71b8]"
             >
               <span
                 className={`flex h-11 w-11 items-center justify-center rounded-xl ring-1 ${action.accent}`}
@@ -56,7 +56,7 @@ export default function QuickActions() {
                 <Icon aria-hidden="true" className="h-5 w-5" />
               </span>
               <span className="mt-3 block font-extrabold">{action.label}</span>
-              <span className="mt-1 block text-xs leading-4 text-slate-400">
+              <span className="mt-1 block text-xs leading-4 text-slate-600">
                 {action.description}
               </span>
             </Link>
