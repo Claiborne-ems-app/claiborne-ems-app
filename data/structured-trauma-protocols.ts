@@ -85,28 +85,28 @@ export const structuredTraumaProtocols: StructuredProtocolContent[] = [
       "Expect combined primary, secondary, and tertiary blast injury, including barotrauma, penetrating trauma, burns, crush injury, and toxic exposure.",
     ],
     flow: [
-      { title: "Scene Safe?", text: "Stage for hazards, structural collapse, fire, hazardous material, or secondary device.", levels: ALL_LEVELS, tone: "start" },
-      { title: "Triage + Rapid Removal", text: "Quantify patients, request resources, and begin load-and-go care.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Identify Injury Pattern", text: "Airway burn • blast lung • hemorrhage • penetrating trauma • crush • radiation.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Treat Immediate Threats", text: "Airway and ventilation • hemorrhage control • chest seal • shock prevention.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Blast Lung Injury?", text: "Dyspnea, hypoxia, hemoptysis, wheeze, chest pain, or diminished breath sounds.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Rapid Trauma Transport", text: "Use trauma/burn destination plan and notify receiving facility early.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "Scene Safe?", text: "Stage for hazards, structural collapse, fire, hazardous material, or secondary device; activate the agency MCI plan when indicated.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Triage + Rapid Removal", text: "Quantify patients, request resources, apply the local MCI/triage process when indicated, and begin load-and-go care.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Identify Injury Pattern", text: "Airway burn • blast lung • hemorrhage • penetrating trauma • crush; consider radiation only when the mechanism suggests a radiological or nuclear event.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Treat Immediate Threats", text: "Airway and ventilation • hemorrhage control • chest seal • hypothermia prevention • reassessed shock care. Ventilate when clinically necessary.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Blast Lung Injury?", text: "Dyspnea, hypoxia, hemoptysis, wheeze, chest pain, or diminished breath sounds; perform serial respiratory assessment, SpO₂, lung sounds, and monitoring when available.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Rapid Trauma Transport", text: "Use trauma/burn destination plan and notify early, especially for respiratory compromise, penetrating injury, major burn, crush injury, or multisystem trauma.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
       "Maintain scene awareness, perform triage, control major hemorrhage, seal open chest wounds, support ventilation, and prevent hypothermia.",
       "Assess for hearing loss, ocular injury, burns, penetrating injury, abdominal injury, amputation, and crush syndrome.",
     ],
     aemt: [
-      "Perform all EMT care plus IV access and carefully titrated crystalloid for shock within current standing orders.",
+      "Perform all EMT care plus IV access and reassessed crystalloid only when indicated for shock after hemorrhage control, without delaying transport.",
       "Use authorized airway adjuncts and monitor closely for worsening blast-lung physiology.",
     ],
     paramedic: [
       "Perform all prior care plus advanced airway management, cardiac/EtCO₂ monitoring, and chest decompression when indicated.",
-      "Avoid unnecessary positive-pressure ventilation and excessive fluids in suspected blast lung injury.",
+      "When positive-pressure ventilation is clinically necessary for suspected blast lung injury, use the lowest effective pressures/volumes and monitor closely for deterioration.",
     ],
     warnings: [
       "Do not approach a patient who may be attached to wires, a package, or a triggering mechanism; withdraw and notify law enforcement.",
-      "Positive-pressure ventilation, excess fluid, and air transport may worsen blast lung injury.",
+      "Do not withhold needed ventilation. Avoid unnecessarily high positive pressures/volumes and excessive fluids in suspected blast lung injury; if air transport is used, notify the flight crew of the concern.",
     ],
     clinicalPearls: [
       "Tympanic membrane rupture and hearing loss are common and may impair communication.",
