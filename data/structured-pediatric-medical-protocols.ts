@@ -1,5 +1,6 @@
 import type {
   ProviderLevel,
+  ProtocolActionLink,
   ProtocolCareModule,
   ProtocolFlowNode,
   StructuredProtocolContent,
@@ -18,9 +19,15 @@ type Input = {
   emt: string[];
   aemt: string[];
   paramedic: string[];
+  treatmentSteps?: string[];
   medications?: { name: string; dose: string; notes?: string[] }[];
   warnings?: string[];
   pearls?: string[];
+  actionLinks?: ProtocolActionLink[];
+  revisionDate?: string;
+  lastVerifiedDate?: string;
+  reviewStatus?: "Draft" | "Reviewed" | "Approved";
+  reviewFlags?: string[];
 };
 
 function protocol(input: Input): StructuredProtocolContent {
@@ -45,21 +52,22 @@ function protocol(input: Input): StructuredProtocolContent {
     indications: input.indications,
     contraindications: [],
     assessment: [],
-    treatmentSteps: [],
+    treatmentSteps: input.treatmentSteps ?? [],
     medications: input.medications ?? [],
     warnings: input.warnings ?? [],
     clinicalPearls: input.pearls ?? [],
     specialPopulations: [],
+    actionLinks: input.actionLinks ?? [],
     references: [
       "Claiborne County EMS approved protocol manual.",
       "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
     ],
     sourcePdf: input.sourcePdf,
     sourcePages: { start: 1, end: input.pages },
-    revisionDate: "2025-09-01",
-    lastVerifiedDate: "2026-07-29",
-    reviewStatus: "Reviewed",
-    reviewFlags: [
+    revisionDate: input.revisionDate ?? "2025-09-01",
+    lastVerifiedDate: input.lastVerifiedDate ?? "2026-07-29",
+    reviewStatus: input.reviewStatus ?? "Reviewed",
+    reviewFlags: input.reviewFlags ?? [
       "Medical-director approval is required before clinical release.",
       "Verify pediatric doses against the current length/weight system and local formulary.",
       "The original imported PDF remains available for source comparison.",
@@ -70,46 +78,70 @@ function protocol(input: Input): StructuredProtocolContent {
 export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = [
   protocol({
     id: "pm-01",
-    title: "Pediatric Allergic Reaction",
+    title: "Pediatric Anaphylaxis / Allergic Reaction",
     sourcePdf: "/protocols/claiborne/pm-01-pediatric-allergic-reaction-protocol.pdf",
     pages: 2,
+    revisionDate: "2026-08-14",
     overview: [
       "Epinephrine is the first-line treatment for pediatric anaphylaxis and must not be delayed for vascular access, antihistamines, or corticosteroids.",
-      "Differentiate isolated skin findings from multi-system involvement, respiratory compromise, or hypotension.",
+      "Treat suspected anaphylaxis promptly when airway/breathing compromise, hypotension/poor perfusion, or multi-system symptoms follow a likely allergen.",
     ],
-    indications: ["Pediatric allergic reaction or anaphylaxis after a suspected exposure."],
+    indications: ["Pediatric allergic reaction or suspected anaphylaxis after a likely exposure."],
     flow: [
-      { title: "Suspected Allergic Reaction", text: "Assess airway, breathing, circulation, exposure, onset, skin, GI, and cardiovascular findings.", levels: ALL_LEVELS, tone: "start" },
-      { title: "Anaphylaxis?", text: "Two or more systems, respiratory compromise, or hypotension after likely allergen.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "IM Epinephrine Now", text: "≥30 kg: 0.3–0.5 mg • <30 kg: 0.15 mg • repeat every 5 min as needed.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Support Airway + Breathing", text: "Oxygen/ventilation; albuterol for wheeze; prepare for rapid airway deterioration.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Shock?", text: "NS 20 mL/kg; repeat to max 60 mL/kg and target SBP >70 + (2 × age).", levels: ["AEMT", "Paramedic"], tone: "decision" },
-      { title: "Reassess + Transport", text: "Repeat epinephrine when indicated; monitor for recurrence and notify destination.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "Suspected Allergic Reaction", text: "Assess airway, breathing, circulation, exposure, onset, skin, GI, and cardiovascular findings. Remove the trigger when safe.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Anaphylaxis Suspected?", text: "Airway/breathing compromise, hypotension/poor perfusion, or multi-system symptoms after likely allergen: treat immediately. Do not wait for every criterion when concern is high.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "IM Epinephrine Now", text: "Epinephrine 1 mg/mL: 0.01 mg/kg IM in the mid-outer thigh; maximum 0.3 mg prepubertal child / 0.5 mg adolescent. Repeat every 5 minutes as needed.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Support Airway + Breathing", text: "Oxygen/ventilation as indicated; albuterol only for lower-airway bronchospasm. Prepare early for rapid airway deterioration.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Anaphylactic Shock?", text: "Normal saline 20 mL/kg IV/IO with reassessment after each bolus. Repeat IM epinephrine and contact Medical Control early for refractory symptoms.", levels: ["AEMT", "Paramedic"], tone: "decision" },
+      { title: "Reassess + Transport", text: "Continuous monitoring, repeat epinephrine when indicated, and ED evaluation for every child treated with epinephrine.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
-      "Remove the trigger when safe, support airway/ventilation, give IM epinephrine for anaphylaxis, and apply cardiac/SpO₂ monitoring when available.",
-      "For mild isolated symptoms, EMT may give oral diphenhydramine only when the child is alert and can swallow.",
+      "Remove the trigger when safe, support airway/ventilation, give IM epinephrine for suspected anaphylaxis, and apply cardiac/SpO₂ monitoring when available.",
+      "For mild isolated skin symptoms, EMT may give oral diphenhydramine only when the child is alert and can swallow. Do not use oral medication for anaphylaxis or an unprotected airway.",
     ],
     aemt: [
-      "Perform all EMT care plus IV/IO access, normal saline boluses, nebulized albuterol, parenteral diphenhydramine, and authorized repeat epinephrine.",
+      "Perform all EMT care plus IV/IO access, normal saline for anaphylactic shock with reassessment after each bolus, nebulized albuterol for bronchospasm, and authorized repeat IM epinephrine.",
+      "Diphenhydramine is an adjunct for cutaneous symptoms; do not delay epinephrine, airway support, or transport for it.",
     ],
     paramedic: [
-      "Perform all prior care plus advanced airway management and Medical-Control-directed IV/IO epinephrine for refractory anaphylaxis after IM doses.",
-      "Consider methylprednisolone as an adjunct; never substitute it for epinephrine.",
+      "Perform all prior care plus advanced airway management and Medical-Control-directed epinephrine infusion for refractory anaphylaxis after repeated IM doses.",
+      "Consider methylprednisolone only as an adjunct; never substitute it for epinephrine. Do not use a routine IV/IO epinephrine bolus for refractory anaphylaxis.",
     ],
     medications: [
-      { name: "Epinephrine 1 mg/mL (1:1,000)", dose: "≥30 kg: 0.3–0.5 mg IM; <30 kg: 0.15 mg IM; repeat every 5 minutes as needed" },
-      { name: "Epinephrine (intranasal option)", dose: "15–30 kg: 1 mg IN; may repeat once in the other nostril" },
-      { name: "Albuterol", dose: "2.5–5 mg nebulized; may repeat up to 3 treatments" },
-      { name: "Diphenhydramine", dose: "1 mg/kg PO/IV/IO/IM; maximum 50 mg", notes: ["EMT route is oral only."] },
-      { name: "Normal saline", dose: "20 mL/kg IV/IO; repeat to maximum 60 mL/kg" },
-      { name: "Methylprednisolone", dose: "2 mg/kg IV/IO/IM; maximum 125 mg" },
+      { name: "Epinephrine 1 mg/mL (1:1,000)", dose: "0.01 mg/kg IM in the mid-outer thigh; maximum 0.3 mg prepubertal child / 0.5 mg adolescent; repeat every 5 minutes as needed" },
+      { name: "Albuterol", dose: "2.5–5 mg nebulized for lower-airway bronchospasm; may repeat up to 3 treatments", notes: ["Adjunct only; does not treat upper-airway edema, hypotension, or anaphylaxis itself."] },
+      { name: "Diphenhydramine", dose: "1 mg/kg PO/IV/IO/IM; maximum 50 mg", notes: ["Adjunct for cutaneous symptoms only. EMT route is oral only."] },
+      { name: "Normal saline", dose: "20 mL/kg IV/IO for anaphylactic shock; reassess perfusion and lungs after each bolus" },
+      { name: "Methylprednisolone", dose: "2 mg/kg IV/IO/IM; maximum 125 mg", notes: ["Adjunct only; do not delay epinephrine."] },
+      { name: "Epinephrine infusion", dose: "Medical-Control-directed for refractory anaphylaxis after repeated IM epinephrine; do not use a routine IV/IO epinephrine bolus" },
+    ],
+    treatmentSteps: [
+      "IM epinephrine is the time-critical definitive treatment. Do not delay it for IV/IO access, diphenhydramine, corticosteroids, nebulizers, or transport preparation.",
+      "Give albuterol only for lower-airway bronchospasm. It does not reverse upper-airway edema, hypotension, or shock.",
+      "For anaphylactic shock, give normal saline 20 mL/kg with reassessment after each bolus; repeat IM epinephrine and open PM-03 for persistent shock.",
+      "All children treated with epinephrine for anaphylaxis require ED evaluation and monitoring for recurrence, even if symptoms resolve.",
+    ],
+    actionLinks: [
+      { label: "AR-05 Pediatric Airway", description: "Open for pediatric BVM and airway support.", href: "/protocols/ar/ar-05", kind: "protocol" },
+      { label: "AR-06 Pediatric Failed Airway", description: "Open for rapidly worsening or ineffective airway management.", href: "/protocols/ar/ar-06", kind: "protocol" },
+      { label: "PM-03 Pediatric Hypotension / Shock", description: "Open for persistent shock after epinephrine and fluid reassessment.", href: "/protocols/pm/pm-03", kind: "protocol" },
+      { label: "Medication Reference", description: "Open the current Claiborne medication reference.", href: "/medications", kind: "external" },
+    ],
+    reviewStatus: "Approved",
+    lastVerifiedDate: "2026-08-14",
+    reviewFlags: [
+      "Clinical pediatric anaphylaxis recognition, epinephrine-first treatment, weight-based IM epinephrine, airway/bronchospasm care, shock management, refractory-treatment safeguards, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
     ],
     warnings: [
-      "Do not delay IM epinephrine for IV access, diphenhydramine, or corticosteroids.",
+      "Do not delay IM epinephrine for IV access, diphenhydramine, corticosteroids, or albuterol.",
       "Do not give oral medication to a child with decreased mental status, inability to swallow, or an unprotected airway.",
+      "Do not use intranasal epinephrine as the EMS anaphylaxis treatment pathway.",
+      "Do not use a routine IV/IO epinephrine bolus for refractory anaphylaxis.",
     ],
-    pearls: ["A falling blood pressure may be late; pediatric hypotension is SBP below 70 + (2 × age) from ages 1–9."],
+    pearls: [
+      "A falling blood pressure may be late; poor perfusion and respiratory compromise require action before hypotension develops.",
+      "The lateral thigh is the preferred IM epinephrine site for reliable absorption.",
+    ],
   }),
 
   protocol({
