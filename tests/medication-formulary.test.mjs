@@ -33,7 +33,11 @@ test("high-use formulary doses match the submitted RX-R1 table", () => {
 
   assert.match(byId.atropine.doses[0].adult, /1 mg IV\/IO/);
   assert.equal(byId.aspirin.doses[0].adult, "324 mg chewed");
-  assert.equal(byId.dextrose.doses[0].adult, "25 g IV/IO");
-  assert.equal(byId.rocuronium.doses[0].pediatric, "1 mg/kg");
+  assert.match(byId.dextrose.doses[0].adult, /D10: up to 250 mL IV\/IO/);
+  assert.match(byId.dextrose.doses[0].pediatric, /2 mL\/kg IV\/IO \(0\.2 g\/kg\)/);
+  assert.equal(byId.rocuronium.doses[0].adult, "1 mg/kg IV/IO when succinylcholine is contraindicated or a longer duration is needed");
+  assert.equal(byId.rocuronium.doses[0].pediatric, "1 mg/kg IV/IO; pediatric DAI requires direct online Medical Director or Assistant Medical Director order");
   assert.equal(byId["tranexamic-acid"].doses[0].adult, "1-2 g IV/IO or topical");
+  assert.match(byId.naloxone.doses[1].adult, /0\.4–2 mg IV\/IO\/IM/);
+  assert.match(byId.promethazine.doses[0].adult, /12\.5–25 mg deep IM/);
 });

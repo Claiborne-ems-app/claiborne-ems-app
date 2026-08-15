@@ -195,9 +195,9 @@ export default function MedicationDirectory() {
           rel="noreferrer"
           className="mt-2 inline-flex min-h-10 items-center font-bold text-sky-300"
         >
-          Open Tennessee supporting guideline
+          Open Tennessee scope/dosing guideline
         </a>
-        <p>Local formulary transcribed and Tennessee comparison reviewed {medicationReferenceSource.reviewed}.</p>
+        <p>Claiborne's verified RX-R1 formulary controls stocking; the approved Claiborne protocol controls use and dosing. Tennessee scope/dosing comparison reviewed {medicationReferenceSource.reviewed}.</p>
       </footer>
     </>
   );
