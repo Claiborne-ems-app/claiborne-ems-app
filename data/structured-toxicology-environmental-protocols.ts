@@ -245,36 +245,4 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
     ],
   }),
 
-  protocol({
-    id: "te-08", title: "WMD / Nerve Agent",
-    sourcePdf: "/protocols/claiborne/te-08-wmd-nerve-agent-protocol.pdf", pages: 2,
-    overview: [
-      "Protect responders, establish zones, decontaminate, recognize the cholinergic toxidrome, and give antidotes rapidly according to symptom severity.",
-      "Atropine is repeated until secretions and respiratory compromise improve; major symptoms have no fixed atropine ceiling.",
-    ],
-    indications: ["Known or suspected nerve-agent or organophosphate exposure with cholinergic findings or compatible mass-casualty pattern."],
-    flow: [
-      { title: "Stage + HAZMAT", text: "Do not enter unsafe zone; request resources, PPE, triage, and decontamination.", levels: ALL_LEVELS, tone: "start" },
-      { title: "Recognize Toxidrome", text: "Salivation, lacrimation, urination, diarrhea, GI distress, emesis, miosis, twitching, seizure.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Symptom Severity?", text: "Asymptomatic • minor respiratory distress/SLUDGE • major AMS, seizure, arrest.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Antidote Kits", text: "Minor: 2 kits rapidly • Major: 3 kits rapidly, when available.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Atropine + Pralidoxime", text: "Repeat atropine every 3–5 min until secretions improve; add 2-PAM and seizure care.", levels: ["AEMT", "Paramedic"], tone: "action" },
-      { title: "MCI / CHEMPACK", text: "For multiple patients activate local CHEMPACK/coalition plan; notify destination/Medical Control.", levels: ALL_LEVELS, tone: "transport" },
-    ],
-    emt: [
-      "Remain outside the hazard until protected, assist decontamination/triage, support ventilation, and administer agency-issued nerve-agent autoinjectors when authorized.",
-      "Monitor asymptomatic patients every 15 minutes for emerging symptoms.",
-    ],
-    aemt: ["Perform all EMT care plus IV/IO access, repeated atropine, pralidoxime, and benzodiazepine seizure treatment within scope."],
-    paramedic: ["Perform all prior care, aggressively titrate atropine to drying secretions/adequate ventilation, manage the airway, and coordinate CHEMPACK activation for multiple patients."],
-    medications: [
-      { name: "Nerve-agent kit", dose: "Each kit: atropine 2 mg + pralidoxime 600 mg IM; minor symptoms 2 kits rapidly, major symptoms 3 kits rapidly" },
-      { name: "Atropine", dose: "2 mg IV/IO/IM; repeat every 3–5 minutes until secretions improve; pediatric: ≤18 kg 0.5 mg, 18–40 kg 1 mg, ≥40 kg 2 mg" },
-      { name: "Pralidoxime (2-PAM)", dose: "600 mg IV/IO/IM; pediatric 15–25 mg/kg IV/IO/IM over 30 minutes" },
-    ],
-    warnings: [
-      "Do not enter a contaminated zone without appropriate PPE and HAZMAT coordination.",
-      "For major symptoms there is no fixed atropine maximum; the clinical endpoint is control of secretions and respiratory compromise.",
-    ],
-  }),
 ];
