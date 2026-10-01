@@ -1921,7 +1921,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         title: "Parenteral Nonopioid Appropriate?",
-        text: "AEMT/Paramedic: acetaminophen 1 g IV/IO OR ketorolac 15 mg IV/IO or 30 mg IM",
+        text: "AEMT/Paramedic: acetaminophen 1 g IV/IO OR ketorolac 15–30 mg IV or 60 mg IM",
         levels: ["AEMT", "Paramedic"],
         tone: "decision",
       },
@@ -1963,7 +1963,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
           {
             level: "AEMT",
             actions: [
-              "For pain requiring a parenteral nonopioid, administer one of the following: acetaminophen 1 g IV/IO once or ketorolac 15 mg IV/IO once or 30 mg IM once. Do not routinely combine IV acetaminophen with an additional acetaminophen dose.",
+              "For pain requiring a parenteral nonopioid, administer one of the following: acetaminophen 1 g IV/IO once or ketorolac 15–30 mg IV once or 60 mg IM once. Do not routinely combine IV acetaminophen with an additional acetaminophen dose.",
               "Do not administer ketorolac when ibuprofen or another NSAID has already been given during the current treatment interval. Screen for NSAID hypersensitivity, renal disease, renal transplant, significant dehydration, hypotension, active gastrointestinal bleeding, clinically significant anticoagulant-associated bleeding risk, and known or suspected pregnancy.",
               "Establish IV access when needed for parenteral treatment or another clinical indication. Do not establish IO access solely to treat pain in an otherwise stable patient; use an approved oral or nonvascular option or request Paramedic treatment when appropriate.",
               "Apply cardiac monitoring before IV/IO/IM analgesia and continue through reassessment and transport. Reassess pain, BP, heart rate, respiratory rate, SpO₂, mental status, and adverse effects after medication.",
@@ -2010,7 +2010,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     treatmentSteps: [
       "Treat airway compromise, hemorrhage, shock, and other immediate threats first. Provide appropriate positioning, splinting, wound care, ice, and reassurance.",
       "For mild pain, administer acetaminophen 650–1,000 mg PO or ibuprofen 400 mg PO when the oral route is safe and medication-specific contraindications are absent.",
-      "For parenteral nonopioid treatment, an AEMT or Paramedic may administer acetaminophen 1 g IV/IO once or ketorolac 15 mg IV/IO or 30 mg IM once.",
+      "For parenteral nonopioid treatment, an AEMT or Paramedic may administer acetaminophen 1 g IV/IO once or ketorolac 15–30 mg IV or 60 mg IM once.",
       "For moderate to severe pain, a Paramedic may select fentanyl, morphine, hydromorphone, or analgesic-dose ketamine using the approved dose, interval, route, and maximum. Do not combine different opioids or routinely initiate opioid/ketamine combination therapy.",
       "Apply cardiac monitoring for all systemic nonoral analgesia. Use continuous SpO₂ and waveform EtCO₂ with opioids or ketamine and keep suction and ventilation equipment immediately available.",
       "Reassess pain, sedation, airway, respiratory rate and effort, SpO₂, EtCO₂ when used, BP, cardiac rhythm, and adverse effects at least every 5–10 minutes after parenteral medication and at handoff.",
@@ -2043,7 +2043,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         name: "Ketorolac",
-        dose: "AEMT/Paramedic: 15 mg IV/IO once or 30 mg IM once.",
+        dose: "AEMT/Paramedic: 15–30 mg IV once or 60 mg IM once.",
         notes: [
           "Do not administer with the NSAID contraindications listed above.",
           "Do not combine with ibuprofen or another NSAID.",
@@ -2150,7 +2150,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     reviewFlags: [
       "Medical-director approved adult UP-11 for patients 16 years of age or older and directed provider-specific care: oral acetaminophen/ibuprofen by EMT, AEMT, or Paramedic; IV acetaminophen/ketorolac by AEMT or Paramedic; and opioids/analgesic-dose ketamine by Paramedic only.",
       "Medical-director removed nitrous oxide because it is not on the Claiborne formulary and removed aspirin as an analgesic while retaining aspirin only for its approved cardiac indication.",
-      "Medical-director approved acetaminophen 650–1,000 mg PO, ibuprofen 400 mg PO, acetaminophen 1 g IV/IO once, and ketorolac 15 mg IV/IO or 30 mg IM once with the medication-specific contraindications documented in UP-11.",
+      "Medical-director approved acetaminophen 650–1,000 mg PO, ibuprofen 400 mg PO, acetaminophen 1 g IV/IO once, and ketorolac 15–30 mg IV or 60 mg IM once with the medication-specific contraindications documented in UP-11.",
       "Medical-director approved Paramedic opioid limits: fentanyl maximum total 100 mcg, morphine maximum total 10 mg, and hydromorphone maximum total 1 mg; one opioid is selected and different opioids are not combined.",
       "Medical-director approved analgesic ketamine 0.3 mg/kg IV/IO slowly over 10 minutes to maximum 30 mg per dose, repeat every 20 minutes for maximum three doses; or 0.5–1 mg/kg IN once to maximum 100 mg when vascular access is unavailable.",
       "Medical-director directed against routine initial opioid/ketamine combination therapy and required full reassessment before changing agents.",
@@ -2571,7 +2571,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             actions: [
               "Perform all prior care. Obtain a 12-lead ECG when it will not delay transport, particularly when atrial fibrillation or another cardiac cause is suspected.",
               "Manage airway or ventilation failure and use waveform EtCO₂ whenever ventilation is impaired, assisted, or an advanced airway is placed.",
-              "Repeat an extreme blood pressure manually. For SBP ≥220 mm Hg or DBP ≥120 mm Hg, contact Medical Control without delaying transport. For protocol-defined stroke blood-pressure control with no contraindication, administer labetalol 10 mg IV/IO slowly and reassess blood pressure and heart rate; do not routinely lower blood pressure in the field.",
+              "Repeat an extreme blood pressure manually. For SBP ≥220 mm Hg or DBP ≥120 mm Hg, contact Medical Control without delaying transport. For protocol-defined stroke blood-pressure control with no contraindication, administer labetalol 10–20 mg slow IV push; may repeat every 10 minutes as needed to goal blood pressure. Do not routinely lower blood pressure in the field.",
               "Coordinate early destination notification and transmit the complete stroke report, including C-STAT score and anticoagulant or antiplatelet last-dose information.",
             ],
           },
@@ -2684,11 +2684,11 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Activate the stroke alert early and transport according to the current Claiborne Stroke Destination Plan, considering C-STAT severity and estimated transport time.",
       "Target a scene time of 15 minutes or less. Do not delay transport for nonessential IV attempts, ECG acquisition, blood collection, or an exhaustive mimic investigation.",
       "Establish one IV when feasible without delaying transport. Use normal saline at TKO and give fluid only for hypotension.",
-      "Do not routinely lower blood pressure in suspected stroke. Repeat extreme readings manually and contact Medical Control for SBP ≥220 mm Hg or DBP ≥120 mm Hg without delaying transport. For protocol-defined stroke blood-pressure control with no contraindication, administer labetalol 10 mg IV/IO slowly and reassess blood pressure and heart rate.",
+      "Do not routinely lower blood pressure in suspected stroke. Repeat extreme readings manually and contact Medical Control for SBP ≥220 mm Hg or DBP ≥120 mm Hg without delaying transport. For protocol-defined stroke blood-pressure control with no contraindication, administer labetalol 10–20 mg slow IV push; may repeat every 10 minutes as needed to goal blood pressure.",
       "Transmit glucose, exact last known well, symptom-discovery time, Cincinnati findings, individual C-STAT findings and total score, baseline function, anticoagulant and antiplatelet use with last dose, and witness contact information.",
       "Transport patients with resolved symptoms or suspected transient ischemic attack because symptom resolution does not eliminate the risk of completed or recurrent stroke.",
     ],
-    medications: [{ name: "Labetalol", dose: "10 mg IV/IO slowly for protocol-defined stroke blood-pressure control; reassess blood pressure and heart rate before any further direction.", notes: ["Paramedic only.", "Use after manual confirmation and Medical Control contact for SBP ≥220 mm Hg or DBP ≥120 mm Hg; do not use for routine blood-pressure normalization."] }],
+    medications: [{ name: "Labetalol", dose: "10–20 mg slow IV push for protocol-defined stroke blood-pressure control; may repeat every 10 minutes as needed to goal blood pressure.", notes: ["Paramedic only.", "Use after manual confirmation and Medical Control contact for SBP ≥220 mm Hg or DBP ≥120 mm Hg; do not use for routine blood-pressure normalization."] }],
     warnings: [
       "Do not administer aspirin, an anticoagulant, or a thrombolytic for undifferentiated suspected stroke. Do not administer an antihypertensive solely to normalize blood pressure.",
       "Do not administer nitroglycerin solely to lower blood pressure in suspected stroke.",
@@ -5045,13 +5045,13 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         title: "Adenosine",
-        text: "Paramedic: 6 mg rapid IV/IO + immediate flush • then 12 mg once after 1–2 min if needed • continuous rhythm recording",
+        text: "Paramedic: 6 mg rapid IV/IO + immediate flush • then 12 mg after 1–2 min if needed; may repeat 12 mg once • continuous rhythm recording",
         levels: ["Paramedic"],
         tone: "action",
       },
       {
         title: "Stable AF / Flutter",
-        text: "No routine adenosine • if symptomatic and SBP ≥110: diltiazem 10–20 mg IV/IO over 2 min when no contraindication",
+        text: "No routine adenosine • if symptomatic and SBP ≥110: diltiazem 0.25 mg/kg IV/IO (max 20 mg); may repeat 0.35 mg/kg after 15 min (max 20 mg)",
         levels: ["Paramedic"],
         tone: "decision",
       },
@@ -5106,8 +5106,8 @@ export const structuredProtocols: StructuredProtocolContent[] = [
               "For unstable regular narrow-complex tachycardia, cardiovert at 100 J. For unstable atrial fibrillation or flutter, cardiovert at 200 J.",
               "Confirm synchronization markers before every shock and resynchronize after every cardioversion attempt; increase energy after an unsuccessful shock.",
               "Sedate whenever feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but do not delay cardioversion.",
-              "For stable regular narrow-complex tachycardia after unsuccessful modified Valsalva, give adenosine 6 mg rapid IV/IO with an immediate flush, then 12 mg once after 1–2 minutes if needed.",
-              "For significantly symptomatic stable atrial fibrillation/flutter with SBP of at least 110 mmHg and no contraindication, give diltiazem 10–20 mg IV/IO over 2 minutes.",
+              "For stable regular narrow-complex tachycardia after unsuccessful modified Valsalva, give adenosine 6 mg rapid IV/IO with an immediate flush, then 12 mg after 1–2 minutes if needed; may repeat the 12 mg dose once.",
+              "For significantly symptomatic stable atrial fibrillation/flutter with SBP of at least 110 mmHg and no contraindication, give diltiazem 0.25 mg/kg IV/IO (maximum 20 mg); if needed, repeat 0.35 mg/kg IV/IO after 15 minutes (maximum 20 mg).",
               "Route suspected pre-excited, wide-complex, or polymorphic rhythms to the appropriate pathway and contact Medical Control early.",
             ],
           },
@@ -5163,9 +5163,9 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Sedate whenever feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but do not delay cardioversion.",
       "For stable regular narrow-complex tachycardia, perform a modified Valsalva maneuver. Do not perform carotid massage.",
       "If modified Valsalva is unsuccessful, give adenosine 6 mg rapid IV/IO push through the most proximal practical access followed immediately by a rapid normal-saline flush.",
-      "If the rhythm persists after 1–2 minutes, give adenosine 12 mg rapid IV/IO once with an immediate flush. Record the rhythm continuously during administration.",
+      "If the rhythm persists after 1–2 minutes, give adenosine 12 mg rapid IV/IO with an immediate flush; may repeat the 12 mg dose once if needed. Record the rhythm continuously during administration.",
       "Do not give adenosine for an irregular rhythm. Contact Medical Control before using a reduced dose for a heart-transplant patient or administration through central venous access.",
-      "For stable atrial fibrillation/flutter causing significant symptoms with SBP of at least 110 mmHg, give diltiazem 10–20 mg IV/IO over 2 minutes when no contraindication is present.",
+      "For stable atrial fibrillation/flutter causing significant symptoms with SBP of at least 110 mmHg, give diltiazem 0.25 mg/kg IV/IO (maximum 20 mg); if needed, repeat 0.35 mg/kg IV/IO after 15 minutes (maximum 20 mg) when no contraindication is present.",
       "For prolonged transport, a diltiazem infusion of 5–10 mg/hr requires Medical Control.",
       "Do not attempt elective rhythm conversion for stable atrial fibrillation/flutter of unknown duration.",
       "Obtain a post-treatment rhythm strip and 12-lead ECG, reassess complete vital signs, monitor for recurrence, and transport.",
@@ -5173,7 +5173,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     medications: [
       {
         name: "Adenosine",
-        dose: "First dose 6 mg rapid IV/IO push with immediate flush; second dose 12 mg once after 1–2 minutes if needed",
+        dose: "First dose 6 mg rapid IV/IO push with immediate flush; then 12 mg after 1–2 minutes if needed; may repeat the 12 mg dose once",
         notes: [
           "Paramedic standing order for stable regular narrow-complex tachycardia after unsuccessful modified Valsalva.",
           "Use the most proximal practical access and record the rhythm continuously during administration.",
@@ -5183,7 +5183,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         name: "Diltiazem",
-        dose: "10–20 mg IV/IO over 2 minutes",
+        dose: "0.25 mg/kg IV/IO (maximum 20 mg); if needed, 0.35 mg/kg IV/IO after 15 minutes (maximum 20 mg); infusion 5–10 mg/hr",
         notes: [
           "Paramedic standing order for significantly symptomatic stable atrial fibrillation/flutter when SBP is at least 110 mmHg.",
           "For prolonged transport, an infusion of 5–10 mg/hr requires Medical Control.",
@@ -5304,7 +5304,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       { title: "Confirm Pulse + Monomorphic Wide Rhythm", text: "QRS ≥0.12 sec • assume VT when uncertain • airway/ventilation • oxygen if hypoxemic • monitor/pads • BP/SpO₂ • IV/IO", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
       { title: "Instability Caused by Tachycardia?", text: "Hypotension • acute altered mental status • shock • ischemic chest discomfort • acute heart failure", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
       { title: "Unstable → Synchronized Cardioversion", text: "100 J biphasic • increase if unsuccessful • confirm sync before every shock • sedate when feasible", levels: ["Paramedic"], tone: "urgent" },
-      { title: "Stable + Uncertain Origin", text: "Only if regular and monomorphic: adenosine 6 mg rapid IV/IO + flush, then 12 mg once if needed", levels: ["Paramedic"], tone: "decision" },
+      { title: "Stable + Uncertain Origin", text: "Only if regular and monomorphic: adenosine 6 mg rapid IV/IO + flush, then 12 mg after 1–2 min if needed; may repeat 12 mg once", levels: ["Paramedic"], tone: "decision" },
       { title: "Stable Monomorphic VT", text: "Amiodarone 150 mg IV/IO over 10 min • stop and cardiovert immediately if instability develops", levels: ["Paramedic"], tone: "action" },
       { title: "Persistent After Infusion?", text: "Synchronized cardioversion 100 J biphasic • do not stack multiple antiarrhythmics", levels: ["Paramedic"], tone: "urgent" },
       { title: "Converted / Recurrence", text: "If VT recurs: repeat amiodarone 150 mg over 10 min once • then infusion 1 mg/min", levels: ["Paramedic"], tone: "action" },
@@ -5349,7 +5349,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             "For unstable monomorphic VT with a pulse, perform synchronized cardioversion at 100 J biphasic and increase energy if unsuccessful.",
             "Confirm synchronization markers before every shock and resynchronize after every attempt.",
             "Sedate whenever feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but do not delay cardioversion.",
-            "For a stable regular monomorphic wide-complex rhythm of uncertain origin, consider adenosine 6 mg rapid IV/IO with immediate flush, followed by 12 mg once after 1–2 minutes if needed.",
+            "For a stable regular monomorphic wide-complex rhythm of uncertain origin, consider adenosine 6 mg rapid IV/IO with immediate flush, followed by 12 mg after 1–2 minutes if needed; may repeat the 12 mg dose once.",
             "For stable monomorphic VT, give amiodarone 150 mg IV/IO over 10 minutes; stop the infusion and cardiovert immediately if instability develops.",
             "After conversion, treat one recurrence with amiodarone 150 mg over 10 minutes, then begin maintenance infusion at 1 mg/min.",
           ],
@@ -5398,7 +5398,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Confirm synchronization markers before every shock and resynchronize after every attempt.",
       "If synchronization is delayed and the condition is critical, deliver an unsynchronized high-energy shock.",
       "Sedate whenever feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but do not delay cardioversion.",
-      "For stable regular monomorphic wide-complex tachycardia of uncertain origin, consider adenosine 6 mg rapid IV/IO with immediate flush; repeat once with 12 mg after 1–2 minutes if needed.",
+      "For stable regular monomorphic wide-complex tachycardia of uncertain origin, consider adenosine 6 mg rapid IV/IO with immediate flush; then 12 mg after 1–2 minutes if needed; may repeat the 12 mg dose once.",
       "Do not give adenosine for unstable, irregular, or polymorphic rhythm or active severe bronchospasm.",
       "For stable monomorphic VT, give amiodarone 150 mg IV/IO over 10 minutes. Stop the infusion and cardiovert immediately if instability develops.",
       "If stable VT persists after the infusion, perform synchronized cardioversion at 100 J rather than stacking antiarrhythmics.",
@@ -5409,7 +5409,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     medications: [
       {
         name: "Adenosine",
-        dose: "6 mg rapid IV/IO with immediate flush; then 12 mg once after 1–2 minutes if needed",
+        dose: "6 mg rapid IV/IO with immediate flush; then 12 mg after 1–2 minutes if needed; may repeat the 12 mg dose once",
         notes: [
           "Paramedic standing order only for stable regular monomorphic wide-complex tachycardia of uncertain origin.",
           "Use proximal access and record the rhythm continuously.",
@@ -5510,7 +5510,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       { title: "Immediate Unsynchronized Shock", text: "200 J biphasic • verify manufacturer setting • escalate according to device • never attempt synchronization", levels: ["Paramedic"], tone: "urgent" },
       { title: "Pulse Lost?", text: "Begin CPR immediately and open AC-09 VF / Pulseless VT", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
       { title: "Rhythm Terminates", text: "Obtain rhythm strip/12-lead • determine whether baseline QT is prolonged", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "Long QT / Torsades Recurrence", text: "Magnesium sulfate 2 g IV/IO over 5–10 min • may repeat once • maximum 4 g", levels: ["Paramedic"], tone: "action" },
+      { title: "Long QT / Torsades Recurrence", text: "Magnesium sulfate 1–2 g IV over 15 min • may repeat once", levels: ["Paramedic"], tone: "action" },
       { title: "Normal QT Recurrence", text: "Treat suspected myocardial ischemia • lidocaine 100 mg IV/IO initial dose", levels: ["Paramedic"], tone: "action" },
       { title: "Reassess + Transport", text: "Pads remain attached • continuous monitoring • early notification • anticipate recurrence or VF", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
     ],
@@ -5554,7 +5554,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             "Never attempt synchronized cardioversion for polymorphic VT because reliable synchronization is not possible.",
             "If the patient is conscious, sedate when immediately feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but never delay defibrillation.",
             "After rhythm termination, determine whether the baseline QT is prolonged using the preceding or post-conversion rhythm strip/12-lead ECG.",
-            "For recurrent long-QT polymorphic VT/torsades, give magnesium sulfate 2 g IV/IO over 5–10 minutes; may repeat 2 g once for continued recurrence, maximum 4 g.",
+            "For recurrent long-QT polymorphic VT/torsades, give magnesium sulfate 1–2 g IV over 15 minutes; may repeat once for continued recurrence.",
             "For recurrent polymorphic VT with a normal QT, treat suspected myocardial ischemia and give lidocaine 100 mg IV/IO as the initial dose.",
           ],
         }],
@@ -5605,7 +5605,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "If the patient becomes pulseless, begin CPR immediately and open AC-09 VF / Pulseless VT.",
       "If the patient is conscious, sedate when immediately feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but never delay defibrillation.",
       "After rhythm termination, obtain a rhythm strip and 12-lead ECG and determine whether the baseline QT is prolonged.",
-      "For recurrent long-QT polymorphic VT/torsades, give magnesium sulfate 2 g IV/IO over 5–10 minutes; may repeat 2 g once for continued recurrence, maximum 4 g.",
+      "For recurrent long-QT polymorphic VT/torsades, give magnesium sulfate 1–2 g IV over 15 minutes; may repeat once for continued recurrence.",
       "Discontinue suspected QT-prolonging medications.",
       "For recurrent torsades associated with bradycardia or pauses, contact Medical Control for overdrive pacing.",
       "For recurrent polymorphic VT with a normal QT, treat suspected myocardial ischemia and give lidocaine 100 mg IV/IO as the initial dose.",
@@ -5614,7 +5614,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     medications: [
       {
         name: "Magnesium sulfate",
-        dose: "2 g IV/IO over 5–10 minutes; may repeat 2 g once; maximum 4 g",
+        dose: "1–2 g IV over 15 minutes; may repeat once",
         notes: [
           "Paramedic standing order for recurrent polymorphic VT associated with a prolonged QT interval/torsades de pointes.",
           "Defibrillation takes priority for any sustained episode.",
@@ -5763,7 +5763,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             "After the second shock, give epinephrine 1 mg IV/IO as soon as possible and repeat every 3–5 minutes.",
             "After the third shock, give amiodarone 300 mg IV/IO; give 150 mg IV/IO as the second dose for persistent or recurrent VF/pVT.",
             "As an alternative to amiodarone, give lidocaine 100 mg IV/IO initially; do not combine amiodarone and lidocaine without Medical Control.",
-            "For suspected pulseless torsades, give magnesium sulfate 2 g IV/IO over 1–2 minutes; do not use magnesium routinely for other VF/pVT arrests.",
+            "For suspected pulseless torsades, give magnesium sulfate 1–2 g IV/IO push; may repeat once. Do not use magnesium routinely for other VF/pVT arrests.",
             "Place an advanced airway and use continuous waveform capnography when this can be accomplished without interrupting compressions or delaying shocks.",
           ],
         }],
@@ -5826,7 +5826,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "After the next 2-minute CPR cycle, deliver the third shock if VF/pVT persists and immediately resume CPR.",
       "After the third shock, give amiodarone 300 mg IV/IO. If VF/pVT persists or recurs, give a second dose of 150 mg IV/IO.",
       "Lidocaine 100 mg IV/IO may be used as the initial alternative to amiodarone; do not combine amiodarone and lidocaine without Medical Control.",
-      "For suspected pulseless torsades, give magnesium sulfate 2 g IV/IO over 1–2 minutes; do not give magnesium routinely for other VF/pVT arrests.",
+      "For suspected pulseless torsades, give magnesium sulfate 1–2 g IV/IO push; may repeat once. Do not give magnesium routinely for other VF/pVT arrests.",
       "Continue 2-minute CPR cycles, rhythm checks, shocks for persistent VF/pVT, epinephrine every 3–5 minutes, and treatment of reversible causes.",
       "If an organized rhythm appears, briefly check for a pulse. ROSC requires immediate transition to AC-10; persistent arrest may transition to AC-12 when criteria are met.",
     ],
@@ -5859,7 +5859,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         name: "Magnesium sulfate",
-        dose: "2 g IV/IO over 1–2 minutes",
+        dose: "1–2 g IV/IO push; may repeat once",
         notes: [
           "Paramedic standing order only for suspected pulseless torsades/long-QT polymorphic VT.",
           "Routine magnesium is not indicated for other VF/pVT cardiac arrests.",
@@ -5887,7 +5887,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
         title: "Suspected pulseless torsades",
         items: [
           "Defibrillate and continue standard VF/pVT arrest care.",
-          "Give magnesium sulfate 2 g IV/IO over 1–2 minutes.",
+          "Give magnesium sulfate 1–2 g IV/IO push; may repeat once.",
           "Open AC-08 if a pulse returns with recurrent polymorphic VT.",
         ],
       },
@@ -7357,7 +7357,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     flow: [
       { title: "ABCs + Dialysis History", text: "Last completed treatment • missed/shortened sessions • access type • dry weight • residual urine", levels: ["EMT", "AEMT", "Paramedic"], tone: "start" },
       { title: "Hyperkalemia Suspected?", text: "Weakness • syncope • bradycardia • hypotension • peaked T waves • PR prolongation • P-wave loss • wide QRS", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
-      { title: "ECG Changes / Instability?", text: "Paramedic: calcium 1 g IV/IO • sodium bicarbonate up to 50 mEq • albuterol 10 mg neb when pulse present", levels: ["Paramedic"], tone: "urgent" },
+      { title: "ECG Changes / Instability?", text: "Paramedic: formulation-specific calcium dose • sodium bicarbonate up to 50 mEq • albuterol 10 mg neb when pulse present", levels: ["Paramedic"], tone: "urgent" },
       { title: "Pulmonary Edema?", text: "Upright • oxygen when indicated • early CPAP • AC-05 pathway • no routine fluid", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
       { title: "Hypotension / Poor Perfusion?", text: "Normal saline 250 mL IV/IO • reassess after each aliquot • maximum 500 mL without Medical Control", levels: ["AEMT", "Paramedic"], tone: "urgent" },
       { title: "Access Hemorrhage?", text: "Small gauze + focused fingertip pressure • tourniquet only for life-threatening bleeding uncontrolled by pressure", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
@@ -7438,7 +7438,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     ],
     treatmentSteps: [
       "Protect the dialysis access and address airway failure, hypoxia, dysrhythmia, shock, pulmonary edema, sepsis, or hemorrhage immediately.",
-      "For suspected hyperkalemia with significant ECG changes or hemodynamic instability, the Paramedic gives calcium 1 g IV/IO and potassium-shifting treatment as listed below. Calcium gluconate is preferred when administering calcium through a peripheral IV.",
+      "For suspected hyperkalemia with significant ECG changes or hemodynamic instability, the Paramedic gives either calcium chloride 500–1,000 mg IV/IO or calcium gluconate 1.5–3 g IV, with potassium-shifting treatment as listed below. Calcium gluconate is preferred when administering calcium through a peripheral IV.",
       "Use calcium chloride and calcium gluconate as alternative formulations; do not administer both as the initial calcium dose. Repeat one calcium dose after 5–10 minutes only when life-threatening ECG changes persist.",
       "Do not mix calcium and sodium bicarbonate in the same solution or administer them simultaneously through the same tubing. Flush the line thoroughly between medications.",
       "For suspected hyperkalemia with a pulse, administer albuterol 10 mg by nebulizer. Do not administer nebulized albuterol during cardiac arrest.",
@@ -7452,12 +7452,12 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     medications: [
       {
         name: "Calcium gluconate 10%",
-        dose: "1 g IV/IO over 5 minutes",
+        dose: "1.5–3 g IV for hyperkalemia/arrhythmia; maximum 3 g per episode",
         notes: ["Paramedic for suspected hyperkalemia with significant ECG changes or hemodynamic instability.", "Preferred calcium formulation when administration is through a peripheral IV.", "May repeat once after 5–10 minutes for persistent life-threatening ECG changes.", "Monitor the IV site continuously and stop for suspected extravasation."],
       },
       {
         name: "Calcium chloride 10%",
-        dose: "1 g IV/IO over 5 minutes",
+        dose: "500–1,000 mg IV/IO for hyperkalemia/arrhythmia",
         notes: ["Paramedic alternative to calcium gluconate for suspected hyperkalemia with significant ECG changes or hemodynamic instability.", "Use a secure large proximal IV or IO when possible and monitor closely for extravasation.", "May repeat once after 5–10 minutes for persistent life-threatening ECG changes."],
       },
       {
@@ -7532,7 +7532,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     reviewStatus: "Reviewed",
     reviewFlags: [
       "Clinical content, provider permissions, medication doses, and dialysis-access precautions approved by the Claiborne EMS medical director during protocol review.",
-      "Medical-director decision: calcium chloride and calcium gluconate remain 1 g IV/IO; calcium gluconate is preferred through a peripheral IV.",
+      "Medical-director decision: calcium chloride is 500–1,000 mg IV/IO and calcium gluconate is 1.5–3 g IV for hyperkalemia/arrhythmia; calcium gluconate is preferred through a peripheral IV.",
       "Dialysis-catheter access remains governed by the separate interfacility-transfer policy.",
       "App content remains a beta field reference until formal agency release and implementation approval.",
     ],
@@ -7552,12 +7552,12 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     careModules: [{ title: "Provider Actions", summary: "Identify hypertensive emergency.", levels: [
       { level: "EMT", actions: ["Repeat BP, perform stroke screen, assess chest pain, dyspnea, pregnancy, and neurologic symptoms."] },
       { level: "AEMT", actions: ["IV access when indicated; continue monitoring and condition-specific care."] },
-      { level: "Paramedic", actions: ["12-lead ECG, advanced assessment, and protocol-specific treatment. For confirmed hypertensive emergency with acute end-organ injury and no contraindication, administer labetalol 10 mg IV/IO slowly; reassess blood pressure and heart rate before any further direction."] },
+      { level: "Paramedic", actions: ["12-lead ECG, advanced assessment, and protocol-specific treatment. For confirmed hypertensive emergency with acute end-organ injury and no contraindication, administer labetalol 10–20 mg slow IV push; may repeat every 10 minutes as needed to goal blood pressure."] },
     ]}],
     indications: ["Markedly elevated blood pressure or symptoms concerning for hypertensive emergency."], contraindications: ["Do not lower blood pressure solely to normalize a number without a protocol-defined indication."],
     assessment: [{ title: "End-organ screen", items: ["New neurologic deficit, altered mental status, seizure, chest/back pain, pulmonary edema, visual symptoms, pregnancy-related symptoms, or reduced perfusion.", "Document medication adherence and stimulant or sympathomimetic exposure."] }],
-    treatmentSteps: ["Verify the reading and address pain, anxiety, hypoxia, and the underlying emergency.", "Use stroke, ACS, pulmonary edema, aortic, or obstetric protocols as indicated.", "For confirmed hypertensive emergency with acute end-organ injury and no contraindication, administer labetalol 10 mg IV/IO slowly; reassess blood pressure and heart rate before any further direction.", "Transport symptomatic patients and reassess frequently."],
-    medications: [{ name: "Labetalol", dose: "10 mg IV/IO slowly for confirmed hypertensive emergency with acute end-organ injury; reassess blood pressure and heart rate before any further direction.", notes: ["Paramedic only.", "Avoid rapid or uncontrolled blood-pressure reduction."] }], warnings: ["Rapid uncontrolled BP reduction can worsen cerebral, coronary, or renal perfusion.", "Do not give a patient's home antihypertensive unless specifically authorized."],
+    treatmentSteps: ["Verify the reading and address pain, anxiety, hypoxia, and the underlying emergency.", "Use stroke, ACS, pulmonary edema, aortic, or obstetric protocols as indicated.", "For confirmed hypertensive emergency with acute end-organ injury and no contraindication, administer labetalol 10–20 mg slow IV push; may repeat every 10 minutes as needed to goal blood pressure.", "Transport symptomatic patients and reassess frequently."],
+    medications: [{ name: "Labetalol", dose: "10–20 mg slow IV push for confirmed hypertensive emergency with acute end-organ injury; may repeat every 10 minutes as needed to goal blood pressure.", notes: ["Paramedic only.", "Avoid rapid or uncontrolled blood-pressure reduction."] }], warnings: ["Rapid uncontrolled BP reduction can worsen cerebral, coronary, or renal perfusion.", "Do not give a patient's home antihypertensive unless specifically authorized."],
     clinicalPearls: ["Severe hypertension without acute end-organ injury is not usually a prehospital medication emergency.", "Accurate cuff size and manual confirmation prevent major treatment errors."], specialPopulations: [],
     references: ["Tennessee EMS ALS/BLS Blended Protocol Guidelines", "NC College of Emergency Physicians AM-4 source protocol"], sourcePdf: "/protocols/claiborne/am-04-hypertension-protocol.pdf", sourcePages: { start: 1, end: 1 }, revisionDate: "July 2026", lastVerifiedDate: "July 29, 2026", reviewStatus: "Reviewed", reviewFlags: ["Any prehospital antihypertensive medication pathway requires explicit Claiborne approval."],
   },

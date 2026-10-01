@@ -538,7 +538,7 @@ export const structuredPediatricCardiacProtocols: StructuredProtocolContent[] = 
       { name: "Epinephrine 0.1 mg/mL (1:10,000)", dose: "0.01 mg/kg IV/IO after the second shock or sooner only if rapid defibrillation is not possible; maximum single dose 1 mg; repeat every 3–5 minutes" },
       { name: "Amiodarone", dose: "5 mg/kg IV/IO for shock-refractory VF/pulseless VT; maximum 300 mg. Select one antiarrhythmic only unless Medical Control directs otherwise." },
       { name: "Lidocaine", dose: "1 mg/kg IV/IO for shock-refractory VF/pulseless VT; maximum 100 mg. Select one antiarrhythmic only unless Medical Control directs otherwise." },
-      { name: "Magnesium sulfate", dose: "40 mg/kg IV/IO over 2–3 minutes; maximum 2 g; only for torsades/polymorphic VT or suspected hypomagnesemia" },
+      { name: "Magnesium sulfate", dose: "25–50 mg/kg IV/IO once; maximum 2 g; only for torsades/polymorphic VT or suspected hypomagnesemia" },
     ],
     treatmentSteps: [
       "Use 2 J/kg for the first shock, 4 J/kg for the second shock, and at least 4 J/kg for subsequent shocks; do not exceed 10 J/kg or the adult dose.",

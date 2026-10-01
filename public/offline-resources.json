@@ -1,6 +1,6 @@
 {
-  "version": "1-1-0-july-2026",
-  "appVersion": "1.1.0",
+  "version": "2-18-0-july-2026",
+  "appVersion": "2.18.0",
   "protocolVersion": "July 2026",
   "resources": [
     {
@@ -14,7 +14,32 @@
       "bytes": null
     },
     {
+      "url": "/medications",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/scene-timer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
       "url": "/tools",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/tools/provider-view",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/tools/search",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/tools/pediatric-resuscitation",
       "kind": "route",
       "bytes": null
     },
@@ -724,6 +749,26 @@
       "bytes": null
     },
     {
+      "url": "/protocols/tb/tb-11",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-11/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-12",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/tb/tb-12/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
       "url": "/protocols/te",
       "kind": "route",
       "bytes": null
@@ -805,6 +850,16 @@
     },
     {
       "url": "/protocols/te/te-08/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-09",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/te/te-09/viewer",
       "kind": "route",
       "bytes": null
     },
@@ -1010,6 +1065,26 @@
     },
     {
       "url": "/protocols/up/up-20/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-21",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-21/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-22",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/up/up-22/viewer",
       "kind": "route",
       "bytes": null
     },
@@ -1339,6 +1414,16 @@
       "bytes": 287381
     },
     {
+      "url": "/protocols/claiborne/tb-11-eye-trauma-protocol.pdf",
+      "kind": "document",
+      "bytes": 8547
+    },
+    {
+      "url": "/protocols/claiborne/tb-12-abdominal-pelvic-trauma-protocol.pdf",
+      "kind": "document",
+      "bytes": 8588
+    },
+    {
       "url": "/protocols/claiborne/te-01-bites-and-envenomations-protocol.pdf",
       "kind": "document",
       "bytes": 398533
@@ -1479,9 +1564,24 @@
       "bytes": 374456
     },
     {
+      "url": "/protocols/claiborne/up-21-family-violence-abuse-protocol.pdf",
+      "kind": "document",
+      "bytes": 8880
+    },
+    {
+      "url": "/protocols/claiborne/up-22-sexual-assault-protocol.pdf",
+      "kind": "document",
+      "bytes": 9169
+    },
+    {
+      "url": "/protocols/claiborne/te-09-chemical-hazmat-exposure-protocol.pdf",
+      "kind": "document",
+      "bytes": 14514
+    },
+    {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 31553
+      "bytes": 33126
     },
     {
       "url": "/manifest.webmanifest",
@@ -1512,6 +1612,16 @@
       "url": "/icons/claiborne-ems-apple-touch.png",
       "kind": "static",
       "bytes": 7065
+    },
+    {
+      "url": "/branding/covenant-health-ems-logo.svg",
+      "kind": "static",
+      "bytes": 199779
+    },
+    {
+      "url": "/branding/covenant-health-ems-app-icon.svg",
+      "kind": "static",
+      "bytes": 199857
     },
     {
       "url": "/pdfjs/pdf.worker.min.mjs",
@@ -1554,7 +1664,7 @@
       "bytes": 469105
     }
   ],
-  "resourceCount": 310,
-  "knownBytes": 34286542,
-  "estimatedBytes": 47524814
+  "resourceCount": 332,
+  "knownBytes": 34737449,
+  "estimatedBytes": 48958761
 }

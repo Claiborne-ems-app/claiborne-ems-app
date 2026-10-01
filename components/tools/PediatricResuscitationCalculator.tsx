@@ -156,17 +156,14 @@ const doseCards: DoseCard[] = [
     indication: "Torsades during VF / pulseless VT pathway",
     category: "Cardiac",
     minimumLevel: "AEMT",
-    route: "IV / IO over 2–3 minutes",
+    route: "IV / IO",
     protocol: "PC-07",
     protocolHref: "/protocols/pc/pc-07",
-    protocolDose: "40 mg/kg; maximum 2 g.",
-    calculate: (weightKg) => {
-      const doseMg = Math.min(weightKg * 40, 2000);
-      return {
-        primary: doseMg >= 1000 ? `${rounded(doseMg / 1000)} g` : `${rounded(doseMg)} mg`,
-        calculation: `40 mg/kg × ${rounded(weightKg)} kg; max 2,000 mg`,
-      };
-    },
+    protocolDose: "25–50 mg/kg once; maximum 2 g.",
+    calculate: (weightKg) => ({
+      primary: doseRange(weightKg * 25, weightKg * 50, "mg", 2000),
+      calculation: `25–50 mg/kg × ${rounded(weightKg)} kg; max 2,000 mg`,
+    }),
   },
   {
     id: "epinephrine-anaphylaxis",
@@ -231,17 +228,14 @@ const doseCards: DoseCard[] = [
     indication: "Severe respiratory distress adjunct",
     category: "Allergy / Respiratory",
     minimumLevel: "Paramedic",
-    route: "IV / IO over 10–20 minutes",
+    route: "IV over 15–30 minutes",
     protocol: "AR-07",
     protocolHref: "/protocols/ar/ar-07",
-    protocolDose: "40 mg/kg; maximum 2 g.",
-    calculate: (weightKg) => {
-      const doseMg = Math.min(weightKg * 40, 2000);
-      return {
-        primary: doseMg >= 1000 ? `${rounded(doseMg / 1000)} g` : `${rounded(doseMg)} mg`,
-        calculation: `40 mg/kg × ${rounded(weightKg)} kg; max 2,000 mg`,
-      };
-    },
+    protocolDose: "40–50 mg/kg once; maximum 2 g.",
+    calculate: (weightKg) => ({
+      primary: doseRange(weightKg * 40, weightKg * 50, "mg", 2000),
+      calculation: `40–50 mg/kg × ${rounded(weightKg)} kg; max 2,000 mg`,
+    }),
   },
   {
     id: "dextrose",

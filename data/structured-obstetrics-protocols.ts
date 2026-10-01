@@ -342,7 +342,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       },
       {
         name: "Magnesium sulfate",
-        dose: "4 g IV/IO over 5–10 minutes; for recurrent seizure, 2 g IV/IO over 5 minutes with Medical Control or receiving-facility direction",
+        dose: "4–6 g IV over 20 minutes, then 1–2 g/hr infusion for eclampsia or suspected eclampsia",
         notes: [
           "Primary cause-directed therapy for eclampsia or suspected eclampsia.",
           "Continuously monitor ECG, BP, respiratory status, SpO₂, and EtCO₂.",

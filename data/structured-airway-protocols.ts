@@ -224,7 +224,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     medications: [
       { name: "Ketamine", dose: "1–2 mg/kg IV/IO", notes: ["Select one induction agent. Ketamine is generally preferred when hypotension or bronchospasm is present.", "If vascular access is unavailable: 4 mg/kg IM, maximum 400 mg; establish IV/IO access and proceed with airway management.", "Pediatric use requires direct online order from the Medical Director or Assistant Medical Director under the imported source."] },
       { name: "Etomidate", dose: "0.3 mg/kg IV/IO", notes: ["Select one induction agent when hemodynamic response is uncertain."] },
-      { name: "Succinylcholine", dose: "2 mg/kg IV/IO" },
+      { name: "Succinylcholine", dose: "1–2 mg/kg IV for RSI" },
       { name: "Rocuronium", dose: "1 mg/kg IV/IO when succinylcholine is contraindicated or a longer duration is needed", notes: ["Do not routinely repeat before post-intubation analgesia and sedation are established."] },
       { name: "Fentanyl", dose: "25–50 mcg IV/IO; repeat cautiously as needed, maximum 100 mcg", notes: ["Use lower or fractionated doses with shock, older age, or other hemodynamic risk."] },
       { name: "Midazolam", dose: "2–5 mg IV/IO; repeat cautiously as needed", notes: ["Use after analgesia when sedation is needed."] },
@@ -305,7 +305,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       { name: "Epinephrine 1 mg/mL (1:1,000)", dose: "0.3–0.5 mg IM for anaphylaxis, severe upper-airway edema, or life-threatening asthma" },
       { name: "Nebulized epinephrine", dose: "1 mg of 1 mg/mL (1:1,000) in 2 mL normal saline; may repeat once for stridor or upper-airway edema" },
       { name: "Methylprednisolone", dose: "125 mg IV/IO/IM" },
-      { name: "Magnesium sulfate", dose: "2 g IV/IO over 10–20 minutes for severe asthma/bronchospasm not improving after initial bronchodilators" },
+      { name: "Magnesium sulfate", dose: "1–2 g IV over 15–30 minutes for severe asthma/bronchospasm not improving after initial bronchodilators" },
     ],
     actionLinks: [
       { label: "AR-01 Adult Airway", description: "Open for progressive respiratory failure or advanced-airway support.", href: "/protocols/ar/ar-01", kind: "protocol" },
@@ -511,12 +511,12 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       "If heart rate remains below 60/min with poor perfusion despite effective oxygenation and ventilation, start CPR and follow PC-02.",
     ],
     medications: [
-      { name: "Albuterol", dose: "1.25–2.5 mg nebulized; repeat every 20 minutes as needed for up to 3 treatments and continue when clinically indicated" },
+      { name: "Albuterol", dose: "Under 20 kg: 2.5 mg nebulized; 20 kg or greater: 5 mg nebulized for bronchospasm" },
       { name: "Ipratropium", dose: "Under 20 kg: 0.25 mg nebulized; 20 kg or greater: 0.5 mg nebulized, with initial albuterol for moderate or severe bronchospasm" },
       { name: "Nebulized epinephrine", dose: "0.5 mL/kg of 1 mg/mL (1:1,000) epinephrine, maximum 5 mL (5 mg), nebulized for croup/stridor" },
       { name: "Epinephrine 1 mg/mL (1:1,000)", dose: "Use the approved PM-01 Pediatric Allergic Reaction pathway for anaphylaxis or life-threatening asthma dosing" },
       { name: "Methylprednisolone", dose: "Medical Control only; no standing pediatric dose, for moderate or severe asthma/reactive-airway disease" },
-      { name: "Magnesium sulfate", dose: "40 mg/kg IV/IO over 10–20 minutes; maximum 2 g, for severe asthma not improving after initial bronchodilators" },
+      { name: "Magnesium sulfate", dose: "40–50 mg/kg IV once over 15–30 minutes; maximum 2 g, for severe asthma not improving after initial bronchodilators" },
     ],
     actionLinks: [
       { label: "PM-01 Pediatric Allergic Reaction", description: "Open for anaphylaxis or life-threatening asthma requiring IM epinephrine.", href: "/protocols/pm/pm-01", kind: "protocol" },
