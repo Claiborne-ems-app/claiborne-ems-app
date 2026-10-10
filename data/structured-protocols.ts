@@ -480,7 +480,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     overview: [
       "Evaluate nontraumatic abdominal or genitourinary pain, nausea, vomiting, and diarrhea broadly. Prehospital symptom control must occur together with active screening for shock, hemorrhage, pregnancy-related emergencies, acute coronary syndrome, aortic disease, sepsis, metabolic disease, obstruction, perforation, and toxic exposure.",
       "Do not withhold analgesia or antiemetic treatment solely to preserve the abdominal examination. Reassess the examination, vital signs, perfusion, pain, nausea, and response after every intervention.",
-      "Patients younger than 16 years use the pediatric doses and considerations in this protocol together with the appropriate pediatric medical protocol.",
+      "For analgesia, use UP-11 for patients 16 years or older, PM-04 for patients age 2 through younger than 16 years, and Medical Control for patients younger than 2 years.",
     ],
     flow: [
       {
@@ -548,7 +548,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             level: "Paramedic",
             actions: [
               "Interpret the 12-lead ECG and immediately transition to the acute coronary syndrome protocol when ischemia or STEMI is suspected; obtain continuous cardiac monitoring for high-risk presentation, significant electrolyte loss, dysrhythmia, or parenteral QT-prolonging medication.",
-              "Treat moderate or severe pain under UP-11 Pain Management. Do not withhold analgesia solely because a surgical abdomen is possible; document the examination and pain score before and after medication.",
+              "For patients age 16 years or older, treat moderate or severe pain under UP-11 Adult Pain Control. For patients age 2 through younger than 16 years, use PM-04 Pediatric Pain Control; contact Medical Control for analgesic direction for a patient younger than 2 years. Do not withhold analgesia solely because a surgical abdomen is possible; document the examination and pain score before and after medication.",
               "If adult nausea or vomiting persists after ondansetron and no contraindication is present, administer promethazine 12.5 mg by deep IM injection once. Do not administer promethazine IV or IO in this protocol.",
               "For shock, major GI bleeding, suspected ruptured AAA or ectopic pregnancy, or another time-critical presentation, consider a second large-bore IV, provide cause-specific resuscitation, notify the receiving facility early, and minimize scene time.",
               "Provide advanced airway management when vomiting, aspiration, altered mental status, or clinical deterioration threatens airway protection or ventilation.",
@@ -619,8 +619,8 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         name: "Analgesia",
-        dose: "Use the medication and dose selected under UP-11 Pain Management.",
-        notes: ["Document examination and pain score before and after medication."],
+        dose: "Age 16 years or older: use UP-11 Adult Pain Control. Age 2 through younger than 16 years: use PM-04 Pediatric Pain Control. Younger than 2 years: contact Medical Control.",
+        notes: ["Document examination and pain score before and after medication.", "Do not use UP-11 for a patient younger than 16 years."],
       },
     ],
     warnings: [
@@ -643,6 +643,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
         title: "Pediatrics — younger than 16 years",
         items: [
           "Use actual measured weight when reliable or the length-based tool for medication and equipment dosing. Reassess carefully after each fluid bolus.",
+          "For pain in patients age 2 through younger than 16 years, use PM-04 Pediatric Pain Control. Contact Medical Control for analgesic direction for a patient younger than 2 years.",
           "Bilious emesis, hematemesis, persistent focal pain, distention, guarding, altered mental status, signs of dehydration, or vomiting in a young infant requires prompt transport and early notification.",
           "Do not administer promethazine to a pediatric patient under this standing protocol; contact Medical Control if exceptional use is considered.",
         ],
@@ -661,11 +662,15 @@ export const structuredProtocols: StructuredProtocolContent[] = [
         ],
       },
     ],
+    actionLinks: [
+      { label: "UP-11 Adult Pain Control", description: "Use for patients age 16 years or older.", href: "/protocols/up/up-11", kind: "protocol" },
+      { label: "PM-04 Pediatric Pain Control", description: "Use for patients age 2 through younger than 16 years.", href: "/protocols/pm/pm-04", kind: "protocol" },
+    ],
     references: [
       "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — SOP 301 Abdominal/GU Pain (non-traumatic) / Nausea and Vomiting; SOP 603 Mandatory EKG",
       "Claiborne Covenant EMS Formulary — current medical-director source workbook",
       "Claiborne County EMS UP-03 source PDF — Abdominal Pain, Vomiting and Diarrhea, revised September 1, 2025",
-      "Claiborne County EMS UP-01 Universal Patient Care and UP-11 Pain Management",
+      "Claiborne County EMS UP-01 Universal Patient Care, UP-11 Adult Pain Control, and PM-04 Pediatric Pain Control",
     ],
     sourcePdf: "/protocols/claiborne/up-03-abd-pain-vomiting-and-diarrhea-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
@@ -673,7 +678,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     lastVerifiedDate: "August 10, 2026",
     reviewStatus: "Reviewed",
     reviewFlags: [
-      "UP-11 Pain Management must be finalized so the internal analgesia reference has one authoritative dose source.",
+      "Age-based analgesia routing was reconciled: UP-11 is adult-only, PM-04 is the pediatric pathway for patients age 2 through younger than 16 years, and patients younger than 2 years require Medical Control for analgesic direction.",
       "UP-03 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process.",
     ],
   },
@@ -924,7 +929,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         title: "Treat Pain",
-        text: "Position of comfort • spinal protection only when indicated • analgesia per UP-11 • cardiac monitoring when medication is administered",
+        text: "Position of comfort • adult UP-11 or pediatric PM-04 analgesia • cardiac monitoring when medication is administered",
         levels: ["EMT", "AEMT", "Paramedic"],
         tone: "action",
       },
@@ -946,7 +951,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
               "Obtain the history, pain score, complete vital signs, and a focused examination. Determine whether the pain followed trauma.",
               "Assess bilateral lower-extremity strength and sensation, distal pulses, and the ability to stand or walk when safe. Ask about new saddle anesthesia, urinary retention or incontinence, and bowel dysfunction. Do not perform a routine perineal examination.",
               "For traumatic back pain, apply spinal protection when indicated. For uncomplicated atraumatic pain, place the patient in a position of comfort and avoid unnecessary immobilization.",
-              "Provide nonpharmacologic care and administer oral analgesia according to UP-11 Pain Control. Apply cardiac monitoring when analgesic medication is administered.",
+              "Provide nonpharmacologic care. For patients age 16 years or older, use UP-11 Adult Pain Control; for patients age 2 through younger than 16 years, use PM-04 Pediatric Pain Control; for patients younger than 2 years, contact Medical Control for analgesic direction. Apply cardiac monitoring when medication is administered.",
               "Transport promptly and notify the receiving facility early for a new or progressive neurologic deficit, saddle anesthesia, or new bowel or bladder dysfunction.",
             ],
           },
@@ -954,13 +959,13 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             level: "AEMT",
             actions: [
               "Establish IV access only when needed for parenteral analgesia, hemodynamic instability, or another specific clinical indication. Do not start an IV or administer fluid routinely for isolated back pain.",
-              "Administer analgesia authorized in UP-11, maintain cardiac monitoring after medication administration, and reassess pain, vital signs, neurologic findings, and medication response.",
+              "Administer analgesia under the age-appropriate pain pathway, maintain cardiac monitoring after medication administration, and reassess pain, vital signs, neurologic findings, and medication response.",
             ],
           },
           {
             level: "Paramedic",
             actions: [
-              "Interpret the cardiac rhythm and administer parenteral analgesia according to UP-11 when indicated. Continue the medication-specific airway, respiratory, hemodynamic, and cardiac monitoring required by that protocol.",
+              "Interpret the cardiac rhythm and administer parenteral analgesia under UP-11 for patients age 16 years or older or PM-04 for patients age 2 through younger than 16 years when indicated. Continue the medication-specific airway, respiratory, hemodynamic, and cardiac monitoring required by the applicable pathway.",
               "Acquire a 12-lead ECG or transition to the appropriate cardiac, abdominal, vascular, trauma, or obstetric protocol only when the history, examination, or clinical condition provides a separate indication.",
             ],
           },
@@ -982,14 +987,14 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     treatmentSteps: [
       "Complete the focused neurologic assessment and identify any traumatic mechanism.",
       "Use spinal protection only when indicated; otherwise position the patient for comfort.",
-      "Administer analgesia according to UP-11 and apply cardiac monitoring when medication is administered.",
+      "For patients age 16 years or older, administer analgesia according to UP-11; for patients age 2 through younger than 16 years, use PM-04; for patients younger than 2 years, contact Medical Control. Apply cardiac monitoring when medication is administered.",
       "Reassess the pain score, vital signs, neurologic examination, and treatment response.",
       "Transport promptly with early notification for any new or progressive neurologic deficit, saddle anesthesia, or bowel/bladder dysfunction.",
     ],
     medications: [
       {
         name: "Analgesia",
-        dose: "Use the medication, dose, route, contraindications, and repeat-dose limits specified in UP-11 Pain Control.",
+        dose: "Age 16 years or older: use UP-11 Adult Pain Control. Age 2 through younger than 16 years: use PM-04 Pediatric Pain Control. Younger than 2 years: contact Medical Control.",
         notes: ["Apply cardiac monitoring when analgesic medication is administered.", "Reassess pain, vital signs, neurologic findings, and medication response."],
       },
     ],
@@ -1005,13 +1010,17 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     specialPopulations: [
       {
         title: "Pediatrics — younger than 16 years",
-        items: ["Use weight-based pediatric analgesic dosing from the applicable pain protocol and reassess after treatment."],
+        items: ["Use PM-04 Pediatric Pain Control for patients age 2 through younger than 16 years and reassess after treatment. Contact Medical Control for analgesic direction for a patient younger than 2 years."],
       },
+    ],
+    actionLinks: [
+      { label: "UP-11 Adult Pain Control", description: "Use for patients age 16 years or older.", href: "/protocols/up/up-11", kind: "protocol" },
+      { label: "PM-04 Pediatric Pain Control", description: "Use for patients age 2 through younger than 16 years.", href: "/protocols/pm/pm-04", kind: "protocol" },
     ],
     references: [
       "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — SOP 300 Medical Complaint Not Specified, SOP 608 Spinal Protection, and Pain Management reference",
       "Claiborne County EMS UP-05 source PDF — Back Pain",
-      "Claiborne County EMS UP-11 Pain Control",
+      "Claiborne County EMS UP-11 Adult Pain Control and PM-04 Pediatric Pain Control",
     ],
     sourcePdf: "/protocols/claiborne/up-05-back-pain-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
@@ -1224,7 +1233,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         title: "Analgesia + Reassess",
-        text: "UP-11 Pain Control • cardiac monitoring with medication • repeat airway, bleeding, pain, and vital signs",
+        text: "Adult UP-11 or pediatric PM-04 pain control • cardiac monitoring with medication • repeat airway, bleeding, pain, and vital signs",
         levels: ["EMT", "AEMT", "Paramedic"],
         tone: "transport",
       },
@@ -1243,7 +1252,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
               "Control dental bleeding with suction as needed and firm direct pressure using folded gauze placed over the socket. Have the alert patient close the teeth over the gauze while maintaining airway safety. EMT personnel do not administer topical TXA under this protocol.",
               "For an avulsed permanent tooth, handle only the crown. If contaminated, gently rinse with milk or normal saline without rubbing or scrubbing the root. When the patient is conscious, cooperative, protects the airway, the tooth is intact, and significant jaw or socket fracture is not suspected, gently return the tooth to its socket without force and have the patient hold it in position by biting on gauze.",
               "Never replant a primary tooth. If replantation is unsuccessful or contraindicated, place the tooth in commercial tooth-preservation solution, milk, normal saline, or the patient’s saliva in a closed container. Do not store the tooth in the patient’s mouth, on ice, or dry.",
-              "Provide nonpharmacologic care and oral analgesia according to UP-11. Apply cardiac monitoring when analgesic medication is administered and reassess pain, airway, bleeding, vital signs, and treatment response.",
+              "Provide nonpharmacologic care. For patients age 16 years or older, use UP-11 Adult Pain Control; for patients age 2 through younger than 16 years, use PM-04 Pediatric Pain Control; for patients younger than 2 years, contact Medical Control for analgesic direction. Apply cardiac monitoring when medication is administered and reassess pain, airway, bleeding, vital signs, and treatment response.",
             ],
           },
           {
@@ -1251,7 +1260,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             actions: [
               "For persistent tooth-socket bleeding despite firm direct pressure, saturate gauze or cotton with TXA 1 g/10 mL, pack it into the socket, and maintain direct pressure with the patient closing the teeth for 20 minutes. Continue suction and airway protection as needed. Do not administer IV/IO TXA solely for dental bleeding.",
               "Establish IV access only when required for parenteral analgesia, hemodynamic instability, airway management, or another specific clinical indication. Do not routinely establish IV access or administer fluid for an isolated dental complaint.",
-              "Administer analgesia authorized in UP-11, maintain cardiac monitoring after medication administration, and reassess pain, bleeding, airway, vital signs, and medication response.",
+              "Administer analgesia under the age-appropriate pain pathway, maintain cardiac monitoring after medication administration, and reassess pain, bleeding, airway, vital signs, and medication response.",
             ],
           },
           {
@@ -1259,7 +1268,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             actions: [
               "Interpret the 12-lead ECG and cardiac rhythm for adult jaw pain or another anginal-equivalent complaint, and treat identified ischemia or dysrhythmia under the applicable adult cardiac protocol.",
               "For progressive oral, submandibular, or floor-of-mouth swelling with airway compromise, maintain spontaneous ventilation whenever possible, prepare suction and a difficult-airway plan, and transition to the adult or pediatric airway protocol without delaying transport.",
-              "Administer topical TXA and parenteral analgesia as indicated, with the medication-specific airway, respiratory, hemodynamic, and cardiac monitoring required by UP-11.",
+              "Administer topical TXA and parenteral analgesia as indicated, using UP-11 for patients age 16 years or older and PM-04 for patients age 2 through younger than 16 years, with the medication-specific airway, respiratory, hemodynamic, and cardiac monitoring required by the applicable pathway.",
             ],
           },
         ],
@@ -1288,7 +1297,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "For adult jaw pain or another anginal-equivalent complaint, acquire/transmit a 12-lead ECG, apply cardiac monitoring, and use the appropriate cardiac protocol.",
       "Control socket bleeding with folded gauze and direct pressure. If bleeding persists, an AEMT or Paramedic may apply topical TXA 1 g/10 mL on gauze and maintain pressure for 20 minutes.",
       "Replant an eligible avulsed permanent tooth promptly and gently. Never replant a primary tooth. Preserve a tooth that cannot be replanted in commercial solution, milk, normal saline, or saliva in a closed container.",
-      "Provide analgesia according to UP-11, apply cardiac monitoring when medication is administered, and reassess airway, bleeding, pain, vital signs, and treatment response.",
+      "For patients age 16 years or older, provide analgesia according to UP-11; for patients age 2 through younger than 16 years, use PM-04; for patients younger than 2 years, contact Medical Control. Apply cardiac monitoring when medication is administered and reassess airway, bleeding, pain, vital signs, and treatment response.",
     ],
     medications: [
       {
@@ -1302,7 +1311,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         name: "Analgesia",
-        dose: "Use the medication, dose, route, contraindications, and repeat-dose limits specified in UP-11 Pain Control.",
+        dose: "Age 16 years or older: use UP-11 Adult Pain Control. Age 2 through younger than 16 years: use PM-04 Pediatric Pain Control. Younger than 2 years: contact Medical Control.",
         notes: ["Apply cardiac monitoring when analgesic medication is administered.", "Reassess pain, airway, bleeding, vital signs, and medication response."],
       },
     ],
@@ -1323,9 +1332,13 @@ export const structuredProtocols: StructuredProtocolContent[] = [
         title: "Pediatrics — younger than 16 years",
         items: [
           "Carefully distinguish a permanent tooth from a primary tooth. Never replant a primary tooth because of potential injury to the developing permanent tooth.",
-          "Use pediatric analgesic dosing from UP-11. Maintain close airway observation when facial swelling, bleeding, or loose teeth are present.",
+          "Use PM-04 Pediatric Pain Control for patients age 2 through younger than 16 years. Contact Medical Control for analgesic direction for a patient younger than 2 years. Maintain close airway observation when facial swelling, bleeding, or loose teeth are present.",
         ],
       },
+    ],
+    actionLinks: [
+      { label: "UP-11 Adult Pain Control", description: "Use for patients age 16 years or older.", href: "/protocols/up/up-11", kind: "protocol" },
+      { label: "PM-04 Pediatric Pain Control", description: "Use for patients age 2 through younger than 16 years.", href: "/protocols/pm/pm-04", kind: "protocol" },
     ],
     references: [
       "Tennessee EMS BLS/ALS State Protocol Guidelines 2024-2025 — SOP 403 Avulsed Teeth",
@@ -1333,7 +1346,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "International Association of Dental Traumatology Guidelines for Avulsion of Permanent Teeth, endorsed by AAPD",
       "Claiborne Covenant EMS Formulary — current medical-director source workbook",
       "Claiborne County EMS UP-07 source PDF — Dental Problems, revised September 1, 2025",
-      "Claiborne County EMS UP-11 Pain Control and applicable adult cardiac and airway protocols",
+      "Claiborne County EMS UP-11 Adult Pain Control, PM-04 Pediatric Pain Control, and applicable adult cardiac and airway protocols",
     ],
     sourcePdf: "/protocols/claiborne/up-07-dental-problems-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
@@ -1345,7 +1358,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Medical-director directed that a tooth not replanted be handled by the crown and transported in commercial preservation solution, milk, normal saline, or the patient’s saliva in a closed container; the root must not be scrubbed and the tooth must not be stored on ice, in the mouth, or dry.",
       "Medical-director approved topical TXA for persistent socket bleeding after direct pressure: AEMT/Paramedic only, TXA 1 g/10 mL applied to gauze or cotton, packed into the socket with pressure for 20 minutes. EMT administration is not authorized.",
       "Medical-director approved 12-lead ECG acquisition for adult jaw pain or another anginal-equivalent complaint, but not for isolated tooth pain with a clear dental source.",
-      "Medical-director approved analgesia through UP-11, cardiac monitoring when medication is administered, and no routine IV access or fluids for an isolated dental complaint.",
+      "Medical-director approved age-based analgesia routing: UP-11 for patients age 16 years or older, PM-04 for patients age 2 through younger than 16 years, and Medical Control for analgesic direction for patients younger than 2 years. Cardiac monitoring is required when medication is administered; do not establish routine IV access or administer fluid for an isolated dental complaint.",
       "UP-07 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process.",
     ],
   },
@@ -2147,13 +2160,13 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Evidence-Based Guidelines for Prehospital Pain Management: Recommendations, Prehospital Emergency Care, 2022",
       "Agency for Healthcare Research and Quality, Comparative Effectiveness of Analgesics to Reduce Acute Pain in the Prehospital Setting, 2019",
       "Claiborne Covenant EMS Formulary — current medical-director source workbook",
-      "Claiborne County EMS UP-11 source PDF — Pain Control, revised February 15, 2026",
+      "Claiborne County EMS UP-11 Adult Pain Control PDF — reconciled to medical-director approved app content, October 10, 2026",
       "Claiborne County EMS UP-06 IV / IO Access and applicable complaint-specific protocols",
     ],
     sourcePdf: "/protocols/claiborne/up-11-pain-control-adult-protocol.pdf",
-    sourcePages: { start: 1, end: 2 },
-    revisionDate: "August 2026",
-    lastVerifiedDate: "August 10, 2026",
+    sourcePages: { start: 1, end: 3 },
+    revisionDate: "October 10, 2026",
+    lastVerifiedDate: "October 10, 2026",
     reviewStatus: "Reviewed",
     reviewFlags: [
       "Medical-director approved adult UP-11 for patients 16 years of age or older and directed provider-specific care: oral acetaminophen/ibuprofen by EMT, AEMT, or Paramedic; IV acetaminophen/ketorolac by AEMT or Paramedic; and opioids/analgesic-dose ketamine by Paramedic only.",

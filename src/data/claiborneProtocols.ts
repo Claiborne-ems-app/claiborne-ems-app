@@ -1102,11 +1102,11 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "category": "Universal Patient Care",
     "categoryCode": "UP",
     "pdfPath": "/protocols/claiborne/up-11-pain-control-adult-protocol.pdf",
-    "pages": 2,
+    "pages": 3,
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "UP-12",

@@ -1531,7 +1531,7 @@
     {
       "url": "/protocols/claiborne/up-11-pain-control-adult-protocol.pdf",
       "kind": "document",
-      "bytes": 241702
+      "bytes": 51921
     },
     {
       "url": "/protocols/claiborne/up-12-police-custody-protocol.pdf",
@@ -1596,7 +1596,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 33439
+      "bytes": 33428
     },
     {
       "url": "/manifest.webmanifest",
@@ -1680,6 +1680,6 @@
     }
   ],
   "resourceCount": 335,
-  "knownBytes": 34787052,
-  "estimatedBytes": 49139436
+  "knownBytes": 34597260,
+  "estimatedBytes": 48949644
 }

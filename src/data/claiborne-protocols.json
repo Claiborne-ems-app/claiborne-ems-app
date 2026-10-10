@@ -1124,11 +1124,11 @@
     "category": "Universal Patient Care",
     "categoryCode": "UP",
     "pdfPath": "/protocols/claiborne/up-11-pain-control-adult-protocol.pdf",
-    "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "pages": 3,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "UP-12",
