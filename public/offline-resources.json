@@ -564,6 +564,16 @@
       "bytes": null
     },
     {
+      "url": "/protocols/pm/pm-04",
+      "kind": "route",
+      "bytes": null
+    },
+    {
+      "url": "/protocols/pm/pm-04/viewer",
+      "kind": "route",
+      "bytes": null
+    },
+    {
       "url": "/protocols/sc",
       "kind": "route",
       "bytes": null
@@ -1329,6 +1339,11 @@
       "bytes": 294910
     },
     {
+      "url": "/protocols/claiborne/pm-04-pediatric-pain-control-protocol.pdf",
+      "kind": "document",
+      "bytes": 49290
+    },
+    {
       "url": "/protocols/claiborne/sc-01-suspected-ebola-protocol.pdf",
       "kind": "document",
       "bytes": 259837
@@ -1581,7 +1596,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 33126
+      "bytes": 33439
     },
     {
       "url": "/manifest.webmanifest",
@@ -1664,7 +1679,7 @@
       "bytes": 469105
     }
   ],
-  "resourceCount": 332,
-  "knownBytes": 34737449,
-  "estimatedBytes": 48958761
+  "resourceCount": 335,
+  "knownBytes": 34787052,
+  "estimatedBytes": 49139436
 }

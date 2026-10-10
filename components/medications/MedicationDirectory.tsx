@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { AlertTriangle, BookOpenCheck, Search, X } from "lucide-react";
 import ProviderLevelSelector, {
@@ -19,20 +19,44 @@ const levelStyle: Record<MedicationProviderLevel, string> = {
   Paramedic: "border-red-400/30 bg-red-500/15 text-red-200",
 };
 
+function getReferencedMedicationId(): string | null {
+  if (typeof window === "undefined") return null;
+  return window.location.hash.slice(1) || null;
+}
+
+function getServerReferencedMedicationId(): string | null {
+  return null;
+}
+
+function subscribeToMedicationHash(onStoreChange: () => void) {
+  window.addEventListener("hashchange", onStoreChange);
+  return () => window.removeEventListener("hashchange", onStoreChange);
+}
+
 export default function MedicationDirectory() {
   const { providerLevel, setProviderLevel } = useProviderLevel();
   const [query, setQuery] = useState("");
   const selectedIndex = CLINICAL_PROVIDER_LEVELS.indexOf(providerLevel);
+  const referencedMedicationId = useSyncExternalStore<string | null>(
+    subscribeToMedicationHash,
+    getReferencedMedicationId,
+    getServerReferencedMedicationId
+  );
 
   const medications = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return medicationReferences
-      .map((medication) => ({
-        ...medication,
-        doses: medication.doses.filter(
-          (dose) => CLINICAL_PROVIDER_LEVELS.indexOf(dose.level) <= selectedIndex
-        ),
-      }))
+      .map((medication) => {
+        const isReferencedMedication = medication.id === referencedMedicationId;
+        return {
+          ...medication,
+          doses: isReferencedMedication
+            ? medication.doses
+            : medication.doses.filter(
+                (dose) => CLINICAL_PROVIDER_LEVELS.indexOf(dose.level) <= selectedIndex
+              ),
+        };
+      })
       .filter((medication) => {
         if (medication.doses.length === 0) return false;
         if (!normalized) return true;
@@ -50,7 +74,18 @@ export default function MedicationDirectory() {
           .toLowerCase()
           .includes(normalized);
       });
-  }, [query, selectedIndex]);
+  }, [query, referencedMedicationId, selectedIndex]);
+
+  useEffect(() => {
+    if (!referencedMedicationId) return;
+
+    const frame = window.requestAnimationFrame(() => {
+      document
+        .getElementById(referencedMedicationId)
+        ?.scrollIntoView({ block: "start" });
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [referencedMedicationId]);
 
   return (
     <>
@@ -102,14 +137,19 @@ export default function MedicationDirectory() {
         <p className="font-semibold text-slate-300">
           {medications.length} {medications.length === 1 ? "medication" : "medications"}
         </p>
-        <p className="text-right text-xs text-slate-500">Showing {providerLevel} and lower-level care</p>
+        <p className="text-right text-xs text-slate-500">
+          Showing {providerLevel} and lower-level care
+          {referencedMedicationId ? "; directly linked reference shown" : ""}
+        </p>
       </div>
 
       <section aria-label="Medication quick reference" className="mt-4 space-y-3">
         {medications.map((medication) => (
           <details
             key={medication.id}
-            className="group overflow-hidden rounded-2xl border border-sky-500/20 bg-gradient-to-br from-sky-950/45 to-slate-900 shadow-lg shadow-black/10 open:border-sky-400/45"
+            id={medication.id}
+            open={medication.id === referencedMedicationId || undefined}
+            className="group scroll-mt-24 overflow-hidden rounded-2xl border border-sky-500/20 bg-gradient-to-br from-sky-950/45 to-slate-900 shadow-lg shadow-black/10 open:border-sky-400/45"
           >
             <summary className="flex min-h-[5.25rem] cursor-pointer list-none items-center gap-4 p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-sky-400">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-500/15 text-sky-300 ring-1 ring-sky-400/25">
@@ -197,7 +237,7 @@ export default function MedicationDirectory() {
         >
           Open Tennessee scope/dosing guideline
         </a>
-        <p>Claiborne's verified RX-R1 formulary controls stocking; the approved Claiborne protocol controls use and dosing. Tennessee scope/dosing comparison reviewed {medicationReferenceSource.reviewed}.</p>
+        <p>The verified Claiborne RX-R1 formulary controls stocking; the approved Claiborne protocol controls use and dosing. Tennessee scope/dosing comparison reviewed {medicationReferenceSource.reviewed}.</p>
       </footer>
     </>
   );

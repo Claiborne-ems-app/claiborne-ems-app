@@ -2130,8 +2130,16 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       {
         title: "Pediatrics — younger than 16 years",
         items: [
-          "Do not use UP-11 for patients younger than 16 years. Use UP-12 Pediatric Pain Control and actual or length-based weight.",
+          "Do not use UP-11 for patients younger than 16 years. Open PM-04 Pediatric Pain Control and use actual or length-based weight.",
         ],
+      },
+    ],
+    actionLinks: [
+      {
+        label: "PM-04 Pediatric Pain Control",
+        description: "Open for patients age 2 through younger than 16 years; use actual or length-based weight.",
+        href: "/protocols/pm/pm-04",
+        kind: "protocol",
       },
     ],
     references: [
@@ -2156,6 +2164,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Medical-director directed against routine initial opioid/ketamine combination therapy and required full reassessment before changing agents.",
       "Medical-director required cardiac monitoring for all systemic nonoral analgesia and continuous SpO₂ and waveform EtCO₂ for opioid or ketamine administration, with reassessment at least every 5–10 minutes and at handoff.",
       "Medical-director approved ventilatory support before titrated naloxone for opioid-induced hypoventilation, ondansetron 4 mg for associated nausea, and the documented medication-specific contraindications and safety exclusions.",
+      "Medical-director approved PM-04 Pediatric Pain Control as the pediatric pathway for patients age 2 through younger than 16 years; UP-11 is not used for that age group.",
       "UP-11 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process.",
     ],
   },
@@ -7750,10 +7759,10 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         name: "Push-Dose Epinephrine",
-        dose: "Open the Push-Dose Epinephrine medication reference for the approved indication, preparation, concentration, and dosing",
+        dose: "Temporary bridge only—open the dedicated Push-Dose Epinephrine reference for the approved indication, labeled 10 mcg/mL preparation, weight-based pediatric dose, and two-bolus limit",
         notes: [
           "Use the linked medication reference rather than preparing or dosing from memory.",
-          "This medication reference is linked below within AM-05.",
+          "Begin a vasoactive infusion when indicated and contact Medical Control before any dose beyond the two-bolus limit.",
         ],
       },
     ],
@@ -7799,7 +7808,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
     ],
     actionLinks: [
-      { label: "Push-Dose Epinephrine — Medication Reference", description: "Open the medication section for the approved indication, preparation, concentration, and dosing.", href: "/medications", kind: "external" },
+      { label: "Push-Dose Epinephrine — Medication Reference", description: "Open the dedicated reference for the approved indication, labeled preparation, concentration, dosing, and two-bolus limit.", href: "/medications#push-dose-epinephrine", kind: "external" },
       { label: "UP-01 Universal Patient Care", description: "Open universal assessment, monitoring, vascular-access, reassessment, and transport requirements.", href: "/protocols/up/up-01", kind: "protocol" },
       { label: "AM-01 Allergic Reaction / Anaphylaxis", description: "Open for anaphylactic shock and immediate IM epinephrine treatment.", href: "/protocols/am/am-01", kind: "protocol" },
       { label: "AM-03 Dialysis / Renal Failure", description: "Open for renal-failure considerations and fluid-risk guidance.", href: "/protocols/am/am-03", kind: "protocol" },
@@ -7945,12 +7954,12 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     contraindications: ["Do not remain on scene when safety is threatened, definitive treatment is unavailable, hemorrhage requires surgery or blood products unavailable to the crew, or transport/rendezvous is the fastest route to needed care.", "Do not use NIPPV for vomiting, facial trauma, inability to cooperate, inability to protect the airway, or impending arrest."],
     assessment: [{ title: "Immediate assessment", items: ["Assess airway, ventilation, oxygenation, pulse, BP/perfusion, severe hemorrhage, glucose, temperature when indicated, and reversible causes.", "A normal GCS or initially acceptable BP does not exclude a crashing patient; reassess after every intervention."] }],
     treatmentSteps: ["Bring all anticipated resuscitation equipment to the patient and assign team functions.", "Treat airway, ventilation, severe hemorrhage, tension pneumothorax, hypoglycemia, anaphylaxis, dysrhythmia, and shock before prolonged movement when safe.", "Prioritize BVM ventilation and oxygenation. Use advanced airway management when the patient cannot protect the airway or cannot be adequately oxygenated/ventilated less invasively; confirm with waveform capnography.", "Identify peri-intubation hypotension and use AM-05 fluid/vasopressor treatment before high-risk intubation when possible.", "Use AM-05 for fluid and norepinephrine strategy; avoid indiscriminate crystalloid in uncontrolled hemorrhage, pulmonary edema, cardiogenic shock, or volume overload.", "Apply pads early when instability is present or anticipated and use the linked cardiac pathway for dysrhythmia.", "Move promptly once critical interventions are underway; plan reassessment stops during prolonged extrication and reassess at least every 5 minutes."],
-    medications: [{ name: "Push-Dose Epinephrine", dose: "Open the Push-Dose Epinephrine medication reference for approved indication, preparation, concentration, and dosing.", notes: ["Use the medication reference rather than preparing or dosing from memory."] }],
+    medications: [{ name: "Push-Dose Epinephrine", dose: "Temporary bridge only—open the dedicated reference for the approved indication, labeled 10 mcg/mL preparation, weight-based pediatric dose, and two-bolus limit.", notes: ["Use the medication reference rather than preparing or dosing from memory.", "Begin a vasoactive infusion when indicated and contact Medical Control before any dose beyond the two-bolus limit."] }],
     warnings: ["GCS 15 does not equal stability.", "Do not allow procedures to delay definitive care.", "Fluids and vasopressors support perfusion but do not replace correction of the cause.", "Use NIPPV only when the patient can protect the airway and is not vomiting or peri-arrest."],
     clinicalPearls: ["The goal is not prolonged scene care; it is to avoid moving an unresuscitated patient through a difficult extrication when immediate EMS interventions can improve stability.", "Call for additional hands and advanced resources early."],
     specialPopulations: [],
     actionLinks: [
-      { label: "Push-Dose Epinephrine — Medication Reference", description: "Open approved preparation and dosing.", href: "/medications", kind: "external" },
+      { label: "Push-Dose Epinephrine — Medication Reference", description: "Open the dedicated reference for the approved preparation, dosing, and two-bolus limit.", href: "/medications#push-dose-epinephrine", kind: "external" },
       { label: "UP-01 Universal Patient Care", href: "/protocols/up/up-01", kind: "protocol" },
       { label: "AM-05 Hypotension / Shock", href: "/protocols/am/am-05", kind: "protocol" },
       { label: "AR-01 Adult Airway Management", href: "/protocols/ar/ar-01", kind: "protocol" },

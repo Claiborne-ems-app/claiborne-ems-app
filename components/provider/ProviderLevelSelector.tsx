@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import type { ProviderLevel } from "../../lib/protocols/structured-content";
 
 export type ClinicalProviderLevel = Exclude<ProviderLevel, "Medical Control">;
@@ -33,23 +33,42 @@ function isClinicalProviderLevel(value: string | null): value is ClinicalProvide
   return value === "EMT" || value === "AEMT" || value === "Paramedic";
 }
 
+function getStoredProviderLevel(): ClinicalProviderLevel {
+  if (typeof window === "undefined") return "EMT";
+
+  const stored = window.localStorage.getItem(STORAGE_KEY);
+  return isClinicalProviderLevel(stored) ? stored : "EMT";
+}
+
+function getServerProviderLevel(): ClinicalProviderLevel {
+  return "EMT";
+}
+
+function subscribeToProviderLevel(onStoreChange: () => void) {
+  const handleChange = (event: Event) => {
+    const next = (event as CustomEvent<string>).detail;
+    if (isClinicalProviderLevel(next)) onStoreChange();
+  };
+  const handleStorageChange = (event: StorageEvent) => {
+    if (event.key === STORAGE_KEY) onStoreChange();
+  };
+
+  window.addEventListener(CHANGE_EVENT, handleChange);
+  window.addEventListener("storage", handleStorageChange);
+  return () => {
+    window.removeEventListener(CHANGE_EVENT, handleChange);
+    window.removeEventListener("storage", handleStorageChange);
+  };
+}
+
 export function useProviderLevel() {
-  const [providerLevel, setProviderLevelState] = useState<ClinicalProviderLevel>("EMT");
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (isClinicalProviderLevel(stored)) setProviderLevelState(stored);
-
-    const handleChange = (event: Event) => {
-      const next = (event as CustomEvent<string>).detail;
-      if (isClinicalProviderLevel(next)) setProviderLevelState(next);
-    };
-    window.addEventListener(CHANGE_EVENT, handleChange);
-    return () => window.removeEventListener(CHANGE_EVENT, handleChange);
-  }, []);
+  const providerLevel = useSyncExternalStore<ClinicalProviderLevel>(
+    subscribeToProviderLevel,
+    getStoredProviderLevel,
+    getServerProviderLevel
+  );
 
   const setProviderLevel = (next: ClinicalProviderLevel) => {
-    setProviderLevelState(next);
     window.localStorage.setItem(STORAGE_KEY, next);
     window.dispatchEvent(new CustomEvent(CHANGE_EVENT, { detail: next }));
   };

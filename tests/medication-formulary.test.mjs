@@ -5,11 +5,16 @@ import {
   medicationReferenceSource,
 } from "../data/medication-reference.ts";
 
-test("Claiborne formulary contains the 42 approved rows", () => {
-  assert.equal(medicationReferences.length, 42);
+test("Claiborne directory contains the 42 approved formulary rows plus the approved push-dose epinephrine reference", () => {
+  const formularyRows = medicationReferences.filter(
+    (medication) => medication.isFormularyItem !== false
+  );
+
+  assert.equal(formularyRows.length, 42);
+  assert.equal(medicationReferences.length, 43);
   assert.equal(
     new Set(medicationReferences.map((medication) => medication.id)).size,
-    42
+    43
   );
   assert.match(
     medicationReferenceSource.label,
@@ -75,6 +80,18 @@ test("approved Claiborne medication updates retain source doses and route safegu
   assert.equal(byId.succinylcholine.doses[0].adult, "1–2 mg/kg IV for RSI");
   assert.match(byId.vecuronium.doses[0].adult, /DAI: 80–100 mcg\/kg IV push once/);
   assert.match(byId.vecuronium.doses[0].pediatric, /maintenance: 50–100 mcg\/kg IV every 1 hr as needed/);
+
+  assert.equal(byId["push-dose-epinephrine"].isFormularyItem, false);
+  assert.equal(
+    byId["push-dose-epinephrine"].doses[0].adult,
+    "10 mcg slow IV/IO (1 mL of a labeled 10 mcg/mL syringe) every 3–5 min as needed; maximum two total boluses, then Medical Control before any additional dose"
+  );
+  assert.equal(
+    byId["push-dose-epinephrine"].doses[0].pediatric,
+    "0.5–1 mcg/kg slow IV/IO (0.05–0.1 mL/kg of a labeled 10 mcg/mL syringe) every 3–5 min as needed; maximum 10 mcg (1 mL) per dose and two total boluses, then Medical Control before any additional dose"
+  );
+  assert.match(byId["push-dose-epinephrine"].cautions[0], /10 mcg\/mL \(0\.01 mg\/mL\)/);
+  assert.match(byId["push-dose-epinephrine"].cautions[1], /Do not administer undiluted epinephrine 1 mg\/mL/);
 
   assert.deepEqual(byId.epinephrine.doses, [
     {

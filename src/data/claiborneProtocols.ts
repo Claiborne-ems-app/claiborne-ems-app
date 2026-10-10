@@ -628,6 +628,19 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "status": "draft-import"
   },
   {
+    "id": "PM-04",
+    "code": "PM 4",
+    "title": "Pediatric Pain Control",
+    "category": "Pediatric Medical",
+    "categoryCode": "PM",
+    "pdfPath": "/protocols/claiborne/pm-04-pediatric-pain-control-protocol.pdf",
+    "pages": 2,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
+    "agency": "Claiborne County EMS",
+    "status": "approved"
+  },
+  {
     "id": "SC-01",
     "code": "SC 1",
     "title": "Suspected Ebola Protocol",

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { protocolCategories } from "../data/protocols.ts";
 import { searchProtocols } from "../lib/protocols/search.ts";
+import { getStructuredProtocol } from "../data/structured-protocols.ts";
 
 test("finds a protocol from every category", () => {
   for (const category of protocolCategories) {
@@ -64,6 +65,33 @@ test("supports multi-term search across native protocol content", () => {
     searchProtocols(protocolCategories, "pediatric adenosine").some(
       (result) => result.protocol.id === "pc-05"
     )
+  );
+});
+
+test("routes pediatric pain to PM-04 and never to UP-12 Police Custody", () => {
+  const pediatricMedical = protocolCategories.find(
+    (category) => category.id === "pm"
+  );
+  const pm04 = pediatricMedical?.protocols.find(
+    (protocol) => protocol.id === "pm-04"
+  );
+  const up11 = getStructuredProtocol("up", "up-11");
+  const pm04Content = getStructuredProtocol("pm", "pm-04");
+
+  assert.equal(pm04?.title, "Pediatric Pain Control");
+  assert.equal(
+    pm04?.pdfPath,
+    "/protocols/claiborne/pm-04-pediatric-pain-control-protocol.pdf"
+  );
+  assert.ok(
+    up11?.actionLinks?.some(
+      (link) => link.href === "/protocols/pm/pm-04"
+    )
+  );
+  assert.doesNotMatch(JSON.stringify(up11), /UP-12 Pediatric Pain/i);
+  assert.match(
+    JSON.stringify(pm04Content),
+    /Medical Control authorization is required before any second dose/i
   );
 });
 

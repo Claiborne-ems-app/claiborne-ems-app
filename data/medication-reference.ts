@@ -15,11 +15,13 @@ export interface MedicationReference {
   doses: MedicationDoseReference[];
   cautions: string[];
   protocolLinks: { label: string; href: string }[];
+  /** True unless this is a protocol-specific preparation rather than a stocked formulary row. */
+  isFormularyItem?: boolean;
 }
 
 export const medicationReferenceSource = {
   label:
-    "Claiborne Covenant EMS RX-R1 Formulary — 42 verified stocked medications",
+    "Claiborne Covenant EMS RX-R1 Formulary — 42 verified stocked medications plus protocol-specific references",
   href: "https://www.tn.gov/content/dam/tn/health/events/TN%20State%20Protocol%20Guidelines%20%20Sept24.pdf",
   reviewed: "August 15, 2026",
 };
@@ -48,12 +50,13 @@ export const medicationReferences: MedicationReference[] = [
     level: "EMT",
     indication: "Pain; fever",
     adult: "650-1,000 mg PO; 1 g IV/IO",
-    pediatric: "15 mg/kg",
+    pediatric: "Pain (PM-04, age 2 to <16): 15 mg/kg PO once; maximum 650 mg. Fever: see UP-10.",
     cautions: [
       "Confirm route authorization, liver disease, prior acetaminophen use, and maximum daily dose.",
     ],
     protocolLinks: [
       { label: "Pain Control - Adult", href: "/protocols/up/up-11" },
+      { label: "Pediatric Pain Control", href: "/protocols/pm/pm-04" },
       { label: "Fever", href: "/protocols/up/up-10" },
     ],
   }),
@@ -327,6 +330,34 @@ export const medicationReferences: MedicationReference[] = [
     ],
   },
   medication({
+    id: "push-dose-epinephrine",
+    name: "Push-Dose Epinephrine",
+    tradeNames: [],
+    uses: [
+      "Temporary bridge for severe hypotension",
+      "Peri-intubation hypotension",
+    ],
+    isFormularyItem: false,
+    level: "Paramedic",
+    indication: "Severe hypotension / peri-intubation shock — temporary bridge only",
+    adult:
+      "10 mcg slow IV/IO (1 mL of a labeled 10 mcg/mL syringe) every 3–5 min as needed; maximum two total boluses, then Medical Control before any additional dose",
+    pediatric:
+      "0.5–1 mcg/kg slow IV/IO (0.05–0.1 mL/kg of a labeled 10 mcg/mL syringe) every 3–5 min as needed; maximum 10 mcg (1 mL) per dose and two total boluses, then Medical Control before any additional dose",
+    cautions: [
+      "Use only a labeled 10 mcg/mL (0.01 mg/mL) syringe. To prepare when a standardized prepared syringe is unavailable: add 1 mL of epinephrine 0.1 mg/mL (1:10,000) to 9 mL normal saline in a 10 mL syringe, then label the syringe with drug and concentration.",
+      "Do not administer undiluted epinephrine 1 mg/mL (1:1,000) or the 0.1 mg/mL (1:10,000) cardiac-arrest syringe as a push-dose bolus.",
+      "Paramedic use only. Use only as a temporary bridge while a vasoactive infusion is prepared and the underlying cause of shock is treated; use continuous ECG and frequent blood-pressure reassessment.",
+      "Do not use for cardiac arrest or under AC-02 Bradycardia With a Pulse. For anaphylaxis, give IM epinephrine immediately under AM-01 or PM-01; push-dose epinephrine does not replace that pathway.",
+    ],
+    protocolLinks: [
+      { label: "Adult Hypotension / Shock", href: "/protocols/am/am-05" },
+      { label: "Crashing Medical Patient", href: "/protocols/am/am-07" },
+      { label: "Airway, Drug Assisted", href: "/protocols/ar/ar-03" },
+      { label: "Pediatric Hypotension / Shock", href: "/protocols/pm/pm-03" },
+    ],
+  }),
+  medication({
     id: "etomidate",
     name: "Etomidate",
     tradeNames: ["Amidate"],
@@ -351,12 +382,13 @@ export const medicationReferences: MedicationReference[] = [
     level: "Paramedic",
     indication: "Pain; procedures; advanced sedation",
     adult: "25-100 mcg IV/IO",
-    pediatric: "1 mcg/kg",
+    pediatric: "PM-04 pain (age 2 to <16): 1 mcg/kg slow IV/IO once; maximum 50 mcg. Medical Control authorization is required before any second dose.",
     cautions: [
       "Monitor airway, ventilation, oxygenation, mental status, and blood pressure.",
     ],
     protocolLinks: [
       { label: "Pain Control - Adult", href: "/protocols/up/up-11" },
+      { label: "Pediatric Pain Control", href: "/protocols/pm/pm-04" },
     ],
   }),
   medication({
@@ -399,12 +431,13 @@ export const medicationReferences: MedicationReference[] = [
     level: "EMT",
     indication: "Pain; fever",
     adult: "400 mg PO",
-    pediatric: "10 mg/kg",
+    pediatric: "Pain (PM-04, age 2 to <16): 10 mg/kg PO once; maximum 400 mg. Fever: see UP-10.",
     cautions: [
       "Confirm age, renal disease, GI bleeding, NSAID allergy, pregnancy, and prior NSAID use.",
     ],
     protocolLinks: [
       { label: "Pain Control - Adult", href: "/protocols/up/up-11" },
+      { label: "Pediatric Pain Control", href: "/protocols/pm/pm-04" },
       { label: "Fever", href: "/protocols/up/up-10" },
     ],
   }),

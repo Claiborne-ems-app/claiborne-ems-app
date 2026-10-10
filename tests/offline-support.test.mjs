@@ -24,6 +24,10 @@ const {
 
 test("generates an offline route for every protocol destination", () => {
   const routes = createOfflineRoutes(protocolCategories);
+  const protocolCount = protocolCategories.reduce(
+    (total, category) => total + category.protocols.length,
+    0
+  );
   assert.ok(routes.includes("/"));
   assert.ok(routes.includes("/settings"));
   assert.ok(!routes.some((route) => route.startsWith("/operations")));
@@ -32,26 +36,38 @@ test("generates an offline route for every protocol destination", () => {
       (route) =>
         route.endsWith("/viewer") && route.startsWith("/protocols/")
     ).length,
-    93
+    protocolCount
   );
-  assert.equal(createOfflineVersion(appConfig), "1-0-0-july-2026");
+  assert.equal(createOfflineVersion(appConfig), "2-18-0-july-2026");
 });
 
 test("generated package includes all direct PDFs and Claiborne branding", async () => {
-  const manifest = JSON.parse(
-    await readFile(
+  const [manifestSource, catalogSource] = await Promise.all([
+    readFile(
       new URL("../public/offline-resources.json", import.meta.url),
       "utf8"
-    )
-  );
+    ),
+    readFile(
+      new URL("../src/data/claiborne-protocols.json", import.meta.url),
+      "utf8"
+    ),
+  ]);
+  const manifest = JSON.parse(manifestSource);
+  const catalog = JSON.parse(catalogSource);
   const urls = new Set(manifest.resources.map((resource) => resource.url));
   assert.equal(
     manifest.resources.filter((resource) => resource.kind === "document").length,
-    93
+    catalog.length
   );
+  assert.ok(catalog.every((protocol) => urls.has(protocol.pdfPath)));
   assert.ok(
     urls.has(
       "/protocols/claiborne/up-01-universal-patient-care-protocol.pdf"
+    )
+  );
+  assert.ok(
+    urls.has(
+      "/protocols/claiborne/pm-04-pediatric-pain-control-protocol.pdf"
     )
   );
   assert.ok(urls.has("/icons/claiborne-ems-512.png"));

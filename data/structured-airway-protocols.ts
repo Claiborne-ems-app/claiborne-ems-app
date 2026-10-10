@@ -214,7 +214,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     treatmentSteps: [
       "Do not perform DAI solely for convenience, because BVM is effective, or for a short transport when BVM or BIAD safely maintains oxygenation and ventilation.",
       "Preoxygenate with high-flow oxygen, NIPPV when appropriate, or two-person BVM with PEEP. Prepare suction, an appropriately sized primary airway device, BIAD, and surgical-airway rescue before medication.",
-      "Use the AM-05 or AM-07 resuscitation pathway for peri-intubation shock. Treat hypotension before paralysis; use norepinephrine when indicated and see Medication Reference for the approved push-dose epinephrine preparation.",
+      "Use the AM-05 or AM-07 resuscitation pathway for peri-intubation shock. Treat hypotension before paralysis; use norepinephrine when indicated and open the dedicated Push-Dose Epinephrine reference only for its approved temporary-bridge use.",
       "Select one induction medication, then give the appropriate paralytic and proceed immediately to airway placement. Do not routinely repeat rocuronium before post-intubation analgesia and sedation are established.",
       "Limit laryngoscopy to three total attempts. Each subsequent attempt must change the provider, approach, positioning, or equipment; move immediately to AR-02 when oxygenation or ventilation is ineffective.",
       "Confirm every advanced airway with continuous waveform EtCO₂, bilateral chest assessment, SpO₂, tube depth, and securement. Reassess after each movement.",
@@ -234,7 +234,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       { label: "AM-07 Crashing Medical Patient", description: "Open for immediate physiologic resuscitation when the patient is critically unstable.", href: "/protocols/am/am-07", kind: "protocol" },
       { label: "AR-02 Adult Failed Airway", description: "Open immediately when oxygenation or ventilation is ineffective or further laryngoscopy is unsafe.", href: "/protocols/ar/ar-02", kind: "protocol" },
       { label: "AR-08 Post-Intubation / BIAD Management", description: "Open for continued analgesia, sedation, ventilation, and monitoring after airway placement.", href: "/protocols/ar/ar-08", kind: "protocol" },
-      { label: "Medication Reference", description: "Open for the approved push-dose epinephrine preparation and medication details.", href: "/medications", kind: "protocol" },
+      { label: "Push-Dose Epinephrine — Medication Reference", description: "Open the approved labeled preparation, dosing, and two-bolus limit.", href: "/medications#push-dose-epinephrine", kind: "protocol" },
     ],
     reviewStatus: "Approved",
     lastVerifiedDate: "2026-08-14",
@@ -253,7 +253,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     clinicalPearls: [
       "When BVM maintains saturation at least 90%, continued basic airway management may be safer than DAI during a short transport.",
       "BIAD is preferred while resuscitating severe hypoxia or hypotension.",
-      "Norepinephrine may be used for peri-intubation hypotension; follow AM-05 and the Medication Reference for push-dose epinephrine.",
+      "Norepinephrine may be used for peri-intubation hypotension; follow AM-05 and the dedicated Push-Dose Epinephrine reference for its temporary-bridge safeguards.",
     ],
   }),
 

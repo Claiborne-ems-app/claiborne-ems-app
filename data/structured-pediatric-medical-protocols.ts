@@ -279,4 +279,93 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
       "Epinephrine or norepinephrine is preferred for fluid-refractory pediatric septic shock when authorized and available.",
     ],
   }),
+
+  protocol({
+    id: "pm-04",
+    title: "Pediatric Pain Control",
+    sourcePdf: "/protocols/claiborne/pm-04-pediatric-pain-control-protocol.pdf",
+    pages: 2,
+    revisionDate: "2026-10-08",
+    lastVerifiedDate: "2026-10-08",
+    overview: [
+      "PM-04 is the pediatric pain pathway for patients age 2 through younger than 16 years. Use actual or length-based weight and treat the cause of pain without delaying time-critical care or transport.",
+      "Nonpharmacologic care and oral nonopioids are the standing-order treatments. Paramedic fentanyl is a single-dose option when indicated; Medical Control authorization is required before any second dose.",
+    ],
+    indications: [
+      "Acute pain in a patient age 2 through younger than 16 years when analgesia can be provided without delaying airway management, hemorrhage control, shock treatment, splinting, or transport.",
+    ],
+    flow: [
+      { title: "Assess Pain + Cause", text: "Confirm age and actual or length-based weight. Assess pain, airway, breathing, perfusion, mental status, allergies, prior analgesics, and immediate threats.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Treat Immediate Threats", text: "Provide airway care, hemorrhage control, wound care, splinting, positioning, ice or heat when appropriate, and reassurance. Do not delay transport.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Oral Route Safe?", text: "If alert and able to protect the airway and swallow: acetaminophen OR ibuprofen using the approved weight-based dose and maximum.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Severe Pain / Oral Route Unsafe or Inadequate?", text: "Paramedic: fentanyl 1 mcg/kg slow IV/IO once, maximum 50 mcg. A second fentanyl dose requires Medical Control authorization.", levels: ["Paramedic"], tone: "action" },
+      { title: "Reassess + Transport", text: "Reassess pain, airway, ventilation, perfusion, mental status, vital signs, and medication response; document weight, dose, route, time, and response.", levels: ALL_LEVELS, tone: "transport" },
+    ],
+    emt: [
+      "Confirm age and actual or length-based weight; treat immediate threats, provide nonpharmacologic pain care, and obtain a developmentally appropriate pain assessment before and after intervention.",
+      "When the child is alert, can swallow safely, and has no medication-specific contraindication, administer one oral nonopioid: acetaminophen or ibuprofen using the approved weight-based dose and maximum. Do not routinely give both.",
+      "Do not give oral medication when airway protection or swallowing is impaired, active vomiting creates an aspiration risk, or immediate transport/intervention takes priority.",
+    ],
+    aemt: [
+      "Perform all EMT care. Establish IV/IO access only when clinically indicated; do not delay transport or make repeated access attempts solely to provide analgesia.",
+      "No additional AEMT standing-order analgesic is authorized by PM-04. Request Paramedic support or contact Medical Control when nonopioid care is inadequate or the oral route is unsafe.",
+    ],
+    paramedic: [
+      "Perform all prior care. For severe pain or when the oral route is unsafe or inadequate, administer fentanyl 1 mcg/kg slow IV/IO once; maximum 50 mcg.",
+      "Before any second fentanyl dose, contact Medical Control for authorization. A second dose is not a standing order under PM-04.",
+      "Monitor airway, ventilation, oxygenation, mental status, and blood pressure after fentanyl; keep suction and ventilation equipment immediately available and reassess before and during transport.",
+    ],
+    treatmentSteps: [
+      "Use the child's actual weight when available; otherwise use an approved length-based weight estimate. Document the weight source.",
+      "Address the cause of pain with appropriate positioning, splinting, wound care, ice or heat when indicated, calm reassurance, and rapid transport for time-sensitive illness or injury.",
+      "If the oral route is safe, give one oral nonopioid: acetaminophen 15 mg/kg PO once, maximum 650 mg, OR ibuprofen 10 mg/kg PO once, maximum 400 mg. Do not routinely administer both.",
+      "For severe pain or an unsafe/inadequate oral route, a Paramedic may give fentanyl 1 mcg/kg slow IV/IO once, maximum 50 mcg. Medical Control must authorize any second fentanyl dose.",
+      "Reassess pain, airway, respiratory rate and effort, oxygenation, perfusion, mental status, and vital signs after every intervention and at handoff.",
+    ],
+    medications: [
+      {
+        name: "Acetaminophen",
+        dose: "EMT/AEMT/Paramedic: 15 mg/kg PO once; maximum 650 mg.",
+        notes: [
+          "Use only when the child is alert and can swallow/protect the airway.",
+          "Do not use with known hypersensitivity, severe liver disease or liver failure, suspected acetaminophen overdose, a recent maximum dose, or uncertain prior dose/time.",
+        ],
+      },
+      {
+        name: "Ibuprofen",
+        dose: "EMT/AEMT/Paramedic: 10 mg/kg PO once; maximum 400 mg.",
+        notes: [
+          "Use only when the child is alert and can swallow/protect the airway.",
+          "Do not use with NSAID hypersensitivity, renal disease, significant dehydration, active gastrointestinal bleeding, or recent NSAID administration.",
+        ],
+      },
+      {
+        name: "Fentanyl",
+        dose: "Paramedic: 1 mcg/kg slow IV/IO once; maximum 50 mcg.",
+        notes: [
+          "Medical Control authorization is required before any second fentanyl dose; a second dose is not a standing order.",
+          "Monitor airway, ventilation, oxygenation, mental status, and blood pressure; be prepared to support ventilation.",
+        ],
+      },
+    ],
+    actionLinks: [
+      { label: "UP-11 Adult Pain Control", description: "Open only for patients age 16 years or older.", href: "/protocols/up/up-11", kind: "protocol" },
+      { label: "Medication Reference", description: "Open the current Claiborne medication reference.", href: "/medications", kind: "external" },
+    ],
+    reviewStatus: "Approved",
+    reviewFlags: [
+      "Medical-director approved PM-04 Pediatric Pain Control on October 8, 2026: use for patients age 2 through younger than 16 years, actual or length-based weight, nonopioid standing-order care, and a one-time fentanyl dose only with Medical Control authorization required before any second dose.",
+      "PM-04 does not authorize ketorolac, morphine, hydromorphone, or ketamine as standing-order pediatric analgesics.",
+    ],
+    warnings: [
+      "Do not use UP-11 Adult Pain Control for patients younger than 16 years; use PM-04.",
+      "Do not delay airway management, hemorrhage control, shock treatment, splinting, or time-sensitive transport to complete analgesia.",
+      "Do not administer oral medication when swallowing or airway protection is impaired, active vomiting creates an aspiration risk, or prior dose/time is uncertain.",
+      "Do not give a second fentanyl dose without Medical Control authorization.",
+    ],
+    pearls: [
+      "Pain assessment can use self-report when reliable or a developmentally appropriate observational scale. Reassess the same measure after treatment.",
+      "Meaningful improvement in comfort and function is the goal; complete elimination of pain is not required before transport.",
+    ],
+  }),
 ];
