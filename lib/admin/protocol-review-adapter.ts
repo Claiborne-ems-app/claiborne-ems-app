@@ -138,7 +138,9 @@ export function calculateAdminDashboardStats(
   return {
     totalProtocols: protocols.length,
     approved: count("approved"),
-    inReview: count("in-review"),
+    // "Reviewed" content still requires final approval, so include it in the
+    // dashboard's active review total rather than leaving it unaccounted for.
+    inReview: count("in-review") + count("reviewed"),
     notStarted: count("not-started"),
     lastImportDate,
   };
