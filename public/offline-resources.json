@@ -1106,7 +1106,7 @@
     {
       "url": "/protocols/claiborne/ac-02-bradycardia-pulse-present-protocol.pdf",
       "kind": "document",
-      "bytes": 409741
+      "bytes": 49152
     },
     {
       "url": "/protocols/claiborne/ac-03-cardiac-arrest-adult-protocol.pdf",
@@ -1596,7 +1596,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 33428
+      "bytes": 33406
     },
     {
       "url": "/manifest.webmanifest",
@@ -1680,6 +1680,6 @@
     }
   ],
   "resourceCount": 335,
-  "knownBytes": 34597260,
-  "estimatedBytes": 48949644
+  "knownBytes": 34236649,
+  "estimatedBytes": 48589033
 }

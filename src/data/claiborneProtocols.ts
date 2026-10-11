@@ -14,7 +14,7 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-02",
@@ -27,7 +27,7 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-03",
