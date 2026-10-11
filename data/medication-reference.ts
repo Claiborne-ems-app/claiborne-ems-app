@@ -517,13 +517,14 @@ export const medicationReferences: MedicationReference[] = [
     id: "lidocaine",
     name: "Lidocaine",
     tradeNames: ["Xylocaine"],
-    uses: ["VF/pulseless VT", "Wide-complex tachycardia", "Torsades"],
+    uses: ["VF/pulseless VT cardiac arrest", "Wide-complex tachycardia", "Normal-QT polymorphic VT"],
     level: "Paramedic",
-    indication: "VF/VT; wide-tachycardia; torsades",
-    adult: "100 mg IV/IO initial",
+    indication: "VF/pulseless VT cardiac arrest; other ventricular dysrhythmias per linked protocol",
+    adult: "VF/pulseless VT cardiac arrest: 1–1.5 mg/kg IV/IO initial; then 0.5–0.75 mg/kg every 5–10 min; maximum total 3 mg/kg. For perfusing ventricular tachycardia, follow the linked protocol.",
     pediatric: "1 mg/kg",
     cautions: [
       "Track cumulative dose and monitor for neurologic or cardiovascular toxicity.",
+      "Do not combine lidocaine with amiodarone for shock-refractory VF/pulseless VT without Medical Control direction.",
     ],
     protocolLinks: [
       { label: "Adult VF / Pulseless VT", href: "/protocols/ac/ac-09" },

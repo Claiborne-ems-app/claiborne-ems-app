@@ -12,7 +12,7 @@ test("approved adult cardiac protocols are marked approved in both catalogs", as
   ]);
   const catalog = JSON.parse(jsonCatalog);
 
-  for (const id of ["AC-01", "AC-02"]) {
+  for (const id of ["AC-01", "AC-02", "AC-03"]) {
     const protocol = catalog.find((item) => item.id === id);
     assert.equal(protocol?.status, "approved");
     assert.equal(protocol?.year, 2026);
@@ -22,18 +22,21 @@ test("approved adult cardiac protocols are marked approved in both catalogs", as
 
   assert.match(structured, /id: "ac-01"[\s\S]*?reviewStatus: "Approved"/);
   assert.match(structured, /id: "ac-02"[\s\S]*?reviewStatus: "Approved"/);
+  assert.match(structured, /id: "ac-03"[\s\S]*?reviewStatus: "Approved"/);
 });
 
-test("AC-02 approved source PDF is present and recognizable as a PDF", async () => {
-  const pdf = new URL(
-    "../public/protocols/claiborne/ac-02-bradycardia-pulse-present-protocol.pdf",
-    import.meta.url,
-  );
-  const [metadata, header] = await Promise.all([
-    stat(pdf),
-    readFile(pdf).then((content) => content.subarray(0, 5).toString("ascii")),
-  ]);
+test("approved adult cardiac source PDFs are present and recognizable as PDFs", async () => {
+  for (const path of [
+    "ac-02-bradycardia-pulse-present-protocol.pdf",
+    "ac-03-cardiac-arrest-adult-protocol.pdf",
+  ]) {
+    const pdf = new URL(`../public/protocols/claiborne/${path}`, import.meta.url);
+    const [metadata, header] = await Promise.all([
+      stat(pdf),
+      readFile(pdf).then((content) => content.subarray(0, 5).toString("ascii")),
+    ]);
 
-  assert.ok(metadata.size > 20_000);
-  assert.equal(header, "%PDF-");
+    assert.ok(metadata.size > 20_000);
+    assert.equal(header, "%PDF-");
+  }
 });

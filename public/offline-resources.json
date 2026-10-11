@@ -1111,7 +1111,7 @@
     {
       "url": "/protocols/claiborne/ac-03-cardiac-arrest-adult-protocol.pdf",
       "kind": "document",
-      "bytes": 439588
+      "bytes": 49029
     },
     {
       "url": "/protocols/claiborne/ac-04-chest-pain-and-stemi-protocol.pdf",
@@ -1596,7 +1596,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 33406
+      "bytes": 33395
     },
     {
       "url": "/manifest.webmanifest",
@@ -1680,6 +1680,6 @@
     }
   ],
   "resourceCount": 335,
-  "knownBytes": 34236649,
-  "estimatedBytes": 48589033
+  "knownBytes": 33846079,
+  "estimatedBytes": 48198463
 }

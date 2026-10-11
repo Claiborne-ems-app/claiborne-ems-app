@@ -4157,7 +4157,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       {
         title: "Pregnancy",
         items: [
-          "Begin standard resuscitation immediately and use the applicable pregnancy cardiac-arrest pathway for left uterine displacement and time-critical perimortem delivery decisions.",
+          "Begin standard resuscitation immediately. When the fundus is at or above the umbilicus, use continuous left uterine displacement, notify Medical Control early, and plan an obstetric-capable destination when clinically appropriate.",
         ],
       },
       {
@@ -4190,6 +4190,12 @@ export const structuredProtocols: StructuredProtocolContent[] = [
         label: "AC-12 Termination of CPR",
         description: "Apply when ongoing resuscitation remains unsuccessful.",
         href: "/protocols/ac/ac-12",
+        kind: "protocol",
+      },
+      {
+        label: "AO-03 OB-GYN Emergency",
+        description: "Open for pregnancy-related causes, hemorrhage, seizure, or obstetric destination planning.",
+        href: "/protocols/ao/ao-03",
         kind: "protocol",
       },
     ],
@@ -4573,7 +4579,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             level: "Paramedic",
             actions: [
               "Perform all EMT and AEMT actions and direct the rhythm-specific pathway, TEAM-focused resuscitation, scene strategy, and transition of care.",
-              "For VF/pulseless VT, perform manual defibrillation using the manufacturer-recommended biphasic energy; if unknown, use the maximum available energy and follow AC-09.",
+              "For VF/pulseless VT, deliver an initial 200 J biphasic shock, verify the manufacturer-recommended setting, and use the same or higher energy for subsequent shocks; follow AC-09.",
               "After the third shock for persistent VF/pulseless VT, give either amiodarone or lidocaine according to AC-09; do not combine them.",
               "Choose a supraglottic airway or endotracheal intubation according to patient and scene conditions; airway placement must not interrupt compressions.",
               "Use continuous waveform capnography after any advanced airway and treat reversible causes with indication-specific therapy.",
@@ -4629,7 +4635,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Begin high-quality CPR immediately and open AC-11 for TEAM-focused roles and performance targets.",
       "Apply AED/monitor pads and analyze the rhythm. Resume CPR immediately after every rhythm check or shock.",
       "For VF/pulseless VT, open AC-09 and prioritize rapid defibrillation. For asystole/PEA, open AC-01 and give epinephrine as soon as possible.",
-      "Use manufacturer-recommended biphasic defibrillation energy; when the recommended energy is unknown, use the maximum available energy.",
+      "For VF/pulseless VT, deliver an initial 200 J biphasic shock, verify the manufacturer-recommended setting, and use the same or higher energy for subsequent shocks according to the device.",
       "Perform rhythm analysis every 2 minutes. Check a pulse only with an organized rhythm or other evidence of ROSC, and limit the check to 10 seconds.",
       "Make one rapid IV attempt, then proceed to IO when IV access is unsuccessful, infeasible, or delayed. Proximal tibia is preferred; humeral head is an alternate only when tibial access is contraindicated.",
       "Give epinephrine 1 mg IV/IO every 3–5 minutes. Give it as soon as possible for nonshockable rhythms and after the second shock for VF/pulseless VT.",
@@ -4686,7 +4692,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       {
         title: "Pregnancy",
         items: [
-          "Begin standard resuscitation immediately. Use continuous left uterine displacement when the fundus is at or above the umbilicus and activate the pregnancy cardiac-arrest pathway.",
+          "Begin standard resuscitation immediately. When the fundus is at or above the umbilicus, use continuous left uterine displacement, notify Medical Control early, and plan an obstetric-capable destination when clinically appropriate.",
         ],
       },
       {
@@ -4739,6 +4745,12 @@ export const structuredProtocols: StructuredProtocolContent[] = [
         href: "/protocols/ac/ac-12",
         kind: "protocol",
       },
+      {
+        label: "AO-03 OB-GYN Emergency",
+        description: "Open for pregnancy-related causes, hemorrhage, seizure, or obstetric destination planning.",
+        href: "/protocols/ao/ao-03",
+        kind: "protocol",
+      },
     ],
     references: [
       "American Heart Association. 2025 Adult Cardiac Arrest Algorithm.",
@@ -4750,12 +4762,13 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     ],
     sourcePdf: "/protocols/claiborne/ac-03-cardiac-arrest-adult-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "August 2026",
-    lastVerifiedDate: "August 11, 2026",
-    reviewStatus: "Reviewed",
+    revisionDate: "October 10, 2026",
+    lastVerifiedDate: "October 10, 2026",
+    reviewStatus: "Approved",
     reviewFlags: [
-      "Clinical content approved by the Claiborne EMS medical director during protocol review.",
-      "App content remains a beta field reference until formal agency release and implementation approval.",
+      "Approved by the Claiborne EMS medical director on October 10, 2026.",
+      "Pregnancy guidance now gives continuous left uterine displacement, early Medical Control notification, and obstetric destination planning without directing personnel to a nonexistent pathway.",
+      "The VF/pulseless VT branch uses Claiborne's approved 200 J initial biphasic shock and the linked AC-09 pathway.",
     ],
   },
   {
@@ -5738,7 +5751,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       { title: "Shock 2", text: "Same or higher energy per device • immediately resume CPR • epinephrine 1 mg IV/IO ASAP, then every 3–5 min", levels: ["AEMT", "Paramedic"], tone: "urgent" },
       { title: "CPR 2 min + Airway", text: "Consider advanced airway/capnography without interrupting compressions • treat reversible causes", levels: ["EMT", "AEMT", "Paramedic"], tone: "action" },
       { title: "Shock 3", text: "Same or higher energy per device • immediately resume CPR", levels: ["EMT", "AEMT", "Paramedic"], tone: "urgent" },
-      { title: "CPR 2 min + Antiarrhythmic", text: "Amiodarone 300 mg IV/IO; second dose 150 mg • alternative lidocaine 100 mg IV/IO", levels: ["Paramedic"], tone: "action" },
+      { title: "CPR 2 min + Antiarrhythmic", text: "Amiodarone 300 mg IV/IO; second dose 150 mg • alternative lidocaine 1–1.5 mg/kg IV/IO, then repeat per dose table (maximum total 3 mg/kg)", levels: ["Paramedic"], tone: "action" },
       { title: "Rhythm Every 2 min", text: "Shockable → shock and resume CPR • organized rhythm → pulse check • ROSC → AC-10", levels: ["EMT", "AEMT", "Paramedic"], tone: "decision" },
       { title: "Persistent Arrest", text: "Continue shock/CPR cycles • epinephrine every 3–5 min • treat Hs and Ts • consider AC-12 when criteria met", levels: ["EMT", "AEMT", "Paramedic"], tone: "transport" },
     ],
@@ -5784,7 +5797,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
             "Charge the defibrillator during compressions, clear briefly, deliver the shock, and resume CPR immediately.",
             "After the second shock, give epinephrine 1 mg IV/IO as soon as possible and repeat every 3–5 minutes.",
             "After the third shock, give amiodarone 300 mg IV/IO; give 150 mg IV/IO as the second dose for persistent or recurrent VF/pVT.",
-            "As an alternative to amiodarone, give lidocaine 100 mg IV/IO initially; do not combine amiodarone and lidocaine without Medical Control.",
+            "As an alternative to amiodarone, give lidocaine 1–1.5 mg/kg IV/IO initially; then 0.5–0.75 mg/kg every 5–10 minutes to a maximum total of 3 mg/kg. Do not combine amiodarone and lidocaine without Medical Control.",
             "For suspected pulseless torsades, give magnesium sulfate 1–2 g IV/IO push; may repeat once. Do not use magnesium routinely for other VF/pVT arrests.",
             "Place an advanced airway and use continuous waveform capnography when this can be accomplished without interrupting compressions or delaying shocks.",
           ],
@@ -5847,7 +5860,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Consider advanced-airway placement and continuous waveform capnography without interrupting compressions or delaying defibrillation.",
       "After the next 2-minute CPR cycle, deliver the third shock if VF/pVT persists and immediately resume CPR.",
       "After the third shock, give amiodarone 300 mg IV/IO. If VF/pVT persists or recurs, give a second dose of 150 mg IV/IO.",
-      "Lidocaine 100 mg IV/IO may be used as the initial alternative to amiodarone; do not combine amiodarone and lidocaine without Medical Control.",
+      "Lidocaine 1–1.5 mg/kg IV/IO may be used as the initial alternative to amiodarone; then give 0.5–0.75 mg/kg every 5–10 minutes to a maximum total of 3 mg/kg. Do not combine amiodarone and lidocaine without Medical Control.",
       "For suspected pulseless torsades, give magnesium sulfate 1–2 g IV/IO push; may repeat once. Do not give magnesium routinely for other VF/pVT arrests.",
       "Continue 2-minute CPR cycles, rhythm checks, shocks for persistent VF/pVT, epinephrine every 3–5 minutes, and treatment of reversible causes.",
       "If an organized rhythm appears, briefly check for a pulse. ROSC requires immediate transition to AC-10; persistent arrest may transition to AC-12 when criteria are met.",
@@ -5873,9 +5886,10 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         name: "Lidocaine",
-        dose: "100 mg IV/IO initial dose",
+        dose: "1–1.5 mg/kg IV/IO initial dose; then 0.5–0.75 mg/kg every 5–10 minutes; maximum total 3 mg/kg",
         notes: [
           "Paramedic alternative to amiodarone for shock-refractory VF/pVT.",
+          "Administer during CPR without interrupting compressions.",
           "Do not combine with amiodarone without Medical Control.",
         ],
       },
