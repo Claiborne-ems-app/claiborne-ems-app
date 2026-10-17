@@ -38,7 +38,7 @@ test("generates an offline route for every protocol destination", () => {
     ).length,
     protocolCount
   );
-  assert.equal(createOfflineVersion(appConfig), "2-18-0-july-2026");
+  assert.equal(createOfflineVersion(appConfig), "2-19-0-october-2026");
 });
 
 test("generated package includes all direct PDFs and Claiborne branding", async () => {

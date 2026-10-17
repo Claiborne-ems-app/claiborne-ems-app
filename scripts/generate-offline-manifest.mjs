@@ -5,8 +5,8 @@ import { fileURLToPath } from "node:url";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = path.join(projectRoot, "public");
 const appConfig = {
-  appVersion: "2.18.0",
-  protocolVersion: "July 2026",
+  appVersion: "2.19.0",
+  protocolVersion: "October 2026",
 };
 
 function slugify(value) {

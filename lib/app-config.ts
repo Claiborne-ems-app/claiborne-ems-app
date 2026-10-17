@@ -1,9 +1,9 @@
 export const appConfig = {
   appName: "Claiborne EMS Protocols",
   protocolName: "Claiborne County EMS Protocols",
-  protocolVersion: "July 2026",
-  protocolLastUpdated: "July 2026",
-  appVersion: "2.18.0",
+  protocolVersion: "October 2026",
+  protocolLastUpdated: "October 2026",
+  appVersion: "2.19.0",
   betaStatus: "Beta application",
   betaNotice: "Verify clinical decisions against the current approved protocol manual. This beta reference application does not imply formal organizational approval.",
 } as const;

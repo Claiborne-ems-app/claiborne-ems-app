@@ -1,7 +1,7 @@
 {
-  "version": "2-18-0-july-2026",
-  "appVersion": "2.18.0",
-  "protocolVersion": "July 2026",
+  "version": "2-19-0-october-2026",
+  "appVersion": "2.19.0",
+  "protocolVersion": "October 2026",
   "resources": [
     {
       "url": "/",
@@ -1116,67 +1116,67 @@
     {
       "url": "/protocols/claiborne/ac-04-chest-pain-and-stemi-protocol.pdf",
       "kind": "document",
-      "bytes": 353311
+      "bytes": 47982
     },
     {
       "url": "/protocols/claiborne/ac-05-chf-pulmonary-edema-protocol.pdf",
       "kind": "document",
-      "bytes": 306459
+      "bytes": 47788
     },
     {
       "url": "/protocols/claiborne/ac-06-adult-tachycardia-narrow-protocol.pdf",
       "kind": "document",
-      "bytes": 370271
+      "bytes": 48137
     },
     {
       "url": "/protocols/claiborne/ac-07-adult-tachycardia-monomorphic-wide-protocol.pdf",
       "kind": "document",
-      "bytes": 419057
+      "bytes": 47516
     },
     {
       "url": "/protocols/claiborne/ac-08-adult-tachycardia-polymorphic-wide-protocol.pdf",
       "kind": "document",
-      "bytes": 363040
+      "bytes": 47520
     },
     {
       "url": "/protocols/claiborne/ac-09-vf-pulseless-vt-protocol.pdf",
       "kind": "document",
-      "bytes": 300487
+      "bytes": 47462
     },
     {
       "url": "/protocols/claiborne/ac-10-post-resuscitation-protocol.pdf",
       "kind": "document",
-      "bytes": 460579
+      "bytes": 47544
     },
     {
       "url": "/protocols/claiborne/ac-11-team-focused-cpr-protocol.pdf",
       "kind": "document",
-      "bytes": 280181
+      "bytes": 47483
     },
     {
       "url": "/protocols/claiborne/ac-12-termination-of-cpr-protocol.pdf",
       "kind": "document",
-      "bytes": 319318
+      "bytes": 47572
     },
     {
       "url": "/protocols/claiborne/ac-13-targeted-temperature-management-protocol.pdf",
       "kind": "document",
-      "bytes": 406427
+      "bytes": 47271
     },
     {
       "url": "/protocols/claiborne/ac-14-lvad-emergency-protocol.pdf",
       "kind": "document",
-      "bytes": 453541
+      "bytes": 47724
     },
     {
       "url": "/protocols/claiborne/ac-15-total-mechanic-circulation-protocol.pdf",
       "kind": "document",
-      "bytes": 360461
+      "bytes": 47798
     },
     {
       "url": "/protocols/claiborne/ac-16-wearable-cardioverter-defibrillator-vest-protocol.pdf",
       "kind": "document",
-      "bytes": 475545
+      "bytes": 47667
     },
     {
       "url": "/protocols/claiborne/am-01-allergic-reaction-anaphylaxis-protocol.pdf",
@@ -1596,7 +1596,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 33395
+      "bytes": 33229
     },
     {
       "url": "/manifest.webmanifest",
@@ -1680,6 +1680,6 @@
     }
   ],
   "resourceCount": 335,
-  "knownBytes": 33846079,
-  "estimatedBytes": 48198463
+  "knownBytes": 29596700,
+  "estimatedBytes": 43949084
 }

@@ -53,12 +53,12 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
   "year": 2026,
   "source": "Claiborne County EMS Clinical Protocols",
   "agency": "Claiborne County EMS",
-  "status": "draft-import"
+  "status": "approved"
 },
   {
     "id": "AC-05",
     "code": "AC 5",
-    "title": "CHF Pulmonary Edema Protocol",
+    "title": "CHF / Acute Pulmonary Edema",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-05-chf-pulmonary-edema-protocol.pdf",
@@ -66,12 +66,12 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-06",
     "code": "AC 6",
-    "title": "Adult Tachycardia Narrow Protocol",
+    "title": "Adult Narrow-Complex Tachycardia",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-06-adult-tachycardia-narrow-protocol.pdf",
@@ -79,12 +79,12 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-07",
     "code": "AC 7",
-    "title": "Adult Tachycardia Monomorphic Wide Protocol",
+    "title": "Adult Monomorphic Wide-Complex Tachycardia",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-07-adult-tachycardia-monomorphic-wide-protocol.pdf",
@@ -92,12 +92,12 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-08",
     "code": "AC 8",
-    "title": "Adult Tachycardia Polymorphic Wide Protocol",
+    "title": "Adult Polymorphic Wide-Complex Tachycardia",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-08-adult-tachycardia-polymorphic-wide-protocol.pdf",
@@ -105,12 +105,12 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-09",
     "code": "AC 9",
-    "title": "VF Pulseless VT Protocol",
+    "title": "Ventricular Fibrillation / Pulseless VT",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-09-vf-pulseless-vt-protocol.pdf",
@@ -118,12 +118,12 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-10",
     "code": "AC 10",
-    "title": "Post Resuscitation Protocol",
+    "title": "Post-Resuscitation Care",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-10-post-resuscitation-protocol.pdf",
@@ -131,12 +131,12 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-11",
     "code": "AC 11",
-    "title": "TEAM Focused CPR Protocol",
+    "title": "TEAM-Focused CPR",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-11-team-focused-cpr-protocol.pdf",
@@ -144,12 +144,12 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-12",
     "code": "AC 12",
-    "title": "Termination of CPR Protocol",
+    "title": "Termination of Resuscitation",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-12-termination-of-cpr-protocol.pdf",
@@ -157,12 +157,12 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-13",
     "code": "AC 13",
-    "title": "Targeted Temperature Management Protocol",
+    "title": "Post-Arrest Temperature Management",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-13-targeted-temperature-management-protocol.pdf",
@@ -170,38 +170,38 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-14",
     "code": "AC 14",
-    "title": "LVAD Emergency Protocol",
+    "title": "LVAD Emergency",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-14-lvad-emergency-protocol.pdf",
-    "pages": 4,
+    "pages": 2,
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-15",
     "code": "AC 15",
-    "title": "Total Mechanic Circulation Protocol",
+    "title": "Total Artificial Heart Emergency",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-15-total-mechanic-circulation-protocol.pdf",
-    "pages": 3,
+    "pages": 2,
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AC-16",
     "code": "AC 16",
-    "title": "Wearable Cardioverter Defibrillator Vest Protocol",
+    "title": "Wearable Cardioverter-Defibrillator Vest",
     "category": "Adult Cardiac",
     "categoryCode": "AC",
     "pdfPath": "/protocols/claiborne/ac-16-wearable-cardioverter-defibrillator-vest-protocol.pdf",
@@ -209,7 +209,7 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AM-01",
