@@ -69,7 +69,7 @@ function obstetricProtocol(
     actionLinks: input.actionLinks,
     references: [
       "Claiborne County EMS approved protocol manual.",
-      "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+      "Claiborne County EMS medication formulary, linked protocol pathways, and agency release guidance.",
     ],
     sourcePdf: input.sourcePdf,
     sourcePages: { start: 1, end: 2 },
@@ -89,7 +89,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
     id: "ao-01",
     title: "Childbirth / Labor",
     sourcePdf: "/protocols/claiborne/ao-01-childbirth-labor-protocol.pdf",
-    revisionDate: "2025-09-01",
+    revisionDate: "October 16, 2026",
     overview: [
       "Determine whether transport is safe or delivery is imminent using gestational age, contraction pattern, urge to push, parity, prior labor duration, and perineal inspection.",
       "Prioritize maternal positioning, preparation for neonatal care, recognition of abnormal presentation, and immediate treatment of postpartum hemorrhage.",
@@ -160,8 +160,8 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
     ],
     specialPopulations: [{ title: "Postpartum hemorrhage", items: ["After placental delivery, perform uterine massage for excessive bleeding. For shock, use AM-05 and tranexamic acid 1 g IV/IO over 10 minutes when within 3 hours of delivery."] }],
     reviewStatus: "Approved",
-    lastVerifiedDate: "2026-08-14",
-    reviewFlags: ["Clinical delivery, maternal/newborn care, complication management, tranexamic acid use, provider permissions, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.", "Oxytocin was removed because it is not on the Claiborne formulary."],
+    lastVerifiedDate: "2026-10-16",
+    reviewFlags: ["Clinical delivery, maternal/newborn care, complication management, tranexamic acid use, provider permissions, linked pathways, and source-PDF release approved by the Claiborne EMS medical director on October 16, 2026.", "Oxytocin is not on the Claiborne formulary and is not authorized under this protocol."],
     clinicalPearls: [
       "Transport is generally preferred, but crowning, urge to push, frequent contractions, parity, and prior rapid labor may make field delivery safer.",
       "Twins are commonly premature and at higher risk for hypothermia; request additional resources early.",
@@ -172,7 +172,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
     id: "ao-02",
     title: "Newly Born",
     sourcePdf: "/protocols/claiborne/ao-02-newly-born-protocol.pdf",
-    revisionDate: "2025-09-01",
+    revisionDate: "October 16, 2026",
     overview: [
       "Most newly born infants require only warmth, drying, stimulation, and appropriate cord management.",
       "Effective positive-pressure ventilation is the most important intervention when respirations are inadequate or heart rate remains below 100/min.",
@@ -186,7 +186,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       { title: "All Yes", text: "Warm, dry, stimulate, skin-to-skin, maintain temperature, and reassess.", levels: ALL_LEVELS, tone: "action" },
       { title: "Any No", text: "Warm, dry, stimulate, position airway, and suction only if needed.", levels: ALL_LEVELS, tone: "urgent" },
       { title: "Apnea / Gasping / HR <100?", text: "Begin BVM ventilation at 40–60/min and assess chest movement and heart-rate response.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "HR Remains <60?", text: "After effective ventilation, begin coordinated 3:1 compressions and escalate care.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "HR Remains <60?", text: "After effective ventilation, begin two-thumb encircling 3:1 compressions, use 100% oxygen, and escalate care.", levels: ALL_LEVELS, tone: "urgent" },
       { title: "Reassess + Transport", text: "Maintain warmth, right-hand SpO₂, cardiac monitoring, glucose, and early notification.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
@@ -215,9 +215,9 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       {
         title: "Expected preductal oxygen saturation",
         items: [
-          "1 minute: 60–65%; 2 minutes: 65–70%; 3 minutes: 70–75%.",
-          "4 minutes: 75–80%; 5 minutes: 80–85%; 10 minutes: 85–95%.",
-          "These expected values apply to an infant not requiring active resuscitation.",
+          "2 minutes: 65–70%; 3 minutes: 70–75%; 4 minutes: 75–80%.",
+          "5 minutes: 80–85%; 10 minutes: 85–95%.",
+          "Use right-hand/wrist/upper-arm preductal monitoring. These expected values apply to an infant not requiring active resuscitation.",
         ],
       },
     ],
@@ -232,8 +232,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
         name: "Epinephrine 1:10,000",
         dose: "0.01 mg/kg IV/IO every 3–5 minutes as needed",
         notes: [
-          "For heart rate below 60 despite effective ventilation and coordinated compressions.",
-          "Confirm current Claiborne neonatal dosing and scope before clinical release.",
+          "For heart rate below 60 despite effective ventilation and coordinated compressions. Use UVC/IO access when available.",
         ],
       },
       {
@@ -248,7 +247,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       "Naloxone is not recommended for neonatal respiratory depression from maternal narcotics; provide ventilatory support.",
       "Ventilation must be effective before chest compressions are started.",
     ],
-    actionLinks: [{ label: "PM-02 Pediatric Diabetic / Hypoglycemia", description: "Open for newborn hypoglycemia management and the approved pediatric dextrose pathway.", href: "/protocols/pm/pm-02", kind: "protocol" }],
+    actionLinks: [{ label: "PM-02 Pediatric Diabetic / Hypoglycemia", description: "After immediate newborn stabilization, open for the approved pediatric hypoglycemia and dextrose pathway.", href: "/protocols/pm/pm-02", kind: "protocol" }],
     clinicalPearls: [
       "A rising heart rate is the best indicator that newborn ventilation and resuscitation are effective.",
       "Skin-to-skin contact with the mother is the preferred warming method for a vigorous infant.",
@@ -263,13 +262,19 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
         ],
       },
     ],
+    reviewStatus: "Approved",
+    lastVerifiedDate: "2026-10-16",
+    reviewFlags: [
+      "Clinical newborn stabilization, ventilation/compression escalation, oxygen-saturation targets, neonatal medication safeguards, hypoglycemia routing, provider permissions, and source-PDF release approved by the Claiborne EMS medical director on October 16, 2026.",
+      "AO-02 does not include a neonatal D10 dose; use PM-02 after immediate newborn stabilization for the approved pediatric hypoglycemia pathway.",
+    ],
   }),
 
   obstetricProtocol({
     id: "ao-03",
     title: "OB-GYN Emergency",
     sourcePdf: "/protocols/claiborne/ao-03-ob-gyn-emergency-protocol.pdf",
-    revisionDate: "August 2026",
+    revisionDate: "October 16, 2026",
     overview: [
       "Evaluate pregnancy-related and gynecologic emergencies including hemorrhage, ectopic pregnancy, miscarriage, preeclampsia, eclampsia, shock, and trauma.",
       "Use left lateral positioning, early hemorrhage recognition, seizure control, and rapid destination notification.",
@@ -284,7 +289,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       { title: "Position + Assess", text: "Left lateral • ABCs • glucose • vitals • bleeding amount • neurologic findings.", levels: ALL_LEVELS, tone: "action" },
       { title: "Shock / Hemorrhage?", text: "Control external bleeding, establish access, resuscitate, and consider TXA pathway.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
       { title: "Field Delivery?", text: "Use Childbirth/Labor; after delivery address uterine atony and postpartum bleeding.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Seizure / Eclampsia?", text: "Protect airway • treat active convulsion • magnesium is the cause-directed eclampsia therapy.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Seizure / Eclampsia?", text: "Protect airway • start magnesium as cause-directed therapy • use standardized seizure treatment for an ongoing convulsion.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
       { title: "Rapid Transport", text: "Continuous reassessment and early OB/trauma-capable destination notification.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
@@ -319,7 +324,7 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       },
     ],
     treatmentSteps: [
-      "For eclampsia or suspected eclampsia, use magnesium sulfate as the cause-directed therapy while treating an ongoing convulsion promptly with midazolam when required.",
+      "For eclampsia or suspected eclampsia, start magnesium sulfate promptly as the cause-directed therapy. For an ongoing convulsion, use the standardized UP-13 / medication-reference midazolam regimen when immediate seizure control is required.",
       "After placental delivery, perform uterine massage and follow postpartum hemorrhage treatment.",
       "A pregnant patient after motor-vehicle collision requires immediate physician evaluation; pregnancy beyond 20 weeks commonly requires 4–6 hours of fetal monitoring.",
     ],
@@ -334,28 +339,29 @@ export const structuredObstetricsProtocols: StructuredProtocolContent[] = [
       },
       {
         name: "Midazolam",
-        dose: "10 mg IM, or 2–2.5 mg IV/IO repeated every 2–3 minutes to a maximum of 20 mg",
+        dose: "Use the standardized adult-seizure regimen: 10 mg IM when IV/IO is not established, 10 mg IN as an alternative, or 5 mg IV/IO; repeat 5 mg IV/IO once after 5 minutes if seizure continues (maximum total 10 mg).",
         notes: [
           "Do not delay IM treatment while attempting vascular access during active seizure.",
-          "Confirm current Claiborne dosing before clinical release.",
+          "Magnesium sulfate remains the cause-directed eclampsia therapy.",
         ],
       },
       {
         name: "Magnesium sulfate",
-        dose: "4–6 g IV over 20 minutes, then 1–2 g/hr infusion for eclampsia or suspected eclampsia",
+        dose: "4–6 g IV over 20–30 minutes, then 1–2 g/hr infusion for eclampsia or suspected eclampsia",
         notes: [
           "Primary cause-directed therapy for eclampsia or suspected eclampsia.",
           "Continuously monitor ECG, BP, respiratory status, SpO₂, and EtCO₂.",
         ],
       },
     ],
-    actionLinks: [{ label: "AO-01 Childbirth / Labor", href: "/protocols/ao/ao-01", kind: "protocol" }, { label: "AO-02 Newly Born", href: "/protocols/ao/ao-02", kind: "protocol" }, { label: "AM-05 Hypotension / Shock", href: "/protocols/am/am-05", kind: "protocol" }, { label: "UP-13 Seizure", href: "/protocols/up/up-13", kind: "protocol" }, { label: "AM-04 Hypertension", href: "/protocols/am/am-04", kind: "protocol" }],
+    actionLinks: [{ label: "AO-01 Childbirth / Labor", href: "/protocols/ao/ao-01", kind: "protocol" }, { label: "AO-02 Newly Born", href: "/protocols/ao/ao-02", kind: "protocol" }, { label: "AM-05 Hypotension / Shock", href: "/protocols/am/am-05", kind: "protocol" }, { label: "UP-13 Seizure", href: "/protocols/up/up-13", kind: "protocol" }],
     reviewStatus: "Approved",
-    lastVerifiedDate: "2026-08-14",
-    reviewFlags: ["Clinical maternal emergency, postpartum hemorrhage, eclampsia, medication, provider-scope, transport, and linked-pathway content approved by the Claiborne EMS medical director on August 14, 2026.", "Oxytocin removed because it is not on the Claiborne formulary.", "Pregnancy with any chance of delivery remains ground transport; do not place on aircraft."],
+    lastVerifiedDate: "2026-10-16",
+    reviewFlags: ["Clinical maternal emergency, postpartum hemorrhage, eclampsia, medication, provider-scope, transport, linked-pathway content, and source-PDF release approved by the Claiborne EMS medical director on October 16, 2026.", "Oxytocin is not on the Claiborne formulary and is not authorized under this protocol.", "Pregnancy with any chance of delivery remains ground transport; do not place on aircraft."],
     warnings: [
       "For suspected eclampsia, magnesium sulfate is the cause-directed therapy; give midazolam promptly for an ongoing convulsive seizure when needed.",
       "Magnesium sulfate may cause hypotension and respiratory depression; stop it for clinically significant toxicity and give calcium gluconate 1 g IV slowly with Medical Control.",
+      "Do not use AM-04's undifferentiated-CVA labetalol standing order for pregnancy-related hypertension. Obtain Medical Control for the obstetric indication, agent, dose, and blood-pressure endpoint.",
       "Do not suggest that a normal ultrasound alone would exclude injury after maternal trauma; appropriate fetal monitoring and physician evaluation are required.",
       "Vaginal bleeding may be absent in ectopic pregnancy or placental abruption.",
     ],

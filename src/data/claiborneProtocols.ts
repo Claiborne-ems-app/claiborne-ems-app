@@ -305,41 +305,41 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
   {
     "id": "AO-01",
     "code": "AO 1",
-    "title": "Childbirth Labor Protocol",
+    "title": "Childbirth / Labor",
     "category": "Adult Obstetrics",
     "categoryCode": "AO",
     "pdfPath": "/protocols/claiborne/ao-01-childbirth-labor-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AO-02",
     "code": "AO 2",
-    "title": "Newly Born Protocol",
+    "title": "Newly Born",
     "category": "Adult Obstetrics",
     "categoryCode": "AO",
     "pdfPath": "/protocols/claiborne/ao-02-newly-born-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AO-03",
     "code": "AO 3",
-    "title": "OB-GYN Emergency Protocol",
+    "title": "OB-GYN Emergency",
     "category": "Adult Obstetrics",
     "categoryCode": "AO",
     "pdfPath": "/protocols/claiborne/ao-03-ob-gyn-emergency-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AR-01",

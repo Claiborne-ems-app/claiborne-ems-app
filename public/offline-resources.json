@@ -1,6 +1,6 @@
 {
-  "version": "2-20-0-october-2026",
-  "appVersion": "2.20.0",
+  "version": "2-21-0-october-2026",
+  "appVersion": "2.21.0",
   "protocolVersion": "October 2026",
   "resources": [
     {
@@ -1216,17 +1216,17 @@
     {
       "url": "/protocols/claiborne/ao-01-childbirth-labor-protocol.pdf",
       "kind": "document",
-      "bytes": 285833
+      "bytes": 48400
     },
     {
       "url": "/protocols/claiborne/ao-02-newly-born-protocol.pdf",
       "kind": "document",
-      "bytes": 418105
+      "bytes": 48764
     },
     {
       "url": "/protocols/claiborne/ao-03-ob-gyn-emergency-protocol.pdf",
       "kind": "document",
-      "bytes": 306515
+      "bytes": 48803
     },
     {
       "url": "/protocols/claiborne/ar-01-adult-airway-protocol.pdf",
@@ -1596,7 +1596,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 33205
+      "bytes": 33147
     },
     {
       "url": "/manifest.webmanifest",
@@ -1680,6 +1680,6 @@
     }
   ],
   "resourceCount": 335,
-  "knownBytes": 28206758,
-  "estimatedBytes": 42559142
+  "knownBytes": 27342214,
+  "estimatedBytes": 41694598
 }

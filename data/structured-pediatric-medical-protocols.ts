@@ -166,7 +166,7 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
     emt: [
       "Check glucose and give oral glucose only if the child is awake, follows commands, and can swallow/protect the airway.",
       "If oral treatment is unsafe, support airway/ventilation and request ALS promptly. Do not delay treatment of symptomatic hypoglycemia for a confirmatory CGM or capillary reading.",
-      "Use AO-02 Newly Born for immediate newborn hypoglycemia/resuscitation.",
+      "Use AO-02 Newly Born for immediate newborn resuscitation. After immediate stabilization, use this pathway for the approved pediatric hypoglycemia treatment.",
     ],
     aemt: [
       "Perform all EMT care plus IV/IO access and D10 2 mL/kg (0.2 g/kg); recheck after 5 minutes and repeat once for persistent hypoglycemia.",
@@ -191,7 +191,7 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
       "Refusal after hypoglycemia requires normal neurologic status/capacity, glucose at least 80 mg/dL, ability to eat, a reliable caregiver, a clear reversible cause, and no long-acting oral hypoglycemic-agent concern.",
     ],
     actionLinks: [
-      { label: "AO-02 Newly Born", description: "Open for immediate newborn hypoglycemia/resuscitation.", href: "/protocols/ao/ao-02", kind: "protocol" },
+      { label: "AO-02 Newly Born", description: "Open for immediate newborn resuscitation before transitioning to the approved hypoglycemia pathway.", href: "/protocols/ao/ao-02", kind: "protocol" },
       { label: "AR-05 Pediatric Airway", description: "Open when hypoglycemia causes unsafe airway protection or ventilation.", href: "/protocols/ar/ar-05", kind: "protocol" },
       { label: "PM-03 Pediatric Hypotension / Shock", description: "Open for persistent poor perfusion or shock.", href: "/protocols/pm/pm-03", kind: "protocol" },
       { label: "Medication Reference", description: "Open the current Claiborne medication reference.", href: "/medications", kind: "external" },
