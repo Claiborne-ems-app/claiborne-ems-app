@@ -222,7 +222,7 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "native-reviewed"
+    "status": "approved"
   },
   {
     "id": "AM-02",
@@ -235,7 +235,7 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "native-reviewed"
+    "status": "approved"
   },
   {
     "id": "AM-03",
@@ -248,20 +248,20 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "native-reviewed"
+    "status": "approved"
   },
   {
     "id": "AM-04",
     "code": "AM 4",
-    "title": "Hypertension",
+    "title": "Hypertension / Suspected Hypertensive Emergency",
     "category": "Adult Medical",
     "categoryCode": "AM",
     "pdfPath": "/protocols/claiborne/am-04-hypertension-protocol.pdf",
-    "pages": 1,
+    "pages": 2,
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "native-reviewed"
+    "status": "approved"
   },
   {
     "id": "AM-05",
@@ -274,7 +274,7 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "native-reviewed"
+    "status": "approved"
   },
   {
     "id": "AM-06",
@@ -282,12 +282,12 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "title": "Suspected Stroke — Tenecteplase (TNK) Transfer",
     "category": "Adult Medical",
     "categoryCode": "AM",
-    "pdfPath": "/protocols/claiborne/am-06-suspected-stroke-activase-t-pa-transfer-protocol.pdf",
+    "pdfPath": "/protocols/claiborne/am-06-suspected-stroke-tnk-transfer-protocol.pdf",
     "pages": 2,
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "native-reviewed"
+    "status": "approved"
   },
   {
     "id": "AM-07",
@@ -300,7 +300,7 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "native-reviewed"
+    "status": "approved"
   },
   {
     "id": "AO-01",

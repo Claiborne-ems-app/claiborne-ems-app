@@ -21,7 +21,7 @@ export interface MedicationReference {
 
 export const medicationReferenceSource = {
   label:
-    "Claiborne Covenant EMS RX-R1 Formulary — 42 verified stocked medications plus protocol-specific references",
+    "Claiborne County EMS RX-R1 Formulary — 42 verified stocked medications plus protocol-specific references",
   href: "https://www.tn.gov/content/dam/tn/health/events/TN%20State%20Protocol%20Guidelines%20%20Sept24.pdf",
   reviewed: "August 15, 2026",
 };
@@ -499,14 +499,15 @@ export const medicationReferences: MedicationReference[] = [
     id: "labetalol",
     name: "Labetalol",
     tradeNames: ["Trandate"],
-    uses: ["Hypertensive emergency", "Selected stroke blood-pressure control"],
+    uses: ["Undifferentiated suspected CVA with severe hypertension", "Medical-Control-directed non-stroke hypertensive emergency"],
     level: "Paramedic",
-    indication: "Protocol-defined hypertensive emergency or stroke blood-pressure control",
-    adult: "10–20 mg slow IV push; may repeat every 10 minutes as needed to goal blood pressure",
-    pediatric: "0.2–1 mg/kg once; maximum 40 mg",
+    indication: "AM-04 undifferentiated suspected CVA with SBP >220 or DBP >110; other use only under a condition-specific pathway or Medical Control",
+    adult: "Undifferentiated suspected CVA: 10 mg slow IV over 2 min; may repeat 10 mg once after at least 10 min if still SBP >220 or DBP >110; maximum total 20 mg",
+    pediatric: "Not authorized under Adult Medical AM-04; use a pediatric condition-specific pathway or Medical Control",
     cautions: [
-      "Use only under the Hypertension or Suspected Stroke pathway; avoid rapid or unmonitored blood-pressure reduction.",
-      "Avoid with bradycardia, decompensated heart failure, or active bronchospasm unless Medical Control directs otherwise.",
+      "Use the standing order only for manually confirmed undifferentiated suspected CVA with SBP >220 or DBP >110; target SBP ≤220 and DBP ≤110. Do not use this target after thrombolysis/TNK.",
+      "For any non-stroke hypertensive emergency, use a linked condition-specific pathway or Medical Control; avoid rapid or unmonitored reduction.",
+      "Do not give with bradycardia, advanced heart block, acute decompensated heart failure/pulmonary edema, cardiogenic shock, or active bronchospasm.",
     ],
     protocolLinks: [
       { label: "Hypertension", href: "/protocols/am/am-04" },
@@ -711,12 +712,15 @@ export const medicationReferences: MedicationReference[] = [
     uses: ["Bradycardia", "Medical shock"],
     level: "Paramedic",
     indication: "Bradycardia; medical shock",
-    adult: "0.1-2 mcg/kg/min infusion",
+    adult: "Medical shock (AM-05): 0.05–0.5 mcg/kg/min IV/IO infusion; for other indications, follow the linked protocol",
     pediatric: "Same as adult formulary dose",
     cautions: [
       "Use an infusion pump, titrate to the protocol endpoint, and monitor the access site and distal perfusion.",
     ],
-    protocolLinks: [],
+    protocolLinks: [
+      { label: "Hypotension / Shock", href: "/protocols/am/am-05" },
+      { label: "Adult CHF / Acute Pulmonary Edema", href: "/protocols/ac/ac-05" },
+    ],
   }),
   medication({
     id: "ondansetron",

@@ -18,7 +18,7 @@ test("Claiborne directory contains the 42 approved formulary rows plus the appro
   );
   assert.match(
     medicationReferenceSource.label,
-    /Claiborne Covenant EMS(?: RX-R1)? Formulary/i
+    /Claiborne County EMS(?: RX-R1)? Formulary/i
   );
 });
 
@@ -73,8 +73,10 @@ test("approved Claiborne medication updates retain source doses and route safegu
   assert.match(byId.diltiazem.doses[0].adult, /infusion 5–10 mg\/hr/);
   assert.equal(byId.ketorolac.doses[0].adult, "15–30 mg IV or 60 mg IM");
   assert.equal(byId.ketorolac.doses[0].pediatric, "0.5 mg/kg IV once; maximum 15 mg");
-  assert.match(byId.labetalol.doses[0].adult, /10–20 mg slow IV push/);
-  assert.equal(byId.labetalol.doses[0].pediatric, "0.2–1 mg/kg once; maximum 40 mg");
+  assert.match(byId.labetalol.doses[0].adult, /10 mg slow IV over 2 min/);
+  assert.match(byId.labetalol.doses[0].adult, /maximum total 20 mg/);
+  assert.match(byId.labetalol.doses[0].pediatric, /Not authorized under Adult Medical AM-04/);
+  assert.match(byId.norepinephrine.doses[0].adult, /0\.05–0\.5 mcg\/kg\/min/);
   assert.match(byId.magnesium.doses[0].adult, /Hypomagnesemia: 1–2 g IV over 1 hr/);
   assert.match(byId.magnesium.doses[0].pediatric, /Asthma: 40–50 mg\/kg IV once over 15–30 min/);
   assert.equal(byId.succinylcholine.doses[0].adult, "1–2 mg/kg IV for RSI");

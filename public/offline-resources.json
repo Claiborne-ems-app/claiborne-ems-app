@@ -1,6 +1,6 @@
 {
-  "version": "2-19-0-october-2026",
-  "appVersion": "2.19.0",
+  "version": "2-20-0-october-2026",
+  "appVersion": "2.20.0",
   "protocolVersion": "October 2026",
   "resources": [
     {
@@ -1181,37 +1181,37 @@
     {
       "url": "/protocols/claiborne/am-01-allergic-reaction-anaphylaxis-protocol.pdf",
       "kind": "document",
-      "bytes": 166492
+      "bytes": 47934
     },
     {
       "url": "/protocols/claiborne/am-02-diabetic-adult-protocol.pdf",
       "kind": "document",
-      "bytes": 285698
+      "bytes": 47891
     },
     {
       "url": "/protocols/claiborne/am-03-dialysis-renal-failure-protocol.pdf",
       "kind": "document",
-      "bytes": 395593
+      "bytes": 48061
     },
     {
       "url": "/protocols/claiborne/am-04-hypertension-protocol.pdf",
       "kind": "document",
-      "bytes": 335566
+      "bytes": 48058
     },
     {
       "url": "/protocols/claiborne/am-05-hypotension-shock-protocol.pdf",
       "kind": "document",
-      "bytes": 200001
+      "bytes": 48132
     },
     {
-      "url": "/protocols/claiborne/am-06-suspected-stroke-activase-t-pa-transfer-protocol.pdf",
+      "url": "/protocols/claiborne/am-06-suspected-stroke-tnk-transfer-protocol.pdf",
       "kind": "document",
-      "bytes": 174125
+      "bytes": 48029
     },
     {
       "url": "/protocols/claiborne/am-07-crashing-patient-protocol.pdf",
       "kind": "document",
-      "bytes": 168342
+      "bytes": 47794
     },
     {
       "url": "/protocols/claiborne/ao-01-childbirth-labor-protocol.pdf",
@@ -1596,7 +1596,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 33229
+      "bytes": 33205
     },
     {
       "url": "/manifest.webmanifest",
@@ -1680,6 +1680,6 @@
     }
   ],
   "resourceCount": 335,
-  "knownBytes": 29596700,
-  "estimatedBytes": 43949084
+  "knownBytes": 28206758,
+  "estimatedBytes": 42559142
 }
