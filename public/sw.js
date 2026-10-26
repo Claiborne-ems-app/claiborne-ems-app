@@ -345,7 +345,21 @@ if (typeof self !== "undefined" && self.addEventListener) {
       (async () => {
         const state = await readState();
         const cached = await activeCacheMatch(request, state);
-        const cacheFirst = isDocumentResource(url.pathname) || url.pathname.startsWith("/_next/");
+        const isDocument = isDocumentResource(url.pathname);
+
+        // Clinical source PDFs must reflect the controlled deployed file while online.
+        // Keep the saved copy solely as the offline fallback; otherwise a previously
+        // downloaded NC-source document can mask its approved replacement forever.
+        if (isDocument) {
+          try {
+            return await fetch(request);
+          } catch {
+            if (cached) return cached;
+            throw new Error(`Offline document unavailable: ${url.pathname}`);
+          }
+        }
+
+        const cacheFirst = url.pathname.startsWith("/_next/");
         if (cacheFirst && cached) return cached;
 
         if (request.mode === "navigate") {
