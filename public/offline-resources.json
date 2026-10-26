@@ -1,6 +1,6 @@
 {
-  "version": "2-26-1-october-2026",
-  "appVersion": "2.26.1",
+  "version": "2-27-0-october-2026",
+  "appVersion": "2.27.0",
   "protocolVersion": "October 2026",
   "resources": [
     {
@@ -1326,7 +1326,7 @@
     {
       "url": "/protocols/claiborne/pm-01-pediatric-allergic-reaction-protocol.pdf",
       "kind": "document",
-      "bytes": 187981
+      "bytes": 49708
     },
     {
       "url": "/protocols/claiborne/pm-02-pediatric-diabetic-protocol.pdf",
@@ -1596,7 +1596,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 32778
+      "bytes": 32772
     },
     {
       "url": "/manifest.webmanifest",
@@ -1680,6 +1680,6 @@
     }
   ],
   "resourceCount": 335,
-  "knownBytes": 21637217,
-  "estimatedBytes": 35989601
+  "knownBytes": 21498938,
+  "estimatedBytes": 35851322
 }

@@ -591,15 +591,15 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
   {
     "id": "PM-01",
     "code": "PM 1",
-    "title": "Pediatric Allergic Reaction Protocol",
+    "title": "Pediatric Anaphylaxis / Allergic Reaction",
     "category": "Pediatric Medical",
     "categoryCode": "PM",
     "pdfPath": "/protocols/claiborne/pm-01-pediatric-allergic-reaction-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PM-02",

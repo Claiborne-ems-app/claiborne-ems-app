@@ -82,6 +82,7 @@ test("approved Claiborne medication updates retain source doses and route safegu
   assert.equal(byId.succinylcholine.doses[0].adult, "1–2 mg/kg IV for RSI");
   assert.match(byId.vecuronium.doses[0].adult, /DAI: 80–100 mcg\/kg IV push once/);
   assert.match(byId.vecuronium.doses[0].pediatric, /maintenance: 50–100 mcg\/kg IV every 1 hr as needed/);
+  assert.equal(byId.methylprednisolone.doses[0].pediatric, "2 mg/kg IV; maximum 125 mg");
 
   assert.equal(byId["push-dose-epinephrine"].isFormularyItem, false);
   assert.equal(

@@ -573,7 +573,7 @@ export const medicationReferences: MedicationReference[] = [
     level: "Paramedic",
     indication: "Allergic reaction; asthma/COPD",
     adult: "125 mg IV/IO or IM",
-    pediatric: "Medical Control",
+    pediatric: "2 mg/kg IV; maximum 125 mg",
     cautions: [
       "Steroid effect is delayed and does not replace immediate airway or bronchodilator therapy.",
     ],
