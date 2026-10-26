@@ -226,10 +226,10 @@ export const structuredPediatricCardiacProtocols: StructuredProtocolContent[] = 
     title: "Pediatric Pulmonary Edema / CHF",
     sourcePdf: "/protocols/claiborne/pc-03-pediatric-chf-pulmonary-edema-protocol.pdf",
     pages: 1,
-    revisionDate: "2026-08-14",
+    revisionDate: "2026-10-26",
     overview: [
       "For infants and children after the newly born period with suspected acute heart failure, pulmonary edema, or cardiogenic shock. Congenital anatomy and baseline physiology can make usual findings and oxygen targets misleading.",
-      "Support airway, breathing, and perfusion; avoid routine fluids, bronchodilators, diuretics, and vasoactive medications without a specific indication and early Medical Control consultation.",
+      "Support airway, breathing, and perfusion; avoid routine fluids, bronchodilators, and vasoactive medications without a specific indication and early Medical Control consultation.",
     ],
     indications: [
       "Infant or child with known or suspected cardiac disease plus respiratory distress, crackles/rales, poor feeding, cyanosis, edema, orthopnea, shock, hepatomegaly, or signs of poor perfusion.",
@@ -239,7 +239,7 @@ export const structuredPediatricCardiacProtocols: StructuredProtocolContent[] = 
       { title: "Airway / Breathing Support", text: "Use position of comfort, oxygen and ventilation support for distress. Use gentle positive pressure and contact Medical Control early for known complex congenital heart disease.", levels: ALL_LEVELS, tone: "urgent" },
       { title: "Known Baseline Different?", text: "Do not force a normal SpO₂ in cyanotic or single-ventricle disease; use the child's documented/caregiver-reported baseline and Medical Control guidance.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Monitor + Identify Cause", text: "Continuous ECG, SpO₂, frequent BP, respiratory reassessment, and EtCO₂ when ventilatory support is used. Consider respiratory, infectious, cardiac, and anaphylactic causes.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Volume Overload / Shock?", text: "No routine fluid bolus. If hypovolemia is genuinely suspected, use small reassessed aliquots with Medical Control. Diuretic, vasodilator, analgesia, or vasoactive treatment requires Medical Control.", levels: ["AEMT", "Paramedic"], tone: "decision" },
+      { title: "Volume Overload / Shock?", text: "No routine fluid bolus. If hypovolemia is genuinely suspected, use small reassessed aliquots with Medical Control. Vasodilator, analgesia, or vasoactive treatment requires Medical Control.", levels: ["AEMT", "Paramedic"], tone: "decision" },
       { title: "Pediatric-Cardiac Destination", text: "Notify early, bring the caregiver's cardiac emergency plan/records when available, and transport without delaying for a medication trial.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
@@ -253,17 +253,15 @@ export const structuredPediatricCardiacProtocols: StructuredProtocolContent[] = 
     ],
     paramedic: [
       "Perform all prior care plus cardiac/12-lead monitoring when it does not delay care, careful ventilatory support, and Medical-Control-directed therapy based on the child's anatomy and physiology.",
-      "Use furosemide only when volume overload is established or a known diuretic plan supports it. Do not empirically diurese undifferentiated shock or poor perfusion.",
       "Use vasodilator, vasoactive, or analgesic therapy only with Medical Control; treat shock or dysrhythmia under the applicable pediatric protocol.",
     ],
     medications: [
-      { name: "Furosemide", dose: "1 mg/kg IV/IO only with Medical Control when volume overload is established or a known diuretic plan supports use" },
       { name: "Fentanyl", dose: "1 mcg/kg IV/IO; maximum single dose 50 mcg only with Medical Control for pain/anxiety after airway and perfusion are stabilized" },
       { name: "Nitroglycerin / vasoactive medication", dose: "Agent, dose, and indication determined by Medical Control" },
     ],
     treatmentSteps: [
       "Pediatric acute heart failure may reflect congenital heart disease, myocarditis/cardiomyopathy, dysrhythmia, pulmonary hypertension, infection, or another cause; tailor treatment to physiology rather than to wheeze or crackles alone.",
-      "Avoid routine albuterol, fluid, or diuretic therapy without an identified indication. Excess fluid can worsen pulmonary edema, and usual saturation targets may be inappropriate for cyanotic or single-ventricle disease.",
+      "Avoid routine albuterol or fluid therapy without an identified indication. Excess fluid can worsen pulmonary edema, and usual saturation targets may be inappropriate for cyanotic or single-ventricle disease.",
       "Use positive-pressure ventilation carefully in known complex congenital heart disease and seek early Medical Control guidance.",
       "If anaphylaxis is clinically suspected, open PM-01 Pediatric Anaphylaxis. If severe bradycardia or pulseless arrest develops, move immediately to the appropriate pediatric cardiac pathway.",
     ],
@@ -275,13 +273,14 @@ export const structuredPediatricCardiacProtocols: StructuredProtocolContent[] = 
       { label: "PC-04 Pediatric Pulseless Arrest", description: "Open immediately if the child becomes pulseless.", href: "/protocols/pc/pc-04", kind: "protocol" },
     ],
     reviewStatus: "Approved",
-    lastVerifiedDate: "2026-08-14",
+    lastVerifiedDate: "2026-10-26",
     reviewFlags: [
       "Clinical pediatric acute-heart-failure recognition, congenital-physiology safeguards, oxygenation/ventilation approach, monitoring, fluid and medication safeguards, transport planning, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
+      "Medical-director update October 26, 2026: furosemide/Lasix was removed from this pathway and controlled source PDF.",
     ],
     warnings: [
       "Do not force a normal SpO₂ in cyanotic or single-ventricle disease without Medical Control guidance.",
-      "Do not give routine albuterol, fluid, furosemide, vasodilator, or vasoactive treatment without an identified indication and Medical Control direction.",
+      "Do not give routine albuterol, fluid, vasodilator, or vasoactive treatment without an identified indication and Medical Control direction.",
       "Do not delay transport for a medication trial or repeated airway attempts.",
       "Pediatric CHF treatment varies with the underlying congenital lesion; obtain Medical Control early.",
     ],

@@ -27,6 +27,8 @@ type AirwayProtocolInput = {
   reviewStatus?: "Draft" | "Reviewed" | "Approved";
   reviewFlags?: string[];
   lastVerifiedDate?: string;
+  revisionDate?: string;
+  references?: string[];
 };
 
 function airwayProtocol(
@@ -62,19 +64,19 @@ function airwayProtocol(
     clinicalPearls: input.clinicalPearls ?? [],
     specialPopulations: [],
     actionLinks: input.actionLinks ?? [],
-    references: [
+    references: input.references ?? [
       "Claiborne County EMS approved protocol manual.",
-      "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+      "Claiborne County EMS formulary, linked protocol pathways, and agency release guidance.",
     ],
     sourcePdf: input.sourcePdf,
     sourcePages: { start: 1, end: input.pages },
-    revisionDate: "2025-09-01",
+    revisionDate: input.revisionDate ?? "October 17, 2026",
     lastVerifiedDate: input.lastVerifiedDate ?? "2026-07-29",
     reviewStatus: input.reviewStatus ?? "Reviewed",
     reviewFlags: input.reviewFlags ?? [
       "Medical-director approval is required before clinical release.",
       "Verify medication dosing, advanced airway authorization, and invasive procedures against current Claiborne County standing orders.",
-      "The original imported PDF remains available for source comparison.",
+      "The direct Claiborne source PDF is released from the approved protocol content.",
     ],
   };
 }
@@ -96,7 +98,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       { title: "Airway / Breathing Adequate?", text: "Assess rate, effort, patency, oxygenation, ventilation, and mental status.", levels: ALL_LEVELS, tone: "start" },
       { title: "Basic Maneuvers First", text: "Position • suction • OPA/NPA • two-person BVM ± PEEP.", levels: ALL_LEVELS, tone: "urgent" },
       { title: "Foreign-Body Obstruction?", text: "Use age-appropriate obstruction procedure and direct visualization when authorized.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Support Still Needed?", text: "Oxygen • BVM • NIPPV • BIAD • intubation according to need and scope.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Support Still Needed?", text: "All levels: oxygen/BVM. AEMT/Paramedic: authorized NIPPV or BIAD. Paramedic: intubation when clinically indicated.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Oxygenation / Ventilation Effective?", text: "Maintain SpO₂ at least 92%; if ineffective, move to failed-airway pathway.", levels: ALL_LEVELS, tone: "action" },
       { title: "Confirm + Reassess", text: "Waveform EtCO₂ after ETT/BIAD, secure device, monitor, and notify destination.", levels: ALL_LEVELS, tone: "transport" },
     ],
@@ -106,7 +108,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     ],
     aemt: [
       "Perform all EMT care plus authorized BIAD placement and continuous waveform capnography once available. Endotracheal intubation is not included as an AEMT procedure in this protocol.",
-      "After a failed intubation attempt, change the approach or equipment and strongly consider a BIAD.",
+      "After an unsuccessful BIAD attempt, do not repeat blind placement; continue effective BVM and request Paramedic airway support.",
     ],
     paramedic: [
       "Perform all prior care plus ETT, advanced airway selection, DAI when authorized, chest decompression when indicated, and surgical airway for cannot-oxygenate/cannot-ventilate failure.",
@@ -121,7 +123,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     reviewFlags: ["Clinical airway assessment, provider permissions, BVM/advanced-airway pathway, failed-airway threshold, confirmation, and cross-links approved by the Claiborne EMS medical director on August 14, 2026.", "Airway-difficulty acronym item removed at medical-director direction."],
     warnings: [
       "Failed airway includes inability to oxygenate at least 90% after an unsuccessful attempt, anatomy unsuitable for further attempts, or three total unsuccessful attempts.",
-      "No more than three total intubation attempts by the most experienced AEMT/Paramedic.",
+      "No more than three total intubation attempts by the most experienced Paramedic.",
       "Waveform capnography is mandatory after ETT and BIAD placement once available.",
       "Effective BVM is an acceptable definitive field airway; do not delay oxygenation or ventilation for intubation or repeated laryngoscopy.",
     ],
@@ -142,14 +144,14 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     ],
     indications: [
       "Unable to ventilate and maintain oxygen saturation at least 90% during or after one or more unsuccessful attempts.",
-      "Anatomy inconsistent with continued attempts or three unsuccessful attempts by the most experienced AEMT/Paramedic.",
+      "Anatomy inconsistent with continued attempts or three unsuccessful attempts by the most experienced Paramedic.",
     ],
     flow: [
       { title: "Declare Failed Airway", text: "Cannot oxygenate/ventilate • unsuitable anatomy • or three total failed attempts.", levels: ALL_LEVELS, tone: "start" },
       { title: "Call for Resources", text: "Bring the most experienced airway provider and rescue devices.", levels: ALL_LEVELS, tone: "urgent" },
       { title: "BVM + Adjuncts", text: "Optimize position, suction, mask seal, OPA/NPA, PEEP, and two-person technique.", levels: ALL_LEVELS, tone: "action" },
       { title: "SpO₂ ≥92%?", text: "Yes: continue effective BVM. No: place authorized rescue airway.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Rescue Airway", text: "BIAD • video laryngoscopy when appropriate • surgical airway if required.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
+      { title: "Rescue Airway", text: "AEMT/Paramedic: authorized BIAD. Paramedic: changed video-laryngoscopy rescue or surgical airway only when required.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
       { title: "Confirm + Transport", text: "Waveform EtCO₂, secure device, post-airway care, and early notification.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
@@ -157,8 +159,8 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       "Continue BVM when it maintains oxygen saturation at least 92% and adequate ventilation.",
     ],
     aemt: [
-      "Perform all EMT care plus authorized BIAD and video-laryngoscopy rescue techniques.",
-      "Confirm BIAD/ETT with waveform capnography and secure during all movement.",
+      "Perform all EMT care plus authorized BIAD placement; do not perform ETT placement or video laryngoscopy under this protocol.",
+      "Confirm a BIAD with waveform capnography and secure it during all movement.",
     ],
     paramedic: [
       "Perform all prior care and proceed to surgical cricothyrotomy only when less invasive methods cannot oxygenate or ventilate.",
@@ -222,7 +224,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       "Document indication, authorization, staffing, preoxygenation, medications and doses, oxygenation/hemodynamics before and after medication, attempt count, airway confirmation, ventilatory support, sedation/analgesia, and required quality-improvement form.",
     ],
     medications: [
-      { name: "Ketamine", dose: "1–2 mg/kg IV/IO", notes: ["Select one induction agent. Ketamine is generally preferred when hypotension or bronchospasm is present.", "If vascular access is unavailable: 4 mg/kg IM, maximum 400 mg; establish IV/IO access and proceed with airway management.", "Pediatric use requires direct online order from the Medical Director or Assistant Medical Director under the imported source."] },
+      { name: "Ketamine", dose: "1–2 mg/kg IV/IO", notes: ["Select one induction agent. Ketamine is generally preferred when hypotension or bronchospasm is present.", "If vascular access is unavailable: 4 mg/kg IM, maximum 400 mg; establish IV/IO access and proceed with airway management.", "Pediatric use requires a direct online order from the Claiborne EMS Medical Director or Assistant Medical Director."] },
       { name: "Etomidate", dose: "0.3 mg/kg IV/IO", notes: ["Select one induction agent when hemodynamic response is uncertain."] },
       { name: "Succinylcholine", dose: "1–2 mg/kg IV for RSI" },
       { name: "Rocuronium", dose: "1 mg/kg IV/IO when succinylcholine is contraindicated or a longer duration is needed", notes: ["Do not routinely repeat before post-intubation analgesia and sedation are established."] },
@@ -240,7 +242,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     lastVerifiedDate: "2026-08-14",
     reviewFlags: [
       "Clinical DAI indications, staffing and preparation requirements, medications, rescue threshold, confirmation, post-airway care, documentation, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
-      "Pediatric DAI remains restricted to the direct online Medical Director or Assistant Medical Director order specified in the imported source.",
+      "Pediatric DAI remains restricted to a direct online Claiborne EMS Medical Director or Assistant Medical Director order.",
     ],
     warnings: [
       "This procedure removes protective airway reflexes and spontaneous breathing; do not begin without complete rescue capability.",
@@ -273,7 +275,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       { title: "Respiratory Distress", text: "Assess work of breathing, speech, air movement, SpO₂, lung sounds, mental status, and fatigue.", levels: ALL_LEVELS, tone: "start" },
       { title: "Wheeze, Stridor, or Another Cause?", text: "Treat anaphylaxis immediately when suspected; assess for CHF, ACS, PE, pneumonia, pneumothorax, obstruction, or foreign body.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Oxygen + Bronchodilator", text: "Position upright • target oxygen appropriately • albuterol ± ipratropium.", levels: ALL_LEVELS, tone: "action" },
-      { title: "NIPPV Appropriate?", text: "Use early if cooperative and stable; do not use with emesis, inability to protect airway, or shock.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "NIPPV Appropriate?", text: "AEMT/Paramedic: use early if cooperative and stable; do not use with emesis, inability to protect airway, or shock.", levels: ["AEMT", "Paramedic"], tone: "decision" },
       { title: "Severe / Not Improving?", text: "Epinephrine • steroid • magnesium • BVM/advanced-airway preparation.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
       { title: "Reassess + Transport", text: "Continuous SpO₂; EtCO₂ when indicated; reassess after each treatment and notify early.", levels: ALL_LEVELS, tone: "transport" },
     ],
@@ -324,7 +326,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       "A silent chest with respiratory distress is a pre-arrest finding.",
       "Do not persist with NIPPV in a patient with hypotension, worsening mental status, emesis, inability to protect the airway, intolerance, or deteriorating ventilation.",
       "Do not delay assisted ventilation and airway preparation for repeated nebulizer treatments in a tiring patient.",
-      "EMT medication use must follow current Tennessee and Claiborne authorization.",
+      "Medication administration must follow current Claiborne authorization and standing orders.",
     ],
     clinicalPearls: [
       "A patient who can no longer speak, is tiring, or has decreasing air movement may be worsening even when wheezing is quieter.",
@@ -363,7 +365,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     ],
     paramedic: [
       "Perform all prior care plus ETT when clinically necessary and a skilled attempt is likely to succeed, chest decompression when indicated, and age-appropriate cricothyrotomy as an absolute last resort.",
-      "Pediatric DAI requires the direct online Medical Director or Assistant Medical Director order specified in the imported source.",
+      "Pediatric DAI requires a direct online Claiborne EMS Medical Director or Assistant Medical Director order.",
       "Secure the tube carefully and manually stabilize it during every movement.",
     ],
     treatmentSteps: [
@@ -392,7 +394,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     warnings: [
       "Effective BVM ventilation is often safer than a difficult pediatric intubation.",
       "No more than three total intubation attempts; every further attempt must change the provider, approach, positioning, or equipment.",
-      "Pediatric ketamine/DAI requires direct online order from the Medical Director or Assistant Medical Director under the imported source.",
+      "Pediatric ketamine/DAI requires a direct online Claiborne EMS Medical Director or Assistant Medical Director order.",
       "Pediatric cricothyrotomy is a rare, age-appropriate, specifically authorized last-resort procedure for persistent cannot-oxygenate/cannot-ventilate failure.",
     ],
     clinicalPearls: [
@@ -757,20 +759,20 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     sourcePdf: "/protocols/claiborne/ar-11-mechanical-ventilation-adult.pdf",
     pages: 3,
     overview: [
-      "Use lung-protective volume assist-control ventilation based on predicted body weight and height, not actual body weight.",
-      "If the ventilator alarms and the cause is uncertain, disconnect immediately, manually ventilate, stabilize, and then restart setup.",
+      "For a new controlled ventilator setup, use lung-protective volume assist-control ventilation based on Ideal Body Weight (IBW) from height and sex, not actual scale weight.",
+      "Maintain stable, functioning established home or transfer settings unless the patient's clinical condition requires change. If an alarm occurs and the cause is uncertain, disconnect immediately and manually ventilate while evaluating the cause.",
     ],
     indications: [
       "Adult or protocol-authorized patient with advanced airway requiring mechanical ventilation.",
       "Interfacility or home-ventilator patient whose current settings are known and functioning.",
     ],
     flow: [
-      { title: "Advanced Airway Confirmed", text: "Waveform EtCO₂ • tube depth • bilateral exam • post-airway sedation.", levels: ["Paramedic"], tone: "start" },
-      { title: "Home / Transfer Ventilator?", text: "Use functioning established settings and titrate to clinical response.", levels: ["Paramedic"], tone: "decision" },
-      { title: "COPD / Asthma?", text: "Use lower rate and longer expiratory time to reduce air trapping and auto-PEEP.", levels: ["Paramedic"], tone: "decision" },
-      { title: "Set Volume Assist-Control", text: "Tidal volume by predicted body weight; PEEP 5; FiO₂ 100% initially.", levels: ["Paramedic"], tone: "action" },
-      { title: "Check Pressures + Response", text: "Plateau below 30 • SpO₂ 92–98% • EtCO₂ trend • synchrony • full exhalation.", levels: ["Paramedic"], tone: "action" },
-      { title: "Alarm / Deterioration?", text: "Disconnect, BVM, use DOPES/DOTT, correct cause, and notify destination.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Advanced Airway Confirmed", text: "Continuous waveform EtCO2 - tube depth - bilateral exam - securement - analgesia and sedation through AR-08.", levels: ["Paramedic"], tone: "start" },
+      { title: "Functioning Home / Transfer Ventilator?", text: "Maintain established settings when safe; verify baseline, reserve oxygen/power, BVM, suction, and caregiver plan.", levels: ["Paramedic"], tone: "decision" },
+      { title: "New Controlled Setup", text: "Volume assist-control; tidal volume 6-8 mL/kg IBW. Default to 6 mL/kg for ARDS/restrictive physiology or elevated pressures.", levels: ["Paramedic"], tone: "action" },
+      { title: "Choose Rate by Physiology", text: "Usual adult: 10-12/min. COPD/asthma: 8-10/min, high inspiratory flow, and prolonged exhalation.", levels: ["Paramedic"], tone: "decision" },
+      { title: "Oxygenation + Pressure Check", text: "PEEP 5 - FiO2 100% only until reliable oximetry - SpO2 goal 92-98% - assess synchrony, exhalation, and plateau pressure.", levels: ["Paramedic"], tone: "action" },
+      { title: "Alarm / Deterioration?", text: "If cause is not immediately clear: disconnect, BVM, evaluate DOPES/DOTT, correct cause, and notify destination.", levels: ALL_LEVELS, tone: "urgent" },
     ],
     emt: [
       "Continuously monitor the airway, SpO₂, patient color, chest movement, and ventilator connection; manually ventilate immediately if failure occurs.",
@@ -780,23 +782,44 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       "Perform all EMT care plus capnography, authorized airway care, suctioning, and assistance with ventilator troubleshooting.",
     ],
     paramedic: [
-      "Use volume assist-control, calculate tidal volume by predicted body weight/height, and titrate FiO₂/PEEP, rate, and flow to the patient's physiology.",
-      "For COPD/asthma, use approximately 12/min and I:E 1:4–1:5; for other adults the imported initial rate is 18/min.",
-      "Reduce tidal volume in 1 mL/kg steps for plateau pressure above 30 cmH₂O, but not below 4 mL/kg.",
+      "For a new controlled setup, use volume assist-control and calculate tidal volume from Ideal Body Weight (IBW) using height and sex; do not use actual scale weight.",
+      "Set tidal volume at 6-8 mL/kg IBW. Start at 6 mL/kg for ARDS, restrictive physiology, or elevated pressures, and only increase when clinically appropriate while maintaining plateau pressure below 30 cm H2O.",
+      "For usual adult physiology, begin 10-12/min and reassess ventilation from waveform EtCO2 trend, pH/PaCO2 information when available, chest excursion, synchrony, and clinical response. For COPD/asthma, begin 8-10/min with high inspiratory flow and I:E about 1:4-1:5; ensure expiratory flow returns to baseline.",
+      "Measure plateau pressure only during an inspiratory hold in a passive patient. For plateau pressure above 30 cm H2O, reduce tidal volume in 1 mL/kg IBW steps to no lower than 4 mL/kg IBW while correcting the underlying cause and obtaining additional direction as needed.",
     ],
     treatmentSteps: [
-      "Imported initial adult settings: volume assist-control, FiO₂ 100%, PEEP 5 cmH₂O, tidal volume 8 mL/kg predicted body weight, flow 60 L/min.",
-      "After approximately 10 minutes, reduce FiO₂ toward 50% and titrate PEEP/FiO₂ to SpO₂ 92–98% when clinically appropriate.",
-      "For high PIP with high plateau pressure, suspect compliance problem; high PIP with normal plateau suggests airway/circuit resistance or auto-PEEP.",
+      "Initial new controlled setup: volume assist-control, tidal volume 6-8 mL/kg IBW, PEEP 5 cm H2O, and FiO2 100% only until a reliable oxygen-saturation measurement is available. Then use the lowest effective FiO2 and small, reassessed PEEP changes to maintain SpO2 92-98% unless a condition-specific target applies.",
+      "After return of spontaneous circulation, use the post-resuscitation target SpO2 90-98% and avoid using EtCO2 as a direct substitute for PaCO2. When blood-gas data are available, target PaCO2 35-45 mm Hg unless directed otherwise.",
+      "In suspected brain injury, avoid routine hyperventilation and target normal ventilation unless signs of impending herniation or Medical Control direction require a different plan. In severe metabolic acidosis, do not abruptly remove compensatory minute ventilation; reassess closely and seek Medical Control or receiving-facility direction.",
+      "For high PIP with high plateau pressure, suspect reduced compliance (lung, chest wall, or abdominal); for high PIP with normal plateau pressure, suspect airway/circuit resistance or auto-PEEP.",
     ],
     warnings: [
-      "Tidal volume is based on predicted/ideal body weight from height, never actual body weight.",
-      "Do not persist with an alarming ventilator when the cause is unclear; disconnect and manually ventilate.",
-      "Avoid forcing EtCO₂ to 35–45 in severe obstructive lung disease when this worsens air trapping; suspected head injury remains a specific target population.",
+      "Tidal volume is based on Ideal Body Weight (IBW) from height and sex, never actual body weight.",
+      "Do not persist with an alarming ventilator when the cause is unclear; disconnect and manually ventilate. In obstructive lung disease with suspected auto-PEEP, allow full exhalation and ventilate slowly after disconnecting.",
+      "Do not force EtCO2 to a numeric target in severe obstructive lung disease when it worsens air trapping. EtCO2 may not equal PaCO2, especially after ROSC or poor perfusion.",
+      "Do not use this new-setup pathway to overwrite stable home or transfer settings without a clinical reason.",
     ],
     clinicalPearls: [
-      "DOPES: displacement, obstruction, pneumothorax/pulmonary problem, equipment failure, stacked breaths.",
-      "DOTT response: disconnect/decompress, oxygen/BVM, tube check, then tweak settings.",
+      "DOPES: displacement, obstruction, pneumothorax/pulmonary problem, equipment failure, stacked breaths/auto-PEEP.",
+      "DOTT response: disconnect or decompress when indicated, oxygen/BVM, tube check, then adjust settings only after the cause is addressed.",
+      "Document height, sex used for IBW, all initial and changed settings, oxygen/EtCO2 trends, pressure values, waveform findings, sedation/analgesia, alarms, troubleshooting, and patient response.",
+    ],
+    actionLinks: [
+      { label: "AR-08 Post-Intubation / BIAD Management", description: "Open for analgesia, sedation, continuous airway confirmation, and post-airway reassessment.", href: "/protocols/ar/ar-08", kind: "protocol" },
+      { label: "AR-09 Ventilator Emergencies", description: "Open for home-ventilator failure, equipment troubleshooting, transport preparation, and DOPES response.", href: "/protocols/ar/ar-09", kind: "protocol" },
+      { label: "AC-10 Post-Resuscitation Care", description: "Open after ROSC for oxygenation, ventilation, blood-pressure, and destination priorities.", href: "/protocols/ac/ac-10", kind: "protocol" },
+    ],
+    references: [
+      "Claiborne County EMS medical-director approved adult mechanical-ventilation pathway, October 17, 2026.",
+      "American Thoracic Society clinical practice guideline for adult ARDS ventilation.",
+      "American Heart Association post-cardiac-arrest care guidance.",
+    ],
+    revisionDate: "October 2026",
+    reviewStatus: "Approved",
+    lastVerifiedDate: "2026-10-17",
+    reviewFlags: [
+      "Clinical content, IBW labeling, initial settings, obstructive-lung branch, pressure limits, post-ROSC safeguards, troubleshooting, linked pathways, and direct source-PDF replacement approved by the Claiborne EMS medical director on October 17, 2026.",
+      "The approved source PDF matches the controlled Claiborne EMS app content; the application remains a beta field reference until full-system release and implementation approval.",
     ],
   }),
 ];

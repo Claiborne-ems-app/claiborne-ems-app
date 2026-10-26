@@ -40,7 +40,7 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
       },
       {
         title: "Resuscitate En Route",
-        text: "IV/IO - warming - analgesia/antiemetic - shock care - TXA for life-threatening hemorrhage",
+        text: "IV/IO - warming - adult LR 1 L bolus with reassessment - analgesia/antiemetic - Paramedic TXA for life-threatening hemorrhage",
         levels: ["AEMT", "Paramedic"],
         tone: "action",
       },
@@ -69,16 +69,16 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
           {
             level: "AEMT",
             actions: [
-              "Perform all EMT actions plus IV/IO access, warmed crystalloid only as authorized for traumatic shock, and age-appropriate analgesia or antiemetic care within current standing orders.",
+              "Perform all EMT actions plus IV/IO access. For an adult with traumatic shock, give lactated Ringer's 1 L IV/IO, then reassess perfusion, respiratory status, and response. Use age-appropriate analgesia or antiemetic care within current standing orders.",
               "Do not delay transport for vascular access. Trend mental status, pulse quality, skin findings, blood pressure, pulse pressure, and response to resuscitation.",
-              "Prepare for rapid deterioration and use the current hemorrhagic-shock pathway; avoid unnecessary large-volume crystalloid.",
+              "Do not delay transport for vascular access or fluid. Prepare for rapid deterioration, avoid unnecessary additional large-volume crystalloid, and use the current hemorrhagic-shock pathway.",
             ],
           },
           {
             level: "Paramedic",
             actions: [
               "Perform all prior actions; lead advanced airway/ventilation, cardiac and EtCO2 monitoring, shock resuscitation, Medical Control, trauma-center destination, and air-medical decisions.",
-              "Administer TXA for life-threatening hemorrhage within provider scope and standing orders. Use prehospital blood products, vasopressors, or other advanced hemorrhage interventions only when authorized with the required training, monitoring, and destination coordination.",
+              "For life-threatening abdominal or pelvic hemorrhage, administer TXA under the approved Claiborne TXA pathway; do not delay transport or definitive hemorrhage control. Use prehospital blood products, vasopressors, or other advanced hemorrhage interventions only when authorized with the required training, monitoring, and destination coordination.",
               "For a pregnant patient beyond approximately 20 weeks, relieve aortocaval compression with manual left uterine displacement or left lateral tilt when compatible with spinal and trauma care.",
             ],
           },
@@ -121,7 +121,7 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
       "Evisceration: do not replace organs into the abdomen. Cover loosely with sterile saline-moistened dressings and an occlusive layer when available, protect from heat loss, and avoid direct pressure.",
       "Impaled object: do not remove. Stabilize in place with bulky dressings without pressure on exposed organs. Modify or remove only when essential for an immediate lifesaving intervention or safe transport and under rescue/Medical Control coordination.",
       "Control external or junctional hemorrhage with direct pressure, wound packing, hemostatic gauze, or tourniquet when anatomically appropriate. Do not blindly pack material into the abdominal cavity.",
-      "Establish IV/IO access when indicated without delaying transport. Administer TXA for life-threatening hemorrhage within provider scope and standing orders; use warmed crystalloid, blood products, and other shock interventions as indicated.",
+      "Establish IV/IO access when indicated without delaying transport. For an adult with traumatic shock, give lactated Ringer's 1 L IV/IO, then reassess perfusion, respiratory status, and response. Use the approved Claiborne TXA pathway for life-threatening abdominal or pelvic hemorrhage; do not delay transport or definitive hemorrhage control.",
       "Provide authorized analgesia and antiemetic treatment without masking deterioration or delaying transport. Keep the patient NPO and reassess frequently.",
       "Pregnancy beyond approximately 20 weeks: prioritize maternal resuscitation and relieve aortocaval compression with left uterine displacement or left lateral tilt when compatible with trauma care. Notify an appropriate trauma/obstetric-capable destination early.",
       "Transport to the most appropriate trauma center under the current Tennessee trauma destination criteria and Claiborne plan. Use the nearest appropriate stabilization facility when direct trauma-center ground transport is unsafe or would delay essential resuscitation. Consider air medical only when it is expected to reduce time to definitive care and does not delay ground movement.",
@@ -143,15 +143,15 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
         ],
       },
       {
-        name: "Warmed crystalloid",
-        dose: "Use only the current traumatic-shock pathway and provider-level standing orders.",
+        name: "Lactated Ringer's",
+        dose: "Adult traumatic shock: 1 L IV/IO, then reassess perfusion, respiratory status, and response.",
         notes: [
           "Avoid unnecessary large-volume crystalloid; definitive hemorrhage control and blood-based resuscitation, when locally available, take priority.",
         ],
       },
       {
         name: "Tranexamic acid (TXA)",
-        dose: "For life-threatening hemorrhage within provider scope and standing orders.",
+        dose: "Paramedic: use the approved Claiborne TXA pathway for life-threatening abdominal or pelvic hemorrhage.",
         notes: [
           "Do not delay transport or definitive hemorrhage control for TXA administration.",
         ],
@@ -229,15 +229,14 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
     ],
     sourcePdf: "/protocols/claiborne/tb-12-abdominal-pelvic-trauma-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 30, 2026",
-    reviewStatus: "Reviewed",
+    revisionDate: "October 17, 2026",
+    lastVerifiedDate: "October 17, 2026",
+    reviewStatus: "Approved",
     reviewFlags: [
-      "Medical-director approval is required before this protocol is released for clinical use.",
-      "Confirm the agency's commercial pelvic binder model, adult/pediatric sizing, placement training, evisceration supplies, hemorrhagic-shock pathway, and trauma destination plan.",
-      "Confirm blood-product availability, crystalloid endpoints, analgesic/antiemetic choices, and air-medical criteria during periodic operational review.",
-      "Trauma-system, emergency medicine, surgery, obstetric, pediatric, pharmacy, and education review are recommended before final approval.",
-      "The beta application remains a reference tool; the current approved Claiborne County protocol manual controls patient care.",
+      "Approved by the Claiborne EMS medical director on October 17, 2026.",
+      "Adult traumatic-shock fluid care uses lactated Ringer's 1 L IV/IO followed by reassessment; avoid unnecessary additional large-volume crystalloid.",
+      "TXA is a Paramedic intervention for life-threatening abdominal or pelvic hemorrhage under the approved Claiborne TXA pathway.",
+      "Maintain current pelvic-binder model/sizing and placement training, evisceration supplies, trauma-destination plan, and access to current analgesic/antiemetic and TXA pathways.",
     ],
   },
 ];

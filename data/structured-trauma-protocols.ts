@@ -21,6 +21,11 @@ type TraumaProtocolInput = {
   warnings?: string[];
   clinicalPearls?: string[];
   actionLinks?: StructuredProtocolContent["actionLinks"];
+  references?: string[];
+  revisionDate?: string;
+  lastVerifiedDate?: string;
+  reviewStatus?: StructuredProtocolContent["reviewStatus"];
+  reviewFlags?: string[];
 };
 
 function providerActions(input: TraumaProtocolInput): ProtocolCareModule[] {
@@ -60,16 +65,16 @@ function traumaProtocol(
     clinicalPearls: input.clinicalPearls ?? [],
     specialPopulations: [],
     actionLinks: input.actionLinks,
-    references: [
+    references: input.references ?? [
       "Claiborne County EMS approved protocol manual.",
       "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
     ],
     sourcePdf: input.sourcePdf,
     sourcePages: { start: 1, end: input.id === "tb-04" || input.id === "tb-08" ? 1 : 2 },
-    revisionDate: "2025-09-01",
-    lastVerifiedDate: "2026-07-29",
-    reviewStatus: "Reviewed",
-    reviewFlags: [
+    revisionDate: input.revisionDate ?? "2025-09-01",
+    lastVerifiedDate: input.lastVerifiedDate ?? "2026-07-29",
+    reviewStatus: input.reviewStatus ?? "Reviewed",
+    reviewFlags: input.reviewFlags ?? [
       "Medical-director approval is required before clinical release.",
       "Verify medication dosing and invasive procedures against current Claiborne County standing orders.",
       "The original imported PDF remains available for source comparison.",
@@ -429,8 +434,8 @@ export const structuredTraumaProtocols: StructuredProtocolContent[] = [
     ],
     flow: [
       { title: "Arrest With Trauma", text: "Confirm apnea, pulselessness, rhythm when appropriate, DNR/MOST, and obvious-death criteria. If major trauma does not clearly explain the arrest, use the adult medical cardiac-arrest pathway.", levels: ALL_LEVELS, tone: "start" },
-      { title: "Withholding Criteria?", text: "Apply the approved Claiborne withholding and termination criteria.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Correct Reversible Causes", text: "Catastrophic hemorrhage • oxygenation/ventilation • chest decompression only within provider scope and standing orders • pelvic stabilization only when indicated • hypothermia prevention.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Withhold Resuscitation?", text: "Withhold only for a valid DNR/MOST or unmistakable death: decomposition, rigor mortis, dependent lividity, decapitation, hemicorporectomy, or injury incompatible with life. Do not use downtime alone as a withholding rule.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Correct Reversible Causes", text: "Catastrophic hemorrhage • oxygenation/ventilation • Paramedic chest decompression when indicated • pelvic stabilization only when indicated • hypothermia prevention.", levels: ALL_LEVELS, tone: "urgent" },
       { title: "CPR / Defibrillation", text: "Perform high-quality CPR and defibrillation for a shockable rhythm while immediate reversible traumatic causes are addressed.", levels: ALL_LEVELS, tone: "action" },
       { title: "ROSC or Transport Candidate?", text: "Witnessed arrest, organized rhythm, signs of life, feasible definitive-care transport, or an immediately reversible cause.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Appropriate Destination", text: "Notify early and follow Medical Control and deceased-person policy. Use the nearest appropriate stabilization facility when direct trauma-center transport is unsafe or would delay essential resuscitation.", levels: ALL_LEVELS, tone: "transport" },
@@ -440,21 +445,34 @@ export const structuredTraumaProtocols: StructuredProtocolContent[] = [
       "Begin rapid transport when resuscitation criteria are met; do not delay for procedures that can occur en route.",
     ],
     aemt: [
-      "Perform all EMT care plus IV/IO access during transport and bilateral needle chest decompression only when specifically authorized for traumatic pulseless arrest.",
+      "Perform all EMT care plus IV/IO access during transport. Do not perform chest decompression; assist the Paramedic with the procedure when requested.",
       "Use authorized airway adjuncts and reassess for signs of life and ROSC.",
     ],
     paramedic: [
-      "Perform all prior care plus advanced airway management, rhythm treatment, bilateral chest decompression within standing orders, and protocol-directed resuscitation.",
-      "Apply termination criteria and contact Medical Control when required by current Claiborne policy.",
+      "Perform all prior care plus advanced airway management, rhythm treatment, and chest decompression when tension physiology is suspected within standing orders. Consider bilateral decompression when the mechanism, examination, or physiology supports it.",
+      "Continue resuscitation or terminate only under current Claiborne policy and Medical Control requirements; do not use an app-only downtime cutoff.",
     ],
     warnings: [
       "Do not apply traumatic-arrest withholding criteria to lightning strike, drowning, or hypothermic arrest; initiate resuscitation.",
       "Do not hyperventilate. Avoid delaying transport for endotracheal intubation or vascular access.",
-      "Needle chest decompression at the AEMT level is limited to traumatic pulseless arrest under the imported source and must match current Tennessee authorization.",
+      "Chest decompression is Paramedic-only under the current Tennessee statewide protocol guidelines. Do not extend this procedure to an AEMT without formal state authorization.",
     ],
     clinicalPearls: [
       "Treat the trauma triad of death by controlling hemorrhage, limiting scene delay, and aggressively preventing hypothermia.",
-      "Use the approved Claiborne withholding and termination criteria rather than app-only downtime rules.",
+      "Withholding is limited to a valid directive or unmistakable death; an initiated resuscitation requires Claiborne policy and Medical Control for termination decisions.",
+    ],
+    references: [
+      "Tennessee Emergency Medical Services ALS/BLS Blended Protocol Guidelines 2024-2025 - Adult Traumatic Cardiac Arrest and Chest Decompression procedure.",
+      "NAEMSP, ACS Committee on Trauma, and ACEP. Prehospital Management of Adults with Traumatic Out-of-Hospital Circulatory Arrest, March 2025.",
+      "Claiborne County EMS medical-director approval, October 17, 2026.",
+    ],
+    revisionDate: "October 2026",
+    lastVerifiedDate: "October 17, 2026",
+    reviewStatus: "Approved",
+    reviewFlags: [
+      "Medical-director-approved update: traumatic-arrest withholding is limited to a valid directive or unmistakable death; downtime alone is not a Claiborne withholding rule.",
+      "Medical-director-approved scope safeguard: chest decompression is Paramedic-only under the current Tennessee statewide protocol guidelines.",
+      "The approved Claiborne direct PDF replaces the imported North Carolina decision tree; the beta application remains subject to full-system release governance.",
     ],
   }),
 ];

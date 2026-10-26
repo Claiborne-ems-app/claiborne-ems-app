@@ -28,6 +28,24 @@ Create a production build with:
 npm run build
 ```
 
+## Release gates
+
+Every push and pull request to `main` runs the locked install, automated tests,
+linting, and production build in GitHub Actions. Before changing the app from
+beta to a clinical production release, run:
+
+```bash
+npm run release:check
+```
+
+The command exits non-zero until every protocol in the review inventory has an
+explicit **Approved** state. It is intentionally separate from the technical
+CI checks: a green build confirms the package is technically deployable, not
+that the full clinical-governance review is complete. Finish the physical
+iPhone/iPad offline workflow in
+[`docs/offline-manual-test-checklist.md`](docs/offline-manual-test-checklist.md)
+after the clinical gate is clear.
+
 The app preserves favorites, recently viewed protocols, PDF viewing
 preferences, responsive bottom navigation, and an opt-in downloadable offline
 package.

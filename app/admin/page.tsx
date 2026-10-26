@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CalendarClock, CheckCircle2, CircleDashed, ClipboardList, FileStack, MoveRight } from "lucide-react";
 import ReviewStatusBadge from "../../components/admin/ReviewStatusBadge";
 import { adminDashboardStats, adminProtocols } from "../../data/admin-review";
+import { calculateProductionReleaseReadiness } from "../../lib/admin/release-readiness";
 
 const statCards = [
   { label: "Total Protocols", value: adminDashboardStats.totalProtocols, icon: FileStack, accent: "text-violet-300 bg-violet-400/10" },
@@ -10,6 +11,8 @@ const statCards = [
   { label: "Not Started", value: adminDashboardStats.notStarted, icon: CircleDashed, accent: "text-slate-300 bg-slate-700/60" },
   { label: "Last Import Date", value: adminDashboardStats.lastImportDate, icon: CalendarClock, accent: "text-amber-300 bg-amber-400/10" },
 ] as const;
+
+const releaseReadiness = calculateProductionReleaseReadiness(adminProtocols);
 
 export default function AdminDashboardPage() {
   return (
@@ -28,6 +31,32 @@ export default function AdminDashboardPage() {
             <p className="mt-1 text-2xl font-bold text-white">{value}</p>
           </article>
         ))}
+      </section>
+
+      <section
+        aria-label="Clinical release gate"
+        className={`mt-6 rounded-2xl border p-5 ${
+          releaseReadiness.clinicallyReady
+            ? "border-emerald-500/30 bg-emerald-500/10"
+            : "border-amber-500/30 bg-amber-500/10"
+        }`}
+      >
+        <p className={`text-sm font-bold uppercase tracking-[0.16em] ${releaseReadiness.clinicallyReady ? "text-emerald-300" : "text-amber-300"}`}>
+          {releaseReadiness.clinicallyReady ? "Clinical release eligible" : "Clinical release gate remains closed"}
+        </p>
+        <h2 className="mt-2 text-xl font-bold text-white">
+          {releaseReadiness.clinicallyReady
+            ? "Every protocol has an explicit approved review state."
+            : `${releaseReadiness.pendingProtocols} protocol${releaseReadiness.pendingProtocols === 1 ? "" : "s"} still require final approval.`}
+        </h2>
+        <p className="mt-2 max-w-4xl text-sm leading-6 text-slate-300">
+          Production clinical release requires an Approved state for every protocol and completion of the physical-device/offline checklist. Until then, the application remains a beta field reference.
+        </p>
+        {!releaseReadiness.clinicallyReady ? (
+          <p className="mt-3 text-sm font-medium text-amber-100">
+            Remaining: {releaseReadiness.reviewed} reviewed, {releaseReadiness.inReview} in review, and {releaseReadiness.notStarted} not started.
+          </p>
+        ) : null}
       </section>
 
       <section className="mt-10">

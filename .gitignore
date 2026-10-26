@@ -11,3 +11,4 @@ yarn-error.log*
 .env.production.local
 .vercel/
 *.tsbuildinfo
+tmp/

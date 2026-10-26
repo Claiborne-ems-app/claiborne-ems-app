@@ -340,132 +340,132 @@
   {
     "id": "AR-01",
     "code": "AR 1",
-    "title": "Adult Airway Protocol",
+    "title": "Adult Airway",
     "category": "Airway & Respiratory",
     "categoryCode": "AR",
     "pdfPath": "/protocols/claiborne/ar-01-adult-airway-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AR-02",
     "code": "AR 2",
-    "title": "Adult Failed Airway Protocol",
+    "title": "Adult Failed Airway",
     "category": "Airway & Respiratory",
     "categoryCode": "AR",
     "pdfPath": "/protocols/claiborne/ar-02-adult-failed-airway-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AR-03",
     "code": "AR 3",
-    "title": "Airway Drug Assisted Intubation Protocol",
+    "title": "Drug-Assisted Airway",
     "category": "Airway & Respiratory",
     "categoryCode": "AR",
     "pdfPath": "/protocols/claiborne/ar-03-airway-drug-assisted-intubation-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AR-04",
     "code": "AR 4",
-    "title": "COPD Asthma Protocol",
+    "title": "Adult COPD / Asthma",
     "category": "Airway & Respiratory",
     "categoryCode": "AR",
     "pdfPath": "/protocols/claiborne/ar-04-copd-asthma-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AR-05",
     "code": "AR 5",
-    "title": "Pediatric Airway Protocol",
+    "title": "Pediatric Airway",
     "category": "Airway & Respiratory",
     "categoryCode": "AR",
     "pdfPath": "/protocols/claiborne/ar-05-pediatric-airway-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AR-06",
     "code": "AR 6",
-    "title": "Pediatric Failed Airway Protocol",
+    "title": "Pediatric Failed Airway",
     "category": "Airway & Respiratory",
     "categoryCode": "AR",
     "pdfPath": "/protocols/claiborne/ar-06-pediatric-failed-airway-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AR-07",
     "code": "AR 7",
-    "title": "Pediatric Respiratory Distress Protocol",
+    "title": "Pediatric Respiratory Distress",
     "category": "Airway & Respiratory",
     "categoryCode": "AR",
     "pdfPath": "/protocols/claiborne/ar-07-pediatric-respiratory-distress-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AR-08",
     "code": "AR 8",
-    "title": "Post Intubation BIAD Management Protocol",
+    "title": "Post-Intubation / BIAD Management",
     "category": "Airway & Respiratory",
     "categoryCode": "AR",
     "pdfPath": "/protocols/claiborne/ar-08-post-intubation-biad-management-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AR-09",
     "code": "AR 9",
-    "title": "Ventilator Emergencies Protocol",
+    "title": "Ventilator Emergencies",
     "category": "Airway & Respiratory",
     "categoryCode": "AR",
     "pdfPath": "/protocols/claiborne/ar-09-ventilator-emergencies-protocol.pdf",
-    "pages": 1,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "pages": 2,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AR-10",
     "code": "AR 10",
-    "title": "Tracheostomy Tube Emergencies Protocol",
+    "title": "Tracheostomy Tube Emergencies",
     "category": "Airway & Respiratory",
     "categoryCode": "AR",
     "pdfPath": "/protocols/claiborne/ar-10-tracheostomy-tube-emergencies-protocol.pdf",
-    "pages": 1,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "pages": 2,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "AR-11",
@@ -475,114 +475,114 @@
     "categoryCode": "AR",
     "pdfPath": "/protocols/claiborne/ar-11-mechanical-ventilation-adult.pdf",
     "pages": 3,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PC-01",
     "code": "PC 1",
-    "title": "Pediatric Asytole PEA Protocol",
+    "title": "Pediatric Asystole / PEA",
     "category": "Pediatric Cardiac",
     "categoryCode": "PC",
     "pdfPath": "/protocols/claiborne/pc-01-pediatric-asytole-pea-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PC-02",
     "code": "PC 2",
-    "title": "Pediatric Bradycardia Poor Perfusion Protocol",
+    "title": "Pediatric Bradycardia With Poor Perfusion",
     "category": "Pediatric Cardiac",
     "categoryCode": "PC",
     "pdfPath": "/protocols/claiborne/pc-02-pediatric-bradycardia-poor-perfusion-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PC-03",
     "code": "PC 3",
-    "title": "Pediatric CHF Pulmonary Edema Protocol",
+    "title": "Pediatric Pulmonary Edema / CHF",
     "category": "Pediatric Cardiac",
     "categoryCode": "PC",
     "pdfPath": "/protocols/claiborne/pc-03-pediatric-chf-pulmonary-edema-protocol.pdf",
-    "pages": 1,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "pages": 2,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PC-04",
     "code": "PC 4",
-    "title": "Pediatric Pulseless Arrest Protocol",
+    "title": "Pediatric Pulseless Arrest",
     "category": "Pediatric Cardiac",
     "categoryCode": "PC",
     "pdfPath": "/protocols/claiborne/pc-04-pediatric-pulseless-arrest-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PC-05",
     "code": "PC 5",
-    "title": "PediatricTachycardia Narrow Complex",
+    "title": "Pediatric Narrow-Complex Tachycardia",
     "category": "Pediatric Cardiac",
     "categoryCode": "PC",
     "pdfPath": "/protocols/claiborne/pc-05-pediatrictachycardia-narrow-complex.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PC-06",
     "code": "PC 6",
-    "title": "Pediatric Tachycardia Wide Complex Protocol",
+    "title": "Pediatric Wide-Complex Tachycardia",
     "category": "Pediatric Cardiac",
     "categoryCode": "PC",
     "pdfPath": "/protocols/claiborne/pc-06-pediatric-tachycardia-wide-complex-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PC-07",
     "code": "PC 7",
-    "title": "Pediatric VF Pulseless VT Protocol",
+    "title": "Pediatric VF / Pulseless VT",
     "category": "Pediatric Cardiac",
     "categoryCode": "PC",
     "pdfPath": "/protocols/claiborne/pc-07-pediatric-vf-pulseless-vt-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PC-08",
     "code": "PC 8",
-    "title": "Pediatric Post Resuscitation Protocol",
+    "title": "Pediatric Post-Resuscitation",
     "category": "Pediatric Cardiac",
     "categoryCode": "PC",
     "pdfPath": "/protocols/claiborne/pc-08-pediatric-post-resuscitation-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PM-01",
@@ -852,10 +852,10 @@
     "categoryCode": "TB",
     "pdfPath": "/protocols/claiborne/tb-10-traumatic-arrest-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "TB-11",
@@ -868,7 +868,7 @@
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "TB-12",
@@ -881,7 +881,7 @@
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "TE-01",

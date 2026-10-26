@@ -1,6 +1,6 @@
 {
-  "version": "2-21-0-october-2026",
-  "appVersion": "2.21.0",
+  "version": "2-26-0-october-2026",
+  "appVersion": "2.26.0",
   "protocolVersion": "October 2026",
   "resources": [
     {
@@ -1231,97 +1231,97 @@
     {
       "url": "/protocols/claiborne/ar-01-adult-airway-protocol.pdf",
       "kind": "document",
-      "bytes": 440166
+      "bytes": 47102
     },
     {
       "url": "/protocols/claiborne/ar-02-adult-failed-airway-protocol.pdf",
       "kind": "document",
-      "bytes": 329026
+      "bytes": 47011
     },
     {
       "url": "/protocols/claiborne/ar-03-airway-drug-assisted-intubation-protocol.pdf",
       "kind": "document",
-      "bytes": 214945
+      "bytes": 47733
     },
     {
       "url": "/protocols/claiborne/ar-04-copd-asthma-protocol.pdf",
       "kind": "document",
-      "bytes": 253739
+      "bytes": 47927
     },
     {
       "url": "/protocols/claiborne/ar-05-pediatric-airway-protocol.pdf",
       "kind": "document",
-      "bytes": 420501
+      "bytes": 47099
     },
     {
       "url": "/protocols/claiborne/ar-06-pediatric-failed-airway-protocol.pdf",
       "kind": "document",
-      "bytes": 336966
+      "bytes": 47080
     },
     {
       "url": "/protocols/claiborne/ar-07-pediatric-respiratory-distress-protocol.pdf",
       "kind": "document",
-      "bytes": 238188
+      "bytes": 47938
     },
     {
       "url": "/protocols/claiborne/ar-08-post-intubation-biad-management-protocol.pdf",
       "kind": "document",
-      "bytes": 358590
+      "bytes": 47693
     },
     {
       "url": "/protocols/claiborne/ar-09-ventilator-emergencies-protocol.pdf",
       "kind": "document",
-      "bytes": 256684
+      "bytes": 47215
     },
     {
       "url": "/protocols/claiborne/ar-10-tracheostomy-tube-emergencies-protocol.pdf",
       "kind": "document",
-      "bytes": 270127
+      "bytes": 47083
     },
     {
       "url": "/protocols/claiborne/ar-11-mechanical-ventilation-adult.pdf",
       "kind": "document",
-      "bytes": 635965
+      "bytes": 51256
     },
     {
       "url": "/protocols/claiborne/pc-01-pediatric-asytole-pea-protocol.pdf",
       "kind": "document",
-      "bytes": 363018
+      "bytes": 47720
     },
     {
       "url": "/protocols/claiborne/pc-02-pediatric-bradycardia-poor-perfusion-protocol.pdf",
       "kind": "document",
-      "bytes": 266221
+      "bytes": 47618
     },
     {
       "url": "/protocols/claiborne/pc-03-pediatric-chf-pulmonary-edema-protocol.pdf",
       "kind": "document",
-      "bytes": 292537
+      "bytes": 47619
     },
     {
       "url": "/protocols/claiborne/pc-04-pediatric-pulseless-arrest-protocol.pdf",
       "kind": "document",
-      "bytes": 411107
+      "bytes": 47486
     },
     {
       "url": "/protocols/claiborne/pc-05-pediatrictachycardia-narrow-complex.pdf",
       "kind": "document",
-      "bytes": 313400
+      "bytes": 47626
     },
     {
       "url": "/protocols/claiborne/pc-06-pediatric-tachycardia-wide-complex-protocol.pdf",
       "kind": "document",
-      "bytes": 275754
+      "bytes": 47734
     },
     {
       "url": "/protocols/claiborne/pc-07-pediatric-vf-pulseless-vt-protocol.pdf",
       "kind": "document",
-      "bytes": 304631
+      "bytes": 47632
     },
     {
       "url": "/protocols/claiborne/pc-08-pediatric-post-resuscitation-protocol.pdf",
       "kind": "document",
-      "bytes": 472364
+      "bytes": 47735
     },
     {
       "url": "/protocols/claiborne/pm-01-pediatric-allergic-reaction-protocol.pdf",
@@ -1426,17 +1426,17 @@
     {
       "url": "/protocols/claiborne/tb-10-traumatic-arrest-protocol.pdf",
       "kind": "document",
-      "bytes": 287381
+      "bytes": 48992
     },
     {
       "url": "/protocols/claiborne/tb-11-eye-trauma-protocol.pdf",
       "kind": "document",
-      "bytes": 8547
+      "bytes": 48967
     },
     {
       "url": "/protocols/claiborne/tb-12-abdominal-pelvic-trauma-protocol.pdf",
       "kind": "document",
-      "bytes": 8588
+      "bytes": 49551
     },
     {
       "url": "/protocols/claiborne/te-01-bites-and-envenomations-protocol.pdf",
@@ -1596,7 +1596,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 33147
+      "bytes": 32778
     },
     {
       "url": "/manifest.webmanifest",
@@ -1680,6 +1680,6 @@
     }
   ],
   "resourceCount": 335,
-  "knownBytes": 27342214,
-  "estimatedBytes": 41694598
+  "knownBytes": 21637217,
+  "estimatedBytes": 35989601
 }

@@ -85,7 +85,7 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
             actions: [
               "Perform all prior actions; lead advanced airway, analgesia, antiemetic, monitoring, Medical Control, and destination decisions when the injury or associated trauma is severe.",
               "Use early Medical Control and receiving-facility consultation for vision loss, suspected open globe, impaled object, orbital compartment warning signs, hydrofluoric-acid exposure, or uncertain destination.",
-              "Do not use ketamine for analgesia in penetrating eye trauma under the current Tennessee reference unless a finalized Claiborne standing order or direct Medical Control explicitly authorizes it.",
+              "Do not use ketamine for analgesia in suspected penetrating or open-globe eye trauma under this protocol unless Medical Control expressly authorizes it.",
             ],
           },
         ],
@@ -136,7 +136,7 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
         dose: "Use the current Claiborne County pain-management protocol and provider-level standing orders.",
         notes: [
           "Titrate carefully and monitor airway, ventilation, mental status, and blood pressure.",
-          "Current Tennessee reference excludes ketamine analgesia in penetrating eye trauma.",
+          "Do not use ketamine for suspected penetrating or open-globe eye trauma under this protocol unless Medical Control expressly authorizes it.",
         ],
       },
       {
@@ -213,14 +213,13 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
     ],
     sourcePdf: "/protocols/claiborne/tb-11-eye-trauma-protocol.pdf",
     sourcePages: { start: 1, end: 2 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 30, 2026",
-    reviewStatus: "Reviewed",
+    revisionDate: "October 17, 2026",
+    lastVerifiedDate: "October 17, 2026",
+    reviewStatus: "Approved",
     reviewFlags: [
-      "Medical-director approval is required before this protocol is released for clinical use.",
-      "Confirm the agency's stocked rigid eye shields, irrigation equipment, analgesic/antiemetic formulary, topical-anesthetic policy, and specialty destination plan.",
-      "Ophthalmology, trauma-system, pharmacy, pediatric, and training review are recommended before final approval.",
-      "The beta application remains a reference tool; the current approved Claiborne County protocol manual controls patient care.",
+      "Approved by the Claiborne EMS medical director on October 17, 2026.",
+      "The approved source PDF requires stocked rigid eye shields, irrigation equipment, and the current Claiborne analgesic/antiemetic formulary.",
+      "Topical ophthalmic anesthetic remains unavailable unless separately stocked and adopted or ordered by Medical Control.",
     ],
   },
 ];

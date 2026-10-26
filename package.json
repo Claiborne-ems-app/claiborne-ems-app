@@ -1,6 +1,6 @@
 {
   "name": "claiborne-ems-app",
-  "version": "2.21.0",
+  "version": "2.26.0",
   "private": true,
   "engines": {
     "node": "24.x"
@@ -14,6 +14,7 @@
     "start": "next start",
     "lint": "eslint",
     "import:structured-protocol": "node scripts/import-structured-protocol.mjs",
+    "release:check": "node --import ./scripts/register-test-ts-resolver.mjs scripts/check-release-readiness.mjs",
     "test:protocol-search": "node --import ./scripts/register-test-ts-resolver.mjs --test tests/protocol-search.test.mjs",
     "test:favorites": "node --test tests/favorites.test.mjs",
     "test:recently-viewed": "node --test tests/recently-viewed.test.mjs",

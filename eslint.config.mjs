@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Rendered PDFs and extraction notes are local review artifacts, not app source.
+    "tmp/**",
     // Static PDF.js worker and decoder assets are third-party distribution files.
     "public/pdfjs/**",
   ]),
