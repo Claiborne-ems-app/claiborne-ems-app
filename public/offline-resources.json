@@ -1,6 +1,6 @@
 {
-  "version": "2-27-0-october-2026",
-  "appVersion": "2.27.0",
+  "version": "2-29-0-october-2026",
+  "appVersion": "2.29.0",
   "protocolVersion": "October 2026",
   "resources": [
     {
@@ -1331,12 +1331,12 @@
     {
       "url": "/protocols/claiborne/pm-02-pediatric-diabetic-protocol.pdf",
       "kind": "document",
-      "bytes": 243386
+      "bytes": 49746
     },
     {
       "url": "/protocols/claiborne/pm-03-pediatric-hypotension-shock-protocol.pdf",
       "kind": "document",
-      "bytes": 294910
+      "bytes": 49238
     },
     {
       "url": "/protocols/claiborne/pm-04-pediatric-pain-control-protocol.pdf",
@@ -1596,7 +1596,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 32772
+      "bytes": 32759
     },
     {
       "url": "/manifest.webmanifest",
@@ -1680,6 +1680,6 @@
     }
   ],
   "resourceCount": 335,
-  "knownBytes": 21498938,
-  "estimatedBytes": 35851322
+  "knownBytes": 21059613,
+  "estimatedBytes": 35411997
 }

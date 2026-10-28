@@ -600,28 +600,28 @@
   {
     "id": "PM-02",
     "code": "PM 2",
-    "title": "Pediatric Diabetic Protocol",
+    "title": "Pediatric Hypoglycemia / Diabetic Emergency",
     "category": "Pediatric Medical",
     "categoryCode": "PM",
     "pdfPath": "/protocols/claiborne/pm-02-pediatric-diabetic-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PM-03",
     "code": "PM 3",
-    "title": "Pediatric Hypotension Shock Protocol",
+    "title": "Pediatric Hypotension / Shock",
     "category": "Pediatric Medical",
     "categoryCode": "PM",
     "pdfPath": "/protocols/claiborne/pm-03-pediatric-hypotension-shock-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "PM-04",

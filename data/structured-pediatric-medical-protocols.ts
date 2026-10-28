@@ -155,7 +155,7 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
     title: "Pediatric Hypoglycemia / Diabetic Emergency",
     sourcePdf: "/protocols/claiborne/pm-02-pediatric-diabetic-protocol.pdf",
     pages: 2,
-    revisionDate: "2026-08-14",
+    revisionDate: "2026-10-26",
     overview: [
       "Check blood glucose early in any child with altered mental status, seizure, weakness, or suspected diabetic emergency.",
       "Treat hypoglycemia promptly while protecting the airway. Evaluate hyperglycemia for dehydration, poor perfusion, and possible DKA without treating a glucose number alone.",
@@ -203,9 +203,9 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
       { label: "Medication Reference", description: "Open the current Claiborne medication reference.", href: "/medications", kind: "external" },
     ],
     reviewStatus: "Approved",
-    lastVerifiedDate: "2026-08-14",
+    lastVerifiedDate: "2026-10-26",
     reviewFlags: [
-      "Clinical pediatric hypoglycemia, D10, glucagon, oral-treatment safeguards, hyperglycemia/DKA assessment, cautious fluid strategy, cerebral-edema safeguards, newborn routing, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
+      "Clinical pediatric hypoglycemia, D10, glucagon, oral-treatment safeguards, hyperglycemia/DKA assessment, cautious fluid strategy, cerebral-edema safeguards, newborn routing, and linked pathways approved by the Claiborne EMS medical director on October 26, 2026.",
     ],
     warnings: [
       "Do not administer oral glucose when swallowing or airway protection is impaired.",
@@ -217,6 +217,11 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
       "D10 2 mL/kg provides 0.2 g/kg of dextrose and is the approved pediatric IV/IO hypoglycemia dose.",
       "Pediatric DKA can deteriorate neurologically; avoid over-resuscitation and communicate serial mental-status findings to the receiving team.",
     ],
+    references: [
+      "Claiborne County EMS PM-02 Pediatric Hypoglycemia / Diabetic Emergency protocol, approved October 26, 2026.",
+      "ISPAD Clinical Practice Consensus Guidelines: Diabetic Ketoacidosis and Hyperglycemic Hyperosmolar State.",
+      "American Diabetes Association Standards of Care: Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises.",
+    ],
   }),
 
   protocol({
@@ -224,7 +229,7 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
     title: "Pediatric Hypotension / Shock",
     sourcePdf: "/protocols/claiborne/pm-03-pediatric-hypotension-shock-protocol.pdf",
     pages: 2,
-    revisionDate: "2026-08-14",
+    revisionDate: "2026-10-26",
     overview: [
       "Compensated pediatric shock may precede hypotension; recognize abnormal perfusion before blood pressure falls.",
       "Classify shock as hypovolemic/hemorrhagic, distributive, cardiogenic, or obstructive because fluid strategy and definitive treatment differ.",
@@ -270,9 +275,9 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
       { label: "Medication Reference", description: "Open the current Claiborne medication reference.", href: "/medications", kind: "external" },
     ],
     reviewStatus: "Approved",
-    lastVerifiedDate: "2026-08-14",
+    lastVerifiedDate: "2026-10-26",
     reviewFlags: [
-      "Clinical pediatric shock recognition, type-specific fluid strategy, cardiogenic safeguards, fluid-refractory septic-shock support, obstructive/anaphylactic/adrenal pathways, monitoring, and destination planning approved by the Claiborne EMS medical director on August 14, 2026.",
+      "Clinical pediatric shock recognition, type-specific fluid strategy, cardiogenic safeguards, fluid-refractory septic-shock support, obstructive/anaphylactic/adrenal pathways, monitoring, and destination planning approved by the Claiborne EMS medical director on October 26, 2026.",
     ],
     warnings: [
       "Hypotension is late and ominous in pediatric shock: neonate SBP <60, 1 month–<1 year <70, age 1–9 <70 + (2 × age), age ≥10 <90 mmHg.",
@@ -283,6 +288,11 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
     pearls: [
       "Early pediatric shock is recognized by perfusion and behavior changes before hypotension develops.",
       "Epinephrine or norepinephrine is preferred for fluid-refractory pediatric septic shock when authorized and available.",
+    ],
+    references: [
+      "Claiborne County EMS PM-03 Pediatric Hypotension / Shock protocol, approved October 26, 2026.",
+      "Surviving Sepsis Campaign: International Guidelines for the Management of Septic Shock and Sepsis-associated Organ Dysfunction in Children.",
+      "Endocrine Society clinical guidance for primary adrenal insufficiency and congenital adrenal hyperplasia.",
     ],
   }),
 

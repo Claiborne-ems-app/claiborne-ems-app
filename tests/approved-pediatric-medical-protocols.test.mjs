@@ -25,3 +25,50 @@ test("PM-01 is released as approved Claiborne app content and a direct source PD
   assert.ok(metadata.size > 20_000);
   assert.equal(pdf.subarray(0, 5).toString("ascii"), "%PDF-");
 });
+
+test("PM-02 is released as approved Claiborne app content and a direct source PDF", async () => {
+  const [jsonCatalog, tsCatalog, structured, pdf, metadata] = await Promise.all([
+    read("src/data/claiborne-protocols.json"),
+    read("src/data/claiborneProtocols.ts"),
+    read("data/structured-pediatric-medical-protocols.ts"),
+    readFile(new URL("../public/protocols/claiborne/pm-02-pediatric-diabetic-protocol.pdf", import.meta.url)),
+    stat(new URL("../public/protocols/claiborne/pm-02-pediatric-diabetic-protocol.pdf", import.meta.url)),
+  ]);
+  const catalog = JSON.parse(jsonCatalog);
+  const pm02 = catalog.find((protocol) => protocol.id === "PM-02");
+
+  assert.equal(pm02?.title, "Pediatric Hypoglycemia / Diabetic Emergency");
+  assert.equal(pm02?.status, "approved");
+  assert.equal(pm02?.year, 2026);
+  assert.equal(pm02?.source, "Claiborne County EMS Clinical Protocols");
+  assert.match(tsCatalog, /"id": "PM-02"[\s\S]*?"status": "approved"/);
+  assert.match(structured, /id: "pm-02"[\s\S]*?reviewStatus: "Approved"/);
+  assert.match(structured, /D10 2 mL\/kg IV\/IO/);
+  assert.match(structured, /Do not give insulin or sodium bicarbonate in the field/);
+  assert.ok(metadata.size > 20_000);
+  assert.equal(pdf.subarray(0, 5).toString("ascii"), "%PDF-");
+});
+
+test("PM-03 is released as approved Claiborne app content and a direct source PDF", async () => {
+  const [jsonCatalog, tsCatalog, structured, pdf, metadata] = await Promise.all([
+    read("src/data/claiborne-protocols.json"),
+    read("src/data/claiborneProtocols.ts"),
+    read("data/structured-pediatric-medical-protocols.ts"),
+    readFile(new URL("../public/protocols/claiborne/pm-03-pediatric-hypotension-shock-protocol.pdf", import.meta.url)),
+    stat(new URL("../public/protocols/claiborne/pm-03-pediatric-hypotension-shock-protocol.pdf", import.meta.url)),
+  ]);
+  const catalog = JSON.parse(jsonCatalog);
+  const pm03 = catalog.find((protocol) => protocol.id === "PM-03");
+
+  assert.equal(pm03?.title, "Pediatric Hypotension / Shock");
+  assert.equal(pm03?.status, "approved");
+  assert.equal(pm03?.year, 2026);
+  assert.equal(pm03?.source, "Claiborne County EMS Clinical Protocols");
+  assert.match(tsCatalog, /"id": "PM-03"[\s\S]*?"status": "approved"/);
+  assert.match(structured, /id: "pm-03"[\s\S]*?reviewStatus: "Approved"/);
+  assert.match(structured, /10–20 mL\/kg IV\/IO aliquots/);
+  assert.match(structured, /patient's prescribed emergency plan or Medical-Control-directed protocol equivalent/);
+  assert.doesNotMatch(structured, /id: "pm-03"[\s\S]*?Hydrocortisone 2mg\/kg/);
+  assert.ok(metadata.size > 20_000);
+  assert.equal(pdf.subarray(0, 5).toString("ascii"), "%PDF-");
+});
