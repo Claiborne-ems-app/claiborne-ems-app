@@ -864,15 +864,15 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
   {
     "id": "TE-01",
     "code": "TE 1",
-    "title": "Bites and Envenomations Protocol",
+    "title": "Bites and Envenomations",
     "category": "Toxicology & Environmental",
     "categoryCode": "TE",
     "pdfPath": "/protocols/claiborne/te-01-bites-and-envenomations-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "TE-02",
@@ -920,19 +920,6 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "category": "Toxicology & Environmental",
     "categoryCode": "TE",
     "pdfPath": "/protocols/claiborne/te-05-hypothermia-protocol.pdf",
-    "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
-    "agency": "Claiborne County EMS",
-    "status": "draft-import"
-  },
-  {
-    "id": "TE-06",
-    "code": "TE 6",
-    "title": "Marine Envenomations Protocol",
-    "category": "Toxicology & Environmental",
-    "categoryCode": "TE",
-    "pdfPath": "/protocols/claiborne/te-06-marine-envenomations-protocol.pdf",
     "pages": 2,
     "year": 2025,
     "source": "North Carolina College of Emergency Physicians",
