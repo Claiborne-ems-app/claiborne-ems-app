@@ -1,6 +1,6 @@
 {
-  "version": "2-30-0-october-2026",
-  "appVersion": "2.30.0",
+  "version": "2-31-0-october-2026",
+  "appVersion": "2.31.0",
   "protocolVersion": "October 2026",
   "resources": [
     {
@@ -1436,7 +1436,7 @@
     {
       "url": "/protocols/claiborne/te-02-carbon-monoxide-cyanide-protocol.pdf",
       "kind": "document",
-      "bytes": 344101
+      "bytes": 49443
     },
     {
       "url": "/protocols/claiborne/te-03-drowning-submersion-injury-protocol.pdf",
@@ -1581,7 +1581,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 32401
+      "bytes": 32392
     },
     {
       "url": "/manifest.webmanifest",
@@ -1665,6 +1665,6 @@
     }
   ],
   "resourceCount": 332,
-  "knownBytes": 20326391,
-  "estimatedBytes": 34547703
+  "knownBytes": 20031724,
+  "estimatedBytes": 34253036
 }

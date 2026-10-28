@@ -899,15 +899,15 @@
   {
     "id": "TE-02",
     "code": "TE 2",
-    "title": "Carbon Monoxide Cyanide Protocol",
+    "title": "Carbon Monoxide / Cyanide Exposure",
     "category": "Toxicology & Environmental",
     "categoryCode": "TE",
     "pdfPath": "/protocols/claiborne/te-02-carbon-monoxide-cyanide-protocol.pdf",
-    "pages": 1,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "pages": 2,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "TE-03",
