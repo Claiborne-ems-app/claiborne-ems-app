@@ -30,3 +30,21 @@ test("approved TE-01 direct source PDF is present and recognizable", async () =>
   assert.equal(header.subarray(0, 5).toString("ascii"), "%PDF-");
   assert.ok(metadata.size > 20_000);
 });
+
+test("TE-02 is released as approved Claiborne content without a field cyanide-antidote dose", () => {
+  const te02 = catalog.find((item) => item.id === "TE-02");
+  const structured = structuredToxicologyEnvironmentalProtocols.find((item) => item.id === "te-02");
+  assert.equal(te02?.title, "Carbon Monoxide / Cyanide Exposure");
+  assert.equal(te02?.status, "approved");
+  assert.equal(te02?.source, "Claiborne County EMS Clinical Protocols");
+  assert.equal(structured?.reviewStatus, "Approved");
+  assert.match(structured?.flow.find((node) => node.title === "Consult + Early Alert")?.text ?? "", /Poison Help.*not stock a cyanide antidote/i);
+  assert.doesNotMatch(JSON.stringify(structured), /70\s*mg\s*\/\s*kg/i);
+});
+
+test("approved TE-02 direct source PDF is present and recognizable", async () => {
+  const pdf = new URL("../public/protocols/claiborne/te-02-carbon-monoxide-cyanide-protocol.pdf", import.meta.url);
+  const [header, metadata] = await Promise.all([readFile(pdf), stat(pdf)]);
+  assert.equal(header.subarray(0, 5).toString("ascii"), "%PDF-");
+  assert.ok(metadata.size > 20_000);
+});
