@@ -1,6 +1,6 @@
 {
-  "version": "2-29-0-october-2026",
-  "appVersion": "2.29.0",
+  "version": "2-30-0-october-2026",
+  "appVersion": "2.30.0",
   "protocolVersion": "October 2026",
   "resources": [
     {
@@ -834,16 +834,6 @@
       "bytes": null
     },
     {
-      "url": "/protocols/te/te-06",
-      "kind": "route",
-      "bytes": null
-    },
-    {
-      "url": "/protocols/te/te-06/viewer",
-      "kind": "route",
-      "bytes": null
-    },
-    {
       "url": "/protocols/te/te-07",
       "kind": "route",
       "bytes": null
@@ -1441,7 +1431,7 @@
     {
       "url": "/protocols/claiborne/te-01-bites-and-envenomations-protocol.pdf",
       "kind": "document",
-      "bytes": 398533
+      "bytes": 49732
     },
     {
       "url": "/protocols/claiborne/te-02-carbon-monoxide-cyanide-protocol.pdf",
@@ -1462,11 +1452,6 @@
       "url": "/protocols/claiborne/te-05-hypothermia-protocol.pdf",
       "kind": "document",
       "bytes": 406025
-    },
-    {
-      "url": "/protocols/claiborne/te-06-marine-envenomations-protocol.pdf",
-      "kind": "document",
-      "bytes": 384063
     },
     {
       "url": "/protocols/claiborne/te-07-overdose-toxic-ingestion-protocol.pdf",
@@ -1596,7 +1581,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 32759
+      "bytes": 32401
     },
     {
       "url": "/manifest.webmanifest",
@@ -1679,7 +1664,7 @@
       "bytes": 469105
     }
   ],
-  "resourceCount": 335,
-  "knownBytes": 21059613,
-  "estimatedBytes": 35411997
+  "resourceCount": 332,
+  "knownBytes": 20326391,
+  "estimatedBytes": 34547703
 }

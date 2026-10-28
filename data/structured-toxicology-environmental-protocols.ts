@@ -7,12 +7,14 @@ import type {
 
 const ALL_LEVELS: ProviderLevel[] = ["EMT", "AEMT", "Paramedic"];
 type Input = {
-  id: string; title: string; sourcePdf: string; pages: number; revisionDate?: string;
+  id: string; title: string; sourcePdf: string; pages: number; revisionDate?: string; lastVerifiedDate?: string;
   overview: string[]; indications: string[]; flow: ProtocolFlowNode[];
   emt: string[]; aemt: string[]; paramedic: string[];
   medications?: { name: string; dose: string; notes?: string[] }[];
   actionLinks?: StructuredProtocolContent["actionLinks"];
   warnings?: string[]; pearls?: string[];
+  reviewStatus?: StructuredProtocolContent["reviewStatus"];
+  reviewFlags?: string[];
 };
 function protocol(input: Input): StructuredProtocolContent {
   const careModules: ProtocolCareModule[] = [{
@@ -36,9 +38,9 @@ function protocol(input: Input): StructuredProtocolContent {
       "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
     ],
     sourcePdf: input.sourcePdf, sourcePages: { start: 1, end: input.pages },
-    revisionDate: input.revisionDate ?? "2025-09-01", lastVerifiedDate: "2026-07-29",
-    reviewStatus: "Reviewed",
-    reviewFlags: [
+    revisionDate: input.revisionDate ?? "2025-09-01", lastVerifiedDate: input.lastVerifiedDate ?? "2026-07-29",
+    reviewStatus: input.reviewStatus ?? "Reviewed",
+    reviewFlags: input.reviewFlags ?? [
       "Medical-director approval is required before clinical release.",
       "Verify medication doses, antidote availability, and local Poison Control procedures.",
       "The original imported PDF remains available for source comparison.",
@@ -50,6 +52,8 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
   protocol({
     id: "te-01", title: "Bites and Envenomations",
     sourcePdf: "/protocols/claiborne/te-01-bites-and-envenomations-protocol.pdf", pages: 2,
+    revisionDate: "2026-10-28",
+    lastVerifiedDate: "2026-10-28",
     overview: [
       "Prioritize scene safety, wound care, immobilization, removal of constricting items, and treatment of anaphylaxis or shock.",
       "Do not endanger responders to capture or identify an animal; use a description or photograph when safely available.",
@@ -58,18 +62,18 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
     flow: [
       { title: "Scene Safe?", text: "Stage or request resources until animal, insect, or environmental hazard is controlled.", levels: ALL_LEVELS, tone: "start" },
       { title: "ABCs / Anaphylaxis / Shock", text: "Treat immediate threats and route to age-appropriate allergy or shock protocol.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Wound + Immobilize", text: "Clean/cover, remove constricting items, and immobilize the extremity in a neutral position of comfort.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Snake Bite?", text: "Mark swelling/redness with time; keep the patient calm and transport promptly. Do not apply ice, tourniquet, suction, or incision.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Wound + Immobilize", text: "Clean/cover the wound when it will not delay care, remove constricting items, and immobilize the extremity in a neutral position of comfort.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Snake Bite?", text: "Mark swelling/redness with time; keep the patient calm, keep the limb at heart level, call Poison Help, and transport promptly. Do not apply ice, tourniquet, suction, or incision.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Spider / Sting?", text: "For a visible stinger, scrape it away; wash the area and use a cold pack for 10–20 minutes. Treat anaphylaxis immediately when present.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Consult + Transport", text: "For suspected envenomation, unknown toxic bite/sting, or concerning symptoms, call Poison Control (1-800-222-1222). Follow local public-health/animal-control reporting process for possible rabies exposure.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "Consult + Transport", text: "For suspected envenomation, unknown toxic bite/sting, or concerning symptoms, call Poison Help (1-800-222-1222). For animal bites/scratches, follow the local public-health/animal-control reporting process and arrange evaluation for rabies risk assessment.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
-      "Provide wound care, remove rings/bands, immobilize the extremity in a neutral position of comfort, mark progression, and treat anaphylaxis with epinephrine when indicated.",
+      "Provide wound care when it will not delay care, remove rings/bands, immobilize the extremity in a neutral position of comfort, mark progression, and treat anaphylaxis with epinephrine when indicated.",
       "For a visible insect stinger, scrape it away; wash the area and use a cold pack for 10–20 minutes.",
-      "For possible rabies exposure, follow the local public-health/animal-control reporting process.",
+      "For suspected envenomation, unknown toxic bite/sting, or concerning symptoms, contact Poison Help (1-800-222-1222). For possible rabies exposure, follow the local public-health/animal-control reporting process.",
     ],
     aemt: ["Perform all EMT care plus IV/IO access, fluids, and authorized pain/anaphylaxis treatment."],
-    paramedic: ["Perform all prior care plus cardiac monitoring and treat severe venom-associated muscle spasm or seizure under the applicable medication and seizure protocol."],
+    paramedic: ["Perform all prior care plus cardiac monitoring for systemic illness and treat severe venom-associated muscle spasm or seizure under the applicable medication and seizure protocol."],
     actionLinks: [
       { label: "Medication Reference", description: "Open for approved midazolam indications, dosing, and monitoring.", href: "/medications", kind: "external" },
     ],
@@ -77,6 +81,12 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
       "Do not capture or transport a snake for identification.",
       "Do not apply ice to a snake bite.",
       "Do not delay transport for snake-bite interventions or identification.",
+    ],
+    reviewStatus: "Approved",
+    reviewFlags: [
+      "Medical-director approval recorded October 28, 2026.",
+      "The direct Claiborne source PDF replaces the legacy imported sheet and mirrors the approved app content.",
+      "The application remains a beta field reference until full-system clinical release and implementation approval.",
     ],
   }),
 
