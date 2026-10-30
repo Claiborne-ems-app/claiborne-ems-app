@@ -76,7 +76,7 @@ export const structuredChemicalHazmatAdditions: StructuredProtocolContent[] = [
             actions: [
               "Perform all EMT actions plus IV/IO access, authorized fluids and medications, continuous reassessment, and preparation for rapid respiratory deterioration.",
               "Use an unexposed extremity for vascular access when feasible and protect equipment from contamination.",
-              "For a cholinergic presentation, use the linked WMD / Nerve Agent pathway and administer agency-approved atropine/pralidoxime within scope.",
+              "For a cholinergic presentation, use the linked WMD / Nerve Agent pathway for recognition, decontamination, ventilation, and escalation. Claiborne ground units do not carry a CHEMPACK, Mark I, or equivalent atropine/pralidoxime kit.",
             ],
           },
           {
@@ -129,8 +129,8 @@ export const structuredChemicalHazmatAdditions: StructuredProtocolContent[] = [
         items: [
           "Consider after agricultural or pesticide exposure with miosis, sweating, salivation, lacrimation, vomiting, diarrhea, urination, fasciculations, weakness, bradycardia, bronchospasm, or profuse pulmonary secretions.",
           "Avoid secondary dermal contamination. Use appropriate chemical PPE, remove clothing, bag contaminated items, brush dry agents, wash skin and hair with soap and water, and protect the airway during decontamination.",
-          "Airway suction, oxygenation, ventilation, and control of secretions are immediate priorities. Use TE-08 WMD / Nerve Agent for atropine, pralidoxime, seizure care, autoinjectors, and CHEMPACK activation.",
-          "Atropine is titrated to improving secretions and ventilation rather than pupil size or a fixed heart-rate target.",
+          "Airway suction, oxygenation, ventilation, and control of secretions are immediate priorities. Use TE-08 WMD / Nerve Agent for scene safety, decontamination, cholinergic recognition, seizure care, and escalation.",
+          "Claiborne ground units do not carry a CHEMPACK, Mark I, or equivalent atropine/pralidoxime kit. Do not use legacy kit counts, autoinjector directions, or unstocked antidote doses.",
         ],
       },
       {
@@ -182,9 +182,9 @@ export const structuredChemicalHazmatAdditions: StructuredProtocolContent[] = [
       },
       {
         name: "Atropine / pralidoxime",
-        dose: "Use TE-08 WMD / Nerve Agent for organophosphate or nerve-agent dosing and clinical endpoints.",
+        dose: "Not stocked as a CHEMPACK, Mark I, or equivalent field kit on Claiborne ground units. Use TE-08 for supportive care, escalation, and future adoption safeguards.",
         notes: [
-          "Atropine is titrated to improvement in secretions and ventilation; use only within provider scope and the approved formulary.",
+          "Do not import legacy North Carolina autoinjector counts or antidote doses into Claiborne field care.",
         ],
       },
       {
@@ -260,7 +260,7 @@ export const structuredChemicalHazmatAdditions: StructuredProtocolContent[] = [
       },
       {
         label: "Nerve Agent",
-        description: "Atropine and pralidoxime pathway",
+        description: "Scene safety, decontamination, recognition, and escalation pathway",
         href: "/protocols/te/te-08",
         kind: "protocol",
       },
@@ -280,14 +280,15 @@ export const structuredChemicalHazmatAdditions: StructuredProtocolContent[] = [
     ],
     sourcePdf: "/protocols/claiborne/te-09-chemical-hazmat-exposure-protocol.pdf",
     sourcePages: { start: 1, end: 4 },
-    revisionDate: "July 2026",
-    lastVerifiedDate: "July 30, 2026",
-    reviewStatus: "Reviewed",
+    revisionDate: "October 30, 2026",
+    lastVerifiedDate: "October 30, 2026",
+    reviewStatus: "Approved",
     reviewFlags: [
-      "Medical-director, HazMat operations, pharmacy/formulary, and agency administrative approval are required before clinical release.",
-      "Finalize local decontamination resources, receiving-facility notification, PPE/SCBA limitations, Poison Help documentation, and responder-exposure procedures.",
-      "Specialty therapies such as calcium gluconate, nebulized sodium bicarbonate, methylene blue, nitrite therapy, chelation, and CHEMPACK use must appear only if specifically adopted and stocked.",
-      "Current Tennessee law, provider scope, Poison Help recommendations, and Claiborne County policy control if any conflict exists.",
+      "Medical-director approval recorded October 30, 2026.",
+      "Claiborne ground units do not carry a CHEMPACK, Mark I, or equivalent atropine/pralidoxime kit; the former legacy kit-count, dose, and autoinjector assumptions are not part of this release.",
+      "Specialty therapies such as calcium gluconate, nebulized sodium bicarbonate, methylene blue, nitrite therapy, and chelation may appear only if separately adopted, stocked, trained, and ordered under a Claiborne standing order or Medical Control.",
+      "Current Tennessee law, provider scope, Poison Help recommendations, HazMat direction, and Claiborne County policy control if any conflict exists.",
+      "The application remains a beta field reference until full-system clinical release and implementation approval.",
     ],
   },
 ];

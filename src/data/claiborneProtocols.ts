@@ -890,67 +890,67 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
   {
     "id": "TE-03",
     "code": "TE 3",
-    "title": "Drowning Submersion Injury Protocol",
+    "title": "Drowning / Submersion Injury",
     "category": "Toxicology & Environmental",
     "categoryCode": "TE",
     "pdfPath": "/protocols/claiborne/te-03-drowning-submersion-injury-protocol.pdf",
-    "pages": 1,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "pages": 2,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "TE-04",
     "code": "TE 4",
-    "title": "Hyperthermia Protocol",
+    "title": "Hyperthermia",
     "category": "Toxicology & Environmental",
     "categoryCode": "TE",
     "pdfPath": "/protocols/claiborne/te-04-hyperthermia-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "TE-05",
     "code": "TE 5",
-    "title": "Hypothermia Protocol",
+    "title": "Hypothermia / Frostbite",
     "category": "Toxicology & Environmental",
     "categoryCode": "TE",
     "pdfPath": "/protocols/claiborne/te-05-hypothermia-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "TE-07",
     "code": "TE 7",
-    "title": "Overdose Toxic Ingestion Protocol",
+    "title": "Overdose / Toxic Ingestion",
     "category": "Toxicology & Environmental",
     "categoryCode": "TE",
     "pdfPath": "/protocols/claiborne/te-07-overdose-toxic-ingestion-protocol.pdf",
-    "pages": 3,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "pages": 2,
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "TE-08",
     "code": "TE 8",
-    "title": "WMD Nerve Agent Protocol",
+    "title": "WMD / Nerve-Agent Exposure",
     "category": "Toxicology & Environmental",
     "categoryCode": "TE",
     "pdfPath": "/protocols/claiborne/te-08-wmd-nerve-agent-protocol.pdf",
     "pages": 2,
-    "year": 2025,
-    "source": "North Carolina College of Emergency Physicians",
+    "year": 2026,
+    "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   },
   {
     "id": "UP-01",
@@ -1249,7 +1249,7 @@ export const claiborneProtocols: ClaiborneProtocol[] = [
     "year": 2026,
     "source": "Claiborne County EMS Clinical Protocols",
     "agency": "Claiborne County EMS",
-    "status": "draft-import"
+    "status": "approved"
   }
 ] as ClaiborneProtocol[];
 

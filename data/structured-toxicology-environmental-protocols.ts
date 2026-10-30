@@ -128,7 +128,9 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
 
   protocol({
     id: "te-03", title: "Drowning / Submersion Injury",
-    sourcePdf: "/protocols/claiborne/te-03-drowning-submersion-injury-protocol.pdf", pages: 1,
+    sourcePdf: "/protocols/claiborne/te-03-drowning-submersion-injury-protocol.pdf", pages: 2,
+    revisionDate: "2026-10-30",
+    lastVerifiedDate: "2026-10-30",
     overview: [
       "Drowning is respiratory impairment after submersion or immersion; reversal of hypoxia is the priority.",
       "Begin with two initial breaths/ventilations, then support ventilation and circulation without delaying for routine spinal restriction or copious airway foam.",
@@ -150,11 +152,19 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
       "Spinal-motion restriction should never delay oxygenation, ventilation, or CPR.",
     ],
     pearls: ["Do not use a single submersion-time cutoff alone to determine whether to begin or continue resuscitation; use the applicable cardiac-arrest and termination pathway with the full clinical context."],
+    reviewStatus: "Approved",
+    reviewFlags: [
+      "Medical-director approval recorded October 30, 2026.",
+      "The direct Claiborne source PDF replaces the legacy imported sheet and mirrors the approved app content.",
+      "The application remains a beta field reference until full-system clinical release and implementation approval.",
+    ],
   }),
 
   protocol({
     id: "te-04", title: "Hyperthermia",
     sourcePdf: "/protocols/claiborne/te-04-hyperthermia-protocol.pdf", pages: 2,
+    revisionDate: "2026-10-30",
+    lastVerifiedDate: "2026-10-30",
     overview: [
       "Heat exposure with altered mental status is heat stroke until proven otherwise and demands immediate aggressive cooling; do not wait for a temperature or exclude heat stroke because the initial reading is below 104°F.",
       "Rapid cooling is initiated concurrently with standard resuscitation and takes precedence over transport in exertional heat stroke when effective immersion is available.",
@@ -164,7 +174,7 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
       { title: "Remove From Heat", text: "Move to cool area, remove tight/excess clothing, obtain glucose; temperature must not delay care.", levels: ALL_LEVELS, tone: "start" },
       { title: "Classify Severity", text: "Cramps • exhaustion • suspected heat stroke (heat exposure plus altered mental status; a temperature below 104°F does not exclude it).", levels: ALL_LEVELS, tone: "decision" },
       { title: "Heat Stroke?", text: "Begin immediate active cooling concurrent with resuscitation. Ice-water immersion is preferred; use tepid-water immersion or tarp-assisted ice-water cooling if unavailable.", levels: ALL_LEVELS, tone: "urgent" },
-      { title: "Cool to 101.5°F", text: "Use rectal core temperature when feasible, without interrupting care. Stop active cooling at 101.5°F (38.6°C).", levels: ALL_LEVELS, tone: "action" },
+      { title: "Cool to below 102°F", text: "Use rectal core temperature when feasible, without interrupting care. Stop active cooling once core temperature is below 102°F (39°C).", levels: ALL_LEVELS, tone: "action" },
       { title: "Support Perfusion", text: "For hypotension, dehydration, or poor perfusion, give isotonic crystalloid in reassessed aliquots: adult 500 mL; pediatric 20 mL/kg. Do not use a routine fixed maximum.", levels: ["AEMT", "Paramedic"], tone: "action" },
       { title: "Reassess + Transport", text: "Airway, ECG, neurologic status, BP, and core temperature; notify destination.", levels: ALL_LEVELS, tone: "transport" },
     ],
@@ -175,15 +185,22 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
     warnings: [
       "Do not delay cooling to obtain a temperature; heat exposure with altered mental status is heat stroke until proven otherwise.",
       "Use rectal core temperature when feasible, but do not interrupt active cooling, airway management, or transport to obtain it.",
-      "Do not overcool; stop active cooling at 101.5°F (38.6°C).",
+      "Do not overcool; stop active cooling once core temperature is below 102°F (39°C).",
       "Antipyretics and dantrolene are not treatments for environmental or exertional heat stroke; use active external cooling.",
+    ],
+    reviewStatus: "Approved",
+    reviewFlags: [
+      "Medical-director approval recorded October 30, 2026.",
+      "The direct Claiborne source PDF replaces the legacy imported sheet and mirrors the approved app content.",
+      "The application remains a beta field reference until full-system clinical release and implementation approval.",
     ],
   }),
 
   protocol({
     id: "te-05", title: "Hypothermia / Frostbite",
     sourcePdf: "/protocols/claiborne/te-05-hypothermia-protocol.pdf", pages: 2,
-    revisionDate: "2022-10-15",
+    revisionDate: "2026-10-30",
+    lastVerifiedDate: "2026-10-30",
     overview: [
       "Remove wet clothing, protect from further heat loss, and handle severe hypothermia carefully while assessing for signs of life for at least 60 seconds.",
       "Treat localized cold injury without rubbing, massage, or allowing refreezing.",
@@ -207,11 +224,19 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
       "Below 30°C (86°F), provide full resuscitation with rewarming. For VF/pVT, defibrillate once; if unsuccessful, defer further shocks and epinephrine until ≥30°C.",
     ],
     pearls: ["Do not use a fixed temperature alone to stop resuscitation. Continue unless there is obvious lethal injury or the patient is frozen solid; seek early Medical Control and consider ECLS-capable destination when feasible."],
+    reviewStatus: "Approved",
+    reviewFlags: [
+      "Medical-director approval recorded October 30, 2026.",
+      "The direct Claiborne source PDF replaces the legacy imported sheet and mirrors the approved app content.",
+      "The application remains a beta field reference until full-system clinical release and implementation approval.",
+    ],
   }),
 
   protocol({
     id: "te-07", title: "Overdose / Toxic Ingestion",
-    sourcePdf: "/protocols/claiborne/te-07-overdose-toxic-ingestion-protocol.pdf", pages: 3,
+    sourcePdf: "/protocols/claiborne/te-07-overdose-toxic-ingestion-protocol.pdf", pages: 2,
+    revisionDate: "2026-10-30",
+    lastVerifiedDate: "2026-10-30",
     overview: [
       "Stabilize ventilation and perfusion first, identify time/substance/amount/co-ingestants, and consult Poison Control.",
       "Naloxone is titrated to adequate ventilation—not restoration of consciousness—and toxin-specific treatment follows the clinical toxidrome and ECG.",
@@ -232,7 +257,7 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
       },
       {
         label: "TE-08 WMD / Nerve Agent",
-        description: "Open for suspected organophosphate or nerve-agent exposure.",
+        description: "Open for scene safety, decontamination, recognition, and escalation of suspected cholinergic exposure.",
         href: "/protocols/te/te-08",
         kind: "protocol",
       },
@@ -242,24 +267,72 @@ export const structuredToxicologyEnvironmentalProtocols: StructuredProtocolConte
       { title: "Inadequate Ventilation?", text: "Ventilate first; suspected opioid: naloxone titrated to breathing.", levels: ALL_LEVELS, tone: "urgent" },
       { title: "Shock / AMS / Seizure?", text: "Treat by age-appropriate shock, diabetic, AMS, behavioral, and seizure pathways.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Poison Control", text: "Call 1-800-222-1222; obtain 12-lead, IV/IO, and cardiac monitor as indicated.", levels: ALL_LEVELS, tone: "action" },
-      { title: "Specific Toxin?", text: "APAP/salicylate • beta/CCB • CO/cyanide • organophosphate • TCA.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Treat + Disposition", text: "Transport unless Poison Control gives a specific home-care recommendation and agency non-transport criteria are met. Intentional, pediatric, pregnant, polysubstance, or symptomatic exposures require direct Poison Control consultation.", levels: ALL_LEVELS, tone: "transport" },
+      { title: "Specific Toxin?", text: "APAP/salicylate • beta/CCB • CO/cyanide • organophosphate • TCA. Use the current medication reference and Poison Help/Medical Control; do not import legacy source-PDF antidote doses.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Treat + Disposition", text: "Patients treated with naloxone require healthcare observation for recurrent respiratory depression. Other low-risk exposures may follow Poison Help home-care advice only when agency non-transport criteria are met. Intentional, pediatric, pregnant, polysubstance, or symptomatic exposures require direct Poison Help consultation.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
-      "Support ventilation, give IN/IM naloxone for suspected opioid-induced respiratory depression, check glucose, and contact Poison Control.",
+      "Support ventilation, administer naloxone for suspected opioid-induced respiratory depression only per the current Medication Reference, check glucose, and contact Poison Help.",
       "If activated charcoal is stocked and authorized, use only after Poison Control or Medical Control recommendation and only when airway protection and swallowing are intact.",
     ],
-    aemt: ["Perform all EMT care plus IV/IO access, broader-route naloxone, reassessed fluids, and toxin-specific treatment only with Poison Control or Medical Control guidance."],
-    paramedic: ["Perform all prior care plus cardiac monitoring, calcium for beta-blocker/calcium-channel-blocker toxicity, sodium bicarbonate for life-threatening sodium-channel-blocker cardiotoxicity, pacing, and toxidrome-specific advanced care."],
-    medications: [
-      { name: "Glucagon", dose: "Beta/CCB: adult 2–4 mg IV/IO/IM; pediatric 0.1 mg/kg; may repeat in 15 min" },
-      { name: "Calcium", dose: "For beta-blocker/calcium-channel-blocker toxicity: use calcium gluconate through a peripheral IV when indicated; reserve calcium chloride for IO or central access when authorized." },
-      { name: "Sodium bicarbonate", dose: "For life-threatening sodium-channel-blocker cardiotoxicity (QRS widening, hypotension, ventricular dysrhythmia, or seizure): consult Poison Control/Medical Control and use the approved medication reference." },
-    ],
+    aemt: ["Perform all EMT care plus IV/IO access, broader-route naloxone per the current Medication Reference, reassessed fluids, and toxin-specific treatment only with Poison Help or Medical Control guidance."],
+    paramedic: ["Perform all prior care plus cardiac monitoring, pacing when indicated, and toxidrome-specific advanced care using the current Medication Reference with Poison Help or Medical Control guidance."],
     warnings: [
       "Ventilation has priority over naloxone; do not dose solely to restore consciousness. Use the Medication Reference for approved naloxone dosing.",
       "Charcoal is not routine and should not be given to a patient unable to protect the airway; use only when stocked, authorized, and recommended by Poison Control or Medical Control.",
+      "Do not clear a patient only because they awaken after naloxone; recurrent respiratory depression can occur and requires healthcare observation.",
       "Do not rely only on history in a suspected intentional ingestion; assess for hidden medications and weapons.",
+    ],
+    reviewStatus: "Approved",
+    reviewFlags: [
+      "Medical-director approval recorded October 30, 2026.",
+      "The direct Claiborne source PDF replaces the legacy imported sheet and mirrors the approved app content.",
+      "Standalone legacy antidote doses were removed; the current Claiborne Medication Reference, Poison Help, and Medical Control control agent-specific therapy.",
+      "The application remains a beta field reference until full-system clinical release and implementation approval.",
+    ],
+  }),
+
+  protocol({
+    id: "te-08", title: "WMD / Nerve-Agent Exposure",
+    sourcePdf: "/protocols/claiborne/te-08-wmd-nerve-agent-protocol.pdf", pages: 2,
+    revisionDate: "2026-10-30",
+    lastVerifiedDate: "2026-10-30",
+    overview: [
+      "Use for suspected nerve-agent or organophosphate exposure. Rescuer protection, decontamination, airway/ventilation support, and rapid escalation are the field priorities.",
+      "Claiborne ground units do not carry a CHEMPACK, Mark I, or equivalent atropine/pralidoxime field kit. This protocol does not authorize routine field autoinjector or antidote administration.",
+    ],
+    indications: ["Known or suspected nerve-agent release, intentional chemical event, or organophosphate/carbamate exposure with cholinergic findings."],
+    actionLinks: [
+      { label: "Call Poison Help", description: "National Poison Control line", href: "tel:+18002221222", kind: "call" },
+      { label: "Chemical / HazMat Exposure", description: "Open for zones, PPE, decontamination, and agent cards.", href: "/protocols/te/te-09", kind: "protocol" },
+      { label: "Overdose / Toxic Ingestion", description: "Open for airway, ventilation, and poison-exposure support.", href: "/protocols/te/te-07", kind: "protocol" },
+    ],
+    flow: [
+      { title: "Do Not Enter the Hot Zone", text: "Stage uphill/upwind when possible. Request HazMat, fire, law enforcement, and incident command. Only trained and properly protected personnel may enter the hazard area.", levels: ALL_LEVELS, tone: "start" },
+      { title: "Remove + Decontaminate", text: "Protected personnel remove the patient from the source, remove and bag contaminated clothing, brush dry material, and irrigate as directed. Prevent secondary contamination of responders, the ambulance, and the receiving facility.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Airway / Ventilation / Seizure", text: "Suction secretions, provide oxygen and BVM ventilation, and use the applicable seizure pathway. Do not allow antidote retrieval to delay resuscitation.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Cholinergic Syndrome?", text: "Miosis, salivation, lacrimation, sweating, bronchorrhea, bronchospasm, vomiting, diarrhea, urination, bradycardia, fasciculations, weakness, apnea, or seizure after a compatible exposure.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Escalate", text: "Call Poison Help (1-800-222-1222) and Medical Control. Request HazMat/mutual-aid support and early receiving-facility coordination. Claiborne ground units have no CHEMPACK/Mark I or equivalent atropine/pralidoxime kit.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Transport + Handoff", text: "Transport after indicated decontamination. Communicate agent, route, scene zone, PPE, symptoms, decontamination, airway/ventilatory care, and Poison Help/Medical Control guidance.", levels: ALL_LEVELS, tone: "transport" },
+    ],
+    emt: [
+      "Remain outside the hazard until assigned PPE and training level are appropriate; support removal, decontamination, suction, oxygenation, BVM ventilation, glucose assessment, and rapid transport.",
+      "Recognize the cholinergic syndrome and notify Poison Help, Medical Control, HazMat, and the receiving facility early.",
+    ],
+    aemt: ["Perform all EMT care plus IV/IO access, authorized fluids, reassessment, and preparation for rapid respiratory deterioration. Do not administer unstocked atropine/pralidoxime or use non-existent autoinjectors under this protocol."],
+    paramedic: ["Perform all prior care plus advanced airway/ventilation, cardiac monitoring, and seizure or shock care under the applicable approved pathway. Coordinate agent-specific therapy with Medical Control and the receiving facility; no CHEMPACK/Mark I field antidote pathway is authorized."],
+    warnings: [
+      "Do not enter a hot zone, vapor cloud, confined space, or oxygen-deficient atmosphere without required training, monitoring, PPE, and respiratory protection.",
+      "Claiborne ground units do not carry a CHEMPACK, Mark I, or equivalent atropine/pralidoxime kit. Do not add external kit dosing or deploy an unstocked antidote from the legacy imported source.",
+      "Secondary contamination can injure responders and contaminate the ambulance or receiving facility; decontaminate before entry into the clean treatment area.",
+      "Airway suction, ventilation, seizure care, decontamination, Poison Help, Medical Control, and rapid transport take priority over unavailable antidote retrieval.",
+    ],
+    pearls: ["Atropine and pralidoxime are recognized antidotes for life-threatening cholinergic poisoning, but this Claiborne ground protocol does not create an unstocked field-antidote pathway. Future adoption requires documented kit availability, training, and standing orders."],
+    reviewStatus: "Approved",
+    reviewFlags: [
+      "Medical-director approval recorded October 30, 2026.",
+      "The legacy North Carolina CHEMPACK, Mark I, auto-injector, and dose instructions were removed because Claiborne ground units do not carry those resources.",
+      "Any future field-antidote pathway requires separately approved inventory, training, pharmacy/formulary review, and standing orders.",
+      "The application remains a beta field reference until full-system clinical release and implementation approval.",
     ],
   }),
 
