@@ -1,6 +1,6 @@
 {
-  "version": "2-31-0-october-2026",
-  "appVersion": "2.31.0",
+  "version": "2-32-0-october-2026",
+  "appVersion": "2.32.0",
   "protocolVersion": "October 2026",
   "resources": [
     {
@@ -1441,27 +1441,27 @@
     {
       "url": "/protocols/claiborne/te-03-drowning-submersion-injury-protocol.pdf",
       "kind": "document",
-      "bytes": 436536
+      "bytes": 48437
     },
     {
       "url": "/protocols/claiborne/te-04-hyperthermia-protocol.pdf",
       "kind": "document",
-      "bytes": 373159
+      "bytes": 48445
     },
     {
       "url": "/protocols/claiborne/te-05-hypothermia-protocol.pdf",
       "kind": "document",
-      "bytes": 406025
+      "bytes": 48729
     },
     {
       "url": "/protocols/claiborne/te-07-overdose-toxic-ingestion-protocol.pdf",
       "kind": "document",
-      "bytes": 479541
+      "bytes": 48540
     },
     {
       "url": "/protocols/claiborne/te-08-wmd-nerve-agent-protocol.pdf",
       "kind": "document",
-      "bytes": 435375
+      "bytes": 49328
     },
     {
       "url": "/protocols/claiborne/up-01-universal-patient-care-protocol.pdf",
@@ -1576,12 +1576,12 @@
     {
       "url": "/protocols/claiborne/te-09-chemical-hazmat-exposure-protocol.pdf",
       "kind": "document",
-      "bytes": 14514
+      "bytes": 54490
     },
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 32392
+      "bytes": 32315
     },
     {
       "url": "/manifest.webmanifest",
@@ -1665,6 +1665,6 @@
     }
   ],
   "resourceCount": 332,
-  "knownBytes": 20031724,
-  "estimatedBytes": 34253036
+  "knownBytes": 18184466,
+  "estimatedBytes": 32405778
 }
