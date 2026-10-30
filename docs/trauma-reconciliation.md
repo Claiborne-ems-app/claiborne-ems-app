@@ -46,3 +46,7 @@ These are not resolved by source parity or a green technical build:
 - Operational documents: signed regional trauma/burn/pediatric destination plan and transfer arrangements; approved chest-seal/positive-pressure-ventilation and device-specific decompression/tourniquet procedures; pediatric SMR decision aid and clearance authority; ocular-pH equipment/training/endpoint; high-risk crush-release orders; blood-product program support if implemented.
 
 The release gate remains intentionally separate from technical checks. No ATLS certification, state-scope certification, clinical-release approval, production deployment, or successful physical-device offline test is claimed.
+
+## Package version safety
+
+Use `node scripts/set-package-version.mjs <version>` to synchronize only the root package metadata. Never replace version strings globally: unrelated dependencies can share an app version. Update the app/offline release configuration separately and regenerate its artifacts. `tests/package-version.test.mjs` pins the unchanged dependency lock from upstream `7e08e41` and checks that the version helper cannot change dependency ranges, tarball URLs or integrity metadata. Intentional future dependency upgrades must review and update that fingerprint.
