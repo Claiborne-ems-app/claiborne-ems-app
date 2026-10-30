@@ -5,6 +5,11 @@ export interface MedicationDoseReference {
   indication: string;
   adult: string;
   pediatric: string;
+  /** Conditional AEMT access remains disabled until separately verified by the agency. */
+  conditionalAemt?: boolean;
+  /** Governing order for this indication/route/age-specific row. */
+  protocolLink?: { label: string; href: string };
+  releaseNote?: string;
 }
 
 export interface MedicationReference {
@@ -22,8 +27,8 @@ export interface MedicationReference {
 export const medicationReferenceSource = {
   label:
     "Claiborne County EMS RX-R1 Formulary — 42 verified stocked medications plus protocol-specific references",
-  href: "https://www.tn.gov/content/dam/tn/health/events/TN%20State%20Protocol%20Guidelines%20%20Sept24.pdf",
-  reviewed: "August 15, 2026",
+  href: "https://www.tn.gov/content/dam/tn/health/events/TN%20State%20Guidelines%202024-2025%2009.11.2025.pdf",
+  reviewed: "October 30, 2026 (scoped trauma reconciliation; unresolved state/local differences remain)",
 };
 
 type SingleDoseMedication = Omit<MedicationReference, "doses"> & {
@@ -42,24 +47,55 @@ function medication(input: SingleDoseMedication): MedicationReference {
 }
 
 export const medicationReferences: MedicationReference[] = [
-  medication({
+  {
     id: "acetaminophen",
     name: "Acetaminophen",
     tradeNames: ["Tylenol", "Ofirmev"],
     uses: ["Pain", "Fever"],
-    level: "EMT",
-    indication: "Pain; fever",
-    adult: "650-1,000 mg PO; 1 g IV/IO",
-    pediatric: "Pain (PM-04, age 2 to <16): 15 mg/kg PO once; maximum 650 mg. Fever: see UP-10.",
+    doses: [
+      {
+        "level": "EMT",
+        "indication": "Pain — oral",
+        "adult": "UP-11, age 16 and older: 650–1,000 mg PO once.",
+        "pediatric": "PM-04, age 2 to <16: 15 mg/kg PO once; maximum 650 mg. Under age 2: Medical Control.",
+        "protocolLink": {
+          "label": "UP-11 Adult Pain Control",
+          "href": "/protocols/up/up-11"
+        }
+      },
+      {
+        "level": "EMT",
+        "indication": "Uncomfortable fever — oral",
+        "adult": "650–1,000 mg PO.",
+        "pediatric": "Older than 3 months: 15 mg/kg PO; maximum 650 mg. Use UP-10 for assessment and exclusions.",
+        "protocolLink": {
+          "label": "UP-10 Fever",
+          "href": "/protocols/up/up-10"
+        }
+      },
+      {
+        "level": "Paramedic",
+        "indication": "Adult pain — IV/IO; AEMT authorization pending",
+        "adult": "Age 16 and older: 1 g IV/IO once. Do not routinely combine with another acetaminophen dose.",
+        "pediatric": "IV/IO acetaminophen is not a standing-order pediatric analgesic under PM-04; use its oral/nonpharmacologic options.",
+        "protocolLink": {
+          "label": "UP-11 Adult Pain Control",
+          "href": "/protocols/up/up-11"
+        },
+        "conditionalAemt": true
+      }
+    ],
     cautions: [
-      "Confirm route authorization, liver disease, prior acetaminophen use, and maximum daily dose.",
+      "Check severe liver disease, allergy, suspected overdose, prior dose/time, and maximum daily exposure. Do not repeat when previous dose/time is uncertain.",
+      "Do not give IV/IO acetaminophen solely for uncomplicated fever. Do not establish IO solely for pain in a stable patient.",
+      "AEMT expanded analgesia is not enabled while authorization is unverified. Current Tennessee authority for the exact drug/route, documented applicable education, agency competency/credentialing, and medical-director orders for the drug, route, indication, and age group are all required; course completion or selecting AEMT view alone is not authorization."
     ],
     protocolLinks: [
       { label: "Pain Control - Adult", href: "/protocols/up/up-11" },
       { label: "Pediatric Pain Control", href: "/protocols/pm/pm-04" },
       { label: "Fever", href: "/protocols/up/up-10" },
     ],
-  }),
+  },
   medication({
     id: "adenosine",
     name: "Adenosine",
@@ -80,24 +116,54 @@ export const medicationReferences: MedicationReference[] = [
       { label: "Pediatric Narrow-Complex Tachycardia", href: "/protocols/pc/pc-05" },
     ],
   }),
-  medication({
+  {
     id: "albuterol",
     name: "Albuterol",
     tradeNames: ["Proventil", "Ventolin"],
     uses: ["Asthma/COPD", "Allergic reaction", "Hyperkalemia"],
-    level: "EMT",
-    indication: "Bronchospasm",
-    adult: "Nebulized 2.5–5 mg; MDI 2 puffs inhaled",
-    pediatric: "Bronchospasm: under 20 kg 2.5 mg nebulized; 20 kg or greater 5 mg nebulized. Hyperkalemia: under 15 kg 10 mg nebulized; 15 kg or greater 15 mg nebulized; may repeat every 2 hr as needed",
+    doses: [
+      {
+        "level": "EMT",
+        "indication": "Bronchospasm — inhaled",
+        "adult": "Nebulized 2.5–5 mg; MDI 2 puffs inhaled.",
+        "pediatric": "Under 20 kg: 2.5 mg nebulized; 20 kg or greater: 5 mg nebulized.",
+        "protocolLink": {
+          "label": "AR-04 Adult COPD / Asthma",
+          "href": "/protocols/ar/ar-04"
+        }
+      },
+      {
+        "level": "Paramedic",
+        "indication": "AM-03 suspected hyperkalemia with a pulse — nebulized",
+        "adult": "10 mg by nebulizer. Do not administer nebulized albuterol during cardiac arrest.",
+        "pediatric": "The prior pediatric formulary reference is under 15 kg: 10 mg; 15 kg or greater: 15 mg. This is not a PM-04 analgesic or a pediatric standing order under adult AM-03; obtain the separate pediatric order/Medical Control.",
+        "protocolLink": {
+          "label": "AM-03 Hyperkalemia / Renal Failure",
+          "href": "/protocols/am/am-03"
+        },
+        "releaseNote": "No automatic repeat interval is authorized here. Confirm pediatric eligibility and repeat/cumulative limits in a separately approved order before use; the former generic every-2-hour instruction is not carried into AM-03."
+      }
+    ],
     cautions: [
-      "Reassess heart rate, work of breathing, air movement, and response after treatment.",
+      "Reassess heart rate, work of breathing, air movement, and response.",
       "For anaphylaxis, albuterol is adjunctive and does not replace IM epinephrine.",
+      "High-dose hyperkalemia treatment is Paramedic-only, distinct from EMT bronchospasm care. Do not give nebulized albuterol during cardiac arrest."
     ],
     protocolLinks: [
-      { label: "Adult COPD / Asthma", href: "/protocols/ar/ar-04" },
-      { label: "Pediatric Respiratory Distress", href: "/protocols/ar/ar-07" },
+      {
+        "label": "Adult COPD / Asthma",
+        "href": "/protocols/ar/ar-04"
+      },
+      {
+        "label": "Pediatric Respiratory Distress",
+        "href": "/protocols/ar/ar-07"
+      },
+      {
+        "label": "AM-03 Hyperkalemia / Renal Failure",
+        "href": "/protocols/am/am-03"
+      }
     ],
-  }),
+  },
   medication({
     id: "amiodarone",
     name: "Amiodarone",
@@ -155,23 +221,60 @@ export const medicationReferences: MedicationReference[] = [
       { label: "WMD / Nerve Agent", href: "/protocols/te/te-08" },
     ],
   }),
-  medication({
+  {
     id: "calcium",
     name: "Calcium Chloride / Gluconate",
     tradeNames: ["Calcium chloride", "Calcium gluconate"],
     uses: ["Hyperkalemia/arrhythmia", "Calcium-channel blocker toxicity", "Calcium replacement"],
-    level: "Paramedic",
-    indication: "Hyperkalemia/arrhythmia; other protocol-specific calcium use",
-    adult: "Calcium chloride: 500–1,000 mg IV/IO for hyperkalemia/arrhythmia. Calcium gluconate: 1.5–3 g IV for hyperkalemia/arrhythmia; preferred through a peripheral IV",
-    pediatric: "Calcium chloride: 20 mg/kg IV/IO for hyperkalemia/arrhythmia. Calcium gluconate: 60–100 mg/kg IV/IO for hyperkalemia/arrhythmia",
+    doses: [
+      {
+        "level": "Paramedic",
+        "indication": "Hyperkalemia/arrhythmia — calcium chloride IV/IO",
+        "adult": "500–1,000 mg IV/IO. Use AM-03 indication and monitoring requirements.",
+        "pediatric": "20 mg/kg IV/IO reference; not a pediatric standing order under adult AM-03. Pediatric indication and limits require the separate order/Medical Control.",
+        "protocolLink": {
+          "label": "AM-03 Hyperkalemia / Renal Failure",
+          "href": "/protocols/am/am-03"
+        }
+      },
+      {
+        "level": "Paramedic",
+        "indication": "Hyperkalemia/arrhythmia — calcium gluconate IV",
+        "adult": "1.5–3 g IV initial; preferred for peripheral IV administration.",
+        "pediatric": "60–100 mg/kg IV/IO reference; pediatric eligibility and limits require the separate order/Medical Control.",
+        "protocolLink": {
+          "label": "AM-03 Hyperkalemia / Renal Failure",
+          "href": "/protocols/am/am-03"
+        },
+        "releaseNote": "Release decision pending: AM-03 describes a 3-g maximum per episode and also a repeat dose. The repeat dose and cumulative maximum must be reconciled; do not infer permission to exceed 3 g or repeat without clarification."
+      },
+      {
+        "level": "Paramedic",
+        "indication": "Calcium-channel blocker toxicity / other calcium indications",
+        "adult": "Use the condition-specific order; do not transfer the hyperkalemia regimen to another indication.",
+        "pediatric": "Use the separately approved pediatric indication-specific order or Medical Control.",
+        "protocolLink": {
+          "label": "TE-07 Overdose / Toxic Ingestion",
+          "href": "/protocols/te/te-07"
+        }
+      }
+    ],
     cautions: [
-      "Verify the calcium salt, concentration, indication, and protocol before administration.",
-      "Prefer calcium gluconate through a peripheral IV. Calcium chloride extravasation can cause severe tissue injury; use central/IO administration when appropriate and authorized.",
+      "Verify calcium salt, concentration, route, indication, and cumulative dose. Calcium chloride and gluconate are alternatives; do not give both as the initial calcium treatment.",
+      "Calcium gluconate is preferred through a peripheral IV. Monitor continuously for extravasation; calcium chloride can cause severe tissue injury.",
+      "Do not mix calcium and bicarbonate or infuse simultaneously through the same tubing; flush thoroughly between medications."
     ],
     protocolLinks: [
-      { label: "Overdose / Toxic Ingestion", href: "/protocols/te/te-07" },
+      {
+        "label": "AM-03 Hyperkalemia / Renal Failure",
+        "href": "/protocols/am/am-03"
+      },
+      {
+        "label": "Overdose / Toxic Ingestion",
+        "href": "/protocols/te/te-07"
+      }
     ],
-  }),
+  },
   medication({
     id: "dexamethasone",
     name: "Dexamethasone",
@@ -374,23 +477,43 @@ export const medicationReferences: MedicationReference[] = [
       { label: "Airway Drug-Assisted Intubation", href: "/protocols/ar/ar-03" },
     ],
   }),
-  medication({
+  {
     id: "fentanyl",
     name: "Fentanyl",
     tradeNames: ["Sublimaze"],
     uses: ["Pain", "Procedures", "Advanced sedation"],
-    level: "Paramedic",
-    indication: "Pain; procedures; advanced sedation",
-    adult: "25-100 mcg IV/IO",
-    pediatric: "PM-04 pain (age 2 to <16): 1 mcg/kg slow IV/IO once; maximum 50 mcg. Medical Control authorization is required before any second dose.",
+    doses: [
+      {
+        "level": "Paramedic",
+        "indication": "Pain — IV/IO",
+        "adult": "UP-11 age 16 and older: 50 mcg slow IV/IO; repeat 25–50 mcg every 5 minutes as needed; maximum total 100 mcg.",
+        "pediatric": "PM-04 age 2 to <16: 1 mcg/kg slow IV/IO once; maximum 50 mcg. Medical Control authorization is required before any second dose.",
+        "protocolLink": {
+          "label": "UP-11 Adult Pain Control",
+          "href": "/protocols/up/up-11"
+        }
+      },
+      {
+        "level": "Paramedic",
+        "indication": "DAI / post-intubation analgesia — IV/IO",
+        "adult": "AR-03: 25–50 mcg IV/IO; repeat cautiously as needed; maximum 100 mcg. Use the separate airway/sedation order, not the pain regimen.",
+        "pediatric": "Pediatric DAI requires a direct online Medical Director or Assistant Medical Director order; use the pediatric/airway pathway.",
+        "protocolLink": {
+          "label": "AR-03 Drug-Assisted Airway",
+          "href": "/protocols/ar/ar-03"
+        }
+      }
+    ],
     cautions: [
-      "Monitor airway, ventilation, oxygenation, mental status, and blood pressure.",
+      "Select one opioid for pain; do not combine fentanyl, morphine and hydromorphone under UP-11.",
+      "Use continuous SpO₂ and waveform EtCO₂ with opioids; monitor airway, ventilation, mental status, blood pressure, cumulative dose and response.",
+      "Claiborne opioid analgesia remains Paramedic-only. AEMT expanded-analgesia coursework does not create a local opioid standing order."
     ],
     protocolLinks: [
       { label: "Pain Control - Adult", href: "/protocols/up/up-11" },
       { label: "Pediatric Pain Control", href: "/protocols/pm/pm-04" },
     ],
-  }),
+  },
   medication({
     id: "glucagon",
     name: "Glucagon",
@@ -407,22 +530,48 @@ export const medicationReferences: MedicationReference[] = [
       { label: "Pediatric Diabetic Emergency", href: "/protocols/pm/pm-02" },
     ],
   }),
-  medication({
+  {
     id: "hydromorphone",
     name: "Hydromorphone",
     tradeNames: ["Dilaudid"],
     uses: ["Pain"],
-    level: "Paramedic",
-    indication: "Pain",
-    adult: "0.5-1 mg IV/IO or IM",
-    pediatric: "0.01 mg/kg",
+    doses: [
+      {
+        "level": "Paramedic",
+        "indication": "Adult pain — slow IV/IO",
+        "adult": "Age 16 and older: 0.5 mg slow IV/IO; repeat 0.5 mg after 10 minutes as needed; maximum total 1 mg.",
+        "pediatric": "Not authorized as a standing-order pediatric analgesic under PM-04. Use PM-04; contact Medical Control for patients younger than 2 years.",
+        "protocolLink": {
+          "label": "UP-11 Adult Pain Control",
+          "href": "/protocols/up/up-11"
+        }
+      },
+      {
+        "level": "Paramedic",
+        "indication": "Adult pain — IM when vascular access unavailable",
+        "adult": "Age 16 and older: 0.5–1 mg IM once.",
+        "pediatric": "Not authorized as a standing-order pediatric analgesic under PM-04. Use PM-04; contact Medical Control for patients younger than 2 years.",
+        "protocolLink": {
+          "label": "UP-11 Adult Pain Control",
+          "href": "/protocols/up/up-11"
+        }
+      }
+    ],
     cautions: [
-      "Hydromorphone is a potent opioid; verify dose units and monitor ventilation closely.",
+      "Potent opioid: verify dose units, prior analgesics, cumulative dose and ventilation. Select only one opioid; additional dosing beyond UP-11 limits requires Medical Control.",
+      "Maintain continuous SpO₂ and waveform EtCO₂, cardiac monitoring, and reassessment every 5–10 minutes."
     ],
     protocolLinks: [
-      { label: "Pain Control - Adult", href: "/protocols/up/up-11" },
+      {
+        "label": "UP-11 Adult Pain Control",
+        "href": "/protocols/up/up-11"
+      },
+      {
+        "label": "PM-04 Pediatric Pain Control",
+        "href": "/protocols/pm/pm-04"
+      }
     ],
-  }),
+  },
   medication({
     id: "ibuprofen",
     name: "Ibuprofen",
@@ -458,43 +607,122 @@ export const medicationReferences: MedicationReference[] = [
       { label: "Pediatric Respiratory Distress", href: "/protocols/ar/ar-07" },
     ],
   }),
-  medication({
+  {
     id: "ketamine",
     name: "Ketamine",
     tradeNames: ["Ketalar"],
     uses: ["RSI", "Chemical restraint", "Seizures", "Pain", "Procedures", "Sedation"],
-    level: "Paramedic",
-    indication: "DAI/RSI",
-    adult: "1–2 mg/kg IV/IO; if vascular access is unavailable, 4 mg/kg IM (maximum 400 mg)",
-    pediatric: "Direct online Medical Director or Assistant Medical Director order for DAI; use the applicable pediatric pathway",
+    doses: [
+      {
+        "level": "Paramedic",
+        "indication": "DAI/RSI — IV/IO or IM",
+        "adult": "1–2 mg/kg IV/IO; if vascular access is unavailable, 4 mg/kg IM (maximum 400 mg).",
+        "pediatric": "Direct online Medical Director or Assistant Medical Director order for pediatric DAI; use the applicable pediatric pathway.",
+        "protocolLink": {
+          "label": "AR-03 Drug-Assisted Airway",
+          "href": "/protocols/ar/ar-03"
+        }
+      },
+      {
+        "level": "Paramedic",
+        "indication": "Adult pain — IV/IO",
+        "adult": "Age 16 and older: 0.3 mg/kg IV/IO slowly over 10 minutes; maximum 30 mg per dose. May repeat every 20 minutes as needed; maximum three total doses. Never rapid IV push.",
+        "pediatric": "Not authorized as a standing-order pediatric analgesic under PM-04. Use PM-04; contact Medical Control for patients younger than 2 years.",
+        "protocolLink": {
+          "label": "UP-11 Adult Pain Control",
+          "href": "/protocols/up/up-11"
+        }
+      },
+      {
+        "level": "Paramedic",
+        "indication": "Adult pain — IN when vascular access unavailable",
+        "adult": "Age 16 and older: 0.5–1 mg/kg IN once; maximum 100 mg. Single-dose option under UP-11.",
+        "pediatric": "Not authorized as a standing-order pediatric analgesic under PM-04. Use PM-04; contact Medical Control for patients younger than 2 years.",
+        "protocolLink": {
+          "label": "UP-11 Adult Pain Control",
+          "href": "/protocols/up/up-11"
+        }
+      }
+    ],
     cautions: [
-      "DAI dosing is weight-based. Ideal-body-weight dosing is not yet part of this protocol.",
-      "Other ketamine uses have separate indication- and route-specific doses; follow the linked protocol.",
-      "Continuous airway, ventilation, oxygenation, cardiac, blood-pressure, and sedation monitoring are required.",
+      "For suspected penetrating eye injury or open globe, do not give ketamine unless expressly authorized by Medical Control under TB-11; preserve this restriction when using an analgesia or airway reference.",
+      "Ketamine analgesia, DAI, agitation, seizures, and post-intubation sedation have separate indications, doses and permissions. Do not substitute DAI doses for analgesia.",
+      "Continuous airway, ventilation, oxygenation, cardiac, blood-pressure and sedation monitoring are required. Do not routinely start ketamine and an opioid together.",
+      "Claiborne ketamine analgesia remains Paramedic-only; AEMT coursework alone does not authorize it."
     ],
     protocolLinks: [
-      { label: "Airway Drug-Assisted Intubation", href: "/protocols/ar/ar-03" },
-      { label: "Pain Control - Adult", href: "/protocols/up/up-11" },
-      { label: "Behavioral Agitation / Sedation", href: "/protocols/up/up-18" },
-      { label: "Seizure", href: "/protocols/up/up-13" },
+      {
+        "label": "Drug-Assisted Airway",
+        "href": "/protocols/ar/ar-03"
+      },
+      {
+        "label": "UP-11 Adult Pain Control",
+        "href": "/protocols/up/up-11"
+      },
+      {
+        "label": "PM-04 Pediatric Pain Control",
+        "href": "/protocols/pm/pm-04"
+      },
+      {
+        "label": "Eye Trauma / Open Globe Safeguards",
+        "href": "/protocols/tb/tb-11"
+      },
+      {
+        "label": "Behavioral Agitation / Sedation",
+        "href": "/protocols/up/up-18"
+      },
+      {
+        "label": "Seizure",
+        "href": "/protocols/up/up-13"
+      }
     ],
-  }),
-  medication({
+  },
+  {
     id: "ketorolac",
     name: "Ketorolac",
     tradeNames: ["Toradol"],
-    uses: ["Pain", "Fever"],
-    level: "Paramedic",
-    indication: "Pain; fever",
-    adult: "15–30 mg IV or 60 mg IM",
-    pediatric: "0.5 mg/kg IV once; maximum 15 mg",
+    uses: ["Adult pain"],
+    doses: [
+      {
+        "level": "Paramedic",
+        "indication": "Adult pain — IV; AEMT authorization pending",
+        "adult": "Age 16 and older: 15–30 mg IV once.",
+        "pediatric": "Not authorized as a standing-order pediatric analgesic under PM-04. Use PM-04; contact Medical Control for patients younger than 2 years.",
+        "protocolLink": {
+          "label": "UP-11 Adult Pain Control",
+          "href": "/protocols/up/up-11"
+        },
+        "conditionalAemt": true
+      },
+      {
+        "level": "Paramedic",
+        "indication": "Adult pain — IM; AEMT authorization pending",
+        "adult": "Age 16 and older: 60 mg IM once.",
+        "releaseNote": "Local UP-11 retains 60 mg IM, while the current Tennessee reference lists 10–30 mg IV/IM. The medical director must reconcile this state/local dose difference before release; this update does not silently change the local dose or verify expanded AEMT authority.",
+        "pediatric": "Not authorized as a standing-order pediatric analgesic under PM-04. Use PM-04; contact Medical Control for patients younger than 2 years.",
+        "protocolLink": {
+          "label": "UP-11 Adult Pain Control",
+          "href": "/protocols/up/up-11"
+        },
+        "conditionalAemt": true
+      }
+    ],
     cautions: [
-      "Avoid with renal disease, active bleeding, GI ulcer, NSAID allergy, pregnancy, or recent NSAID use.",
+      "Avoid with renal disease/transplant, significant dehydration, hypotension, active GI bleeding, NSAID allergy, clinically significant anticoagulant-associated bleeding risk, pregnancy, or recent NSAID administration.",
+      "Do not give solely for uncomplicated fever. PM-04 does not authorize pediatric ketorolac standing orders.",
+      "AEMT expanded analgesia is not enabled while authorization is unverified. Current Tennessee authority for the exact drug/route, documented applicable education, agency competency/credentialing, and medical-director orders for the drug, route, indication, and age group are all required; course completion or selecting AEMT view alone is not authorization."
     ],
     protocolLinks: [
-      { label: "Pain Control - Adult", href: "/protocols/up/up-11" },
+      {
+        "label": "UP-11 Adult Pain Control",
+        "href": "/protocols/up/up-11"
+      },
+      {
+        "label": "PM-04 Pediatric Pain Control",
+        "href": "/protocols/pm/pm-04"
+      }
     ],
-  }),
+  },
   medication({
     id: "labetalol",
     name: "Labetalol",
@@ -635,22 +863,48 @@ export const medicationReferences: MedicationReference[] = [
       { label: "Post-Intubation / BIAD Management", href: "/protocols/ar/ar-08" },
     ],
   },
-  medication({
+  {
     id: "morphine",
     name: "Morphine",
     tradeNames: ["Morphine sulfate"],
     uses: ["Pain"],
-    level: "Paramedic",
-    indication: "Pain",
-    adult: "5-10 mg IV/IO or IM",
-    pediatric: "0.1 mg/kg",
+    doses: [
+      {
+        "level": "Paramedic",
+        "indication": "Adult pain — slow IV/IO",
+        "adult": "Age 16 and older: 5 mg slow IV/IO; repeat 5 mg after 10 minutes as needed; maximum total 10 mg.",
+        "pediatric": "Not authorized as a standing-order pediatric analgesic under PM-04. Use PM-04; contact Medical Control for patients younger than 2 years.",
+        "protocolLink": {
+          "label": "UP-11 Adult Pain Control",
+          "href": "/protocols/up/up-11"
+        }
+      },
+      {
+        "level": "Paramedic",
+        "indication": "Adult pain — IM when vascular access unavailable",
+        "adult": "Age 16 and older: 5–10 mg IM once.",
+        "pediatric": "Not authorized as a standing-order pediatric analgesic under PM-04. Use PM-04; contact Medical Control for patients younger than 2 years.",
+        "protocolLink": {
+          "label": "UP-11 Adult Pain Control",
+          "href": "/protocols/up/up-11"
+        }
+      }
+    ],
     cautions: [
-      "Monitor airway, ventilation, oxygenation, mental status, blood pressure, and cumulative opioid dose.",
+      "Monitor airway, ventilation, oxygenation, mental status, blood pressure and cumulative opioid dose. Select only one opioid; additional dosing beyond UP-11 limits requires Medical Control.",
+      "Maintain continuous SpO₂ and waveform EtCO₂, cardiac monitoring, and reassessment every 5–10 minutes."
     ],
     protocolLinks: [
-      { label: "Pain Control - Adult", href: "/protocols/up/up-11" },
+      {
+        "label": "UP-11 Adult Pain Control",
+        "href": "/protocols/up/up-11"
+      },
+      {
+        "label": "PM-04 Pediatric Pain Control",
+        "href": "/protocols/pm/pm-04"
+      }
     ],
-  }),
+  },
   {
     id: "nitroglycerin",
     name: "Nitroglycerin",
@@ -789,23 +1043,48 @@ export const medicationReferences: MedicationReference[] = [
       { label: "Airway Drug-Assisted Intubation", href: "/protocols/ar/ar-03" },
     ],
   }),
-  medication({
+  {
     id: "sodium-bicarbonate",
     name: "Sodium Bicarbonate",
     tradeNames: ["Sodium bicarbonate"],
-    uses: ["Cardiac arrest", "Overdose"],
-    level: "Paramedic",
-    indication: "Cardiac arrest; overdose",
-    adult: "1 mEq/kg IV/IO",
-    pediatric: "1 mEq/kg",
+    uses: ["Hyperkalemia", "Protocol-specific toxicologic emergency"],
+    doses: [
+      {
+        "level": "Paramedic",
+        "indication": "AM-03 suspected hyperkalemia / severe metabolic acidosis — IV/IO",
+        "adult": "1 mEq/kg IV/IO; maximum 50 mEq. Use the AM-03 indication and monitoring safeguards.",
+        "pediatric": "No pediatric trauma/hyperkalemia standing order is supplied by adult AM-03. Use a separately approved pediatric order or Medical Control.",
+        "protocolLink": {
+          "label": "AM-03 Hyperkalemia / Renal Failure",
+          "href": "/protocols/am/am-03"
+        }
+      },
+      {
+        "level": "Paramedic",
+        "indication": "Toxicologic indication — IV/IO",
+        "adult": "1 mEq/kg IV/IO reference; use the toxin-specific order for dose, repeat, maximum and clinical endpoint.",
+        "pediatric": "1 mEq/kg reference; use the pediatric toxin-specific order for route, repeat, maximum and endpoint.",
+        "protocolLink": {
+          "label": "TE-07 Overdose / Toxic Ingestion",
+          "href": "/protocols/te/te-07"
+        }
+      }
+    ],
     cautions: [
-      "Use only for a protocol-defined indication; it is not routine for every cardiac arrest.",
-      "Verify concentration and ensure adequate ventilation.",
+      "Not routine in every cardiac arrest. Use only the protocol-defined indication; do not transfer a toxicology regimen to traumatic or medical arrest.",
+      "Verify concentration and adequate ventilation. Do not mix with calcium or administer simultaneously through the same tubing; flush thoroughly."
     ],
     protocolLinks: [
-      { label: "Overdose / Toxic Ingestion", href: "/protocols/te/te-07" },
+      {
+        "label": "AM-03 Hyperkalemia / Renal Failure",
+        "href": "/protocols/am/am-03"
+      },
+      {
+        "label": "Overdose / Toxic Ingestion",
+        "href": "/protocols/te/te-07"
+      }
     ],
-  }),
+  },
   medication({
     id: "succinylcholine",
     name: "Succinylcholine",
@@ -822,24 +1101,83 @@ export const medicationReferences: MedicationReference[] = [
       { label: "Airway Drug-Assisted Intubation", href: "/protocols/ar/ar-03" },
     ],
   }),
-  medication({
+  {
     id: "tranexamic-acid",
     name: "Tranexamic Acid",
     tradeNames: ["TXA", "Cyklokapron"],
-    uses: ["Angioedema", "Hemorrhagic shock", "Head trauma", "Nasal/oral bleeding", "Stroke"],
-    level: "Paramedic",
-    indication: "Use the applicable condition-specific TXA pathway",
-    adult: "1-2 g IV/IO or topical",
-    pediatric: "15 mg/kg",
+    uses: ["Traumatic hemorrhage with clinical shock", "Topical epistaxis", "Topical dental hemorrhage", "Medical-Control-directed bradykinin angioedema"],
+    doses: [
+      {
+        "level": "Paramedic",
+        "indication": "Traumatic hemorrhage with clinical shock — IV/IO",
+        "adult": "1–2 g IV/IO: 1 g over 10 minutes OR 2 g over 20 minutes; maximum administration rate 100 mg/min. Verify the stocked concentration and preparation instructions. Do not automatically repeat; further dosing requires a specific order.",
+        "pediatric": "15 mg/kg. Pediatric trauma eligibility/age limits, infusion instructions, repeat policy and maximum require a separately approved pediatric order or online Medical Control; do not infer them from this dose.",
+        "protocolLink": {
+          "label": "TB-12 Abdominal / Pelvic Trauma",
+          "href": "/protocols/tb/tb-12"
+        },
+        "releaseNote": "Adult dose/rate options are approved as shown. Verify stocked concentration and preparation instructions; do not invent dilution volumes or automatically repeat without a specific order. Pediatric age eligibility, infusion rate/cap and IV/IO route verification remain unresolved before release. The locally selected pediatric 15 mg/kg differs from the Tennessee 20 mg/kg IV reference; do not imply state dose equivalence or infer systemic trauma dosing from topical dosing."
+      },
+      {
+        "level": "AEMT",
+        "indication": "Persistent atraumatic anterior epistaxis — topical only",
+        "adult": "UP-09: 1 g/10 mL total applied to anterior gauze after 15 minutes uninterrupted compression; maintain external pressure for 20 minutes.",
+        "pediatric": "UP-09: 15 mg/kg topically; maximum 1 g total, on appropriately sized anterior gauze; maintain external pressure for 20 minutes.",
+        "protocolLink": {
+          "label": "UP-09 Epistaxis",
+          "href": "/protocols/up/up-09"
+        }
+      },
+      {
+        "level": "AEMT",
+        "indication": "Persistent dental hemorrhage — topical only",
+        "adult": "UP-07: TXA 1 g/10 mL to saturate gauze/cotton; pack the bleeding socket and maintain direct pressure for 20 minutes.",
+        "pediatric": "Use UP-07 for the pediatric dental indication and Medical Control when the pediatric dose or eligibility is not specified; do not infer a systemic 15 mg/kg regimen.",
+        "protocolLink": {
+          "label": "UP-07 Dental Problems",
+          "href": "/protocols/up/up-07"
+        }
+      },
+      {
+        "level": "Paramedic",
+        "indication": "Suspected ACE-inhibitor / hereditary bradykinin angioedema — IV/IO with Medical Control",
+        "adult": "AM-01: 1 g IV/IO over 10 minutes with Medical Control.",
+        "pediatric": "Use a separate pediatric order / Medical Control; the adult AM-01 order is not a pediatric standing order.",
+        "protocolLink": {
+          "label": "AM-01 Allergic Reaction / Anaphylaxis",
+          "href": "/protocols/am/am-01"
+        }
+      }
+    ],
     cautions: [
-      "Open the applicable TXA pathway before administration; route, timing, eligibility, and endpoint are condition-specific.",
+      "Systemic trauma TXA is Paramedic-only: after immediate lifesaving interventions, consider for traumatic hemorrhage with clinical hemorrhagic shock and injury no more than 3 hours earlier. Do not delay transport or hemorrhage control.",
+      "Record injury time and TXA dose/time; notify the receiving team to avoid duplicate dosing. Do not infer systemic trauma dosing from topical indications.",
+      "Topical nasal/oral TXA is a separate existing AEMT/Paramedic order; EMT administration is not authorized under UP-07/UP-09. The adult trauma 1–2 g range is not a topical dose.",
+      "Do not give IV/IO TXA solely for isolated dental bleeding or epistaxis. Do not atomize TXA, or perform deep/blind/posterior nasal packing under UP-09."
     ],
     protocolLinks: [
-      { label: "Abdominal / Pelvic Trauma", href: "/protocols/tb/tb-12" },
-      { label: "Epistaxis", href: "/protocols/up/up-09" },
-      { label: "Dental Problems", href: "/protocols/up/up-07" },
+      {
+        "label": "Multiple Trauma",
+        "href": "/protocols/tb/tb-06"
+      },
+      {
+        "label": "Abdominal / Pelvic Trauma",
+        "href": "/protocols/tb/tb-12"
+      },
+      {
+        "label": "Epistaxis",
+        "href": "/protocols/up/up-09"
+      },
+      {
+        "label": "Dental Problems",
+        "href": "/protocols/up/up-07"
+      },
+      {
+        "label": "Allergic Reaction / Anaphylaxis",
+        "href": "/protocols/am/am-01"
+      }
     ],
-  }),
+  },
   medication({
     id: "vecuronium",
     name: "Vecuronium",

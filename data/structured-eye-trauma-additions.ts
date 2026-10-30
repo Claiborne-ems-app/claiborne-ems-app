@@ -1,3 +1,4 @@
+import { canonicalPdfPages } from "./canonical-pdf-pages";
 import type { StructuredProtocolContent } from "../lib/protocols/structured-content";
 
 const ALL_LEVELS = ["EMT", "AEMT", "Paramedic"] as const;
@@ -9,7 +10,7 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
     categoryId: "tb",
     category: "Trauma & Burns",
     overview: [
-      "Use for blunt, penetrating, thermal, or chemical eye injury. Treat life threats and associated trauma first, then protect vision by preventing pressure on a potentially open globe and beginning immediate irrigation for chemical exposure.",
+      "Use for blunt, penetrating, thermal, or chemical eye injury. Treat life threats and associated trauma first, then protect vision by preventing pressure on a potentially open globe and beginning immediate irrigation for an ordinary chemical splash; known or strongly suspected open globe with contamination requires the specific exception below.",
       "Rapidly distinguish chemical or thermal exposure from penetrating/open-globe injury, blunt trauma, and a loose superficial foreign body because the correct care is different.",
       "Any vision loss, irregular pupil, hyphema, extrusion of ocular contents, impaled object, marked proptosis, severe pain, or high-velocity mechanism requires urgent transport and early receiving-facility notification.",
     ],
@@ -22,7 +23,7 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
       },
       {
         title: "Chemical Exposure?",
-        text: "Start immediate copious irrigation - remove contact lens if easy - do not neutralize",
+        text: "Ordinary splash: start immediate gentle copious irrigation through handoff. Known/strongly suspected open globe with contamination: no irrigation into globe or pressure; noncontact rigid shield and urgent specialist/Medical Control guidance.",
         levels: [...ALL_LEVELS],
         tone: "urgent",
       },
@@ -67,8 +68,9 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
             level: "EMT",
             actions: [
               "Treat immediate airway, breathing, circulation, hemorrhage, and associated trauma threats. Use spinal motion restriction only when indicated by mechanism and examination.",
-              "For chemical or thermal exposure, begin copious irrigation with water or normal saline immediately. Remove contact lenses only when easily accomplished without delaying irrigation.",
+              "For an ordinary chemical splash, begin immediate gentle copious water or normal-saline irrigation and continue during transport through handoff; do not wait for product identification or ideal fluid. Remove contact lenses only when easily accomplished without delaying irrigation. Gently cool or irrigate thermal exposure as directed below.",
               "For suspected penetrating or open-globe injury, do not apply pressure, remove an object, manipulate the eye, irrigate, or instill medication. Stabilize a protruding object without pressure and place a rigid eye shield when available.",
+              "If an open globe is known or strongly suspected with chemical contamination, do not irrigate into the globe or apply pressure. Protect with a noncontact rigid shield and urgently obtain ophthalmology, Poison Help, and Medical Control guidance. A hypothetical concern for rupture must not delay ordinary splash irrigation.",
               "Assess and document visual acuity in each eye separately when feasible, pupils, visible injury, mechanism, pain, and changes during care. Do not delay time-sensitive transport to complete testing.",
             ],
           },
@@ -76,6 +78,7 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
             level: "AEMT",
             actions: [
               "Perform all EMT actions plus vascular access when clinically indicated and authorized analgesia or antiemetic treatment under the current standing orders.",
+              "Expanded AEMT analgesia is not enabled by default while individual authorization is unverified. The specified medication, route, and patient group require current Tennessee authority, documented Tennessee-approved expanded analgesia training, agency credentialing, and medical-director standing orders; training alone does not grant permission.",
               "Monitor for deterioration from associated head/facial trauma, hemorrhage, chemical exposure, or systemic injury and support transport without delaying irrigation or eye protection.",
               "Avoid medications or interventions that increase agitation, vomiting, coughing, or pressure on a suspected open globe.",
             ],
@@ -120,7 +123,9 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
     ],
     treatmentSteps: [
       "Treat immediate life threats and associated head, face, cervical-spine, burn, or multisystem trauma. Eye care must not delay critical trauma transport.",
-      "Chemical exposure: begin copious water or normal-saline irrigation immediately and continue during transport as needed. Remove contact lenses when easily possible, irrigate from the inner corner outward, and prevent runoff into the unaffected eye or onto responders.",
+      "Ordinary chemical splash: begin immediate gentle copious water or normal-saline irrigation and continue during transport through handoff; do not wait for product identification or ideal fluid. Remove contact lenses when easily possible, irrigate from the inner corner outward, and prevent runoff into the unaffected eye or onto responders.",
+      "When trained and equipped to use an agency-approved ocular-pH endpoint, follow that endpoint and reassess pH after a pause. When those resources are unavailable, continue ordinary chemical-splash irrigation through handoff; do not delay irrigation to obtain equipment.",
+      "For known or strongly suspected open globe with chemical contamination, do not irrigate into the globe or apply pressure. Use a noncontact rigid shield and urgently obtain ophthalmology, Poison Help, and Medical Control guidance. A hypothetical concern for rupture must not delay ordinary splash irrigation.",
       "Brush away a dry chemical before irrigation when safe and appropriate. Do not attempt acid-base neutralization. Follow TE-09 Chemical / HazMat Exposure and Poison Help guidance for unusual or water-reactive agents.",
       "Thermal injury: gently cool or irrigate with room-temperature water or saline, protect the eye, and avoid ice, ointment, or pressure.",
       "Suspected penetrating/open-globe injury: do not remove an impaled object, manipulate the eye, apply pressure, irrigate, or instill medication. Stabilize a protruding object with bulky material around it without pressure, then protect with a rigid shield.",
@@ -158,14 +163,14 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
     warnings: [
       "Never apply pressure to an eye with trauma, suspected penetration, irregular pupil, hyphema, extrusion, or possible globe rupture.",
       "Do not remove an impaled or embedded object and do not attempt field repair of an eyelid or globe injury.",
-      "Do not delay chemical irrigation to identify the product, obtain visual acuity, locate saline, or contact Poison Help.",
+      "Do not delay ordinary chemical-splash irrigation to identify the product, obtain visual acuity, locate saline, or contact Poison Help. The known/strongly suspected contaminated open-globe exception requires protection and urgent expert guidance, not irrigation into the globe.",
       "Do not neutralize a chemical on the eye and do not use ice, ointment, cotton swabs, magnets, or instruments.",
       "Do not patch either eye. For suspected open-globe injury, protect the affected eye with a rigid shield without pressure.",
       "Sudden painless non-traumatic vision loss is not eye trauma. Contact Medical Control and use the appropriate medical pathway; do not apply ocular pressure when trauma or globe rupture is possible.",
     ],
     clinicalPearls: [
       "A normal external appearance does not exclude an open globe or intraocular foreign body after a high-velocity mechanism.",
-      "For chemical burns, treatment begins with irrigation. Water is preferable to waiting for saline or a specialized irrigating fluid.",
+      "For an ordinary chemical splash, treatment begins with irrigation. Water is preferable to waiting for saline or a specialized irrigating fluid. A hypothetical concern for rupture must not delay ordinary splash irrigation; use the specific exception for a known or strongly suspected contaminated open globe.",
       "A rigid shield protects without pressing on the eye; a pressure patch can worsen an open-globe injury.",
       "Visual acuity is the eye's vital sign, but critical treatment and transport take priority when it cannot be obtained quickly.",
       "Pediatric patients may describe vision poorly and may resist examination; use calm, age-appropriate assessment and avoid forced eyelid opening.",
@@ -212,12 +217,13 @@ export const structuredEyeTraumaAdditions: StructuredProtocolContent[] = [
       "Claiborne County EMS Chemical / HazMat Exposure, Head Trauma, Multiple Trauma, and pain-management protocols.",
     ],
     sourcePdf: "/protocols/claiborne/tb-11-eye-trauma-protocol.pdf",
-    sourcePages: { start: 1, end: 2 },
-    revisionDate: "October 17, 2026",
-    lastVerifiedDate: "October 17, 2026",
+    sourcePages: { start: 1, end: canonicalPdfPages["tb-11"] },
+    revisionDate: "2026-10-30",
+    lastVerifiedDate: "2026-10-30",
     reviewStatus: "Approved",
     reviewFlags: [
-      "Approved by the Claiborne EMS medical director on October 17, 2026.",
+      "Base content approved October 17, 2026; scoped trauma-review revisions accepted October 30, 2026. This does not establish full-system clinical release.",
+      "Ocular-pH equipment, training, and a numeric endpoint remain local operational approval items; no endpoint or additional topical-anesthetic authority is created here.",
       "The approved source PDF requires stocked rigid eye shields, irrigation equipment, and the current Claiborne analgesic/antiemetic formulary.",
       "Topical ophthalmic anesthetic remains unavailable unless separately stocked and adopted or ordered by Medical Control.",
     ],

@@ -1,3 +1,4 @@
+import { canonicalPdfPages } from "./canonical-pdf-pages";
 import type {
   ProviderLevel,
   ProtocolActionLink,
@@ -64,7 +65,7 @@ function protocol(input: Input): StructuredProtocolContent {
       "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
     ],
     sourcePdf: input.sourcePdf,
-    sourcePages: { start: 1, end: input.pages },
+    sourcePages: { start: 1, end: canonicalPdfPages[input.id] ?? input.pages },
     revisionDate: input.revisionDate ?? "2025-09-01",
     lastVerifiedDate: input.lastVerifiedDate ?? "2026-07-29",
     reviewStatus: input.reviewStatus ?? "Reviewed",
@@ -229,7 +230,7 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
     title: "Pediatric Hypotension / Shock",
     sourcePdf: "/protocols/claiborne/pm-03-pediatric-hypotension-shock-protocol.pdf",
     pages: 2,
-    revisionDate: "2026-10-26",
+    revisionDate: "2026-10-30",
     overview: [
       "Compensated pediatric shock may precede hypotension; recognize abnormal perfusion before blood pressure falls.",
       "Classify shock as hypovolemic/hemorrhagic, distributive, cardiogenic, or obstructive because fluid strategy and definitive treatment differ.",
@@ -237,9 +238,9 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
     indications: ["Pediatric patient with poor perfusion, altered mental status, weak pulses, delayed capillary refill, cool/mottled skin, or age-defined hypotension."],
     flow: [
       { title: "Recognize Shock", text: "Assess mental status, central/peripheral pulses, capillary refill, skin temperature/color, work of breathing, BP trends, history, and likely cause. Hypotension is a late sign.", levels: ALL_LEVELS, tone: "start" },
-      { title: "Airway + Oxygenation", text: "Support ventilation, control external hemorrhage, keep warm, check glucose, monitor ECG/SpO₂, and obtain rapid IV/IO without delaying care.", levels: ALL_LEVELS, tone: "urgent" },
+      { title: "Airway + Oxygenation", text: "Support ventilation, control external hemorrhage, keep warm, check glucose, and monitor ECG/SpO₂. AEMT/Paramedic: obtain rapid IV/IO without delaying care.", levels: ALL_LEVELS, tone: "urgent" },
       { title: "Identify Shock Type", text: "Hypovolemic/hemorrhagic • distributive/septic • cardiogenic • obstructive. Treat the likely cause while supporting perfusion.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Fluid Strategy", text: "Hypovolemic/distributive: isotonic crystalloid 10–20 mL/kg aliquots with reassessment after every bolus. Cardiogenic: 5–10 mL/kg cautiously with early Medical Control.", levels: ["AEMT", "Paramedic"], tone: "action" },
+      { title: "Fluid Strategy", text: "Nonhemorrhagic hypovolemic/distributive: isotonic crystalloid 10–20 mL/kg aliquots with reassessment after every bolus. Cardiogenic: 5–10 mL/kg cautiously with early Medical Control. Suspected traumatic hemorrhage: control bleeding, expedite transport, and obtain Medical Control direction; do not apply the medical/septic bolus target indiscriminately.", levels: ["AEMT", "Paramedic"], tone: "action" },
       { title: "Fluid-Refractory / Obstructive?", text: "For septic shock unresponsive to fluid, begin Medical-Control-directed epinephrine or norepinephrine infusion. Decompress tension pneumothorax and treat other obstructive causes when indicated.", levels: ["Paramedic"], tone: "urgent" },
       { title: "Rapid Transport", text: "Reassess perfusion, lungs, mental status, glucose, and BP after every intervention; notify a pediatric-capable destination early.", levels: ALL_LEVELS, tone: "transport" },
     ],
@@ -248,7 +249,7 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
       "Identify early compensated-shock findings: tachycardia, weak pulses, delayed refill, cool/mottled skin, altered behavior, reduced urine output/poor intake, and worsening work of breathing.",
     ],
     aemt: [
-      "Perform all EMT care plus rapid IV/IO access and shock-type-specific isotonic-crystalloid aliquots with reassessment after every dose.",
+      "Perform all EMT care plus rapid IV/IO access and shock-type-specific isotonic-crystalloid aliquots with reassessment after every dose. The medical/septic aliquot instructions do not establish a pediatric traumatic-hemorrhage order; obtain Medical Control direction for that branch.",
       "Do not delay treatment for repeated IV attempts; use IO promptly when vascular access is not quickly available in critical shock.",
     ],
     paramedic: [
@@ -256,30 +257,36 @@ export const structuredPediatricMedicalProtocols: StructuredProtocolContent[] = 
       "Use epinephrine or norepinephrine as the initial vasoactive infusion for fluid-refractory septic shock when authorized. For suspected adrenal crisis, give the patient's prescribed emergency steroid or Medical-Control-directed equivalent.",
     ],
     medications: [
-      { name: "Isotonic crystalloid—hypovolemic/distributive shock", dose: "10–20 mL/kg IV/IO aliquots; reassess perfusion, lungs, hepatomegaly, and work of breathing after every bolus. Further fluid is individualized with Medical Control." },
+      { name: "Isotonic crystalloid—nonhemorrhagic hypovolemic/distributive shock", dose: "10–20 mL/kg IV/IO aliquots; reassess perfusion, lungs, hepatomegaly, and work of breathing after every bolus. Further fluid is individualized with Medical Control." },
       { name: "Isotonic crystalloid—cardiogenic shock", dose: "5–10 mL/kg IV/IO cautiously with early Medical Control; reassess after each aliquot" },
       { name: "Epinephrine or norepinephrine infusion", dose: "Medical-Control-directed for fluid-refractory septic shock; verify pediatric formulation and dose in the current medication reference" },
       { name: "Emergency corticosteroid", dose: "For known/suspected adrenal crisis: use the patient's prescribed emergency plan or Medical-Control-directed protocol equivalent" },
     ],
     treatmentSteps: [
       "Do not use a single shock-index shortcut as the sole determinant of pediatric shock. Use age-adjusted vital signs, perfusion findings, and clinical trends.",
-      "Give isotonic crystalloid in 10- or 20-mL/kg aliquots for hypovolemic/distributive shock and reassess after every bolus for fluid responsiveness and volume overload.",
+      "Give isotonic crystalloid in 10- or 20-mL/kg aliquots for nonhemorrhagic hypovolemic/distributive shock and reassess after every bolus for fluid responsiveness and volume overload.",
       "Avoid routine 20-mL/kg boluses in suspected cardiogenic shock; use 5–10 mL/kg cautiously, reassess, and open PC-03 Pediatric Pulmonary Edema / CHF.",
       "For fluid-refractory septic shock, begin Medical-Control-directed epinephrine or norepinephrine infusion; do not use routine corticosteroids unless adrenal crisis is suspected or Medical Control directs otherwise.",
-      "Treat the cause: control hemorrhage, give epinephrine for anaphylaxis, decompress tension pneumothorax, and use the appropriate cardiac or airway pathway.",
+      "For suspected traumatic hemorrhage, control bleeding, prevent hypothermia, and expedite pediatric-capable trauma care. Use a separately approved pediatric traumatic-hemorrhage order or online Medical Control for fluid selection, aliquot, target, and reassessment limits; do not automatically apply medical/septic-shock boluses or cumulative targets. Blood products require an authorized, supported transfusion program.",
+      "For suspected TBI, prevent hypotension and do not use permissive hypotension. The generic hypotension recognition thresholds below are not TBI perfusion targets; obtain Medical Control direction until the pediatric TBI numeric target table and age boundaries are approved.",
+      "Treat the cause: control hemorrhage, give epinephrine for anaphylaxis within the indicated provider scope, obtain Paramedic-only decompression for tension pneumothorax when indicated, and use the appropriate cardiac or airway pathway.",
     ],
     actionLinks: [
+      { label: "TB-06 Multiple Trauma", description: "Open for hemorrhage control, trauma priorities, and destination guidance; pediatric traumatic-hemorrhage fluid parameters still require Medical Control.", href: "/protocols/tb/tb-06", kind: "protocol" },
+      { label: "TB-05 Head Trauma", description: "Open for TBI oxygenation and ventilation safeguards; pediatric TBI blood-pressure targets remain pending a separately approved table.", href: "/protocols/tb/tb-05", kind: "protocol" },
       { label: "AR-05 Pediatric Airway", description: "Open for airway and ventilation support.", href: "/protocols/ar/ar-05", kind: "protocol" },
       { label: "PC-03 Pediatric Pulmonary Edema / CHF", description: "Open for suspected cardiogenic shock or pulmonary edema.", href: "/protocols/pc/pc-03", kind: "protocol" },
       { label: "PM-01 Pediatric Anaphylaxis", description: "Open for anaphylactic shock.", href: "/protocols/pm/pm-01", kind: "protocol" },
       { label: "Medication Reference", description: "Open the current Claiborne medication reference.", href: "/medications", kind: "external" },
     ],
     reviewStatus: "Approved",
-    lastVerifiedDate: "2026-10-26",
+    lastVerifiedDate: "2026-10-30",
     reviewFlags: [
+      "October 30, 2026 trauma reconciliation separates medical/septic fluid instructions from traumatic hemorrhage. Pediatric traumatic-hemorrhage fluid parameters and the pediatric TBI numeric target table/age boundaries remain unresolved release requirements; no new numeric orders are supplied here.",
       "Clinical pediatric shock recognition, type-specific fluid strategy, cardiogenic safeguards, fluid-refractory septic-shock support, obstructive/anaphylactic/adrenal pathways, monitoring, and destination planning approved by the Claiborne EMS medical director on October 26, 2026.",
     ],
     warnings: [
+      "Do not use medical/septic-shock fluid targets indiscriminately for traumatic hemorrhage. Do not substitute generic pediatric hypotension recognition thresholds for TBI-specific perfusion targets.",
       "Hypotension is late and ominous in pediatric shock: neonate SBP <60, 1 month–<1 year <70, age 1–9 <70 + (2 × age), age ≥10 <90 mmHg.",
       "Avoid routine 20-mL/kg boluses in suspected cardiogenic shock; pulmonary edema may worsen rapidly.",
       "Reassess after every fluid bolus for fluid responsiveness and signs of volume overload.",

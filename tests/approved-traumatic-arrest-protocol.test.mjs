@@ -27,6 +27,9 @@ test("TB-10 uses the approved Claiborne withholding and Paramedic-only decompres
   assert.match(structured, /id: "tb-10"[\s\S]*?Do not perform chest decompression; assist the Paramedic/);
   assert.match(structured, /id: "tb-10"[\s\S]*?Chest decompression is Paramedic-only under the current Tennessee statewide protocol guidelines/);
   assert.match(structured, /id: "tb-10"[\s\S]*?lightning strike, drowning, or hypothermic arrest/);
+  assert.match(structured, /id: "tb-10"[\s\S]*?age-appropriate medical cardiac-arrest pathway/);
+  assert.match(structured, /id: "tb-10"[\s\S]*?PC-04 Pediatric Pulseless Arrest/);
+  assert.match(structured, /id: "tb-10"[\s\S]*?For ADULT clearly traumatic arrest, do not routinely give epinephrine/);
 });
 
 test("approved TB-10 source PDF is present and recognizable as a Claiborne PDF", async () => {

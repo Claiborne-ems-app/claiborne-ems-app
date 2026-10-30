@@ -1,3 +1,4 @@
+from canonical_pdf_bridge import build_canonical
 """Build the approved AM-01 through AM-07 Claiborne source-PDF replacement batch.
 
 The reviewed app content is the controlled source for this release. These PDFs
@@ -94,35 +95,7 @@ PROTOCOLS = [
         ],
         "links": [("UP-04", "Persistent altered mental status or metabolic/toxic cause"), ("UP-13", "Active seizure or persistent postictal findings"), ("UP-14", "Persistent focal deficit after glucose correction"), ("AM-05", "Persistent hypotension or poor perfusion")],
     },
-    {
-        "id": "AM-03",
-        "title": "Dialysis / Renal Failure",
-        "file": "am-03-dialysis-renal-failure-protocol.pdf",
-        "scope": "Use for renal-failure or dialysis complications including hyperkalemia, pulmonary edema, sepsis, shock, access hemorrhage, or peritoneal-dialysis concern.",
-        "flow_title": "Hyperkalemia, access, and fluid-risk pathway",
-        "flow": [
-            ("1. Assess + monitor", "ABCs, ECG/12-lead, glucose, last dialysis/missed sessions, access findings, respiratory status, and perfusion."),
-            ("2. Hyperkalemia concern?", "Weakness, paralysis, syncope, bradycardia, missed dialysis, peaked T waves, QRS widening, or unstable dysrhythmia."),
-            ("3. ECG instability", "Calcium gluconate 1.5-3 g IV (preferred peripheral) OR calcium chloride 500-1,000 mg IV/IO. Do not give both as the initial dose."),
-            ("4. Shift potassium", "Albuterol 10 mg nebulized for hyperkalemia with a pulse; do not use for hyperkalemic cardiac arrest. Bicarbonate 1 mEq/kg, max 50 mEq, only for significant ECG instability, metabolic acidosis, or hyperkalemic arrest."),
-            ("5. Fluid risk", "No routine fluid for renal failure/missed dialysis/hyperkalemia. For hypotension without pulmonary edema, NS 250 mL IV/IO with reassessment; maximum 500 mL without Medical Control."),
-            ("6. Access hemorrhage", "Direct, focused pressure. Tourniquet proximal to the access only for life-threatening bleeding uncontrolled by direct pressure."),
-            ("7. Peritoneal dialysis", "Keep transfer set/catheter capped and clamped as found. Do not manipulate, flush, disconnect, drain, or collect effluent."),
-            ("8. Transport", "Bring dialysis information when available and notify early for hyperkalemia, pulmonary edema, sepsis, shock, or access hemorrhage."),
-        ],
-        "therapy": [
-            ("Line compatibility", "Do not mix calcium and sodium bicarbonate. Flush the line thoroughly between administrations."),
-            ("Persistent shock", "Use AM-05 for norepinephrine rather than repeated large-volume crystalloid."),
-        ],
-        "callout": "Calcium stabilizes the myocardium but does not remove potassium. Definitive potassium removal generally requires dialysis.",
-        "safety": [
-            "Calcium extravasation can cause severe tissue injury; monitor the site continuously. Calcium gluconate is preferred through a peripheral IV.",
-            "Do not place routine equipment or vascular access in the fistula/graft extremity when another site exists.",
-            "A dialysis-access hemorrhage can cause rapid exsanguination. Effective bleeding control takes priority over access patency.",
-            "Claiborne EMS does not administer insulin for hyperkalemia under AM-03.",
-        ],
-        "links": [("AC-01", "Nonshockable arrest with suspected hyperkalemia"), ("AC-09", "VF/pulseless VT with suspected hyperkalemia"), ("AC-02", "Symptomatic bradycardia"), ("AC-05", "Pulmonary edema"), ("AM-05", "Persistent shock")],
-    },
+    {"id": "AM-03"},
     {
         "id": "AM-04",
         "title": "Hypertension / Suspected Hypertensive Emergency",
@@ -152,35 +125,7 @@ PROTOCOLS = [
         ],
         "links": [("UP-14", "Suspected stroke assessment, alert, destination, and matching CVA BP branch"), ("AM-06", "Post-TNK transfer; written facility orders govern"), ("AC-04", "ACS or ischemic chest discomfort"), ("AC-05", "Pulmonary edema; do not give labetalol under AM-04"), ("AO-03", "Pregnancy-related hypertension/eclampsia concern")],
     },
-    {
-        "id": "AM-05",
-        "title": "Hypotension / Shock",
-        "file": "am-05-hypotension-shock-protocol.pdf",
-        "scope": "Use for adults with SBP below 90 mmHg or clinical evidence of inadequate perfusion regardless of BP. Identify and correct the cause while supporting perfusion.",
-        "flow_title": "Cause-directed shock and perfusion pathway",
-        "flow": [
-            ("1. Recognize shock", "SBP below 90 or inadequate perfusion: mental-status change, weak pulses, cool/mottled skin, delayed refill, or progressive deterioration."),
-            ("2. Immediate support", "Airway/ventilation, oxygen when indicated, hemorrhage control, prevent heat loss, monitoring, glucose, IV/IO, and rapid transport."),
-            ("3. Identify cause", "Hemorrhagic, septic, hypovolemic, cardiogenic, obstructive, anaphylactic, toxicologic, adrenal, or obstetric."),
-            ("4. Fluid when appropriate", "Nonhemorrhagic shock: isotonic crystalloid 500 mL IV/IO and reassess. Use 250 mL aliquots if fluid-overload risk."),
-            ("5. Stop fluid", "Stop when perfusion improves, SBP about 90-100, MAP at least 65, pulmonary edema develops, respiratory status worsens, or fluid is unlikely to help."),
-            ("6. Cause-specific goals", "Sepsis: up to 30 mL/kg only while fluid responsive/no pulmonary edema. Hemorrhage without TBI: minimum fluid for radial pulse, mentation, or SBP about 80-90. TBI: SBP at least 110."),
-            ("7. Persistent shock", "Norepinephrine 0.05-0.5 mcg/kg/min IV/IO, titrated to perfusion and MAP at least 65. Start earlier when further fluid is contraindicated."),
-            ("8. Alternative", "If norepinephrine is unavailable or significant bradycardia accompanies shock: epinephrine infusion 2-10 mcg/min IV/IO, titrated to perfusion and MAP at least 65."),
-        ],
-        "therapy": [
-            ("Pregnancy", "Beyond about 20 weeks: left uterine displacement/left lateral positioning when feasible; follow AO-03 for pregnancy-related causes."),
-            ("Cause control", "Control bleeding, decompress tension pneumothorax, treat anaphylaxis, and correct causative dysrhythmia without waiting for BP normalization."),
-        ],
-        "callout": "The treatment goal is adequate perfusion, not normalization of blood pressure. Fluids and vasopressors do not replace correction of the cause.",
-        "safety": [
-            "Do not use indiscriminate large-volume crystalloid in uncontrolled hemorrhage, pulmonary edema, cardiogenic shock, or suspected volume overload.",
-            "Do not use permissive hypotension when traumatic brain injury is suspected.",
-            "Use continuous ECG and frequent BP reassessment for vasopressors. Do not delay transport for a fluid target or repeated IV attempts.",
-            "Push-dose epinephrine is only a temporary bridge; use the dedicated medication reference and begin an infusion when indicated.",
-        ],
-        "links": [("AM-01", "Anaphylactic shock"), ("AM-03", "Renal failure and fluid-risk guidance"), ("AC-04", "Ischemia/infarction causing shock"), ("AC-05", "Pulmonary edema"), ("TB-06", "Traumatic shock/hemorrhage"), ("AM-07", "Peri-arrest deterioration")],
-    },
+    {"id": "AM-05"},
     {
         "id": "AM-06",
         "title": "Suspected Stroke - Tenecteplase (TNK) Transfer",
@@ -307,6 +252,8 @@ def header_footer(protocol, canvas, doc):
 
 
 def build(protocol):
+    if protocol["id"] in ['AM-03', 'AM-05']:
+        return build_canonical(protocol["id"])
     styles = make_styles()
     TMP.mkdir(parents=True, exist_ok=True)
     tmp_path = TMP / protocol["file"]

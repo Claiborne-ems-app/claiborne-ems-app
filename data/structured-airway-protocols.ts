@@ -1,3 +1,4 @@
+import { canonicalPdfPages } from "./canonical-pdf-pages";
 import type {
   ProviderLevel,
   ProtocolActionLink,
@@ -7,6 +8,18 @@ import type {
 } from "../lib/protocols/structured-content";
 
 const ALL_LEVELS: ProviderLevel[] = ["EMT", "AEMT", "Paramedic"];
+
+// A single condition-specific branch keeps the airway and TB-05 targets aligned.
+const TBI_AIRWAY_IDS = new Set(["ar-01", "ar-02", "ar-03", "ar-05", "ar-06", "ar-08", "ar-09", "ar-11"]);
+const TBI_OXYGENATION = "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target.";
+const TBI_VENTILATION = "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg.";
+const TBI_PERFUSION = "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds.";
+const TBI_FLOW: ProtocolFlowNode = {
+  title: "Suspected TBI?",
+  text: "SpO₂ ≥94%; urgently correct <90% or inadequate ventilation. Initial/routine assisted EtCO₂ 35–45 mmHg. No routine hyperventilation. Clear active/imminent herniation only: brief EtCO₂ 30–35 with capnography, avoid <30, and expedite transport. Open TB-05.",
+  levels: ALL_LEVELS,
+  tone: "urgent",
+};
 
 type AirwayProtocolInput = {
   id: string;
@@ -34,6 +47,7 @@ type AirwayProtocolInput = {
 function airwayProtocol(
   input: AirwayProtocolInput
 ): StructuredProtocolContent {
+  const hasTbiBranch = TBI_AIRWAY_IDS.has(input.id);
   const careModules: ProtocolCareModule[] = [
     {
       title: "Provider-Level Actions",
@@ -53,30 +67,41 @@ function airwayProtocol(
     categoryId: "ar",
     category: "Airway & Respiratory",
     overview: input.overview,
-    flow: input.flow,
+    flow: hasTbiBranch
+      ? [...input.flow.slice(0, -1), TBI_FLOW, ...input.flow.slice(-1)]
+      : input.flow,
     careModules,
     indications: input.indications,
     contraindications: [],
     assessment: [],
-    treatmentSteps: input.treatmentSteps ?? [],
+    treatmentSteps: [
+      ...(input.treatmentSteps ?? []),
+      ...(hasTbiBranch ? [TBI_OXYGENATION, TBI_VENTILATION, TBI_PERFUSION] : []),
+    ],
     medications: input.medications ?? [],
     warnings: input.warnings ?? [],
     clinicalPearls: input.clinicalPearls ?? [],
     specialPopulations: [],
-    actionLinks: input.actionLinks ?? [],
+    actionLinks: [
+      ...(input.actionLinks ?? []),
+      ...(hasTbiBranch ? [{ label: "TB-05 Head Trauma", description: "Open the shared TBI oxygenation, ventilation, herniation-rescue, and perfusion targets.", href: "/protocols/tb/tb-05", kind: "protocol" as const }] : []),
+    ],
     references: input.references ?? [
       "Claiborne County EMS approved protocol manual.",
       "Claiborne County EMS formulary, linked protocol pathways, and agency release guidance.",
     ],
     sourcePdf: input.sourcePdf,
-    sourcePages: { start: 1, end: input.pages },
-    revisionDate: input.revisionDate ?? "October 17, 2026",
-    lastVerifiedDate: input.lastVerifiedDate ?? "2026-07-29",
+    sourcePages: { start: 1, end: canonicalPdfPages[input.id] ?? input.pages },
+    revisionDate: hasTbiBranch ? "2026-10-30" : input.revisionDate ?? "October 17, 2026",
+    lastVerifiedDate: hasTbiBranch ? "2026-10-30" : input.lastVerifiedDate ?? "2026-07-29",
     reviewStatus: input.reviewStatus ?? "Reviewed",
-    reviewFlags: input.reviewFlags ?? [
-      "Medical-director approval is required before clinical release.",
-      "Verify medication dosing, advanced airway authorization, and invasive procedures against current Claiborne County standing orders.",
-      "The direct Claiborne source PDF is released from the approved protocol content.",
+    reviewFlags: [
+      ...(input.reviewFlags ?? [
+        "Medical-director approval is required before clinical release.",
+        "Verify medication dosing, advanced airway authorization, and invasive procedures against current Claiborne County standing orders.",
+        "The direct Claiborne source PDF is released from the approved protocol content.",
+      ]),
+      ...(hasTbiBranch ? ["TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Pediatric TBI numeric targets/age boundaries remain pending; this update is not full-system clinical-release approval."] : []),
     ],
   };
 }
@@ -99,7 +124,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       { title: "Basic Maneuvers First", text: "Position • suction • OPA/NPA • two-person BVM ± PEEP.", levels: ALL_LEVELS, tone: "urgent" },
       { title: "Foreign-Body Obstruction?", text: "Use age-appropriate obstruction procedure and direct visualization when authorized.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Support Still Needed?", text: "All levels: oxygen/BVM. AEMT/Paramedic: authorized NIPPV or BIAD. Paramedic: intubation when clinically indicated.", levels: ALL_LEVELS, tone: "decision" },
-      { title: "Oxygenation / Ventilation Effective?", text: "Maintain SpO₂ at least 92%; if ineffective, move to failed-airway pathway.", levels: ALL_LEVELS, tone: "action" },
+      { title: "Oxygenation / Ventilation Effective?", text: "Maintain SpO₂ at least 92% unless a condition-specific target applies; suspected TBI requires at least 94%. If ineffective, move to the failed-airway pathway.", levels: ALL_LEVELS, tone: "action" },
       { title: "Confirm + Reassess", text: "Waveform EtCO₂ after ETT/BIAD, secure device, monitor, and notify destination.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
@@ -150,13 +175,13 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       { title: "Declare Failed Airway", text: "Cannot oxygenate/ventilate • unsuitable anatomy • or three total failed attempts.", levels: ALL_LEVELS, tone: "start" },
       { title: "Call for Resources", text: "Bring the most experienced airway provider and rescue devices.", levels: ALL_LEVELS, tone: "urgent" },
       { title: "BVM + Adjuncts", text: "Optimize position, suction, mask seal, OPA/NPA, PEEP, and two-person technique.", levels: ALL_LEVELS, tone: "action" },
-      { title: "SpO₂ ≥92%?", text: "Yes: continue effective BVM. No: place authorized rescue airway.", levels: ALL_LEVELS, tone: "decision" },
+      { title: "Oxygenation Target Met?", text: "SpO₂ at least 92%, or at least 94% for suspected TBI: continue effective BVM. If oxygenation or ventilation is ineffective, place an authorized rescue airway.", levels: ALL_LEVELS, tone: "decision" },
       { title: "Rescue Airway", text: "AEMT/Paramedic: authorized BIAD. Paramedic: changed video-laryngoscopy rescue or surgical airway only when required.", levels: ["AEMT", "Paramedic"], tone: "urgent" },
       { title: "Confirm + Transport", text: "Waveform EtCO₂, secure device, post-airway care, and early notification.", levels: ALL_LEVELS, tone: "transport" },
     ],
     emt: [
       "Stop repeated attempts, optimize two-person BVM with airway adjuncts, suction, oxygen, and PEEP when indicated.",
-      "Continue BVM when it maintains oxygen saturation at least 92% and adequate ventilation.",
+      "Continue BVM when it maintains oxygen saturation at least 92% (at least 94% for suspected TBI) and adequate ventilation.",
     ],
     aemt: [
       "Perform all EMT care plus authorized BIAD placement; do not perform ETT placement or video laryngoscopy under this protocol.",
@@ -166,7 +191,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
       "Perform all prior care and proceed to surgical cricothyrotomy only when less invasive methods cannot oxygenate or ventilate.",
       "Avoid additional laryngoscopy after three total attempts or when anatomy makes success unlikely.",
     ],
-    treatmentSteps: ["Optimize two-person BVM with positioning, suction, OPA/NPA as appropriate, high-flow oxygen, and PEEP when indicated.", "If BVM maintains SpO₂ at least 92% and adequate ventilation, continue it as the definitive field airway and begin transport.", "Place an authorized BIAD when BVM is ineffective or prolonged ventilation is required; confirm and secure it before movement.", "Proceed to surgical cricothyrotomy only for a Paramedic-managed cannot-oxygenate/cannot-ventilate patient after less-invasive rescue measures fail or cannot be used.", "Ventilate approximately 10–12 breaths/min with visible chest rise; use EtCO₂ and clinical response to avoid hyperventilation."],
+    treatmentSteps: ["Optimize two-person BVM with positioning, suction, OPA/NPA as appropriate, high-flow oxygen, and PEEP when indicated.", "If BVM maintains SpO₂ at least 92% (at least 94% for suspected TBI) and adequate ventilation, continue it as the definitive field airway and begin transport.", "Place an authorized BIAD when BVM is ineffective or prolonged ventilation is required; confirm and secure it before movement.", "Proceed to surgical cricothyrotomy only for a Paramedic-managed cannot-oxygenate/cannot-ventilate patient after less-invasive rescue measures fail or cannot be used.", "Ventilate approximately 10–12 breaths/min with visible chest rise; use EtCO₂ and clinical response to avoid hyperventilation."],
     reviewStatus: "Approved",
     lastVerifiedDate: "2026-08-14",
     reviewFlags: ["Clinical failed-airway definition, rescue sequence, provider permissions, confirmation, ventilation, transport, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026."],
@@ -790,7 +815,7 @@ export const structuredAirwayProtocols: StructuredProtocolContent[] = [
     treatmentSteps: [
       "Initial new controlled setup: volume assist-control, tidal volume 6-8 mL/kg IBW, PEEP 5 cm H2O, and FiO2 100% only until a reliable oxygen-saturation measurement is available. Then use the lowest effective FiO2 and small, reassessed PEEP changes to maintain SpO2 92-98% unless a condition-specific target applies.",
       "After return of spontaneous circulation, use the post-resuscitation target SpO2 90-98% and avoid using EtCO2 as a direct substitute for PaCO2. When blood-gas data are available, target PaCO2 35-45 mm Hg unless directed otherwise.",
-      "In suspected brain injury, avoid routine hyperventilation and target normal ventilation unless signs of impending herniation or Medical Control direction require a different plan. In severe metabolic acidosis, do not abruptly remove compensatory minute ventilation; reassess closely and seek Medical Control or receiving-facility direction.",
+      "For suspected traumatic brain injury, follow the TB-05 targets below rather than an unspecified normal-ventilation goal. In severe metabolic acidosis, do not abruptly remove compensatory minute ventilation; reassess closely and seek Medical Control or receiving-facility direction.",
       "For high PIP with high plateau pressure, suspect reduced compliance (lung, chest wall, or abdominal); for high PIP with normal plateau pressure, suspect airway/circuit resistance or auto-PEEP.",
     ],
     warnings: [

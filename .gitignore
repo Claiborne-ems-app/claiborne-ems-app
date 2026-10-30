@@ -12,3 +12,6 @@ yarn-error.log*
 .vercel/
 *.tsbuildinfo
 tmp/
+# Generated review copies; controlled PDFs remain in public/protocols/claiborne.
+output/pdf/
+scripts/__pycache__/

@@ -1,3 +1,4 @@
+import { canonicalPdfPages } from "./canonical-pdf-pages";
 import type { StructuredProtocolContent } from "../lib/protocols/structured-content";
 import { structuredUniversalAdditions } from "./structured-universal-additions";
 import { structuredTraumaProtocols } from "./structured-trauma-protocols";
@@ -1911,7 +1912,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     category: "Universal Patient Care",
     overview: [
       "Assess and treat acute pain early while preserving airway protection, ventilation, perfusion, and neurologic assessment. Use the least invasive effective option and tailor treatment to pain severity, clinical condition, contraindications, and patient preference.",
-      "UP-11 applies to patients 16 years of age or older. Mild pain may be treated with oral nonopioid medication. AEMTs and Paramedics may use approved parenteral nonopioids; opioids and analgesic-dose ketamine are Paramedic-only treatments.",
+      "UP-11 applies to patients 16 years of age or older. Mild pain may be treated with oral nonopioid medication. Paramedics may use the listed parenteral nonopioids; expanded AEMT parenteral analgesia remains disabled by default pending verified drug-, route-, and patient-specific authorization. Opioids and analgesic-dose ketamine remain Paramedic-only.",
     ],
     flow: [
       {
@@ -1934,8 +1935,14 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         title: "Parenteral Nonopioid Appropriate?",
-        text: "AEMT/Paramedic: acetaminophen 1 g IV/IO OR ketorolac 15–30 mg IV or 60 mg IM",
-        levels: ["AEMT", "Paramedic"],
+        text: "Paramedic: acetaminophen 1 g IV/IO OR ketorolac 15–30 mg IV or 60 mg IM. Expanded AEMT parenteral analgesia is not enabled while authorization is unverified.",
+        levels: ["Paramedic"],
+        tone: "decision",
+      },
+      {
+        title: "AEMT Authorization Check",
+        text: "Expanded parenteral analgesia is disabled by default while individual authorization is unverified. Exact Tennessee drug/route authority, documented approved training, agency credentialing/competency, and medical-director standing orders are all required. Request Paramedic care when needed.",
+        levels: ["AEMT"],
         tone: "decision",
       },
       {
@@ -1976,7 +1983,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
           {
             level: "AEMT",
             actions: [
-              "For pain requiring a parenteral nonopioid, administer one of the following: acetaminophen 1 g IV/IO once or ketorolac 15–30 mg IV once or 60 mg IM once. Do not routinely combine IV acetaminophen with an additional acetaminophen dose.",
+              "Expanded AEMT analgesia is not enabled by default while individual authorization is unverified. The specified medication, route, and patient group require current Tennessee authority, documented Tennessee-approved expanded analgesia training, agency credentialing and competency verification, and medical-director standing orders; training alone does not grant permission. Do not administer IV/IO acetaminophen or IV/IM ketorolac from this unverified AEMT view; request Paramedic care or the separately verified medication-specific standing order. Do not routinely combine parenteral acetaminophen with an additional acetaminophen dose.",
               "Do not administer ketorolac when ibuprofen or another NSAID has already been given during the current treatment interval. Screen for NSAID hypersensitivity, renal disease, renal transplant, significant dehydration, hypotension, active gastrointestinal bleeding, clinically significant anticoagulant-associated bleeding risk, and known or suspected pregnancy.",
               "Establish IV access when needed for parenteral treatment or another clinical indication. Do not establish IO access solely to treat pain in an otherwise stable patient; use an approved oral or nonvascular option or request Paramedic treatment when appropriate.",
               "Apply cardiac monitoring before IV/IO/IM analgesia and continue through reassessment and transport. Reassess pain, BP, heart rate, respiratory rate, SpO₂, mental status, and adverse effects after medication.",
@@ -1985,12 +1992,13 @@ export const structuredProtocols: StructuredProtocolContent[] = [
           {
             level: "Paramedic",
             actions: [
+              "For parenteral nonopioid treatment, a Paramedic may administer acetaminophen 1 g IV/IO once or ketorolac 15–30 mg IV once or 60 mg IM once after the medication-specific contraindication screen. Do not routinely combine IV acetaminophen with an additional acetaminophen dose or ketorolac with another NSAID.",
               "For moderate to severe pain, select one opioid or analgesic-dose ketamine based on the clinical situation, contraindications, prior response, and patient preference. Titrate to meaningful improvement rather than complete elimination of pain.",
               "Fentanyl: 50 mcg slow IV/IO; repeat 25–50 mcg every 5 minutes as needed; maximum total 100 mcg.",
               "Morphine: 5 mg slow IV/IO; repeat 5 mg after 10 minutes as needed; maximum total 10 mg. If vascular access is unavailable, administer 5–10 mg IM once.",
               "Hydromorphone: 0.5 mg slow IV/IO; repeat 0.5 mg after 10 minutes as needed; maximum total 1 mg. If vascular access is unavailable, administer 0.5–1 mg IM once.",
               "Select one opioid. Do not combine fentanyl, morphine, and hydromorphone. Additional opioid dosing beyond the approved total limits requires medical-control authorization.",
-              "Ketamine: 0.3 mg/kg IV/IO slowly over 10 minutes, maximum 30 mg per dose. May repeat every 20 minutes as needed for a maximum of three total doses. Do not administer by rapid IV push.",
+              "Ketamine: 0.3 mg/kg IV/IO slowly over 10 minutes, maximum 30 mg per dose. May repeat every 20 minutes as needed for a maximum of three total doses. Do not administer by rapid IV push. For suspected penetrating or open-globe eye trauma, do not use ketamine for analgesia unless Medical Control expressly authorizes it; follow TB-11.",
               "If vascular access is unavailable, administer ketamine 0.5–1 mg/kg IN once, maximum 100 mg. Intranasal ketamine is a single-dose option under UP-11.",
               "Do not routinely initiate weight-based ketamine and an opioid together. If the initial medication is inadequate, fully reassess airway, ventilation, hemodynamics, sedation, pain, and adverse effects before changing agents.",
               "Apply cardiac monitoring before systemic nonoral analgesia. Maintain continuous SpO₂ and waveform EtCO₂ with any opioid or ketamine, keep suction and ventilation equipment immediately available, and reassess at least every 5–10 minutes.",
@@ -2009,6 +2017,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Do not administer ibuprofen or ketorolac with NSAID hypersensitivity, renal disease or renal transplant, significant dehydration, hypotension, active gastrointestinal bleeding, clinically significant anticoagulant-associated bleeding risk, known or suspected pregnancy, or recent NSAID administration.",
       "Do not administer an opioid with respiratory depression, inability to protect the airway, severe hypotension, or significant uncorrected hypoxemia.",
       "Do not administer analgesic-dose ketamine with known hypersensitivity, uncontrolled hypertension, active severe cardiac ischemia, or active psychosis.",
+      "For suspected penetrating or open-globe eye trauma, do not use ketamine for analgesia unless Medical Control expressly authorizes it; follow TB-11.",
     ],
     assessment: [
       {
@@ -2023,7 +2032,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     treatmentSteps: [
       "Treat airway compromise, hemorrhage, shock, and other immediate threats first. Provide appropriate positioning, splinting, wound care, ice, and reassurance.",
       "For mild pain, administer acetaminophen 650–1,000 mg PO or ibuprofen 400 mg PO when the oral route is safe and medication-specific contraindications are absent.",
-      "For parenteral nonopioid treatment, an AEMT or Paramedic may administer acetaminophen 1 g IV/IO once or ketorolac 15–30 mg IV or 60 mg IM once.",
+      "For parenteral nonopioid treatment, a Paramedic may administer acetaminophen 1 g IV/IO once or ketorolac 15–30 mg IV or 60 mg IM once. Expanded AEMT administration remains disabled while drug-, route-, patient-group-, training-, agency-credentialing-, and standing-order authorization is unverified; a generic provider badge does not establish authorization.",
       "For moderate to severe pain, a Paramedic may select fentanyl, morphine, hydromorphone, or analgesic-dose ketamine using the approved dose, interval, route, and maximum. Do not combine different opioids or routinely initiate opioid/ketamine combination therapy.",
       "Apply cardiac monitoring for all systemic nonoral analgesia. Use continuous SpO₂ and waveform EtCO₂ with opioids or ketamine and keep suction and ventilation equipment immediately available.",
       "Reassess pain, sedation, airway, respiratory rate and effort, SpO₂, EtCO₂ when used, BP, cardiac rhythm, and adverse effects at least every 5–10 minutes after parenteral medication and at handoff.",
@@ -2048,16 +2057,18 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         name: "Acetaminophen — IV/IO",
-        dose: "AEMT/Paramedic: 1 g IV/IO once.",
+        dose: "Paramedic: 1 g IV/IO once. Expanded AEMT use is not enabled by default while individual authorization is unverified.",
         notes: [
+          "Expanded AEMT analgesia is not enabled by default while individual authorization is unverified. The specified medication, route, and patient group require current Tennessee authority, documented Tennessee-approved expanded analgesia training, agency credentialing and competency verification, and medical-director standing orders; training alone does not grant permission.",
           "Include all acetaminophen taken before EMS arrival when screening for a recent maximum dose.",
           "Do not administer an additional oral acetaminophen dose routinely.",
         ],
       },
       {
         name: "Ketorolac",
-        dose: "AEMT/Paramedic: 15–30 mg IV once or 60 mg IM once.",
+        dose: "Paramedic: 15–30 mg IV once or 60 mg IM once. Expanded AEMT use is not enabled by default while individual authorization is unverified.",
         notes: [
+          "Expanded AEMT analgesia is not enabled by default while individual authorization is unverified. The specified medication, route, and patient group require current Tennessee authority, documented Tennessee-approved expanded analgesia training, agency credentialing and competency verification, and medical-director standing orders; training alone does not grant permission.",
           "Do not administer with the NSAID contraindications listed above.",
           "Do not combine with ibuprofen or another NSAID.",
         ],
@@ -2091,6 +2102,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
         dose: "Paramedic: 0.3 mg/kg IV/IO slowly over 10 minutes, maximum 30 mg per dose; repeat every 20 minutes as needed, maximum three total doses. If no vascular access, 0.5–1 mg/kg IN once, maximum 100 mg.",
         notes: [
           "Do not administer by rapid IV push.",
+          "For suspected penetrating or open-globe eye trauma, ketamine requires express Medical Control authorization; follow TB-11.",
           "Do not routinely initiate ketamine with an opioid. Fully reassess before changing agents.",
           "Use continuous SpO₂ and waveform EtCO₂ and monitor airway, ventilation, sedation, cardiac rhythm, and hemodynamics.",
         ],
@@ -2113,6 +2125,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
     ],
     warnings: [
+      "Expanded AEMT analgesia is not enabled by default while individual authorization is unverified. The specified medication, route, and patient group require current Tennessee authority, documented Tennessee-approved expanded analgesia training, agency credentialing and competency verification, and medical-director standing orders; training alone does not grant permission.",
       "Analgesia must not delay airway management, hemorrhage control, shock treatment, splinting, or time-sensitive transport.",
       "A fall in respiratory rate, increasing sedation, abnormal EtCO₂, hypoxemia, or loss of airway protection after an opioid requires immediate airway support and assisted ventilation; administer naloxone when indicated.",
       "Use the lower end of the approved opioid dose range and careful titration in older or frail patients, obstructive sleep apnea, severe COPD, renal or hepatic impairment, or concurrent alcohol, opioid, benzodiazepine, or other sedative exposure.",
@@ -2148,6 +2161,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
     ],
     actionLinks: [
+      { label: "TB-11 Eye Trauma", description: "Protect suspected open globe; ketamine for analgesia requires express Medical Control authorization.", href: "/protocols/tb/tb-11", kind: "protocol" },
       {
         label: "PM-04 Pediatric Pain Control",
         description: "Open for patients age 2 through younger than 16 years; use actual or length-based weight.",
@@ -2164,12 +2178,15 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Claiborne County EMS UP-06 IV / IO Access and applicable complaint-specific protocols",
     ],
     sourcePdf: "/protocols/claiborne/up-11-pain-control-adult-protocol.pdf",
-    sourcePages: { start: 1, end: 3 },
-    revisionDate: "October 10, 2026",
-    lastVerifiedDate: "October 10, 2026",
+    sourcePages: { start: 1, end: canonicalPdfPages["up-11"] },
+    revisionDate: "2026-10-30",
+    lastVerifiedDate: "2026-10-30",
     reviewStatus: "Reviewed",
     reviewFlags: [
-      "Medical-director approved adult UP-11 for patients 16 years of age or older and directed provider-specific care: oral acetaminophen/ibuprofen by EMT, AEMT, or Paramedic; IV acetaminophen/ketorolac by AEMT or Paramedic; and opioids/analgesic-dose ketamine by Paramedic only.",
+      "The retained local ketorolac 60 mg IM dose is not dose-identical to the current Tennessee 10–30 mg IM reference. Director/state-authority reconciliation remains pending before clinical release; this record does not claim dose equivalence or establish expanded AEMT authority.",
+      "Scoped trauma-review revisions accepted October 30, 2026: expanded AEMT parenteral analgesia is disabled by default until current Tennessee drug/route authority, documented approved training, agency credentialing/competency, and medication-/route-/patient-specific medical-director standing orders are verified. This is not full-system clinical release.",
+      "TB-11 express Medical Control authorization remains required for ketamine analgesia in suspected penetrating/open-globe injury.",
+      "Medical-director approved adult UP-11 for patients 16 years of age or older and directed provider-specific care: oral acetaminophen/ibuprofen by EMT, AEMT, or Paramedic; IV acetaminophen/ketorolac by Paramedic, with expanded AEMT authority disabled until separately verified for the specified drug, route, and patient group; and opioids/analgesic-dose ketamine by Paramedic only.",
       "Medical-director removed nitrous oxide because it is not on the Claiborne formulary and removed aspirin as an analgesic while retaining aspirin only for its approved cardiac indication.",
       "Medical-director approved acetaminophen 650–1,000 mg PO, ibuprofen 400 mg PO, acetaminophen 1 g IV/IO once, and ketorolac 15–30 mg IV or 60 mg IM once with the medication-specific contraindications documented in UP-11.",
       "Medical-director approved Paramedic opioid limits: fentanyl maximum total 100 mcg, morphine maximum total 10 mg, and hydromorphone maximum total 1 mg; one opioid is selected and different opioids are not combined.",
@@ -7490,7 +7507,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     treatmentSteps: [
       "Protect the dialysis access and address airway failure, hypoxia, dysrhythmia, shock, pulmonary edema, sepsis, or hemorrhage immediately.",
       "For suspected hyperkalemia with significant ECG changes or hemodynamic instability, the Paramedic gives either calcium chloride 500–1,000 mg IV/IO or calcium gluconate 1.5–3 g IV, with potassium-shifting treatment as listed below. Calcium gluconate is preferred when administering calcium through a peripheral IV.",
-      "Use calcium chloride and calcium gluconate as alternative formulations; do not administer both as the initial calcium dose. Repeat one calcium dose after 5–10 minutes only when life-threatening ECG changes persist.",
+      "Use calcium chloride and calcium gluconate as alternative formulations; do not administer both as the initial calcium dose. Calcium chloride may be repeated once after 5–10 minutes only when life-threatening ECG changes persist. Do not repeat calcium gluconate without a specific Medical Control order confirming the cumulative dose.",
       "Do not mix calcium and sodium bicarbonate in the same solution or administer them simultaneously through the same tubing. Flush the line thoroughly between medications.",
       "For suspected hyperkalemia with a pulse, administer albuterol 10 mg by nebulizer. Do not administer nebulized albuterol during cardiac arrest.",
       "For cardiac arrest strongly suspected to result from hyperkalemia, follow the linked arrest protocol and consider calcium and sodium bicarbonate as cause-specific treatment. Their effectiveness during hyperkalemic arrest remains uncertain under the 2025 AHA guideline.",
@@ -7504,7 +7521,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       {
         name: "Calcium gluconate 10%",
         dose: "1.5–3 g IV for hyperkalemia/arrhythmia; maximum 3 g per episode",
-        notes: ["Paramedic for suspected hyperkalemia with significant ECG changes or hemodynamic instability.", "Preferred calcium formulation when administration is through a peripheral IV.", "May repeat once after 5–10 minutes for persistent life-threatening ECG changes.", "Monitor the IV site continuously and stop for suspected extravasation."],
+        notes: ["Paramedic for suspected hyperkalemia with significant ECG changes or hemodynamic instability.", "Preferred calcium formulation when administration is through a peripheral IV.", "For persistent life-threatening ECG changes, do not repeat calcium gluconate without a specific Medical Control order confirming the cumulative dose.", "Monitor the IV site continuously and stop for suspected extravasation."],
       },
       {
         name: "Calcium chloride 10%",
@@ -7528,6 +7545,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
     ],
     warnings: [
+      "Calcium gluconate initial dose: 1.5–3 g IV; maximum 3 g per episode. Do not repeat calcium gluconate without a specific Medical Control order confirming the cumulative dose.",
       "Calcium chloride and calcium gluconate are alternatives. Do not give both as the initial calcium dose.",
       "Calcium extravasation can cause severe tissue injury. Calcium gluconate is preferred through a peripheral IV; monitor the site continuously with either formulation.",
       "Do not mix calcium and sodium bicarbonate because precipitation may occur; flush the line thoroughly between administrations.",
@@ -7577,11 +7595,13 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Claiborne County EMS formulary and medical-director decisions, October 2026.",
     ],
     sourcePdf: "/protocols/claiborne/am-03-dialysis-renal-failure-protocol.pdf",
-    sourcePages: { start: 1, end: 2 },
-    revisionDate: "October 2026",
-    lastVerifiedDate: "October 16, 2026",
+    sourcePages: { start: 1, end: canonicalPdfPages["am-03"] },
+    revisionDate: "2026-10-30",
+    lastVerifiedDate: "2026-10-30",
     reviewStatus: "Approved",
     reviewFlags: [
+      "The prior calcium-gluconate automatic repeat instruction conflicts with the retained 3 g per-episode maximum. A reconciled numeric repeat/cumulative-limit order remains pending; this reconciliation does not choose a new regimen.",
+      "Scoped trauma-review safeguards accepted October 30, 2026. Calcium-gluconate automatic repeat is held pending a reconciled specific Medical Control repeat/cumulative-limit order; no new numeric regimen is selected. This is not full-system clinical release.",
       "Clinical content, provider permissions, medication doses, dialysis-access precautions, and source-PDF replacement approved by the Claiborne EMS medical director on October 16, 2026.",
       "Medical-director decision: calcium chloride is 500–1,000 mg IV/IO and calcium gluconate is 1.5–3 g IV for hyperkalemia/arrhythmia; calcium gluconate is preferred through a peripheral IV.",
       "Dialysis-catheter access remains governed by the separate interfacility-transfer policy.",
@@ -7659,7 +7679,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       },
       {
         title: "Cause-Directed Resuscitation",
-        text: "Reassessed fluid aliquots when appropriate • avoid indiscriminate crystalloid • treat reversible causes",
+        text: "Cause-specific reassessed fluids • hemorrhage: warmed isotonic crystalloid to perfusion when blood is unavailable • suspected TBI: adult SBP ≥110 mmHg, no permissive hypotension • treat reversible causes",
         levels: ["AEMT", "Paramedic"],
         tone: "action",
       },
@@ -7705,7 +7725,8 @@ export const structuredProtocols: StructuredProtocolContent[] = [
               "Establish IV access without delaying transport. When the patient is critically unstable and IV access cannot be obtained rapidly, proceed to IO access under the approved vascular-access protocol.",
               "For nonhemorrhagic shock without fluid-overload risk, give isotonic crystalloid 500 mL IV/IO and reassess after every aliquot.",
               "For heart failure, renal failure, liver failure, suspected cardiogenic shock, or another risk of volume overload, use 250 mL aliquots with reassessment after each aliquot.",
-              "For suspected hemorrhagic shock without traumatic brain injury, minimize crystalloid and give only enough to maintain a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg.",
+              "For suspected hemorrhagic shock without traumatic brain injury when blood is unavailable, titrate warmed isotonic crystalloid only to maintain a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg; avoid unnecessary large-volume crystalloid. Reassess after treatment.",
+              "For suspected TBI, prevent hypotension: target adult SBP at least 110 mmHg, including age 70. Do not use permissive hypotension; use normal saline when crystalloid is required and reassess blood pressure frequently and after treatment.",
               "Immediately report persistent hypotension, pulmonary edema, worsening respiratory status, altered mental status, dysrhythmia, or other deterioration to the Paramedic and receiving facility.",
             ],
           },
@@ -7732,6 +7753,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
     ],
     indications: [
       "Adult with SBP below 90 mmHg.",
+      "Adult with suspected TBI and SBP below the 110 mmHg target; prevent hypotension rather than waiting for SBP below 90 mmHg.",
       "Adult with clinical evidence of inadequate perfusion regardless of blood pressure, including altered mental status, weak pulses, cool or mottled skin, delayed capillary refill, or progressive deterioration.",
     ],
     contraindications: [
@@ -7772,10 +7794,11 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "For nonhemorrhagic shock without fluid-overload risk, give isotonic crystalloid 500 mL IV/IO, then reassess mental status, lung sounds, work of breathing, peripheral perfusion, BP or MAP, heart rate, and EtCO₂ when available.",
       "Repeat 500 mL aliquots only while hypotension or poor perfusion persists and the patient remains fluid responsive.",
       "Use 250 mL aliquots with reassessment in heart failure, renal failure, liver failure, suspected cardiogenic shock, or another condition with increased risk of volume overload.",
-      "Stop routine fluid boluses when perfusion adequately improves, SBP reaches approximately 90–100 mmHg, MAP reaches at least 65 mmHg, pulmonary edema develops, respiratory status worsens, or additional fluid is unlikely to improve the shock state.",
+      "Outside the suspected-TBI branch, stop routine fluid boluses when perfusion adequately improves, SBP reaches approximately 90–100 mmHg, or MAP reaches at least 65 mmHg. The higher adult TBI SBP target of at least 110 mmHg takes precedence when TBI is suspected. In any branch, stop routine boluses for pulmonary edema, worsening respiratory status, or lack of fluid responsiveness and reassess the resuscitation strategy.",
       "For suspected sepsis with hypotension or inadequate perfusion, use 500 mL isotonic crystalloid aliquots and target a cumulative initial volume up to 30 mL/kg only while the patient remains fluid responsive and free of pulmonary edema. Individualize volume in patients at risk of overload and do not delay transport to complete the target volume.",
-      "For hemorrhagic shock without suspected traumatic brain injury, minimize crystalloid and give only enough to maintain a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg.",
-      "For suspected traumatic brain injury, avoid permissive hypotension and maintain SBP at least 110 mmHg. Avoid hypoxemia and excessive crystalloid; use normal saline when crystalloid is required.",
+      "For hemorrhagic shock without suspected traumatic brain injury when blood is unavailable, titrate warmed isotonic crystalloid only to maintain a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg; avoid unnecessary large-volume crystalloid. Control bleeding, reassess after treatment, and expedite definitive care.",
+      "For suspected TBI, prevent hypotension and target adult SBP at least 110 mmHg, including age 70. Do not use permissive hypotension. Avoid hypoxemia and excessive crystalloid; use normal saline when crystalloid is required. Reassess blood pressure frequently and after treatment.",
+      "Use blood products only within an authorized, supported transfusion program with required training, monitoring, and destination coordination.",
       "For pregnancy beyond approximately 20 weeks, use left uterine displacement or left lateral positioning when feasible, avoid prolonged supine positioning, treat hemorrhage or another cause, and follow AO-03.",
       "For cardiogenic or obstructive shock, avoid repeated large-volume fluid boluses. Consider a cautious 250 mL trial only when volume depletion is possible and pulmonary edema is absent; treat tension pneumothorax or causative dysrhythmia immediately.",
       "For anaphylactic shock, give IM epinephrine immediately under AM-01; do not delay epinephrine for IV access or fluid administration.",
@@ -7791,7 +7814,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
         notes: [
           "Reassess perfusion, BP or MAP, lung sounds, work of breathing, and response after every aliquot.",
           "For suspected sepsis, cumulative initial fluid may approach 30 mL/kg only while the patient remains fluid responsive and free of pulmonary edema.",
-          "Minimize crystalloid in uncontrolled hemorrhage and suspected cardiogenic shock.",
+          "In hemorrhagic shock when blood is unavailable, titrate warmed isotonic crystalloid to perfusion rather than applying the nonhemorrhagic aliquot schedule; use the higher adult SBP target of at least 110 mmHg for suspected TBI. Minimize unnecessary crystalloid in uncontrolled hemorrhage and suspected cardiogenic shock.",
         ],
       },
       {
@@ -7844,7 +7867,7 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       {
         title: "Suspected Traumatic Brain Injury",
         items: [
-          "Avoid permissive hypotension, hypoxemia, and excessive crystalloid; maintain SBP at least 110 mmHg and use normal saline when crystalloid is required.",
+          "Prevent hypotension: target adult SBP at least 110 mmHg, including age 70. Do not use permissive hypotension. Avoid hypoxemia and excessive crystalloid; use normal saline when crystalloid is required. Reassess blood pressure frequently and after treatment.",
         ],
       },
       {
@@ -7872,6 +7895,8 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       { label: "AC-06 Narrow-Complex Tachycardia", description: "Open for unstable narrow-complex tachycardia.", href: "/protocols/ac/ac-06", kind: "protocol" },
       { label: "AC-07 Monomorphic Wide-Complex Tachycardia", description: "Open for unstable monomorphic wide-complex tachycardia.", href: "/protocols/ac/ac-07", kind: "protocol" },
       { label: "AO-03 OB/GYN Emergency", description: "Open for ectopic pregnancy, obstetric hemorrhage, or pregnancy-related shock.", href: "/protocols/ao/ao-03", kind: "protocol" },
+      { label: "TB-05 Head Trauma", description: "Suspected TBI: higher adult perfusion target, serial reassessment, and controlled ventilation.", href: "/protocols/tb/tb-05", kind: "protocol" },
+      { label: "TB-12 Abdominal / Pelvic Trauma", description: "Concealed traumatic hemorrhage and pelvic stabilization with the shared adult resuscitation strategy.", href: "/protocols/tb/tb-12", kind: "protocol" },
       { label: "TB-06 Multiple Trauma", description: "Open for traumatic shock, hemorrhage control, and trauma destination decisions.", href: "/protocols/tb/tb-06", kind: "protocol" },
       { label: "TE-07 Overdose / Toxic Ingestion", description: "Open for medication effect, overdose, or another toxicologic cause.", href: "/protocols/te/te-07", kind: "protocol" },
       { label: "AR-01 Adult Airway Management", description: "Open for advanced airway and ventilation support.", href: "/protocols/ar/ar-01", kind: "protocol" },
@@ -7886,11 +7911,12 @@ export const structuredProtocols: StructuredProtocolContent[] = [
       "Claiborne County EMS formulary and medical-director decisions, October 2026.",
     ],
     sourcePdf: "/protocols/claiborne/am-05-hypotension-shock-protocol.pdf",
-    sourcePages: { start: 1, end: 2 },
-    revisionDate: "October 2026",
-    lastVerifiedDate: "October 16, 2026",
+    sourcePages: { start: 1, end: canonicalPdfPages["am-05"] },
+    revisionDate: "2026-10-30",
+    lastVerifiedDate: "2026-10-30",
     reviewStatus: "Approved",
     reviewFlags: [
+      "Scoped trauma-review revisions accepted October 30, 2026: perfusion-directed warmed crystalloid when blood is unavailable, no permissive hypotension in suspected TBI, adult TBI SBP at least 110 mmHg including age 70, and frequent/post-treatment reassessment. This does not establish full-system clinical release.",
       "Clinical content, fluid strategy, provider permissions, norepinephrine weight-based dosing, epinephrine alternative, linked pathways, and source-PDF replacement approved by the Claiborne EMS medical director on October 16, 2026.",
       "Norepinephrine uses only the approved weight-based dose of 0.05–0.5 mcg/kg/min; the proposed non-weight-based alternative was removed.",
       "Push-Dose Epinephrine is linked from the AM-05 medication section as directed.",

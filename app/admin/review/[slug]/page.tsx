@@ -42,14 +42,14 @@ export default async function ProtocolReviewPage({
           <div className="flex h-full min-h-[36rem] flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 px-4 py-3">
               <div>
-                <h2 id="source-document-title" className="flex items-center gap-2 font-bold"><FileText aria-hidden="true" className="h-4 w-4 text-sky-400" />Original protocol</h2>
+                <h2 id="source-document-title" className="flex items-center gap-2 font-bold"><FileText aria-hidden="true" className="h-4 w-4 text-sky-400" />Source protocol</h2>
                 <p className="mt-0.5 text-xs text-slate-500">Read-only source document</p>
               </div>
               <a href={sourceUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-slate-700 px-3 text-sm font-semibold text-slate-200 hover:border-sky-500 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
-                Open Original PDF<ExternalLink aria-hidden="true" className="h-4 w-4" />
+                Open Source PDF<ExternalLink aria-hidden="true" className="h-4 w-4" />
               </a>
             </div>
-            <iframe title={`${protocol.title} original protocol PDF`} src={sourceUrl} className="min-h-[32rem] w-full flex-1 bg-white" />
+            <iframe title={`${protocol.title} source protocol PDF`} src={sourceUrl} className="min-h-[32rem] w-full flex-1 bg-white" />
           </div>
         </section>
 

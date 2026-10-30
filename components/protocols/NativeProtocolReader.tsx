@@ -108,7 +108,7 @@ export default function NativeProtocolReader({
           <div className="flex items-center gap-2">
             <Link
               href={viewerHref}
-              aria-label={`View original PDF for ${protocol.title}`}
+              aria-label={`View source PDF for ${protocol.title}`}
               className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-sky-300 transition active:scale-95 active:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
             >
               <FileText aria-hidden="true" className="h-5 w-5" />
@@ -370,7 +370,7 @@ export default function NativeProtocolReader({
           className="mt-6 flex min-h-14 w-full items-center justify-center rounded-2xl bg-sky-600 px-5 text-base font-bold text-white shadow-lg shadow-sky-950/30 transition active:scale-[0.985] active:bg-sky-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
         >
           <FileText aria-hidden="true" className="mr-2 h-5 w-5" />
-          View Original PDF
+          View Source PDF
         </Link>
       </div>
     </main>

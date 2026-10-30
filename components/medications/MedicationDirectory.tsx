@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { AlertTriangle, BookOpenCheck, Search, X } from "lucide-react";
 import ProviderLevelSelector, {
-  CLINICAL_PROVIDER_LEVELS,
   useProviderLevel,
 } from "../provider/ProviderLevelSelector";
 import {
@@ -12,6 +11,8 @@ import {
   medicationReferenceSource,
   type MedicationProviderLevel,
 } from "../../data/medication-reference";
+
+import { AEMT_ANALGESIA_AUTHORIZATION_NOTICE, medicationDoseState } from "../../lib/medications/provider-scope";
 
 const levelStyle: Record<MedicationProviderLevel, string> = {
   EMT: "border-blue-400/30 bg-blue-500/15 text-blue-200",
@@ -36,7 +37,6 @@ function subscribeToMedicationHash(onStoreChange: () => void) {
 export default function MedicationDirectory() {
   const { providerLevel, setProviderLevel } = useProviderLevel();
   const [query, setQuery] = useState("");
-  const selectedIndex = CLINICAL_PROVIDER_LEVELS.indexOf(providerLevel);
   const referencedMedicationId = useSyncExternalStore<string | null>(
     subscribeToMedicationHash,
     getReferencedMedicationId,
@@ -50,15 +50,14 @@ export default function MedicationDirectory() {
         const isReferencedMedication = medication.id === referencedMedicationId;
         return {
           ...medication,
-          doses: isReferencedMedication
-            ? medication.doses
-            : medication.doses.filter(
-                (dose) => CLINICAL_PROVIDER_LEVELS.indexOf(dose.level) <= selectedIndex
-              ),
+          isReferencedMedication,
+          doses: medication.doses.filter(
+            (dose) => medicationDoseState(dose, providerLevel) !== "out-of-scope"
+          ),
         };
       })
       .filter((medication) => {
-        if (medication.doses.length === 0) return false;
+        if (medication.doses.length === 0 && !medication.isReferencedMedication) return false;
         if (!normalized) return true;
         return [
           medication.name,
@@ -74,7 +73,7 @@ export default function MedicationDirectory() {
           .toLowerCase()
           .includes(normalized);
       });
-  }, [query, referencedMedicationId, selectedIndex]);
+  }, [query, referencedMedicationId, providerLevel]);
 
   useEffect(() => {
     if (!referencedMedicationId) return;
@@ -97,7 +96,8 @@ export default function MedicationDirectory() {
             <p className="mt-1 text-red-100/80">
               Confirm the indication, concentration, route, dose, repeat interval, contraindications,
               and provider authorization in the current approved Claiborne standing order. The
-              protocol-specific order controls if any value differs.
+              protocol-specific order controls if any value differs. Provider selection is a display
+              filter, not verification of licensure, training, or agency credentials.
             </p>
           </div>
         </div>
@@ -110,6 +110,12 @@ export default function MedicationDirectory() {
           label="Medication Provider View"
         />
       </div>
+
+      {providerLevel === "AEMT" ? (
+        <aside className="mt-4 rounded-xl border border-amber-500/30 bg-amber-950/20 p-4 text-sm leading-6 text-amber-100" aria-label="AEMT authorization status">
+          {AEMT_ANALGESIA_AUTHORIZATION_NOTICE}
+        </aside>
+      ) : null}
 
       <div className="relative mt-5">
         <Search aria-hidden="true" className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500" />
@@ -139,7 +145,7 @@ export default function MedicationDirectory() {
         </p>
         <p className="text-right text-xs text-slate-500">
           Showing {providerLevel} and lower-level care
-          {referencedMedicationId ? "; directly linked reference shown" : ""}
+          {referencedMedicationId ? "; linked references retain scope restrictions" : ""}
         </p>
       </div>
 
@@ -173,16 +179,27 @@ export default function MedicationDirectory() {
                 ))}
               </div>
 
+              {medication.doses.length === 0 ? (
+                <p className="mt-4 rounded-xl border border-amber-500/30 bg-amber-950/20 p-3 text-sm leading-6 text-amber-100">
+                  No dose row is authorized in the selected {providerLevel} view. A direct link does not expand provider scope. Request the appropriate provider and open the governing protocol below.
+                </p>
+              ) : null}
+
               <div className="mt-4 space-y-3">
                 {medication.doses.map((dose) => (
                   <article key={`${medication.id}-${dose.level}-${dose.indication}`} className="rounded-xl border border-white/[0.08] bg-slate-950/55 p-3">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className={`rounded-full border px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-wide ${levelStyle[dose.level]}`}>
-                        {dose.level}
+                        {medicationDoseState(dose, providerLevel) === "authorization-pending" ? "AEMT — not enabled" : dose.level}
                       </span>
                       <h3 className="text-sm font-bold text-white">{dose.indication}</h3>
                     </div>
-                    <dl className="mt-3 grid gap-3">
+                    {dose.releaseNote && medicationDoseState(dose, providerLevel) !== "authorization-pending" ? (
+                      <p className="mt-3 rounded-lg border border-red-500/30 bg-red-950/25 p-2 text-sm leading-6 text-red-100">{dose.releaseNote}</p>
+                    ) : null}
+                    {medicationDoseState(dose, providerLevel) === "authorization-pending" ? (
+                      <p className="mt-3 text-sm leading-6 text-amber-100">{AEMT_ANALGESIA_AUTHORIZATION_NOTICE}</p>
+                    ) : <dl className="mt-3 grid gap-3">
                       <div>
                         <dt className="text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-sky-300">Adult reference</dt>
                         <dd className="mt-1 text-sm leading-6 text-slate-200">{dose.adult}</dd>
@@ -191,7 +208,12 @@ export default function MedicationDirectory() {
                         <dt className="text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-pink-300">Pediatric reference</dt>
                         <dd className="mt-1 text-sm leading-6 text-slate-200">{dose.pediatric}</dd>
                       </div>
-                    </dl>
+                    </dl>}
+                    {dose.protocolLink ? (
+                      <Link href={dose.protocolLink.href} className="mt-3 inline-flex min-h-10 items-center text-xs font-bold text-sky-300">
+                        Governing order: {dose.protocolLink.label}
+                      </Link>
+                    ) : null}
                   </article>
                 ))}
               </div>

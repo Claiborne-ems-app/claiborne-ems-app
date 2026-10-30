@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import { readFile, stat } from "node:fs/promises";
 import test from "node:test";
+import { canonicalPdfPages } from "../data/canonical-pdf-pages.ts";
+import { structuredPediatricMedicalProtocols } from "../data/structured-pediatric-medical-protocols.ts";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
@@ -71,4 +73,15 @@ test("PM-03 is released as approved Claiborne app content and a direct source PD
   assert.doesNotMatch(structured, /id: "pm-03"[\s\S]*?Hydrocortisone 2mg\/kg/);
   assert.ok(metadata.size > 20_000);
   assert.equal(pdf.subarray(0, 5).toString("ascii"), "%PDF-");
+});
+
+
+test("pediatric medical catalog page counts and paths match the native PDF source", async () => {
+  const catalog = JSON.parse(await read("src/data/claiborne-protocols.json"));
+  for (const native of structuredPediatricMedicalProtocols) {
+    const entry = catalog.find((item) => item.id.toLowerCase() === native.id);
+    assert.equal(entry?.pages, canonicalPdfPages[native.id] ?? 2);
+    assert.equal(entry?.pages, native.sourcePages.end);
+    assert.equal(entry?.pdfPath, native.sourcePdf);
+  }
 });

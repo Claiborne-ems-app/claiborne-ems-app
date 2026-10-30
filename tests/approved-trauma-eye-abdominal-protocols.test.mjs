@@ -28,18 +28,21 @@ test("TB-11 and TB-12 are approved Claiborne protocols in both catalogs", async 
 test("TB-11 retains approved eye-protection and chemical-irrigation safeguards", async () => {
   const eye = await read("data/structured-eye-trauma-additions.ts");
 
-  assert.match(eye, /Start immediate copious irrigation/);
+  assert.match(eye, /start immediate gentle copious irrigation through handoff/i);
   assert.match(eye, /No pressure, manipulation, irrigation, drops, or object removal/);
   assert.match(eye, /Do not use ketamine for analgesia in suspected penetrating or open-globe eye trauma/);
   assert.match(eye, /Do not patch either eye/);
 });
 
-test("TB-12 includes the approved adult LR and Paramedic TXA trauma pathway", async () => {
+test("TB-12 includes perfusion-directed adult resuscitation and Paramedic-only trauma TXA", async () => {
   const abdominalPelvic = await read("data/structured-abdominal-pelvic-trauma-additions.ts");
 
-  assert.match(abdominalPelvic, /adult LR 1 L bolus with reassessment/);
-  assert.match(abdominalPelvic, /lactated Ringer's 1 L IV\/IO, then reassess perfusion, respiratory status, and response/);
-  assert.match(abdominalPelvic, /TXA is a Paramedic intervention for life-threatening abdominal or pelvic hemorrhage/);
+  assert.match(abdominalPelvic, /warmed isotonic crystalloid titrated to adult perfusion when blood is unavailable/);
+  assert.match(abdominalPelvic, /target adult SBP at least 110 mmHg/);
+  assert.doesNotMatch(abdominalPelvic, /1 L IV\/IO/);
+  assert.match(abdominalPelvic, /Trauma TXA is Paramedic-only/);
+  assert.match(abdominalPelvic, /Adult dose: 1–2 g IV\/IO/);
+  assert.doesNotMatch(abdominalPelvic, /approved Claiborne TXA pathway/);
   assert.match(abdominalPelvic, /greater trochanters/);
 });
 

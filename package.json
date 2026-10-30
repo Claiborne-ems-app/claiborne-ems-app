@@ -1,6 +1,6 @@
 {
   "name": "claiborne-ems-app",
-  "version": "2.32.0",
+  "version": "2.33.0",
   "private": true,
   "engines": {
     "node": "24.x"
@@ -21,7 +21,9 @@
     "test:viewing-mode": "node --test tests/viewing-mode.test.mjs",
     "test:category-search": "node --test tests/category-search.test.mjs",
     "test:release-config": "node --test tests/release-config.test.mjs",
-    "test": "node --import ./scripts/register-test-ts-resolver.mjs --test tests/*.test.mjs"
+    "test": "node --import ./scripts/register-test-ts-resolver.mjs --test tests/*.test.mjs",
+    "generate:trauma-pdfs": "python3 scripts/generate-canonical-trauma-pdfs.py",
+    "verify:trauma-pdfs": "python3 scripts/verify-canonical-trauma-pdfs.py"
   },
   "dependencies": {
     "lucide-react": "^1.24.0",

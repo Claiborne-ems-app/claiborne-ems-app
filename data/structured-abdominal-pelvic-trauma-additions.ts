@@ -1,3 +1,4 @@
+import { canonicalPdfPages } from "./canonical-pdf-pages";
 import type { StructuredProtocolContent } from "../lib/protocols/structured-content";
 
 const ALL_LEVELS = ["EMT", "AEMT", "Paramedic"] as const;
@@ -40,8 +41,14 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
       },
       {
         title: "Resuscitate En Route",
-        text: "IV/IO - warming - adult LR 1 L bolus with reassessment - analgesia/antiemetic - Paramedic TXA for life-threatening hemorrhage",
+        text: "IV/IO - warmed isotonic crystalloid titrated to adult perfusion when blood is unavailable (AM-05) - TBI: adult SBP ≥110 mmHg - analgesia/antiemetic - reassess",
         levels: ["AEMT", "Paramedic"],
+        tone: "action",
+      },
+      {
+        title: "Trauma TXA Eligibility",
+        text: "Paramedic only: after immediate lifesaving interventions, consider IV/IO TXA for traumatic hemorrhage with clinical hemorrhagic shock within 3 hours. Adult dose: 1–2 g IV/IO: give 1 g over 10 minutes or 2 g over 20 minutes; do not exceed 100 mg/min. Verify the stocked concentration and dilution against the current medication-preparation instructions. Do not administer an automatic repeat dose; any additional dose requires a separate authorized order.",
+        levels: ["Paramedic"],
         tone: "action",
       },
       {
@@ -69,16 +76,19 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
           {
             level: "AEMT",
             actions: [
-              "Perform all EMT actions plus IV/IO access. For an adult with traumatic shock, give lactated Ringer's 1 L IV/IO, then reassess perfusion, respiratory status, and response. Use age-appropriate analgesia or antiemetic care within current standing orders.",
+              "Perform all EMT actions plus IV/IO access. For adult hemorrhagic shock when blood is unavailable, follow AM-05: titrate warmed isotonic crystalloid to clinical perfusion and avoid unnecessary large-volume crystalloid. Use age-appropriate analgesia or antiemetic care within current standing orders.",
+              "Expanded AEMT analgesia is not enabled by default while individual authorization is unverified. The specified medication, route, and patient group require current Tennessee authority, documented Tennessee-approved expanded analgesia training, agency credentialing, and medical-director standing orders; training alone does not grant permission.",
               "Do not delay transport for vascular access. Trend mental status, pulse quality, skin findings, blood pressure, pulse pressure, and response to resuscitation.",
-              "Do not delay transport for vascular access or fluid. Prepare for rapid deterioration, avoid unnecessary additional large-volume crystalloid, and use the current hemorrhagic-shock pathway.",
+              "Do not delay transport for vascular access or fluid. Without suspected TBI, use the AM-05 endpoint of a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg. With suspected TBI, prevent hypotension and target adult SBP at least 110 mmHg, including age 70; do not use permissive hypotension. Use normal saline when crystalloid is required for suspected TBI and reassess blood pressure frequently and after treatment.",
             ],
           },
           {
             level: "Paramedic",
             actions: [
               "Perform all prior actions; lead advanced airway/ventilation, cardiac and EtCO2 monitoring, shock resuscitation, Medical Control, trauma-center destination, and air-medical decisions.",
-              "For life-threatening abdominal or pelvic hemorrhage, administer TXA under the approved Claiborne TXA pathway; do not delay transport or definitive hemorrhage control. Use prehospital blood products, vasopressors, or other advanced hemorrhage interventions only when authorized with the required training, monitoring, and destination coordination.",
+              "Paramedic only: after immediate lifesaving interventions, consider IV/IO TXA for traumatic hemorrhage with clinical hemorrhagic shock no more than 3 hours after injury. Adult dose: 1–2 g IV/IO: give 1 g over 10 minutes or 2 g over 20 minutes; do not exceed 100 mg/min. Verify the stocked concentration and dilution against the current medication-preparation instructions. Do not administer an automatic repeat dose; any additional dose requires a separate authorized order. Do not infer a systemic trauma regimen from topical indications. Record injury time and any TXA dose/time, and notify the receiving team to prevent duplicate dosing. Do not delay transport or definitive hemorrhage control.",
+              "Pediatric trauma TXA: local dose reference 15 mg/kg, Paramedic-only. Before administration, confirm pediatric eligibility, maximum dose, administration rate, and preparation with Medical Control within provider scope. Do not extrapolate the adult dose or infusion rate to children.",
+              "Use blood products only within an authorized, supported transfusion program with required training, monitoring, and destination coordination. Other advanced hemorrhage interventions remain subject to current standing orders.",
               "For a pregnant patient beyond approximately 20 weeks, relieve aortocaval compression with manual left uterine displacement or left lateral tilt when compatible with spinal and trauma care.",
             ],
           },
@@ -121,10 +131,11 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
       "Evisceration: do not replace organs into the abdomen. Cover loosely with sterile saline-moistened dressings and an occlusive layer when available, protect from heat loss, and avoid direct pressure.",
       "Impaled object: do not remove. Stabilize in place with bulky dressings without pressure on exposed organs. Modify or remove only when essential for an immediate lifesaving intervention or safe transport and under rescue/Medical Control coordination.",
       "Control external or junctional hemorrhage with direct pressure, wound packing, hemostatic gauze, or tourniquet when anatomically appropriate. Do not blindly pack material into the abdominal cavity.",
-      "Establish IV/IO access when indicated without delaying transport. For an adult with traumatic shock, give lactated Ringer's 1 L IV/IO, then reassess perfusion, respiratory status, and response. Use the approved Claiborne TXA pathway for life-threatening abdominal or pelvic hemorrhage; do not delay transport or definitive hemorrhage control.",
+      "Establish IV/IO access when indicated without delaying transport. For adult hemorrhagic shock when blood is unavailable, follow AM-05: titrate warmed isotonic crystalloid to clinical perfusion; avoid unnecessary large-volume crystalloid. Without suspected TBI, use a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg. For suspected TBI, prevent hypotension, target adult SBP at least 110 mmHg including age 70, use normal saline when crystalloid is required, and do not use permissive hypotension. Reassess perfusion, respiratory status, and blood pressure frequently and after treatment.",
+      "Paramedic only: after immediate lifesaving interventions, consider IV/IO TXA for traumatic hemorrhage with clinical hemorrhagic shock within 3 hours of injury. Adult dose: 1–2 g IV/IO: give 1 g over 10 minutes or 2 g over 20 minutes; do not exceed 100 mg/min. Verify the stocked concentration and dilution against the current medication-preparation instructions. Do not administer an automatic repeat dose; any additional dose requires a separate authorized order. Do not infer a systemic trauma regimen from topical indications. Record injury time and any TXA dose/time; notify the receiving team to prevent duplicate dosing.",
       "Provide authorized analgesia and antiemetic treatment without masking deterioration or delaying transport. Keep the patient NPO and reassess frequently.",
       "Pregnancy beyond approximately 20 weeks: prioritize maternal resuscitation and relieve aortocaval compression with left uterine displacement or left lateral tilt when compatible with trauma care. Notify an appropriate trauma/obstetric-capable destination early.",
-      "Transport to the most appropriate trauma center under the current Tennessee trauma destination criteria and Claiborne plan. Use the nearest appropriate stabilization facility when direct trauma-center ground transport is unsafe or would delay essential resuscitation. Consider air medical only when it is expected to reduce time to definitive care and does not delay ground movement.",
+      "Apply the trauma field-triage and destination plan: high-risk patients to the highest-level appropriate trauma center within regional constraints; favor pediatric-capable trauma care for children. Use a closer stabilization hospital only for an immediate critical need that cannot safely be managed during longer transport, under the destination plan/Medical Control. Notify early, document the reason, and activate the predefined transfer process. Do not delay ground movement solely while awaiting aircraft.",
       "Document mechanism, examination, serial vital signs, suspected bleeding source, pelvic-binder indication/position/time, distal neurovascular findings, open-injury care, medications/fluids/blood, response, pregnancy status, consultation, and destination rationale.",
     ],
     medications: [
@@ -143,22 +154,24 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
         ],
       },
       {
-        name: "Lactated Ringer's",
-        dose: "Adult traumatic shock: 1 L IV/IO, then reassess perfusion, respiratory status, and response.",
+        name: "Warmed isotonic crystalloid",
+        dose: "Adult hemorrhagic shock when blood is unavailable: titrate to perfusion under AM-05; avoid unnecessary large-volume crystalloid. Suspected TBI requires adult SBP at least 110 mmHg and normal saline when crystalloid is required.",
         notes: [
-          "Avoid unnecessary large-volume crystalloid; definitive hemorrhage control and blood-based resuscitation, when locally available, take priority.",
+          "Reassess perfusion, respiratory status, and blood pressure frequently and after treatment. Definitive hemorrhage control takes priority; use blood products only within an authorized, supported transfusion program.",
         ],
       },
       {
         name: "Tranexamic acid (TXA)",
-        dose: "Paramedic: use the approved Claiborne TXA pathway for life-threatening abdominal or pelvic hemorrhage.",
+        dose: "Paramedic only: consider IV/IO TXA after immediate lifesaving interventions for traumatic hemorrhage with clinical hemorrhagic shock within 3 hours of injury. Adult dose: 1–2 g IV/IO: give 1 g over 10 minutes or 2 g over 20 minutes; do not exceed 100 mg/min. Verify the stocked concentration and dilution against the current medication-preparation instructions. Do not administer an automatic repeat dose; any additional dose requires a separate authorized order.",
         notes: [
           "Do not delay transport or definitive hemorrhage control for TXA administration.",
+          "Record injury time and any TXA dose/time; notify the receiving team to prevent duplicate dosing. Do not infer a systemic trauma regimen from topical bleeding indications.",
+          "Pediatric trauma TXA: local dose reference 15 mg/kg, Paramedic-only. Before administration, confirm pediatric eligibility, maximum dose, administration rate, and preparation with Medical Control within provider scope. Do not extrapolate the adult dose or infusion rate to children.",
         ],
       },
       {
         name: "Blood products",
-        dose: "Use when authorized with the required training, monitoring, and destination coordination.",
+        dose: "Use only within an authorized, supported transfusion program with required training, monitoring, and destination coordination.",
       },
     ],
     warnings: [
@@ -168,6 +181,7 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
       "Do not remove an impaled object, reduce eviscerated organs, apply direct pressure to exposed viscera, or blindly pack the abdominal cavity.",
       "Do not allow exposed organs, wet dressings, cold fluids, or unnecessary exposure to cause hypothermia.",
       "Blood at the urinary meatus or suspected urethral injury is a warning for the receiving team; do not insert a urinary catheter in the field.",
+      "Trauma TXA is Paramedic-only, not an AEMT intervention. Adult dose: 1–2 g IV/IO: give 1 g over 10 minutes or 2 g over 20 minutes; do not exceed 100 mg/min. Verify the stocked concentration and dilution against the current medication-preparation instructions. Do not administer an automatic repeat dose; any additional dose requires a separate authorized order. Pediatric administration requires confirmation of the patient-specific maximum and rate with Medical Control within provider scope. Do not infer a trauma regimen from topical bleeding instructions.",
       "Maternal resuscitation is the best initial fetal resuscitation. Do not delay trauma-center care to obtain fetal assessment unavailable to the crew.",
     ],
     clinicalPearls: [
@@ -191,11 +205,24 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
         items: [
           "Use the length-based system for equipment and medication calculations when appropriate, but do not delay hemorrhage control or transport.",
           "Use age-appropriate signs of shock; hypotension is a late finding.",
+          "For pediatric traumatic hemorrhage, obtain Medical Control guidance and use only the authorized pediatric trauma resuscitation order; do not apply medical or septic-shock fluid targets indiscriminately.",
           "Use only an appropriately sized, agency-approved pelvic stabilization device and pediatric application procedure.",
         ],
       },
     ],
     actionLinks: [
+      {
+        label: "AM-05 Hypotension / Shock",
+        description: "Adult hemorrhagic-shock fluid strategy, reassessment, and the higher suspected-TBI perfusion target.",
+        href: "/protocols/am/am-05",
+        kind: "protocol",
+      },
+      {
+        label: "TB-05 Head Trauma",
+        description: "Suspected TBI: prevent hypotension and use the higher adult SBP target.",
+        href: "/protocols/tb/tb-05",
+        kind: "protocol",
+      },
       {
         label: "Multiple Trauma",
         description: "XABCDE, hemorrhage control, shock care, and trauma destination.",
@@ -228,15 +255,16 @@ export const structuredAbdominalPelvicTraumaAdditions: StructuredProtocolContent
       "Claiborne County EMS Multiple Trauma, Selective Spinal Immobilization, Traumatic Arrest, and OB / GYN Emergency protocols.",
     ],
     sourcePdf: "/protocols/claiborne/tb-12-abdominal-pelvic-trauma-protocol.pdf",
-    sourcePages: { start: 1, end: 2 },
-    revisionDate: "October 17, 2026",
-    lastVerifiedDate: "October 17, 2026",
+    sourcePages: { start: 1, end: canonicalPdfPages["tb-12"] },
+    revisionDate: "2026-10-30",
+    lastVerifiedDate: "2026-10-30",
     reviewStatus: "Approved",
     reviewFlags: [
-      "Approved by the Claiborne EMS medical director on October 17, 2026.",
-      "Adult traumatic-shock fluid care uses lactated Ringer's 1 L IV/IO followed by reassessment; avoid unnecessary additional large-volume crystalloid.",
-      "TXA is a Paramedic intervention for life-threatening abdominal or pelvic hemorrhage under the approved Claiborne TXA pathway.",
-      "Maintain current pelvic-binder model/sizing and placement training, evisceration supplies, trauma-destination plan, and access to current analgesic/antiemetic and TXA pathways.",
+      "Base content approved October 17, 2026; scoped trauma-review revisions accepted October 30, 2026. This does not establish full-system clinical release.",
+      "Adult traumatic hemorrhage uses the AM-05 perfusion-directed warmed isotonic crystalloid strategy when blood is unavailable; the suspected-TBI adult SBP target is at least 110 mmHg. Pediatric traumatic-hemorrhage numeric instructions remain pending.",
+      "Trauma TXA is Paramedic-only after immediate lifesaving interventions for traumatic hemorrhage with clinical hemorrhagic shock within 3 hours. Adult dose/rate accepted October 30, 2026: 1 g IV/IO over 10 minutes or 2 g IV/IO over 20 minutes, maximum 100 mg/min. No automatic repeat dose is provided. Verify stocked concentration/dilution using existing preparation instructions. Pediatric 15 mg/kg is the retained local reference; pediatric maximum/rate/age eligibility remain separate requirements.",
+      "The retained local TXA references are not a claim of exact equivalence to the current state dosing sheet. IO authorization, pediatric age eligibility, pediatric administration rate/maximum, and any separately proposed repeat order require final director/state-authority reconciliation before clinical release; the approved adult dose/rate pairings are not pending.",
+      "Maintain current pelvic-binder model/sizing and placement training, evisceration supplies, trauma-destination plan, and access to current analgesic/antiemetic orders. Record the approved adult TXA dose/rate pairings in the controlled administration order and verify the stocked preparation before clinical release; resolve pediatric maximum/rate separately.",
     ],
   },
 ];

@@ -11,7 +11,7 @@ export interface Protocol {
   year: number;
   source: string;
   agency: string;
-  status: "draft-import" | "approved";
+  status: "draft-import" | "reviewed" | "approved";
 }
 
 export interface Category {

@@ -1,0 +1,790 @@
+{
+  "purpose": "Human-reviewed semantic deduplication; no distinct clinical instructions are removed.",
+  "protocols": {
+    "tb-11": {
+      "canonicalSha256": "ede7af74b1b4efac864a0aa79f9ca00933b98d78f6a21d44e29b5b25c1d3b386",
+      "omissions": [
+        {
+          "path": "overview.1",
+          "coveredBy": [
+            "flow.1.title",
+            "flow.1.text",
+            "flow.2.title",
+            "flow.2.text",
+            "flow.3.title",
+            "flow.3.text",
+            "flow.4.title",
+            "flow.4.text"
+          ],
+          "reason": "The retained flow separately distinguishes chemical, thermal, penetrating/open-globe, and blunt/superficial injury and gives their different care."
+        },
+        {
+          "path": "indications.0",
+          "coveredBy": [
+            "overview.0"
+          ],
+          "reason": "Blunt and penetrating eye injury applicability is expressly retained in the overview."
+        },
+        {
+          "path": "indications.1",
+          "coveredBy": [
+            "overview.0"
+          ],
+          "reason": "Chemical and thermal eye injury applicability is expressly retained in the overview."
+        },
+        {
+          "path": "indications.2",
+          "coveredBy": [
+            "overview.2",
+            "careModules.0.levels.0.actions.2"
+          ],
+          "reason": "High-velocity injury, impaled object and visual loss are retained in the urgent-red-flag overview; suspected open globe is retained in the EMT action."
+        },
+        {
+          "path": "treatmentSteps.0",
+          "coveredBy": [
+            "overview.0",
+            "careModules.0.levels.0.actions.0",
+            "careModules.0.levels.1.actions.2"
+          ],
+          "reason": "Life threats and associated trauma take priority in the retained overview/EMT actions, with associated head/facial/systemic injury and no transport delay in AEMT care."
+        },
+        {
+          "path": "treatmentSteps.3",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.3"
+          ],
+          "reason": "The known/strongly suspected chemically contaminated open-globe exception, noncontact shield, urgent ophthalmology/Poison Help/Medical Control consultation, and no delay for hypothetical rupture are repeated verbatim in EMT care."
+        },
+        {
+          "path": "treatmentSteps.5",
+          "coveredBy": [
+            "flow.2.text",
+            "warnings.0",
+            "warnings.3"
+          ],
+          "reason": "Thermal cooling/irrigation with room-temperature water or saline and eye protection are retained in the flow; no ice, ointment or pressure remains in warnings."
+        },
+        {
+          "path": "treatmentSteps.7",
+          "coveredBy": [
+            "flow.4.text",
+            "assessment.0.items.2",
+            "assessment.0.items.3",
+            "careModules.0.levels.0.actions.0",
+            "warnings.0",
+            "warnings.4"
+          ],
+          "reason": "The blunt-injury flow retains shielding when globe injury is suspected; focused assessment retains all listed visual/pupil/hyphema/diplopia/movement/proptosis findings; associated head/facial trauma and no pressure/patch are retained."
+        },
+        {
+          "path": "medications.0.notes.1",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.2"
+          ],
+          "reason": "The express Medical Control restriction on ketamine for suspected penetrating/open-globe trauma is retained in the Paramedic actions."
+        },
+        {
+          "path": "medications.2.notes.1",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.2"
+          ],
+          "reason": "EMT open-globe care already prohibits instilling medication into a suspected penetrating/open-globe injury; this applies to topical anesthetic too."
+        },
+        {
+          "path": "clinicalPearls.1",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.1",
+            "careModules.0.levels.0.actions.3"
+          ],
+          "reason": "Immediate water/saline irrigation without waiting for ideal fluid and the distinction between hypothetical rupture and known/strongly suspected contaminated open globe are retained together in EMT care."
+        },
+        {
+          "path": "clinicalPearls.2",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.2",
+            "warnings.0",
+            "warnings.4"
+          ],
+          "reason": "Nonpressure rigid shielding, prohibition on pressure, and no eye patching are retained; the pearl adds explanation but no different clinical action."
+        },
+        {
+          "path": "clinicalPearls.3",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.4"
+          ],
+          "reason": "Visual-acuity assessment when feasible and prohibition on delaying time-sensitive transport to complete testing are retained in EMT care."
+        }
+      ]
+    },
+    "tb-12": {
+      "canonicalSha256": "6f80257d0aa7ea9ea80be04e4f073ccfea1a6fe7929954f2c28bb3967e4a9773",
+      "omissions": [
+        {
+          "path": "overview.2",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.0",
+            "careModules.0.levels.0.actions.1",
+            "careModules.0.levels.0.actions.3",
+            "careModules.0.levels.2.actions.1"
+          ],
+          "reason": "Hemorrhage control, indicated pelvic stabilization, hypothermia prevention, rapid transport and not delaying definitive hemorrhage control are all retained in provider actions."
+        },
+        {
+          "path": "indications.1",
+          "coveredBy": [
+            "assessment.0.items.1",
+            "assessment.1.items.0",
+            "assessment.1.items.1",
+            "assessment.1.items.2"
+          ],
+          "reason": "Abdominal/pelvic symptoms, wound and evisceration/impalement findings, seatbelt sign and unstable perfusion findings are retained in the focused/high-risk assessment."
+        },
+        {
+          "path": "indications.2",
+          "coveredBy": [
+            "flow.3.text",
+            "assessment.0.items.2",
+            "assessment.1.items.1",
+            "assessment.1.items.2"
+          ],
+          "reason": "Suspected pelvic fracture/pain/deformity and all listed genitourinary, rectal/vaginal, voiding and neurologic red flags are retained in the flow and assessment."
+        },
+        {
+          "path": "treatmentSteps.7",
+          "coveredBy": [
+            "careModules.0.levels.1.actions.0",
+            "careModules.0.levels.1.actions.2",
+            "careModules.0.levels.1.actions.3",
+            "medications.2.notes.0"
+          ],
+          "reason": "AEMT actions retain IV/IO without transport delay, adult blood-unavailable warmed-crystalloid perfusion strategy, 80\u201390 non-TBI endpoint, \u2265110 including age70 TBI target, normal saline, no permissive hypotension and BP reassessment; medication note retains respiratory/perfusion reassessment."
+        },
+        {
+          "path": "treatmentSteps.8",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.1"
+          ],
+          "reason": "The complete Paramedic-only trauma TXA eligibility, \u22643h timing, adult 1g/10min OR 2g/20min (100mg/min maximum), stocked preparation verification, no automatic repeat, topical-use distinction, documentation and duplicate-dose handoff instructions are retained in the Paramedic action."
+        },
+        {
+          "path": "treatmentSteps.9",
+          "coveredBy": [
+            "careModules.0.levels.1.actions.0",
+            "careModules.0.levels.0.actions.3",
+            "medications.0.notes.0",
+            "assessment.0.items.4"
+          ],
+          "reason": "Authorized analgesia/antiemetic treatment, NPO, preservation of mental-status/perfusion assessment and rapid transport, and serial reassessment are retained."
+        },
+        {
+          "path": "treatmentSteps.10",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.4",
+            "careModules.0.levels.0.actions.3",
+            "specialPopulations.0.items.0",
+            "specialPopulations.0.items.2",
+            "warnings.7"
+          ],
+          "reason": "The >approximately20-week displacement/tilt rule and trauma compatibility remain in Paramedic care; maternal priority, early pregnancy notification and trauma/obstetric-capable destination remain in retained pregnancy and warning sections."
+        },
+        {
+          "path": "medications.3.notes.0",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.1"
+          ],
+          "reason": "TXA must not delay transport or definitive hemorrhage control is retained in the complete Paramedic TXA action."
+        },
+        {
+          "path": "medications.3.notes.1",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.1"
+          ],
+          "reason": "Injury/dose/time documentation, duplicate-dose prevention handoff and no inference from topical indications are retained in the complete Paramedic TXA action."
+        },
+        {
+          "path": "warnings.3",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.2",
+            "treatmentSteps.4",
+            "treatmentSteps.6"
+          ],
+          "reason": "No impaled-object removal/evisceration reduction, no direct pressure on exposed viscera and no blind abdominal packing are retained in provider and detailed treatment instructions, including the separate lifesaving removal exception elsewhere."
+        },
+        {
+          "path": "clinicalPearls.1",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.1",
+            "flow.3.text",
+            "assessment.0.items.3"
+          ],
+          "reason": "Pelvic pain/high-risk mechanism or shock prompting stabilization and avoidance of repeated manual pelvic testing are retained; the pearl adds rationale rather than a different action."
+        },
+        {
+          "path": "clinicalPearls.4",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.1",
+            "careModules.0.levels.0.actions.3",
+            "warnings.0"
+          ],
+          "reason": "Correct binder positioning and rapid transport without delaying for repeated pelvic assessment/procedures are retained."
+        },
+        {
+          "path": "specialPopulations.0.items.1",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.4"
+          ],
+          "reason": "The same approximately20-week pregnancy threshold, manual left displacement or left tilt, and spinal/trauma compatibility are retained in Paramedic actions."
+        }
+      ]
+    },
+    "am-05": {
+      "canonicalSha256": "9f7e49c6c12a3847aae3279ebf21db99e9d08a7331f964f3be2b7b46be8dbc12",
+      "omissions": [
+        {
+          "path": "overview.0",
+          "coveredBy": [
+            "contraindications.2",
+            "assessment.0.items.1",
+            "indications.2"
+          ],
+          "reason": "The retained contraindication requires complete perfusion assessment and BP trend rather than one reading, the assessment lists trends, and indications explicitly recognize inadequate perfusion regardless of BP."
+        },
+        {
+          "path": "overview.1",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.5",
+            "careModules.2.levels.0.actions.2",
+            "careModules.2.levels.0.actions.6",
+            "warnings.3",
+            "warnings.6"
+          ],
+          "reason": "Cause treatment, perfusion support, avoiding harmful indiscriminate fluids and early definitive-care transport are all retained in provider actions and warnings."
+        },
+        {
+          "path": "contraindications.0",
+          "coveredBy": [
+            "warnings.3"
+          ],
+          "reason": "Exact duplicate of retained large-volume crystalloid warning."
+        },
+        {
+          "path": "contraindications.1",
+          "coveredBy": [
+            "warnings.4"
+          ],
+          "reason": "Exact duplicate of retained suspected-TBI permissive-hypotension warning."
+        },
+        {
+          "path": "assessment.0.items.0",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.1"
+          ],
+          "reason": "Manual BP confirmation when feasible and correct cuff size are retained in EMT care."
+        },
+        {
+          "path": "assessment.0.items.2",
+          "coveredBy": [
+            "warnings.0"
+          ],
+          "reason": "The retained warning explicitly states normal mental status/GCS15 does not exclude shock."
+        },
+        {
+          "path": "assessment.1.items.2",
+          "coveredBy": [
+            "careModules.2.levels.0.actions.2"
+          ],
+          "reason": "Treating immediately reversible causes through linked protocols is retained in Paramedic care."
+        },
+        {
+          "path": "assessment.2.items.1",
+          "coveredBy": [
+            "careModules.2.levels.0.actions.0"
+          ],
+          "reason": "The same ECG indications (ischemia, dysrhythmia, pulmonary embolism, cardiogenic shock) are retained with acquisition and interpretation in Paramedic care."
+        },
+        {
+          "path": "assessment.2.items.2",
+          "coveredBy": [
+            "careModules.2.levels.0.actions.1"
+          ],
+          "reason": "Waveform capnography during assisted ventilation and when clinically useful in severe shock is retained in Paramedic care."
+        },
+        {
+          "path": "treatmentSteps.0",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.0",
+            "careModules.0.levels.0.actions.2",
+            "careModules.0.levels.0.actions.3",
+            "careModules.0.levels.0.actions.5"
+          ],
+          "reason": "Universal care, airway/ventilation, clinically indicated oxygen, condition-specific positioning and heat-loss prevention are retained in EMT care."
+        },
+        {
+          "path": "treatmentSteps.1",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.4",
+            "careModules.0.levels.0.actions.5",
+            "assessment.1.items.0"
+          ],
+          "reason": "Immediate hemorrhage control, identification of internal/external bleeding and rapid transport for time-critical causes are retained."
+        },
+        {
+          "path": "treatmentSteps.3",
+          "coveredBy": [
+            "careModules.1.levels.0.actions.2",
+            "medications.0.notes.0",
+            "assessment.0.items.1"
+          ],
+          "reason": "The identical nonhemorrhagic/no-overload 500mL IV/IO rule remains in AEMT care; medication note and trend assessment retain lung sounds, work of breathing, perfusion, mental status, BP/MAP, heart rate and optional EtCO2 reassessment."
+        },
+        {
+          "path": "treatmentSteps.5",
+          "coveredBy": [
+            "careModules.1.levels.0.actions.3"
+          ],
+          "reason": "Exact250mL aliquot strategy and heart/renal/liver/cardiogenic/overload indications with reassessment are retained in AEMT care."
+        },
+        {
+          "path": "treatmentSteps.8",
+          "coveredBy": [
+            "careModules.1.levels.0.actions.4",
+            "careModules.0.levels.0.actions.4",
+            "careModules.0.levels.0.actions.5"
+          ],
+          "reason": "The complete blood-unavailable non-TBI warmed-crystalloid perfusion/80\u201390SBP strategy, reassessment and limited volume remain in AEMT care; hemorrhage control and rapid definitive-care transport remain in EMT care."
+        },
+        {
+          "path": "treatmentSteps.9",
+          "coveredBy": [
+            "specialPopulations.1.items.0"
+          ],
+          "reason": "Exact same adultTBI\u2265110including70, no permissive hypotension, avoid hypoxemia/excess fluid, normal saline and frequent/post-treatment BP reassessment are retained in the TBI special-population section."
+        },
+        {
+          "path": "treatmentSteps.14",
+          "coveredBy": [
+            "careModules.2.levels.0.actions.3",
+            "careModules.2.levels.0.actions.5"
+          ],
+          "reason": "Paramedic vasopressor initiation for persistent inadequate perfusion after appropriate fluid or earlier when further fluid is contraindicated, with continuous ECG/frequent BP monitoring, is retained in Paramedic care."
+        },
+        {
+          "path": "treatmentSteps.16",
+          "coveredBy": [
+            "careModules.2.levels.0.actions.4"
+          ],
+          "reason": "The same epinephrine indication, 2\u201310mcg/min IV/IO dose and adequate-perfusion/MAP\u226565 titration target are retained in Paramedic care."
+        },
+        {
+          "path": "treatmentSteps.17",
+          "coveredBy": [
+            "careModules.2.levels.0.actions.6",
+            "warnings.5"
+          ],
+          "reason": "Early transport/receiving notification and no delay for repeated IV attempts, fluid-target completion or BP normalization are retained."
+        },
+        {
+          "path": "medications.1.notes.0",
+          "coveredBy": [
+            "careModules.2.levels.0.actions.3"
+          ],
+          "reason": "Paramedic norepinephrine authority and persistent-shock/fluid-contraindication conditions are retained in Paramedic care."
+        },
+        {
+          "path": "medications.1.notes.1",
+          "coveredBy": [
+            "careModules.2.levels.0.actions.5"
+          ],
+          "reason": "Exact ECG/frequent BP monitoring requirement is retained in Paramedic care."
+        },
+        {
+          "path": "medications.2.notes.0",
+          "coveredBy": [
+            "careModules.2.levels.0.actions.4"
+          ],
+          "reason": "Epinephrine as Paramedic alternative when norepinephrine is unavailable or significant bradycardia accompanies shock is retained in Paramedic care."
+        },
+        {
+          "path": "medications.2.notes.1",
+          "coveredBy": [
+            "careModules.2.levels.0.actions.5"
+          ],
+          "reason": "Exact ECG/frequent BP monitoring requirement is retained in Paramedic care."
+        },
+        {
+          "path": "specialPopulations.0.items.0",
+          "coveredBy": [
+            "careModules.1.levels.0.actions.3",
+            "treatmentSteps.6"
+          ],
+          "reason": "The250mL heart/renal/liver/overload-risk aliquot is retained in AEMT care; the retained fluid-stop rule includes pulmonary edema, worsening respiratory status and lack of fluid responsiveness."
+        },
+        {
+          "path": "specialPopulations.2.items.0",
+          "coveredBy": [
+            "treatmentSteps.11"
+          ],
+          "reason": "The approximately20-week pregnancy threshold, left displacement/lateral positioning when feasible and AO03 link are retained in the more complete pregnancy treatment step."
+        }
+      ]
+    },
+    "am-03": {
+      "canonicalSha256": "e65428562275858c406d9f313d771cb76fdcef47189b2495bfd76d2325f4a4af",
+      "omissions": [
+        {
+          "path": "overview.0",
+          "coveredBy": [
+            "indications.1",
+            "indications.2",
+            "flow.6.text"
+          ],
+          "reason": "The renal-failure emergencies and access complications are listed in the retained indications; the infection/peritonitis-to-sepsis flow retains the sepsis concern."
+        },
+        {
+          "path": "overview.1",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.2",
+            "careModules.0.levels.2.actions.1",
+            "assessment.1.items.2"
+          ],
+          "reason": "Access protection, early unstable hyperkalemia recognition, and treatment without waiting for laboratory confirmation remain in provider actions and assessment."
+        },
+        {
+          "path": "overview.2",
+          "coveredBy": [
+            "contraindications.1"
+          ],
+          "reason": "The retained contraindication explicitly prohibits AM-03 dialysis-catheter use and retains the separate interfacility-transfer policy."
+        },
+        {
+          "path": "contraindications.0",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.2"
+          ],
+          "reason": "The retained EMT action contains the same functioning fistula/graft protection, prohibited cuff/needle/IV/constrictive items, and when-another-option-exists qualifier."
+        },
+        {
+          "path": "contraindications.3",
+          "coveredBy": [
+            "specialPopulations.0.items.1"
+          ],
+          "reason": "Peritoneal-dialysis special-population instructions retain all prohibitions on manipulating, flushing, disconnecting, draining and collecting effluent."
+        },
+        {
+          "path": "treatmentSteps.0",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.0",
+            "careModules.0.levels.0.actions.2",
+            "careModules.0.levels.2.actions.2",
+            "flow.6.text"
+          ],
+          "reason": "Immediate ABC/perfusion care, access protection and linked emergency care including infection/sepsis are retained; this sentence adds no dose or threshold."
+        },
+        {
+          "path": "treatmentSteps.1",
+          "coveredBy": [
+            "medications.0.dose",
+            "medications.0.notes.0",
+            "medications.0.notes.1",
+            "medications.1.dose",
+            "medications.1.notes.0",
+            "careModules.0.levels.2.actions.1"
+          ],
+          "reason": "Calcium formulations, exact doses/routes, Paramedic ECG/instability indication, peripheral gluconate preference and potassium-shifting treatment are retained in medication rows/provider care."
+        },
+        {
+          "path": "treatmentSteps.2",
+          "coveredBy": [
+            "warnings.1",
+            "medications.1.notes.2",
+            "medications.0.notes.2"
+          ],
+          "reason": "Retained warning preserves calcium alternatives/no combined initial dose; medication notes preserve chloride one-repeat/5\u201310-minute/persistent-ECG rule and mandatory Medical Control cumulative-dose clarification before gluconate repeat."
+        },
+        {
+          "path": "treatmentSteps.3",
+          "coveredBy": [
+            "medications.2.notes.1",
+            "warnings.3"
+          ],
+          "reason": "Medication notes and warning retain no calcium/bicarbonate mixing in one solution/tubing and thorough flushing before/after administration."
+        },
+        {
+          "path": "treatmentSteps.4",
+          "coveredBy": [
+            "medications.3.dose",
+            "medications.3.notes.0",
+            "medications.3.notes.1"
+          ],
+          "reason": "The retained albuterol row preserves 10 mg nebulized, Paramedic-only hyperkalemia with a pulse, and the prohibition during cardiac arrest."
+        },
+        {
+          "path": "treatmentSteps.7",
+          "coveredBy": [
+            "careModules.0.levels.1.actions.2",
+            "careModules.0.levels.2.actions.3",
+            "actionLinks.5.description"
+          ],
+          "reason": "AEMT action retains saline250mL IV/IO, no pulmonary edema, full reassessment and500mL/Medical Control limit; Paramedic action retains early norepinephrine under the linked AM-05 rather than repeated large crystalloid."
+        },
+        {
+          "path": "warnings.0",
+          "coveredBy": [
+            "medications.0.dose",
+            "medications.0.notes.2"
+          ],
+          "reason": "The calcium-gluconate row retains initial1.5\u20133g IV, maximum3g/episode, and no repeat without specific Medical Control confirmation of cumulative dose."
+        },
+        {
+          "path": "warnings.5",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.2"
+          ],
+          "reason": "The retained EMT access-protection instruction is more specific and retains the alternate-site qualifier."
+        },
+        {
+          "path": "specialPopulations.0.items.0",
+          "coveredBy": [
+            "assessment.2.items.2"
+          ],
+          "reason": "The retained peritoneal-dialysis assessment repeats every listed symptom and peritonitis/sepsis concern."
+        },
+        {
+          "path": "specialPopulations.1.items.1",
+          "coveredBy": [
+            "treatmentSteps.8",
+            "warnings.7"
+          ],
+          "reason": "Retained treatment specifies commercial proximal tourniquet for immediately life-threatening hemorrhage despite direct pressure; warning explicitly puts lifesaving hemorrhage control above access preservation."
+        }
+      ]
+    },
+    "up-11": {
+      "canonicalSha256": "72aadcaf48e25199c8cc71727f219e3cdf5cccc8591a3a8aa4b3e218381ed1a4",
+      "omissions": [
+        {
+          "path": "overview.1",
+          "coveredBy": [
+            "indications.0",
+            "careModules.0.levels.0.actions.3",
+            "careModules.0.levels.2.actions.0",
+            "careModules.0.levels.1.actions.0",
+            "careModules.0.levels.2.actions.1"
+          ],
+          "reason": "Retained age indication/provider actions cover age16+, oral nonopioids, Paramedic parenteral therapy, disabled/unverified AEMT authority, and Paramedic-only opioid/ketamine."
+        },
+        {
+          "path": "treatmentSteps.0",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.0",
+            "warnings.1"
+          ],
+          "reason": "Retained EMT action and warning preserve all listed immediate threats, positioning, splinting, wound coverage, safe ice, reassurance, and priority before analgesia."
+        },
+        {
+          "path": "treatmentSteps.1",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.3"
+          ],
+          "reason": "The retained EMT action has the same oral drugs, doses, mild-pain indication, safe oral route and contraindication check, plus once-only and do-not-routinely-combine safeguards."
+        },
+        {
+          "path": "treatmentSteps.2",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.0",
+            "careModules.0.levels.1.actions.0",
+            "flow.4.text"
+          ],
+          "reason": "Retained Paramedic action has every parenteral dose/route and once-only instruction; AEMT action/flow preserve the complete unverified-authorization gate, with training alone not permission."
+        },
+        {
+          "path": "treatmentSteps.3",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.1",
+            "careModules.0.levels.2.actions.2",
+            "careModules.0.levels.2.actions.3",
+            "careModules.0.levels.2.actions.4",
+            "careModules.0.levels.2.actions.5",
+            "careModules.0.levels.2.actions.6",
+            "careModules.0.levels.2.actions.7",
+            "careModules.0.levels.2.actions.8"
+          ],
+          "reason": "Retained Paramedic actions preserve moderate/severe indication, each named agent/dose/interval/route/maximum, no different-opioid combinations and no routine initial opioid/ketamine combination."
+        },
+        {
+          "path": "treatmentSteps.4",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.9"
+          ],
+          "reason": "Identical cardiac monitoring, continuous SpO2/waveformEtCO2, and immediately available suction/ventilation requirements are retained in Paramedic care."
+        },
+        {
+          "path": "medications.0.notes.0",
+          "coveredBy": [
+            "careModules.0.levels.0.actions.3",
+            "contraindications.0"
+          ],
+          "reason": "Safe airway/swallowing criteria remain explicitly stated in the oral medication provider action and contraindication."
+        },
+        {
+          "path": "medications.0.notes.1",
+          "coveredBy": [
+            "contraindications.1"
+          ],
+          "reason": "The retained acetaminophen contraindication contains every listed liver/overdose/prior-dose safeguard and additionally includes hypersensitivity."
+        },
+        {
+          "path": "medications.1.notes.0",
+          "coveredBy": [
+            "contraindications.2"
+          ],
+          "reason": "The retained NSAID contraindication contains every listed disease, bleeding, pregnancy, hypersensitivity and prior-NSAID exclusion."
+        },
+        {
+          "path": "medications.1.notes.1",
+          "coveredBy": [
+            "careModules.0.levels.1.actions.1",
+            "careModules.0.levels.2.actions.0"
+          ],
+          "reason": "Retained provider instructions expressly prohibit ketorolac with ibuprofen/anotherNSAID."
+        },
+        {
+          "path": "medications.2.notes.0",
+          "coveredBy": [
+            "careModules.0.levels.1.actions.0"
+          ],
+          "reason": "The complete default-unverified AEMT authorization requirements are retained in the AEMT action; no credential requirement is lost."
+        },
+        {
+          "path": "medications.2.notes.2",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.0"
+          ],
+          "reason": "Retained Paramedic action explicitly prohibits routine additional acetaminophen with IV acetaminophen."
+        },
+        {
+          "path": "medications.3.notes.0",
+          "coveredBy": [
+            "careModules.0.levels.1.actions.0"
+          ],
+          "reason": "The same complete default-unverified AEMT authorization paragraph is retained in AEMT care."
+        },
+        {
+          "path": "medications.3.notes.1",
+          "coveredBy": [
+            "contraindications.2",
+            "careModules.0.levels.1.actions.1"
+          ],
+          "reason": "All NSAID contraindications referenced by this cross-reference remain explicit in retained contraindications and provider care."
+        },
+        {
+          "path": "medications.3.notes.2",
+          "coveredBy": [
+            "careModules.0.levels.1.actions.1",
+            "careModules.0.levels.2.actions.0"
+          ],
+          "reason": "Retained provider care explicitly prohibits ketorolac with ibuprofen/anotherNSAID."
+        },
+        {
+          "path": "medications.4.notes.0",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.9",
+            "treatmentSteps.5"
+          ],
+          "reason": "Retained monitoring/reassessment instructions preserve continuous SpO2/waveformEtCO2 and airway, ventilation, sedation and hemodynamic monitoring."
+        },
+        {
+          "path": "medications.4.notes.1",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.5"
+          ],
+          "reason": "The retained Paramedic instruction expressly prohibits combining fentanyl, morphine and hydromorphone and requires selecting one opioid."
+        },
+        {
+          "path": "medications.5.notes.0",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.9",
+            "treatmentSteps.5"
+          ],
+          "reason": "Retained monitoring/reassessment instructions preserve continuous SpO2/waveformEtCO2 and airway, ventilation, sedation and hemodynamic monitoring."
+        },
+        {
+          "path": "medications.5.notes.1",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.5"
+          ],
+          "reason": "The retained Paramedic instruction expressly prohibits combining fentanyl, morphine and hydromorphone and requires selecting one opioid."
+        },
+        {
+          "path": "medications.6.notes.0",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.9",
+            "treatmentSteps.5"
+          ],
+          "reason": "Retained monitoring/reassessment instructions preserve continuous SpO2/waveformEtCO2 and airway, ventilation, sedation and hemodynamic monitoring."
+        },
+        {
+          "path": "medications.6.notes.1",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.5"
+          ],
+          "reason": "The retained Paramedic instruction expressly prohibits combining fentanyl, morphine and hydromorphone and requires selecting one opioid."
+        },
+        {
+          "path": "medications.7.notes.0",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.6"
+          ],
+          "reason": "The retained ketamine dose action explicitly prohibits rapid IV push."
+        },
+        {
+          "path": "medications.7.notes.1",
+          "coveredBy": [
+            "contraindications.5",
+            "careModules.0.levels.2.actions.6"
+          ],
+          "reason": "The retained contraindication/provider action preserves suspected penetrating/open-globe injury, express Medical Control authorization and TB-11 reference."
+        },
+        {
+          "path": "medications.7.notes.2",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.8"
+          ],
+          "reason": "The retained Paramedic action preserves no routine initial ketamine/opioid combination and full reassessment before changing agents."
+        },
+        {
+          "path": "medications.7.notes.3",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.9",
+            "treatmentSteps.5"
+          ],
+          "reason": "Retained instructions preserve all continuous respiratory/cardiac/hemodynamic monitoring and sedation/reassessment details."
+        },
+        {
+          "path": "medications.8.notes.1",
+          "coveredBy": [
+            "careModules.0.levels.1.actions.3",
+            "careModules.0.levels.2.actions.9",
+            "treatmentSteps.5"
+          ],
+          "reason": "Ongoing cardiac/respiratory monitoring required by the coadministered analgesic is retained in provider and reassessment instructions."
+        },
+        {
+          "path": "warnings.0",
+          "coveredBy": [
+            "careModules.0.levels.1.actions.0"
+          ],
+          "reason": "The entire default-unverified AEMT authorization condition appears in the retained AEMT action."
+        },
+        {
+          "path": "specialPopulations.0.items.1",
+          "coveredBy": [
+            "careModules.0.levels.2.actions.9"
+          ],
+          "reason": "Continuous opioid/ketamine respiratory monitoring and immediately available ventilation equipment are retained in Paramedic care."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "generator": "scripts/generate-canonical-trauma-pdfs.py",
+  "appVersion": "2.33.0",
+  "protocols": [
+    {
+      "id": "tb-01",
+      "pdfPath": "/protocols/claiborne/tb-01-blast-injury-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "9634f3ca0b0af114fb911b0c28ea679a3364eadd07e11b46fca498ff9d9a893b",
+      "pdfSha256": "47b1a7e630bd619ba97a5a904d3d85b3580d9f39dcd3bcf2d8023f8741826585",
+      "bytes": 48055
+    },
+    {
+      "id": "tb-02",
+      "pdfPath": "/protocols/claiborne/tb-02-chemical-and-electrical-burn-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "73253dd662f79544b65b4c00aa791e39dd1bcceccaefa290aa5cdf0c599aebc0",
+      "pdfSha256": "e66b7bd301e9f9e66e803f531f2cd42acdaf8d3374b22968b9069bf40fd22945",
+      "bytes": 49723
+    },
+    {
+      "id": "tb-03",
+      "pdfPath": "/protocols/claiborne/tb-03-crush-syndrome-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "7f8e122f07ce0aca88ac97657a925ef7decb71be8e324737fafa8a91628cc88e",
+      "pdfSha256": "520ed329f24435cc9fccc3c33959cc28d120ebc8b9b3915e7be92f2fb4ebccae",
+      "bytes": 48152
+    },
+    {
+      "id": "tb-04",
+      "pdfPath": "/protocols/claiborne/tb-04-extremity-trauma-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "1420614863edd7e0637b212899818de8b59efb5a6dca04578505d7642041720c",
+      "pdfSha256": "d827df12106c8a1eb1d352a8505e5d8b75cff98aa0256c8d708a4d4965e00a44",
+      "bytes": 48050
+    },
+    {
+      "id": "tb-05",
+      "pdfPath": "/protocols/claiborne/tb-05-head-trauma-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "4fb69e09c146751630a65b10a3ff4473da9af7ab9579d8972b6d5803f7bda911",
+      "pdfSha256": "5dd61fac629f46d4fbd44b43117e759a6dc8905d4e7e9b3532f29c72ec9ba8a4",
+      "bytes": 49526
+    },
+    {
+      "id": "tb-06",
+      "pdfPath": "/protocols/claiborne/tb-06-multiple-trauma-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "84aba8cb908c036635fdd0699188f33880f0510067fff1d725107ca007920443",
+      "pdfSha256": "1d0a857c28a3d0658e1f9d71ea302140ce3d5d6abdf6e88a11a2ef06644420b7",
+      "bytes": 52280
+    },
+    {
+      "id": "tb-07",
+      "pdfPath": "/protocols/claiborne/tb-07-radiation-incident-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "2423a508c41281513b9209929db032ac6b598aecbbf3e313709d34a82dc2f9c5",
+      "pdfSha256": "fb4945fa8e403c2392b0d9a92de2af0a224c7001b15f85c1ccf7632351ac9c94",
+      "bytes": 47273
+    },
+    {
+      "id": "tb-08",
+      "pdfPath": "/protocols/claiborne/tb-08-selective-spinal-immobilization-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "23a9721d12dea94e4265b9f8daa3c3ce5169566f23ed037a4353dfa400c47d77",
+      "pdfSha256": "2f57721fa26121af0562e7297fa80beb83ad5ba2d0b8d28405a2c0fe2fde1cdf",
+      "bytes": 48014
+    },
+    {
+      "id": "tb-09",
+      "pdfPath": "/protocols/claiborne/tb-09-thermal-burn-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "dd3298c27cab68c3de0e4380b95aa84989c271e491b527dd287167bae0fe9dbf",
+      "pdfSha256": "cc112ce63f0ba114d599ea1330adc81240de3fb7ed483ad816028c2ee003251c",
+      "bytes": 51865
+    },
+    {
+      "id": "tb-10",
+      "pdfPath": "/protocols/claiborne/tb-10-traumatic-arrest-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "c615694e0076d2c0951ad705db3f3580335e0b565b102eaf4955064a801583e7",
+      "pdfSha256": "935319e8e3e0a679922bf94f048f73181741dfb4edbc2e1a97d859a3eca78b25",
+      "bytes": 49320
+    },
+    {
+      "id": "tb-11",
+      "pdfPath": "/protocols/claiborne/tb-11-eye-trauma-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "ede7af74b1b4efac864a0aa79f9ca00933b98d78f6a21d44e29b5b25c1d3b386",
+      "pdfSha256": "b71c5ed84ecb39ebfb85182900100c78ed97180ac5bd816c894c5b3de8904421",
+      "bytes": 55178
+    },
+    {
+      "id": "tb-12",
+      "pdfPath": "/protocols/claiborne/tb-12-abdominal-pelvic-trauma-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "6f80257d0aa7ea9ea80be04e4f073ccfea1a6fe7929954f2c28bb3967e4a9773",
+      "pdfSha256": "6f55025b339dba6c6391d5f2e167bf5ca41b55e33da522627afcd116b3735a5d",
+      "bytes": 59850
+    },
+    {
+      "id": "am-03",
+      "pdfPath": "/protocols/claiborne/am-03-dialysis-renal-failure-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "e65428562275858c406d9f313d771cb76fdcef47189b2495bfd76d2325f4a4af",
+      "pdfSha256": "930dc535bb5951b6580444249f2eee21867cdc7ea9560800ca82eceb2bd18b3c",
+      "bytes": 58131
+    },
+    {
+      "id": "am-05",
+      "pdfPath": "/protocols/claiborne/am-05-hypotension-shock-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "9f7e49c6c12a3847aae3279ebf21db99e9d08a7331f964f3be2b7b46be8dbc12",
+      "pdfSha256": "b5b343a9d5fbf20d595620cf20095930d21b68a82d4ec3ed0e073e26fa716d3c",
+      "bytes": 61130
+    },
+    {
+      "id": "up-11",
+      "pdfPath": "/protocols/claiborne/up-11-pain-control-adult-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "72aadcaf48e25199c8cc71727f219e3cdf5cccc8591a3a8aa4b3e218381ed1a4",
+      "pdfSha256": "a86c734d1a6cbb04881775049305790139ba49630c89ee3854f9cf2f797ca385",
+      "bytes": 57974
+    },
+    {
+      "id": "pm-03",
+      "pdfPath": "/protocols/claiborne/pm-03-pediatric-hypotension-shock-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "b37087065a88a72088ef8bf15f11521aab2fc2b01eb1715a0fd2ceb8c48795d5",
+      "pdfSha256": "fb2d2b191c227b39f55bd765c2aa21d17f83b11ae335509b71e0c1d63a15632b",
+      "bytes": 52802
+    },
+    {
+      "id": "ar-01",
+      "pdfPath": "/protocols/claiborne/ar-01-adult-airway-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "122008686386e76f754968d14ea13f4a869ccf07a31e3f0ddbc5d1a1abf9856e",
+      "pdfSha256": "c52bb98470c4006829f28260a556c6b6806c043b77e0e7c223b7261cbba7b99a",
+      "bytes": 49243
+    },
+    {
+      "id": "ar-02",
+      "pdfPath": "/protocols/claiborne/ar-02-adult-failed-airway-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "82781fffd7517e460c46c9da69ba27e87c4116538abde94a5281081e1b09c6b0",
+      "pdfSha256": "cc16258f4882bfa15fb2f954589933dbcb4c3e17d5f002c14a2ab4c0cd483adc",
+      "bytes": 49291
+    },
+    {
+      "id": "ar-03",
+      "pdfPath": "/protocols/claiborne/ar-03-airway-drug-assisted-intubation-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "21bef8e641b1d80e31cb9175d9b187955cecc02fb990c83f009958ed7d46ced5",
+      "pdfSha256": "96240b4107b8e36a9baff90047a2e8bec12ce70918d58d292c17e64e82c6b10f",
+      "bytes": 53535
+    },
+    {
+      "id": "ar-05",
+      "pdfPath": "/protocols/claiborne/ar-05-pediatric-airway-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "ce66244cacbc46cf5360843076bbe5e804f68d213731dba7a9be8408d3c268bc",
+      "pdfSha256": "6f63ef22d493957a071a2e31705ab7888f179b5f199f5bca8fd0e04f30e3ec51",
+      "bytes": 52632
+    },
+    {
+      "id": "ar-06",
+      "pdfPath": "/protocols/claiborne/ar-06-pediatric-failed-airway-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "ea80983244527763774d89384f32d8733f77362b402b4368e6c6559bc813914f",
+      "pdfSha256": "54c5340c55261c82fbd909e3dedde81cbeec1ee765e2e02d568c01ad0838b1d3",
+      "bytes": 52163
+    },
+    {
+      "id": "ar-08",
+      "pdfPath": "/protocols/claiborne/ar-08-post-intubation-biad-management-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "9f08eb109e542b163c21b51350790d42572900b012e399a64e83e3755b0adb3d",
+      "pdfSha256": "bc788a50614673ec077caed505716d703e1d65e3578065830108632fdf085326",
+      "bytes": 52527
+    },
+    {
+      "id": "ar-09",
+      "pdfPath": "/protocols/claiborne/ar-09-ventilator-emergencies-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "86e42093d0b50b9fa072028ada1fc2fd4c2114cf702f2068eaca6ffdd55493a7",
+      "pdfSha256": "c9dfed2d5cb6990dc437ea0d9eba8730f42e36f94d7b2dfac8292fd14252291e",
+      "bytes": 51704
+    },
+    {
+      "id": "ar-11",
+      "pdfPath": "/protocols/claiborne/ar-11-mechanical-ventilation-adult.pdf",
+      "pages": 3,
+      "canonicalSha256": "e10bea7553fd0c15bb5338bb750edfebd38fd374ebf5584d973cba412f191d7e",
+      "pdfSha256": "816d9bdb53ed66894016d52cd940db326630963ea337440a97f76840d8aa8fb4",
+      "bytes": 52416
+    }
+  ]
+}

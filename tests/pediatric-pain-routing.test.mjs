@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile, stat } from "node:fs/promises";
 import test from "node:test";
+import { canonicalPdfPages } from "../data/canonical-pdf-pages.ts";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
@@ -52,14 +53,14 @@ test("pain references in UP-03, UP-05, and UP-07 use the approved age-based path
   assert.doesNotMatch(source, /Use pediatric analgesic dosing from UP-11/i);
 });
 
-test("UP-11 catalog points to the reconciled approved three-page PDF", async () => {
+test("UP-11 catalog matches the generated PDF page count and preserves Reviewed status", async () => {
   const catalog = JSON.parse(await read("src/data/claiborne-protocols.json"));
   const up11 = catalog.find((protocol) => protocol.id === "UP-11");
 
-  assert.equal(up11?.pages, 3);
+  assert.equal(up11?.pages, canonicalPdfPages["up-11"]);
   assert.equal(up11?.year, 2026);
   assert.equal(up11?.source, "Claiborne County EMS Clinical Protocols");
-  assert.equal(up11?.status, "approved");
+  assert.equal(up11?.status, "reviewed");
 });
 
 test("PM-04 source PDF is present and recognizable as a PDF", async () => {

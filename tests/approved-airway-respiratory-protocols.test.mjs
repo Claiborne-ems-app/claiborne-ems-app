@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import { readFile, stat } from "node:fs/promises";
 import test from "node:test";
+import { canonicalPdfPages } from "../data/canonical-pdf-pages.ts";
+import { structuredAirwayProtocols } from "../data/structured-airway-protocols.ts";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
@@ -35,7 +37,12 @@ test("approved airway and respiratory protocols are released in both catalogs", 
     assert.equal(protocol?.status, "approved");
     assert.equal(protocol?.year, 2026);
     assert.equal(protocol?.source, "Claiborne County EMS Clinical Protocols");
-    assert.equal(protocol?.pages, 2);
+    const native = structuredAirwayProtocols.find((item) => item.id === id.toLowerCase());
+    assert.equal(protocol?.pages, canonicalPdfPages[id.toLowerCase()] ?? 2);
+    if (canonicalPdfPages[id.toLowerCase()] !== undefined) {
+      assert.equal(protocol?.pages, native?.sourcePages.end);
+    }
+    assert.equal(protocol?.pdfPath, native?.sourcePdf);
     assert.match(tsCatalog, new RegExp(`"id": "${id}"[\\s\\S]*?"status": "approved"`));
   }
 
@@ -46,7 +53,7 @@ test("approved airway and respiratory protocols are released in both catalogs", 
   assert.doesNotMatch(structured, /imported source|original imported PDF|Current Tennessee EMS scope/i);
 });
 
-test("released airway source PDFs are direct two-page Claiborne PDFs", async () => {
+test("released airway source PDFs are direct controlled Claiborne PDFs", async () => {
   for (const path of AIRWAY_PDFS) {
     const pdf = new URL(`../public/protocols/claiborne/${path}`, import.meta.url);
     const [metadata, header] = await Promise.all([

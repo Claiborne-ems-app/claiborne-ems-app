@@ -276,17 +276,18 @@ const doseCards: DoseCard[] = [
   {
     id: "normal-saline-shock",
     name: "Normal saline",
-    indication: "Non-cardiogenic pediatric shock",
+    indication: "Nonhemorrhagic hypovolemic / distributive pediatric shock",
     category: "Metabolic / Shock",
     minimumLevel: "AEMT",
     route: "IV / IO",
     protocol: "PM-03",
     protocolHref: "/protocols/pm/pm-03",
     protocolDose:
-      "10–20 mL/kg IV/IO aliquots; reassess perfusion, lungs, and suspected cause after each aliquot. Further fluid is Medical-Control-directed.",
+      "For nonhemorrhagic hypovolemic/distributive shock only: 10–20 mL/kg IV/IO aliquots; reassess perfusion, lungs, and suspected cause after each aliquot. Further fluid is Medical-Control-directed.",
+    caution: "Not a pediatric traumatic-hemorrhage fluid order. Control bleeding, prevent hypothermia, expedite trauma care, and obtain Medical Control direction for traumatic-hemorrhage resuscitation. For suspected TBI, prevent hypotension and obtain age-specific Medical Control direction; this calculator does not supply pediatric TBI blood-pressure targets.",
     calculate: (weightKg) => ({
       primary: `${rounded(weightKg * 10)}–${rounded(weightKg * 20)} mL aliquot`,
-      secondary: "Reassess after each aliquot; further fluid requires Medical Control.",
+      secondary: "Nonhemorrhagic shock only; reassess after each aliquot. Further fluid requires Medical Control.",
       calculation: `10–20 mL/kg × ${rounded(weightKg)} kg`,
     }),
   },

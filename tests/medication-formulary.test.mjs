@@ -45,7 +45,7 @@ test("high-use formulary doses match the submitted RX-R1 table", () => {
   assert.match(byId.dextrose.doses[0].pediatric, /2 mL\/kg IV\/IO \(0\.2 g\/kg\)/);
   assert.equal(byId.rocuronium.doses[0].adult, "1 mg/kg IV/IO when succinylcholine is contraindicated or a longer duration is needed");
   assert.equal(byId.rocuronium.doses[0].pediatric, "1 mg/kg IV/IO; pediatric DAI requires direct online Medical Director or Assistant Medical Director order");
-  assert.equal(byId["tranexamic-acid"].doses[0].adult, "1-2 g IV/IO or topical");
+  assert.match(byId["tranexamic-acid"].doses[0].adult, /^1–2 g IV\/IO/);
   assert.match(byId.naloxone.doses[1].adult, /0\.4–2 mg IV\/IO\/IM/);
   assert.match(byId.promethazine.doses[0].adult, /12\.5–25 mg deep IM/);
 });
@@ -63,16 +63,17 @@ test("approved Claiborne medication updates retain source doses and route safegu
     byId.adenosine.doses[0].pediatric,
     "First dose 0.1 mg/kg rapid IV/IO push (maximum 6 mg); then 0.2 mg/kg after 1–2 minutes if needed (maximum 12 mg)"
   );
-  assert.match(byId.albuterol.doses[0].pediatric, /under 20 kg 2\.5 mg nebulized/i);
-  assert.match(byId.albuterol.doses[0].pediatric, /under 15 kg 10 mg nebulized/i);
-  assert.match(byId.calcium.doses[0].adult, /Calcium chloride: 500–1,000 mg IV\/IO/);
-  assert.match(byId.calcium.doses[0].adult, /Calcium gluconate: 1\.5–3 g IV/);
-  assert.match(byId.calcium.doses[0].pediatric, /Calcium chloride: 20 mg\/kg IV\/IO/);
-  assert.match(byId.calcium.doses[0].pediatric, /Calcium gluconate: 60–100 mg\/kg IV\/IO/);
+  assert.match(byId.albuterol.doses[0].pediatric, /under 20 kg: 2\.5 mg nebulized/i);
+  assert.doesNotMatch(byId.albuterol.doses[0].pediatric, /hyperkalemia|10 mg|15 mg/i);
+  assert.match(byId.calcium.doses[0].adult, /500–1,000 mg IV\/IO/);
+  assert.match(byId.calcium.doses[1].adult, /1\.5–3 g IV/);
+  assert.match(byId.calcium.doses[0].pediatric, /20 mg\/kg IV\/IO/);
+  assert.match(byId.calcium.doses[1].pediatric, /60–100 mg\/kg IV\/IO/);
   assert.match(byId.diltiazem.doses[0].adult, /0\.25 mg\/kg IV\/IO \(maximum 20 mg\)/);
   assert.match(byId.diltiazem.doses[0].adult, /infusion 5–10 mg\/hr/);
-  assert.equal(byId.ketorolac.doses[0].adult, "15–30 mg IV or 60 mg IM");
-  assert.equal(byId.ketorolac.doses[0].pediatric, "0.5 mg/kg IV once; maximum 15 mg");
+  assert.match(byId.ketorolac.doses[0].adult, /15–30 mg IV once/);
+  assert.match(byId.ketorolac.doses[1].adult, /60 mg IM once/);
+  assert.match(byId.ketorolac.doses[0].pediatric, /Not authorized.*PM-04/);
   assert.match(byId.labetalol.doses[0].adult, /10 mg slow IV over 2 min/);
   assert.match(byId.labetalol.doses[0].adult, /maximum total 20 mg/);
   assert.match(byId.labetalol.doses[0].pediatric, /Not authorized under Adult Medical AM-04/);
@@ -124,4 +125,56 @@ test("approved Claiborne medication updates retain source doses and route safegu
   ]);
   assert.equal(byId.promethazine.doses[0].adult, "12.5–25 mg deep IM; never IV or IO");
   assert.equal(byId.promethazine.doses[0].pediatric, "Medical Control");
+});
+
+test("route and indication rows do not expose parenteral acetaminophen or hyperkalemia doses as EMT care", () => {
+  const byId = Object.fromEntries(medicationReferences.map(m => [m.id, m]));
+  const acetaminophenEmt = byId.acetaminophen.doses.filter(d => d.level === "EMT");
+  assert.equal(acetaminophenEmt.length, 2);
+  assert.ok(acetaminophenEmt.every(d => !/IV|IO/.test(d.adult)));
+  const hyperkalemia = byId.albuterol.doses.find(d => /hyperkalemia/i.test(d.indication));
+  assert.equal(hyperkalemia.level, "Paramedic");
+  assert.match(hyperkalemia.adult, /10 mg/);
+  assert.match(hyperkalemia.adult, /Do not.*during cardiac arrest/);
+  assert.equal(hyperkalemia.protocolLink.href, "/protocols/am/am-03");
+  const bicarbonate = byId["sodium-bicarbonate"].doses.find(d => /AM-03/.test(d.indication));
+  assert.match(bicarbonate.adult, /maximum 50 mEq/);
+  assert.equal(bicarbonate.level, "Paramedic");
+  assert.equal(bicarbonate.protocolLink.href, "/protocols/am/am-03");
+});
+
+test("pediatric pain is governed by PM-04, with no generic morphine/hydromorphone/ketorolac/ketamine orders", () => {
+  const byId = Object.fromEntries(medicationReferences.map(m => [m.id, m]));
+  for (const id of ["morphine", "hydromorphone", "ketorolac"]) {
+    for (const dose of byId[id].doses) {
+      assert.match(dose.pediatric, /Not authorized.*PM-04/, id);
+      assert.doesNotMatch(dose.pediatric, /\d+(?:\.\d+)? mg\/kg/, id);
+    }
+    assert.ok(byId[id].protocolLinks.some(l => l.href === "/protocols/pm/pm-04"));
+  }
+  const ketaminePain = byId.ketamine.doses.filter(d => /pain/i.test(d.indication));
+  assert.ok(ketaminePain.every(d => /Not authorized.*PM-04/.test(d.pediatric)));
+  assert.match(byId.fentanyl.doses[0].pediatric, /1 mcg\/kg.*maximum 50 mcg.*Medical Control.*second dose/);
+  assert.match(byId.ketamine.cautions.join(" "), /open globe.*expressly authorized by Medical Control/i);
+  assert.ok(byId.ketamine.protocolLinks.some(l => l.href === "/protocols/tb/tb-11"));
+});
+
+test("systemic trauma TXA and topical TXA retain separate doses, provider levels and governing orders", () => {
+  const txa = medicationReferences.find(m => m.id === "tranexamic-acid");
+  const trauma = txa.doses.find(d => /Traumatic hemorrhage/.test(d.indication));
+  assert.equal(trauma.level, "Paramedic");
+  assert.match(trauma.adult, /^1–2 g IV\/IO/);
+  assert.match(trauma.pediatric, /^15 mg\/kg/);
+  assert.match(trauma.adult, /1 g over 10 minutes OR 2 g over 20 minutes.*100 mg\/min/);
+  assert.match(trauma.releaseNote, /pediatric 15 mg\/kg differs from the Tennessee 20 mg\/kg IV/);
+  assert.match(trauma.releaseNote, /Pediatric age eligibility, infusion rate\/cap and IV\/IO route verification.*before release/);
+  assert.match(trauma.adult, /Do not automatically repeat; further dosing requires a specific order/);
+  const topical = txa.doses.filter(d => /topical only/.test(d.indication));
+  assert.equal(topical.length, 2);
+  assert.ok(topical.every(d => d.level === "AEMT"));
+  assert.ok(topical.every(d => !/1–2 g/.test(d.adult)));
+  assert.ok(txa.protocolLinks.some(l => l.href === "/protocols/tb/tb-06"));
+  assert.ok(txa.protocolLinks.some(l => l.href === "/protocols/tb/tb-12"));
+  assert.match(txa.cautions.join(" "), /no more than 3 hours/);
+  assert.match(txa.cautions.join(" "), /receiving team.*duplicate/);
 });

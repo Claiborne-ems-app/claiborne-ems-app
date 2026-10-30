@@ -1,6 +1,6 @@
 {
-  "version": "2-32-0-october-2026",
-  "appVersion": "2.32.0",
+  "version": "2-33-0-october-2026",
+  "appVersion": "2.33.0",
   "protocolVersion": "October 2026",
   "resources": [
     {
@@ -1181,7 +1181,7 @@
     {
       "url": "/protocols/claiborne/am-03-dialysis-renal-failure-protocol.pdf",
       "kind": "document",
-      "bytes": 48061
+      "bytes": 58131
     },
     {
       "url": "/protocols/claiborne/am-04-hypertension-protocol.pdf",
@@ -1191,7 +1191,7 @@
     {
       "url": "/protocols/claiborne/am-05-hypotension-shock-protocol.pdf",
       "kind": "document",
-      "bytes": 48132
+      "bytes": 61130
     },
     {
       "url": "/protocols/claiborne/am-06-suspected-stroke-tnk-transfer-protocol.pdf",
@@ -1221,17 +1221,17 @@
     {
       "url": "/protocols/claiborne/ar-01-adult-airway-protocol.pdf",
       "kind": "document",
-      "bytes": 47102
+      "bytes": 49243
     },
     {
       "url": "/protocols/claiborne/ar-02-adult-failed-airway-protocol.pdf",
       "kind": "document",
-      "bytes": 47011
+      "bytes": 49291
     },
     {
       "url": "/protocols/claiborne/ar-03-airway-drug-assisted-intubation-protocol.pdf",
       "kind": "document",
-      "bytes": 47733
+      "bytes": 53535
     },
     {
       "url": "/protocols/claiborne/ar-04-copd-asthma-protocol.pdf",
@@ -1241,12 +1241,12 @@
     {
       "url": "/protocols/claiborne/ar-05-pediatric-airway-protocol.pdf",
       "kind": "document",
-      "bytes": 47099
+      "bytes": 52632
     },
     {
       "url": "/protocols/claiborne/ar-06-pediatric-failed-airway-protocol.pdf",
       "kind": "document",
-      "bytes": 47080
+      "bytes": 52163
     },
     {
       "url": "/protocols/claiborne/ar-07-pediatric-respiratory-distress-protocol.pdf",
@@ -1256,12 +1256,12 @@
     {
       "url": "/protocols/claiborne/ar-08-post-intubation-biad-management-protocol.pdf",
       "kind": "document",
-      "bytes": 47693
+      "bytes": 52527
     },
     {
       "url": "/protocols/claiborne/ar-09-ventilator-emergencies-protocol.pdf",
       "kind": "document",
-      "bytes": 47215
+      "bytes": 51704
     },
     {
       "url": "/protocols/claiborne/ar-10-tracheostomy-tube-emergencies-protocol.pdf",
@@ -1271,7 +1271,7 @@
     {
       "url": "/protocols/claiborne/ar-11-mechanical-ventilation-adult.pdf",
       "kind": "document",
-      "bytes": 51256
+      "bytes": 52416
     },
     {
       "url": "/protocols/claiborne/pc-01-pediatric-asytole-pea-protocol.pdf",
@@ -1326,7 +1326,7 @@
     {
       "url": "/protocols/claiborne/pm-03-pediatric-hypotension-shock-protocol.pdf",
       "kind": "document",
-      "bytes": 49238
+      "bytes": 52802
     },
     {
       "url": "/protocols/claiborne/pm-04-pediatric-pain-control-protocol.pdf",
@@ -1371,62 +1371,62 @@
     {
       "url": "/protocols/claiborne/tb-01-blast-injury-protocol.pdf",
       "kind": "document",
-      "bytes": 513710
+      "bytes": 48055
     },
     {
       "url": "/protocols/claiborne/tb-02-chemical-and-electrical-burn-protocol.pdf",
       "kind": "document",
-      "bytes": 409620
+      "bytes": 49723
     },
     {
       "url": "/protocols/claiborne/tb-03-crush-syndrome-protocol.pdf",
       "kind": "document",
-      "bytes": 406056
+      "bytes": 48152
     },
     {
       "url": "/protocols/claiborne/tb-04-extremity-trauma-protocol.pdf",
       "kind": "document",
-      "bytes": 128675
+      "bytes": 48050
     },
     {
       "url": "/protocols/claiborne/tb-05-head-trauma-protocol.pdf",
       "kind": "document",
-      "bytes": 591452
+      "bytes": 49526
     },
     {
       "url": "/protocols/claiborne/tb-06-multiple-trauma-protocol.pdf",
       "kind": "document",
-      "bytes": 309242
+      "bytes": 52280
     },
     {
       "url": "/protocols/claiborne/tb-07-radiation-incident-protocol.pdf",
       "kind": "document",
-      "bytes": 428695
+      "bytes": 47273
     },
     {
       "url": "/protocols/claiborne/tb-08-selective-spinal-immobilization-protocol.pdf",
       "kind": "document",
-      "bytes": 191862
+      "bytes": 48014
     },
     {
       "url": "/protocols/claiborne/tb-09-thermal-burn-protocol.pdf",
       "kind": "document",
-      "bytes": 442126
+      "bytes": 51865
     },
     {
       "url": "/protocols/claiborne/tb-10-traumatic-arrest-protocol.pdf",
       "kind": "document",
-      "bytes": 48992
+      "bytes": 49320
     },
     {
       "url": "/protocols/claiborne/tb-11-eye-trauma-protocol.pdf",
       "kind": "document",
-      "bytes": 48967
+      "bytes": 55178
     },
     {
       "url": "/protocols/claiborne/tb-12-abdominal-pelvic-trauma-protocol.pdf",
       "kind": "document",
-      "bytes": 49551
+      "bytes": 59850
     },
     {
       "url": "/protocols/claiborne/te-01-bites-and-envenomations-protocol.pdf",
@@ -1516,7 +1516,7 @@
     {
       "url": "/protocols/claiborne/up-11-pain-control-adult-protocol.pdf",
       "kind": "document",
-      "bytes": 51921
+      "bytes": 57974
     },
     {
       "url": "/protocols/claiborne/up-12-police-custody-protocol.pdf",
@@ -1581,7 +1581,7 @@
     {
       "url": "/offline-data.json",
       "kind": "static",
-      "bytes": 32315
+      "bytes": 32146
     },
     {
       "url": "/manifest.webmanifest",
@@ -1665,6 +1665,6 @@
     }
   ],
   "resourceCount": 332,
-  "knownBytes": 18184466,
-  "estimatedBytes": 32405778
+  "knownBytes": 15286642,
+  "estimatedBytes": 29507954
 }
