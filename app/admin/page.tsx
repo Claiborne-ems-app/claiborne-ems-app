@@ -42,15 +42,15 @@ export default function AdminDashboardPage() {
         }`}
       >
         <p className={`text-sm font-bold uppercase tracking-[0.16em] ${releaseReadiness.clinicallyReady ? "text-emerald-300" : "text-amber-300"}`}>
-          {releaseReadiness.clinicallyReady ? "Clinical release eligible" : "Clinical release gate remains closed"}
+          {releaseReadiness.clinicallyReady ? "Review metadata complete" : "Operational release checks remain open"}
         </p>
         <h2 className="mt-2 text-xl font-bold text-white">
           {releaseReadiness.clinicallyReady
             ? "Every protocol has an explicit approved review state."
-            : `${releaseReadiness.pendingProtocols} protocol${releaseReadiness.pendingProtocols === 1 ? "" : "s"} still require final approval.`}
+            : `${releaseReadiness.pendingProtocols} protocol${releaseReadiness.pendingProtocols === 1 ? "" : "s"} have pending governance metadata.`}
         </h2>
         <p className="mt-2 max-w-4xl text-sm leading-6 text-slate-300">
-          Production clinical release requires an Approved state for every protocol and completion of the physical-device/offline checklist. Until then, the application remains a beta field reference.
+          Clinical content approvals are recorded separately from operational release. Legacy Reviewed status is not a count of unapproved clinical decisions. Complete outstanding product, local-policy and physical-device/offline checks before operational release.
         </p>
         {!releaseReadiness.clinicallyReady ? (
           <p className="mt-3 text-sm font-medium text-amber-100">

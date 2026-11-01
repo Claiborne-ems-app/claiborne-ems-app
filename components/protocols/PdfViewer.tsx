@@ -47,7 +47,7 @@ export default function PdfViewer({
 
       {!nativeContentAvailable && (
         <p className="mb-4 rounded-xl border border-sky-500/20 bg-sky-500/5 px-4 py-3 text-sm text-sky-200">
-          Native mobile content is not yet available for this protocol.
+          Mobile text is not yet available for this protocol.
         </p>
       )}
 
@@ -72,7 +72,7 @@ export default function PdfViewer({
             href={detailsHref}
             className="text-sm text-sky-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
           >
-            Native Protocol
+            Protocol
           </Link>
         )}
       </div>

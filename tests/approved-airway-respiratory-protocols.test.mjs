@@ -1,10 +1,12 @@
+import { readFile } from "node:fs/promises";
+import { readProtocolAware } from "./protocol-source-helper.mjs";
 import assert from "node:assert/strict";
-import { readFile, stat } from "node:fs/promises";
+import { stat } from "node:fs/promises";
 import test from "node:test";
 import { canonicalPdfPages } from "../data/canonical-pdf-pages.ts";
 import { structuredAirwayProtocols } from "../data/structured-airway-protocols.ts";
 
-const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
+const read = (path) => readProtocolAware(path, import.meta.url);
 
 const APPROVED_AR = [
   "AR-01", "AR-02", "AR-03", "AR-04", "AR-05",

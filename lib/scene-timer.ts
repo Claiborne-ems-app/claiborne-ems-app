@@ -1,3 +1,4 @@
+export const MAX_SCENE_ENTRIES = 100;
 export const SCENE_STORAGE_KEY = "claiborne-ems:scene-workspace:v1";
 export const SCENE_WORKSPACE_EVENT = "claiborne-ems:scene-workspace-change";
 
@@ -23,7 +24,7 @@ export const emptySceneWorkspace: SceneWorkspace = {
 };
 
 export function formatSceneTime(totalSeconds: number) {
-  const normalizedSeconds = Math.max(0, Math.floor(totalSeconds));
+  const normalizedSeconds = Number.isFinite(totalSeconds) ? Math.max(0, Math.floor(totalSeconds)) : 0;
   const hours = Math.floor(normalizedSeconds / 3600);
   const minutes = Math.floor((normalizedSeconds % 3600) / 60);
   const seconds = normalizedSeconds % 60;
@@ -51,6 +52,7 @@ export function getSceneElapsedSeconds(
 }
 
 export function formatSceneClockTime(value: string) {
+  if (!Number.isFinite(Date.parse(value))) return "Time unavailable";
   return new Intl.DateTimeFormat(undefined, {
     hour: "numeric",
     minute: "2-digit",
@@ -65,8 +67,8 @@ function isSceneEntry(value: unknown): value is SceneEntry {
     typeof entry.id === "string" &&
     typeof entry.note === "string" &&
     typeof entry.elapsedSeconds === "number" &&
-    entry.elapsedSeconds >= 0 &&
-    typeof entry.recordedAt === "string"
+    Number.isFinite(entry.elapsedSeconds) && entry.elapsedSeconds >= 0 &&
+    typeof entry.recordedAt === "string" && Number.isFinite(Date.parse(entry.recordedAt))
   );
 }
 
@@ -77,19 +79,19 @@ export function normalizeSceneWorkspace(value: unknown): SceneWorkspace {
   return {
     accumulatedSeconds:
       typeof workspace.accumulatedSeconds === "number" &&
-      workspace.accumulatedSeconds >= 0
+      Number.isFinite(workspace.accumulatedSeconds) && workspace.accumulatedSeconds >= 0
         ? Math.floor(workspace.accumulatedSeconds)
         : 0,
     runningSince:
-      typeof workspace.runningSince === "number"
+      typeof workspace.runningSince === "number" && Number.isFinite(workspace.runningSince) && workspace.runningSince >= 0
         ? workspace.runningSince
         : null,
     sceneStartedAt:
-      typeof workspace.sceneStartedAt === "string"
+      typeof workspace.sceneStartedAt === "string" && Number.isFinite(Date.parse(workspace.sceneStartedAt))
         ? workspace.sceneStartedAt
         : null,
     entries: Array.isArray(workspace.entries)
-      ? workspace.entries.filter(isSceneEntry).slice(-100)
+      ? workspace.entries.filter(isSceneEntry)
       : [],
   };
 }

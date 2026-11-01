@@ -1,0 +1,3535 @@
+[
+  {
+    "sourcePath": "protocols.ac-01.overview[0]",
+    "sourceText": "Adult nonshockable cardiac-arrest pathway for patients 16 years of age and older.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.indications[0]",
+        "text": "Patient 16 years of age or older in cardiac arrest with asystole or pulseless electrical activity."
+      }
+    ],
+    "reason": "Same age 16+ adult nonshockable arrest eligibility."
+  },
+  {
+    "sourcePath": "protocols.ac-01.overview[1]",
+    "sourceText": "Prioritize uninterrupted high-quality CPR, early epinephrine, oxygenation and ventilation, and rapid treatment of reversible causes.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.flow[1].text",
+        "text": "Compressions 100–120/min, depth 2–2.4 in, full recoil, minimal pauses; change compressor every 2 minutes. Use 30:2 before an advanced airway."
+      },
+      {
+        "path": "protocols.ac-01.flow[3].text",
+        "text": "Give epinephrine 1 mg IV/IO as soon as possible and repeat every 3–5 minutes. Make one rapid IV attempt, then proceed to IO if unsuccessful or delayed."
+      },
+      {
+        "path": "protocols.ac-01.flow[4].text",
+        "text": "Two-person BVM first. Do not interrupt compressions for airway placement. After an advanced airway, continue compressions and give 1 breath every 6 seconds with waveform capnography."
+      },
+      {
+        "path": "protocols.ac-01.flow[5].text",
+        "text": "Evaluate and treat hypovolemia, hypoxia, acidosis, potassium abnormality, hypothermia, tension pneumothorax, tamponade, toxins, and coronary or pulmonary thrombosis."
+      }
+    ],
+    "reason": "The ordered flow retains CPR, prompt epinephrine, oxygenation/ventilation and reversible causes."
+  },
+  {
+    "sourcePath": "protocols.ac-01.indications[1]",
+    "sourceText": "No definite central pulse detected within a pulse check of no more than 10 seconds.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.flow[0].text",
+        "text": "Unresponsive • absent or abnormal breathing • no definite pulse within 10 seconds • honor valid DNR/MOST and obvious-death criteria."
+      }
+    ],
+    "reason": "The same 10-second absence-of-pulse threshold is retained in arrest recognition."
+  },
+  {
+    "sourcePath": "protocols.ac-01.assessment[0].items[1]",
+    "sourceText": "For organized electrical activity, verify the absence of a palpable pulse before diagnosing PEA.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.careModules[2].levels[0].actions[0]",
+        "text": "Perform all EMT and AEMT actions; confirm PEA has no palpable pulse and confirm asystole in 2 leads, excluding fine VF."
+      }
+    ],
+    "reason": "Paramedic instruction explicitly verifies no palpable pulse before confirming PEA."
+  },
+  {
+    "sourcePath": "protocols.ac-01.assessment[0].items[2]",
+    "sourceText": "For apparent asystole, confirm in 2 leads and check electrodes, cables, monitor gain, and the possibility of fine VF.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.flow[2].text",
+        "text": "Check rhythm every 2 minutes. Confirm asystole in 2 leads and exclude loose leads, low gain, and fine VF. Do not defibrillate or pace asystole/PEA."
+      },
+      {
+        "path": "protocols.ac-01.careModules[1].levels[0].actions[0]",
+        "text": "Perform all EMT actions and confirm the rhythm is nonshockable; if apparent asystole, verify in 2 leads and correct lead, cable, and gain problems."
+      }
+    ],
+    "reason": "Two-lead asystole confirmation, electrodes/cables/gain and fine VF retained."
+  },
+  {
+    "sourcePath": "protocols.ac-01.assessment[1].items[0]",
+    "sourceText": "Compression rate 100–120/min and depth 2–2.4 inches with complete recoil.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.careModules[0].levels[0].actions[1]",
+        "text": "Start TEAM-focused CPR immediately: 100–120 compressions/min, depth 2–2.4 inches, complete recoil, minimal interruptions, and compressor change every 2 minutes."
+      }
+    ],
+    "reason": "Identical compression rate/depth/recoil retained with EMT authority."
+  },
+  {
+    "sourcePath": "protocols.ac-01.assessment[2].items[0]",
+    "sourceText": "Hypovolemia, hypoxia, hydrogen ion excess/acidosis, hypo-/hyperkalemia, and hypothermia.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.flow[5].text",
+        "text": "Evaluate and treat hypovolemia, hypoxia, acidosis, potassium abnormality, hypothermia, tension pneumothorax, tamponade, toxins, and coronary or pulmonary thrombosis."
+      }
+    ],
+    "reason": "All H causes retained, including potassium abnormality and acidosis."
+  },
+  {
+    "sourcePath": "protocols.ac-01.assessment[2].items[1]",
+    "sourceText": "Tension pneumothorax, cardiac tamponade, toxins, coronary thrombosis, and pulmonary thrombosis.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.flow[5].text",
+        "text": "Evaluate and treat hypovolemia, hypoxia, acidosis, potassium abnormality, hypothermia, tension pneumothorax, tamponade, toxins, and coronary or pulmonary thrombosis."
+      }
+    ],
+    "reason": "All listed T causes retained in the flow."
+  },
+  {
+    "sourcePath": "protocols.ac-01.treatmentSteps[1]",
+    "sourceText": "Apply monitor/defibrillator pads. Treat asystole and PEA as nonshockable rhythms; do not defibrillate or perform transcutaneous pacing.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.careModules[0].levels[0].actions[2]",
+        "text": "Apply AED/monitor pads, follow rhythm prompts, and resume compressions immediately after every rhythm or pulse check."
+      },
+      {
+        "path": "protocols.ac-01.warnings[0]",
+        "text": "Asystole and PEA are nonshockable. Do not defibrillate or pace unless the rhythm changes to an appropriate perfusing or shockable rhythm."
+      }
+    ],
+    "reason": "Pads, nonshockable rhythm, no defibrillation/pacing are retained."
+  },
+  {
+    "sourcePath": "protocols.ac-01.treatmentSteps[2]",
+    "sourceText": "Perform rhythm checks every 2 minutes and resume compressions immediately after each check.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.flow[2].text",
+        "text": "Check rhythm every 2 minutes. Confirm asystole in 2 leads and exclude loose leads, low gain, and fine VF. Do not defibrillate or pace asystole/PEA."
+      },
+      {
+        "path": "protocols.ac-01.careModules[0].levels[0].actions[2]",
+        "text": "Apply AED/monitor pads, follow rhythm prompts, and resume compressions immediately after every rhythm or pulse check."
+      }
+    ],
+    "reason": "Every-two-minute checks and immediate resumption retained."
+  },
+  {
+    "sourcePath": "protocols.ac-01.treatmentSteps[3]",
+    "sourceText": "Give epinephrine 1 mg IV/IO as soon as possible and every 3–5 minutes thereafter while arrest continues.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.medications[0].dose",
+        "text": "1 mg IV/IO as soon as possible; repeat every 3–5 minutes"
+      },
+      {
+        "path": "protocols.ac-01.careModules[1].levels[0].actions[2]",
+        "text": "Give epinephrine 1 mg IV/IO as soon as possible and repeat every 3–5 minutes while arrest continues."
+      }
+    ],
+    "reason": "Same epinephrine initial timing/repeat and while-arrest condition retained."
+  },
+  {
+    "sourcePath": "protocols.ac-01.treatmentSteps[4]",
+    "sourceText": "Use one rapid IV attempt, then proceed to IO when IV access is unsuccessful, infeasible, or delayed. Proximal tibia is preferred; humeral head is an alternate only when tibial access is contraindicated.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.careModules[1].levels[0].actions[1]",
+        "text": "Make one rapid IV attempt without interrupting CPR. If unsuccessful, infeasible, or delayed, establish IO access; use proximal tibia preferentially and humeral head only when tibial access is contraindicated."
+      }
+    ],
+    "reason": "Same single rapid IV attempt, IO triggers and tibia/humeral site restriction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-01.treatmentSteps[6]",
+    "sourceText": "After advanced-airway placement, give 1 breath every 6 seconds during continuous compressions and use waveform capnography.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.flow[4].text",
+        "text": "Two-person BVM first. Do not interrupt compressions for airway placement. After an advanced airway, continue compressions and give 1 breath every 6 seconds with waveform capnography."
+      },
+      {
+        "path": "protocols.ac-01.careModules[2].levels[0].actions[2]",
+        "text": "Use continuous waveform capnography after any advanced airway to confirm and monitor placement, assess ventilation, and follow trends in CPR effectiveness."
+      }
+    ],
+    "reason": "Continuous compressions, 6-second breath rate and waveform capnography retained."
+  },
+  {
+    "sourcePath": "protocols.ac-01.treatmentSteps[7]",
+    "sourceText": "Continuously evaluate and treat reversible causes. Use cause-specific therapy rather than empiric routine arrest medications.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.flow[5].text",
+        "text": "Evaluate and treat hypovolemia, hypoxia, acidosis, potassium abnormality, hypothermia, tension pneumothorax, tamponade, toxins, and coronary or pulmonary thrombosis."
+      },
+      {
+        "path": "protocols.ac-01.warnings[2]",
+        "text": "Do not routinely administer calcium, sodium bicarbonate, magnesium, or antiarrhythmics in asystole/PEA. Use only for a specific protocol-supported cause."
+      }
+    ],
+    "reason": "Cause-directed treatment and no routine empirical arrest medication retained."
+  },
+  {
+    "sourcePath": "protocols.ac-01.treatmentSteps[9]",
+    "sourceText": "If VF/pulseless VT develops, move to AC-09. If ROSC occurs, move to AC-10.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.flow[6].text",
+        "text": "If VF/pulseless VT develops, transition immediately to AC-09. If ROSC occurs, transition to AC-10. Otherwise continue 2-minute cycles and consider AC-12 termination criteria."
+      }
+    ],
+    "reason": "Same VF/VT and ROSC routing retained."
+  },
+  {
+    "sourcePath": "protocols.ac-01.clinicalPearls[0]",
+    "sourceText": "Early, high-quality CPR and prompt epinephrine are the central therapies for nonshockable arrest.",
+    "targets": [
+      {
+        "path": "protocols.ac-01.flow[1].text",
+        "text": "Compressions 100–120/min, depth 2–2.4 in, full recoil, minimal pauses; change compressor every 2 minutes. Use 30:2 before an advanced airway."
+      },
+      {
+        "path": "protocols.ac-01.flow[3].text",
+        "text": "Give epinephrine 1 mg IV/IO as soon as possible and repeat every 3–5 minutes. Make one rapid IV attempt, then proceed to IO if unsuccessful or delayed."
+      }
+    ],
+    "reason": "CPR and early epinephrine emphasis retained in immediate ordered pathway."
+  },
+  {
+    "sourcePath": "protocols.ac-02.overview[1]",
+    "sourceText": "Treat cardiopulmonary compromise attributable to bradycardia while simultaneously identifying and correcting reversible causes.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.flow[1].text",
+        "text": "Hypotension • acutely altered mental status • shock • ischemic chest discomfort • acute heart failure. Confirm symptoms are caused by the bradycardia."
+      },
+      {
+        "path": "protocols.ac-02.treatmentSteps[10]",
+        "text": "Identify and treat reversible causes and use the applicable ACS, CHF, hypothermia, or toxicology pathway when identified."
+      }
+    ],
+    "reason": "Treat compromise attributable to bradycardia and correct reversible causes retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.indications[0]",
+    "sourceText": "Patient 16 years of age or older with clinically significant bradycardia, typically a heart rate below 50/min.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.overview[0]",
+        "text": "Adult bradycardia pathway for patients 16 years of age and older. Bradycardia is typically a heart rate below 50/min, but treatment is determined by the patient's clinical condition rather than the rate alone."
+      }
+    ],
+    "reason": "Same age and typical heart-rate eligibility retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.indications[1]",
+    "sourceText": "Bradycardia associated with hypotension, acutely altered mental status, signs of shock, ischemic chest discomfort, or acute heart failure.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.flow[1].text",
+        "text": "Hypotension • acutely altered mental status • shock • ischemic chest discomfort • acute heart failure. Confirm symptoms are caused by the bradycardia."
+      }
+    ],
+    "reason": "All compromise findings retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.assessment[0].items[0]",
+    "sourceText": "Determine whether bradycardia is causing hypotension, acutely altered mental status, shock, ischemic chest discomfort, or acute heart failure.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.flow[1].text",
+        "text": "Hypotension • acutely altered mental status • shock • ischemic chest discomfort • acute heart failure. Confirm symptoms are caused by the bradycardia."
+      }
+    ],
+    "reason": "Exact set of compromise findings and attribution retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.treatmentSteps[1]",
+    "sourceText": "Apply pacing/defibrillation pads early, monitor the pulse continuously, obtain blood glucose, and acquire a 12-lead ECG when it will not delay treatment.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.careModules[0].levels[0].actions[2]",
+        "text": "Apply cardiac monitor and pacing/defibrillation pads, monitor pulse, blood pressure, and SpO₂, and obtain blood glucose."
+      },
+      {
+        "path": "protocols.ac-02.careModules[0].levels[0].actions[3]",
+        "text": "Acquire and transmit a 12-lead ECG when it will not delay urgent treatment or transport."
+      }
+    ],
+    "reason": "Pads, pulse, glucose and non-delaying 12-lead retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.treatmentSteps[2]",
+    "sourceText": "If no cardiopulmonary compromise is present, monitor and observe, identify and treat the cause, and transport as clinically indicated.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.flow[2].text",
+        "text": "Monitor, obtain 12-lead ECG and glucose, identify and treat the cause, obtain 2 complete vital-sign sets, and transport as clinically indicated."
+      }
+    ],
+    "reason": "Same no-compromise monitoring, cause treatment and indicated transport retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.treatmentSteps[3]",
+    "sourceText": "For cardiopulmonary compromise, establish vascular access while supporting airway, breathing, and perfusion. In severe instability, make one rapid IV attempt and proceed to IO if unsuccessful or delayed.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.careModules[0].levels[0].actions[1]",
+        "text": "Provide oxygen for hypoxemia and assist ventilation with BVM when respirations are inadequate."
+      },
+      {
+        "path": "protocols.ac-02.careModules[1].levels[0].actions[0]",
+        "text": "Perform all EMT actions and establish IV access without delaying pacing, ALS intercept, or transport."
+      },
+      {
+        "path": "protocols.ac-02.careModules[1].levels[0].actions[1]",
+        "text": "For severe instability, make one rapid IV attempt and proceed to IO if unsuccessful or access is otherwise infeasible or delayed."
+      }
+    ],
+    "reason": "Support and access plus one rapid IV then IO for severe instability retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.treatmentSteps[4]",
+    "sourceText": "Give atropine 1 mg IV/IO every 3–5 minutes to a maximum total dose of 3 mg when appropriate.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.medications[0].dose",
+        "text": "1 mg IV/IO; repeat every 3–5 minutes to a maximum total dose of 3 mg"
+      },
+      {
+        "path": "protocols.ac-02.medications[0].notes[0]",
+        "text": "Paramedic standing order for bradycardia causing cardiopulmonary compromise."
+      }
+    ],
+    "reason": "Same atropine dose/interval/maximum and compromised bradycardia indication retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.treatmentSteps[5]",
+    "sourceText": "Begin immediate transcutaneous pacing for severe instability or high-grade AV block when vascular access is unavailable. Do not delay pacing for atropine in Mobitz II, complete heart block, or a new wide-QRS escape rhythm.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.flow[3].text",
+        "text": "If severe instability or high-grade AV block is present and vascular access is unavailable, begin transcutaneous pacing immediately while access is pursued."
+      },
+      {
+        "path": "protocols.ac-02.careModules[2].levels[0].actions[2]",
+        "text": "Do not delay transcutaneous pacing for atropine in severe instability, Mobitz II, complete heart block, or a new wide-QRS escape rhythm."
+      }
+    ],
+    "reason": "Immediate pacing without access and specific atropine-unresponsive block conditions retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.treatmentSteps[7]",
+    "sourceText": "When the patient's condition permits, provide analgesia and sedation using the pain/procedural-sedation protocol; do not delay lifesaving pacing.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.careModules[2].levels[0].actions[4]",
+        "text": "Provide analgesia and sedation for pacing when the patient's condition permits, without delaying lifesaving pacing; use continuous cardiac, blood-pressure, respiratory, SpO₂, and EtCO₂ monitoring after sedation."
+      }
+    ],
+    "reason": "Pacing analgesia/sedation condition, non-delay safeguard and extra monitoring retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.treatmentSteps[8]",
+    "sourceText": "If atropine is ineffective, continue pacing and/or begin epinephrine infusion 2–10 mcg/min or dopamine infusion 5–20 mcg/kg/min, titrated to clinical response.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.careModules[2].levels[0].actions[3]",
+        "text": "If atropine is ineffective, use transcutaneous pacing and/or an epinephrine or dopamine infusion titrated to clinical response."
+      },
+      {
+        "path": "protocols.ac-02.medications[1].dose",
+        "text": "2–10 mcg/min IV/IO infusion; titrate to clinical response"
+      },
+      {
+        "path": "protocols.ac-02.medications[2].dose",
+        "text": "5–20 mcg/kg/min IV/IO infusion; titrate to clinical response"
+      },
+      {
+        "path": "protocols.ac-02.medications[1].notes[0]",
+        "text": "Paramedic standing order for persistent unstable bradycardia when atropine is ineffective."
+      },
+      {
+        "path": "protocols.ac-02.medications[2].notes[0]",
+        "text": "Paramedic standing order for persistent unstable bradycardia when atropine is ineffective."
+      }
+    ],
+    "reason": "Ineffective-atropine trigger, pacing and/or dose-specific infusion alternatives retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.treatmentSteps[9]",
+    "sourceText": "Give isotonic fluid only for hypotension when clinically appropriate, using 250–500 mL aliquots with reassessment and reduced volumes for patients at risk of overload.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.careModules[1].levels[0].actions[2]",
+        "text": "For hypotension when volume administration is clinically appropriate, give isotonic fluid in 250–500 mL aliquots with reassessment."
+      },
+      {
+        "path": "protocols.ac-02.careModules[1].levels[0].actions[3]",
+        "text": "Use smaller fluid volumes or avoid additional fluid when pulmonary edema, CHF, renal failure, liver failure, or volume overload is suspected."
+      }
+    ],
+    "reason": "Hypotension-only clinically appropriate aliquots, reassessment and fluid-sensitive exclusions retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.warnings[1]",
+    "sourceText": "Do not delay transcutaneous pacing in severe instability, Mobitz II, complete heart block, or a new wide-QRS escape rhythm.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.careModules[2].levels[0].actions[2]",
+        "text": "Do not delay transcutaneous pacing for atropine in severe instability, Mobitz II, complete heart block, or a new wide-QRS escape rhythm."
+      }
+    ],
+    "reason": "Same no-delay pacing conditions retained under Paramedic authority."
+  },
+  {
+    "sourcePath": "protocols.ac-02.warnings[2]",
+    "sourceText": "Electrical pacing artifacts do not prove perfusion. Confirm mechanical capture and reassess it continuously.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.treatmentSteps[6]",
+        "text": "For transcutaneous pacing, set a rate of 60–80/min and increase current until electrical capture occurs. Confirm mechanical capture with a palpable pulse, improved blood pressure, pulse-ox waveform, or EtCO₂ response—not ECG appearance alone."
+      },
+      {
+        "path": "protocols.ac-02.careModules[2].levels[0].actions[5]",
+        "text": "Confirm and continually reassess mechanical capture, treat reversible causes, and coordinate early receiving-facility notification."
+      }
+    ],
+    "reason": "ECG alone insufficient and continuous mechanical capture reassessment retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.warnings[4]",
+    "sourceText": "Do not use push-dose epinephrine under this protocol.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.medications[1].notes[1]",
+        "text": "Push-dose epinephrine is not included in this protocol."
+      }
+    ],
+    "reason": "Identical push-dose epinephrine exclusion retained with the infusion row."
+  },
+  {
+    "sourcePath": "protocols.ac-02.warnings[5]",
+    "sourceText": "Avoid routine fluid loading in acute heart failure, pulmonary edema, renal failure, liver failure, or suspected volume overload.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.careModules[1].levels[0].actions[3]",
+        "text": "Use smaller fluid volumes or avoid additional fluid when pulmonary edema, CHF, renal failure, liver failure, or volume overload is suspected."
+      }
+    ],
+    "reason": "All named fluid-overload conditions and reduced/avoid-fluid safeguard retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.clinicalPearls[1]",
+    "sourceText": "In severe instability without vascular access, pacing can begin while another clinician pursues IV or IO access.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.flow[3].text",
+        "text": "If severe instability or high-grade AV block is present and vascular access is unavailable, begin transcutaneous pacing immediately while access is pursued."
+      }
+    ],
+    "reason": "Immediate pacing while access pursued retained."
+  },
+  {
+    "sourcePath": "protocols.ac-02.clinicalPearls[2]",
+    "sourceText": "Mechanical capture is supported by a pulse corresponding to paced complexes, improved blood pressure or perfusion, a pulse-ox waveform, or an EtCO₂ response.",
+    "targets": [
+      {
+        "path": "protocols.ac-02.treatmentSteps[6]",
+        "text": "For transcutaneous pacing, set a rate of 60–80/min and increase current until electrical capture occurs. Confirm mechanical capture with a palpable pulse, improved blood pressure, pulse-ox waveform, or EtCO₂ response—not ECG appearance alone."
+      }
+    ],
+    "reason": "All clinical measures of mechanical capture retained; not ECG alone."
+  },
+  {
+    "sourcePath": "protocols.ac-03.overview[1]",
+    "sourceText": "Prioritize high-quality TEAM-focused CPR, rapid defibrillation when indicated, oxygenation and ventilation, guideline-directed medications, reversible causes, and on-scene resuscitation.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.flow[1].text",
+        "text": "Compressions 100–120/min • depth 2–2.4 in • full recoil • minimal pauses • change compressor every 2 min • chest-compression fraction goal >80%."
+      },
+      {
+        "path": "protocols.ac-03.flow[3].text",
+        "text": "VF/pulseless VT → open AC-09. Asystole/PEA → open AC-01. Repeat rhythm analysis every 2 minutes."
+      },
+      {
+        "path": "protocols.ac-03.flow[4].text",
+        "text": "One rapid IV attempt, then IO if unsuccessful or delayed. Epinephrine 1 mg IV/IO every 3–5 min; timing follows the rhythm pathway."
+      },
+      {
+        "path": "protocols.ac-03.flow[5].text",
+        "text": "Two-person BVM first. Do not interrupt compressions for airway placement. After an advanced airway, give 1 breath every 6 sec with continuous compressions and waveform capnography."
+      },
+      {
+        "path": "protocols.ac-03.flow[6].text",
+        "text": "Actively evaluate and treat the Hs and Ts. Use cause-specific therapy rather than routine empiric arrest medications."
+      },
+      {
+        "path": "protocols.ac-03.flow[7].text",
+        "text": "ROSC → open AC-10. No ROSC → continue rhythm pathway and evaluate AC-12 when appropriate. Favor on-scene resuscitation unless a defined special circumstance supports transport."
+      }
+    ],
+    "reason": "All prioritized components retained in ordered native flow."
+  },
+  {
+    "sourcePath": "protocols.ac-03.indications[0]",
+    "sourceText": "Patient 16 years of age or older who is unresponsive, has absent or abnormal breathing, and has no definite pulse within 10 seconds.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.overview[0]",
+        "text": "Master adult cardiac-arrest pathway for patients 16 years of age and older. Use this protocol to begin coordinated resuscitation and route immediately to the appropriate rhythm-specific pathway."
+      },
+      {
+        "path": "protocols.ac-03.flow[0].text",
+        "text": "Unresponsive • absent or abnormal breathing • no definite pulse within 10 seconds • honor valid DNR/MOST and obvious-death criteria."
+      }
+    ],
+    "reason": "Same adult age, responsiveness/breathing and 10-second pulse eligibility."
+  },
+  {
+    "sourcePath": "protocols.ac-03.indications[1]",
+    "sourceText": "Adult patient in ventricular fibrillation, pulseless ventricular tachycardia, asystole, or pulseless electrical activity requiring resuscitation.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.flow[3].text",
+        "text": "VF/pulseless VT → open AC-09. Asystole/PEA → open AC-01. Repeat rhythm analysis every 2 minutes."
+      }
+    ],
+    "reason": "The four listed arrest rhythms retained in routing node."
+  },
+  {
+    "sourcePath": "protocols.ac-03.assessment[1].items[0]",
+    "sourceText": "Compression rate 100–120/min and depth 2–2.4 inches with complete recoil.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.careModules[0].levels[0].actions[2]",
+        "text": "Perform compressions at 100–120/min to a depth of 2–2.4 inches with complete recoil, minimal interruptions, compressor changes every 2 minutes, and a chest-compression fraction goal above 80%."
+      }
+    ],
+    "reason": "Identical compression rate/depth/recoil retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.assessment[1].items[1]",
+    "sourceText": "Minimize pauses, keep rhythm and pulse checks under 10 seconds, and change compressors approximately every 2 minutes.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.flow[2].text",
+        "text": "Analyze rhythm immediately. Resume CPR after every rhythm check or shock. Check a pulse only with an organized rhythm and limit the check to 10 seconds."
+      },
+      {
+        "path": "protocols.ac-03.careModules[0].levels[0].actions[2]",
+        "text": "Perform compressions at 100–120/min to a depth of 2–2.4 inches with complete recoil, minimal interruptions, compressor changes every 2 minutes, and a chest-compression fraction goal above 80%."
+      }
+    ],
+    "reason": "Minimal pauses, 10-second pulse checks and two-minute compressor changes retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.assessment[2].items[0]",
+    "sourceText": "Analyze rhythm as soon as the AED or monitor is available and approximately every 2 minutes thereafter.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.flow[2].text",
+        "text": "Analyze rhythm immediately. Resume CPR after every rhythm check or shock. Check a pulse only with an organized rhythm and limit the check to 10 seconds."
+      },
+      {
+        "path": "protocols.ac-03.flow[3].text",
+        "text": "VF/pulseless VT → open AC-09. Asystole/PEA → open AC-01. Repeat rhythm analysis every 2 minutes."
+      }
+    ],
+    "reason": "Immediate and every-two-minute rhythm analysis retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.assessment[2].items[1]",
+    "sourceText": "Route VF/pulseless VT to AC-09 and asystole/PEA to AC-01 using the direct protocol links.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.flow[3].text",
+        "text": "VF/pulseless VT → open AC-09. Asystole/PEA → open AC-01. Repeat rhythm analysis every 2 minutes."
+      }
+    ],
+    "reason": "Identical rhythm-specific links retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.assessment[2].items[2]",
+    "sourceText": "Check a pulse only when an organized rhythm is present or ROSC is otherwise suspected.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.treatmentSteps[4]",
+        "text": "Perform rhythm analysis every 2 minutes. Check a pulse only with an organized rhythm or other evidence of ROSC, and limit the check to 10 seconds."
+      }
+    ],
+    "reason": "Organized rhythm OR other ROSC evidence pulse-check restriction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.treatmentSteps[1]",
+    "sourceText": "Apply AED/monitor pads and analyze the rhythm. Resume CPR immediately after every rhythm check or shock.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.careModules[0].levels[0].actions[3]",
+        "text": "Apply the AED, deliver indicated shocks, and resume CPR immediately after every shock or rhythm analysis without an immediate pulse check."
+      }
+    ],
+    "reason": "AED/pads, shocks and immediate post-check/post-shock CPR retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.treatmentSteps[3]",
+    "sourceText": "For VF/pulseless VT, deliver an initial 200 J biphasic shock, verify the manufacturer-recommended setting, and use the same or higher energy for subsequent shocks according to the device.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.careModules[2].levels[0].actions[1]",
+        "text": "For VF/pulseless VT, deliver an initial 200 J biphasic shock, verify the manufacturer-recommended setting, and use the same or higher energy for subsequent shocks; follow AC-09."
+      }
+    ],
+    "reason": "Same initial 200 J, manufacturer check and subsequent same/higher setting retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.treatmentSteps[5]",
+    "sourceText": "Make one rapid IV attempt, then proceed to IO when IV access is unsuccessful, infeasible, or delayed. Proximal tibia is preferred; humeral head is an alternate only when tibial access is contraindicated.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.careModules[1].levels[0].actions[0]",
+        "text": "Perform all EMT actions and make one rapid IV attempt without interrupting CPR or delaying defibrillation."
+      },
+      {
+        "path": "protocols.ac-03.careModules[1].levels[0].actions[1]",
+        "text": "If IV access is unsuccessful, infeasible, or delayed, establish IO access; use proximal tibia preferentially and humeral head only when tibial access is contraindicated."
+      }
+    ],
+    "reason": "Same rapid IV, IO triggers, tibia preference and humeral restriction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.treatmentSteps[6]",
+    "sourceText": "Give epinephrine 1 mg IV/IO every 3–5 minutes. Give it as soon as possible for nonshockable rhythms and after the second shock for VF/pulseless VT.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.medications[0].dose",
+        "text": "1 mg IV/IO every 3–5 minutes"
+      },
+      {
+        "path": "protocols.ac-03.medications[0].notes[1]",
+        "text": "Give as soon as possible for asystole/PEA and after the second shock for VF/pulseless VT."
+      }
+    ],
+    "reason": "Same epinephrine interval and nonshockable/after-second-shock timing retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.treatmentSteps[7]",
+    "sourceText": "For persistent VF/pulseless VT after the third shock, give either amiodarone or lidocaine according to AC-09. Do not combine the two agents.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.careModules[2].levels[0].actions[2]",
+        "text": "After the third shock for persistent VF/pulseless VT, give either amiodarone or lidocaine according to AC-09; do not combine them."
+      }
+    ],
+    "reason": "Third-shock trigger, alternatives, AC-09 and no-combination instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.treatmentSteps[9]",
+    "sourceText": "After advanced-airway placement, give 1 breath every 6 seconds during continuous compressions and use continuous waveform capnography.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.flow[5].text",
+        "text": "Two-person BVM first. Do not interrupt compressions for airway placement. After an advanced airway, give 1 breath every 6 sec with continuous compressions and waveform capnography."
+      },
+      {
+        "path": "protocols.ac-03.careModules[2].levels[0].actions[4]",
+        "text": "Use continuous waveform capnography after any advanced airway and treat reversible causes with indication-specific therapy."
+      }
+    ],
+    "reason": "Continuous compressions, one breath per six seconds and continuous waveform retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.treatmentSteps[11]",
+    "sourceText": "Identify and treat reversible causes. Give fluids, calcium, sodium bicarbonate, magnesium, antidotes, or other therapies only for a specific suspected or confirmed cause.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.flow[6].text",
+        "text": "Actively evaluate and treat the Hs and Ts. Use cause-specific therapy rather than routine empiric arrest medications."
+      },
+      {
+        "path": "protocols.ac-03.warnings[2]",
+        "text": "Do not routinely administer calcium, sodium bicarbonate, magnesium, fluids, antidotes, or other cause-specific treatments without an appropriate indication."
+      }
+    ],
+    "reason": "Cause-directed reversible-cause treatment with all named nonroutine drugs/fluids retained."
+  },
+  {
+    "sourcePath": "protocols.ac-03.treatmentSteps[14]",
+    "sourceText": "If ROSC occurs, open AC-10. If resuscitation remains unsuccessful, open AC-12 and apply termination guidance when appropriate.",
+    "targets": [
+      {
+        "path": "protocols.ac-03.flow[7].text",
+        "text": "ROSC → open AC-10. No ROSC → continue rhythm pathway and evaluate AC-12 when appropriate. Favor on-scene resuscitation unless a defined special circumstance supports transport."
+      }
+    ],
+    "reason": "Same ROSC/continued unsuccessful rhythm and termination routing retained."
+  },
+  {
+    "sourcePath": "protocols.ac-04.overview[1]",
+    "sourceText": "Obtain and transmit a diagnostic-quality 12-lead ECG as early as possible, with a goal of within 10 minutes of first medical contact.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.assessment[1].items[0]",
+        "text": "Obtain a diagnostic-quality 12-lead ECG as early as possible, with a goal of within 10 minutes of first medical contact."
+      },
+      {
+        "path": "protocols.ac-04.assessment[1].items[1]",
+        "text": "Transmit the ECG to the anticipated receiving facility immediately and provide early notification when STEMI or acute coronary occlusion is suspected."
+      }
+    ],
+    "reason": "Diagnostic quality, ten-minute goal from first contact and immediate transmission retained."
+  },
+  {
+    "sourcePath": "protocols.ac-04.assessment[1].items[2]",
+    "sourceText": "Repeat the ECG for persistent or recurrent symptoms, a nondiagnostic initial tracing, or clinical deterioration.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.careModules[1].levels[0].actions[3]",
+        "text": "Repeat 12-lead ECGs for persistent or recurrent symptoms, a nondiagnostic initial tracing, or clinical deterioration."
+      }
+    ],
+    "reason": "Same symptom/nondiagnostic/deterioration triggers for repeat 12-lead retained."
+  },
+  {
+    "sourcePath": "protocols.ac-04.assessment[1].items[3]",
+    "sourceText": "Obtain V4R for suspected right-ventricular involvement or V7-V9 for suspected posterior infarction when indicated and feasible.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.careModules[2].levels[0].actions[1]",
+        "text": "Obtain V4R for suspected right-ventricular involvement or V7-V9 for suspected posterior infarction when indicated and feasible, without delaying transport."
+      }
+    ],
+    "reason": "Same V4R/V7-V9 indications and feasibility qualifier retained."
+  },
+  {
+    "sourcePath": "protocols.ac-04.treatmentSteps[0]",
+    "sourceText": "Administer aspirin 324 mg chewed as soon as acute coronary syndrome is suspected unless contraindicated. If the patient has already taken aspirin, give enough to complete a 324 mg loading dose.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.medications[0].dose",
+        "text": "324 mg PO chewed"
+      },
+      {
+        "path": "protocols.ac-04.medications[0].notes[0]",
+        "text": "EMT, AEMT, and Paramedic standing order for suspected acute coronary syndrome."
+      },
+      {
+        "path": "protocols.ac-04.medications[0].notes[1]",
+        "text": "If aspirin was taken before EMS arrival, give enough to complete a total loading dose of 324 mg."
+      },
+      {
+        "path": "protocols.ac-04.medications[0].notes[2]",
+        "text": "Withhold for true aspirin anaphylaxis, active major bleeding, or strong suspicion of acute aortic dissection."
+      },
+      {
+        "path": "protocols.ac-04.flow[2].title",
+        "text": "Immediate Treatment"
+      }
+    ],
+    "reason": "Aspirin indication, immediate treatment timing, loading completion, dose and contraindications retained."
+  },
+  {
+    "sourcePath": "protocols.ac-04.treatmentSteps[2]",
+    "sourceText": "Assist with prescribed nitroglycerin at the EMT level or administer agency nitroglycerin at the AEMT/Paramedic level: 0.4 mg SL every 5 minutes as needed, maximum three doses.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.medications[1].dose",
+        "text": "0.4 mg SL every 5 minutes as needed; maximum 3 doses"
+      },
+      {
+        "path": "protocols.ac-04.medications[1].notes[0]",
+        "text": "EMT may assist with the patient's prescribed nitroglycerin; AEMT and Paramedic may administer agency nitroglycerin."
+      }
+    ],
+    "reason": "Same provider-specific prescribed versus agency nitroglycerin, route/repeat/max retained."
+  },
+  {
+    "sourcePath": "protocols.ac-04.treatmentSteps[5]",
+    "sourceText": "For persistent significant ischemic discomfort after aspirin and appropriate nitroglycerin, a paramedic may give fentanyl 25–50 mcg IV/IO and repeat as needed to a maximum total dose of 100 mcg with continuous monitoring.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.medications[2].dose",
+        "text": "25–50 mcg IV/IO; repeat as needed to a maximum total dose of 100 mcg"
+      },
+      {
+        "path": "protocols.ac-04.medications[2].notes[0]",
+        "text": "Paramedic standing order for persistent significant ischemic discomfort after aspirin and appropriate nitroglycerin."
+      },
+      {
+        "path": "protocols.ac-04.medications[2].notes[1]",
+        "text": "Use continuous cardiac, respiratory, SpO₂, and blood-pressure monitoring."
+      }
+    ],
+    "reason": "Same refractory ischemic-pain condition, fentanyl dose/repeat/max, provider and monitoring retained."
+  },
+  {
+    "sourcePath": "protocols.ac-04.treatmentSteps[6]",
+    "sourceText": "Immediately notify the anticipated receiving facility and transmit the ECG when STEMI or acute coronary occlusion is suspected.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.assessment[1].items[1]",
+        "text": "Transmit the ECG to the anticipated receiving facility immediately and provide early notification when STEMI or acute coronary occlusion is suspected."
+      }
+    ],
+    "reason": "Identical early facility notification and transmission retained."
+  },
+  {
+    "sourcePath": "protocols.ac-04.treatmentSteps[8]",
+    "sourceText": "Consider Covenant Health Air when appropriate and reasonably expected to reduce time to reperfusion-capable care.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.flow[6].text",
+        "text": "Activate when appropriate and expected to reduce time to reperfusion-capable care • do not delay ground movement or rendezvous"
+      }
+    ],
+    "reason": "Same appropriate air use and expected reduction in reperfusion-care time retained."
+  },
+  {
+    "sourcePath": "protocols.ac-04.treatmentSteps[10]",
+    "sourceText": "Treat dysrhythmia, acute pulmonary edema, shock, or cardiac arrest under the corresponding linked protocol.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.careModules[2].levels[0].actions[4]",
+        "text": "Treat dysrhythmia, acute pulmonary edema, shock, or cardiac arrest under the corresponding linked protocol."
+      }
+    ],
+    "reason": "Exact duplicate complication-routing instruction."
+  },
+  {
+    "sourcePath": "protocols.ac-04.warnings[1]",
+    "sourceText": "Do not use a new or presumed-new left bundle branch block alone as an automatic STEMI criterion.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.assessment[4].items[2]",
+        "text": "New or presumed-new left bundle branch block alone is not an automatic STEMI criterion."
+      }
+    ],
+    "reason": "Identical LBBB alone not automatic STEMI safeguard retained."
+  },
+  {
+    "sourcePath": "protocols.ac-04.warnings[2]",
+    "sourceText": "Withhold nitroglycerin for SBP below 110 mmHg, shock, suspected right-ventricular infarction or preload dependence, and prohibited recent PDE-5 inhibitor use.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.treatmentSteps[3]",
+        "text": "Withhold nitroglycerin when SBP is below 110 mmHg, shock or preload dependence is present, right-ventricular infarction is suspected, or the patient used avanafil within 12 hours, sildenafil or vardenafil within 24 hours, or tadalafil within 48 hours."
+      }
+    ],
+    "reason": "All nitroglycerin exclusion conditions retained with more precise PDE-5 time windows."
+  },
+  {
+    "sourcePath": "protocols.ac-04.specialPopulations[1].items[1]",
+    "sourceText": "Withhold nitroglycerin when right-ventricular infarction or preload dependence is suspected.",
+    "targets": [
+      {
+        "path": "protocols.ac-04.treatmentSteps[3]",
+        "text": "Withhold nitroglycerin when SBP is below 110 mmHg, shock or preload dependence is present, right-ventricular infarction is suspected, or the patient used avanafil within 12 hours, sildenafil or vardenafil within 24 hours, or tadalafil within 48 hours."
+      }
+    ],
+    "reason": "RV infarction/preload exclusion retained in full nitroglycerin instruction."
+  },
+  {
+    "sourcePath": "protocols.ac-06.overview[1]",
+    "sourceText": "Determine whether the tachyarrhythmia is causing instability or represents compensation for another problem before attempting rhythm conversion.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.warnings[0]",
+        "text": "Instability must be caused by the tachycardia rather than merely associated with a fast heart rate."
+      },
+      {
+        "path": "protocols.ac-06.flow[1].text",
+        "text": "Treat hypoxia, pain, fever, dehydration, hemorrhage, sepsis, stimulant exposure, or another underlying cause"
+      },
+      {
+        "path": "protocols.ac-06.assessment[1].items[5]",
+        "text": "Confirm that the rhythm is causing instability rather than representing a compensatory response to another condition such as sepsis, hemorrhage, hypoxia, or pain."
+      }
+    ],
+    "reason": "Causal instability versus compensation distinction and treatment of underlying causes retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.indications[0]",
+    "sourceText": "Narrow-complex tachycardia with a pulse in a patient 16 years of age or older.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.overview[0]",
+        "text": "Adult pathway for patients 16 years of age and older with a pulse and a narrow-complex tachycardia, generally defined by QRS duration under 0.12 seconds."
+      }
+    ],
+    "reason": "Adult age and narrow-complex pulse eligibility retained, with QRS threshold."
+  },
+  {
+    "sourcePath": "protocols.ac-06.assessment[1].items[0]",
+    "sourceText": "Hypotension.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.flow[2].text",
+        "text": "Hypotension • acute altered mental status • shock • ischemic chest discomfort • acute heart failure"
+      }
+    ],
+    "reason": "Hypotension instability finding retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.assessment[1].items[1]",
+    "sourceText": "Acutely altered mental status.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.flow[2].text",
+        "text": "Hypotension • acute altered mental status • shock • ischemic chest discomfort • acute heart failure"
+      }
+    ],
+    "reason": "Acute altered mental status instability finding retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.assessment[1].items[2]",
+    "sourceText": "Signs of shock or poor perfusion.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.flow[2].text",
+        "text": "Hypotension • acute altered mental status • shock • ischemic chest discomfort • acute heart failure"
+      }
+    ],
+    "reason": "Shock instability finding retained; poor perfusion is also in AEMT reassessment."
+  },
+  {
+    "sourcePath": "protocols.ac-06.assessment[1].items[3]",
+    "sourceText": "Ischemic chest discomfort.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.flow[2].text",
+        "text": "Hypotension • acute altered mental status • shock • ischemic chest discomfort • acute heart failure"
+      }
+    ],
+    "reason": "Ischemic chest discomfort instability finding retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.assessment[1].items[4]",
+    "sourceText": "Acute heart failure.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.flow[2].text",
+        "text": "Hypotension • acute altered mental status • shock • ischemic chest discomfort • acute heart failure"
+      }
+    ],
+    "reason": "Acute heart failure instability finding retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[0]",
+    "sourceText": "Treat hypoxia, pain, fever, dehydration, hemorrhage, sepsis, stimulant exposure, and other reversible causes. Do not treat sinus tachycardia with adenosine or cardioversion.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.careModules[0].levels[0].actions[2]",
+        "text": "Identify and treat likely causes of sinus tachycardia, including hypoxia, pain, fever, dehydration, hemorrhage, sepsis, and stimulant exposure."
+      },
+      {
+        "path": "protocols.ac-06.contraindications[0]",
+        "text": "Do not administer adenosine or perform cardioversion for sinus tachycardia; treat the underlying cause."
+      }
+    ],
+    "reason": "All listed reversible causes and prohibition on sinus-tachycardia adenosine/cardioversion retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[1]",
+    "sourceText": "For instability attributable to the tachycardia, perform immediate synchronized cardioversion: 100 J for regular narrow-complex tachycardia and 200 J for atrial fibrillation or atrial flutter.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.careModules[2].levels[0].actions[1]",
+        "text": "For unstable regular narrow-complex tachycardia, cardiovert at 100 J. For unstable atrial fibrillation or flutter, cardiovert at 200 J."
+      },
+      {
+        "path": "protocols.ac-06.careModules[0].levels[0].actions[4]",
+        "text": "Immediately request paramedic intervention and prepare for synchronized cardioversion when instability is attributable to the tachycardia."
+      }
+    ],
+    "reason": "Same unstable-rhythm energies and immediate escalation for causative instability retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[2]",
+    "sourceText": "Confirm synchronization markers before every shock and resynchronize after every attempt. Increase energy after an unsuccessful synchronized shock.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.careModules[2].levels[0].actions[2]",
+        "text": "Confirm synchronization markers before every shock and resynchronize after every cardioversion attempt; increase energy after an unsuccessful shock."
+      }
+    ],
+    "reason": "Exact synchronization/re-synchronization and energy-escalation instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[4]",
+    "sourceText": "Sedate whenever feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but do not delay cardioversion.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.careModules[2].levels[0].actions[3]",
+        "text": "Sedate whenever feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but do not delay cardioversion."
+      }
+    ],
+    "reason": "Exact midazolam dose and non-delay instruction retained under Paramedic authority."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[5]",
+    "sourceText": "For stable regular narrow-complex tachycardia, perform a modified Valsalva maneuver. Do not perform carotid massage.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.careModules[0].levels[0].actions[3]",
+        "text": "For a stable, regular narrow-complex rhythm, coach a modified Valsalva maneuver. Do not perform carotid massage."
+      }
+    ],
+    "reason": "Same stable regular rhythm modified Valsalva and no-carotid-massage instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[7]",
+    "sourceText": "If the rhythm persists after 1–2 minutes, give adenosine 12 mg rapid IV/IO with an immediate flush; may repeat the 12 mg dose once if needed. Record the rhythm continuously during administration.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.medications[0].dose",
+        "text": "First dose 6 mg rapid IV/IO push with immediate flush; then 12 mg after 1–2 minutes if needed; may repeat the 12 mg dose once"
+      },
+      {
+        "path": "protocols.ac-06.medications[0].notes[1]",
+        "text": "Use the most proximal practical access and record the rhythm continuously during administration."
+      }
+    ],
+    "reason": "Same repeat interval/dose/limit, immediate flush and continuous recording retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[8]",
+    "sourceText": "Do not give adenosine for an irregular rhythm. Contact Medical Control before using a reduced dose for a heart-transplant patient or administration through central venous access.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.medications[0].notes[2]",
+        "text": "Do not use for sinus tachycardia, an irregular rhythm, unstable wide-complex tachycardia, polymorphic tachycardia, or active severe bronchospasm."
+      },
+      {
+        "path": "protocols.ac-06.medications[0].notes[3]",
+        "text": "Contact Medical Control before using a reduced dose for a heart-transplant patient or administration through central venous access."
+      }
+    ],
+    "reason": "Irregular rhythm exclusion and MC-before-reduced-dose transplant/central-access safeguard retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[9]",
+    "sourceText": "For stable atrial fibrillation/flutter causing significant symptoms with SBP of at least 110 mmHg, give diltiazem 0.25 mg/kg IV/IO (maximum 20 mg); if needed, repeat 0.35 mg/kg IV/IO after 15 minutes (maximum 20 mg) when no contraindication is present.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.careModules[2].levels[0].actions[5]",
+        "text": "For significantly symptomatic stable atrial fibrillation/flutter with SBP of at least 110 mmHg and no contraindication, give diltiazem 0.25 mg/kg IV/IO (maximum 20 mg); if needed, repeat 0.35 mg/kg IV/IO after 15 minutes (maximum 20 mg)."
+      }
+    ],
+    "reason": "Same symptomatic stable AF/flutter, SBP eligibility, dose/max/interval and contraindication guard retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[10]",
+    "sourceText": "For prolonged transport, a diltiazem infusion of 5–10 mg/hr requires Medical Control.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.medications[1].notes[1]",
+        "text": "For prolonged transport, an infusion of 5–10 mg/hr requires Medical Control."
+      }
+    ],
+    "reason": "Exact prolonged-transport infusion rate and MC requirement retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[11]",
+    "sourceText": "During the approved Claiborne Cardizem shortage only, when diltiazem is unavailable and the same AF/flutter eligibility criteria are met, give metoprolol 2.5–5 mg IV push over 1 minute every 10 minutes; maximum three doses or 15 mg. Reassess blood pressure, heart rate, rhythm, perfusion, respiratory status, and symptoms before every dose.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.careModules[2].levels[0].actions[6]",
+        "text": "During the approved Claiborne Cardizem shortage only, when diltiazem is unavailable and the same AF/flutter eligibility criteria are met, give metoprolol 2.5–5 mg IV push over 1 minute every 10 minutes; maximum three doses or 15 mg. Reassess blood pressure, heart rate, rhythm, perfusion, respiratory status, and symptoms before every dose."
+      }
+    ],
+    "reason": "Exact duplicate shortage-only metoprolol instructions and before-each-dose reassessment retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[12]",
+    "sourceText": "Do not independently combine or sequence diltiazem and metoprolol. Contact Medical Control for inadequate response, intolerance, or uncertainty; do not use amiodarone as an AV-nodal substitute for stable AF/flutter with RVR.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.careModules[2].levels[0].actions[7]",
+        "text": "Do not independently combine or sequence diltiazem and metoprolol. Contact Medical Control for inadequate response, intolerance, or uncertainty; do not use amiodarone as an AV-nodal substitute for stable AF/flutter with RVR."
+      }
+    ],
+    "reason": "Exact no-independent-combination/sequence, MC response and no-amiodarone-substitution instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.treatmentSteps[13]",
+    "sourceText": "Do not attempt elective rhythm conversion for stable atrial fibrillation/flutter of unknown duration.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.clinicalPearls[4]",
+        "text": "Stable atrial fibrillation/flutter of unknown duration should receive rate control rather than elective prehospital rhythm conversion."
+      }
+    ],
+    "reason": "Same no-elective-conversion for stable unknown-duration AF/flutter, with positive rate-control direction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.warnings[1]",
+    "sourceText": "Do not use adenosine or cardioversion to treat sinus tachycardia.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.contraindications[0]",
+        "text": "Do not administer adenosine or perform cardioversion for sinus tachycardia; treat the underlying cause."
+      }
+    ],
+    "reason": "Same sinus-tachycardia prohibition retained."
+  },
+  {
+    "sourcePath": "protocols.ac-06.warnings[2]",
+    "sourceText": "Do not perform carotid massage in the prehospital setting.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.careModules[0].levels[0].actions[3]",
+        "text": "For a stable, regular narrow-complex rhythm, coach a modified Valsalva maneuver. Do not perform carotid massage."
+      }
+    ],
+    "reason": "Same no-carotid-massage prohibition retained at BLS intervention."
+  },
+  {
+    "sourcePath": "protocols.ac-06.warnings[3]",
+    "sourceText": "Adenosine is contraindicated in active severe bronchospasm and must not be given for an irregular rhythm.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.medications[0].notes[2]",
+        "text": "Do not use for sinus tachycardia, an irregular rhythm, unstable wide-complex tachycardia, polymorphic tachycardia, or active severe bronchospasm."
+      }
+    ],
+    "reason": "Same severe bronchospasm and irregular-rhythm exclusions retained with adenosine row."
+  },
+  {
+    "sourcePath": "protocols.ac-06.warnings[9]",
+    "sourceText": "Sedation must not delay cardioversion when instability is attributable to the rhythm.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.medications[3].notes[1]",
+        "text": "Do not delay cardioversion in an unstable patient."
+      }
+    ],
+    "reason": "Same non-delay cardioversion safeguard retained with procedural sedation."
+  },
+  {
+    "sourcePath": "protocols.ac-06.clinicalPearls[0]",
+    "sourceText": "A tachyarrhythmia causing instability is often at least 150/min, but rate alone does not determine treatment.",
+    "targets": [
+      {
+        "path": "protocols.ac-06.overview[2]",
+        "text": "A tachyarrhythmia causing instability is typically at least 150/min, but treatment is determined by the patient's clinical condition rather than rate alone."
+      }
+    ],
+    "reason": "Same typical 150/min and condition-not-rate distinction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-05.overview[0]",
+    "sourceText": "Adult pathway for patients 16 years of age and older with suspected cardiogenic pulmonary edema or acute decompensated heart failure.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.indications[0]",
+        "text": "Suspected cardiogenic pulmonary edema or acute decompensated heart failure in a patient 16 years of age or older."
+      }
+    ],
+    "reason": "Same age and disease eligibility retained."
+  },
+  {
+    "sourcePath": "protocols.ac-05.treatmentSteps[0]",
+    "sourceText": "Position upright unless hypotensive and begin continuous cardiac monitoring, SpO₂, frequent blood-pressure measurement, and focused reassessment.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.careModules[0].levels[0].actions[0]",
+        "text": "Perform the primary assessment; position upright unless hypotensive and assess respiratory effort, lung sounds, perfusion, mental status, SpO₂, and complete vital signs."
+      },
+      {
+        "path": "protocols.ac-05.assessment[1].items[1]",
+        "text": "Obtain continuous cardiac monitoring, SpO₂, frequent blood pressures, and two complete vital-sign sets when feasible."
+      }
+    ],
+    "reason": "Upright-unless-hypotensive positioning, clinical assessment, continuous monitor/SpO2 and frequent BP retained."
+  },
+  {
+    "sourcePath": "protocols.ac-05.treatmentSteps[1]",
+    "sourceText": "Titrate oxygen to SpO₂ 92–96%; use 88–92% for known chronic hypercapnic respiratory failure unless severe hypoxemia requires a higher target.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.careModules[0].levels[0].actions[3]",
+        "text": "Titrate oxygen to SpO₂ 92–96%; use 88–92% for known chronic hypercapnic respiratory failure unless severe hypoxemia requires a higher target."
+      }
+    ],
+    "reason": "Exact oxygen targets and chronic-hypercapnia/severe-hypoxemia exception retained."
+  },
+  {
+    "sourcePath": "protocols.ac-05.treatmentSteps[2]",
+    "sourceText": "Start CPAP early for moderate-to-severe respiratory distress when the patient is breathing spontaneously, can protect the airway, can tolerate the mask, and has SBP of at least 100 mmHg.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.careModules[0].levels[0].actions[2]",
+        "text": "Start CPAP early for moderate-to-severe distress when the patient is breathing spontaneously, can protect the airway, can tolerate the mask, and has SBP of at least 100 mmHg."
+      }
+    ],
+    "reason": "Exact early CPAP indication and all eligibility conditions retained."
+  },
+  {
+    "sourcePath": "protocols.ac-05.treatmentSteps[4]",
+    "sourceText": "Assist with prescribed nitroglycerin at the EMT level or administer agency nitroglycerin at the AEMT/Paramedic level: 0.4 mg SL every 5 minutes as needed, maximum three doses.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.medications[0].dose",
+        "text": "0.4 mg SL every 5 minutes as needed; maximum 3 doses"
+      },
+      {
+        "path": "protocols.ac-05.medications[0].notes[0]",
+        "text": "EMT may assist with the patient's prescribed nitroglycerin; AEMT and Paramedic may administer agency nitroglycerin."
+      }
+    ],
+    "reason": "Same nitrate route/interval/max and provider/prescribed-versus-agency authority retained."
+  },
+  {
+    "sourcePath": "protocols.ac-05.treatmentSteps[5]",
+    "sourceText": "Confirm SBP of at least 110 mmHg before every nitroglycerin dose. Withhold for shock, suspected RV infarction or preload dependence, avanafil within 12 hours, sildenafil or vardenafil within 24 hours, or tadalafil within 48 hours.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.medications[0].notes[1]",
+        "text": "Confirm SBP of at least 110 mmHg before every dose."
+      },
+      {
+        "path": "protocols.ac-05.medications[0].notes[2]",
+        "text": "Withhold for shock, suspected right-ventricular infarction or preload dependence, avanafil within 12 hours, sildenafil or vardenafil within 24 hours, or tadalafil within 48 hours."
+      }
+    ],
+    "reason": "Same every-dose SBP check and all exclusions/PDE-5 time windows retained."
+  },
+  {
+    "sourcePath": "protocols.ac-05.treatmentSteps[8]",
+    "sourceText": "Administer albuterol only when true bronchospasm is suspected; wheezing alone may be caused by pulmonary edema.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.medications[2].dose",
+        "text": "Use the approved respiratory dose only when true bronchospasm is suspected"
+      },
+      {
+        "path": "protocols.ac-05.medications[2].notes[0]",
+        "text": "Do not administer solely because wheezing is present; pulmonary edema may produce cardiac wheezing."
+      }
+    ],
+    "reason": "True bronchospasm-only albuterol and wheeze-alone exclusion retained."
+  },
+  {
+    "sourcePath": "protocols.ac-05.treatmentSteps[10]",
+    "sourceText": "For persistent cardiogenic shock, a paramedic may start norepinephrine at 0.1 mcg/kg/min IV/IO and titrate to MAP of at least 65 mmHg or SBP of at least 90 mmHg; maximum 2 mcg/kg/min.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.medications[1].dose",
+        "text": "Start 0.1 mcg/kg/min IV/IO; titrate to MAP ≥65 mmHg or SBP ≥90 mmHg; maximum 2 mcg/kg/min"
+      },
+      {
+        "path": "protocols.ac-05.medications[1].notes[0]",
+        "text": "Paramedic standing order for persistent cardiogenic shock."
+      }
+    ],
+    "reason": "Persistent cardiogenic shock, Paramedic authority and full norepinephrine dose/targets/max retained."
+  },
+  {
+    "sourcePath": "protocols.ac-05.treatmentSteps[11]",
+    "sourceText": "Prepare for advanced airway management when CPAP fails, ventilation is inadequate, mental status declines, or the airway cannot be protected.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.careModules[2].levels[0].actions[4]",
+        "text": "Prepare for drug-assisted airway management when CPAP fails, ventilation is inadequate, mental status declines, or the airway cannot be protected; anticipate peri-intubation hypotension."
+      }
+    ],
+    "reason": "Same airway escalation triggers, with peri-intubation risk retained."
+  },
+  {
+    "sourcePath": "protocols.ac-05.warnings[3]",
+    "sourceText": "Withhold nitroglycerin for SBP below 110 mmHg, shock, suspected right-ventricular infarction or preload dependence, and prohibited recent PDE-5 inhibitor use.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.medications[0].notes[1]",
+        "text": "Confirm SBP of at least 110 mmHg before every dose."
+      },
+      {
+        "path": "protocols.ac-05.medications[0].notes[2]",
+        "text": "Withhold for shock, suspected right-ventricular infarction or preload dependence, avanafil within 12 hours, sildenafil or vardenafil within 24 hours, or tadalafil within 48 hours."
+      }
+    ],
+    "reason": "All nitrate exclusions retained with precise PDE-5 times."
+  },
+  {
+    "sourcePath": "protocols.ac-05.warnings[4]",
+    "sourceText": "Do not routinely administer a diuretic, opioid, or IV fluid bolus under AC-05.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.treatmentSteps[7]",
+        "text": "Do not routinely administer furosemide, another diuretic, morphine, another opioid, or an IV fluid bolus under this protocol."
+      }
+    ],
+    "reason": "Same excluded diuretic/opioid/fluid classes with named examples retained."
+  },
+  {
+    "sourcePath": "protocols.ac-05.warnings[5]",
+    "sourceText": "Norepinephrine requires continuous cardiac monitoring, frequent blood-pressure measurement, and IV/IO-site assessment.",
+    "targets": [
+      {
+        "path": "protocols.ac-05.medications[1].notes[1]",
+        "text": "Continuous cardiac monitoring, frequent blood-pressure assessment, and careful IV/IO-site surveillance are required."
+      }
+    ],
+    "reason": "Same norepinephrine continuous monitoring, frequent BP and site-surveillance retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.overview[2]",
+    "sourceText": "Claiborne EMS uses an initial synchronized biphasic energy of 100 J for monomorphic ventricular tachycardia with a pulse.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.careModules[2].levels[0].actions[1]",
+        "text": "For unstable monomorphic VT with a pulse, perform synchronized cardioversion at 100 J biphasic and increase energy if unsuccessful."
+      }
+    ],
+    "reason": "Same initial synchronized 100 J biphasic energy for monomorphic VT with pulse retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.indications[0]",
+    "sourceText": "Regular monomorphic wide-complex tachycardia with a pulse in a patient 16 years of age or older.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.overview[0]",
+        "text": "Adult pathway for patients 16 years of age and older with a pulse and a regular monomorphic wide-complex tachycardia, generally QRS duration of at least 0.12 seconds."
+      }
+    ],
+    "reason": "Same adult pulse/regular monomorphic wide-complex eligibility retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.assessment[0].items[0]",
+    "sourceText": "Maintain the airway, assist ventilation as needed, and give oxygen only for hypoxemia.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.careModules[0].levels[0].actions[0]",
+        "text": "Perform the primary assessment, confirm a pulse, support airway and ventilation, and give oxygen only when hypoxemic."
+      }
+    ],
+    "reason": "Same airway/ventilation/hypoxemia-only oxygen instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.treatmentSteps[2]",
+    "sourceText": "Confirm synchronization markers before every shock and resynchronize after every attempt.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.careModules[2].levels[0].actions[2]",
+        "text": "Confirm synchronization markers before every shock and resynchronize after every attempt."
+      }
+    ],
+    "reason": "Exact synchronization/re-synchronization instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.treatmentSteps[4]",
+    "sourceText": "Sedate whenever feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but do not delay cardioversion.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.careModules[2].levels[0].actions[3]",
+        "text": "Sedate whenever feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but do not delay cardioversion."
+      }
+    ],
+    "reason": "Exact sedation dose and non-delay safeguard retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.treatmentSteps[5]",
+    "sourceText": "For stable regular monomorphic wide-complex tachycardia of uncertain origin, consider adenosine 6 mg rapid IV/IO with immediate flush; then 12 mg after 1–2 minutes if needed; may repeat the 12 mg dose once.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.careModules[2].levels[0].actions[4]",
+        "text": "For a stable regular monomorphic wide-complex rhythm of uncertain origin, consider adenosine 6 mg rapid IV/IO with immediate flush, followed by 12 mg after 1–2 minutes if needed; may repeat the 12 mg dose once."
+      }
+    ],
+    "reason": "Same stable regular monomorphic uncertain-origin eligibility and full adenosine regimen retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.treatmentSteps[6]",
+    "sourceText": "Do not give adenosine for unstable, irregular, or polymorphic rhythm or active severe bronchospasm.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.medications[0].notes[2]",
+        "text": "Do not use for unstable, irregular, or polymorphic rhythm or active severe bronchospasm."
+      }
+    ],
+    "reason": "Same unstable/irregular/polymorphic/bronchospasm exclusions retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.treatmentSteps[7]",
+    "sourceText": "For stable monomorphic VT, give amiodarone 150 mg IV/IO over 10 minutes. Stop the infusion and cardiovert immediately if instability develops.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.careModules[2].levels[0].actions[5]",
+        "text": "For stable monomorphic VT, give amiodarone 150 mg IV/IO over 10 minutes; stop the infusion and cardiovert immediately if instability develops."
+      }
+    ],
+    "reason": "Same amiodarone dose/rate and stop/cardiovert-if-unstable instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.treatmentSteps[9]",
+    "sourceText": "After conversion, if VT recurs, repeat amiodarone 150 mg over 10 minutes once, then begin maintenance infusion at 1 mg/min.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.medications[1].notes[2]",
+        "text": "After conversion, if VT recurs, repeat 150 mg over 10 minutes once and begin maintenance infusion at 1 mg/min."
+      }
+    ],
+    "reason": "Same recurrence-after-conversion trigger, once-only repeat and maintenance rate retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.warnings[0]",
+    "sourceText": "Treat an uncertain wide-complex tachycardia as ventricular tachycardia.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.careModules[0].levels[0].actions[2]",
+        "text": "Treat an uncertain wide-complex tachycardia as ventricular tachycardia and immediately request paramedic intervention."
+      }
+    ],
+    "reason": "Same presume-VT instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.warnings[1]",
+    "sourceText": "Do not administer diltiazem or verapamil for undifferentiated wide-complex tachycardia.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.contraindications[1]",
+        "text": "Do not administer diltiazem, verapamil, metoprolol, or another AV-nodal blocker for an undifferentiated wide-complex rhythm."
+      }
+    ],
+    "reason": "Same diltiazem/verapamil prohibition retained within broader AV-nodal exclusion."
+  },
+  {
+    "sourcePath": "protocols.ac-07.warnings[2]",
+    "sourceText": "Adenosine is permitted only for stable regular monomorphic rhythm and is contraindicated in active severe bronchospasm.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.medications[0].notes[0]",
+        "text": "Paramedic standing order only for stable regular monomorphic wide-complex tachycardia of uncertain origin."
+      },
+      {
+        "path": "protocols.ac-07.medications[0].notes[2]",
+        "text": "Do not use for unstable, irregular, or polymorphic rhythm or active severe bronchospasm."
+      }
+    ],
+    "reason": "Stable-regular-monomorphic-only and severe bronchospasm prohibition retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.warnings[4]",
+    "sourceText": "Do not use amiodarone for torsades de pointes or a clearly prolonged-QT polymorphic rhythm.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.contraindications[2]",
+        "text": "Do not administer amiodarone for suspected torsades de pointes, a clearly prolonged-QT polymorphic rhythm, or suspected pre-excited atrial fibrillation/flutter."
+      }
+    ],
+    "reason": "Same torsades/prolonged-QT amiodarone prohibition retained."
+  },
+  {
+    "sourcePath": "protocols.ac-07.warnings[5]",
+    "sourceText": "Do not stack antiarrhythmics without explicit Medical Control direction.",
+    "targets": [
+      {
+        "path": "protocols.ac-07.medications[1].notes[3]",
+        "text": "Do not combine with another antiarrhythmic without Medical Control."
+      }
+    ],
+    "reason": "Same no-combination without Medical Control safeguard retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.overview[1]",
+    "sourceText": "All sustained polymorphic ventricular tachycardia is electrically unstable and requires immediate unsynchronized defibrillation.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.flow[1].text",
+        "text": "Treat as unstable regardless of apparent perfusion"
+      },
+      {
+        "path": "protocols.ac-08.careModules[2].levels[0].actions[1]",
+        "text": "For sustained polymorphic VT, immediately deliver an unsynchronized biphasic shock at 200 J; confirm the manufacturer-recommended setting and escalate according to the device."
+      }
+    ],
+    "reason": "All sustained polymorphic VT unstable and immediate unsynchronized shock retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.overview[2]",
+    "sourceText": "Claiborne EMS uses an initial unsynchronized biphasic shock of 200 J; confirm the manufacturer-recommended setting and escalate according to the device.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.careModules[2].levels[0].actions[1]",
+        "text": "For sustained polymorphic VT, immediately deliver an unsynchronized biphasic shock at 200 J; confirm the manufacturer-recommended setting and escalate according to the device."
+      }
+    ],
+    "reason": "Same initial 200 J biphasic, manufacturer check and device escalation retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.assessment[0].items[0]",
+    "sourceText": "Confirm the presence of a pulse and identify beat-to-beat variation in QRS morphology.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.careModules[0].levels[0].actions[0]",
+        "text": "Perform the primary assessment, confirm a pulse, support airway and ventilation, and give oxygen only when hypoxemic."
+      },
+      {
+        "path": "protocols.ac-08.careModules[0].levels[0].actions[1]",
+        "text": "Recognize polymorphic wide-complex tachycardia by beat-to-beat variation in QRS morphology and immediately request paramedic intervention."
+      }
+    ],
+    "reason": "Pulse confirmation and beat-to-beat QRS variation retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.assessment[0].items[1]",
+    "sourceText": "Treat sustained polymorphic VT as electrically and hemodynamically unstable even when a pulse or transient perfusion is present.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.flow[1].text",
+        "text": "Treat as unstable regardless of apparent perfusion"
+      }
+    ],
+    "reason": "Same unstable regardless of apparent perfusion instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.assessment[0].items[3]",
+    "sourceText": "If no pulse is present or the pulse is lost, begin CPR and immediately open AC-09.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.flow[3].text",
+        "text": "Begin CPR immediately and open AC-09 VF / Pulseless VT"
+      }
+    ],
+    "reason": "Same lost/no-pulse CPR and AC-09 routing retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.treatmentSteps[0]",
+    "sourceText": "Apply defibrillation pads immediately and treat all sustained polymorphic VT as unstable.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.flow[0].text",
+        "text": "Beat-to-beat QRS variation • pads immediately • airway/ventilation • oxygen if hypoxemic • do not delay shock"
+      },
+      {
+        "path": "protocols.ac-08.flow[1].text",
+        "text": "Treat as unstable regardless of apparent perfusion"
+      }
+    ],
+    "reason": "Immediate pads and unstable sustained-rhythm instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.treatmentSteps[1]",
+    "sourceText": "Deliver an immediate unsynchronized biphasic shock at 200 J; confirm the manufacturer-recommended setting and escalate according to the device.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.careModules[2].levels[0].actions[1]",
+        "text": "For sustained polymorphic VT, immediately deliver an unsynchronized biphasic shock at 200 J; confirm the manufacturer-recommended setting and escalate according to the device."
+      }
+    ],
+    "reason": "Exact shock instruction retained under Paramedic authority."
+  },
+  {
+    "sourcePath": "protocols.ac-08.treatmentSteps[2]",
+    "sourceText": "Never attempt synchronized cardioversion for polymorphic VT.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.careModules[2].levels[0].actions[2]",
+        "text": "Never attempt synchronized cardioversion for polymorphic VT because reliable synchronization is not possible."
+      }
+    ],
+    "reason": "Same no-synchronization rule with explanation retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.treatmentSteps[4]",
+    "sourceText": "If the patient becomes pulseless, begin CPR immediately and open AC-09 VF / Pulseless VT.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.flow[3].text",
+        "text": "Begin CPR immediately and open AC-09 VF / Pulseless VT"
+      }
+    ],
+    "reason": "Same pulse-loss CPR and AC-09 route retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.treatmentSteps[5]",
+    "sourceText": "If the patient is conscious, sedate when immediately feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but never delay defibrillation.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.careModules[2].levels[0].actions[3]",
+        "text": "If the patient is conscious, sedate when immediately feasible with midazolam 2–5 mg IV/IO using the smallest effective dose, but never delay defibrillation."
+      }
+    ],
+    "reason": "Exact conscious-patient sedation dose/condition/non-delay instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.treatmentSteps[6]",
+    "sourceText": "After rhythm termination, obtain a rhythm strip and 12-lead ECG and determine whether the baseline QT is prolonged.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.careModules[0].levels[0].actions[4]",
+        "text": "After rhythm termination, obtain a rhythm strip and 12-lead ECG when trained and equipped without delaying transport."
+      },
+      {
+        "path": "protocols.ac-08.careModules[2].levels[0].actions[4]",
+        "text": "After rhythm termination, determine whether the baseline QT is prolonged using the preceding or post-conversion rhythm strip/12-lead ECG."
+      }
+    ],
+    "reason": "Post-termination ECG acquisition and baseline QT classification retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.treatmentSteps[7]",
+    "sourceText": "For recurrent long-QT polymorphic VT/torsades, give magnesium sulfate 1–2 g IV over 15 minutes; may repeat once for continued recurrence.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.careModules[2].levels[0].actions[5]",
+        "text": "For recurrent long-QT polymorphic VT/torsades, give magnesium sulfate 1–2 g IV over 15 minutes; may repeat once for continued recurrence."
+      }
+    ],
+    "reason": "Exact recurrent torsades magnesium dose/rate/once-repeat instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.treatmentSteps[8]",
+    "sourceText": "Discontinue suspected QT-prolonging medications.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.assessment[2].items[0]",
+        "text": "Review prescribed and nonprescribed medications for QT prolongation and discontinue suspected QT-prolonging agents."
+      }
+    ],
+    "reason": "Exact discontinue-suspected-QT-prolonging-medications instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.treatmentSteps[9]",
+    "sourceText": "For recurrent torsades associated with bradycardia or pauses, contact Medical Control for overdrive pacing.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.specialPopulations[0].items[2]",
+        "text": "For recurrent pause-dependent torsades or associated bradycardia, contact Medical Control for overdrive pacing."
+      }
+    ],
+    "reason": "Same pause/bradycardia recurrent torsades MC-overdrive-pacing instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.treatmentSteps[10]",
+    "sourceText": "For recurrent polymorphic VT with a normal QT, treat suspected myocardial ischemia and give lidocaine 100 mg IV/IO as the initial dose.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.careModules[2].levels[0].actions[6]",
+        "text": "For recurrent polymorphic VT with a normal QT, treat suspected myocardial ischemia and give lidocaine 100 mg IV/IO as the initial dose."
+      }
+    ],
+    "reason": "Exact normal-QT recurrence lidocaine and ischemia treatment retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.warnings[0]",
+    "sourceText": "All sustained polymorphic VT is unstable and requires immediate unsynchronized defibrillation.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.flow[1].text",
+        "text": "Treat as unstable regardless of apparent perfusion"
+      },
+      {
+        "path": "protocols.ac-08.careModules[2].levels[0].actions[1]",
+        "text": "For sustained polymorphic VT, immediately deliver an unsynchronized biphasic shock at 200 J; confirm the manufacturer-recommended setting and escalate according to the device."
+      }
+    ],
+    "reason": "Sustained polymorphic instability and immediate unsynchronized treatment retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.warnings[1]",
+    "sourceText": "Do not attempt synchronized cardioversion; polymorphic QRS complexes cannot be synchronized reliably.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.careModules[2].levels[0].actions[2]",
+        "text": "Never attempt synchronized cardioversion for polymorphic VT because reliable synchronization is not possible."
+      }
+    ],
+    "reason": "Exact no-synchronization rule and unreliable synchronization explanation retained."
+  },
+  {
+    "sourcePath": "protocols.ac-08.warnings[5]",
+    "sourceText": "Routine magnesium is not indicated when the QT interval is normal.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.medications[0].notes[2]",
+        "text": "Do not administer routinely when the QT interval is normal."
+      }
+    ],
+    "reason": "Same normal-QT routine magnesium exclusion retained with medication row."
+  },
+  {
+    "sourcePath": "protocols.ac-08.specialPopulations[0].items[1]",
+    "sourceText": "Discontinue suspected QT-prolonging medications.",
+    "targets": [
+      {
+        "path": "protocols.ac-08.assessment[2].items[0]",
+        "text": "Review prescribed and nonprescribed medications for QT prolongation and discontinue suspected QT-prolonging agents."
+      }
+    ],
+    "reason": "Exact QT-prolonging-medication discontinuation duplicate."
+  },
+  {
+    "sourcePath": "protocols.ac-09.overview[2]",
+    "sourceText": "Claiborne EMS uses an initial biphasic defibrillation energy of 200 J; confirm the manufacturer-recommended setting and use the same or higher energy for subsequent shocks according to the device.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.careModules[2].levels[0].actions[1]",
+        "text": "Defibrillate at 200 J biphasic, confirm the manufacturer-recommended setting, and use the same or higher energy for subsequent shocks according to the device."
+      }
+    ],
+    "reason": "Same initial energy/manufacturer check/subsequent same-or-higher energy retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.assessment[0].items[0]",
+    "sourceText": "Confirm unresponsiveness, abnormal or absent breathing, and absence of a pulse for no more than 10 seconds.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.careModules[0].levels[0].actions[0]",
+        "text": "Confirm unresponsiveness, abnormal or absent breathing, and absence of a pulse for no more than 10 seconds; begin CPR immediately."
+      }
+    ],
+    "reason": "Exact arrest-recognition and 10-second threshold retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.assessment[1].items[0]",
+    "sourceText": "Compression rate 100–120/min, depth at least 2 inches, complete recoil, and minimal interruptions.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.careModules[0].levels[0].actions[1]",
+        "text": "Perform compressions at 100–120/min to a depth of at least 2 inches with complete recoil and minimal interruption."
+      }
+    ],
+    "reason": "Same CPR rate/depth/recoil/pauses retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.assessment[1].items[1]",
+    "sourceText": "Change compressors every 2 minutes or sooner when fatigued.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.careModules[0].levels[0].actions[4]",
+        "text": "Rotate compressors every 2 minutes or sooner when fatigued and announce cycle, shock, medication, and rhythm-check times."
+      }
+    ],
+    "reason": "Same two-minute or earlier-fatigue compressor-change instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.assessment[1].items[3]",
+    "sourceText": "Charge during compressions and resume compressions immediately after every shock.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.careModules[2].levels[0].actions[2]",
+        "text": "Charge the defibrillator during compressions, clear briefly, deliver the shock, and resume CPR immediately."
+      }
+    ],
+    "reason": "Same charge-during-compressions/immediate post-shock CPR retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.assessment[2].items[0]",
+    "sourceText": "Analyze rhythm every 2 minutes; check a pulse only when an organized rhythm appears.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.flow[7].text",
+        "text": "Shockable → shock and resume CPR • organized rhythm → pulse check • ROSC → AC-10"
+      },
+      {
+        "path": "protocols.ac-09.flow[7].title",
+        "text": "Rhythm Every 2 min"
+      }
+    ],
+    "reason": "Same two-minute rhythm check/organized-rhythm-only pulse check retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.assessment[2].items[1]",
+    "sourceText": "Before an advanced airway, use a 30:2 compression-to-ventilation ratio.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.careModules[0].levels[0].actions[3]",
+        "text": "Provide bag-mask ventilation with oxygen at a 30:2 compression-to-ventilation ratio until an advanced airway is placed."
+      }
+    ],
+    "reason": "Same pre-advanced-airway 30:2 ratio retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.assessment[2].items[2]",
+    "sourceText": "After an advanced airway, continue compressions and give one breath every 6 seconds.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.warnings[2]",
+        "text": "Avoid excessive ventilation. After advanced-airway placement, give one breath every 6 seconds with continuous compressions."
+      }
+    ],
+    "reason": "Same continuous compressions and six-second breath instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.treatmentSteps[0]",
+    "sourceText": "Begin high-quality CPR, provide bag-mask ventilation with oxygen, attach the monitor/defibrillator, and activate the arrest team.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.flow[0].text",
+        "text": "Start CPR • bag-mask ventilation with oxygen • attach monitor/defibrillator • activate arrest team"
+      }
+    ],
+    "reason": "Same CPR/BVM oxygen/monitor/team activation retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.treatmentSteps[1]",
+    "sourceText": "Deliver the first shock at 200 J biphasic after confirming the manufacturer-recommended setting; immediately resume CPR for 2 minutes.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.flow[1].text",
+        "text": "200 J biphasic • verify manufacturer setting • immediately resume CPR for 2 min"
+      }
+    ],
+    "reason": "Same first shock 200 J/manufacturer check/immediate two-minute CPR retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.treatmentSteps[4]",
+    "sourceText": "After the second shock, give epinephrine 1 mg IV/IO as soon as possible and repeat every 3–5 minutes.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.medications[0].dose",
+        "text": "1 mg IV/IO after the second shock as soon as possible; repeat every 3–5 minutes"
+      }
+    ],
+    "reason": "Exact second-shock epinephrine timing/dose/repeat retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.treatmentSteps[5]",
+    "sourceText": "Consider advanced-airway placement and continuous waveform capnography without interrupting compressions or delaying defibrillation.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.careModules[1].levels[0].actions[2]",
+        "text": "Assist with advanced-airway placement and continuous waveform capnography without interrupting compressions or delaying defibrillation."
+      }
+    ],
+    "reason": "Same advanced-airway/capnography and no-CPR/shock delay retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.treatmentSteps[7]",
+    "sourceText": "After the third shock, give amiodarone 300 mg IV/IO. If VF/pVT persists or recurs, give a second dose of 150 mg IV/IO.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.careModules[2].levels[0].actions[4]",
+        "text": "After the third shock, give amiodarone 300 mg IV/IO; give 150 mg IV/IO as the second dose for persistent or recurrent VF/pVT."
+      }
+    ],
+    "reason": "Same third-shock amiodarone and persistent/recurrent second-dose conditions retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.treatmentSteps[8]",
+    "sourceText": "Lidocaine 1–1.5 mg/kg IV/IO may be used as the initial alternative to amiodarone; then give 0.5–0.75 mg/kg every 5–10 minutes to a maximum total of 3 mg/kg. Do not combine amiodarone and lidocaine without Medical Control.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.careModules[2].levels[0].actions[5]",
+        "text": "As an alternative to amiodarone, give lidocaine 1–1.5 mg/kg IV/IO initially; then 0.5–0.75 mg/kg every 5–10 minutes to a maximum total of 3 mg/kg. Do not combine amiodarone and lidocaine without Medical Control."
+      }
+    ],
+    "reason": "Exact lidocaine alternative dose/repeat/max and no-combination-without-MC instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.treatmentSteps[9]",
+    "sourceText": "For suspected pulseless torsades, give magnesium sulfate 1–2 g IV/IO push; may repeat once. Do not give magnesium routinely for other VF/pVT arrests.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.careModules[2].levels[0].actions[6]",
+        "text": "For suspected pulseless torsades, give magnesium sulfate 1–2 g IV/IO push; may repeat once. Do not use magnesium routinely for other VF/pVT arrests."
+      }
+    ],
+    "reason": "Exact pulseless torsades magnesium dose/repeat and other-arrest exclusion retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.treatmentSteps[10]",
+    "sourceText": "Continue 2-minute CPR cycles, rhythm checks, shocks for persistent VF/pVT, epinephrine every 3–5 minutes, and treatment of reversible causes.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.flow[7].text",
+        "text": "Shockable → shock and resume CPR • organized rhythm → pulse check • ROSC → AC-10"
+      },
+      {
+        "path": "protocols.ac-09.flow[8].text",
+        "text": "Continue shock/CPR cycles • epinephrine every 3–5 min • treat Hs and Ts • consider AC-12 when criteria met"
+      },
+      {
+        "path": "protocols.ac-09.flow[7].title",
+        "text": "Rhythm Every 2 min"
+      }
+    ],
+    "reason": "All cycle/rhythm/shock/epinephrine/reversible-cause instructions retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.treatmentSteps[11]",
+    "sourceText": "If an organized rhythm appears, briefly check for a pulse. ROSC requires immediate transition to AC-10; persistent arrest may transition to AC-12 when criteria are met.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.flow[7].text",
+        "text": "Shockable → shock and resume CPR • organized rhythm → pulse check • ROSC → AC-10"
+      },
+      {
+        "path": "protocols.ac-09.flow[8].text",
+        "text": "Continue shock/CPR cycles • epinephrine every 3–5 min • treat Hs and Ts • consider AC-12 when criteria met"
+      }
+    ],
+    "reason": "Organized rhythm pulse check, ROSC AC-10 and criteria-based AC-12 routing retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.warnings[1]",
+    "sourceText": "Resume CPR immediately after every shock; do not perform a routine post-shock pulse check.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.careModules[0].levels[0].actions[2]",
+        "text": "Apply the AED/monitor pads and deliver a shock immediately when advised; resume CPR without a post-shock pulse check."
+      }
+    ],
+    "reason": "Same immediate post-shock CPR/no routine pulse-check safeguard retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.warnings[3]",
+    "sourceText": "Do not combine amiodarone and lidocaine without explicit Medical Control direction.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.medications[1].notes[2]",
+        "text": "Do not combine with lidocaine without Medical Control."
+      },
+      {
+        "path": "protocols.ac-09.medications[2].notes[2]",
+        "text": "Do not combine with amiodarone without Medical Control."
+      }
+    ],
+    "reason": "Same no-amiodarone/lidocaine combination without MC retained on both rows."
+  },
+  {
+    "sourcePath": "protocols.ac-09.warnings[5]",
+    "sourceText": "No absolute EtCO₂ value should be used alone to terminate resuscitation.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.assessment[2].items[4]",
+        "text": "An abrupt sustained rise in EtCO₂ may suggest ROSC but requires rhythm and pulse confirmation; no absolute EtCO₂ value determines termination."
+      }
+    ],
+    "reason": "Same no-absolute-EtCO2 termination instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.clinicalPearls[2]",
+    "sourceText": "A rhythm check occurs every 2 minutes, but a pulse check occurs only when an organized rhythm appears.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.flow[7].text",
+        "text": "Shockable → shock and resume CPR • organized rhythm → pulse check • ROSC → AC-10"
+      },
+      {
+        "path": "protocols.ac-09.flow[7].title",
+        "text": "Rhythm Every 2 min"
+      }
+    ],
+    "reason": "Same two-minute rhythm versus organized-only pulse check distinction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-09.specialPopulations[0].items[1]",
+    "sourceText": "Give magnesium sulfate 1–2 g IV/IO push; may repeat once.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.medications[3].dose",
+        "text": "1–2 g IV/IO push; may repeat once"
+      }
+    ],
+    "reason": "Exact magnesium dose/route/once-repeat retained with torsades indication in medication notes."
+  },
+  {
+    "sourcePath": "protocols.ac-09.specialPopulations[1].items[1]",
+    "sourceText": "Calcium and sodium bicarbonate are reserved for specific indications rather than routine cardiac-arrest administration.",
+    "targets": [
+      {
+        "path": "protocols.ac-09.warnings[4]",
+        "text": "Routine magnesium, calcium, and sodium bicarbonate are not indicated in undifferentiated VF/pVT; use them only for a specific reversible cause or linked protocol indication."
+      }
+    ],
+    "reason": "Same calcium/bicarbonate cause-specific-only instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.overview[2]",
+    "sourceText": "Keep defibrillation pads attached throughout transport because recurrent arrest and ventricular dysrhythmias are common.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.warnings[0]",
+        "text": "Re-arrest is common; keep pads attached and be prepared to resume CPR and defibrillation immediately."
+      },
+      {
+        "path": "protocols.ac-10.flow[0].text",
+        "text": "Pulse • BP/MAP • organized rhythm • perfusion • keep pads attached • prepare for re-arrest"
+      }
+    ],
+    "reason": "Pads throughout care and common re-arrest risk retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.assessment[1].items[0]",
+    "sourceText": "Use 100% oxygen until SpO₂ can be measured reliably; then titrate FiO₂ to maintain SpO₂ 90–98%.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.careModules[0].levels[0].actions[2]",
+        "text": "Use 100% oxygen until SpO₂ can be measured reliably, then titrate oxygen to maintain SpO₂ 90–98%."
+      }
+    ],
+    "reason": "Same initial oxygen until reliable saturation and 90-98% titration retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.assessment[1].items[2]",
+    "sourceText": "Begin ventilation near 10 breaths/min and titrate toward EtCO₂ approximately 35–45 mm Hg while avoiding hyperventilation.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.careModules[2].levels[0].actions[1]",
+        "text": "Confirm an advanced airway with continuous waveform capnography and ventilate near 10 breaths/min, titrating toward EtCO₂ approximately 35–45 mm Hg while recognizing that EtCO₂ may underestimate PaCO₂ after ROSC."
+      }
+    ],
+    "reason": "Same rate and capnography target retained; hyperventilation prohibition remains in warnings[1]."
+  },
+  {
+    "sourcePath": "protocols.ac-10.assessment[1].items[4]",
+    "sourceText": "Confirm an advanced airway with continuous waveform capnography and reassess after every movement.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.treatmentSteps[3]",
+        "text": "Confirm any advanced airway with continuous waveform capnography and reassess breath sounds, chest rise, tube depth, and waveform after every movement."
+      }
+    ],
+    "reason": "Same continuous waveform confirmation and after-movement reassessment retained with additional checks."
+  },
+  {
+    "sourcePath": "protocols.ac-10.assessment[2].items[0]",
+    "sourceText": "Obtain frequent blood pressure measurements and maintain MAP at least 65 mm Hg.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.treatmentSteps[4]",
+        "text": "Obtain frequent blood pressures and maintain MAP at least 65 mm Hg."
+      }
+    ],
+    "reason": "Exact frequent-BP and MAP target duplicate."
+  },
+  {
+    "sourcePath": "protocols.ac-10.assessment[3].items[0]",
+    "sourceText": "Obtain and transmit a 12-lead ECG as soon as feasible; repeat if the tracing was acquired immediately after ROSC or the clinical condition changes.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.treatmentSteps[7]",
+        "text": "Obtain and transmit a 12-lead ECG as soon as feasible and repeat it when the initial tracing was obtained immediately after ROSC or the clinical condition changes."
+      }
+    ],
+    "reason": "Exact earliest-feasible transmitted ECG and repeat triggers retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.assessment[3].items[2]",
+    "sourceText": "Check blood glucose and treat values below 70 mg/dL through UP-04.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.medications[2].dose",
+        "text": "Treat glucose below 70 mg/dL through UP-04 Altered Mental Status"
+      }
+    ],
+    "reason": "Same below-70 glucose threshold and UP-04 routing retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.treatmentSteps[0]",
+    "sourceText": "Confirm sustained ROSC, keep defibrillation pads attached, and prepare for immediate re-arrest.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.careModules[0].levels[0].actions[0]",
+        "text": "Confirm sustained ROSC using a palpable pulse, blood pressure, organized rhythm, perfusion, and clinical response."
+      },
+      {
+        "path": "protocols.ac-10.careModules[0].levels[0].actions[3]",
+        "text": "Keep defibrillation pads attached, obtain frequent complete vital signs, and prepare to resume CPR and defibrillation immediately."
+      }
+    ],
+    "reason": "Sustained ROSC confirmation, retained pads and immediate re-arrest preparation retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.treatmentSteps[1]",
+    "sourceText": "Maintain airway and ventilation, use 100% oxygen until reliable SpO₂ is available, and then titrate oxygen to SpO₂ 90–98%.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.careModules[0].levels[0].actions[1]",
+        "text": "Maintain airway and ventilation, begin near 10 breaths/min, and avoid hyperventilation."
+      },
+      {
+        "path": "protocols.ac-10.careModules[0].levels[0].actions[2]",
+        "text": "Use 100% oxygen until SpO₂ can be measured reliably, then titrate oxygen to maintain SpO₂ 90–98%."
+      }
+    ],
+    "reason": "Airway/ventilation and exact oxygen sequence retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.treatmentSteps[2]",
+    "sourceText": "Begin ventilation near 10 breaths/min and titrate toward EtCO₂ approximately 35–45 mm Hg while avoiding hyperventilation.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.careModules[2].levels[0].actions[1]",
+        "text": "Confirm an advanced airway with continuous waveform capnography and ventilate near 10 breaths/min, titrating toward EtCO₂ approximately 35–45 mm Hg while recognizing that EtCO₂ may underestimate PaCO₂ after ROSC."
+      },
+      {
+        "path": "protocols.ac-10.warnings[1]",
+        "text": "Avoid hypoxemia, prolonged hyperoxia, and hyperventilation after ROSC."
+      }
+    ],
+    "reason": "Exact ventilation rate, EtCO2 target and hyperventilation prohibition retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.treatmentSteps[5]",
+    "sourceText": "For MAP below 65 mm Hg, give normal saline 250–500 mL IV/IO and reassess; use smaller volumes for CHF, renal failure, liver failure, or suspected volume overload.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.medications[0].dose",
+        "text": "250–500 mL IV/IO bolus, then reassess"
+      },
+      {
+        "path": "protocols.ac-10.medications[0].notes[0]",
+        "text": "AEMT and Paramedic standing order for post-ROSC MAP below 65 mm Hg."
+      },
+      {
+        "path": "protocols.ac-10.medications[0].notes[1]",
+        "text": "Use smaller volumes for CHF, renal failure, liver failure, or suspected volume overload."
+      },
+      {
+        "path": "protocols.ac-10.medications[0].notes[2]",
+        "text": "Reassess blood pressure/MAP, lung sounds, perfusion, and respiratory status after each bolus."
+      }
+    ],
+    "reason": "Same MAP trigger, saline dose/route, reassessment and all fluid-sensitive groups retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.treatmentSteps[6]",
+    "sourceText": "If hypotension persists, start norepinephrine 0.1–2 mcg/kg/min IV/IO and titrate to MAP at least 65 mm Hg; alternatives require Medical Control.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.medications[1].dose",
+        "text": "0.1–2 mcg/kg/min IV/IO; titrate to MAP at least 65 mm Hg"
+      },
+      {
+        "path": "protocols.ac-10.medications[1].notes[0]",
+        "text": "Paramedic preferred vasopressor for persistent post-ROSC hypotension after cautious fluid resuscitation."
+      },
+      {
+        "path": "protocols.ac-10.medications[1].notes[2]",
+        "text": "Alternative post-ROSC vasopressors require Medical Control."
+      }
+    ],
+    "reason": "Same persistent-hypotension norepinephrine range/route/target and alternatives MC requirement retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.treatmentSteps[8]",
+    "sourceText": "Open AC-04 for persistent STEMI/STEMI-equivalent or evidence of significant ongoing myocardial ischemia.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.careModules[2].levels[0].actions[4]",
+        "text": "Interpret and transmit the 12-lead ECG, repeat when indicated, and activate AC-04 for persistent STEMI/STEMI-equivalent or suspected ongoing ischemia."
+      }
+    ],
+    "reason": "Same persistent STEMI/equivalent/ongoing-ischemia AC-04 activation retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.treatmentSteps[9]",
+    "sourceText": "Check glucose, treat values below 70 mg/dL through UP-04, document neurologic findings and seizure activity, and avoid early neurologic prognostication.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.medications[2].dose",
+        "text": "Treat glucose below 70 mg/dL through UP-04 Altered Mental Status"
+      },
+      {
+        "path": "protocols.ac-10.assessment[3].items[1]",
+        "text": "Document GCS, pupils, purposeful movement, focal findings, and seizure activity without making early field neurologic prognostication."
+      }
+    ],
+    "reason": "Same glucose threshold/UP-04, neurologic/seizure documentation and no-early-prognostication retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.warnings[2]",
+    "sourceText": "Do not use a rapid cold-IV-fluid infusion for prehospital temperature control.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.contraindications[2]",
+        "text": "Do not give a rapid cold-IV-fluid infusion for prehospital temperature control after ROSC."
+      }
+    ],
+    "reason": "Exact no-rapid-cold-fluid cooling safeguard retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.warnings[3]",
+    "sourceText": "Use cautious fluid in CHF, renal failure, liver failure, and suspected volume overload.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.medications[0].notes[1]",
+        "text": "Use smaller volumes for CHF, renal failure, liver failure, or suspected volume overload."
+      }
+    ],
+    "reason": "Same all fluid-sensitive groups retained with saline row."
+  },
+  {
+    "sourcePath": "protocols.ac-10.warnings[6]",
+    "sourceText": "Do not make early neurologic prognostication in the field.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.assessment[3].items[1]",
+        "text": "Document GCS, pupils, purposeful movement, focal findings, and seizure activity without making early field neurologic prognostication."
+      }
+    ],
+    "reason": "Same no-early-field-neurologic-prognostication instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-10.clinicalPearls[4]",
+    "sourceText": "Persistent STEMI, cardiogenic shock, recurrent ventricular arrhythmia, or ongoing ischemia supports rapid PCI-capable destination.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.treatmentSteps[11]",
+        "text": "Transport patients with persistent STEMI/STEMI-equivalent, cardiogenic shock, recurrent ventricular arrhythmias, or significant ongoing ischemia to a PCI-capable hospital and consider Covenant Health Air when it shortens time to definitive care."
+      }
+    ],
+    "reason": "All listed PCI destination criteria retained with transport and air-time instruction."
+  },
+  {
+    "sourcePath": "protocols.ac-10.specialPopulations[0].items[1]",
+    "sourceText": "Do not initiate prehospital cooling with rapid cold-IV-fluid infusion.",
+    "targets": [
+      {
+        "path": "protocols.ac-10.contraindications[2]",
+        "text": "Do not give a rapid cold-IV-fluid infusion for prehospital temperature control after ROSC."
+      }
+    ],
+    "reason": "Same no-rapid-cold-fluid cooling duplicate."
+  },
+  {
+    "sourcePath": "protocols.ac-11.assessment[1].items[0]",
+    "sourceText": "Compress at 100–120/min to a depth of at least 2 inches while avoiding depth greater than 2.4 inches.",
+    "targets": [
+      {
+        "path": "protocols.ac-11.flow[2].text",
+        "text": "100–120/min • depth 2–2.4 in • full recoil • compression fraction >80%"
+      }
+    ],
+    "reason": "Same 100-120/min and 2-2.4 inch safe compression range retained."
+  },
+  {
+    "sourcePath": "protocols.ac-11.assessment[1].items[1]",
+    "sourceText": "Allow complete chest recoil, minimize interruptions, and target a chest-compression fraction greater than 80%.",
+    "targets": [
+      {
+        "path": "protocols.ac-11.flow[2].text",
+        "text": "100–120/min • depth 2–2.4 in • full recoil • compression fraction >80%"
+      }
+    ],
+    "reason": "Same full recoil and compression-fraction target retained; pause minimization remains in warnings[3]."
+  },
+  {
+    "sourcePath": "protocols.ac-11.assessment[2].items[0]",
+    "sourceText": "Use 30:2 compressions to ventilations before placement of an advanced airway.",
+    "targets": [
+      {
+        "path": "protocols.ac-11.flow[3].text",
+        "text": "30:2 before advanced airway • then continuous CPR with 1 breath every 6 sec • avoid hyperventilation"
+      }
+    ],
+    "reason": "Same pre-airway 30:2 ratio retained."
+  },
+  {
+    "sourcePath": "protocols.ac-11.treatmentSteps[0]",
+    "sourceText": "Begin high-quality CPR, BVM ventilation with oxygen, pad placement, and the event timer immediately.",
+    "targets": [
+      {
+        "path": "protocols.ac-11.flow[0].text",
+        "text": "Start CPR • apply pads/AED • BVM with oxygen • start scene timer"
+      },
+      {
+        "path": "protocols.ac-11.careModules[0].levels[0].actions[0]",
+        "text": "Begin compressions, BVM ventilation, AED/monitor pad placement, scene timing, and event documentation without waiting for ALS."
+      }
+    ],
+    "reason": "Immediate CPR/BVM oxygen/pads/timer retained."
+  },
+  {
+    "sourcePath": "protocols.ac-11.treatmentSteps[4]",
+    "sourceText": "At each two-minute cycle, rotate compressors, perform a rhythm/pulse check in 10 seconds or less, deliver a shock when indicated, and immediately resume CPR.",
+    "targets": [
+      {
+        "path": "protocols.ac-11.assessment[1].items[2]",
+        "text": "Change compressors every two minutes or sooner for fatigue; complete the change during the planned rhythm check in 10 seconds or less."
+      },
+      {
+        "path": "protocols.ac-11.flow[4].text",
+        "text": "Precharge when possible • rhythm/pulse check ≤10 sec • shock if indicated • immediately resume CPR"
+      }
+    ],
+    "reason": "Two-minute rotation/check/shock/immediate CPR and 10-second pause limit retained."
+  },
+  {
+    "sourcePath": "protocols.ac-11.treatmentSteps[6]",
+    "sourceText": "After ROSC, deliberately transition to AC-10 and AC-13. When field termination is being considered, open AC-12.",
+    "targets": [
+      {
+        "path": "protocols.ac-11.flow[6].text",
+        "text": "ROSC: AC-10/AC-13 • persistent arrest: evaluate AC-12"
+      }
+    ],
+    "reason": "Same ROSC and termination protocol routing retained."
+  },
+  {
+    "sourcePath": "protocols.ac-11.warnings[0]",
+    "sourceText": "The team leader must avoid performing a task that prevents global oversight.",
+    "targets": [
+      {
+        "path": "protocols.ac-11.careModules[0].levels[2].actions[0]",
+        "text": "Serve as team leader when assigned, preserve global oversight, and avoid task fixation."
+      }
+    ],
+    "reason": "Same leader global oversight and no-task-fixation instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-11.warnings[2]",
+    "sourceText": "Avoid excessive ventilation before and after advanced-airway placement.",
+    "targets": [
+      {
+        "path": "protocols.ac-11.flow[3].text",
+        "text": "30:2 before advanced airway • then continuous CPR with 1 breath every 6 sec • avoid hyperventilation"
+      }
+    ],
+    "reason": "Same avoid-hyperventilation rule retained before and after advanced airway."
+  },
+  {
+    "sourcePath": "protocols.ac-12.overview[1]",
+    "sourceText": "Termination requires Medical Control authorization. When any required criterion is absent or an exclusion is present, continue resuscitation and consider transport.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.warnings[3]",
+        "text": "Do not terminate when any Universal TOR criterion is absent, an exclusion is present, or Medical Control authorization has not been obtained."
+      },
+      {
+        "path": "protocols.ac-12.flow[3].text",
+        "text": "No: continue resuscitation and consider transport • Yes: evaluate full clinical context"
+      }
+    ],
+    "reason": "MC authorization and continue/consider transport when criteria absent retained."
+  },
+  {
+    "sourcePath": "protocols.ac-12.indications[1]",
+    "sourceText": "All three Universal TOR criteria are present and Medical Control authorization is available.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.flow[2].text",
+        "text": "Not witnessed by EMS • no shock before transport • no ROSC before transport"
+      },
+      {
+        "path": "protocols.ac-12.flow[3].text",
+        "text": "No: continue resuscitation and consider transport • Yes: evaluate full clinical context"
+      },
+      {
+        "path": "protocols.ac-12.warnings[3]",
+        "text": "Do not terminate when any Universal TOR criterion is absent, an exclusion is present, or Medical Control authorization has not been obtained."
+      }
+    ],
+    "reason": "All three TOR criteria plus MC authorization requirement retained."
+  },
+  {
+    "sourcePath": "protocols.ac-12.assessment[0].items[0]",
+    "sourceText": "The arrest was not witnessed by EMS personnel.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.flow[2].text",
+        "text": "Not witnessed by EMS • no shock before transport • no ROSC before transport"
+      }
+    ],
+    "reason": "Same no-EMS-witness criterion retained."
+  },
+  {
+    "sourcePath": "protocols.ac-12.assessment[0].items[1]",
+    "sourceText": "No shock was delivered before transport.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.flow[2].text",
+        "text": "Not witnessed by EMS • no shock before transport • no ROSC before transport"
+      }
+    ],
+    "reason": "Same no-pretransport-shock criterion retained."
+  },
+  {
+    "sourcePath": "protocols.ac-12.assessment[0].items[2]",
+    "sourceText": "No return of spontaneous circulation occurred before transport.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.flow[2].text",
+        "text": "Not witnessed by EMS • no shock before transport • no ROSC before transport"
+      }
+    ],
+    "reason": "Same no-pretransport-ROSC criterion retained."
+  },
+  {
+    "sourcePath": "protocols.ac-12.assessment[0].items[3]",
+    "sourceText": "All three criteria must be present. If any criterion is absent, continue resuscitation and consider transport.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.flow[3].text",
+        "text": "No: continue resuscitation and consider transport • Yes: evaluate full clinical context"
+      }
+    ],
+    "reason": "Same all-three requirement and continue/transport alternative retained."
+  },
+  {
+    "sourcePath": "protocols.ac-12.assessment[1].items[0]",
+    "sourceText": "Complete at least 20 minutes of documented high-quality CPR and rhythm-specific resuscitation before applying the Claiborne termination pathway.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.indications[0]",
+        "text": "Adult, nontraumatic, out-of-hospital cardiac arrest with persistent pulselessness after at least 20 minutes of documented high-quality resuscitation."
+      }
+    ],
+    "reason": "Same adult nontraumatic OHCA and minimum 20 minutes documented high-quality care retained."
+  },
+  {
+    "sourcePath": "protocols.ac-12.assessment[2].items[0]",
+    "sourceText": "Do not use this pathway for pediatric, traumatic, overdose/toxicologic, pregnancy-associated, hypothermic, drowning/submersion, lightning/electrocution, or in-hospital arrest.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.contraindications[1]",
+        "text": "Pediatric cardiac arrest, traumatic arrest, overdose or suspected toxicologic arrest, pregnancy, hypothermia, drowning/submersion, lightning/electrocution, or in-hospital cardiac arrest."
+      }
+    ],
+    "reason": "Identical list of pediatric/trauma/toxicology/pregnancy/environmental/in-hospital exclusions retained."
+  },
+  {
+    "sourcePath": "protocols.ac-12.treatmentSteps[1]",
+    "sourceText": "After at least 20 minutes of documented high-quality resuscitation, confirm that the arrest was not witnessed by EMS, no shock was delivered before transport, and no ROSC occurred before transport.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.indications[0]",
+        "text": "Adult, nontraumatic, out-of-hospital cardiac arrest with persistent pulselessness after at least 20 minutes of documented high-quality resuscitation."
+      },
+      {
+        "path": "protocols.ac-12.flow[2].text",
+        "text": "Not witnessed by EMS • no shock before transport • no ROSC before transport"
+      }
+    ],
+    "reason": "Same minimum documented resuscitation period and exact three criteria retained."
+  },
+  {
+    "sourcePath": "protocols.ac-12.treatmentSteps[2]",
+    "sourceText": "If any Universal TOR criterion is absent, continue resuscitation and consider transport.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.flow[3].text",
+        "text": "No: continue resuscitation and consider transport • Yes: evaluate full clinical context"
+      }
+    ],
+    "reason": "Same absent-criterion continue/consider-transport branch retained."
+  },
+  {
+    "sourcePath": "protocols.ac-12.treatmentSteps[3]",
+    "sourceText": "Confirm that no exclusion or reversible special circumstance requires continued treatment or transport.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.contraindications[2]",
+        "text": "A reversible special circumstance that warrants continued treatment or transport."
+      },
+      {
+        "path": "protocols.ac-12.careModules[0].levels[2].actions[1]",
+        "text": "Confirm all three Universal TOR criteria and absence of exclusions before requesting termination authorization."
+      }
+    ],
+    "reason": "No exclusion/reversible circumstance and full eligibility confirmation retained."
+  },
+  {
+    "sourcePath": "protocols.ac-12.clinicalPearls[1]",
+    "sourceText": "A delivered shock, transient ROSC, or EMS-witnessed arrest removes the patient from this field-termination pathway.",
+    "targets": [
+      {
+        "path": "protocols.ac-12.contraindications[0]",
+        "text": "EMS-witnessed arrest, any shock delivered before transport, or any ROSC before transport."
+      }
+    ],
+    "reason": "Same delivered-shock/any-ROSC/EMS-witness exclusions retained."
+  },
+  {
+    "sourcePath": "protocols.ac-13.overview[0]",
+    "sourceText": "Prehospital temperature-management pathway for an adult with sustained ROSC who remains unresponsive to verbal commands.",
+    "targets": [
+      {
+        "path": "protocols.ac-13.indications[0]",
+        "text": "Adult with sustained ROSC after cardiac arrest who remains unresponsive to verbal commands, regardless of arrest location or initial rhythm."
+      }
+    ],
+    "reason": "Same adult sustained-ROSC unresponsive-to-verbal-command eligibility retained."
+  },
+  {
+    "sourcePath": "protocols.ac-13.assessment[0].items[0]",
+    "sourceText": "Confirm sustained ROSC and immediately begin or continue AC-10 post-resuscitation care.",
+    "targets": [
+      {
+        "path": "protocols.ac-13.flow[0].text",
+        "text": "Open AC-10 • stabilize airway, ventilation, perfusion, rhythm, ECG, and glucose"
+      }
+    ],
+    "reason": "Same sustained ROSC and immediate AC-10 care retained."
+  },
+  {
+    "sourcePath": "protocols.ac-13.assessment[0].items[2]",
+    "sourceText": "Do not make an early neurologic prognosis in the field.",
+    "targets": [
+      {
+        "path": "protocols.ac-13.warnings[4]",
+        "text": "Do not make early neurologic prognostication in the field."
+      }
+    ],
+    "reason": "Exact no-early-field-neurologic-prognosis safeguard retained."
+  },
+  {
+    "sourcePath": "protocols.ac-13.treatmentSteps[2]",
+    "sourceText": "Do not routinely initiate active prehospital cooling and do not rapidly infuse cold IV fluids for temperature control.",
+    "targets": [
+      {
+        "path": "protocols.ac-13.flow[4].text",
+        "text": "Do not rapidly infuse cold IV fluids or initiate uncontrolled active cooling"
+      },
+      {
+        "path": "protocols.ac-13.warnings[1]",
+        "text": "Do not rapidly infuse cold IV fluids for routine prehospital temperature control."
+      },
+      {
+        "path": "protocols.ac-13.warnings[2]",
+        "text": "Do not use uncontrolled ice packs, immersion, or another active-cooling method that cannot be continuously monitored and regulated."
+      }
+    ],
+    "reason": "No routine rapid cold-fluid or uncontrolled active field cooling retained."
+  },
+  {
+    "sourcePath": "protocols.ac-13.warnings[3]",
+    "sourceText": "Avoid rapid active rewarming of a spontaneously hypothermic post-arrest patient.",
+    "targets": [
+      {
+        "path": "protocols.ac-13.treatmentSteps[3]",
+        "text": "If the patient is spontaneously hypothermic, remove wet clothing, insulate from further heat loss, handle gently, and avoid rapid active rewarming."
+      }
+    ],
+    "reason": "Same no rapid active rewarming plus wet clothing/insulation/handling retained."
+  },
+  {
+    "sourcePath": "protocols.ac-13.clinicalPearls[1]",
+    "sourceText": "The recommended hospital temperature range is 32°C–37.5°C and the strategy should continue for at least 36 hours while the adult remains unresponsive.",
+    "targets": [
+      {
+        "path": "protocols.ac-13.treatmentSteps[6]",
+        "text": "Document that the receiving-hospital AHA temperature-control strategy for adults remaining unresponsive is 32°C–37.5°C for at least 36 hours; this is destination guidance and not a field target EMS must achieve."
+      }
+    ],
+    "reason": "Same hospital-only 32-37.5 C range, at least 36 hours and unresponsive eligibility retained."
+  },
+  {
+    "sourcePath": "protocols.ac-13.specialPopulations[0].items[0]",
+    "sourceText": "Prevent further heat loss and avoid rapid active rewarming.",
+    "targets": [
+      {
+        "path": "protocols.ac-13.treatmentSteps[3]",
+        "text": "If the patient is spontaneously hypothermic, remove wet clothing, insulate from further heat loss, handle gently, and avoid rapid active rewarming."
+      }
+    ],
+    "reason": "Same further-heat-loss prevention and no-rapid-active-rewarming retained."
+  },
+  {
+    "sourcePath": "protocols.ac-13.specialPopulations[1].items[0]",
+    "sourceText": "Continue AC-10 care and avoid fever, but do not place a patient who follows verbal commands into the unresponsive post-arrest temperature-control pathway.",
+    "targets": [
+      {
+        "path": "protocols.ac-13.contraindications[0]",
+        "text": "No separate active prehospital temperature-control pathway is indicated for an adult who follows verbal commands after ROSC; continue AC-10 and prevent fever."
+      }
+    ],
+    "reason": "Same commands-followed exclusion, AC-10 and fever prevention retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.overview[1]",
+    "sourceText": "Continuous-flow LVAD patients may not have a palpable pulse. Determine the need for resuscitation from responsiveness and perfusion rather than pulse absence alone.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.assessment[0].items[1]",
+        "text": "Do not use absence of a palpable pulse alone to diagnose cardiac arrest because continuous-flow LVAD patients commonly have no palpable pulse."
+      }
+    ],
+    "reason": "Same continuous-flow pulse absence does not diagnose arrest retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.overview[2]",
+    "sourceText": "For an unresponsive patient with impaired perfusion, begin chest compressions immediately while a second rescuer evaluates the LVAD and corrects device-related causes.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.treatmentSteps[2]",
+        "text": "When the patient is unresponsive with impaired perfusion, begin chest compressions immediately and follow AC-03 and the applicable rhythm pathway."
+      },
+      {
+        "path": "protocols.ac-14.treatmentSteps[3]",
+        "text": "When a second rescuer is available, assess the LVAD concurrently: listen for hum, read alarms, inspect the driveline and controller, reconnect an obvious disconnection, and ensure adequate power."
+      }
+    ],
+    "reason": "Same immediate compressions for unresponsive poor perfusion with concurrent second-rescuer troubleshooting retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.indications[1]",
+    "sourceText": "This pathway applies beyond the immediate LVAD implant hospitalization.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.overview[0]",
+        "text": "Emergency assessment and treatment pathway for an adult with a durable continuous-flow left ventricular assist device outside the immediate implant hospitalization."
+      }
+    ],
+    "reason": "Same beyond immediate implant-hospitalization scope retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.assessment[0].items[2]",
+    "sourceText": "Perfusion is adequate when any of the following is present: normal skin color and temperature, normal capillary refill, MAP greater than 50 mmHg, or EtCO₂ greater than 20 mmHg.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.flow[2].text",
+        "text": "Any present: normal skin • normal capillary refill • MAP >50 mmHg • EtCO₂ >20 mmHg"
+      }
+    ],
+    "reason": "Same ANY adequate perfusion criterion with exact MAP and EtCO2 thresholds retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.warnings[0]",
+    "sourceText": "Do not use pulse absence alone to diagnose cardiac arrest in a continuous-flow LVAD patient.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.assessment[0].items[1]",
+        "text": "Do not use absence of a palpable pulse alone to diagnose cardiac arrest because continuous-flow LVAD patients commonly have no palpable pulse."
+      }
+    ],
+    "reason": "Exact pulse-absence-alone exclusion retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.warnings[1]",
+    "sourceText": "Do not delay chest compressions in an unresponsive patient with impaired perfusion while troubleshooting the device or contacting the coordinator.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.flow[4].text",
+        "text": "Begin compressions immediately • follow AC-03/AC-09 • do not delay for device troubleshooting"
+      },
+      {
+        "path": "protocols.ac-14.treatmentSteps[9]",
+        "text": "Transport to an LVAD-capable or implanting center when clinically and geographically appropriate. Bring the caregiver, backup controller, charged batteries, charger or power module, emergency card, device records, and medications."
+      }
+    ],
+    "reason": "No delay to CPR for device troubleshooting/coordinator contact retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.warnings[2]",
+    "sourceText": "Never disconnect both LVAD power sources simultaneously.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.treatmentSteps[4]",
+        "text": "Replace depleted batteries one at a time so that one power source remains connected at all times."
+      }
+    ],
+    "reason": "Same one-power-source-always-connected instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.warnings[4]",
+    "sourceText": "Do not exchange the controller unless the patient or caregiver is trained or the LVAD coordinator directly instructs the exchange.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.treatmentSteps[5]",
+        "text": "A controller exchange may be performed only by a trained patient or caregiver or under direct instruction from the LVAD coordinator."
+      }
+    ],
+    "reason": "Same trained patient/caregiver or direct coordinator instruction required for exchange retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.warnings[6]",
+    "sourceText": "Do not perform routine prehospital anticoagulant reversal without a separate approved policy or direct Medical Control order.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.medications[0].dose",
+        "text": "No routine prehospital reversal under this protocol"
+      },
+      {
+        "path": "protocols.ac-14.medications[0].notes[1]",
+        "text": "Use a separate approved reversal policy or direct Medical Control order when reversal is considered."
+      }
+    ],
+    "reason": "Same no routine reversal and separate-policy/direct-MC exception retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.clinicalPearls[0]",
+    "sourceText": "A functioning continuous-flow LVAD usually produces a constant mechanical hum over the left chest or left upper abdomen.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.assessment[1].items[1]",
+        "text": "Listen for a continuous mechanical hum over the left chest and left upper abdomen."
+      }
+    ],
+    "reason": "Same expected continuous hum and chest/upper-abdomen locations retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.clinicalPearls[1]",
+    "sourceText": "Normal skin findings, normal capillary refill, MAP greater than 50 mmHg, or EtCO₂ greater than 20 mmHg each independently indicate adequate perfusion in the AHA durable-LVAD algorithm.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.flow[2].text",
+        "text": "Any present: normal skin • normal capillary refill • MAP >50 mmHg • EtCO₂ >20 mmHg"
+      }
+    ],
+    "reason": "Same independently sufficient skin/refill/MAP/EtCO2 adequacy criteria retained; AHA attribution remains source provenance."
+  },
+  {
+    "sourcePath": "protocols.ac-14.clinicalPearls[2]",
+    "sourceText": "Current AHA guidance prioritizes immediate CPR for an unresponsive LVAD patient with impaired perfusion; a second rescuer should troubleshoot the device in parallel.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.treatmentSteps[2]",
+        "text": "When the patient is unresponsive with impaired perfusion, begin chest compressions immediately and follow AC-03 and the applicable rhythm pathway."
+      },
+      {
+        "path": "protocols.ac-14.treatmentSteps[3]",
+        "text": "When a second rescuer is available, assess the LVAD concurrently: listen for hum, read alarms, inspect the driveline and controller, reconnect an obvious disconnection, and ensure adequate power."
+      }
+    ],
+    "reason": "Same immediate CPR with concurrent second-rescuer troubleshooting retained."
+  },
+  {
+    "sourcePath": "protocols.ac-14.clinicalPearls[3]",
+    "sourceText": "Automated blood pressure and pulse oximetry may fail in low-pulsatility flow; Doppler MAP and waveform EtCO₂ can provide more useful perfusion information.",
+    "targets": [
+      {
+        "path": "protocols.ac-14.assessment[0].items[4]",
+        "text": "Automated blood-pressure and pulse-oximetry measurements may be unreliable. Use Doppler with a manual cuff when available and trend waveform capnography when appropriate."
+      }
+    ],
+    "reason": "Same unreliable automated BP/SpO2 and Doppler/capnography alternatives retained."
+  },
+  {
+    "sourcePath": "protocols.ac-15.treatmentSteps[2]",
+    "sourceText": "Do not disassemble the driver, force damaged connections, or disconnect both pumping lines simultaneously.",
+    "targets": [
+      {
+        "path": "protocols.ac-15.warnings[3]",
+        "text": "Do not disconnect both pneumatic drivelines simultaneously, disassemble the external driver, or force a damaged connection."
+      }
+    ],
+    "reason": "Exact no-disassembly/no-forcing/no-both-drivelines-disconnected safeguard retained."
+  },
+  {
+    "sourcePath": "protocols.ac-15.treatmentSteps[3]",
+    "sourceText": "For SBP below 90 mmHg or poor perfusion after confirming driver function, give isotonic crystalloid 500 mL IV/IO; may repeat once to a maximum of 1 liter with reassessment.",
+    "targets": [
+      {
+        "path": "protocols.ac-15.medications[0].dose",
+        "text": "500 mL IV/IO; may repeat once to maximum 1 L"
+      },
+      {
+        "path": "protocols.ac-15.medications[0].notes[0]",
+        "text": "For SBP below 90 mmHg or poor perfusion after confirming driver function."
+      },
+      {
+        "path": "protocols.ac-15.medications[0].notes[1]",
+        "text": "Reassess pulse, blood pressure, skin perfusion, lung sounds, ventilation, and EtCO₂ after each bolus."
+      }
+    ],
+    "reason": "Same confirmed-driver-function trigger, SBP/poor-perfusion eligibility, full bolus/repeat/max and reassessment retained."
+  },
+  {
+    "sourcePath": "protocols.ac-15.treatmentSteps[4]",
+    "sourceText": "For SBP at least 150 mmHg with pulmonary edema or device-related symptoms, provide oxygen/CPAP and nitroglycerin 0.4 mg SL every five minutes while maintaining SBP at least 90 mmHg.",
+    "targets": [
+      {
+        "path": "protocols.ac-15.careModules[0].levels[1].actions[1]",
+        "text": "For SBP at least 150 mmHg with pulmonary edema or device-related symptoms, support oxygenation/CPAP and give nitroglycerin 0.4 mg SL every five minutes while maintaining SBP at least 90 mmHg."
+      }
+    ],
+    "reason": "Same SBP threshold, edema/device symptoms, oxygen/CPAP, nitroglycerin regimen and lower BP limit retained."
+  },
+  {
+    "sourcePath": "protocols.ac-15.warnings[2]",
+    "sourceText": "Do not administer antiarrhythmics or vasopressors for loss of TAH output.",
+    "targets": [
+      {
+        "path": "protocols.ac-15.careModules[0].levels[2].actions[2]",
+        "text": "Do not give vasopressors or antiarrhythmics and do not perform defibrillation, cardioversion, pacing, or chest compressions for TAH pump failure."
+      }
+    ],
+    "reason": "Same no-vasopressor/no-antiarrhythmic TAH-pump-failure instruction retained."
+  },
+  {
+    "sourcePath": "protocols.ac-15.clinicalPearls[2]",
+    "sourceText": "The device produces pulsatile flow, so a functioning TAH usually produces a palpable pulse and measurable blood pressure.",
+    "targets": [
+      {
+        "path": "protocols.ac-15.overview[1]",
+        "text": "A TAH replaces both native ventricles and all four native valves. The external pneumatic driver produces pulsatile circulation, so a functioning system should generally produce a palpable pulse and measurable blood pressure."
+      }
+    ],
+    "reason": "Same functioning TAH pulsatile-flow/palpable-pulse/measurable-BP physiology retained."
+  },
+  {
+    "sourcePath": "protocols.ac-16.overview[2]",
+    "sourceText": "Only the patient may press the response buttons. EMS and bystanders must never press them because doing so can prevent lifesaving therapy.",
+    "targets": [
+      {
+        "path": "protocols.ac-16.treatmentSteps[1]",
+        "text": "Only the patient may press the response buttons. EMS personnel, caregivers, and bystanders must never press them."
+      },
+      {
+        "path": "protocols.ac-16.warnings[1]",
+        "text": "Never press the response buttons for the patient; only the patient may use them as a consciousness test."
+      }
+    ],
+    "reason": "Patient-only response buttons and prevention-of-therapy safety represented by treatment sequence and consciousness-test warning."
+  },
+  {
+    "sourcePath": "protocols.ac-16.assessment[0].items[3]",
+    "sourceText": "If the two-tone siren announces that response buttons should be pressed or that bystanders must not interfere, an electrical shock is likely and rescuers must clear the patient.",
+    "targets": [
+      {
+        "path": "protocols.ac-16.flow[1].text",
+        "text": "“Press response buttons” or “Bystanders, do not interfere” means shock is likely"
+      },
+      {
+        "path": "protocols.ac-16.flow[2].text",
+        "text": "Stop contact/CPR temporarily • only patient may press response buttons • allow device treatment"
+      }
+    ],
+    "reason": "Exact prompt/likely-shock/clear-patient branch retained."
+  },
+  {
+    "sourcePath": "protocols.ac-16.assessment[1].items[0]",
+    "sourceText": "After the active warning ends, immediately reassess pulse and breathing and begin or resume CPR when indicated.",
+    "targets": [
+      {
+        "path": "protocols.ac-16.flow[3].text",
+        "text": "Immediately reassess • start or resume CPR when indicated"
+      },
+      {
+        "path": "protocols.ac-16.careModules[0].levels[0].actions[1]",
+        "text": "When the warning ends, assess pulse and breathing, begin or resume CPR, and use the AED after the LifeVest is safely disconnected or removed."
+      }
+    ],
+    "reason": "After-warning pulse/breathing reassessment and immediate indicated CPR retained."
+  },
+  {
+    "sourcePath": "protocols.ac-16.treatmentSteps[2]",
+    "sourceText": "When the siren stops or the device announces that an unresponsive patient needs CPR, immediately reassess and start or resume CPR when indicated.",
+    "targets": [
+      {
+        "path": "protocols.ac-16.flow[3].text",
+        "text": "Immediately reassess • start or resume CPR when indicated"
+      }
+    ],
+    "reason": "Same siren-stops/CPR-prompt reassessment and indicated CPR retained."
+  },
+  {
+    "sourcePath": "protocols.ac-16.treatmentSteps[8]",
+    "sourceText": "Bring the garment, monitor, battery, charger or charger/hotspot, extra battery, and stored-event information to the hospital.",
+    "targets": [
+      {
+        "path": "protocols.ac-16.flow[6].text",
+        "text": "Bring garment, monitor, battery, charger/hotspot, extra battery, and event information"
+      }
+    ],
+    "reason": "Same garment/monitor/battery/charger-hotspot/extra battery/event info transport list retained."
+  },
+  {
+    "sourcePath": "protocols.ac-16.warnings[3]",
+    "sourceText": "Disconnect the LifeVest monitor from the electrode belt before external defibrillation, cardioversion, or pacing.",
+    "targets": [
+      {
+        "path": "protocols.ac-16.treatmentSteps[4]",
+        "text": "Before external defibrillation, cardioversion, or pacing, disconnect the LifeVest monitor from the electrode belt. Prefer complete battery and garment removal when urgent EMS electrical therapy is required."
+      }
+    ],
+    "reason": "Same monitor-to-electrode-belt disconnection before all EMS electrical therapies retained."
+  },
+  {
+    "sourcePath": "protocols.ac-16.specialPopulations[0].items[0]",
+    "sourceText": "Allow an imminent LifeVest shock during the active treatment warning, then immediately resume assessment and CPR.",
+    "targets": [
+      {
+        "path": "protocols.ac-16.treatmentSteps[0]",
+        "text": "During an active two-tone treatment siren, stop touching the patient, temporarily stop CPR, clear everyone, and allow the device to complete its treatment sequence."
+      },
+      {
+        "path": "protocols.ac-16.flow[3].text",
+        "text": "Immediately reassess • start or resume CPR when indicated"
+      }
+    ],
+    "reason": "Same imminent active-warning shock allowance followed by immediate reassessment/CPR retained."
+  },
+  {
+    "sourcePath": "protocols.am-01.overview[1]",
+    "sourceText": "Epinephrine is the first-line treatment for anaphylaxis and must not be delayed for vascular access, monitoring, antihistamines, corticosteroids, or transport preparation.",
+    "targets": [
+      {
+        "path": "protocols.am-01.medications[0].notes[2]",
+        "text": "Do not delay administration for vascular access, cardiac monitoring, antihistamine, corticosteroid, or transport preparation."
+      }
+    ],
+    "reason": "First-line epinephrine priority/non-delay safeguards retained with medication order and flow priority."
+  },
+  {
+    "sourcePath": "protocols.am-01.contraindications[1]",
+    "sourceText": "Do not give diphenhydramine to a patient with hypotension, poor perfusion, or decreased mental status.",
+    "targets": [
+      {
+        "path": "protocols.am-01.medications[3].notes[1]",
+        "text": "Do not administer for hypotension, poor perfusion, or decreased mental status."
+      }
+    ],
+    "reason": "Exact diphenhydramine hypotension/perfusion/mental-status contraindications retained with P-only medication row."
+  },
+  {
+    "sourcePath": "protocols.am-01.treatmentSteps[2]",
+    "sourceText": "Give epinephrine 1 mg/mL 0.5 mg IM in the lateral thigh immediately for anaphylaxis. A 0.3 mg autoinjector is acceptable when it is the available device.",
+    "targets": [
+      {
+        "path": "protocols.am-01.careModules[0].levels[0].actions[1]",
+        "text": "For anaphylaxis, give epinephrine 1 mg/mL 0.5 mg IM in the lateral thigh; a 0.3 mg autoinjector is acceptable when that is the available device. Repeat every five minutes while significant symptoms persist."
+      }
+    ],
+    "reason": "Exact IM concentration/dose/lateral-thigh and available-autoinjector alternative retained with EMT authority."
+  },
+  {
+    "sourcePath": "protocols.am-01.treatmentSteps[4]",
+    "sourceText": "Support airway and ventilation and give albuterol 2.5 mg by nebulizer for persistent bronchospasm after epinephrine; repeat every 5–15 minutes as needed to a maximum of three treatments.",
+    "targets": [
+      {
+        "path": "protocols.am-01.careModules[0].levels[0].actions[0]",
+        "text": "Remove or stop the suspected trigger when safe, perform the primary assessment, position the patient appropriately, and provide oxygen, suction, or BVM ventilation when indicated."
+      },
+      {
+        "path": "protocols.am-01.careModules[0].levels[0].actions[2]",
+        "text": "Give albuterol 2.5 mg by nebulizer for persistent bronchospasm after epinephrine; repeat every 5–15 minutes as needed to a maximum of three treatments."
+      }
+    ],
+    "reason": "Airway/ventilation support and full post-epinephrine albuterol regimen retained."
+  },
+  {
+    "sourcePath": "protocols.am-01.treatmentSteps[5]",
+    "sourceText": "For hypotension or poor perfusion, give isotonic crystalloid in 500 mL IV/IO aliquots with reassessment, maximum 2 liters. Use 250 mL aliquots for patients at risk of fluid overload.",
+    "targets": [
+      {
+        "path": "protocols.am-01.careModules[0].levels[1].actions[1]",
+        "text": "For hypotension or poor perfusion, give isotonic crystalloid in 500 mL IV/IO aliquots with reassessment, maximum 2 liters. Use 250 mL aliquots when CHF, renal failure, liver failure, pulmonary edema, or volume overload is present or suspected."
+      }
+    ],
+    "reason": "Exact hypotension/poor-perfusion fluid aliquot/cap/overload-adjustment instructions retained."
+  },
+  {
+    "sourcePath": "protocols.am-01.warnings[0]",
+    "sourceText": "Anaphylaxis may occur without rash or hives.",
+    "targets": [
+      {
+        "path": "protocols.am-01.assessment[0].items[2]",
+        "text": "Acute hypotension, bronchospasm, or laryngeal involvement after a known or highly probable allergen exposure is anaphylaxis even without skin findings."
+      }
+    ],
+    "reason": "Same no-skin-findings anaphylaxis recognition retained."
+  },
+  {
+    "sourcePath": "protocols.am-01.clinicalPearls[2]",
+    "sourceText": "Albuterol treats lower-airway bronchospasm but does not treat laryngeal edema or shock.",
+    "targets": [
+      {
+        "path": "protocols.am-01.medications[1].notes[1]",
+        "text": "Albuterol does not treat upper-airway edema, hypotension, or shock and is not a substitute for repeated epinephrine."
+      }
+    ],
+    "reason": "Same lower-airway-only albuterol limitation and upper-airway/shock exclusion retained."
+  },
+  {
+    "sourcePath": "protocols.am-02.treatmentSteps[0]",
+    "sourceText": "Treat glucose below 70 mg/dL when symptoms are present or when symptoms cannot be assessed reliably because of altered mental status.",
+    "targets": [
+      {
+        "path": "protocols.am-02.flow[1].text",
+        "text": "Treat when symptomatic or when symptoms cannot be assessed reliably because of altered mental status"
+      },
+      {
+        "path": "protocols.am-02.flow[1].title",
+        "text": "Glucose <70 mg/dL?"
+      }
+    ],
+    "reason": "Exact below-70 and symptomatic/unreliably-assessable-AMS trigger retained."
+  },
+  {
+    "sourcePath": "protocols.am-02.treatmentSteps[1]",
+    "sourceText": "If swallowing and airway protection are intact, give oral glucose 15–25 g according to the packaged dose. Reassess clinically and repeat glucose within 10–15 minutes.",
+    "targets": [
+      {
+        "path": "protocols.am-02.medications[0].dose",
+        "text": "15–25 g PO according to the packaged dose"
+      },
+      {
+        "path": "protocols.am-02.medications[0].notes[0]",
+        "text": "EMT, AEMT, and Paramedic when glucose is below 70 mg/dL with symptoms and the patient is awake, follows commands, swallows reliably, and protects the airway."
+      },
+      {
+        "path": "protocols.am-02.medications[0].notes[2]",
+        "text": "Reassess clinically and repeat glucose within 10–15 minutes."
+      }
+    ],
+    "reason": "Full oral glucose dose/eligibility and 10-15-minute recheck retained."
+  },
+  {
+    "sourcePath": "protocols.am-02.treatmentSteps[2]",
+    "sourceText": "If oral treatment is unsafe or ineffective, give D10 up to 250 mL IV/IO, titrated to improving mental status and glucose at least 70 mg/dL, maximum 25 g. Recheck glucose and neurologic status after five minutes.",
+    "targets": [
+      {
+        "path": "protocols.am-02.medications[1].dose",
+        "text": "Up to 250 mL IV/IO, titrated to improving mental status and glucose ≥70 mg/dL; maximum 25 g"
+      },
+      {
+        "path": "protocols.am-02.medications[1].notes[0]",
+        "text": "AEMT and Paramedic when oral glucose is unsafe or ineffective."
+      },
+      {
+        "path": "protocols.am-02.medications[1].notes[1]",
+        "text": "Recheck glucose and neurologic status after five minutes."
+      },
+      {
+        "path": "protocols.am-02.medications[1].name",
+        "text": "Dextrose 10% (D10)"
+      }
+    ],
+    "reason": "Full unsafe/ineffective-oral D10 volume/route/targets/max and five-minute neuro/glucose recheck retained."
+  },
+  {
+    "sourcePath": "protocols.am-02.warnings[0]",
+    "sourceText": "Do not administer anything orally when swallowing or airway protection is impaired.",
+    "targets": [
+      {
+        "path": "protocols.am-02.contraindications[0]",
+        "text": "Do not give oral glucose, food, drink, or oral medication to a patient who cannot swallow reliably or protect the airway."
+      }
+    ],
+    "reason": "Same nothing-oral-when-unsafe swallow/airway rule retained."
+  },
+  {
+    "sourcePath": "protocols.am-02.warnings[1]",
+    "sourceText": "Glucagon may be ineffective when hepatic glycogen is depleted and may cause vomiting.",
+    "targets": [
+      {
+        "path": "protocols.am-02.medications[2].notes[1]",
+        "text": "Protect against aspiration because vomiting may occur."
+      },
+      {
+        "path": "protocols.am-02.medications[2].notes[2]",
+        "text": "May be ineffective in malnutrition, prolonged fasting, chronic alcohol use, severe liver disease, or depleted glycogen states."
+      }
+    ],
+    "reason": "Same depleted-glycogen glucagon inefficacy and vomiting risks retained with all specific high-risk states."
+  },
+  {
+    "sourcePath": "protocols.am-02.warnings[4]",
+    "sourceText": "DKA can occur below 250 mg/dL, particularly with SGLT2 inhibitors, pregnancy, fasting, vomiting, alcohol use, or acute illness.",
+    "targets": [
+      {
+        "path": "protocols.am-02.assessment[1].items[1]",
+        "text": "Consider euglycemic DKA even when glucose is below 250 mg/dL, especially with SGLT2-inhibitor use, pregnancy, prolonged fasting, vomiting, alcohol use, or significant acute illness."
+      }
+    ],
+    "reason": "Same euglycemic-DKA threshold and all listed risk factors retained."
+  },
+  {
+    "sourcePath": "protocols.am-02.warnings[5]",
+    "sourceText": "Do not administer insulin, change an insulin-pump setting, or give routine fluid solely for hyperglycemia.",
+    "targets": [
+      {
+        "path": "protocols.am-02.contraindications[1]",
+        "text": "Do not administer insulin or independently alter an insulin-pump dose under this protocol."
+      },
+      {
+        "path": "protocols.am-02.contraindications[2]",
+        "text": "Do not administer routine IV fluid solely because the glucose is elevated; fluid is reserved for hypotension or poor perfusion."
+      }
+    ],
+    "reason": "Same no-insulin/pump-dose-change/routine-fluid-for-glucose prohibitions retained."
+  },
+  {
+    "sourcePath": "protocols.am-03.overview[2]",
+    "sourceText": "Dialysis catheters are not routine vascular access under AM-03. Their use during interfacility transport is governed by the separate transfer policy.",
+    "targets": [
+      {
+        "path": "protocols.am-03.contraindications[1]",
+        "text": "Do not access or use a dialysis catheter under AM-03. Existing dialysis-catheter use during interfacility transport is governed by the separate transfer policy."
+      }
+    ],
+    "reason": "Same no-dialysis-catheter access under this protocol and separate transfer policy retained."
+  },
+  {
+    "sourcePath": "protocols.am-03.contraindications[0]",
+    "sourceText": "Do not use a functioning fistula or graft extremity for a blood-pressure cuff, venipuncture, routine IV access, or constrictive dressing when another option exists.",
+    "targets": [
+      {
+        "path": "protocols.am-03.careModules[0].levels[0].actions[2]",
+        "text": "Protect a functioning fistula or graft extremity from blood-pressure cuffs, routine tourniquets, venipuncture, IV access, and constrictive dressings when another option exists."
+      }
+    ],
+    "reason": "All access-arm BP/venipuncture/IV/constrictive exclusions and another-option exception retained."
+  },
+  {
+    "sourcePath": "protocols.am-03.assessment[2].items[2]",
+    "sourceText": "In a peritoneal-dialysis patient, abdominal pain, fever, vomiting, guarding, or reported cloudy effluent should raise concern for peritonitis and sepsis.",
+    "targets": [
+      {
+        "path": "protocols.am-03.specialPopulations[0].items[0]",
+        "text": "Abdominal pain, fever, vomiting, guarding, or reported cloudy effluent may indicate peritonitis and sepsis."
+      }
+    ],
+    "reason": "Exact peritonitis/sepsis symptoms and cloudy-effluent cue retained."
+  },
+  {
+    "sourcePath": "protocols.am-03.treatmentSteps[1]",
+    "sourceText": "For suspected hyperkalemia with significant ECG changes or hemodynamic instability, the Paramedic gives either calcium chloride 500–1,000 mg IV/IO or calcium gluconate 1.5–3 g IV, with potassium-shifting treatment as listed below. Calcium gluconate is preferred when administering calcium through a peripheral IV.",
+    "targets": [
+      {
+        "path": "protocols.am-03.medications[0].dose",
+        "text": "1.5–3 g IV for hyperkalemia/arrhythmia; maximum 3 g per episode"
+      },
+      {
+        "path": "protocols.am-03.medications[0].notes[0]",
+        "text": "Paramedic for suspected hyperkalemia with significant ECG changes or hemodynamic instability."
+      },
+      {
+        "path": "protocols.am-03.medications[0].notes[1]",
+        "text": "Preferred calcium formulation when administration is through a peripheral IV."
+      },
+      {
+        "path": "protocols.am-03.medications[1].dose",
+        "text": "500–1,000 mg IV/IO for hyperkalemia/arrhythmia"
+      },
+      {
+        "path": "protocols.am-03.medications[1].notes[0]",
+        "text": "Paramedic alternative to calcium gluconate for suspected hyperkalemia with significant ECG changes or hemodynamic instability."
+      },
+      {
+        "path": "protocols.am-03.careModules[0].levels[2].actions[1]",
+        "text": "For suspected hyperkalemia with significant ECG changes or hemodynamic instability, administer calcium and potassium-shifting treatment as specified in this protocol without delaying for laboratory confirmation."
+      }
+    ],
+    "reason": "Same Paramedic instability/ECG trigger, formulation-specific calcium doses/route, peripheral preference and potassium-shifting care retained."
+  },
+  {
+    "sourcePath": "protocols.am-03.treatmentSteps[4]",
+    "sourceText": "For suspected hyperkalemia with a pulse, administer albuterol 10 mg by nebulizer. Do not administer nebulized albuterol during cardiac arrest.",
+    "targets": [
+      {
+        "path": "protocols.am-03.medications[3].dose",
+        "text": "10 mg by nebulizer"
+      },
+      {
+        "path": "protocols.am-03.medications[3].notes[0]",
+        "text": "Paramedic high-dose regimen for suspected hyperkalemia with a pulse."
+      },
+      {
+        "path": "protocols.am-03.medications[3].notes[1]",
+        "text": "Do not administer nebulized albuterol during cardiac arrest."
+      }
+    ],
+    "reason": "Same pulse-required 10 mg neb regimen and arrest prohibition retained."
+  },
+  {
+    "sourcePath": "protocols.am-03.treatmentSteps[7]",
+    "sourceText": "For hypotension or poor perfusion without pulmonary edema, give normal saline 250 mL IV/IO with reassessment after each aliquot, maximum 500 mL without Medical Control. Use norepinephrine under AM-05 for persistent shock rather than repeated large-volume fluid.",
+    "targets": [
+      {
+        "path": "protocols.am-03.medications[4].dose",
+        "text": "250 mL IV/IO; repeat with reassessment; maximum 500 mL without Medical Control"
+      },
+      {
+        "path": "protocols.am-03.medications[4].notes[0]",
+        "text": "AEMT and Paramedic for hypotension or poor perfusion without pulmonary edema."
+      },
+      {
+        "path": "protocols.am-03.medications[4].notes[1]",
+        "text": "Reassess lungs, oxygenation, blood pressure, and perfusion after every aliquot."
+      },
+      {
+        "path": "protocols.am-03.careModules[0].levels[2].actions[3]",
+        "text": "For persistent shock after cautious fluid, begin norepinephrine under the shock protocol rather than administering repeated large-volume crystalloid."
+      },
+      {
+        "path": "protocols.am-03.actionLinks[5].label",
+        "text": "AM-05 Hypotension / Shock"
+      }
+    ],
+    "reason": "Full fluid trigger/no-edema condition, dose/cap/MC limit/reassessment and early-norepinephrine rather than large volume retained."
+  },
+  {
+    "sourcePath": "protocols.am-03.warnings[0]",
+    "sourceText": "Calcium gluconate initial dose: 1.5–3 g IV; maximum 3 g per episode. Do not repeat calcium gluconate without a specific Medical Control order confirming the cumulative dose.",
+    "targets": [
+      {
+        "path": "protocols.am-03.medications[0].dose",
+        "text": "1.5–3 g IV for hyperkalemia/arrhythmia; maximum 3 g per episode"
+      },
+      {
+        "path": "protocols.am-03.medications[0].notes[2]",
+        "text": "For persistent life-threatening ECG changes, do not repeat calcium gluconate without a specific Medical Control order confirming the cumulative dose."
+      }
+    ],
+    "reason": "Exact initial range, episode max and specific MC cumulative-dose repeat requirement retained."
+  },
+  {
+    "sourcePath": "protocols.am-03.warnings[1]",
+    "sourceText": "Calcium chloride and calcium gluconate are alternatives. Do not give both as the initial calcium dose.",
+    "targets": [
+      {
+        "path": "protocols.am-03.treatmentSteps[2]",
+        "text": "Use calcium chloride and calcium gluconate as alternative formulations; do not administer both as the initial calcium dose. Calcium chloride may be repeated once after 5–10 minutes only when life-threatening ECG changes persist. Do not repeat calcium gluconate without a specific Medical Control order confirming the cumulative dose."
+      }
+    ],
+    "reason": "Same alternative-not-both-initial calcium instruction retained."
+  },
+  {
+    "sourcePath": "protocols.am-03.warnings[5]",
+    "sourceText": "Do not place routine equipment or vascular access in the fistula or graft extremity when another site exists.",
+    "targets": [
+      {
+        "path": "protocols.am-03.careModules[0].levels[0].actions[2]",
+        "text": "Protect a functioning fistula or graft extremity from blood-pressure cuffs, routine tourniquets, venipuncture, IV access, and constrictive dressings when another option exists."
+      }
+    ],
+    "reason": "Same protected fistula/graft extremity restriction with alternative-site exception retained."
+  },
+  {
+    "sourcePath": "protocols.am-04.overview[1]",
+    "sourceText": "Rapid, non-targeted blood-pressure reduction can reduce cerebral, coronary, and renal perfusion.",
+    "targets": [
+      {
+        "path": "protocols.am-04.warnings[0]",
+        "text": "Rapid uncontrolled BP reduction can worsen cerebral, coronary, or renal perfusion."
+      }
+    ],
+    "reason": "Same rapid non-targeted BP lowering cerebral/coronary/renal perfusion risk retained."
+  },
+  {
+    "sourcePath": "protocols.am-04.treatmentSteps[4]",
+    "sourceText": "For a non-stroke confirmed hypertensive emergency, contact Medical Control for any antihypertensive treatment not explicitly authorized by a linked condition-specific pathway.",
+    "targets": [
+      {
+        "path": "protocols.am-04.careModules[0].levels[2].actions[1]",
+        "text": "For undifferentiated suspected CVA with manually confirmed SBP above 220 mm Hg or DBP above 110 mm Hg, give labetalol 10 mg slow IV over 2 minutes. Reassess every 5 minutes; if still above the target after at least 10 minutes, repeat 10 mg once. Maximum total dose is 20 mg. The target is SBP 220 mm Hg or less and DBP 110 mm Hg or less."
+      },
+      {
+        "path": "protocols.am-04.flow[3].text",
+        "text": "Goal SBP ≤220 and DBP ≤110 • do not lower further without a condition-specific order"
+      }
+    ],
+    "reason": "Same repeat timing/only-if-above-target/once/max/target and no-further-lowering safeguard retained."
+  },
+  {
+    "sourcePath": "protocols.am-04.treatmentSteps[5]",
+    "sourceText": "Transport symptomatic patients and reassess frequently; do not let BP treatment delay stroke alert, definitive imaging, or time-critical transport.",
+    "targets": [
+      {
+        "path": "protocols.am-04.careModules[0].levels[2].actions[2]",
+        "text": "For a non-stroke hypertensive emergency, use the linked condition-specific pathway. Any labetalol use outside the undifferentiated-CVA branch requires Medical Control to define the indication, dose, and endpoint."
+      }
+    ],
+    "reason": "Same non-stroke condition-specific versus MC-directed authority retained."
+  },
+  {
+    "sourcePath": "protocols.am-04.warnings[1]",
+    "sourceText": "Do not administer labetalol to a patient with pulmonary edema, acute decompensated heart failure, cardiogenic shock, bradycardia, advanced heart block, or active bronchospasm.",
+    "targets": [
+      {
+        "path": "protocols.am-04.contraindications[2]",
+        "text": "Do not give labetalol for pulmonary edema, acute decompensated heart failure, cardiogenic shock, bradycardia, advanced heart block, or active bronchospasm."
+      }
+    ],
+    "reason": "Exact full labetalol exclusion list retained."
+  },
+  {
+    "sourcePath": "protocols.am-04.warnings[2]",
+    "sourceText": "Do not use the undifferentiated-CVA target after thrombolysis; AM-06 and written facility orders govern post-TNK treatment.",
+    "targets": [
+      {
+        "path": "protocols.am-04.contraindications[1]",
+        "text": "Do not use the undifferentiated-CVA labetalol branch for post-TNK transfer; follow AM-06 and written facility orders."
+      },
+      {
+        "path": "protocols.am-04.medications[0].notes[1]",
+        "text": "Goal BP: SBP ≤220 and DBP ≤110. Do not use this target for possible thrombolysis/TNK or post-TNK transfer."
+      }
+    ],
+    "reason": "Same no-undifferentiated-CVA target after thrombolysis and AM-06/written-orders route retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.overview[0]",
+    "sourceText": "Recognize shock from perfusion findings and trends, not blood pressure alone.",
+    "targets": [
+      {
+        "path": "protocols.am-05.flow[0].text",
+        "text": "SBP <90 mmHg or inadequate perfusion regardless of BP • confirm an abnormal automated reading manually when feasible"
+      },
+      {
+        "path": "protocols.am-05.contraindications[2]",
+        "text": "Do not treat a single automated blood-pressure value without considering the patient's complete perfusion assessment and BP trend."
+      }
+    ],
+    "reason": "Perfusion-not-single-BP shock recognition retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.assessment[0].items[2]",
+    "sourceText": "A normal mental status or GCS of 15 does not establish hemodynamic stability.",
+    "targets": [
+      {
+        "path": "protocols.am-05.warnings[0]",
+        "text": "A normal mental status or GCS of 15 does not exclude shock."
+      }
+    ],
+    "reason": "Same normal mental status/GCS 15 not proof of hemodynamic stability retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.assessment[2].items[1]",
+    "sourceText": "Obtain a 12-lead ECG when cardiac ischemia, dysrhythmia, pulmonary embolism, or cardiogenic shock is possible.",
+    "targets": [
+      {
+        "path": "protocols.am-05.careModules[2].levels[0].actions[0]",
+        "text": "Perform all EMT and AEMT actions; obtain and interpret a 12-lead ECG when cardiac ischemia, dysrhythmia, pulmonary embolism, or cardiogenic shock is possible."
+      }
+    ],
+    "reason": "Exact ECG indications retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.assessment[2].items[2]",
+    "sourceText": "Use waveform capnography when ventilation is assisted and when clinically useful in severe shock.",
+    "targets": [
+      {
+        "path": "protocols.am-05.careModules[2].levels[0].actions[1]",
+        "text": "Use waveform capnography when ventilation is assisted and when clinically useful for trending perfusion in severe shock."
+      }
+    ],
+    "reason": "Same assisted-ventilation/severe-shock capnography indication retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.treatmentSteps[0]",
+    "sourceText": "Follow Universal Patient Care, maintain the airway, support ventilation, provide oxygen when clinically indicated, prevent heat loss, and position according to the patient's condition.",
+    "targets": [
+      {
+        "path": "protocols.am-05.careModules[0].levels[0].actions[0]",
+        "text": "Follow Universal Patient Care; assess mental status, pulse quality, skin signs, capillary refill, blood-pressure trend, respiratory status, and evidence of inadequate perfusion."
+      },
+      {
+        "path": "protocols.am-05.careModules[0].levels[0].actions[2]",
+        "text": "Maintain the airway, assist ventilation when needed, and give oxygen for hypoxemia, respiratory distress, shock, or another clinical indication."
+      },
+      {
+        "path": "protocols.am-05.careModules[0].levels[0].actions[3]",
+        "text": "Position supine when tolerated unless respiratory distress, pulmonary edema, pregnancy, or another condition requires alternate positioning."
+      },
+      {
+        "path": "protocols.am-05.careModules[0].levels[0].actions[5]",
+        "text": "Prevent heat loss, obtain frequent vital signs, identify time-critical causes, and begin rapid transport with early receiving-facility notification."
+      }
+    ],
+    "reason": "Universal care, airway/ventilation/indicated oxygen, condition-specific positioning and heat-loss prevention retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.treatmentSteps[5]",
+    "sourceText": "Use 250 mL aliquots with reassessment in heart failure, renal failure, liver failure, suspected cardiogenic shock, or another condition with increased risk of volume overload.",
+    "targets": [
+      {
+        "path": "protocols.am-05.careModules[1].levels[0].actions[3]",
+        "text": "For heart failure, renal failure, liver failure, suspected cardiogenic shock, or another risk of volume overload, use 250 mL aliquots with reassessment after each aliquot."
+      }
+    ],
+    "reason": "Same 250 mL high-risk group list and each-aliquot reassessment retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.treatmentSteps[8]",
+    "sourceText": "For hemorrhagic shock without suspected traumatic brain injury when blood is unavailable, titrate warmed isotonic crystalloid only to maintain a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg; avoid unnecessary large-volume crystalloid. Control bleeding, reassess after treatment, and expedite definitive care.",
+    "targets": [
+      {
+        "path": "protocols.am-05.careModules[1].levels[0].actions[4]",
+        "text": "For suspected hemorrhagic shock without traumatic brain injury when blood is unavailable, titrate warmed isotonic crystalloid only to maintain a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg; avoid unnecessary large-volume crystalloid. Reassess after treatment."
+      },
+      {
+        "path": "protocols.am-05.careModules[0].levels[0].actions[4]",
+        "text": "Control external hemorrhage immediately using direct pressure, wound packing, tourniquets, pelvic stabilization, and other approved measures when indicated."
+      },
+      {
+        "path": "protocols.am-05.careModules[0].levels[0].actions[5]",
+        "text": "Prevent heat loss, obtain frequent vital signs, identify time-critical causes, and begin rapid transport with early receiving-facility notification."
+      }
+    ],
+    "reason": "Same non-TBI hemorrhage/blood-unavailable warmed-fluid perfusion endpoints and volume avoidance, bleeding control and expedited transport retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.treatmentSteps[9]",
+    "sourceText": "For suspected TBI, prevent hypotension and target adult SBP at least 110 mmHg, including age 70. Do not use permissive hypotension. Avoid hypoxemia and excessive crystalloid; use normal saline when crystalloid is required. Reassess blood pressure frequently and after treatment.",
+    "targets": [
+      {
+        "path": "protocols.am-05.specialPopulations[1].items[0]",
+        "text": "Prevent hypotension: target adult SBP at least 110 mmHg, including age 70. Do not use permissive hypotension. Avoid hypoxemia and excessive crystalloid; use normal saline when crystalloid is required. Reassess blood pressure frequently and after treatment."
+      }
+    ],
+    "reason": "Exact TBI adult target including age 70, no permissive hypotension, normal-saline/oxygenation/crystalloid cautions and reassessment retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.treatmentSteps[14]",
+    "sourceText": "For persistent hypotension or inadequate perfusion after an appropriate fluid trial—or earlier when additional fluid is contraindicated—begin a Paramedic vasopressor infusion with continuous ECG and frequent blood-pressure monitoring.",
+    "targets": [
+      {
+        "path": "protocols.am-05.careModules[2].levels[0].actions[3]",
+        "text": "For persistent hypotension or inadequate perfusion after an appropriate fluid trial—or earlier when further fluid is contraindicated—begin norepinephrine 0.05–0.5 mcg/kg/min IV/IO and titrate to adequate perfusion and MAP at least 65 mmHg."
+      },
+      {
+        "path": "protocols.am-05.careModules[2].levels[0].actions[5]",
+        "text": "Use continuous ECG monitoring and frequent blood-pressure reassessment during vasopressor treatment."
+      }
+    ],
+    "reason": "Same persistent-shock or fluid-contraindicated trigger and continuous ECG/frequent BP monitoring retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.treatmentSteps[16]",
+    "sourceText": "Use epinephrine infusion 2–10 mcg/min IV/IO when norepinephrine is unavailable or significant bradycardia accompanies shock; titrate to adequate perfusion and MAP at least 65 mmHg.",
+    "targets": [
+      {
+        "path": "protocols.am-05.careModules[2].levels[0].actions[4]",
+        "text": "When norepinephrine is unavailable or significant bradycardia accompanies shock, begin epinephrine infusion 2–10 mcg/min IV/IO and titrate to adequate perfusion and MAP at least 65 mmHg."
+      }
+    ],
+    "reason": "Exact norepinephrine-unavailable/bradycardia epinephrine alternative, full dose/route/target retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.warnings[3]",
+    "sourceText": "Do not use indiscriminate large-volume crystalloid in uncontrolled hemorrhage, pulmonary edema, cardiogenic shock, or suspected volume overload.",
+    "targets": [
+      {
+        "path": "protocols.am-05.contraindications[0]",
+        "text": "Do not give indiscriminate large-volume crystalloid in uncontrolled hemorrhage, pulmonary edema, cardiogenic shock, or suspected volume overload."
+      }
+    ],
+    "reason": "Exact indiscriminate large-volume crystalloid prohibition retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.warnings[4]",
+    "sourceText": "Do not use permissive hypotension when traumatic brain injury is suspected.",
+    "targets": [
+      {
+        "path": "protocols.am-05.contraindications[1]",
+        "text": "Do not use permissive hypotension when traumatic brain injury is suspected."
+      }
+    ],
+    "reason": "Exact no permissive hypotension for suspected TBI retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.warnings[5]",
+    "sourceText": "Do not delay transport for repeated peripheral-IV attempts, completion of a fluid target, or normalization of blood pressure.",
+    "targets": [
+      {
+        "path": "protocols.am-05.treatmentSteps[17]",
+        "text": "Begin transport early, notify the receiving facility, and do not delay for repeated IV attempts, completion of a fluid target, or normalization of blood pressure."
+      }
+    ],
+    "reason": "Exact repeated-IV/fluid-target/BP-normalization transport-delay safeguards retained."
+  },
+  {
+    "sourcePath": "protocols.am-05.specialPopulations[2].items[0]",
+    "sourceText": "Beyond approximately 20 weeks, use left uterine displacement or left lateral positioning when feasible and follow AO-03 for pregnancy-related causes.",
+    "targets": [
+      {
+        "path": "protocols.am-05.treatmentSteps[11]",
+        "text": "For pregnancy beyond approximately 20 weeks, use left uterine displacement or left lateral positioning when feasible, avoid prolonged supine positioning, treat hemorrhage or another cause, and follow AO-03."
+      }
+    ],
+    "reason": "Same >approximately 20-week uterine-displacement/lateral positioning and AO-03 pathway retained."
+  },
+  {
+    "sourcePath": "protocols.am-06.overview[0]",
+    "sourceText": "Interfacility transfer after hospital-administered Tenecteplase (TNK) for suspected acute ischemic stroke.",
+    "targets": [
+      {
+        "path": "protocols.am-06.indications[0]",
+        "text": "Interfacility transfer after hospital-administered Tenecteplase (TNK) for suspected acute ischemic stroke."
+      }
+    ],
+    "reason": "Exact transfer-population duplicate."
+  },
+  {
+    "sourcePath": "protocols.am-06.treatmentSteps[3]",
+    "sourceText": "Continue only an antihypertensive infusion specifically ordered by the sending facility and accepted under the interfacility-transfer policy; titrate only to written parameters.",
+    "targets": [
+      {
+        "path": "protocols.am-06.careModules[0].levels[2].actions[3]",
+        "text": "Continue an antihypertensive infusion only under written sending-facility orders and accepted pump parameters. Do not initiate or titrate a new antihypertensive under AM-06 without Medical Control or receiving-facility direction."
+      }
+    ],
+    "reason": "Same written-order/accepted-pump-parameter limitation and no new treatment/titration without direction retained."
+  },
+  {
+    "sourcePath": "protocols.am-06.treatmentSteps[4]",
+    "sourceText": "Avoid unnecessary invasive procedures and IM medications. Apply prolonged direct pressure after any essential vascular access.",
+    "targets": [
+      {
+        "path": "protocols.am-06.careModules[0].levels[1].actions[0]",
+        "text": "Assist with authorized monitoring and essential vascular access. Avoid unnecessary invasive procedures, IM medication, and additional vascular attempts after thrombolysis."
+      },
+      {
+        "path": "protocols.am-06.careModules[0].levels[1].actions[1]",
+        "text": "Apply prolonged direct pressure after any necessary vascular access."
+      }
+    ],
+    "reason": "Same unnecessary invasive/IM avoidance and prolonged access-site direct pressure retained."
+  },
+  {
+    "sourcePath": "protocols.am-07.overview[1]",
+    "sourceText": "Begin immediately lifesaving care at the patient side when safe, then move promptly once critical interventions are underway.",
+    "targets": [
+      {
+        "path": "protocols.am-07.treatmentSteps[1]",
+        "text": "Treat airway, ventilation, severe hemorrhage, tension pneumothorax, hypoglycemia, anaphylaxis, dysrhythmia, and shock before prolonged movement when safe."
+      },
+      {
+        "path": "protocols.am-07.treatmentSteps[6]",
+        "text": "Move promptly once critical interventions are underway; plan reassessment stops during prolonged extrication and reassess at least every 5 minutes."
+      }
+    ],
+    "reason": "Same safe immediate life-threat intervention before moving promptly once underway retained."
+  },
+  {
+    "sourcePath": "protocols.am-07.warnings[0]",
+    "sourceText": "GCS 15 does not equal stability.",
+    "targets": [
+      {
+        "path": "protocols.am-07.assessment[0].items[1]",
+        "text": "A normal GCS or initially acceptable BP does not exclude a crashing patient; reassess after every intervention."
+      }
+    ],
+    "reason": "Same normal-GCS-not-stability caution retained."
+  },
+  {
+    "sourcePath": "protocols.am-07.warnings[3]",
+    "sourceText": "Use NIPPV only when the patient can protect the airway and is not vomiting or peri-arrest.",
+    "targets": [
+      {
+        "path": "protocols.am-07.contraindications[1]",
+        "text": "Do not use NIPPV for vomiting, facial trauma, inability to cooperate, inability to protect the airway, or impending arrest."
+      }
+    ],
+    "reason": "Same airway/vomiting/impending-arrest NIPPV restrictions retained with additional exclusions."
+  },
+  {
+    "sourcePath": "protocols.am-07.clinicalPearls[1]",
+    "sourceText": "Call for additional hands and advanced resources early.",
+    "targets": [
+      {
+        "path": "protocols.am-07.careModules[0].levels[0].actions[1]",
+        "text": "Position, suction, use BVM ventilation and oxygen when indicated, control hemorrhage, apply AED/monitor support, prevent heat loss, request resources early, and prepare transport."
+      }
+    ],
+    "reason": "Same early additional-resource request retained."
+  }
+]

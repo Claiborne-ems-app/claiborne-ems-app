@@ -1,10 +1,12 @@
+import { readFile } from "node:fs/promises";
+import { readProtocolAware } from "./protocol-source-helper.mjs";
 import assert from "node:assert/strict";
-import { readFile, stat } from "node:fs/promises";
+import { stat } from "node:fs/promises";
 import test from "node:test";
 import { canonicalPdfPages } from "../data/canonical-pdf-pages.ts";
 import { structuredPediatricMedicalProtocols } from "../data/structured-pediatric-medical-protocols.ts";
 
-const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
+const read = (path) => readProtocolAware(path, import.meta.url);
 
 test("PM-01 is released as approved Claiborne app content and a direct source PDF", async () => {
   const [jsonCatalog, tsCatalog, structured, pdf, metadata] = await Promise.all([
@@ -22,8 +24,8 @@ test("PM-01 is released as approved Claiborne app content and a direct source PD
   assert.equal(pm01?.source, "Claiborne County EMS Clinical Protocols");
   assert.match(tsCatalog, /"id": "PM-01"[\s\S]*?"status": "approved"/);
   assert.match(structured, /id: "pm-01"[\s\S]*?reviewStatus: "Approved"/);
-  assert.match(structured, /Methylprednisolone", dose: "2 mg\/kg IV; maximum 125 mg"/);
-  assert.doesNotMatch(structured, /id: "pm-01"[\s\S]*?Methylprednisolone", dose: "Medical Control only/);
+  assert.match(structured, /Methylprednisolone",\s*dose: "2 mg\/kg IV; maximum 125 mg"/);
+  assert.doesNotMatch(structured, /id: "pm-01"[\s\S]*?Methylprednisolone",\s*dose: "Medical Control only/);
   assert.ok(metadata.size > 20_000);
   assert.equal(pdf.subarray(0, 5).toString("ascii"), "%PDF-");
 });

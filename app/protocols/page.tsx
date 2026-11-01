@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { printManualPath } from "../../lib/print-manual";
 import {
   AlertTriangle,
   Baby,
@@ -105,6 +106,11 @@ export default function ProtocolsPage() {
           </span>
           <ChevronRight aria-hidden="true" className="h-5 w-5 shrink-0 text-sky-300" />
         </Link>
+
+        <a href={printManualPath} className="mb-5 block rounded-2xl border border-sky-400/30 p-4">
+          <strong>Printable vehicle manual (PDF)</strong>
+          <p className="mt-1 text-sm text-slate-300">All protocol sections, flow diagrams and medication reference. Save the offline package before field use.</p>
+        </a>
 
         <section aria-label="Protocol categories" className="space-y-3">
           {protocolCategories.map((category) => {

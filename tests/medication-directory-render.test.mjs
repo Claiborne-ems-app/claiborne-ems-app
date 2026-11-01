@@ -51,22 +51,22 @@ test("actual medication JSX renders EMT, unverified AEMT and Paramedic dose scop
     const ketorolac = detail(html, "ketorolac");
     const txa = detail(html, "tranexamic-acid");
     if (level === "EMT") {
-      assert.ok(!acetaminophen.includes("1 g IV/IO"));
+      assert.ok(!acetaminophen.includes("maximum 750 mg"));
       assert.ok(!html.includes('id="fentanyl"'));
       assert.equal(txa, "");
     }
     if (level === "AEMT") {
       assert.match(acetaminophen, /AEMT — not enabled/);
-      assert.ok(!acetaminophen.includes("1 g IV/IO"));
+      assert.ok(!acetaminophen.includes("maximum 750 mg"));
       assert.match(ketorolac, /AEMT — not enabled/);
-      assert.ok(!ketorolac.includes("15–30 mg IV once"));
-      assert.ok(!ketorolac.includes("60 mg IM"));
+      assert.ok(!ketorolac.includes("15 mg IV once"));
+      assert.ok(!ketorolac.includes("30 mg IM once"));
       assert.ok(!txa.includes("Traumatic hemorrhage with clinical shock — IV/IO"));
       assert.match(txa, /Persistent atraumatic anterior epistaxis/);
     }
     if (level === "Paramedic") {
-      assert.match(acetaminophen, /1 g IV\/IO/);
-      assert.match(ketorolac, /15–30 mg IV once/);
+      assert.match(acetaminophen, /maximum 750 mg/);
+      assert.match(ketorolac, /15 mg IV once/);
       assert.match(txa, /1–2 g IV\/IO/);
       assert.match(detail(html, "ketamine"), /open globe/);
     }

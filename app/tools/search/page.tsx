@@ -15,7 +15,7 @@ export default function ProtocolSearchPage() {
             Protocol Search
           </h1>
           <p className="mt-2 leading-6 text-slate-400">
-            Search native protocol text, symptoms, medications, abbreviations,
+            Search protocol text, symptoms, medications, abbreviations,
             and protocol numbers.
           </p>
         </header>

@@ -1,0 +1,303 @@
+[
+  {
+    "protocol": "up-04",
+    "field": "medications[Naloxone — intranasal].notes",
+    "before": null,
+    "after": "Before pediatric intranasal naloxone, obtain a product/device-specific Medical Control order identifying the nasal product and strength, or injectable concentration and atomizer model, with dose, repeat interval and dose limits. For an atomized injectable preparation, the order must specify deliverable volume, nostril division and device dead-space handling. Do not substitute the pediatric IV sequence for an IN order or substitute a commercial 4 mg spray for the adult 2 mg order.",
+    "reason": "Preserve unique product/device and administration details from reviewFlags"
+  },
+  {
+    "protocol": "up-19",
+    "field": ".clinicalPearls[0]",
+    "before": "UP-19 is retained temporarily only to prevent broken links and numbering confusion.",
+    "after": "UP-19 is retired; use UP-18 for all agitation care.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "ac-05",
+    "field": "warnings",
+    "before": null,
+    "after": "Use CPAP only with confirmed equipment capabilities and device-specific training. Follow the fixed or adjustable device instructions and the pressure limits specified here.",
+    "reason": "Preserve operative safety restriction from reviewFlags without release-history language"
+  },
+  {
+    "protocol": "am-01",
+    "field": ".medications[3].notes[0]",
+    "before": "Paramedic only for isolated or persistent skin symptoms; EMT/AEMT administration is not enabled for this release without documented specific Tennessee authority.",
+    "after": "Paramedic only for isolated or persistent skin symptoms; EMT/AEMT administration is not enabled without documented specific Tennessee authority.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "tb-01",
+    "field": "references",
+    "before": "Claiborne County EMS native protocol content; controlled PDF generated from the same structured source.",
+    "after": null,
+    "reason": "Internal implementation provenance, not a clinical source"
+  },
+  {
+    "protocol": "tb-02",
+    "field": "references",
+    "before": "Claiborne County EMS native protocol content; controlled PDF generated from the same structured source.",
+    "after": null,
+    "reason": "Internal implementation provenance, not a clinical source"
+  },
+  {
+    "protocol": "tb-03",
+    "field": ".flow[5].text",
+    "before": "Prepare ECG-directed calcium, sodium bicarbonate, and high-dose albuterol treatment before release for ECG changes, dysrhythmia, or peri-arrest deterioration under the reconciled standing order or Medical Control. No routine prophylactic calcium or bicarbonate.",
+    "after": "Prepare ECG-directed calcium, sodium bicarbonate, and high-dose albuterol treatment before release for ECG changes, dysrhythmia, or peri-arrest deterioration under the applicable standing order or Medical Control. No routine prophylactic calcium or bicarbonate.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "tb-03",
+    "field": "references",
+    "before": "Claiborne County EMS native protocol content; controlled PDF generated from the same structured source.",
+    "after": null,
+    "reason": "Internal implementation provenance, not a clinical source"
+  },
+  {
+    "protocol": "tb-04",
+    "field": "references",
+    "before": "Claiborne County EMS native protocol content; controlled PDF generated from the same structured source.",
+    "after": null,
+    "reason": "Internal implementation provenance, not a clinical source"
+  },
+  {
+    "protocol": "tb-05",
+    "field": "references",
+    "before": "Claiborne County EMS native protocol content; controlled PDF generated from the same structured source.",
+    "after": null,
+    "reason": "Internal implementation provenance, not a clinical source"
+  },
+  {
+    "protocol": "tb-06",
+    "field": "references",
+    "before": "Claiborne County EMS native protocol content; controlled PDF generated from the same structured source.",
+    "after": null,
+    "reason": "Internal implementation provenance, not a clinical source"
+  },
+  {
+    "protocol": "tb-07",
+    "field": "references",
+    "before": "Claiborne County EMS native protocol content; controlled PDF generated from the same structured source.",
+    "after": null,
+    "reason": "Internal implementation provenance, not a clinical source"
+  },
+  {
+    "protocol": "tb-08",
+    "field": "references",
+    "before": "Claiborne County EMS native protocol content; controlled PDF generated from the same structured source.",
+    "after": null,
+    "reason": "Internal implementation provenance, not a clinical source"
+  },
+  {
+    "protocol": "tb-09",
+    "field": "references",
+    "before": "Claiborne County EMS native protocol content; controlled PDF generated from the same structured source.",
+    "after": null,
+    "reason": "Internal implementation provenance, not a clinical source"
+  },
+  {
+    "protocol": "ao-03",
+    "field": ".medications[0].notes[0]",
+    "before": "For uncontrolled vaginal or postpartum hemorrhage with signs of shock under the imported source.",
+    "after": "For uncontrolled vaginal or postpartum hemorrhage with signs of shock; follow the indication and timing limits above.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "ao-03",
+    "field": "warnings",
+    "before": null,
+    "after": "Oxytocin is not on the Claiborne formulary and is not authorized under this protocol.",
+    "reason": "Preserve operative safety restriction from reviewFlags without release-history language"
+  },
+  {
+    "protocol": "ar-08",
+    "field": "warnings",
+    "before": null,
+    "after": "This protocol does not authorize routine repeat paralysis. Pediatric post-airway medication requires the pediatric pathway and a direct online Medical Control or receiving-facility order.",
+    "reason": "Preserve operative safety restriction from reviewFlags without release-history language"
+  },
+  {
+    "protocol": "pc-01",
+    "field": ".references[1]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "pc-02",
+    "field": ".references[1]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "pc-03",
+    "field": ".references[1]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "pc-04",
+    "field": ".references[1]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "pc-05",
+    "field": ".references[1]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "pc-06",
+    "field": ".references[1]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "pc-07",
+    "field": ".references[1]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "pc-08",
+    "field": ".references[1]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "pm-03",
+    "field": ".actionLinks[1].description",
+    "before": "Open for TBI oxygenation and ventilation safeguards; pediatric TBI blood-pressure targets are Medical Control-directed for this release.",
+    "after": "Open for TBI oxygenation and ventilation safeguards; pediatric TBI blood-pressure targets are Medical Control-directed.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "pm-04",
+    "field": ".references[1]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "pm-04",
+    "field": "warnings",
+    "before": null,
+    "after": "PM-04 does not authorize ketorolac, morphine, hydromorphone, or ketamine as standing-order pediatric analgesics.",
+    "reason": "Preserve operative safety restriction from reviewFlags without release-history language"
+  },
+  {
+    "protocol": "te-01",
+    "field": ".references[2]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "te-02",
+    "field": ".references[2]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "te-03",
+    "field": ".references[2]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "te-04",
+    "field": ".references[2]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "te-05",
+    "field": ".references[2]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "te-07",
+    "field": ".flow[4].text",
+    "before": "APAP/salicylate • beta/CCB • CO/cyanide • organophosphate • TCA. Use the current medication reference and Poison Help/Medical Control; do not import legacy source-PDF antidote doses.",
+    "after": "APAP/salicylate • beta/CCB • CO/cyanide • organophosphate • TCA. Use the current medication reference and Poison Help/Medical Control; do not use unapproved antidote doses.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "te-07",
+    "field": ".references[2]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "te-08",
+    "field": ".warnings[1]",
+    "before": "Claiborne ground units do not carry a CHEMPACK, Mark I, or equivalent atropine/pralidoxime kit. Do not add external kit dosing or deploy an unstocked antidote from the legacy imported source.",
+    "after": "Claiborne ground units do not carry a CHEMPACK, Mark I, or equivalent atropine/pralidoxime kit. Do not use external kit dosing or administer an unstocked antidote.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "te-08",
+    "field": ".references[2]",
+    "before": "Current Tennessee EMS scope of practice and Claiborne County standing orders control when provider scope differs from the imported source.",
+    "after": "Current Tennessee EMS scope of practice and Claiborne County standing orders control for all provider permissions.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "te-09",
+    "field": ".medications[1].notes[0]",
+    "before": "Do not import legacy North Carolina autoinjector counts or antidote doses into Claiborne field care.",
+    "after": "Do not use unapproved autoinjector counts or antidote doses.",
+    "reason": "Remove internal provenance/release wording; preserve clinical meaning"
+  },
+  {
+    "protocol": "te-09",
+    "field": "warnings",
+    "before": null,
+    "after": "Specialty therapies require an adopted protocol, stocked preparation, appropriate training and an applicable standing order or Medical Control order. An online order does not expand the provider’s authorized scope.",
+    "reason": "Preserve operative safety restriction from reviewFlags without release-history language"
+  },
+  {
+    "protocol": "ac-01",
+    "field": "warnings",
+    "before": null,
+    "after": "For arrest-associated hypovolemia, use cause-directed fluid resuscitation; do not require a routine fixed-volume saline bolus.",
+    "reason": "Independent QA: preserve unique clinical details from reviewFlags"
+  },
+  {
+    "protocol": "ao-02",
+    "field": "warnings",
+    "before": null,
+    "after": "AO-02 does not specify a neonatal D10 dose. After immediate newborn stabilization, use PM-02 for the approved pediatric hypoglycemia pathway.",
+    "reason": "Independent QA: preserve unique clinical details from reviewFlags"
+  },
+  {
+    "protocol": "up-11",
+    "field": "warnings",
+    "before": null,
+    "after": "The ketorolac maximum is 15 mg IV once or 30 mg IM once for all adults, including patients age 65 years or older or weighing less than 50 kg. Do not administer 60 mg IM; expanded AEMT authority is not established by this dose limit.",
+    "reason": "Independent QA: preserve unique clinical details from reviewFlags"
+  },
+  {
+    "protocol": "ac-14",
+    "field": "warnings",
+    "before": null,
+    "after": "Destination selection must account for patient stability, transport time, LVAD-center capability, and coordinator or Medical Control direction.",
+    "reason": "Independent full319flag audit: preserve destination capability/time/stability clinical guard"
+  }
+]

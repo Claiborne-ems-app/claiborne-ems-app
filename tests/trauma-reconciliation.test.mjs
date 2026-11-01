@@ -46,7 +46,7 @@ test("TB05 AM05 and TB12 use the same adult TBI target including age70", () => {
     assert.match(source, /blood pressure frequently and after treatment/);
     assert.doesNotMatch(source, /age 15-49|age 50-69|>70/);
   }
-  assert.match(text("tb-05"), /pediatric TBI numeric target table and age boundaries remain unpublished\/unapproved/);
+  assert.match(text("tb-05"), /Medical Control-directed pediatric TBI blood-pressure targets.*no numeric pediatric target table or age boundaries are established as standing orders/i);
   assert.match(text("tb-05"), /obtain Medical Control for age-specific TBI resuscitation guidance/);
   assert.doesNotMatch(text("tb-05"), /use age-specific targets for children|use age-specific pediatric targets/);
   assert.match(text("am-05"), /Outside the suspected-TBI branch/);
@@ -204,13 +204,13 @@ test("UP11 does not authorize unverified expanded AEMT analgesia and retains ope
   const aemt = provider("up-11", "AEMT");
   assert.match(aemt, /not enabled by default while individual authorization is unverified/);
   assert.match(aemt, /current Tennessee authority.*documented Tennessee-approved expanded analgesia training.*agency credentialing and competency verification.*medical-director standing orders/);
-  assert.doesNotMatch(aemt, /acetaminophen 1 g|ketorolac 15-30 mg|60 mg IM/);
+  assert.doesNotMatch(aemt, /acetaminophen 1 g|ketorolac 15 mg IV|30 mg IM once/);
   for (const medication of up11.medications.filter((item) => ["Acetaminophen — IV/IO", "Ketorolac", "Fentanyl", "Morphine", "Hydromorphone", "Ketamine — analgesic dose"].includes(item.name)))
-    assert.match(medication.dose, /^Paramedic:/);
+    assert.match(medication.dose, /^Paramedic(?:, age 16 or older)?:/);
   assert.match(text("up-11"), /suspected penetrating or open-globe eye trauma.*unless Medical Control expressly authorizes it/);
   assert.ok(links("up-11").includes("/protocols/tb/tb-11"));
   assert.ok(links("up-11").includes("/protocols/pm/pm-04"));
-  assert.match(text("up-11"), /local ketorolac 60 mg IM dose is not dose-identical to the current Tennessee 10-30 mg IM reference/);
+  assert.match(text("up-11"), /ketorolac maximum is 15 mg IV once or 30 mg IM once.*Do not administer 60 mg IM/);
 });
 
 test("AM03 preserves initial doses but does not silently choose a calcium-gluconate repeat rule", () => {

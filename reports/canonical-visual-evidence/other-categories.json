@@ -1,0 +1,605 @@
+{
+  "status": "passed",
+  "reviewer": "generate_universal_canonical_pdfs",
+  "reviewedAt": "2026-11-01T03:00:55Z",
+  "scope": "Fresh inspection of all 69 regenerated pages in category-ao (9), new-ar (9), category-pc (22), new-pm (9), and category-te (20). No prior-build verdict reused.",
+  "findings": "No clipping, overlap, unreadable glyphs, contrast, or margin defects. Sparse final reference/revision pages are a nonblocking pagination characteristic; compact vehicle manual is separate. Clinical precautions remain visible; internal beta/review banners absent.",
+  "manifestSha256": "473416762b3bb4a23fb057e67274d8b6f9f7ae550eb98ca63c5695ceed364425",
+  "protocols": [
+    {
+      "id": "ao-01",
+      "pdfPath": "/protocols/claiborne/ao-01-childbirth-labor-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "ec96a42f6f04b961548b72c5bfe1343efe007387ad228124bd7a6371e2cd2b2c",
+      "pdfSha256": "6a16dfd4cd2a9d23730ef37f71294e29062b29c670bd3442131ed7fa6c70eb23",
+      "bytes": 49017,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ao-01/page-1.png",
+          "pngSha256": "6173f11f5a596d3ecbaac8700860e4422c5262e8990bd1b14954536cd5e1acaa"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ao-01/page-2.png",
+          "pngSha256": "90e40c450ded7867c3f1cfa86da830bfa2b6cc5277cea9a482c3f68d844abc2d"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ao-01/page-3.png",
+          "pngSha256": "e361474f054bd0c5e4419fde5f728a7fc25869c892c1733b35d44b6d39a0b957"
+        }
+      ]
+    },
+    {
+      "id": "ao-02",
+      "pdfPath": "/protocols/claiborne/ao-02-newly-born-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "d029752116e3014cbd88e96cbfb865767f487879658559138c5e0e23fc045e24",
+      "pdfSha256": "9783ff6010e272e052f580d62271bf0444611393b5c0a1741377b80c1b09c2ed",
+      "bytes": 50324,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ao-02/page-1.png",
+          "pngSha256": "be835494cf18f70b7f352a3d61f7c255364f3a76970aba20f7cadf275955e531"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ao-02/page-2.png",
+          "pngSha256": "03dd5632866de478f2f75ceae04f513e17b36de21f64141891292313ec3b61bc"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ao-02/page-3.png",
+          "pngSha256": "5cd290c026295868eced05883aa36d9c83f9a14d1c846ee39b233d6e2037f147"
+        }
+      ]
+    },
+    {
+      "id": "ao-03",
+      "pdfPath": "/protocols/claiborne/ao-03-ob-gyn-emergency-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "9a11c541188e01c7d8e3ceb2190b00c7266652b35d3539057dedf5fe7d932a8a",
+      "pdfSha256": "70da5494d7d4896bfd04c28c1759a35dae26ac8dbd606562883f057708d0de26",
+      "bytes": 51843,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ao-03/page-1.png",
+          "pngSha256": "b87097ac38c27ecc9b8c28c5620b2b1cbd26ac8632643638378e9d9134481111"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ao-03/page-2.png",
+          "pngSha256": "47728984e7376aae955f42ad989fad372c753cae65cb1ee5dcc0e45c10948833"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ao-03/page-3.png",
+          "pngSha256": "cd3ac673409a12dd83ce8d01d6fb270fd418bbe81ac5239691234fc0aaf0a213"
+        }
+      ]
+    },
+    {
+      "id": "ar-04",
+      "pdfPath": "/protocols/claiborne/ar-04-copd-asthma-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "b743b2c1a7039da5e61d88b8f81f46346de4d7d483c3d070d2b6c1a149c49425",
+      "pdfSha256": "9ab46da9e4b7c09807acce285a3ae0bf0974183d21b57c1769a2d9530d6d4c5a",
+      "bytes": 51726,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ar-04/page-1.png",
+          "pngSha256": "8de737343a1969fe86d202796dcaa46c9c0321b1618be85685bf5ef01c124e94"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ar-04/page-2.png",
+          "pngSha256": "b915c0f1156061746de34578bf88446f90084ea78607f597bbfb355ae83f0dce"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ar-04/page-3.png",
+          "pngSha256": "fe73bbc3bd2f5a308a68b31443a0e20cc331334d2b5c002fd41b5aad3756bef4"
+        }
+      ]
+    },
+    {
+      "id": "ar-07",
+      "pdfPath": "/protocols/claiborne/ar-07-pediatric-respiratory-distress-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "77006136107cafbf488fea1d37145266b280908dd25c5c94bd50965b5ca33551",
+      "pdfSha256": "e6ad39646b42a658fd9023667d5be99fe524076338f1410c31883ae46ba83393",
+      "bytes": 51682,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ar-07/page-1.png",
+          "pngSha256": "813bc27fc44efaf629da89be01cd75e81ad623979ee9006f747617c57aef17e2"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ar-07/page-2.png",
+          "pngSha256": "eea6224dd9b84ee694cfefae710b152b6f23c916bab09f7be84335afc0986485"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ar-07/page-3.png",
+          "pngSha256": "7139fe1477893a629e955294956fb72ef9709365fed9669bff14f52f618ee3f0"
+        }
+      ]
+    },
+    {
+      "id": "ar-10",
+      "pdfPath": "/protocols/claiborne/ar-10-tracheostomy-tube-emergencies-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "88868534b990c331c8752d73f9e63443f2eac1a6042c6764fe64bd45a639ca1a",
+      "pdfSha256": "a08d73d6359d73dac56022bb656b5e4246091d0e75a8760a40241280a281cf86",
+      "bytes": 50224,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ar-10/page-1.png",
+          "pngSha256": "eb351508ac19b604150911007e2918e0bd0abdd88150c3837784ac01a32f0178"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ar-10/page-2.png",
+          "pngSha256": "02f0e280f233bd653ae25ec89d4d833016b3b85ef6361ce10c41c891315b3ffa"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ar-10/page-3.png",
+          "pngSha256": "1200d8ddf1e4289f9d9b82d5ea35e44b83238449cfa5983cb8eda428b62c01d5"
+        }
+      ]
+    },
+    {
+      "id": "pc-01",
+      "pdfPath": "/protocols/claiborne/pc-01-pediatric-asytole-pea-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "9962f35ae3e21123bc9f7a4eefe742722af339db76c81312a57ca7611d0c4d3d",
+      "pdfSha256": "f25a2eef5ec7dbacb0ed3bbac96b313acae66e851032281ad3cd917e944b12db",
+      "bytes": 50165,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/pc-01/page-1.png",
+          "pngSha256": "c32806e162822710d416ad46fed5936886bd30133954b2b000468f3ead6e643d"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/pc-01/page-2.png",
+          "pngSha256": "8406f5f0597f901625202eadf21a992d54be30d57f3e854271e44e8f95b45dc5"
+        }
+      ]
+    },
+    {
+      "id": "pc-02",
+      "pdfPath": "/protocols/claiborne/pc-02-pediatric-bradycardia-poor-perfusion-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "f96262d17355fdfc6a2209bd38545933d97efa3275cc65e20e03f066708b3346",
+      "pdfSha256": "0a14b6d5373481f629341d1a09c0e03d5e72314439fb2ee6167321adbc3d289b",
+      "bytes": 50878,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/pc-02/page-1.png",
+          "pngSha256": "c65a735df692706131a326241298a732d554a6d2fee0ef307ef31fd19e406302"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/pc-02/page-2.png",
+          "pngSha256": "76d508b1c671e79ed8c8ec4bbda123ecc7160d09b603dad774657091375cc1eb"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/pc-02/page-3.png",
+          "pngSha256": "d274901e2074452ea9d74f1784405a983314bb1e9ac6cf45364d5bc0ada0c145"
+        }
+      ]
+    },
+    {
+      "id": "pc-03",
+      "pdfPath": "/protocols/claiborne/pc-03-pediatric-chf-pulmonary-edema-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "e9814e86a5614e784431f1af3d5791c792ca907340e173b0ec634d34610f8e3e",
+      "pdfSha256": "39a3966eb6756f251fe964a6022d0777eb527ea78a4d9df346c0878c1840ceda",
+      "bytes": 50692,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/pc-03/page-1.png",
+          "pngSha256": "1213a257620e941914f61e884cae110316e620667c55fac975700f8de4de0210"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/pc-03/page-2.png",
+          "pngSha256": "801ec3b275b07d5331e18025deb6af26dde49ba403d5b08ae2ad9e4375c9374b"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/pc-03/page-3.png",
+          "pngSha256": "be834689393e80add238003e8d9e5191e45bc1aff6661abc76c950af7416907b"
+        }
+      ]
+    },
+    {
+      "id": "pc-04",
+      "pdfPath": "/protocols/claiborne/pc-04-pediatric-pulseless-arrest-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "46b2543d1c1f1a9c62f65fe8c8855ba7aafcd3b5485f41d9f473f6687891c58b",
+      "pdfSha256": "329dcb087383c9d5dc9c10d6f783b01307657c9fc4abfa3e4a99d1f48a4f9047",
+      "bytes": 50158,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/pc-04/page-1.png",
+          "pngSha256": "948ac6a5d55836d73a8c30cba43be6ab90d93af510d1cf70a9b4803398ef268a"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/pc-04/page-2.png",
+          "pngSha256": "235b2a2df1d28b9125ce3fe32fb79f196048af4d710afa4e85e6771d17834113"
+        }
+      ]
+    },
+    {
+      "id": "pc-05",
+      "pdfPath": "/protocols/claiborne/pc-05-pediatrictachycardia-narrow-complex.pdf",
+      "pages": 3,
+      "canonicalSha256": "8f98d43b962d99d9c1da339928bbd140bf7c3fc6e116f777120db977e9c77c51",
+      "pdfSha256": "5b2ef704a574a0a6151cfd3c49413d73bc1baad5e79b68320ff1eac89d40983e",
+      "bytes": 50123,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/pc-05/page-1.png",
+          "pngSha256": "02d62064599ce81045b6b76c9353437e385faf2d2c300a5b40f52aaed6b38f40"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/pc-05/page-2.png",
+          "pngSha256": "fc26951e89bc1c44f306fc2864bdd1e84734e9ad4f61ad824c04ae5ee42686f3"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/pc-05/page-3.png",
+          "pngSha256": "810c64e2fa4a4ad1be6986459b5bdc4d7e4d73bb2d4db55926eae96967b2d5a8"
+        }
+      ]
+    },
+    {
+      "id": "pc-06",
+      "pdfPath": "/protocols/claiborne/pc-06-pediatric-tachycardia-wide-complex-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "db4f45f8f406878e7e52caa03faad0ee4ce34f874cc941eb31d17d24e57236f4",
+      "pdfSha256": "e060c764026595bc54118e2ad5419502b44c8dd238f4f97521f453d3d9e5527f",
+      "bytes": 50385,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/pc-06/page-1.png",
+          "pngSha256": "259400a4e1f2430fb7e978b32a62b61690c879a0fd08519aab61776431b28054"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/pc-06/page-2.png",
+          "pngSha256": "82b212884a65a30a0828098cc127152dab7066b607c35e9203eaf081ab3f771e"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/pc-06/page-3.png",
+          "pngSha256": "d62d039defcc8a52974340cbe2288d72aadb6570914093d5efdafd6a9dc4262f"
+        }
+      ]
+    },
+    {
+      "id": "pc-07",
+      "pdfPath": "/protocols/claiborne/pc-07-pediatric-vf-pulseless-vt-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "eb71f3699a01212d4d16db193c28e8322e950eaf9818c0798a8dd3a1a35e4dee",
+      "pdfSha256": "38d6eddbc179e8ec3c1796a11d2a9d19656fb34a97c7172331d3660e496503f2",
+      "bytes": 50310,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/pc-07/page-1.png",
+          "pngSha256": "9b2ffbea2faca5ba42cda433a669f84e24f1f2edcad3dcb8b07cedf92e836a98"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/pc-07/page-2.png",
+          "pngSha256": "d99381894b5278ba27b93be27fc7d7f28e9c09992b19475f2bf4aa9be03dd46b"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/pc-07/page-3.png",
+          "pngSha256": "94dd491e50bdd1ade0b28c0abd144fac60563ab60a71da98bc34a6a51f6ceb09"
+        }
+      ]
+    },
+    {
+      "id": "pc-08",
+      "pdfPath": "/protocols/claiborne/pc-08-pediatric-post-resuscitation-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "fa4ae812bdba89b734ee903eaee421a876d262c4f49efd244e174716e1869a7b",
+      "pdfSha256": "7e129056f885579f4655bf565457d7b1dc27220aaab7e7d4e5be5b4883fe29a4",
+      "bytes": 50630,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/pc-08/page-1.png",
+          "pngSha256": "2981406502a50f18b3aa5084b9b6522ecda368a54fcb50f4b0be4ee6ffd4cb5b"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/pc-08/page-2.png",
+          "pngSha256": "498db196baab5cd0c3bc96f36284408c57fa97a34be04d19d1ab47562cfdf2f1"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/pc-08/page-3.png",
+          "pngSha256": "7f9ff9d5246547f4c8892b6a253664bbc1d2dd88041887ccb3a6657105ed4705"
+        }
+      ]
+    },
+    {
+      "id": "pm-01",
+      "pdfPath": "/protocols/claiborne/pm-01-pediatric-allergic-reaction-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "86d59e172dcd7043e36c559f5e45468da48bf98c30ec76cde6c07737078ae7f2",
+      "pdfSha256": "6df2ab7d3c8c26703234fc2bd4f216d3ebe4a1f0b661a99798b69eb2ebc6b03b",
+      "bytes": 50390,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/pm-01/page-1.png",
+          "pngSha256": "1250b3c55f5db2fabec6a00ff0489191db476e21435d7b2b195f0b1a8086c6ee"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/pm-01/page-2.png",
+          "pngSha256": "1c5b85772d09e10284f4fe74dc4cc6909955f6a7f105681e83d1cee254b574e0"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/pm-01/page-3.png",
+          "pngSha256": "b7dd86fdfe95a5fec509164082bfdd03f7543710edf59a0094d31e737b4a90b9"
+        }
+      ]
+    },
+    {
+      "id": "pm-02",
+      "pdfPath": "/protocols/claiborne/pm-02-pediatric-diabetic-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "dc48a12d1add73537f9f204b4e98e51f05416023438edb90c4df0e63cafa8075",
+      "pdfSha256": "03e4119eb7dfba957628e506a9bd430d5706eed56c2eea3400f83d055a1830ca",
+      "bytes": 50760,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/pm-02/page-1.png",
+          "pngSha256": "3819143f6061c0a704f64e2573ca294db3732f28f23db7bd0ecded42688272e6"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/pm-02/page-2.png",
+          "pngSha256": "8db68d93516a3b4ba4759bbd9c6691f9a021774a47c00188199e0b04a71ab21b"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/pm-02/page-3.png",
+          "pngSha256": "112dcbd7ace5035cbeb0587245b417ff7e33765e40c974ac9a7efe50cbbca016"
+        }
+      ]
+    },
+    {
+      "id": "pm-04",
+      "pdfPath": "/protocols/claiborne/pm-04-pediatric-pain-control-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "72beb2f9a9431ac9011feb855bd9f7b44081054110c4dabe4ee86bbfe7d9b3b2",
+      "pdfSha256": "98e28addb9eede910467678faef71947e95b3fd68d174df969a90d90a3111a79",
+      "bytes": 50095,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/pm-04/page-1.png",
+          "pngSha256": "0e66ddf160c8f0fa9ca303471a092593b5518d942618092194e9e2a84e5d5323"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/pm-04/page-2.png",
+          "pngSha256": "189eb63658a05e393f5f17c9f733acdf240c6308c5d93fa99339de72726156c6"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/pm-04/page-3.png",
+          "pngSha256": "a244cd25a65296f98732929d786a852b4b5aa3e42a5329fcc915c79e93642ebe"
+        }
+      ]
+    },
+    {
+      "id": "te-01",
+      "pdfPath": "/protocols/claiborne/te-01-bites-and-envenomations-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "8bedb65e01bcc825fcc8739fa93bff3e726865c3d00eea8fb20737a987f1d8ce",
+      "pdfSha256": "4870713d618fb78542e8af9d6eaa5bfabfdf9666b7bb52ef1a3de10f980c6c2b",
+      "bytes": 47238,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/te-01/page-1.png",
+          "pngSha256": "ce1216c42184bf823d8167e6594304d47d4345818cc2fad4acef03c93618b6b4"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/te-01/page-2.png",
+          "pngSha256": "be234a2ac0ae599b9d41122d752a1af162a7eb9e8b18cc5fbb99a3d1ca36615c"
+        }
+      ]
+    },
+    {
+      "id": "te-02",
+      "pdfPath": "/protocols/claiborne/te-02-carbon-monoxide-cyanide-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "2f4e8fd67e69b544a718821835af1bfea245b09abeec3b7bd1d3deb92c3d4792",
+      "pdfSha256": "0714d43bb67ba120853c88c4f81d379c84a08555d78d4f608623236dc1ad3cf3",
+      "bytes": 47283,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/te-02/page-1.png",
+          "pngSha256": "0db750f1bdd93047b116a44df11f62bbce0874fc1091e2e5cd43702843506971"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/te-02/page-2.png",
+          "pngSha256": "3249c6aaf74eed58d6719f59e3f0f680f29a829a41efdeaff97e91d1e5cab6fc"
+        }
+      ]
+    },
+    {
+      "id": "te-03",
+      "pdfPath": "/protocols/claiborne/te-03-drowning-submersion-injury-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "998747d9616c1b1337535c6d6028d00c178683e6fb0faec382e6719e90ef5dec",
+      "pdfSha256": "1c385141b4468ed307cb249535e9ea726e4c21308ff268d2ff94ae40bfa7c72b",
+      "bytes": 46798,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/te-03/page-1.png",
+          "pngSha256": "fdf984329eece5c7b27d19bb793bd779925f2e41199aa47db868870e8a473b02"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/te-03/page-2.png",
+          "pngSha256": "9cdbbbec781c00d8b9fb354f5d906f6c00b1fdd106beb93be8dc42e8eb79baf2"
+        }
+      ]
+    },
+    {
+      "id": "te-04",
+      "pdfPath": "/protocols/claiborne/te-04-hyperthermia-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "059c467bba4a5e46656e6514764a39b004d38d371df06e1c6d2275083b184c49",
+      "pdfSha256": "dc9c8a8df958a7c9c2fba74a56f54a8190660e9aaab146ff1b285aeb84868a0a",
+      "bytes": 47413,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/te-04/page-1.png",
+          "pngSha256": "7f1ed4becf128c9b1bd2cb4c846cd69052af15fe0119f82c93d462aff8b1e53a"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/te-04/page-2.png",
+          "pngSha256": "5096b98a87c89ad8c769ad46fb7b6edc8c1ade1d8e252aa8470a4a7dfbf83eab"
+        }
+      ]
+    },
+    {
+      "id": "te-05",
+      "pdfPath": "/protocols/claiborne/te-05-hypothermia-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "41afe93cb0062d1eb7cfbb8fc3d7bcbf5353a17dff1bd9c10185c35cf8a0b755",
+      "pdfSha256": "71d1c647db16a33956f55d57da27dde0f502ce0cde2f906f481bb2ed594800a7",
+      "bytes": 47646,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/te-05/page-1.png",
+          "pngSha256": "f1c66b5cdde0b258afdab0dc1b3f71de7c6bdcab4dff10871fcfb3139268fb22"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/te-05/page-2.png",
+          "pngSha256": "8c9ec0f9c96d1bf8cc917a981bc52a38dcc18719b37e16eee8cba1479eef7053"
+        }
+      ]
+    },
+    {
+      "id": "te-07",
+      "pdfPath": "/protocols/claiborne/te-07-overdose-toxic-ingestion-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "8ae78e5f6db011fffeb834200f0bf0c85740f149d3e9c1f86dfac40a60acb289",
+      "pdfSha256": "5b08e211015467f75ba7709243491a3603013a328a93a1805a36550cdba30d3e",
+      "bytes": 48221,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/te-07/page-1.png",
+          "pngSha256": "fbccf921cccf37b0bc470328ef941b226c1d4af5536afad27bde5cc0067de670"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/te-07/page-2.png",
+          "pngSha256": "d45951b51309929a195c4497d6b300bcda43e1265a6e6c4854500e5b048d0678"
+        }
+      ]
+    },
+    {
+      "id": "te-08",
+      "pdfPath": "/protocols/claiborne/te-08-wmd-nerve-agent-protocol.pdf",
+      "pages": 2,
+      "canonicalSha256": "981a2da19e64ecf87830f0cb01d7ae7f308d4c92dd875f0619adc70740ebaae7",
+      "pdfSha256": "5b1c790a2e82fde560ec645c2a97ff35313e7214290b3273b9bc878c450e9759",
+      "bytes": 48665,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/te-08/page-1.png",
+          "pngSha256": "b477424813e8f72280e9771a8b381ee59e61302fe1705e09bbe2907db183a193"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/te-08/page-2.png",
+          "pngSha256": "fdc5647f0c8ee52da9c108212cd3e01f4f878a3052b44f6eb550fef927d6a1bc"
+        }
+      ]
+    },
+    {
+      "id": "te-09",
+      "pdfPath": "/protocols/claiborne/te-09-chemical-hazmat-exposure-protocol.pdf",
+      "pages": 6,
+      "canonicalSha256": "7982f960e36854a51d1749d37775626eeaa596d8acc4e19608fe3e8ef69fe111",
+      "pdfSha256": "9b60af8eb900d322ded0c5e1afffb9af54fbbc741ba1b8299a44d041816379d4",
+      "bytes": 61473,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/te-09/page-1.png",
+          "pngSha256": "944f1f45a75cce06c4b5059fc5eab1fbc12069d276f10a18d4baf0bc4652c7a0"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/te-09/page-2.png",
+          "pngSha256": "d8e2ecf10a2f7ee546d5d831e1fea7b0f95215042169a06ca3fb95bb34bdea75"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/te-09/page-3.png",
+          "pngSha256": "4d79ada5217af097244545baa56476ce7fd53f564a98d3e4f376e518cc7ab927"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/te-09/page-4.png",
+          "pngSha256": "d5891b6623c61ab7bbb431db88006ada8bdfcc7f613ebdd1b3057c3195b4ed10"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/te-09/page-5.png",
+          "pngSha256": "337f026f4865af43430f1932b59fbbb509e27ed81e25e8c2d48f8b7524a3be66"
+        },
+        {
+          "page": 6,
+          "path": "tmp/pdfs/canonical-review/pages/te-09/page-6.png",
+          "pngSha256": "d79ff5844ab0af8bc7619a98387624b8a82b27a5a6793421c7f7dbba204d572e"
+        }
+      ]
+    }
+  ]
+}

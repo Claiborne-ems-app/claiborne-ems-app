@@ -1,0 +1,1959 @@
+[
+  {
+    "sourcePath": "protocols.pc-01.clinicalPearls[0]",
+    "sourceText": "Pediatric nonshockable arrest is often hypoxic/asphyxial; effective ventilation is a central intervention.",
+    "targets": [
+      {
+        "path": "protocols.pc-01.overview[0]",
+        "text": "For infants and children after the newly born period, asystole and PEA are commonly the end result of hypoxia or respiratory failure; ventilation and high-quality CPR are central interventions."
+      }
+    ],
+    "reason": "Both state pediatric nonshockable arrest is commonly hypoxic/asphyxial and effective ventilation is central; overview additionally preserves post-newborn age boundary and CPR."
+  },
+  {
+    "sourcePath": "protocols.pc-01.clinicalPearls[1]",
+    "sourceText": "Use waveform EtCO₂ trends to improve CPR quality and detect possible ROSC, not as a stand-alone termination decision.",
+    "targets": [
+      {
+        "path": "protocols.pc-01.treatmentSteps[3]",
+        "text": "Use continuous waveform EtCO₂ when available. Use trends to improve CPR; an unexpected sustained increase may indicate ROSC, but do not use a single EtCO₂ value alone to make termination decisions."
+      }
+    ],
+    "reason": "Retained treatment includes continuous waveform EtCO2 when available, CPR improvement from trends, sustained increase as possible ROSC, and prohibition on a single-value termination decision."
+  },
+  {
+    "sourcePath": "protocols.pc-02.overview[1]",
+    "sourceText": "Begin CPR when heart rate remains below 60/min with poor perfusion despite effective oxygenation and ventilation.",
+    "targets": [
+      {
+        "path": "protocols.pc-02.flow[2].title",
+        "text": "HR Still <60 + Poor Perfusion?"
+      },
+      {
+        "path": "protocols.pc-02.flow[2].text",
+        "text": "After effective oxygenation and ventilation: begin CPR immediately, even with a pulse."
+      }
+    ],
+    "reason": "Flow preserves HR below 60 with poor perfusion despite effective oxygenation/ventilation and immediate CPR, including when pulse remains."
+  },
+  {
+    "sourcePath": "protocols.pc-02.treatmentSteps[3]",
+    "sourceText": "Atropine is not a treatment for hypoxic bradycardia. Use it only for increased vagal tone or primary AV block.",
+    "targets": [
+      {
+        "path": "protocols.pc-02.warnings[1]",
+        "text": "Atropine is not a treatment for hypoxic bradycardia."
+      },
+      {
+        "path": "protocols.pc-02.flow[5].text",
+        "text": "Atropine only for increased vagal tone or primary AV block; consider pacing for selected refractory conduction disease."
+      }
+    ],
+    "reason": "Warning retains not for hypoxic bradycardia; flow retains atropine only for increased vagal tone or primary AV block."
+  },
+  {
+    "sourcePath": "protocols.pc-03.treatmentSteps[2]",
+    "sourceText": "Use positive-pressure ventilation carefully in known complex congenital heart disease and seek early Medical Control guidance.",
+    "targets": [
+      {
+        "path": "protocols.pc-03.flow[1].text",
+        "text": "Use position of comfort, oxygen and ventilation support for distress. Use gentle positive pressure and contact Medical Control early for known complex congenital heart disease."
+      }
+    ],
+    "reason": "Flow explicitly retains gentle positive pressure and early Medical Control in known complex congenital heart disease."
+  },
+  {
+    "sourcePath": "protocols.pc-03.clinicalPearls[0]",
+    "sourceText": "Caregiver knowledge of baseline oxygen saturation, anatomy, medications, and emergency plans can be critical to safe prehospital decisions.",
+    "targets": [
+      {
+        "path": "protocols.pc-03.flow[0].text",
+        "text": "Assess respiratory distress, perfusion, mental status, cardiac history/surgeries, baseline SpO₂, home medications, fluid restriction, feeding/urine output, fever, and caregiver-reported baseline."
+      },
+      {
+        "path": "protocols.pc-03.flow[5].text",
+        "text": "Notify early, bring the caregiver's cardiac emergency plan/records when available, and transport without delaying for a medication trial."
+      },
+      {
+        "path": "protocols.pc-03.careModules[0].levels[0].actions[2]",
+        "text": "Identify and communicate the child's usual oxygen saturation, anatomy/surgeries, home medication schedule, and recent feeding/urine output."
+      }
+    ],
+    "reason": "Retained assessment/provider actions obtain caregiver baseline saturation, anatomy/surgeries and home medication schedule; transport flow retains available caregiver cardiac emergency plan/records."
+  },
+  {
+    "sourcePath": "protocols.pc-03.clinicalPearls[1]",
+    "sourceText": "Children with heart disease may wheeze or present with respiratory symptoms; evaluate perfusion and cardiac history before assuming asthma.",
+    "targets": [
+      {
+        "path": "protocols.pc-03.careModules[0].levels[0].actions[1]",
+        "text": "Do not assume wheeze is asthma or treat it with albuterol unless bronchospasm is strongly supported."
+      },
+      {
+        "path": "protocols.pc-03.flow[0].text",
+        "text": "Assess respiratory distress, perfusion, mental status, cardiac history/surgeries, baseline SpO₂, home medications, fluid restriction, feeding/urine output, fever, and caregiver-reported baseline."
+      }
+    ],
+    "reason": "Retained EMT warning explicitly prevents assuming wheeze is asthma without strongly supported bronchospasm; assessment requires perfusion/cardiac history in this respiratory presentation."
+  },
+  {
+    "sourcePath": "protocols.pc-04.overview[0]",
+    "sourceText": "Immediate routing protocol for a pulseless patient age 3 days through 15 years. Use AO-02 Newly Born through 3 days of age and the adult cardiac-arrest pathway at age 16 years or older.",
+    "targets": [
+      {
+        "path": "protocols.pc-04.indications[0]",
+        "text": "Pulseless patient age 3 days through 15 years."
+      },
+      {
+        "path": "protocols.pc-04.flow[0].text",
+        "text": "Confirm pulselessness, age pathway, DNR/MOST, and obvious-death criteria. Use AO-02 through 3 days of age; use adult cardiac arrest at age 16 years or older."
+      }
+    ],
+    "reason": "Retained indication preserves age 3 days through 15 years and pulselessness; flow preserves AO-02 through 3 days and adult pathway at 16 or older. No age-boundary reinterpretation."
+  },
+  {
+    "sourcePath": "protocols.pc-04.clinicalPearls[0]",
+    "sourceText": "Effective ventilation is especially important because most pediatric arrests are respiratory/asphyxial in origin.",
+    "targets": [
+      {
+        "path": "protocols.pc-04.overview[1]",
+        "text": "High-quality CPR and effective ventilation are central interventions because most pediatric arrests are respiratory/asphyxial in origin."
+      }
+    ],
+    "reason": "Same respiratory/asphyxial mechanism and importance of effective ventilation; overview additionally preserves high-quality CPR."
+  },
+  {
+    "sourcePath": "protocols.pc-04.clinicalPearls[1]",
+    "sourceText": "If pediatric pads/attenuator are unavailable, standard defibrillation equipment should not be withheld or delayed.",
+    "targets": [
+      {
+        "path": "protocols.pc-04.flow[2].text",
+        "text": "Apply immediately. Use pediatric pads/attenuator when available, but do not delay defibrillation if standard equipment is immediately available."
+      }
+    ],
+    "reason": "Flow retains pediatric pads/attenuator if available and no delay/withholding of defibrillation when standard equipment immediately available."
+  },
+  {
+    "sourcePath": "protocols.pc-05.overview[1]",
+    "sourceText": "Cardiopulmonary compromise from tachycardia requires prompt synchronized cardioversion. Sedation must never delay the shock.",
+    "targets": [
+      {
+        "path": "protocols.pc-05.flow[1].text",
+        "text": "Hypotension • acutely altered mental status • signs of shock • sudden collapse. If yes, prepare synchronized cardioversion immediately."
+      },
+      {
+        "path": "protocols.pc-05.flow[2].text",
+        "text": "0.5–1 J/kg; if unsuccessful, increase to 2 J/kg. Confirm sync mode before every shock. Sedate only if immediately available and it does not delay treatment."
+      }
+    ],
+    "reason": "Flow retains immediate synchronized cardioversion for cardiopulmonary compromise and sedation only if immediately available without delaying treatment."
+  },
+  {
+    "sourcePath": "protocols.pc-05.treatmentSteps[2]",
+    "sourceText": "Stable suspected SVT: vagal maneuvers first. If IV/IO access is readily available, give adenosine by rapid push and immediate saline flush.",
+    "targets": [
+      {
+        "path": "protocols.pc-05.flow[3].title",
+        "text": "Stable + Regular SVT?"
+      },
+      {
+        "path": "protocols.pc-05.flow[3].text",
+        "text": "If regular narrow-complex SVT is likely, attempt vagal maneuvers first. Irregular rhythm or uncertain/wide-complex tachycardia: Medical Control and appropriate alternate pathway."
+      },
+      {
+        "path": "protocols.pc-05.flow[4].title",
+        "text": "Adenosine"
+      },
+      {
+        "path": "protocols.pc-05.flow[4].text",
+        "text": "If IV/IO is readily available: rapid push followed by rapid saline flush, then document rhythm response."
+      },
+      {
+        "path": "protocols.pc-05.medications[0].dose",
+        "text": "0.1 mg/kg rapid IV/IO push followed immediately by rapid saline flush; maximum 6 mg. If needed, repeat 0.2 mg/kg; maximum 12 mg. Only for regular narrow-complex SVT."
+      }
+    ],
+    "reason": "Retained flow preserves stable regular SVT, vagal maneuvers first, readiness of IV/IO access, rapid adenosine push/flush; medication row explicitly retains immediate flush and all dose limits."
+  },
+  {
+    "sourcePath": "protocols.pc-05.treatmentSteps[4]",
+    "sourceText": "If the child becomes pulseless at any point, begin CPR and move immediately to PC-04 Pediatric Pulseless Arrest.",
+    "targets": [
+      {
+        "path": "protocols.pc-05.warnings[2]",
+        "text": "If pulseless at any time, begin CPR and move immediately to Pediatric Pulseless Arrest."
+      },
+      {
+        "path": "protocols.pc-05.actionLinks[1].label",
+        "text": "PC-04 Pediatric Pulseless Arrest"
+      }
+    ],
+    "reason": "Identical pulseless-at-any-time CPR and immediate Pediatric Pulseless Arrest transition; retained actionLinks[1] identifies PC-04."
+  },
+  {
+    "sourcePath": "protocols.pc-05.clinicalPearls[0]",
+    "sourceText": "Adenosine effectiveness depends on a rapid bolus and immediate saline flush; rhythm documentation before and after administration is important.",
+    "targets": [
+      {
+        "path": "protocols.pc-05.medications[0].dose",
+        "text": "0.1 mg/kg rapid IV/IO push followed immediately by rapid saline flush; maximum 6 mg. If needed, repeat 0.2 mg/kg; maximum 12 mg. Only for regular narrow-complex SVT."
+      },
+      {
+        "path": "protocols.pc-05.careModules[0].levels[2].actions[1]",
+        "text": "Use the most proximal practical IV/IO access for adenosine. Document rhythm before and after each intervention; obtain a 12-lead when stable without delaying treatment."
+      }
+    ],
+    "reason": "Medication retains rapid push with immediate flush; Paramedic action retains documented rhythm before and after every intervention."
+  },
+  {
+    "sourcePath": "protocols.pc-05.clinicalPearls[1]",
+    "sourceText": "Tachycardia from fever, pain, dehydration, hypoxia, sepsis, toxin exposure, or anemia is usually sinus tachycardia and requires cause-directed treatment.",
+    "targets": [
+      {
+        "path": "protocols.pc-05.careModules[0].levels[0].actions[1]",
+        "text": "Treat likely causes of sinus tachycardia—fever, pain, dehydration, hypoxia, sepsis, stimulant/toxin exposure, or anemia—within current standing orders."
+      }
+    ],
+    "reason": "Retained EMT action names every listed sinus-tachycardia cause, including fever, pain, dehydration, hypoxia, sepsis, toxin exposure, anemia, and cause-directed treatment within standing orders."
+  },
+  {
+    "sourcePath": "protocols.pc-06.overview[0]",
+    "sourceText": "Treat pediatric wide-complex tachycardia as potentially ventricular until proven otherwise. A wide QRS is greater than 0.09 seconds.",
+    "targets": [
+      {
+        "path": "protocols.pc-06.treatmentSteps[0]",
+        "text": "Treat a wide-complex rhythm as potentially ventricular until proven otherwise. Obtain early Medical Control/expert consultation before antiarrhythmic treatment in a stable child."
+      },
+      {
+        "path": "protocols.pc-06.indications[0]",
+        "text": "Pediatric tachycardia with QRS greater than 0.09 seconds and suspected VT, SVT with aberrancy, or polymorphic tachycardia."
+      }
+    ],
+    "reason": "Retained treatment preserves potentially ventricular until proven otherwise; indication preserves QRS greater than 0.09 seconds."
+  },
+  {
+    "sourcePath": "protocols.pc-06.overview[1]",
+    "sourceText": "Cardiopulmonary compromise requires urgent synchronized cardioversion; stable medication decisions require early Medical Control/expert consultation.",
+    "targets": [
+      {
+        "path": "protocols.pc-06.flow[1].text",
+        "text": "Hypotension • acutely altered mental status • signs of shock • sudden collapse. If yes, prepare synchronized cardioversion immediately."
+      },
+      {
+        "path": "protocols.pc-06.flow[3].text",
+        "text": "Obtain early Medical Control/expert consultation and Paramedic rhythm evaluation. Continue monitoring and transport support."
+      },
+      {
+        "path": "protocols.pc-06.flow[4].text",
+        "text": "For stable regular monomorphic rhythm, adenosine only with Medical Control/expert consultation. All other antiarrhythmic decisions are Medical-Control-directed."
+      }
+    ],
+    "reason": "Flow retains immediate cardioversion for compromise and early Medical Control/expert consultation for stable medication decisions."
+  },
+  {
+    "sourcePath": "protocols.pc-06.treatmentSteps[1]",
+    "sourceText": "Do not give adenosine for unstable, irregular, or polymorphic wide-complex tachycardia.",
+    "targets": [
+      {
+        "path": "protocols.pc-06.warnings[1]",
+        "text": "Do not give adenosine for unstable, irregular, or polymorphic wide-complex tachycardia."
+      }
+    ],
+    "reason": "Exact duplicate prohibition: no adenosine for unstable, irregular, or polymorphic wide-complex tachycardia."
+  },
+  {
+    "sourcePath": "protocols.pc-07.overview[1]",
+    "sourceText": "Charge during compressions and resume CPR immediately after every shock without an immediate pulse check.",
+    "targets": [
+      {
+        "path": "protocols.pc-07.careModules[0].levels[2].actions[1]",
+        "text": "Charge during compressions, minimize the peri-shock pause, and do not interrupt compressions for endotracheal intubation."
+      },
+      {
+        "path": "protocols.pc-07.warnings[0]",
+        "text": "Do not pause CPR after a shock to check a pulse; resume immediately until the next planned rhythm check."
+      }
+    ],
+    "reason": "Paramedic action retains charging during compressions; warning retains immediate CPR after every shock without an immediate pulse check."
+  },
+  {
+    "sourcePath": "protocols.pc-07.treatmentSteps[0]",
+    "sourceText": "Use 2 J/kg for the first shock, 4 J/kg for the second shock, and at least 4 J/kg for subsequent shocks; do not exceed 10 J/kg or the adult dose.",
+    "targets": [
+      {
+        "path": "protocols.pc-07.flow[1].title",
+        "text": "Shock 1: 2 J/kg"
+      },
+      {
+        "path": "protocols.pc-07.flow[2].title",
+        "text": "Shock 2: 4 J/kg"
+      },
+      {
+        "path": "protocols.pc-07.flow[3].text",
+        "text": "Subsequent shocks: at least 4 J/kg, maximum 10 J/kg or adult dose. Give epinephrine every 3–5 minutes and consider one authorized antiarrhythmic."
+      }
+    ],
+    "reason": "Retained flow preserves first 2 J/kg, second 4 J/kg, subsequent at least 4 J/kg, maximum 10 J/kg or adult dose; no energy numbers change."
+  },
+  {
+    "sourcePath": "protocols.pc-07.treatmentSteps[3]",
+    "sourceText": "Routine calcium and sodium bicarbonate are not indicated unless a specific cause exists.",
+    "targets": [
+      {
+        "path": "protocols.pc-07.warnings[2]",
+        "text": "Do not routinely administer calcium or sodium bicarbonate unless a specific indication exists."
+      }
+    ],
+    "reason": "Same exclusion of routine calcium and sodium bicarbonate, with specific-indication exception retained."
+  },
+  {
+    "sourcePath": "protocols.pc-07.clinicalPearls[0]",
+    "sourceText": "For initial shockable pediatric arrest, rapid defibrillation is the priority; give epinephrine after the second shock or sooner only when rapid defibrillation is not possible.",
+    "targets": [
+      {
+        "path": "protocols.pc-07.medications[0].name",
+        "text": "Epinephrine 0.1 mg/mL (1:10,000)"
+      },
+      {
+        "path": "protocols.pc-07.medications[0].dose",
+        "text": "0.01 mg/kg IV/IO after the second shock or sooner only if rapid defibrillation is not possible; maximum single dose 1 mg; repeat every 3–5 minutes"
+      },
+      {
+        "path": "protocols.pc-07.careModules[0].levels[0].actions[1]",
+        "text": "Use the pediatric length- or weight-based resuscitation system. Do not delay defibrillation for advanced procedures."
+      }
+    ],
+    "reason": "Medication preserves after-second-shock epinephrine timing and exception only when rapid defibrillation not possible; EMT action preserves no delay to defibrillation for advanced procedures."
+  },
+  {
+    "sourcePath": "protocols.pc-07.clinicalPearls[1]",
+    "sourceText": "Magnesium is not routine VF/pulseless VT treatment; reserve it for torsades/polymorphic VT or suspected hypomagnesemia.",
+    "targets": [
+      {
+        "path": "protocols.pc-07.medications[3].name",
+        "text": "Magnesium sulfate"
+      },
+      {
+        "path": "protocols.pc-07.medications[3].dose",
+        "text": "Paramedic only: 25–50 mg/kg IV/IO once; maximum 2 g; only for torsades/polymorphic VT or suspected hypomagnesemia"
+      }
+    ],
+    "reason": "Medication explicitly limits magnesium to torsades/polymorphic VT or suspected hypomagnesemia, retaining its nonroutine status and dose/max."
+  },
+  {
+    "sourcePath": "protocols.pc-08.overview[1]",
+    "sourceText": "Choose a destination capable of pediatric intensive care and the child's likely cardiac, neurologic, and temperature-management needs.",
+    "targets": [
+      {
+        "path": "protocols.pc-08.careModules[0].levels[2].actions[2]",
+        "text": "Select a destination with pediatric ICU, cardiology, neurology, and temperature-management capability when available."
+      }
+    ],
+    "reason": "Destination action retains pediatric ICU, cardiology, neurology, and temperature-management capability when available; no other destination instruction removed."
+  },
+  {
+    "sourcePath": "protocols.pc-08.treatmentSteps[4]",
+    "sourceText": "If a dysrhythmia persists, return to its specific protocol. Continuing antiarrhythmic therapy requires Medical Control.",
+    "targets": [
+      {
+        "path": "protocols.pc-08.flow[4].text",
+        "text": "Return to the rhythm-specific pediatric pathway. Continuing antiarrhythmic therapy requires Medical Control."
+      }
+    ],
+    "reason": "Same rhythm-specific pathway routing for persistent dysrhythmia and Medical Control requirement for continuing antiarrhythmic therapy."
+  },
+  {
+    "sourcePath": "protocols.ao-02.treatmentSteps[1]",
+    "sourceText": "Assess adequate ventilation primarily by visible chest movement and a rising heart rate.",
+    "targets": [
+      {
+        "path": "protocols.ao-02.flow[3].text",
+        "text": "Begin BVM ventilation at 40–60/min and assess chest movement and heart-rate response."
+      },
+      {
+        "path": "protocols.ao-02.clinicalPearls[0]",
+        "text": "A rising heart rate is the best indicator that newborn ventilation and resuscitation are effective."
+      }
+    ],
+    "reason": "Flow retains assessment of chest movement and heart-rate response during ventilation; pearl retains a rising heart rate as best effectiveness indicator."
+  },
+  {
+    "sourcePath": "protocols.pm-01.overview[0]",
+    "sourceText": "Epinephrine is the first-line treatment for pediatric anaphylaxis and must not be delayed for vascular access, antihistamines, albuterol, or corticosteroids.",
+    "targets": [
+      {
+        "path": "protocols.pm-01.treatmentSteps[0]",
+        "text": "IM epinephrine is the time-critical definitive treatment. Do not delay it for IV/IO access, diphenhydramine, corticosteroids, nebulizers, or transport preparation."
+      },
+      {
+        "path": "protocols.pm-01.warnings[0]",
+        "text": "Do not delay IM epinephrine for IV access, diphenhydramine, corticosteroids, or albuterol."
+      }
+    ],
+    "reason": "Retained time-critical definitive IM epinephrine statement plus warning covers no delay for vascular access, antihistamine/diphenhydramine, albuterol/nebulizers, or corticosteroids."
+  },
+  {
+    "sourcePath": "protocols.pm-01.overview[1]",
+    "sourceText": "Treat suspected anaphylaxis promptly when airway/breathing compromise, hypotension/poor perfusion, or multi-system symptoms follow a likely allergen.",
+    "targets": [
+      {
+        "path": "protocols.pm-01.flow[1].text",
+        "text": "Airway/breathing compromise, hypotension/poor perfusion, or multi-system symptoms after likely allergen: treat immediately. Do not wait for every criterion when concern is high."
+      }
+    ],
+    "reason": "Exact clinical trigger and prompt-treatment meaning: airway/breathing compromise, hypotension/poor perfusion, or multisystem symptoms after likely allergen; flow additionally prohibits waiting for every criterion."
+  },
+  {
+    "sourcePath": "protocols.pm-01.treatmentSteps[2]",
+    "sourceText": "For anaphylactic shock, give normal saline 20 mL/kg with reassessment after each bolus; repeat IM epinephrine and open PM-03 for persistent shock.",
+    "targets": [
+      {
+        "path": "protocols.pm-01.flow[4].text",
+        "text": "Normal saline 20 mL/kg IV/IO with reassessment after each bolus. Repeat IM epinephrine and contact Medical Control early for refractory symptoms."
+      },
+      {
+        "path": "protocols.pm-01.actionLinks[2].label",
+        "text": "PM-03 Pediatric Hypotension / Shock"
+      },
+      {
+        "path": "protocols.pm-01.actionLinks[2].description",
+        "text": "Open for persistent shock after epinephrine and fluid reassessment."
+      }
+    ],
+    "reason": "Flow retains anaphylactic-shock NS 20 mL/kg, reassessment each bolus and repeat IM epinephrine; retained action link explicitly routes persistent shock to PM-03 after epinephrine/fluid reassessment."
+  },
+  {
+    "sourcePath": "protocols.pm-02.treatmentSteps[1]",
+    "sourceText": "If a CGM reading is unexpectedly low or high, confirm with capillary glucose when feasible; do not delay treatment in the symptomatic child.",
+    "targets": [
+      {
+        "path": "protocols.pm-02.flow[0].text",
+        "text": "Assess airway, mental status, medications/insulin, intake, diabetes history, perfusion, and possible toxin exposure. Confirm unexpected CGM readings with capillary glucose when feasible."
+      },
+      {
+        "path": "protocols.pm-02.warnings[3]",
+        "text": "Do not delay treatment of symptomatic hypoglycemia for a confirmatory glucose reading."
+      }
+    ],
+    "reason": "Flow retains confirming unexpected high/low CGM with capillary glucose when feasible; warning retains no delay to symptomatic-hypoglycemia treatment for confirmation."
+  },
+  {
+    "sourcePath": "protocols.pm-02.treatmentSteps[3]",
+    "sourceText": "For suspected DKA, do not give insulin, sodium bicarbonate, or routine/repeated large fluid boluses in the field.",
+    "targets": [
+      {
+        "path": "protocols.pm-02.warnings[1]",
+        "text": "Do not give insulin or sodium bicarbonate in the field for suspected pediatric DKA."
+      },
+      {
+        "path": "protocols.pm-02.warnings[2]",
+        "text": "Do not give large or repeated fluid boluses routinely in suspected pediatric DKA."
+      }
+    ],
+    "reason": "Both prohibitions retained: no field insulin/bicarbonate for suspected pediatric DKA and no routine large/repeated fluid boluses."
+  },
+  {
+    "sourcePath": "protocols.pm-02.clinicalPearls[0]",
+    "sourceText": "D10 2 mL/kg provides 0.2 g/kg of dextrose and is the approved pediatric IV/IO hypoglycemia dose.",
+    "targets": [
+      {
+        "path": "protocols.pm-02.medications[1].name",
+        "text": "Dextrose 10% (D10)"
+      },
+      {
+        "path": "protocols.pm-02.medications[1].dose",
+        "text": "2 mL/kg IV/IO (0.2 g/kg); recheck glucose and neurologic status after 5 minutes and repeat once for persistent hypoglycemia. Contact Medical Control for additional dextrose dosing or infusion."
+      }
+    ],
+    "reason": "Medication row retains D10 2 mL/kg IV/IO equals 0.2 g/kg and all recheck/repeat/Medical Control safeguards; no dose number change."
+  },
+  {
+    "sourcePath": "protocols.pm-03.overview[0]",
+    "sourceText": "Compensated pediatric shock may precede hypotension; recognize abnormal perfusion before blood pressure falls.",
+    "targets": [
+      {
+        "path": "protocols.pm-03.flow[0].text",
+        "text": "Assess mental status, central/peripheral pulses, capillary refill, skin temperature/color, work of breathing, BP trends, history, and likely cause. Hypotension is a late sign."
+      },
+      {
+        "path": "protocols.pm-03.careModules[0].levels[0].actions[1]",
+        "text": "Identify early compensated-shock findings: tachycardia, weak pulses, delayed refill, cool/mottled skin, altered behavior, reduced urine output/poor intake, and worsening work of breathing."
+      }
+    ],
+    "reason": "Flow retains hypotension as late sign; EMT action explicitly lists early compensated-shock findings for recognition before hypotension."
+  },
+  {
+    "sourcePath": "protocols.pm-03.overview[1]",
+    "sourceText": "Classify shock as hypovolemic/hemorrhagic, distributive, cardiogenic, or obstructive because fluid strategy and definitive treatment differ.",
+    "targets": [
+      {
+        "path": "protocols.pm-03.flow[2].text",
+        "text": "Hypovolemic/hemorrhagic • distributive/septic • cardiogenic • obstructive. Treat the likely cause while supporting perfusion."
+      },
+      {
+        "path": "protocols.pm-03.flow[3].text",
+        "text": "Nonhemorrhagic hypovolemic/distributive: isotonic crystalloid 10–20 mL/kg aliquots with reassessment after every bolus. Cardiogenic: 5–10 mL/kg cautiously with early Medical Control. Suspected traumatic hemorrhage: control bleeding, expedite transport, and obtain Medical Control direction; do not apply the medical/septic bolus target indiscriminately."
+      },
+      {
+        "path": "protocols.pm-03.flow[4].text",
+        "text": "For septic shock unresponsive to fluid, begin Medical-Control-directed epinephrine or norepinephrine infusion. Decompress tension pneumothorax and treat other obstructive causes when indicated."
+      }
+    ],
+    "reason": "Flow retains all four shock categories and different type-specific fluid and definitive cause-treatment strategies."
+  },
+  {
+    "sourcePath": "protocols.pm-03.treatmentSteps[2]",
+    "sourceText": "Avoid routine 20-mL/kg boluses in suspected cardiogenic shock; use 5–10 mL/kg cautiously, reassess, and open PC-03 Pediatric Pulmonary Edema / CHF.",
+    "targets": [
+      {
+        "path": "protocols.pm-03.warnings[2]",
+        "text": "Avoid routine 20-mL/kg boluses in suspected cardiogenic shock; pulmonary edema may worsen rapidly."
+      },
+      {
+        "path": "protocols.pm-03.medications[1].dose",
+        "text": "5–10 mL/kg IV/IO cautiously with early Medical Control; reassess after each aliquot"
+      },
+      {
+        "path": "protocols.pm-03.actionLinks[3].label",
+        "text": "PC-03 Pediatric Pulmonary Edema / CHF"
+      },
+      {
+        "path": "protocols.pm-03.actionLinks[3].description",
+        "text": "Open for suspected cardiogenic shock or pulmonary edema."
+      }
+    ],
+    "reason": "Warning retains avoiding routine 20-mL/kg cardiogenic bolus; medication retains cautious 5-10 mL/kg with early Medical Control/reassessment; link retains opening PC-03 for cardiogenic shock/edema."
+  },
+  {
+    "sourcePath": "protocols.pm-03.treatmentSteps[3]",
+    "sourceText": "For fluid-refractory septic shock, begin Medical-Control-directed epinephrine or norepinephrine infusion; do not use routine corticosteroids unless adrenal crisis is suspected or Medical Control directs otherwise.",
+    "targets": [
+      {
+        "path": "protocols.pm-03.flow[4].text",
+        "text": "For septic shock unresponsive to fluid, begin Medical-Control-directed epinephrine or norepinephrine infusion. Decompress tension pneumothorax and treat other obstructive causes when indicated."
+      },
+      {
+        "path": "protocols.pm-03.warnings[4]",
+        "text": "Do not use routine corticosteroids for septic shock unless adrenal crisis is suspected or Medical Control directs otherwise."
+      }
+    ],
+    "reason": "Flow retains Medical-Control-directed epinephrine/norepinephrine infusion for fluid-refractory septic shock; warning retains no routine corticosteroids except adrenal crisis or Medical Control direction."
+  },
+  {
+    "sourcePath": "protocols.pm-03.clinicalPearls[0]",
+    "sourceText": "Early pediatric shock is recognized by perfusion and behavior changes before hypotension develops.",
+    "targets": [
+      {
+        "path": "protocols.pm-03.flow[0].text",
+        "text": "Assess mental status, central/peripheral pulses, capillary refill, skin temperature/color, work of breathing, BP trends, history, and likely cause. Hypotension is a late sign."
+      },
+      {
+        "path": "protocols.pm-03.careModules[0].levels[0].actions[1]",
+        "text": "Identify early compensated-shock findings: tachycardia, weak pulses, delayed refill, cool/mottled skin, altered behavior, reduced urine output/poor intake, and worsening work of breathing."
+      }
+    ],
+    "reason": "Retained early compensated-shock findings include perfusion and altered behavior; flow explicitly states hypotension is late."
+  },
+  {
+    "sourcePath": "protocols.pm-03.clinicalPearls[1]",
+    "sourceText": "Epinephrine or norepinephrine is preferred for fluid-refractory pediatric septic shock when authorized and available.",
+    "targets": [
+      {
+        "path": "protocols.pm-03.careModules[0].levels[2].actions[1]",
+        "text": "Use epinephrine or norepinephrine as the initial vasoactive infusion for fluid-refractory septic shock when authorized. For suspected adrenal crisis, give the patient's prescribed emergency steroid or Medical-Control-directed equivalent."
+      }
+    ],
+    "reason": "Paramedic action retains epinephrine or norepinephrine as initial infusion for fluid-refractory septic shock when authorized; medication row separately retains Medical Control and formulation verification."
+  },
+  {
+    "sourcePath": "protocols.pm-04.overview[1]",
+    "sourceText": "Nonpharmacologic care and oral nonopioids are the standing-order treatments. Paramedic fentanyl is a single-dose option when indicated; Medical Control authorization is required before any second dose.",
+    "targets": [
+      {
+        "path": "protocols.pm-04.careModules[0].levels[0].actions[0]",
+        "text": "Confirm age and actual or length-based weight; treat immediate threats, provide nonpharmacologic pain care, and obtain a developmentally appropriate pain assessment before and after intervention."
+      },
+      {
+        "path": "protocols.pm-04.careModules[0].levels[0].actions[1]",
+        "text": "When the child is alert, can swallow safely, and has no medication-specific contraindication, administer one oral nonopioid: acetaminophen or ibuprofen using the approved weight-based dose and maximum. Do not routinely give both."
+      },
+      {
+        "path": "protocols.pm-04.careModules[0].levels[1].actions[1]",
+        "text": "No additional AEMT standing-order analgesic is authorized by PM-04. Request Paramedic support or contact Medical Control when nonopioid care is inadequate or the oral route is unsafe."
+      },
+      {
+        "path": "protocols.pm-04.careModules[0].levels[2].actions[0]",
+        "text": "Perform all prior care. For severe pain or when the oral route is unsafe or inadequate, administer fentanyl 1 mcg/kg slow IV/IO once; maximum 50 mcg."
+      },
+      {
+        "path": "protocols.pm-04.medications[2].name",
+        "text": "Fentanyl"
+      },
+      {
+        "path": "protocols.pm-04.medications[2].dose",
+        "text": "Paramedic: 1 mcg/kg slow IV/IO once; maximum 50 mcg."
+      },
+      {
+        "path": "protocols.pm-04.medications[2].notes[0]",
+        "text": "Medical Control authorization is required before any second fentanyl dose; a second dose is not a standing order."
+      }
+    ],
+    "reason": "Retained provider-specific actions preserve nonpharmacologic/oral nonopioid standing-order care and no additional AEMT analgesic; Paramedic action plus explicit Paramedic medication dose/notes preserve one-time fentanyl and Medical Control before any second dose."
+  },
+  {
+    "sourcePath": "protocols.pm-04.treatmentSteps[2]",
+    "sourceText": "If the oral route is safe, give one oral nonopioid: acetaminophen 15 mg/kg PO once, maximum 650 mg, OR ibuprofen 10 mg/kg PO once, maximum 400 mg. Do not routinely administer both.",
+    "targets": [
+      {
+        "path": "protocols.pm-04.careModules[0].levels[0].actions[1]",
+        "text": "When the child is alert, can swallow safely, and has no medication-specific contraindication, administer one oral nonopioid: acetaminophen or ibuprofen using the approved weight-based dose and maximum. Do not routinely give both."
+      },
+      {
+        "path": "protocols.pm-04.medications[0].dose",
+        "text": "EMT/AEMT/Paramedic: 15 mg/kg PO once; maximum 650 mg."
+      },
+      {
+        "path": "protocols.pm-04.medications[1].dose",
+        "text": "EMT/AEMT/Paramedic: 10 mg/kg PO once; maximum 400 mg."
+      }
+    ],
+    "reason": "Retained EMT action preserves safe oral route, one of acetaminophen/ibuprofen and not routinely both; medication rows preserve exact once-only weight-based doses/routes/maxima and all provider levels."
+  },
+  {
+    "sourcePath": "protocols.pm-04.treatmentSteps[3]",
+    "sourceText": "For severe pain or an unsafe/inadequate oral route, a Paramedic may give fentanyl 1 mcg/kg slow IV/IO once, maximum 50 mcg. Medical Control must authorize any second fentanyl dose.",
+    "targets": [
+      {
+        "path": "protocols.pm-04.careModules[0].levels[2].actions[0]",
+        "text": "Perform all prior care. For severe pain or when the oral route is unsafe or inadequate, administer fentanyl 1 mcg/kg slow IV/IO once; maximum 50 mcg."
+      },
+      {
+        "path": "protocols.pm-04.medications[2].name",
+        "text": "Fentanyl"
+      },
+      {
+        "path": "protocols.pm-04.medications[2].dose",
+        "text": "Paramedic: 1 mcg/kg slow IV/IO once; maximum 50 mcg."
+      },
+      {
+        "path": "protocols.pm-04.medications[2].notes[0]",
+        "text": "Medical Control authorization is required before any second fentanyl dose; a second dose is not a standing order."
+      }
+    ],
+    "reason": "Retained Paramedic action and explicit Paramedic fentanyl medication dose/notes preserve severe pain or unsafe/inadequate oral route, fentanyl 1 mcg/kg slow IV/IO once, 50 mcg maximum, and Medical Control authorization before any second dose."
+  },
+  {
+    "sourcePath": "protocols.ar-01.overview[0]",
+    "sourceText": "A secure airway is one that provides effective oxygenation and ventilation, not simply an advanced device.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.careModules[0].summary",
+        "text": "Use the least invasive effective airway intervention and escalate only when oxygenation or ventilation remains inadequate."
+      },
+      {
+        "path": "protocols.ar-01.careModules[0].levels[0].actions[1]",
+        "text": "Continue basic airway care when it maintains adequate oxygenation and ventilation; do not delay transport solely to place an advanced airway."
+      },
+      {
+        "path": "protocols.ar-01.warnings[3]",
+        "text": "Effective BVM is an acceptable definitive field airway; do not delay oxygenation or ventilation for intubation or repeated laryngoscopy."
+      }
+    ],
+    "reason": "Retained least-invasive effective intervention and continued effective basic/BVM care preserve that successful airway means oxygenation/ventilation, not obtaining an advanced device."
+  },
+  {
+    "sourcePath": "protocols.ar-01.overview[1]",
+    "sourceText": "Begin with positioning, suction, basic adjuncts, and effective BVM ventilation before escalating.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.flow[1].title",
+        "text": "Basic Maneuvers First"
+      },
+      {
+        "path": "protocols.ar-01.flow[1].text",
+        "text": "Position • suction • OPA/NPA • two-person BVM ± PEEP."
+      },
+      {
+        "path": "protocols.ar-01.careModules[0].summary",
+        "text": "Use the least invasive effective airway intervention and escalate only when oxygenation or ventilation remains inadequate."
+      }
+    ],
+    "reason": "Flow explicitly orders basic positioning, suction, OPA/NPA and two-person BVM first; summary allows escalation only when oxygenation/ventilation inadequate."
+  },
+  {
+    "sourcePath": "protocols.ar-02.overview[1]",
+    "sourceText": "BVM with adjuncts is acceptable definitive field management when it maintains oxygenation and ventilation.",
+    "targets": [
+      {
+        "path": "protocols.ar-02.treatmentSteps[1]",
+        "text": "If BVM maintains SpO₂ at least 92% (at least 94% for suspected TBI) and adequate ventilation, continue it as the definitive field airway and begin transport."
+      },
+      {
+        "path": "protocols.ar-02.flow[2].text",
+        "text": "Optimize position, suction, mask seal, OPA/NPA, PEEP, and two-person technique."
+      }
+    ],
+    "reason": "Retained treatment states effective BVM with adequate ventilation is definitive field airway, with explicit general/TBI saturation criteria and transport."
+  },
+  {
+    "sourcePath": "protocols.ar-02.clinicalPearls[0]",
+    "sourceText": "The clinical goal is oxygenation and ventilation, not endotracheal intubation.",
+    "targets": [
+      {
+        "path": "protocols.ar-02.careModules[0].summary",
+        "text": "Use the least invasive effective airway intervention and escalate only when oxygenation or ventilation remains inadequate."
+      },
+      {
+        "path": "protocols.ar-02.warnings[1]",
+        "text": "Do not abandon effective BVM merely to obtain an advanced airway."
+      }
+    ],
+    "reason": "Retained least-invasive effective oxygenation/ventilation rule plus do-not-abandon-effective-BVM warning preserves goal rather than ETT acquisition."
+  },
+  {
+    "sourcePath": "protocols.ar-03.treatmentSteps[3]",
+    "sourceText": "Select one induction medication, then give the appropriate paralytic and proceed immediately to airway placement. Do not routinely repeat rocuronium before post-intubation analgesia and sedation are established.",
+    "targets": [
+      {
+        "path": "protocols.ar-03.flow[3].text",
+        "text": "Select one induction agent, use the appropriate paralytic, and proceed immediately to airway placement."
+      },
+      {
+        "path": "protocols.ar-03.medications[3].name",
+        "text": "Rocuronium"
+      },
+      {
+        "path": "protocols.ar-03.medications[3].notes[0]",
+        "text": "Do not routinely repeat before post-intubation analgesia and sedation are established."
+      }
+    ],
+    "reason": "Flow retains one induction agent, appropriate paralytic, immediate airway placement; rocuronium note retains no routine repeat before post-intubation analgesia/sedation."
+  },
+  {
+    "sourcePath": "protocols.ar-03.clinicalPearls[2]",
+    "sourceText": "Norepinephrine may be used for peri-intubation hypotension; follow AM-05 and the dedicated Push-Dose Epinephrine reference for its temporary-bridge safeguards.",
+    "targets": [
+      {
+        "path": "protocols.ar-03.treatmentSteps[2]",
+        "text": "Use the AM-05 or AM-07 resuscitation pathway for peri-intubation shock. Treat hypotension before paralysis; use norepinephrine when indicated and open the dedicated Push-Dose Epinephrine reference only for its approved temporary-bridge use."
+      },
+      {
+        "path": "protocols.ar-03.actionLinks[4].label",
+        "text": "Push-Dose Epinephrine — Medication Reference"
+      },
+      {
+        "path": "protocols.ar-03.actionLinks[4].description",
+        "text": "Open the approved labeled preparation, dosing, and two-bolus limit."
+      }
+    ],
+    "reason": "Retained treatment preserves norepinephrine for peri-intubation hypotension, AM-05 routing, and dedicated push-dose epinephrine only for approved temporary-bridge use; link preserves labeled preparation/dosing/two-bolus limit."
+  },
+  {
+    "sourcePath": "protocols.ar-04.clinicalPearls[1]",
+    "sourceText": "Do not treat every wheeze as asthma/COPD; reassess for anaphylaxis, CHF, ACS, PE, pneumothorax, pneumonia, upper-airway obstruction, and foreign body.",
+    "targets": [
+      {
+        "path": "protocols.ar-04.flow[1].title",
+        "text": "Wheeze, Stridor, or Another Cause?"
+      },
+      {
+        "path": "protocols.ar-04.flow[1].text",
+        "text": "Treat anaphylaxis immediately when suspected; assess for CHF, ACS, PE, pneumonia, pneumothorax, obstruction, or foreign body."
+      }
+    ],
+    "reason": "Same wheeze/stridor/other-cause differential is explicit: anaphylaxis, CHF, ACS, PE, pneumonia, pneumothorax, obstruction, foreign body. Flow requires immediate anaphylaxis treatment rather than assuming asthma/COPD."
+  },
+  {
+    "sourcePath": "protocols.ar-05.overview[1]",
+    "sourceText": "Use the pediatric length-based resuscitation system and age/size-appropriate equipment.",
+    "targets": [
+      {
+        "path": "protocols.ar-05.treatmentSteps[1]",
+        "text": "Use the length-based pediatric system as the primary source for equipment, medication, and tube sizing. Estimated ETT depth is approximately 3 × tube diameter; estimated uncuffed tube size is (16 + age in years) ÷ 4 only as a secondary estimate and not for infants."
+      },
+      {
+        "path": "protocols.ar-05.careModules[0].levels[0].actions[1]",
+        "text": "Maintain warmth and use the pediatric length-based resuscitation system for equipment sizing and dosing support."
+      }
+    ],
+    "reason": "Retained length-based pediatric system is primary equipment, medication and tube-sizing source, preserving age/size-appropriate selection."
+  },
+  {
+    "sourcePath": "protocols.ar-06.overview[0]",
+    "sourceText": "Declare pediatric airway failure early, stop repeated laryngoscopy, and return immediately to effective BVM ventilation.",
+    "targets": [
+      {
+        "path": "protocols.ar-06.treatmentSteps[0]",
+        "text": "Declare failure early. Do not wait for three attempts when BVM is ineffective, oxygenation/ventilation is deteriorating, or anatomy makes further attempts unsafe."
+      },
+      {
+        "path": "protocols.ar-06.treatmentSteps[1]",
+        "text": "Stop laryngoscopy, bring the most experienced available airway provider and rescue equipment, and optimize BVM with neutral positioning, suction, OPA/NPA when appropriate, correct mask size/seal, oxygen, and PEEP when indicated."
+      }
+    ],
+    "reason": "Retained instructions declare failure early, do not wait for attempt counts during deterioration, stop laryngoscopy, and optimize BVM immediately."
+  },
+  {
+    "sourcePath": "protocols.ar-06.overview[1]",
+    "sourceText": "Effective BVM is an acceptable definitive field airway. Use a rescue BIAD when appropriate; cricothyrotomy is a rare final rescue based on age and agency authorization.",
+    "targets": [
+      {
+        "path": "protocols.ar-06.treatmentSteps[3]",
+        "text": "If BVM is effective, continue it as the definitive field airway and begin transport. Do not pursue an advanced airway solely because BVM is not ideal."
+      },
+      {
+        "path": "protocols.ar-06.flow[3].text",
+        "text": "If BVM ineffective or prolonged ventilation required: authorized age/size-appropriate BIAD or deliberate paramedic rescue."
+      },
+      {
+        "path": "protocols.ar-06.warnings[3]",
+        "text": "Pediatric cricothyrotomy is a rare, age-appropriate, specifically authorized last-resort procedure for persistent cannot-oxygenate/cannot-ventilate failure."
+      }
+    ],
+    "reason": "Retained definitive effective BVM, authorized age/size-appropriate rescue BIAD, and rare specifically authorized age-appropriate last-resort cricothyrotomy preserve all overview qualifications."
+  },
+  {
+    "sourcePath": "protocols.ar-06.treatmentSteps[4]",
+    "sourceText": "Do not use repeated blind BIAD or laryngoscopy attempts. Every additional attempt must have a meaningful change in provider, approach, positioning, or equipment.",
+    "targets": [
+      {
+        "path": "protocols.ar-06.warnings[1]",
+        "text": "No more than three total laryngoscopy attempts; every further attempt must change the provider, approach, positioning, or equipment."
+      },
+      {
+        "path": "protocols.ar-06.warnings[2]",
+        "text": "Do not use repeated blind BIAD or laryngoscopy attempts."
+      }
+    ],
+    "reason": "Warning retains no repeated blind BIAD/laryngoscopy; other warning retains meaningful change of provider, approach, positioning or equipment for every further attempt and three-total limit."
+  },
+  {
+    "sourcePath": "protocols.ar-06.clinicalPearls[0]",
+    "sourceText": "Do not wait for arbitrary attempt counts when the child is deteriorating—return to effective ventilation first.",
+    "targets": [
+      {
+        "path": "protocols.ar-06.treatmentSteps[0]",
+        "text": "Declare failure early. Do not wait for three attempts when BVM is ineffective, oxygenation/ventilation is deteriorating, or anatomy makes further attempts unsafe."
+      },
+      {
+        "path": "protocols.ar-06.treatmentSteps[1]",
+        "text": "Stop laryngoscopy, bring the most experienced available airway provider and rescue equipment, and optimize BVM with neutral positioning, suction, OPA/NPA when appropriate, correct mask size/seal, oxygen, and PEEP when indicated."
+      }
+    ],
+    "reason": "Retained early-failure instruction specifically forbids waiting for three attempts when deteriorating and returns to optimized BVM."
+  },
+  {
+    "sourcePath": "protocols.ar-07.overview[1]",
+    "sourceText": "Separate bronchospasm/asthma, croup/stridor, bronchiolitis, anaphylaxis, epiglottitis/bacterial tracheitis concern, foreign body, and respiratory failure early.",
+    "targets": [
+      {
+        "path": "protocols.ar-07.flow[1].title",
+        "text": "Wheeze, Stridor, or Another Cause?"
+      },
+      {
+        "path": "protocols.ar-07.flow[1].text",
+        "text": "Consider asthma, croup, bronchiolitis, epiglottitis, anaphylaxis, foreign body, or respiratory failure."
+      },
+      {
+        "path": "protocols.ar-07.treatmentSteps[3]",
+        "text": "For suspected epiglottitis or bacterial tracheitis—drooling, tripod position, toxic appearance, or rapidly progressive upper-airway symptoms—do not force the child supine or examine the tongue/airway; prepare for a controlled airway response and notify the receiving facility early."
+      }
+    ],
+    "reason": "Retained flow differentiates asthma, croup/stridor, bronchiolitis, epiglottitis, anaphylaxis, foreign body and failure; retained treatment explicitly adds bacterial tracheitis concern and early airway response."
+  },
+  {
+    "sourcePath": "protocols.ar-08.treatmentSteps[0]",
+    "sourceText": "Confirm ETT/BIAD placement with continuous waveform EtCO₂, bilateral chest examination, SpO₂, tube depth, and securement. Recheck all confirmation points after every transfer or move.",
+    "targets": [
+      {
+        "path": "protocols.ar-08.flow[0].text",
+        "text": "Confirm success with continuous waveform EtCO₂, bilateral exam, SpO₂, tube depth, and securement."
+      },
+      {
+        "path": "protocols.ar-08.flow[6].text",
+        "text": "Recheck after every move, document airway status/medications, and notify early."
+      }
+    ],
+    "reason": "Retained flow confirms ETT/BIAD success with continuous waveform EtCO2, bilateral exam, SpO2, tube depth/securement and explicitly rechecks after every move."
+  },
+  {
+    "sourcePath": "protocols.ar-08.treatmentSteps[5]",
+    "sourceText": "Treat pain first, then add sedation. Do not stack fentanyl and morphine; select one analgesic strategy.",
+    "targets": [
+      {
+        "path": "protocols.ar-08.flow[3].text",
+        "text": "Paramedic: treat pain first, then add sedation when needed. Pediatric medication requires pediatric pathway/online order."
+      },
+      {
+        "path": "protocols.ar-08.medications[1].notes[0]",
+        "text": "Treat pain first. Do not stack with morphine."
+      },
+      {
+        "path": "protocols.ar-08.medications[2].notes[0]",
+        "text": "Select one analgesic strategy; do not stack with fentanyl."
+      }
+    ],
+    "reason": "Retained pain-first then sedation instruction plus both analgesic notes explicitly preserve single strategy and no fentanyl/morphine stacking."
+  },
+  {
+    "sourcePath": "protocols.ar-08.clinicalPearls[2]",
+    "sourceText": "A secure airway requires continuous confirmation, not a single post-placement check.",
+    "targets": [
+      {
+        "path": "protocols.ar-08.flow[0].text",
+        "text": "Confirm success with continuous waveform EtCO₂, bilateral exam, SpO₂, tube depth, and securement."
+      },
+      {
+        "path": "protocols.ar-08.flow[2].title",
+        "text": "Monitor Continuously"
+      },
+      {
+        "path": "protocols.ar-08.flow[2].text",
+        "text": "Waveform EtCO₂ • SpO₂ • cardiac monitor • tube depth • breath sounds • frequent vital signs."
+      }
+    ],
+    "reason": "Retained continuous confirmation and continuous waveform/SpO2/tube-depth/breath-sound monitoring explicitly preclude a one-time-only post-placement check."
+  },
+  {
+    "sourcePath": "protocols.ar-09.overview[1]",
+    "sourceText": "If oxygenation or ventilation is inadequate, or the cause cannot be immediately corrected, disconnect the ventilator and ventilate with a BVM.",
+    "targets": [
+      {
+        "path": "protocols.ar-09.treatmentSteps[1]",
+        "text": "If the patient is stable, use the functioning ventilator and established settings. If oxygenation/ventilation is inadequate or the cause is not immediately clear, disconnect the ventilator and manually ventilate with BVM."
+      }
+    ],
+    "reason": "Same inadequate oxygenation/ventilation or unclear cause trigger for immediate disconnection and manual BVM ventilation."
+  },
+  {
+    "sourcePath": "protocols.ar-09.treatmentSteps[0]",
+    "sourceText": "Establish the baseline: ventilator-dependent diagnosis, tracheostomy versus ETT, usual settings, usual SpO₂/EtCO₂, alarm meaning, and caregiver rescue plan.",
+    "targets": [
+      {
+        "path": "protocols.ar-09.flow[0].text",
+        "text": "Establish baseline: airway type, diagnosis, usual settings, usual SpO₂/EtCO₂, alarm meaning, and caregiver rescue plan."
+      },
+      {
+        "path": "protocols.ar-09.careModules[0].levels[0].actions[0]",
+        "text": "Ask the caregiver for the baseline, check power/oxygen/circuit, assess the tracheostomy or ETT, suction when indicated, and immediately use BVM if correction is not rapid."
+      }
+    ],
+    "reason": "Flow retains baseline diagnosis, airway type, usual settings/SpO2/EtCO2, alarm meaning, caregiver rescue plan; EMT action explicitly assesses tracheostomy or ETT."
+  },
+  {
+    "sourcePath": "protocols.ar-10.overview[1]",
+    "sourceText": "Prioritize oxygenation, remove simple obstruction, suction, and recognize that a blocked or displaced tracheostomy tube may need prompt removal rather than repeated ventilation attempts.",
+    "targets": [
+      {
+        "path": "protocols.ar-10.flow[0].text",
+        "text": "Ask caregiver and inspect stoma/tube. If uncertain, apply oxygen to both face and stoma."
+      },
+      {
+        "path": "protocols.ar-10.flow[1].text",
+        "text": "Remove speaking valve, cap, HME/filter, and inner cannula if present. Do not remove voice prosthesis."
+      },
+      {
+        "path": "protocols.ar-10.flow[2].text",
+        "text": "Use patient-specific catheter/depth when known. Never force resistance."
+      },
+      {
+        "path": "protocols.ar-10.treatmentSteps[4]",
+        "text": "If the suction catheter will not pass, treat the tube as obstructed or displaced: deflate the cuff when present, reassess face and stoma airflow, and remove the tracheostomy tube rather than repeatedly attempting to ventilate through it."
+      }
+    ],
+    "reason": "Retained ordered pathway provides oxygen, removes simple obstruction and suctions; treatment explicitly removes confirmed obstructed/displaced tube rather than repeatedly trying ventilation."
+  },
+  {
+    "sourcePath": "protocols.ar-10.treatmentSteps[1]",
+    "sourceText": "Do not remove a tracheoesophageal voice prosthesis during an emergency.",
+    "targets": [
+      {
+        "path": "protocols.ar-10.warnings[3]",
+        "text": "Do not remove a tracheoesophageal voice prosthesis during an emergency."
+      }
+    ],
+    "reason": "Exact duplicate prohibition on removing a tracheoesophageal voice prosthesis during an emergency."
+  },
+  {
+    "sourcePath": "protocols.ar-10.clinicalPearls[0]",
+    "sourceText": "If airway anatomy is uncertain, oxygen to both the face and stoma is safest until laryngectomy is excluded.",
+    "targets": [
+      {
+        "path": "protocols.ar-10.careModules[0].levels[0].actions[1]",
+        "text": "If uncertain whether a patient has a laryngectomy, apply oxygen to both face and stoma until anatomy is confirmed."
+      }
+    ],
+    "reason": "Same uncertain-laryngectomy/anatomy oxygen-to-both-face-and-stoma instruction until confirmed."
+  },
+  {
+    "sourcePath": "protocols.ar-10.clinicalPearls[1]",
+    "sourceText": "A blocked or displaced tracheostomy tube should be removed once established, rather than treated as a route for repeated ventilation attempts.",
+    "targets": [
+      {
+        "path": "protocols.ar-10.treatmentSteps[4]",
+        "text": "If the suction catheter will not pass, treat the tube as obstructed or displaced: deflate the cuff when present, reassess face and stoma airflow, and remove the tracheostomy tube rather than repeatedly attempting to ventilate through it."
+      }
+    ],
+    "reason": "Retained treatment explicitly removes tube once obstruction/displacement established rather than repeated ventilation, with catheter/cuff/airflow sequence preserved."
+  },
+  {
+    "sourcePath": "protocols.ar-11.overview[0]",
+    "sourceText": "For a new controlled ventilator setup, use lung-protective volume assist-control ventilation based on Ideal Body Weight (IBW) from height and sex, not actual scale weight.",
+    "targets": [
+      {
+        "path": "protocols.ar-11.careModules[0].levels[2].actions[0]",
+        "text": "For a new controlled setup, use volume assist-control and calculate tidal volume from Ideal Body Weight (IBW) using height and sex; do not use actual scale weight."
+      },
+      {
+        "path": "protocols.ar-11.careModules[0].levels[2].actions[1]",
+        "text": "Set tidal volume at 6-8 mL/kg IBW. Start at 6 mL/kg for ARDS, restrictive physiology, or elevated pressures, and only increase when clinically appropriate while maintaining plateau pressure below 30 cm H2O."
+      }
+    ],
+    "reason": "Retained Paramedic setup instructions preserve volume assist-control, height/sex-derived IBW not scale weight, lung-protective tidal volumes and pressure safeguards."
+  },
+  {
+    "sourcePath": "protocols.ar-11.overview[1]",
+    "sourceText": "Maintain stable, functioning established home or transfer settings unless the patient's clinical condition requires change. If an alarm occurs and the cause is uncertain, disconnect immediately and manually ventilate while evaluating the cause.",
+    "targets": [
+      {
+        "path": "protocols.ar-11.warnings[3]",
+        "text": "Do not use this new-setup pathway to overwrite stable home or transfer settings without a clinical reason."
+      },
+      {
+        "path": "protocols.ar-11.warnings[1]",
+        "text": "Do not persist with an alarming ventilator when the cause is unclear; disconnect and manually ventilate. In obstructive lung disease with suspected auto-PEEP, allow full exhalation and ventilate slowly after disconnecting."
+      },
+      {
+        "path": "protocols.ar-11.flow[1].text",
+        "text": "Maintain established settings when safe; verify baseline, reserve oxygen/power, BVM, suction, and caregiver plan."
+      }
+    ],
+    "reason": "Retained maintain-safe-established-settings rule with clinical-change exception and unclear-alarm immediate disconnect/manual ventilation cover both overview sentences."
+  },
+  {
+    "sourcePath": "protocols.tb-06.overview[0]",
+    "sourceText": "Use a rapid XABCDE approach, treat immediate threats, and minimize scene time for high-risk trauma.",
+    "targets": [
+      {
+        "path": "protocols.tb-06.flow[1].title",
+        "text": "XABCDE"
+      },
+      {
+        "path": "protocols.tb-06.flow[1].text",
+        "text": "Exsanguination • airway • breathing • circulation • disability • exposure."
+      },
+      {
+        "path": "protocols.tb-06.flow[3].text",
+        "text": "Catastrophic hemorrhage control • airway/ventilation • assess chest injury and urgently request ALS for suspected tension pneumothorax • pelvic stabilization only when indicated • warming • reassessment."
+      },
+      {
+        "path": "protocols.tb-06.careModules[0].summary",
+        "text": "Perform all immediately indicated care within scope without delaying rapid trauma transport."
+      }
+    ],
+    "reason": "Retained XABCDE, immediate-threat treatment and no-delay rapid trauma transport cover the overview."
+  },
+  {
+    "sourcePath": "protocols.tb-06.overview[1]",
+    "sourceText": "Destination selection and early notification are part of treatment.",
+    "targets": [
+      {
+        "path": "protocols.tb-06.flow[7].text",
+        "text": "Apply the trauma field-triage and destination plan: high-risk patients to the highest-level appropriate trauma center within regional constraints; favor pediatric-capable trauma care for children. Use a closer stabilization hospital only for an immediate critical need that cannot safely be managed during longer transport, under the destination plan/Medical Control. Notify early, document the reason, and activate the predefined transfer process. Do not delay ground movement solely while awaiting aircraft."
+      }
+    ],
+    "reason": "Retained destination pathway explicitly directs destination selection and early notification, including all stabilization and transfer exceptions."
+  },
+  {
+    "sourcePath": "protocols.tb-09.overview[1]",
+    "sourceText": "Full-thickness burns; partial-thickness burns of 10% TBSA or greater; deep burns involving critical areas; inhalation injury; significant associated trauma; uncontrolled pain; and pediatric burns require burn-center consultation or transfer consideration.",
+    "targets": [
+      {
+        "path": "protocols.tb-09.flow[3].title",
+        "text": "Burn-Center Consultation?"
+      },
+      {
+        "path": "protocols.tb-09.flow[3].text",
+        "text": "Full thickness • partial thickness ≥10% TBSA • potentially deep burn of any size • critical-area burn • inhalation injury • associated trauma • uncontrolled pain • complicating comorbidity • pediatric burn."
+      },
+      {
+        "path": "protocols.tb-09.assessment[1].title",
+        "text": "Burn-center consultation or transfer considerations"
+      },
+      {
+        "path": "protocols.tb-09.assessment[1].items[0]",
+        "text": "Full-thickness burns; potentially deep burns of any size; or comorbidity that complicates care."
+      },
+      {
+        "path": "protocols.tb-09.assessment[1].items[1]",
+        "text": "Partial-thickness burns of 10% TBSA or greater."
+      },
+      {
+        "path": "protocols.tb-09.assessment[1].items[2]",
+        "text": "Deep partial- or full-thickness burns involving the face, hands, feet, genitalia, perineum, or over major joints."
+      },
+      {
+        "path": "protocols.tb-09.assessment[1].items[3]",
+        "text": "Suspected inhalation injury, chemical or electrical injury, significant associated trauma, poorly controlled pain, or pediatric burns requiring specialty support."
+      }
+    ],
+    "reason": "Retained burn-center consultation/transfer list includes every category, exact partial-thickness 10% TBSA threshold, specified deep critical areas and pediatric specialty consideration."
+  },
+  {
+    "sourcePath": "protocols.tb-09.treatmentSteps[0]",
+    "sourceText": "For a small thermal burn (<10% TBSA), use cool running water for approximately 20 minutes when feasible without hypothermia or transport delay. Monitor temperature and keep uninjured areas warm; do not use ice or cool when hypothermia risk is significant. Then cover with clean dry dressings.",
+    "targets": [
+      {
+        "path": "protocols.tb-09.careModules[0].levels[0].actions[0]",
+        "text": "Stop the burning process and remove jewelry/constricting items. For a small thermal burn (<10% TBSA), use cool running water for approximately 20 minutes when feasible without hypothermia or transport delay; monitor temperature and keep uninjured areas warm. Do not cool when hypothermia risk is significant. Cover with clean dry dressings, prevent hypothermia, and estimate TBSA."
+      },
+      {
+        "path": "protocols.tb-09.flow[0].text",
+        "text": "Remove the heat source and constricting items; protect responders. For a small thermal burn (<10% TBSA), use cool running water for approximately 20 minutes when feasible without hypothermia or transport delay. Monitor temperature and keep uninjured areas warm; no ice."
+      }
+    ],
+    "reason": "Retained EMT instruction preserves small burn <10% TBSA, approximately 20 minutes cool running water when feasible, no hypothermia/transport delay, temperature monitoring, warming uninjured areas, no cooling if hypothermia risk, and clean dry cover; flow preserves no ice."
+  },
+  {
+    "sourcePath": "protocols.tb-09.treatmentSteps[1]",
+    "sourceText": "For an isolated burn requiring fluid resuscitation without shock, begin a controlled warmed LR infusion using the displayed age-/weight-/TBSA-based burn-fluid table; use NS if LR is unavailable. Record injury time, weight, and partial-/full-thickness TBSA, and reassess frequently.",
+    "targets": [
+      {
+        "path": "protocols.tb-09.careModules[0].levels[1].actions[0]",
+        "text": "Perform all EMT care plus IV/IO access and authorized non-IM analgesia within scope. When burn-fluid resuscitation is indicated, use a controlled warmed lactated Ringer's infusion (normal saline if LR is unavailable) at the starting rate in the burn-fluid table; reassess perfusion, respiratory status, and response frequently."
+      },
+      {
+        "path": "protocols.tb-09.careModules[0].levels[1].actions[3]",
+        "text": "For shock, search for associated hemorrhage or another cause and follow the appropriate shock-resuscitation pathway; the isolated-burn starting rate does not replace shock treatment."
+      },
+      {
+        "path": "protocols.tb-09.assessment[0].items[0]",
+        "text": "Record injury time, weight, and partial-/full-thickness TBSA. Use warmed lactated Ringer's when available; normal saline is an alternative, changing to LR when available."
+      },
+      {
+        "path": "protocols.tb-09.assessment[0].items[3]",
+        "text": "Reassess perfusion, respiratory status, and response frequently. Do not give an automatic 1 L bolus solely because a burn is extensive; do not delay transport."
+      }
+    ],
+    "reason": "Retained AEMT care preserves controlled warmed LR per burn-fluid table, NS alternative, frequent reassessment and explicit shock-vs-isolated-burn distinction; assessment records injury time/weight/partial-full TBSA."
+  },
+  {
+    "sourcePath": "protocols.tb-09.treatmentSteps[3]",
+    "sourceText": "Consult a burn center for indicated injuries, potentially deep burns of any size, or complicating comorbidity. Consultation does not automatically require bypassing needed stabilization; follow the regional destination plan and document/coordinate any closer stabilization and transfer.",
+    "targets": [
+      {
+        "path": "protocols.tb-09.flow[5].text",
+        "text": "Consult a burn center for indicated injuries, including potentially deep burns of any size and complicating comorbidity. Consultation does not automatically require bypassing needed stabilization; follow the regional destination plan. Use a closer stabilization hospital for an immediate critical need that cannot safely be managed during longer transport; notify early, document the reason, and coordinate transfer."
+      }
+    ],
+    "reason": "Retained flow exactly preserves indicated/deep-any-size/comorbidity consultation, not automatic stabilization bypass, regional destination plan and documenting/coordinating closer stabilization transfer."
+  },
+  {
+    "sourcePath": "protocols.tb-10.overview[1]",
+    "sourceText": "When resuscitation is indicated, perform essential interventions without delaying movement toward definitive care for nonessential procedures.",
+    "targets": [
+      {
+        "path": "protocols.tb-10.careModules[0].levels[0].actions[1]",
+        "text": "Begin rapid transport when resuscitation criteria are met; do not delay for procedures that can occur en route."
+      },
+      {
+        "path": "protocols.tb-10.careModules[0].summary",
+        "text": "Perform all immediately indicated care within scope without delaying rapid trauma transport."
+      }
+    ],
+    "reason": "Retained EMT action explicitly begins rapid transport when resuscitation criteria met without delay for procedures that can occur en route; care summary preserves immediate indicated within-scope care."
+  },
+  {
+    "sourcePath": "protocols.tb-11.overview[0]",
+    "sourceText": "Use for blunt, penetrating, thermal, or chemical eye injury. Treat life threats and associated trauma first, then protect vision by preventing pressure on a potentially open globe and beginning immediate irrigation for an ordinary chemical splash; known or strongly suspected open globe with contamination requires the specific exception below.",
+    "targets": [
+      {
+        "path": "protocols.tb-11.indications[0]",
+        "text": "Blunt or penetrating injury involving the eye or orbit."
+      },
+      {
+        "path": "protocols.tb-11.indications[1]",
+        "text": "Chemical or thermal exposure involving the eye."
+      },
+      {
+        "path": "protocols.tb-11.careModules[0].levels[0].actions[0]",
+        "text": "Treat immediate airway, breathing, circulation, hemorrhage, and associated trauma threats. Use spinal motion restriction only when indicated by mechanism and examination."
+      },
+      {
+        "path": "protocols.tb-11.flow[1].text",
+        "text": "Ordinary splash: start immediate gentle copious irrigation through handoff. Known/strongly suspected open globe with contamination: no irrigation into globe or pressure; noncontact rigid shield and urgent specialist/Medical Control guidance."
+      },
+      {
+        "path": "protocols.tb-11.flow[3].text",
+        "text": "No pressure, manipulation, irrigation, drops, or object removal - rigid shield - stabilize protruding object"
+      }
+    ],
+    "reason": "Retained indications cover blunt/penetrating/thermal/chemical injury; EMT action treats life threats first; flow preserves no open-globe pressure, immediate ordinary chemical irrigation, and known/strongly-suspected contaminated open-globe exception."
+  },
+  {
+    "sourcePath": "protocols.tb-11.overview[1]",
+    "sourceText": "Rapidly distinguish chemical or thermal exposure from penetrating/open-globe injury, blunt trauma, and a loose superficial foreign body because the correct care is different.",
+    "targets": [
+      {
+        "path": "protocols.tb-11.flow[1].title",
+        "text": "Chemical Exposure?"
+      },
+      {
+        "path": "protocols.tb-11.flow[2].title",
+        "text": "Thermal Eye Injury?"
+      },
+      {
+        "path": "protocols.tb-11.flow[3].title",
+        "text": "Penetrating / Open Globe?"
+      },
+      {
+        "path": "protocols.tb-11.flow[4].title",
+        "text": "Blunt / Superficial?"
+      },
+      {
+        "path": "protocols.tb-11.treatmentSteps[8]",
+        "text": "Loose superficial debris may be irrigated only when penetrating injury or globe rupture is not suspected. Do not remove an embedded foreign body or use cotton swabs, magnets, or instruments on the eye."
+      }
+    ],
+    "reason": "Retained branched flow differentiates chemical, thermal, penetrating/open globe and blunt/superficial care; treatment retains loose superficial foreign body distinction."
+  },
+  {
+    "sourcePath": "protocols.tb-11.treatmentSteps[3]",
+    "sourceText": "For known or strongly suspected open globe with chemical contamination, do not irrigate into the globe or apply pressure. Use a noncontact rigid shield and urgently obtain ophthalmology, Poison Help, and Medical Control guidance. A hypothetical concern for rupture must not delay ordinary splash irrigation.",
+    "targets": [
+      {
+        "path": "protocols.tb-11.careModules[0].levels[0].actions[3]",
+        "text": "If an open globe is known or strongly suspected with chemical contamination, do not irrigate into the globe or apply pressure. Protect with a noncontact rigid shield and urgently obtain ophthalmology, Poison Help, and Medical Control guidance. A hypothetical concern for rupture must not delay ordinary splash irrigation."
+      }
+    ],
+    "reason": "Same full contaminated-open-globe exception: known/strongly suspected only, no irrigation or pressure, noncontact rigid shield, urgent ophthalmology/Poison Help/Medical Control, and hypothetical rupture concern must not delay ordinary irrigation."
+  },
+  {
+    "sourcePath": "protocols.tb-11.clinicalPearls[1]",
+    "sourceText": "For an ordinary chemical splash, treatment begins with irrigation. Water is preferable to waiting for saline or a specialized irrigating fluid. A hypothetical concern for rupture must not delay ordinary splash irrigation; use the specific exception for a known or strongly suspected contaminated open globe.",
+    "targets": [
+      {
+        "path": "protocols.tb-11.treatmentSteps[1]",
+        "text": "Ordinary chemical splash: begin immediate gentle copious water or normal-saline irrigation and continue during transport through handoff; do not wait for product identification or ideal fluid. Remove contact lenses when easily possible, irrigate from the inner corner outward, and prevent runoff into the unaffected eye or onto responders."
+      },
+      {
+        "path": "protocols.tb-11.careModules[0].levels[0].actions[3]",
+        "text": "If an open globe is known or strongly suspected with chemical contamination, do not irrigate into the globe or apply pressure. Protect with a noncontact rigid shield and urgently obtain ophthalmology, Poison Help, and Medical Control guidance. A hypothetical concern for rupture must not delay ordinary splash irrigation."
+      }
+    ],
+    "reason": "Retained immediate ordinary irrigation with water/NS without waiting for ideal fluid plus full known/strongly-suspected contaminated-open-globe exception preserve every operative instruction."
+  },
+  {
+    "sourcePath": "protocols.tb-11.clinicalPearls[2]",
+    "sourceText": "A rigid shield protects without pressing on the eye; a pressure patch can worsen an open-globe injury.",
+    "targets": [
+      {
+        "path": "protocols.tb-11.warnings[4]",
+        "text": "Do not patch either eye. For suspected open-globe injury, protect the affected eye with a rigid shield without pressure."
+      },
+      {
+        "path": "protocols.tb-11.warnings[0]",
+        "text": "Never apply pressure to an eye with trauma, suspected penetration, irregular pupil, hyphema, extrusion, or possible globe rupture."
+      }
+    ],
+    "reason": "Retained no patching and nonpressure rigid shield rule, plus no pressure for possible globe rupture, preserve shield-vs-pressure-patch safety point."
+  },
+  {
+    "sourcePath": "protocols.tb-11.clinicalPearls[3]",
+    "sourceText": "Visual acuity is the eye's vital sign, but critical treatment and transport take priority when it cannot be obtained quickly.",
+    "targets": [
+      {
+        "path": "protocols.tb-11.assessment[0].items[1]",
+        "text": "Assess visual acuity in each eye separately before treatment when feasible and after treatment when it will not delay care. If a chart is unavailable, document the ability to read, count fingers, detect hand motion, or perceive light."
+      },
+      {
+        "path": "protocols.tb-11.careModules[0].levels[0].actions[4]",
+        "text": "Assess and document visual acuity in each eye separately when feasible, pupils, visible injury, mechanism, pain, and changes during care. Do not delay time-sensitive transport to complete testing."
+      }
+    ],
+    "reason": "Retained visual-acuity assessment when feasible and explicit no delay to time-sensitive treatment/transport preserve entire operative priority; vital-sign analogy adds no instruction."
+  },
+  {
+    "sourcePath": "protocols.tb-12.overview[0]",
+    "sourceText": "Use for blunt or penetrating injury to the abdomen, flank, pelvis, groin, perineum, or lower torso, including suspected internal hemorrhage, pelvic fracture, evisceration, or an impaled object.",
+    "targets": [
+      {
+        "path": "protocols.tb-12.indications[0]",
+        "text": "Blunt or penetrating injury to the abdomen, flank, pelvis, groin, perineum, lower chest, or lower back."
+      },
+      {
+        "path": "protocols.tb-12.indications[1]",
+        "text": "Abdominal or pelvic pain, tenderness, guarding, rigidity, distention, bruising, abrasion, seatbelt sign, penetrating wound, impalement, evisceration, or unstable vital signs after trauma."
+      },
+      {
+        "path": "protocols.tb-12.indications[2]",
+        "text": "Pelvic pain or deformity, suspected pelvic fracture, blood at the urinary meatus, hematuria, rectal/vaginal bleeding, inability to void, or neurologic deficit after trauma."
+      },
+      {
+        "path": "protocols.tb-12.indications[3]",
+        "text": "High-energy mechanism, multisystem trauma, anticoagulant use, pregnancy, pediatric trauma, older adult trauma, or unexplained shock with possible abdominal/pelvic injury."
+      }
+    ],
+    "reason": "Retained indication rows cover every anatomical region, blunt/penetrating mechanism, internal hemorrhage/shock, pelvic fracture, evisceration and impalement."
+  },
+  {
+    "sourcePath": "protocols.tb-12.treatmentSteps[7]",
+    "sourceText": "Establish IV/IO access when indicated without delaying transport. For adult hemorrhagic shock when blood is unavailable, follow AM-05: titrate warmed isotonic crystalloid to clinical perfusion; avoid unnecessary large-volume crystalloid. Without suspected TBI, use a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg. For suspected TBI, prevent hypotension, target adult SBP at least 110 mmHg including age 70, use normal saline when crystalloid is required, and do not use permissive hypotension. Reassess perfusion, respiratory status, and blood pressure frequently and after treatment.",
+    "targets": [
+      {
+        "path": "protocols.tb-12.careModules[0].levels[1].actions[0]",
+        "text": "Perform all EMT actions plus IV/IO access. For adult hemorrhagic shock when blood is unavailable, follow AM-05: titrate warmed isotonic crystalloid to clinical perfusion and avoid unnecessary large-volume crystalloid. Use age-appropriate analgesia or antiemetic care within current standing orders."
+      },
+      {
+        "path": "protocols.tb-12.careModules[0].levels[1].actions[2]",
+        "text": "Do not delay transport for vascular access. Trend mental status, pulse quality, skin findings, blood pressure, pulse pressure, and response to resuscitation."
+      },
+      {
+        "path": "protocols.tb-12.careModules[0].levels[1].actions[3]",
+        "text": "Do not delay transport for vascular access or fluid. Without suspected TBI, use the AM-05 endpoint of a palpable radial pulse, adequate mental status, or SBP approximately 80–90 mmHg. With suspected TBI, prevent hypotension and target adult SBP at least 110 mmHg, including age 70; do not use permissive hypotension. Use normal saline when crystalloid is required for suspected TBI and reassess blood pressure frequently and after treatment."
+      },
+      {
+        "path": "protocols.tb-12.medications[2].notes[0]",
+        "text": "Reassess perfusion, respiratory status, and blood pressure frequently and after treatment. Definitive hemorrhage control takes priority; use blood products only within an authorized, supported transfusion program."
+      }
+    ],
+    "reason": "Retained AEMT instructions preserve IV/IO without delay, adult warmed crystalloid only if blood unavailable, no excess volume, no-TBI perfusion endpoints, TBI SBP >=110 including age 70, NS, no permissive hypotension, and frequent/post-treatment BP/perfusion/respiratory reassessment."
+  },
+  {
+    "sourcePath": "protocols.tb-12.treatmentSteps[8]",
+    "sourceText": "Paramedic only: after immediate lifesaving interventions, consider IV/IO TXA for traumatic hemorrhage with clinical hemorrhagic shock within 3 hours of injury. Adult dose: 1–2 g IV/IO: give 1 g over 10 minutes or 2 g over 20 minutes; do not exceed 100 mg/min. Verify the stocked concentration and dilution against the current medication-preparation instructions. Do not administer an automatic repeat dose; any additional dose requires a separate authorized order. Do not infer a systemic trauma regimen from topical indications. Record injury time and any TXA dose/time; notify the receiving team to prevent duplicate dosing.",
+    "targets": [
+      {
+        "path": "protocols.tb-12.medications[3].dose",
+        "text": "Paramedic only: consider IV/IO TXA after immediate lifesaving interventions for traumatic hemorrhage with clinical hemorrhagic shock within 3 hours of injury. Adult dose: 1–2 g IV/IO: give 1 g over 10 minutes or 2 g over 20 minutes; do not exceed 100 mg/min. Verify the stocked concentration and dilution against the current medication-preparation instructions. Do not administer an automatic repeat dose; any additional dose requires a separate authorized order."
+      },
+      {
+        "path": "protocols.tb-12.medications[3].notes[1]",
+        "text": "Record injury time and any TXA dose/time; notify the receiving team to prevent duplicate dosing. Do not infer a systemic trauma regimen from topical bleeding indications."
+      }
+    ],
+    "reason": "Retained medication order and note exactly preserve Paramedic-only timing/indication, within 3 hours, 1-2 g IV/IO dose/rate pairings, max 100 mg/min, preparation check, no automatic repeat/separate order, no topical extrapolation and injury/dose-time documentation/receiving notification."
+  },
+  {
+    "sourcePath": "protocols.tb-12.treatmentSteps[10]",
+    "sourceText": "Pregnancy beyond approximately 20 weeks: prioritize maternal resuscitation and relieve aortocaval compression with left uterine displacement or left lateral tilt when compatible with trauma care. Notify an appropriate trauma/obstetric-capable destination early.",
+    "targets": [
+      {
+        "path": "protocols.tb-12.careModules[0].levels[2].actions[4]",
+        "text": "For a pregnant patient beyond approximately 20 weeks, relieve aortocaval compression with manual left uterine displacement or left lateral tilt when compatible with spinal and trauma care."
+      },
+      {
+        "path": "protocols.tb-12.warnings[7]",
+        "text": "Maternal resuscitation is the best initial fetal resuscitation. Do not delay trauma-center care to obtain fetal assessment unavailable to the crew."
+      },
+      {
+        "path": "protocols.tb-12.careModules[0].levels[0].actions[3]",
+        "text": "Package for rapid trauma transport, keep the patient NPO, and provide early notification for shock, penetrating injury, evisceration, impalement, pregnancy, or suspected unstable pelvic injury."
+      },
+      {
+        "path": "protocols.tb-12.specialPopulations[0].items[2]",
+        "text": "Transport significant trauma to a destination capable of both maternal trauma resuscitation and obstetric/neonatal care when feasible without delaying definitive trauma treatment."
+      }
+    ],
+    "reason": "Retained Paramedic pregnancy >approximately 20-week displacement/tilt with trauma compatibility, maternal-first resuscitation, early pregnancy notification and trauma/OB-capable destination preserve every instruction."
+  },
+  {
+    "sourcePath": "protocols.te-01.overview[0]",
+    "sourceText": "Prioritize scene safety, wound care, immobilization, removal of constricting items, and treatment of anaphylaxis or shock.",
+    "targets": [
+      {
+        "path": "protocols.te-01.flow[0].text",
+        "text": "Stage or request resources until animal, insect, or environmental hazard is controlled."
+      },
+      {
+        "path": "protocols.te-01.flow[1].text",
+        "text": "Treat immediate threats and route to age-appropriate allergy or shock protocol."
+      },
+      {
+        "path": "protocols.te-01.flow[2].text",
+        "text": "Clean/cover the wound when it will not delay care, remove constricting items, and immobilize the extremity in a neutral position of comfort."
+      }
+    ],
+    "reason": "Retained scene-safety, immediate anaphylaxis/shock pathway, wound care/cover, constricting-item removal and immobilization cover entire priority summary."
+  },
+  {
+    "sourcePath": "protocols.te-02.overview[1]",
+    "sourceText": "Immediate removal from exposure, decontamination when indicated, and 100% oxygen are foundational.",
+    "targets": [
+      {
+        "path": "protocols.te-02.flow[0].text",
+        "text": "Stage or request PPE/HAZMAT support, remove the patient from exposure, and decontaminate liquid or industrial cyanide contamination before ambulance transport when indicated."
+      },
+      {
+        "path": "protocols.te-02.flow[1].title",
+        "text": "100% Oxygen"
+      },
+      {
+        "path": "protocols.te-02.flow[1].text",
+        "text": "Give regardless of standard pulse-ox reading; support airway and ventilation."
+      }
+    ],
+    "reason": "Retained first flow nodes explicitly remove exposure, decontaminate when indicated, and provide 100% oxygen with airway/ventilation support."
+  },
+  {
+    "sourcePath": "protocols.te-03.overview[1]",
+    "sourceText": "Begin with two initial breaths/ventilations, then support ventilation and circulation without delaying for routine spinal restriction or copious airway foam.",
+    "targets": [
+      {
+        "path": "protocols.te-03.flow[1].text",
+        "text": "For apnea or unresponsiveness, provide two initial breaths/ventilations by the first effective means available; do not delay for routine suctioning."
+      },
+      {
+        "path": "protocols.te-03.flow[2].text",
+        "text": "No: begin CPR with breaths and compressions, then use the adult or pediatric arrest pathway. Yes: continue oxygenation and airway support."
+      },
+      {
+        "path": "protocols.te-03.flow[3].text",
+        "text": "Use spinal-motion restriction only when indicated and never at the expense of ventilation/CPR."
+      },
+      {
+        "path": "protocols.te-03.warnings[0]",
+        "text": "Do not waste time suctioning airway foam; ventilate through it and suction water/vomit only when needed."
+      },
+      {
+        "path": "protocols.te-03.careModules[0].levels[1].actions[0]",
+        "text": "Perform all EMT care plus IV/IO access and treatment of glucose abnormality, shock, or associated hypothermia."
+      }
+    ],
+    "reason": "Retained initial two breaths, ongoing circulation/ventilation support, no routine spinal delay and ventilation-through-foam rule cover all operative instructions."
+  },
+  {
+    "sourcePath": "protocols.te-04.overview[0]",
+    "sourceText": "Heat exposure with altered mental status is heat stroke until proven otherwise and demands immediate aggressive cooling; do not wait for a temperature or exclude heat stroke because the initial reading is below 104°F.",
+    "targets": [
+      {
+        "path": "protocols.te-04.flow[1].text",
+        "text": "Cramps • exhaustion • suspected heat stroke (heat exposure plus altered mental status; a temperature below 104°F does not exclude it)."
+      },
+      {
+        "path": "protocols.te-04.flow[2].text",
+        "text": "Begin immediate active cooling concurrent with resuscitation. Ice-water immersion is preferred; use tepid-water immersion or tarp-assisted ice-water cooling if unavailable."
+      },
+      {
+        "path": "protocols.te-04.warnings[0]",
+        "text": "Do not delay cooling to obtain a temperature; heat exposure with altered mental status is heat stroke until proven otherwise."
+      }
+    ],
+    "reason": "Retained heat-exposure-plus-AMS diagnosis even below 104 F, immediate active cooling and no waiting for temperature cover the entire overview."
+  },
+  {
+    "sourcePath": "protocols.te-05.overview[1]",
+    "sourceText": "Treat localized cold injury without rubbing, massage, or allowing refreezing.",
+    "targets": [
+      {
+        "path": "protocols.te-05.warnings[0]",
+        "text": "Do not rub or massage frostbitten tissue, debride frostbite blisters, or apply direct chemical heat to frostbitten tissue."
+      },
+      {
+        "path": "protocols.te-05.warnings[1]",
+        "text": "Do not rewarm frostbite if refreezing is possible. When sustained thaw can be assured, use 37–40°C (99–104°F) water for 20–30 minutes."
+      }
+    ],
+    "reason": "Retained frostbite restrictions explicitly prohibit rubbing/massage and rewarming when refreezing possible."
+  },
+  {
+    "sourcePath": "protocols.te-08.overview[0]",
+    "sourceText": "Use for suspected nerve-agent or organophosphate exposure. Rescuer protection, decontamination, airway/ventilation support, and rapid escalation are the field priorities.",
+    "targets": [
+      {
+        "path": "protocols.te-08.indications[0]",
+        "text": "Known or suspected nerve-agent release, intentional chemical event, or organophosphate/carbamate exposure with cholinergic findings."
+      },
+      {
+        "path": "protocols.te-08.flow[0].text",
+        "text": "Stage uphill/upwind when possible. Request HazMat, fire, law enforcement, and incident command. Only trained and properly protected personnel may enter the hazard area."
+      },
+      {
+        "path": "protocols.te-08.warnings[3]",
+        "text": "Airway suction, ventilation, seizure care, decontamination, Poison Help, Medical Control, and rapid transport take priority over unavailable antidote retrieval."
+      }
+    ],
+    "reason": "Retained nerve-agent/organophosphate scope, rescuer protection, and prioritized suction/ventilation/seizure/decontamination/consultation/rapid transport preserve overview."
+  },
+  {
+    "sourcePath": "protocols.pm-04.careModules[0].levels[2].actions[1]",
+    "sourceText": "Before any second fentanyl dose, contact Medical Control for authorization. A second dose is not a standing order under PM-04.",
+    "targets": [
+      {
+        "path": "protocols.pm-04.medications[2].name",
+        "text": "Fentanyl"
+      },
+      {
+        "path": "protocols.pm-04.medications[2].dose",
+        "text": "Paramedic: 1 mcg/kg slow IV/IO once; maximum 50 mcg."
+      },
+      {
+        "path": "protocols.pm-04.medications[2].notes[0]",
+        "text": "Medical Control authorization is required before any second fentanyl dose; a second dose is not a standing order."
+      }
+    ],
+    "reason": "Same explicit Paramedic fentanyl authority. Retained note exactly preserves Medical Control authorization BEFORE any second dose and that no second dose is a standing order. No inheritance/monitoring text removed."
+  },
+  {
+    "sourcePath": "protocols.tb-12.careModules[0].levels[2].actions[1]",
+    "sourceText": "Paramedic only: after immediate lifesaving interventions, consider IV/IO TXA for traumatic hemorrhage with clinical hemorrhagic shock no more than 3 hours after injury. Adult dose: 1–2 g IV/IO: give 1 g over 10 minutes or 2 g over 20 minutes; do not exceed 100 mg/min. Verify the stocked concentration and dilution against the current medication-preparation instructions. Do not administer an automatic repeat dose; any additional dose requires a separate authorized order. Do not infer a systemic trauma regimen from topical indications. Record injury time and any TXA dose/time, and notify the receiving team to prevent duplicate dosing. Do not delay transport or definitive hemorrhage control.",
+    "targets": [
+      {
+        "path": "protocols.tb-12.medications[3].name",
+        "text": "Tranexamic acid (TXA)"
+      },
+      {
+        "path": "protocols.tb-12.medications[3].dose",
+        "text": "Paramedic only: consider IV/IO TXA after immediate lifesaving interventions for traumatic hemorrhage with clinical hemorrhagic shock within 3 hours of injury. Adult dose: 1–2 g IV/IO: give 1 g over 10 minutes or 2 g over 20 minutes; do not exceed 100 mg/min. Verify the stocked concentration and dilution against the current medication-preparation instructions. Do not administer an automatic repeat dose; any additional dose requires a separate authorized order."
+      },
+      {
+        "path": "protocols.tb-12.medications[3].notes[0]",
+        "text": "Do not delay transport or definitive hemorrhage control for TXA administration."
+      },
+      {
+        "path": "protocols.tb-12.medications[3].notes[1]",
+        "text": "Record injury time and any TXA dose/time; notify the receiving team to prevent duplicate dosing. Do not infer a systemic trauma regimen from topical bleeding indications."
+      }
+    ],
+    "reason": "Same explicit Paramedic-only traumatic-hemorrhage TXA authority and entire instruction: after lifesaving interventions, clinical shock, within 3 hours, adult 1-2 g IV/IO exact rates/max, preparation check, no automatic repeat/separate order, no topical extrapolation, injury/dose times, receiving notification and no delay to transport/definitive control. No inheritance text in removed action."
+  },
+  {
+    "sourcePath": "protocols.tb-12.careModules[0].levels[2].actions[2]",
+    "sourceText": "Pediatric trauma TXA: local dose reference 15 mg/kg, Paramedic-only. Before administration, confirm pediatric eligibility, maximum dose, administration rate, and preparation with Medical Control within provider scope. Do not extrapolate the adult dose or infusion rate to children.",
+    "targets": [
+      {
+        "path": "protocols.tb-12.medications[3].name",
+        "text": "Tranexamic acid (TXA)"
+      },
+      {
+        "path": "protocols.tb-12.medications[3].dose",
+        "text": "Paramedic only: consider IV/IO TXA after immediate lifesaving interventions for traumatic hemorrhage with clinical hemorrhagic shock within 3 hours of injury. Adult dose: 1–2 g IV/IO: give 1 g over 10 minutes or 2 g over 20 minutes; do not exceed 100 mg/min. Verify the stocked concentration and dilution against the current medication-preparation instructions. Do not administer an automatic repeat dose; any additional dose requires a separate authorized order."
+      },
+      {
+        "path": "protocols.tb-12.medications[3].notes[2]",
+        "text": "Pediatric trauma TXA: local dose reference 15 mg/kg, Paramedic-only. Before administration, confirm pediatric eligibility, maximum dose, administration rate, and preparation with Medical Control within provider scope. Do not extrapolate the adult dose or infusion rate to children."
+      }
+    ],
+    "reason": "Pediatric TXA note is a verbatim duplicate of this Paramedic action, preserving 15 mg/kg local reference, explicit Paramedic-only role, prior Medical Control confirmation of eligibility/maximum/rate/preparation within scope, and no adult-dose/rate extrapolation."
+  },
+  {
+    "sourcePath": "protocols.ar-02.treatmentSteps[5]",
+    "sourceText": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "Suspected TBI oxygenation, ventilation and blood-pressure safeguards: see",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[2]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-02.treatmentSteps[6]",
+    "sourceText": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[3]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-02.treatmentSteps[7]",
+    "sourceText": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[4]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-03.treatmentSteps[8]",
+    "sourceText": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "Suspected TBI oxygenation, ventilation and blood-pressure safeguards: see",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[2]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-03.treatmentSteps[9]",
+    "sourceText": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[3]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-03.treatmentSteps[10]",
+    "sourceText": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[4]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-05.treatmentSteps[9]",
+    "sourceText": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "Suspected TBI oxygenation, ventilation and blood-pressure safeguards: see",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[2]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-05.treatmentSteps[10]",
+    "sourceText": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[3]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-05.treatmentSteps[11]",
+    "sourceText": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[4]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-06.treatmentSteps[8]",
+    "sourceText": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "Suspected TBI oxygenation, ventilation and blood-pressure safeguards: see",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[2]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-06.treatmentSteps[9]",
+    "sourceText": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[3]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-06.treatmentSteps[10]",
+    "sourceText": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[4]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-08.treatmentSteps[7]",
+    "sourceText": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "Suspected TBI oxygenation, ventilation and blood-pressure safeguards: see",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[2]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-08.treatmentSteps[8]",
+    "sourceText": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[3]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-08.treatmentSteps[9]",
+    "sourceText": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[4]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-09.treatmentSteps[9]",
+    "sourceText": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "Suspected TBI oxygenation, ventilation and blood-pressure safeguards: see",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[2]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-09.treatmentSteps[10]",
+    "sourceText": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[3]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-09.treatmentSteps[11]",
+    "sourceText": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[4]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-11.treatmentSteps[4]",
+    "sourceText": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "Suspected TBI oxygenation, ventilation and blood-pressure safeguards: see",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[2]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-11.treatmentSteps[5]",
+    "sourceText": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[3]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  },
+  {
+    "sourcePath": "protocols.ar-11.treatmentSteps[6]",
+    "sourceText": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds.",
+    "targets": [
+      {
+        "path": "protocols.ar-01.treatmentSteps[2]",
+        "text": "For suspected traumatic brain injury, continuously monitor oxygenation and ventilation. Aim for SpO₂ at least 94%; urgently correct SpO₂ below 90% or inadequate ventilation. The condition-specific TBI target takes priority over a lower general airway or post-ROSC oxygenation target."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[3]",
+        "text": "For suspected traumatic brain injury requiring assisted ventilation, use an initial/routine EtCO₂ target of 35–45 mmHg. Avoid routine hyperventilation. Only for clear active or imminent cerebral herniation, use brief controlled ventilation targeting EtCO₂ 30–35 mmHg with continuous waveform capnography while expediting definitive care; avoid overshooting below 30 mmHg."
+      },
+      {
+        "path": "protocols.ar-01.treatmentSteps[4]",
+        "text": "Prevent hypotension in suspected traumatic brain injury; do not use permissive hypotension. For adults, target SBP at least 110 mmHg, including age 70, with frequent reassessment and after treatment. Pediatric TBI blood-pressure targets require age-specific direction from Medical Control until the separately approved pediatric TBI target table is published; do not substitute adult targets or generic pediatric shock thresholds."
+      }
+    ],
+    "displayText": "",
+    "reason": "Exact verbatim duplicate of AR-01 treatmentSteps[4]; full canonical block retained unmodified. Local TBI flow retains immediate SpO2/EtCO2/herniation targets and TB-05 route. Grouped page-linked pointer directs readers to all oxygenation-priority, continuous-monitoring, ventilation/herniation, adult/pediatric perfusion, Medical Control, and no-substitution qualifications; no number, route, role or exception omitted."
+  }
+]

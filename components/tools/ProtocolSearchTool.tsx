@@ -34,7 +34,7 @@ export default function ProtocolSearchTool() {
             Protocol Search
           </h2>
           <p className="mt-1 text-sm leading-5 text-slate-400">
-            Search symptoms, medications, abbreviations, protocol numbers, and native clinical text.
+            Search symptoms, medications, abbreviations, protocol numbers, and clinical text.
           </p>
         </div>
       </div>

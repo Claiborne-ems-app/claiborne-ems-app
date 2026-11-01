@@ -1,0 +1,177 @@
+{
+  "appVersion": "2.34.0",
+  "manifestSha256": "c58d8545c6c84e93322571e920734ee9f18c69f51bc52add60519d76f1a6428e",
+  "protocols": [
+    {
+      "id": "tb-01",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47806,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-02",
+      "pages": 2,
+      "links": 3,
+      "bytes": 49435,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-03",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47882,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-04",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47819,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-05",
+      "pages": 2,
+      "links": 1,
+      "bytes": 49216,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-06",
+      "pages": 3,
+      "links": 4,
+      "bytes": 51638,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-07",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47017,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-08",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47775,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-09",
+      "pages": 3,
+      "links": 2,
+      "bytes": 51519,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-10",
+      "pages": 2,
+      "links": 3,
+      "bytes": 49067,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-11",
+      "pages": 4,
+      "links": 4,
+      "bytes": 54866,
+      "deduplicatedParagraphs": 13
+    },
+    {
+      "id": "tb-12",
+      "pages": 5,
+      "links": 6,
+      "bytes": 59521,
+      "deduplicatedParagraphs": 13
+    },
+    {
+      "id": "am-03",
+      "pages": 5,
+      "links": 6,
+      "bytes": 57735,
+      "deduplicatedParagraphs": 15
+    },
+    {
+      "id": "am-05",
+      "pages": 5,
+      "links": 16,
+      "bytes": 60780,
+      "deduplicatedParagraphs": 24
+    },
+    {
+      "id": "up-11",
+      "pages": 6,
+      "links": 2,
+      "bytes": 62187,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pm-03",
+      "pages": 3,
+      "links": 6,
+      "bytes": 52508,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-01",
+      "pages": 2,
+      "links": 1,
+      "bytes": 48977,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-02",
+      "pages": 2,
+      "links": 1,
+      "bytes": 49011,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-03",
+      "pages": 3,
+      "links": 6,
+      "bytes": 53220,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-05",
+      "pages": 3,
+      "links": 5,
+      "bytes": 52326,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-06",
+      "pages": 3,
+      "links": 5,
+      "bytes": 51852,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-08",
+      "pages": 3,
+      "links": 5,
+      "bytes": 52327,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-09",
+      "pages": 3,
+      "links": 4,
+      "bytes": 51375,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-11",
+      "pages": 3,
+      "links": 4,
+      "bytes": 52122,
+      "deduplicatedParagraphs": 0
+    }
+  ],
+  "pageCount": 72,
+  "combinedPdfSha256": "cbbfa051e0de088a8dcdfbc5bd87278e9dcb8bce928eefd75bac3b24f8e45f63",
+  "errors": []
+}

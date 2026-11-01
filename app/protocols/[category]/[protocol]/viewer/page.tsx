@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import PdfViewer from "../../../../../components/protocols/PdfViewer";
 import BottomNav from "../../../../../components/navigation/BottomNav";
 import AppHeader from "../../../../../components/navigation/AppHeader";
@@ -23,6 +23,9 @@ export default async function ProtocolViewerPage({
   params: Promise<{ category: string; protocol: string }>;
 }) {
   const { category: categoryId, protocol: protocolId } = await params;
+  if (categoryId === "up" && protocolId === "up-19") {
+    redirect("/protocols/up/up-18/viewer");
+  }
   const category = protocolCategories.find(
     (item) => item.id === categoryId
   );

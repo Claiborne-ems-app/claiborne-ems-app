@@ -17,7 +17,7 @@ export default function ProviderViewTool() {
         <div>
           <h2 className="text-lg font-bold">Provider View</h2>
           <p className="mt-1 text-sm leading-5 text-slate-400">
-            Choose the scope displayed in native protocol flow charts and action sections.
+            Choose the scope displayed in protocol flow charts and action sections.
           </p>
         </div>
       </div>
@@ -27,7 +27,7 @@ export default function ProviderViewTool() {
         label="Default provider level"
       />
       <p className="mt-3 text-xs leading-5 text-slate-500">
-        This selection is saved on this device and can be changed from any native protocol.
+        This selection is saved on this device and can be changed from any protocol.
       </p>
     </section>
   );

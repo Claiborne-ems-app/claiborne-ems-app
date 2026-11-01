@@ -1,0 +1,296 @@
+[
+  {
+    "id": "up-01",
+    "canonicalSha256": "012f490460aaf3573dad5ebdbcd6c567bd07532256a6ecbf8d980f3a2e72cbf1",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical-director approval is required before release for clinical use.",
+      "This native protocol harmonizes Tennessee requirements with the imported North Carolina organization; Tennessee scope and current approved local policy control if any conflict exists.",
+      "The active linked PDF is the controlled Claiborne canonical rendering of this native protocol; it is not an imported North Carolina sheet."
+    ]
+  },
+  {
+    "id": "up-02",
+    "canonicalSha256": "f646d462fcb1c695341f5924e04f4a2ebc2db167ad3a6154bda7bcd86ce3b44d",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "August 2026",
+    "reviewFlags": [
+      "Confirm the local MCI declaration levels, notification chain, triage-tag system, treatment-area layout, patient-tracking method, destination distribution process, mutual-aid plan, and regional communications channels.",
+      "UP-02 may be used as Reviewed beta content, but it must not be marked Approved until the signed Claiborne MCI response plan and related operational policies are reconciled with this protocol."
+    ]
+  },
+  {
+    "id": "up-03",
+    "canonicalSha256": "29cc83494682167d4cdd2e50778d818190bd3b283373584755115ee9d9f85e26",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "August 2026",
+    "reviewFlags": [
+      "Age-based analgesia routing was reconciled: UP-11 is adult-only, PM-04 is the pediatric pathway for patients age 2 through younger than 16 years, and patients younger than 2 years require Medical Control for analgesic direction.",
+      "UP-03 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process."
+    ]
+  },
+  {
+    "id": "up-04",
+    "canonicalSha256": "ec77fbcd1c6d4cd1e50154bdc75068759ac79cf94902dd66748c308deea7c7a9",
+    "reviewStatus": "Approved",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "PEDIATRIC IN ORDER - MEDICAL-DIRECTOR SELECTION REQUIRED BEFORE RELEASE: confirm the stocked nasal product and strength, or injectable concentration plus atomizer model. Specify the pediatric dose, repeat interval, dose limits and administration technique for that exact product/device. For an atomized injectable preparation, specify deliverable volume, nostril division and device dead-space handling. Do not automatically carry the IV 0.01 mg/kg then 0.1 mg/kg sequence into the IN route. Retain the existing local adult 2 mg IN order as the current order pending product confirmation; do not silently substitute a commercial 4 mg spray.",
+      "Medical-director approved glucose treatment below 70 mg/dL with symptoms or when symptoms cannot be assessed reliably because of altered mental status; adult D10 up to 250 mL/25 g and pediatric D10 2 mL/kg initial dose with one repeat after 5 minutes for persistent hypoglycemia.",
+      "Medical-director approved glucagon: adult 1 mg IM; pediatric 0.5 mg IM below 20 kg or 1 mg IM at 20 kg or greater when oral glucose is unsafe and vascular access is unavailable.",
+      "Medical-director approved separate parenteral and intranasal naloxone instructions. Pediatric parenteral dosing is not an IN order. Stocked nasal product/device and pediatric IN regimen remain release decisions; adult IN remains 2 mg pending confirmation.",
+      "Medical-director approved 12-lead ECG for adult acute/unexplained altered mental status and FAST followed by C-STAT when positive.",
+      "Medical-director approved fluid only for hypotension: adult 500 mL and pediatric 10 mL/kg initial bolus with the UP-03 fluid-intolerance caveat.",
+      "Clinical content, dosing, provider permissions, warnings, and cross-links approved by the Claiborne EMS medical director on August 14, 2026."
+    ]
+  },
+  {
+    "id": "up-05",
+    "canonicalSha256": "38f36c630bad6fc1c0246b047cfad558eb384a443dfd5b75977efd7a114b8f1d",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical-director approved a concise pathway centered on focused lower-extremity neurologic assessment, analgesia, reassessment, and transport.",
+      "Medical-director directed that saddle anesthesia be assessed by history without a routine prehospital perineal examination.",
+      "Medical-director approved cardiac monitoring when analgesic medication is administered. IV access is used only when required for the medication route or another clinical indication; a 12-lead ECG requires a separate clinical indication.",
+      "UP-05 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process."
+    ]
+  },
+  {
+    "id": "up-06",
+    "canonicalSha256": "104de7c0b1d635f78bb69afa0f94732a99d1be0fe079ca5ed279c6394c24ee55",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical director confirmed Arrow EZ-IO as the stocked device on October 31, 2026. Follow its current instructions and 48-hour previous-access/attempt exclusion; maintain device-specific training and competency.",
+      "Medical-director approved a maximum of three total peripheral IV attempts across the entire crew and direct IO access when IV attempts would delay treatment of cardiac arrest, profound shock, or another immediately life-threatening condition.",
+      "Medical-director approved proximal tibia as the preferred IO site; adult humeral-head access is an alternative only when tibial access is contraindicated. Pediatric IO access uses the proximal tibia.",
+      "Medical-director approved 2% preservative-free, epinephrine-free lidocaine suitable for IV/IO administration for conscious IO patients: adult 20–40 mg; pediatric 0.5 mg/kg, maximum 40 mg, administered slowly before the initial forceful flush.",
+      "Medical-director directed that PICC lines, central venous catheters, implanted ports, and dialysis catheters be governed by a separate interfacility-transfer policy rather than UP-06.",
+      "Medical-director approved external-jugular IV access by Paramedics only after conventional access is unsuccessful or unavailable; the EJ is not a routine first site and must not be used as a saline lock.",
+      "UP-06 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process."
+    ]
+  },
+  {
+    "id": "up-07",
+    "canonicalSha256": "94848c9cf509e9a9c7f7f5e9d90729caeee6948c8c7ecd76b8fca59335194c45",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "August 2026",
+    "reviewFlags": [
+      "Medical-director approved field replantation of an eligible avulsed permanent tooth by EMTs, AEMTs, and Paramedics when the patient is conscious, cooperative, protects the airway, the intact tooth can be identified as permanent, significant jaw/socket fracture is not suspected, and the tooth can be inserted gently without force.",
+      "Medical-director directed that a tooth not replanted be handled by the crown and transported in commercial preservation solution, milk, normal saline, or the patient’s saliva in a closed container; the root must not be scrubbed and the tooth must not be stored on ice, in the mouth, or dry.",
+      "Medical-director approved topical TXA for persistent socket bleeding after direct pressure: AEMT/Paramedic only, TXA 1 g/10 mL applied to gauze or cotton, packed into the socket with pressure for 20 minutes. EMT administration is not authorized.",
+      "Medical-director approved 12-lead ECG acquisition for adult jaw pain or another anginal-equivalent complaint, but not for isolated tooth pain with a clear dental source.",
+      "Medical-director approved age-based analgesia routing: UP-11 for patients age 16 years or older, PM-04 for patients age 2 through younger than 16 years, and Medical Control for analgesic direction for patients younger than 2 years. Cardiac monitoring is required when medication is administered; do not establish routine IV access or administer fluid for an isolated dental complaint.",
+      "UP-07 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process."
+    ]
+  },
+  {
+    "id": "up-08",
+    "canonicalSha256": "fe6e57d33b5f8f3488c707521a61e7f1410984e8cd8e48cd2e5d929df669592c",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical-director approved UP-08 as a complication-management protocol that does not authorize routine central access, medication administration, or infusion management; those functions remain under the separate interfacility-transfer policy.",
+      "Medical-director approved immediate infusion stop, clamping of intact external tubing proximal to damage, direct pressure, and air-occlusive dressing by EMTs, AEMTs, and Paramedics when required to prevent immediate harm.",
+      "For suspected air embolism, stop the infusion, clamp the line, seal any open insertion site, and administer 100% oxygen. Position supine on a level surface; if mental status is impaired but breathing is adequate and no advanced airway is present, use the recovery position on a level surface to protect the airway. Do not routinely use head-down positioning. If cardiac arrest occurs, provide standard CPR supine. Transport rapidly and notify Medical Control and the receiving facility early so hyperbaric consultation can be considered without delaying stabilization.",
+      "Medical-director directed that a damaged or dislodged catheter must not be advanced, reinserted, removed, repaired, or force-flushed; partially dislodged catheters are stabilized in place and completely dislodged sites receive direct pressure followed by an air-occlusive dressing.",
+      "Medical-director removed the source protocol’s blanket instruction to continue an infusion and its nonspecific 20 mL/kg limit. Uncomplicated infusion continuation is governed only by the separate interfacility-transfer policy.",
+      "UP-08 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process."
+    ]
+  },
+  {
+    "id": "up-09",
+    "canonicalSha256": "3a1997425edaff11eb0b687bd6b51f6f578098396a03f609af097e4c6ae9876f",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "August 2026",
+    "reviewFlags": [
+      "Medical-director approved upright forward positioning, suction as needed, one-time gentle clot clearance in an alert atraumatic patient, and uninterrupted compression of the soft lower nose for 15 minutes.",
+      "Medical-director approved external pressure using manual compression, a commercial nasal clamp, or two tongue depressors taped together at one end with the untaped ends placed externally over the soft nasal alae.",
+      "Medical-director removed oxymetazoline because it is not currently listed on the Claiborne formulary.",
+      "Medical-director approved topical TXA on gauze rather than atomized administration for persistent atraumatic anterior bleeding: AEMT/Paramedic only; adult 1 g/10 mL total; pediatric 15 mg/kg to a maximum total dose of 1 g; maintain pressure for 20 minutes.",
+      "Medical-director approved bilateral anterior TXA-gauze placement when bleeding is uncontrolled at application or the source is uncertain, with the approved total dose divided between sides and gauze tails left visible externally.",
+      "Medical-director prohibited blind, deep, balloon, commercial, and posterior nasal packing under UP-09 and prohibited intranasal gauze or clamp placement with major facial trauma, suspected basilar skull fracture, or an unprotected airway.",
+      "Medical-director approved IV/IO access and crystalloid only for hypotension, with adult 500 mL and pediatric 10 mL/kg boluses followed by reassessment and smaller aliquots for fluid-sensitive patients.",
+      "Medical-director directed that bleeding control precede routine cardiac-monitor placement; monitoring follows once pressure is secured and must not interrupt hemorrhage control.",
+      "UP-09 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process."
+    ]
+  },
+  {
+    "id": "up-10",
+    "canonicalSha256": "5e20ceb505657af8a4475a5c783a2890a17b054d03cbbe0b23e23ebc4dac1fea",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "August 2026",
+    "reviewFlags": [
+      "Medical-director defined fever as temperature at least 100.4°F/38°C, directed documentation of measurement method and last antipyretic dose/time, prohibited field rectal temperatures, and accepted a reliable home or clinician-documented fever despite later temperature reduction.",
+      "Medical-director approved prompt transport and early notification for any infant 60 days old or younger with documented temperature at least 100.4°F/38°C, without delay for antipyretic administration or response.",
+      "Medical-director approved one oral antipyretic by EMT, AEMT, or Paramedic for an uncomfortable febrile patient who protects the airway: acetaminophen adult 650–1,000 mg or pediatric older than 3 months 15 mg/kg to maximum 650 mg; or ibuprofen adult 400 mg or pediatric older than 6 months 10 mg/kg to maximum 400 mg.",
+      "Medical-director directed that acetaminophen and ibuprofen not be given together routinely, that an agent not be repeated when the prior dose or time is uncertain, and that IV acetaminophen, ketorolac, and antibiotics not be administered solely for uncomplicated fever.",
+      "Medical-director approved IV/IO access and crystalloid only for hypotension, shock, critical illness, required parenteral treatment, or another specific indication—not fever alone.",
+      "Medical-director directed that fever alone is not sepsis; suspected infection must be accompanied by organ dysfunction before transition to the sepsis/shock pathway. Glucose and cardiac monitoring are not routine for uncomplicated fever.",
+      "Medical-director approved standard precautions plus transmission-based precautions selected by suspected route and directed that environmental hyperthermia transition to active cooling under the heat-emergency protocol without antipyretic delay.",
+      "Medical-director confirmed that UP-10 does not authorize antibiotic administration solely for fever.",
+      "UP-10 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process."
+    ]
+  },
+  {
+    "id": "up-11",
+    "canonicalSha256": "476b35a569bc7d89d25d7459cd46d928387feca75ecf035a46d01fcab9edb9aa",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical director revised all adult ketorolac dosing to 15 mg IV once or 30 mg IM once, maximum; no 60 mg IM dose. This applies also to age ≥65 or weight <50 kg and does not establish expanded AEMT authority.",
+      "Scoped trauma-review revisions accepted October 30, 2026: expanded AEMT parenteral analgesia is disabled by default until current Tennessee drug/route authority, documented approved training, agency credentialing/competency, and medication-/route-/patient-specific medical-director standing orders are verified. This is not full-system clinical release.",
+      "TB-11 express Medical Control authorization remains required for ketamine analgesia in suspected penetrating/open-globe injury.",
+      "Medical-director approved adult UP-11 for patients 16 years of age or older and directed provider-specific care: oral acetaminophen/ibuprofen by EMT, AEMT, or Paramedic; IV acetaminophen/ketorolac by Paramedic, with expanded AEMT authority disabled until separately verified for the specified drug, route, and patient group; and opioids/analgesic-dose ketamine by Paramedic only.",
+      "Medical-director removed nitrous oxide because it is not on the Claiborne formulary and removed aspirin as an analgesic while retaining aspirin only for its approved cardiac indication.",
+      "Medical-director approved acetaminophen 650–1,000 mg PO, ibuprofen 400 mg PO, weight-based acetaminophen infused over 15 minutes once (≥50 kg: 1,000 mg; <50 kg: 15 mg/kg, maximum 750 mg; IV, or IO only with separately verified authorization), and ketorolac 15 mg IV or 30 mg IM once with the medication-specific contraindications documented in UP-11.",
+      "Medical-director approved Paramedic opioid limits: fentanyl maximum total 100 mcg, morphine maximum total 10 mg, and hydromorphone maximum total 1 mg; one opioid is selected and different opioids are not combined.",
+      "Medical-director approved analgesic ketamine 0.3 mg/kg IV/IO slowly over 10 minutes to maximum 30 mg per dose, repeat every 20 minutes for maximum three doses; or 0.5–1 mg/kg IN once to maximum 100 mg when vascular access is unavailable.",
+      "Medical-director directed against routine initial opioid/ketamine combination therapy and required full reassessment before changing agents.",
+      "Medical-director required cardiac monitoring for all systemic nonoral analgesia and continuous SpO₂ and waveform EtCO₂ for opioid or ketamine administration, with reassessment at least every 5–10 minutes and at handoff.",
+      "Medical-director approved ventilatory support before titrated naloxone for opioid-induced hypoventilation, ondansetron 4 mg for associated nausea, and the documented medication-specific contraindications and safety exclusions.",
+      "Medical-director approved PM-04 Pediatric Pain Control as the pediatric pathway for patients age 2 through younger than 16 years; UP-11 is not used for that age group.",
+      "UP-11 may be used as Reviewed beta content; final Approved status remains pending completion of the full protocol and formulary reconciliation process."
+    ]
+  },
+  {
+    "id": "up-12",
+    "canonicalSha256": "e5eb14b67576d0d6de57dfbd539c7f6df52047c3bd7b5136c686ad155067d5ce",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical-director content decisions approved August 10, 2026.",
+      "Coordinate final operational language with the Claiborne County EMS restraint policy and joint law-enforcement transport policy before system-wide clinical release."
+    ]
+  },
+  {
+    "id": "up-13",
+    "canonicalSha256": "1dacced79b2ffe831842592c2e7299fb7f6d4af9ce2916fe77762c57a627ffbe",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical-director content decisions approved August 10, 2026.",
+      "Pediatric ketamine requires Medical Control authorization and dosing.",
+      "Final system-wide clinical release remains pending completion of the full Claiborne protocol reconciliation."
+    ]
+  },
+  {
+    "id": "up-14",
+    "canonicalSha256": "a3646fa9cd594753b2559b24293ede41c6cb49b7a190a0a4cf1d43185999ee42",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical-director-approved linked-stroke update: undifferentiated-CVA labetalol authority is 10 mg slow IV over 2 minutes, repeat 10 mg once after at least 10 minutes only if still above SBP 220 or DBP 110; maximum total 20 mg.",
+      "Final Claiborne Stroke Destination Plan and facility-specific destination rules remain pending later review.",
+      "Final system-wide clinical release remains pending completion of the full Claiborne protocol reconciliation."
+    ]
+  },
+  {
+    "id": "up-15",
+    "canonicalSha256": "4eabc07ee88431e39ab7de39ce337030f07591eaf599d28561ce39586c4d5e75",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical-director content decisions approved August 11, 2026.",
+      "Pediatric vasopressor initiation requires Medical Control contact.",
+      "No prehospital antibiotic is authorized under this protocol.",
+      "Final system-wide clinical release remains pending completion of the full Claiborne protocol reconciliation."
+    ]
+  },
+  {
+    "id": "up-16",
+    "canonicalSha256": "8e87623e47891ca864dfb93e2fd780573044b13f5d56de4b76263043a76364ff",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical-director content decisions approved August 11, 2026.",
+      "Medical Control consultation is required before refusal after true syncope.",
+      "Final system-wide clinical release remains pending completion of the full Claiborne protocol reconciliation."
+    ]
+  },
+  {
+    "id": "up-17",
+    "canonicalSha256": "98cccf6eb0c65993efe5895c76cc795d2dc607b73ede3094c7e28b7825a0edac",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical-director content decisions approved August 11, 2026.",
+      "BARS is adopted as the Claiborne EMS agitation assessment and reassessment scale; it does not replace suicide-risk, medical, or capacity assessment.",
+      "Behavioral-health alternative-destination criteria require a separately approved destination policy.",
+      "Final system-wide clinical release remains pending completion of the full Claiborne protocol reconciliation."
+    ]
+  },
+  {
+    "id": "up-18",
+    "canonicalSha256": "1906333cc4217afa6a790ac02c0229c6efbc12936820ad28be41e420041e239f",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical-director content decisions approved August 11, 2026.",
+      "UP-18 and UP-19 are clinically merged into one BARS-based protocol; UP-19 remains only as a compatibility redirect.",
+      "Droperidol and haloperidol are not included. Pediatric BARS 7 chemical sedation requires direct Medical Control authorization and dosing.",
+      "Final system-wide clinical release remains pending completion of the full Claiborne protocol reconciliation."
+    ]
+  },
+  {
+    "id": "up-19",
+    "canonicalSha256": "61c185e07da5f19c6bec30e3c32646afaee4250a2e285fc0e66d6b67189853bc",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Compatibility redirect only.",
+      "All clinical treatment is contained in UP-18."
+    ]
+  },
+  {
+    "id": "up-20",
+    "canonicalSha256": "1feef62c59bacd355342198c549ac113a98c60c5120a18ab651ef78b1d02857d",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Clinically reviewed and approved by the medical director; agency implementation approval is required before clinical release.",
+      "This beta application remains a reference tool until formal Claiborne County EMS adoption and release."
+    ]
+  },
+  {
+    "id": "up-21",
+    "canonicalSha256": "4d3b8305832d2d79e240abe2ae4da6cc9e7f9c78fabe04cedd5e4b59545823ff",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Clinically reviewed and approved by the medical director; agency legal and administrative approval are required before clinical release.",
+      "Final local escalation contacts, documentation workflow, evidence procedures, and destination resources must be maintained in the Claiborne County safeguarding policy.",
+      "This beta application remains a reference tool until formal Claiborne County EMS adoption and release."
+    ]
+  },
+  {
+    "id": "up-22",
+    "canonicalSha256": "f741465689b9b112d23d16d1ab63745f09c7a83a3b1bff301d31172446679dfb",
+    "reviewStatus": "Reviewed",
+    "revisionDate": "October 31, 2026",
+    "reviewFlags": [
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Clinically reviewed and approved by the medical director; agency legal and administrative approval are required before clinical release.",
+      "The locally approved SANE or forensic-capable destination list, escalation contacts, evidence workflow, and patient-advocacy resources must be maintained in Claiborne County policy.",
+      "This beta application remains a reference tool until formal Claiborne County EMS adoption and release."
+    ]
+  }
+]

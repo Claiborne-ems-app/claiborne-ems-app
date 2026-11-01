@@ -34,7 +34,7 @@ test("every formulary medication has searchable doses and safety content", () =>
   }
 });
 
-test("high-use formulary doses match the submitted RX-R1 table", () => {
+test("high-use formulary doses match approved indication-specific orders", () => {
   const byId = Object.fromEntries(
     medicationReferences.map((medication) => [medication.id, medication])
   );
@@ -47,7 +47,7 @@ test("high-use formulary doses match the submitted RX-R1 table", () => {
   assert.equal(byId.rocuronium.doses[0].pediatric, "1 mg/kg IV/IO; pediatric DAI requires direct online Medical Director or Assistant Medical Director order");
   assert.match(byId["tranexamic-acid"].doses[0].adult, /^1–2 g IV\/IO/);
   assert.match(byId.naloxone.doses[1].adult, /0\.4–2 mg IV\/IO\/IM/);
-  assert.match(byId.promethazine.doses[0].adult, /12\.5–25 mg deep IM/);
+  assert.match(byId.promethazine.doses[0].adult, /12\.5 mg deep IM once after ondansetron/);
 });
 
 test("approved Claiborne medication updates retain source doses and route safeguards", () => {
@@ -71,19 +71,22 @@ test("approved Claiborne medication updates retain source doses and route safegu
   assert.match(byId.calcium.doses[1].pediatric, /60–100 mg\/kg IV\/IO/);
   assert.match(byId.diltiazem.doses[0].adult, /0\.25 mg\/kg IV\/IO \(maximum 20 mg\)/);
   assert.match(byId.diltiazem.doses[0].adult, /infusion 5–10 mg\/hr/);
-  assert.match(byId.ketorolac.doses[0].adult, /15–30 mg IV once/);
-  assert.match(byId.ketorolac.doses[1].adult, /60 mg IM once/);
+  assert.match(byId.ketorolac.doses[0].adult, /15 mg IV once/);
+  assert.match(byId.ketorolac.doses[1].adult, /30 mg IM once/);
   assert.match(byId.ketorolac.doses[0].pediatric, /Not authorized.*PM-04/);
   assert.match(byId.labetalol.doses[0].adult, /10 mg slow IV over 2 min/);
   assert.match(byId.labetalol.doses[0].adult, /maximum total 20 mg/);
   assert.match(byId.labetalol.doses[0].pediatric, /Not authorized under Adult Medical AM-04/);
   assert.match(byId.norepinephrine.doses[0].adult, /0\.05–0\.5 mcg\/kg\/min/);
-  assert.match(byId.magnesium.doses[0].adult, /Hypomagnesemia: 1–2 g IV over 1 hr/);
-  assert.match(byId.magnesium.doses[0].pediatric, /Asthma: 40–50 mg\/kg IV once over 15–30 min/);
+  assert.match(byId.magnesium.doses.find(d => /AO-03/.test(d.indication)).adult, /4–6 g IV over 20–30 minutes/);
+  assert.ok(byId.magnesium.doses.every(d => d.level === "Paramedic"));
+  assert.ok(!byId.magnesium.doses.some(d => /tocolysis|Hypomagnesemia: 1–2 g IV over 1 hr/.test(d.adult)));
+  assert.match(byId.magnesium.doses.find(d => /AR-04/.test(d.indication)).pediatric, /40–50 mg\/kg IV once over 15–30 minutes; maximum 2 g/);
   assert.equal(byId.succinylcholine.doses[0].adult, "1–2 mg/kg IV for RSI");
   assert.match(byId.vecuronium.doses[0].adult, /DAI: 80–100 mcg\/kg IV push once/);
   assert.match(byId.vecuronium.doses[0].pediatric, /maintenance: 50–100 mcg\/kg IV every 1 hr as needed/);
-  assert.equal(byId.methylprednisolone.doses[0].pediatric, "2 mg/kg IV; maximum 125 mg");
+  assert.match(byId.methylprednisolone.doses.find(d => /PM-01/.test(d.indication)).pediatric, /2 mg\/kg IV; maximum 125 mg/);
+  assert.match(byId.methylprednisolone.doses.find(d => /AR-04/.test(d.indication)).pediatric, /Medical Control only; no standing pediatric dose/);
 
   assert.equal(byId["push-dose-epinephrine"].isFormularyItem, false);
   assert.equal(
@@ -97,34 +100,26 @@ test("approved Claiborne medication updates retain source doses and route safegu
   assert.match(byId["push-dose-epinephrine"].cautions[0], /10 mcg\/mL \(0\.01 mg\/mL\)/);
   assert.match(byId["push-dose-epinephrine"].cautions[1], /Do not administer undiluted epinephrine 1 mg\/mL/);
 
-  assert.deepEqual(byId.epinephrine.doses, [
-    {
-      level: "EMT",
-      indication: "Anaphylaxis — IM",
-      adult: "0.5 mg of 1 mg/mL IM in the lateral thigh; 0.3 mg autoinjector acceptable; repeat every 5 min as needed",
-      pediatric: "0.01 mg/kg of 1 mg/mL IM in the mid-outer thigh; maximum 0.3 mg prepubertal child or 0.5 mg adolescent; repeat every 5 min as needed",
-    },
-    {
-      level: "Paramedic",
-      indication: "Cardiac arrest — IV/IO",
-      adult: "1 mg of 0.1 mg/mL IV/IO every 3–5 min",
-      pediatric: "0.01 mg/kg of 0.1 mg/mL IV/IO; maximum single dose 1 mg; repeat every 3–5 min",
-    },
-    {
-      level: "Paramedic",
-      indication: "Persistent unstable bradycardia — infusion",
-      adult: "2–10 mcg/min IV/IO infusion; titrate to clinical response",
-      pediatric: "Use the pediatric cardiac bradycardia pathway",
-    },
-    {
-      level: "Paramedic",
-      indication: "Stridor or upper-airway edema — nebulized",
-      adult: "1 mg of 1 mg/mL in 2 mL normal saline; may repeat once",
-      pediatric: "0.5 mL/kg of 1 mg/mL; maximum 5 mL (5 mg), nebulized",
-    },
-  ]);
-  assert.equal(byId.promethazine.doses[0].adult, "12.5–25 mg deep IM; never IV or IO");
-  assert.equal(byId.promethazine.doses[0].pediatric, "Medical Control");
+  const epi = byId.epinephrine.doses;
+  const anaphylaxis = epi.find(d => d.indication === "Anaphylaxis — IM");
+  assert.equal(anaphylaxis.level, "EMT");
+  assert.match(anaphylaxis.adult, /0\.5 mg of 1 mg\/mL IM.*0\.3 mg autoinjector.*every 5 min/);
+  assert.match(anaphylaxis.pediatric, /0\.01 mg\/kg.*maximum 0\.3 mg prepubertal child or 0\.5 mg adolescent/);
+  const adultArrest = epi.find(d => /adult pulseless cardiac arrest/.test(d.indication));
+  assert.equal(adultArrest.level, "AEMT");
+  assert.match(adultArrest.adult, /1 mg of 0\.1 mg\/mL IV\/IO every 3–5 minutes/);
+  const childArrest = epi.find(d => /^Pediatric pulseless/.test(d.indication));
+  assert.equal(childArrest.level, "AEMT");
+  assert.match(childArrest.pediatric, /0\.01 mg\/kg.*maximum single dose 1 mg/);
+  for (const pattern of [/PC-02/, /AO-02/, /nebulized/, /Persistent unstable bradycardia/]) {
+    assert.equal(epi.find(d => pattern.test(d.indication)).level, "Paramedic");
+  }
+  const nebulized = epi.find(d => /nebulized/.test(d.indication));
+  assert.match(nebulized.adult, /1 mg of 1 mg\/mL.*2 mL normal saline/);
+  assert.match(nebulized.pediatric, /0\.5 mL\/kg.*maximum 5 mL \(5 mg\)/);
+
+  assert.equal(byId.promethazine.doses[0].adult, "12.5 mg deep IM once after ondansetron; never IV/IO.");
+  assert.equal(byId.promethazine.doses[0].pediatric, "Medical Control; no pediatric standing order.");
 });
 
 test("route and indication rows do not expose parenteral acetaminophen or hyperkalemia doses as EMT care", () => {
@@ -146,12 +141,17 @@ test("route and indication rows do not expose parenteral acetaminophen or hyperk
 test("pediatric pain is governed by PM-04, with no generic morphine/hydromorphone/ketorolac/ketamine orders", () => {
   const byId = Object.fromEntries(medicationReferences.map(m => [m.id, m]));
   for (const id of ["morphine", "hydromorphone", "ketorolac"]) {
-    for (const dose of byId[id].doses) {
+    const painRows = byId[id].doses.filter(d => /Adult pain/.test(d.indication));
+    assert.ok(painRows.length > 0, `${id} requires an adult-pain row`);
+    for (const dose of painRows) {
       assert.match(dose.pediatric, /Not authorized.*PM-04/, id);
       assert.doesNotMatch(dose.pediatric, /\d+(?:\.\d+)? mg\/kg/, id);
     }
     assert.ok(byId[id].protocolLinks.some(l => l.href === "/protocols/pm/pm-04"));
   }
+  const postAirwayMorphine = byId.morphine.doses.find(d => /AR-08/.test(d.indication));
+  assert.match(postAirwayMorphine.pediatric, /Direct online Medical Control or receiving-facility order/);
+  assert.doesNotMatch(postAirwayMorphine.pediatric, /\d+(?:\.\d+)? mg\/kg/);
   const ketaminePain = byId.ketamine.doses.filter(d => /pain/i.test(d.indication));
   assert.ok(ketaminePain.every(d => /Not authorized.*PM-04/.test(d.pediatric)));
   assert.match(byId.fentanyl.doses[0].pediatric, /1 mcg\/kg.*maximum 50 mcg.*Medical Control.*second dose/);
@@ -166,8 +166,8 @@ test("systemic trauma TXA and topical TXA retain separate doses, provider levels
   assert.match(trauma.adult, /^1–2 g IV\/IO/);
   assert.match(trauma.pediatric, /^15 mg\/kg/);
   assert.match(trauma.adult, /1 g over 10 minutes OR 2 g over 20 minutes.*100 mg\/min/);
-  assert.match(trauma.releaseNote, /pediatric 15 mg\/kg differs from the Tennessee 20 mg\/kg IV/);
-  assert.match(trauma.releaseNote, /Pediatric age eligibility, infusion rate\/cap and IV\/IO route verification.*before release/);
+  assert.match(trauma.releaseNote, /15 mg\/kg differs from the Tennessee 20 mg\/kg IV/);
+  assert.match(trauma.releaseNote, /Pediatric systemic trauma TXA requires a patient-specific Medical Control order for eligibility, route, infusion rate, maximum and repeat policy/);
   assert.match(trauma.adult, /Do not automatically repeat; further dosing requires a specific order/);
   const topical = txa.doses.filter(d => /topical only/.test(d.indication));
   assert.equal(topical.length, 2);

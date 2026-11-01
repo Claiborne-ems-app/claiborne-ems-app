@@ -51,7 +51,7 @@ const tools = [
   {
     href: "/protocols",
     title: "Protocol Library",
-    description: "Browse all categories and native clinical protocols",
+    description: "Browse all categories and clinical protocols",
     icon: BookOpenCheck,
     accent: "bg-amber-500/15 text-amber-200 ring-amber-400/25",
   },
@@ -81,7 +81,7 @@ export default function ToolsPage() {
               className="mt-0.5 h-5 w-5 shrink-0"
             />
             <p>
-              Beta tools are decision-support aids only. Confirm information
+              Tools are decision-support aids only. Confirm information
               against the current approved protocol and clinical judgment.
             </p>
           </div>

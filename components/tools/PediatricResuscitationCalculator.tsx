@@ -54,7 +54,8 @@ const categories: Category[] = [
   "Metabolic / Shock",
 ];
 
-function rounded(value: number, maximumDecimals = 2) {
+// Preserve small weight-based doses; 0.005 mg must not round to 0.01 mg.
+function rounded(value: number, maximumDecimals = 6) {
   return Number(value.toFixed(maximumDecimals)).toString();
 }
 
@@ -75,12 +76,32 @@ const doseCards: DoseCard[] = [
   {
     id: "cardiac-epinephrine",
     name: "Epinephrine 0.1 mg/mL",
-    indication: "Cardiac arrest or symptomatic bradycardia",
+    indication: "Pulseless cardiac arrest",
     category: "Cardiac",
     minimumLevel: "AEMT",
     route: "IV / IO",
-    protocol: "PC-01 / PC-02 / PC-07",
+    protocol: "PC-01 / PC-07",
     protocolHref: "/protocols/pc/pc-01",
+    protocolDose: "0.01 mg/kg; maximum 1 mg. Repeat per the selected protocol.",
+    calculate: (weightKg) => {
+      const dose = Math.min(weightKg * 0.01, 1);
+      const volume = dose / 0.1;
+      return {
+        primary: `${rounded(dose)} mg`,
+        secondary: `${rounded(volume)} mL of 0.1 mg/mL`,
+        calculation: `0.01 mg/kg × ${rounded(weightKg)} kg; max 1 mg`,
+      };
+    },
+  },
+  {
+    id: "bradycardia-epinephrine",
+    name: "Epinephrine 0.1 mg/mL",
+    indication: "Symptomatic bradycardia with a pulse",
+    category: "Cardiac",
+    minimumLevel: "Paramedic",
+    route: "IV / IO",
+    protocol: "PC-02",
+    protocolHref: "/protocols/pc/pc-02",
     protocolDose: "0.01 mg/kg; maximum 1 mg. Repeat per the selected protocol.",
     calculate: (weightKg) => {
       const dose = Math.min(weightKg * 0.01, 1);
@@ -155,7 +176,7 @@ const doseCards: DoseCard[] = [
     name: "Magnesium sulfate",
     indication: "Torsades during VF / pulseless VT pathway",
     category: "Cardiac",
-    minimumLevel: "AEMT",
+    minimumLevel: "Paramedic",
     route: "IV / IO",
     protocol: "PC-07",
     protocolHref: "/protocols/pc/pc-07",
@@ -193,8 +214,8 @@ const doseCards: DoseCard[] = [
     name: "Diphenhydramine",
     indication: "Allergic reaction adjunct",
     category: "Allergy / Respiratory",
-    minimumLevel: "EMT",
-    route: "EMT: PO only · AEMT/Paramedic: PO / IV / IO / IM",
+    minimumLevel: "Paramedic",
+    route: "PO / IV / IO / IM",
     protocol: "PM-01",
     protocolHref: "/protocols/pm/pm-01",
     protocolDose: "1 mg/kg; maximum 50 mg.",
@@ -323,6 +344,14 @@ const pediatricCapGroupOptions: PediatricCapGroup[] = [
 ];
 
 function EnergyPanel({ weightKg }: { weightKg: number | null }) {
+  const [adultMaximumInput, setAdultMaximumInput] = useState("");
+  const [cardioversionMaximumInput, setCardioversionMaximumInput] = useState("");
+  const parsedMaximum = Number(adultMaximumInput);
+  const adultMaximum = Number.isFinite(parsedMaximum) && parsedMaximum > 0 ? parsedMaximum : null;
+  const parsedCardioversionMaximum = Number(cardioversionMaximumInput);
+  const cardioversionMaximum = Number.isFinite(parsedCardioversionMaximum) && parsedCardioversionMaximum > 0 ? parsedCardioversionMaximum : null;
+  const energy = (joules: number) => rounded(Math.min(joules, adultMaximum ?? 0));
+  const cardioversionEnergy = (joules: number) => rounded(Math.min(joules, cardioversionMaximum ?? 0));
   return (
     <section className="rounded-2xl border border-violet-500/30 bg-violet-950/20 p-5">
       <div className="flex items-start gap-3">
@@ -335,20 +364,37 @@ function EnergyPanel({ weightKg }: { weightKg: number | null }) {
         </div>
       </div>
 
-      {weightKg ? (
+      <label className="mt-4 block text-sm font-bold">
+        Confirmed defibrillation adult/device maximum (J)
+        <input type="number" inputMode="decimal" min="0" value={adultMaximumInput}
+          onChange={(event) => setAdultMaximumInput(event.target.value)}
+          placeholder="Check your device and protocol"
+          className="mt-2 min-h-12 w-full rounded-xl border border-slate-600 bg-slate-950 px-4 text-white" />
+      </label>
+      <label className="mt-4 block text-sm font-bold">
+        Confirmed synchronized-cardioversion adult/device maximum (J)
+        <input type="number" inputMode="decimal" min="0" value={cardioversionMaximumInput}
+          onChange={(event) => setCardioversionMaximumInput(event.target.value)}
+          placeholder="Check the cardioversion pathway"
+          className="mt-2 min-h-12 w-full rounded-xl border border-slate-600 bg-slate-950 px-4 text-white" />
+      </label>
+      <p className="mt-2 text-xs leading-5 text-slate-300">
+        Confirm each therapy separately. Enter the applicable adult energy ceiling from your device instructions and approved protocol; no default is assumed. Confirm the setting and provider authorization. These are pediatric calculations, not adult or newly-born resuscitation orders.
+      </p>
+      {weightKg && adultMaximum && cardioversionMaximum ? (
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           <div className="rounded-xl border border-slate-700 bg-slate-950 p-4">
             <p className="text-xs font-bold uppercase tracking-[0.14em] text-violet-300">Defibrillation</p>
-            <p className="mt-2 text-lg font-extrabold">1st: {rounded(weightKg * 2)} J</p>
-            <p className="mt-1 font-bold text-slate-200">2nd: {rounded(weightKg * 4)} J</p>
+            <p className="mt-2 text-lg font-extrabold">1st: {energy(weightKg * 2)} J</p>
+            <p className="mt-1 font-bold text-slate-200">2nd: {energy(weightKg * 4)} J</p>
             <p className="mt-2 text-xs leading-5 text-slate-400">
-              Subsequent: at least {rounded(weightKg * 4)} J, maximum {rounded(weightKg * 10)} J or the adult dose.
+              Subsequent: {energy(weightKg * 4)}–{energy(weightKg * 10)} J within the confirmed adult/device ceiling of {rounded(adultMaximum)} J. Do not exceed the lower of 10 J/kg or that ceiling.
             </p>
           </div>
           <div className="rounded-xl border border-slate-700 bg-slate-950 p-4">
             <p className="text-xs font-bold uppercase tracking-[0.14em] text-violet-300">Synchronized cardioversion</p>
-            <p className="mt-2 text-lg font-extrabold">{rounded(weightKg * 0.5)}–{rounded(weightKg)} J</p>
-            <p className="mt-1 font-bold text-slate-200">Repeat: {rounded(weightKg * 2)} J</p>
+            <p className="mt-2 text-lg font-extrabold">{cardioversionEnergy(weightKg * 0.5)}–{cardioversionEnergy(weightKg)} J</p>
+            <p className="mt-1 font-bold text-slate-200">Repeat: {cardioversionEnergy(weightKg * 2)} J</p>
             <p className="mt-2 text-xs leading-5 text-slate-400">
               Sedate when appropriate, but do not delay cardioversion.
             </p>
@@ -356,7 +402,7 @@ function EnergyPanel({ weightKg }: { weightKg: number | null }) {
         </div>
       ) : (
         <p className="mt-4 rounded-xl border border-dashed border-slate-700 bg-slate-950/60 p-4 text-sm text-slate-400">
-          Enter a valid weight to calculate energy settings.
+          Enter a valid weight and confirm both therapy-specific adult/device maximums before calculating energy settings. No uncapped energy setting is recommended.
         </p>
       )}
     </section>
@@ -397,7 +443,7 @@ export default function PediatricResuscitationCalculator() {
         <div className="flex gap-3">
           <ShieldAlert aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0" />
           <p>
-            <strong>Clinical review tool.</strong> Use an actual kilogram weight or a currently approved length-based system. Verify the medication, concentration, route, maximum, and provider authorization before administration.
+            <strong>Calculation safety.</strong> Use an actual kilogram weight or a currently approved length-based system. Verify the medication, concentration, route, maximum, and provider authorization before administration.
           </p>
         </div>
       </aside>
@@ -600,7 +646,7 @@ export default function PediatricResuscitationCalculator() {
         <div className="flex gap-3">
           <Info aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-sky-300" />
           <p>
-            Results use the reviewed native Claiborne pediatric protocols. Volume is shown only when the protocol specifies a concentration. Confirm the product in hand, recheck the calculation independently, and follow the currently approved manual and Medical Control.
+            Results use the Claiborne pediatric protocols. Volume is shown only when the protocol specifies a concentration. Confirm the product in hand, recheck the calculation independently, and follow the currently approved manual and Medical Control.
           </p>
         </div>
       </aside>

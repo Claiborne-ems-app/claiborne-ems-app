@@ -1,0 +1,163 @@
+{
+  "appVersion": "2.34.0",
+  "manifestSha256": "bcda737cb5405b02ad55c22fba19e8b45f1e9d2f9b54f3ce97b74b68a477a1cc",
+  "protocols": [
+    {
+      "id": "up-01",
+      "pages": 7,
+      "links": 0,
+      "bytes": 61198,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-02",
+      "pages": 4,
+      "links": 0,
+      "bytes": 54196,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-03",
+      "pages": 5,
+      "links": 2,
+      "bytes": 58047,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-04",
+      "pages": 5,
+      "links": 0,
+      "bytes": 58773,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-05",
+      "pages": 3,
+      "links": 2,
+      "bytes": 50589,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-06",
+      "pages": 3,
+      "links": 0,
+      "bytes": 51687,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-07",
+      "pages": 4,
+      "links": 2,
+      "bytes": 54020,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-08",
+      "pages": 3,
+      "links": 0,
+      "bytes": 52103,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-09",
+      "pages": 4,
+      "links": 0,
+      "bytes": 54439,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-10",
+      "pages": 5,
+      "links": 0,
+      "bytes": 56744,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-11",
+      "pages": 6,
+      "links": 2,
+      "bytes": 62187,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-12",
+      "pages": 6,
+      "links": 0,
+      "bytes": 59126,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-13",
+      "pages": 5,
+      "links": 0,
+      "bytes": 56760,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-14",
+      "pages": 5,
+      "links": 0,
+      "bytes": 57731,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-15",
+      "pages": 6,
+      "links": 0,
+      "bytes": 60069,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-16",
+      "pages": 5,
+      "links": 0,
+      "bytes": 57041,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-17",
+      "pages": 7,
+      "links": 0,
+      "bytes": 63662,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-18",
+      "pages": 7,
+      "links": 0,
+      "bytes": 62950,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-19",
+      "pages": 1,
+      "links": 1,
+      "bytes": 45213,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-20",
+      "pages": 4,
+      "links": 1,
+      "bytes": 55337,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-21",
+      "pages": 4,
+      "links": 2,
+      "bytes": 55629,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-22",
+      "pages": 5,
+      "links": 2,
+      "bytes": 57591,
+      "deduplicatedParagraphs": 0
+    }
+  ],
+  "pageCount": 104,
+  "combinedPdfSha256": "b677610ba438227a2fa57d77da35cc0fbf20c6ecaf4d7e751bb3e708ab37619f",
+  "errors": []
+}

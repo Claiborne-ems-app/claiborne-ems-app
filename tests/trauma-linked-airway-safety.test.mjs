@@ -44,7 +44,7 @@ test("PM-03 separates traumatic hemorrhage from medical boluses without fabricat
   assert.match(protocol.medications.find((med) => med.name.includes("hypovolemic")).name, /nonhemorrhagic/);
   assert.match(protocol.treatmentSteps.join(" "), /separately approved pediatric traumatic-hemorrhage order or online Medical Control/);
   assert.match(protocol.warnings.join(" "), /not substitute generic pediatric hypotension recognition thresholds/);
-  assert.match(protocol.reviewFlags.join(" "), /numeric target table\/age boundaries remain unresolved/);
+  assert.match(protocol.reviewFlags.join(" "), /Medical Control-directed pediatric traumatic-hemorrhage fluid parameters and pediatric TBI blood-pressure targets.*no numeric pediatric standing orders or target table/);
   assert.ok(protocol.actionLinks.some((link) => link.href === "/protocols/tb/tb-06"));
   assert.ok(protocol.actionLinks.some((link) => link.href === "/protocols/tb/tb-05"));
   assert.equal(protocol.reviewStatus, "Approved");

@@ -38,7 +38,7 @@ test("generates an offline route for every protocol destination", () => {
     ).length,
     protocolCount
   );
-  assert.equal(createOfflineVersion(appConfig), "2-33-0-october-2026");
+  assert.equal(createOfflineVersion(appConfig), "2-34-0-october-2026");
 });
 
 test("generated package includes all direct PDFs and Claiborne branding", async () => {
@@ -57,7 +57,7 @@ test("generated package includes all direct PDFs and Claiborne branding", async 
   const urls = new Set(manifest.resources.map((resource) => resource.url));
   assert.equal(
     manifest.resources.filter((resource) => resource.kind === "document").length,
-    catalog.length
+    catalog.length + 1
   );
   assert.ok(catalog.every((protocol) => urls.has(protocol.pdfPath)));
   assert.ok(

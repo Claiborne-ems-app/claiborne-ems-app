@@ -4,14 +4,12 @@ import {
   ChevronDown,
   FileText,
   Pill,
-  ShieldAlert,
   Sparkles,
   Users,
 } from "lucide-react";
 import type { Category, Protocol } from "../../data/protocols";
 import type { StructuredProtocolContent } from "../../lib/protocols/structured-content";
 import {
-  BETA_CLINICAL_DISCLAIMER,
   getNativeProtocolSections,
   getProtocolFallbackHref,
   getProtocolViewerHref,
@@ -95,7 +93,6 @@ export default function NativeProtocolReader({
     ? getNativeProtocolSections(content)
     : [{ id: "source", title: "Source Information" }];
   const viewerHref = getProtocolViewerHref(category.id, protocol.id);
-  const status = content?.reviewStatus ?? "Draft";
   const sourcePdf = content?.sourcePdf ?? protocol.pdfPath;
 
   return (
@@ -128,17 +125,6 @@ export default function NativeProtocolReader({
               •
             </span>
             <span>{protocol.code}</span>
-            <span
-              className={`ml-auto rounded-full border px-2.5 py-1 text-xs ${
-                status === "Approved"
-                  ? "border-emerald-400/20 bg-emerald-500/10 text-emerald-300"
-                  : status === "Reviewed"
-                    ? "border-sky-400/20 bg-sky-500/10 text-sky-300"
-                    : "border-amber-400/20 bg-amber-500/10 text-amber-300"
-              }`}
-            >
-              {status}
-            </span>
           </div>
           <h1 className="mt-3 text-[1.85rem] font-bold leading-9 tracking-[-0.03em] sm:text-4xl">
             {protocol.title}
@@ -149,19 +135,6 @@ export default function NativeProtocolReader({
               : "PDF protocol"}
           </p>
         </header>
-
-        <aside
-          className="mt-4 rounded-2xl border border-rose-400/35 bg-rose-950/30 px-4 py-3.5"
-          aria-label="Beta clinical disclaimer"
-        >
-          <h2 className="flex items-center gap-2 text-sm font-bold text-rose-200">
-            <ShieldAlert aria-hidden="true" className="h-4 w-4" />
-            Beta — Not for Clinical Use
-          </h2>
-          <p className="mt-1.5 text-xs font-medium leading-5 text-rose-100/90">
-            {BETA_CLINICAL_DISCLAIMER}
-          </p>
-        </aside>
 
         <nav
           aria-label="Protocol sections"
@@ -188,7 +161,7 @@ export default function NativeProtocolReader({
           {!content && (
             <section className="rounded-2xl border border-amber-500/30 bg-amber-950/20 p-5">
               <h2 className="font-semibold text-amber-200">
-                Native content pending manual review
+                Protocol text unavailable
               </h2>
               <p className="mt-2 text-sm leading-6 text-slate-300">
                 Structured clinical content has not been reviewed for this protocol. Use
@@ -349,19 +322,7 @@ export default function NativeProtocolReader({
                 <dt className="text-slate-400">Last verified</dt>
                 <dd className="text-right">{content?.lastVerifiedDate ?? "Not verified"}</dd>
               </div>
-              <div className="flex justify-between gap-4">
-                <dt className="text-slate-400">Review status</dt>
-                <dd>{status}</dd>
-              </div>
             </dl>
-            {content?.reviewFlags.length ? (
-              <div className="mt-5 rounded-xl border border-amber-500/20 bg-amber-500/5 p-4">
-                <h3 className="font-semibold text-amber-200">Manual review required</h3>
-                <div className="mt-2">
-                  <TextList items={content.reviewFlags} />
-                </div>
-              </div>
-            ) : null}
           </ReaderSection>
         </div>
 
@@ -370,7 +331,7 @@ export default function NativeProtocolReader({
           className="mt-6 flex min-h-14 w-full items-center justify-center rounded-2xl bg-sky-600 px-5 text-base font-bold text-white shadow-lg shadow-sky-950/30 transition active:scale-[0.985] active:bg-sky-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
         >
           <FileText aria-hidden="true" className="mr-2 h-5 w-5" />
-          View Source PDF
+          View Protocol PDF
         </Link>
       </div>
     </main>

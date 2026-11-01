@@ -20,6 +20,7 @@ import {
   formatSceneTime,
   getSceneElapsedSeconds,
   normalizeSceneWorkspace,
+  MAX_SCENE_ENTRIES,
   SCENE_STORAGE_KEY,
   SCENE_WORKSPACE_EVENT,
   type SceneEntry,
@@ -98,10 +99,12 @@ export default function SceneTimer() {
 
   useEffect(() => {
     if (!hydrated) return;
-    window.localStorage.setItem(
-      SCENE_STORAGE_KEY,
-      JSON.stringify(workspace)
-    );
+    try {
+      window.localStorage.setItem(SCENE_STORAGE_KEY, JSON.stringify(workspace));
+    } catch {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setMessage("Device storage is unavailable. This scene is not saved across navigation or reload; copy your notes before leaving.");
+    }
     window.dispatchEvent(
       new CustomEvent(SCENE_WORKSPACE_EVENT, { detail: workspace })
     );
@@ -126,6 +129,7 @@ export default function SceneTimer() {
   );
   const running = workspace.runningSince !== null;
   const hasScene = workspace.sceneStartedAt !== null;
+  const atEntryCapacity = workspace.entries.length >= MAX_SCENE_ENTRIES;
   const tone =
     elapsedSeconds >= 900
       ? "border-rose-500/50 bg-rose-950/30"
@@ -173,7 +177,11 @@ export default function SceneTimer() {
     setMessage("Scene timer and timeline cleared.");
     setNow(Date.now());
     setWorkspace(emptySceneWorkspace);
-    window.localStorage.removeItem(SCENE_STORAGE_KEY);
+    try {
+      window.localStorage.removeItem(SCENE_STORAGE_KEY);
+    } catch {
+      setMessage("Scene cleared on this screen, but saved device data could not be removed. Check storage before leaving.");
+    }
   }
 
   function toggleDictation() {
@@ -238,17 +246,21 @@ export default function SceneTimer() {
   function addEntry() {
     const note = draft.trim();
     if (!note || !hasScene) return;
+    if (atEntryCapacity) {
+      setMessage("Timeline capacity reached. Existing entries and your draft are preserved. Copy the timeline before starting a new scene.");
+      return;
+    }
     const recordedAt = new Date().toISOString();
     const entry: SceneEntry = {
       id: createEntryId(),
       note,
-      elapsedSeconds,
+      elapsedSeconds: getSceneElapsedSeconds(workspace, Date.now()),
       recordedAt,
     };
 
     setWorkspace((current) => ({
       ...current,
-      entries: [...current.entries, entry].slice(-100),
+      entries: current.entries.length >= MAX_SCENE_ENTRIES ? current.entries : [...current.entries, entry],
     }));
     setDraft("");
     setMessage(
@@ -390,7 +402,7 @@ export default function SceneTimer() {
           <button
             type="button"
             onClick={addEntry}
-            disabled={!hasScene || !draft.trim()}
+            disabled={!hasScene || !draft.trim() || atEntryCapacity}
             className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-violet-600 px-3 font-bold text-white hover:bg-violet-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300 disabled:cursor-not-allowed disabled:bg-slate-700 disabled:text-slate-400"
           >
             <Plus aria-hidden="true" className="h-5 w-5" />
@@ -399,12 +411,20 @@ export default function SceneTimer() {
         </div>
 
         <p className="mt-3 text-xs leading-5 text-amber-200/90">
-          Trial feature: browser speech services may process dictation. The app
+          Browser speech services may process dictation. The app
           does not retain audio. Do not dictate patient identifiers, and verify
           every transcription before adding it.
         </p>
       </div>
 
+      {atEntryCapacity ? (
+        <p role="alert" className="mt-4 rounded-xl border border-amber-500/40 bg-amber-950/30 p-3 text-sm text-amber-100">
+          Timeline capacity reached ({MAX_SCENE_ENTRIES} entries). No existing entry will be overwritten. Copy the timeline before starting a new scene; your current draft remains on this screen.
+        </p>
+      ) : null}
+      <p className="mt-3 text-xs text-slate-400">
+        Saved timeline notes remain on this device until you delete them or start a new scene. They are not automatically submitted to the patient care record.
+      </p>
       {workspace.entries.length > 0 ? (
         <div className="mt-6 border-t border-white/10 pt-5">
           <div className="flex items-center justify-between gap-3">

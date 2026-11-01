@@ -1,0 +1,188 @@
+{
+  "generator": "scripts/generate-canonical-universal-pdfs.py",
+  "appVersion": "2.34.0",
+  "protocols": [
+    {
+      "id": "up-01",
+      "pdfPath": "/protocols/claiborne/up-01-universal-patient-care-protocol.pdf",
+      "pages": 7,
+      "canonicalSha256": "012f490460aaf3573dad5ebdbcd6c567bd07532256a6ecbf8d980f3a2e72cbf1",
+      "pdfSha256": "13f92d386210c85583cce549787ffecbdebe0ad78cbe43f5a731f77904abb20b",
+      "bytes": 61198
+    },
+    {
+      "id": "up-02",
+      "pdfPath": "/protocols/claiborne/up-02-triage-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "f646d462fcb1c695341f5924e04f4a2ebc2db167ad3a6154bda7bcd86ce3b44d",
+      "pdfSha256": "3e07db15adb0a1e094bf44f0d2bac84816b5755525e01b389390c294c1d91979",
+      "bytes": 54196
+    },
+    {
+      "id": "up-03",
+      "pdfPath": "/protocols/claiborne/up-03-abd-pain-vomiting-and-diarrhea-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "29cc83494682167d4cdd2e50778d818190bd3b283373584755115ee9d9f85e26",
+      "pdfSha256": "4fd3b67d09e7c248e698addec505e25075ba3ad514454b82bbeeeee828fe3481",
+      "bytes": 58047
+    },
+    {
+      "id": "up-04",
+      "pdfPath": "/protocols/claiborne/up-04-altered-mental-status-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "ec77fbcd1c6d4cd1e50154bdc75068759ac79cf94902dd66748c308deea7c7a9",
+      "pdfSha256": "d5378425bfd7bda910db501f790be3e0c2fce7cd00c86c807a72f11eb821e3e3",
+      "bytes": 58773
+    },
+    {
+      "id": "up-05",
+      "pdfPath": "/protocols/claiborne/up-05-back-pain-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "38f36c630bad6fc1c0246b047cfad558eb384a443dfd5b75977efd7a114b8f1d",
+      "pdfSha256": "8b59661e9ba933348a2f8264e6b782d364383020dd445a146ed84c254336ef74",
+      "bytes": 50589
+    },
+    {
+      "id": "up-06",
+      "pdfPath": "/protocols/claiborne/up-06-iv-or-io-access-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "104de7c0b1d635f78bb69afa0f94732a99d1be0fe079ca5ed279c6394c24ee55",
+      "pdfSha256": "e6339d4d2fc1d5e012f572add871884a3fd805ae8bbadd2cebef38f108b26a19",
+      "bytes": 51687
+    },
+    {
+      "id": "up-07",
+      "pdfPath": "/protocols/claiborne/up-07-dental-problems-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "94848c9cf509e9a9c7f7f5e9d90729caeee6948c8c7ecd76b8fca59335194c45",
+      "pdfSha256": "1ce03a9770ff7d1279210077a14fa0dcdaf42abed7ddc3c3d13069cb2ae08316",
+      "bytes": 54020
+    },
+    {
+      "id": "up-08",
+      "pdfPath": "/protocols/claiborne/up-08-emergency-indwelling-central-lines-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "fe6e57d33b5f8f3488c707521a61e7f1410984e8cd8e48cd2e5d929df669592c",
+      "pdfSha256": "d0d9ebf3cd74cf096c27768421c61d131172aa2476c32272e89f3374b7308022",
+      "bytes": 52103
+    },
+    {
+      "id": "up-09",
+      "pdfPath": "/protocols/claiborne/up-09-epistaxis-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "3a1997425edaff11eb0b687bd6b51f6f578098396a03f609af097e4c6ae9876f",
+      "pdfSha256": "7ab2ed24810b035abe685e6f0e97a3ef1f48a2f20c6f63a657eed427b988ff80",
+      "bytes": 54439
+    },
+    {
+      "id": "up-10",
+      "pdfPath": "/protocols/claiborne/up-10-fever-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "5e20ceb505657af8a4475a5c783a2890a17b054d03cbbe0b23e23ebc4dac1fea",
+      "pdfSha256": "fc16e84ac7d5c55830af5737a087735bba74e04b51c6fa75bef71ab14ecc4f20",
+      "bytes": 56744
+    },
+    {
+      "id": "up-11",
+      "pdfPath": "/protocols/claiborne/up-11-pain-control-adult-protocol.pdf",
+      "pages": 6,
+      "canonicalSha256": "476b35a569bc7d89d25d7459cd46d928387feca75ecf035a46d01fcab9edb9aa",
+      "pdfSha256": "5d60fcff4930d1a5c461872e41e2f532647905b73f050332e670e05881e7c67f",
+      "bytes": 62187
+    },
+    {
+      "id": "up-12",
+      "pdfPath": "/protocols/claiborne/up-12-police-custody-protocol.pdf",
+      "pages": 6,
+      "canonicalSha256": "e5eb14b67576d0d6de57dfbd539c7f6df52047c3bd7b5136c686ad155067d5ce",
+      "pdfSha256": "56276d42b5d813595ba7b85b8733322ed65006486ba47ffc13fc59c7c386e339",
+      "bytes": 59126
+    },
+    {
+      "id": "up-13",
+      "pdfPath": "/protocols/claiborne/up-13-seizure-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "1dacced79b2ffe831842592c2e7299fb7f6d4af9ce2916fe77762c57a627ffbe",
+      "pdfSha256": "2f6bfdf06037e3ef14d3f0cd6a719cbea23bbf979a4b8cf20ae25c6237428864",
+      "bytes": 56760
+    },
+    {
+      "id": "up-14",
+      "pdfPath": "/protocols/claiborne/up-14-suspected-stroke-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "a3646fa9cd594753b2559b24293ede41c6cb49b7a190a0a4cf1d43185999ee42",
+      "pdfSha256": "7b0787c90883faad503f236c4a9fea287654c0490bb4df1258759d4cfe786438",
+      "bytes": 57731
+    },
+    {
+      "id": "up-15",
+      "pdfPath": "/protocols/claiborne/up-15-suspected-sepsis-protocol.pdf",
+      "pages": 6,
+      "canonicalSha256": "4eabc07ee88431e39ab7de39ce337030f07591eaf599d28561ce39586c4d5e75",
+      "pdfSha256": "65c47e19dc6937dbb6efe6d1708fe41f9a1b458634dafa890c62473d2780ff38",
+      "bytes": 60069
+    },
+    {
+      "id": "up-16",
+      "pdfPath": "/protocols/claiborne/up-16-syncope-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "8e87623e47891ca864dfb93e2fd780573044b13f5d56de4b76263043a76364ff",
+      "pdfSha256": "f6475c3ad55d1266d3c842cb5dfcf39b19b55c482c1cdcb36a700cc428ec1c10",
+      "bytes": 57041
+    },
+    {
+      "id": "up-17",
+      "pdfPath": "/protocols/claiborne/up-17-behavioral-health-crisis-protocol.pdf",
+      "pages": 7,
+      "canonicalSha256": "98cccf6eb0c65993efe5895c76cc795d2dc607b73ede3094c7e28b7825a0edac",
+      "pdfSha256": "ab2ed3a7e84bb07472006ca2127cfc13482df0e3e71a38210617ad18f30ee685",
+      "bytes": 63662
+    },
+    {
+      "id": "up-18",
+      "pdfPath": "/protocols/claiborne/up-18-behavioral-agitation-sedation-guide-protocol.pdf",
+      "pages": 7,
+      "canonicalSha256": "1906333cc4217afa6a790ac02c0229c6efbc12936820ad28be41e420041e239f",
+      "pdfSha256": "2f8f49f2ad123cb8625280bfb5f492f6fa2beaab7c798f43371532bfeb13fca9",
+      "bytes": 62950
+    },
+    {
+      "id": "up-19",
+      "pdfPath": "/protocols/claiborne/up-19-hyperactive-delirium-with-severe-agitation-protocol.pdf",
+      "pages": 1,
+      "canonicalSha256": "61c185e07da5f19c6bec30e3c32646afaee4250a2e285fc0e66d6b67189853bc",
+      "pdfSha256": "39f7c3a3e9f6086c54ca0d999df6c921ecd703cc31304b09be747151e0f43d50",
+      "bytes": 45213
+    },
+    {
+      "id": "up-20",
+      "pdfPath": "/protocols/claiborne/up-20-sickle-cell-crisis-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "1feef62c59bacd355342198c549ac113a98c60c5120a18ab651ef78b1d02857d",
+      "pdfSha256": "55bb6f9a1be6fe89e366eed54a04efdd221f54e387cbd01eaeb6a9d47946b5fa",
+      "bytes": 55337
+    },
+    {
+      "id": "up-21",
+      "pdfPath": "/protocols/claiborne/up-21-family-violence-abuse-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "4d3b8305832d2d79e240abe2ae4da6cc9e7f9c78fabe04cedd5e4b59545823ff",
+      "pdfSha256": "9ac9744cd53e3600785d19f68c99fd96132194aad8f2a3e98d0bb0d4405c5587",
+      "bytes": 55629
+    },
+    {
+      "id": "up-22",
+      "pdfPath": "/protocols/claiborne/up-22-sexual-assault-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "f741465689b9b112d23d16d1ab63745f09c7a83a3b1bff301d31172446679dfb",
+      "pdfSha256": "33c467aa0d30d60947e472cada583ba948f942a957d290f0e6bac654f2349d66",
+      "bytes": 57591
+    }
+  ],
+  "combined": {
+    "path": "output/pdf/claiborne-up01-up22-approved.pdf",
+    "pages": 104,
+    "pdfSha256": "b677610ba438227a2fa57d77da35cc0fbf20c6ecaf4d7e751bb3e708ab37619f",
+    "bytes": 1230678
+  }
+}

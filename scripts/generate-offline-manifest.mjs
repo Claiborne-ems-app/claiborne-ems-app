@@ -1,13 +1,12 @@
+import { appConfig } from "../lib/app-config.ts";
+import { printManualPath } from "../lib/print-manual.ts";
 import { copyFile, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = path.join(projectRoot, "public");
-const appConfig = {
-  appVersion: "2.33.0",
-  protocolVersion: "October 2026",
-};
+
 
 function slugify(value) {
   return value
@@ -22,6 +21,7 @@ export function createProtocolCategories(protocols) {
   const categories = new Map();
   for (const protocol of protocols) {
     const id = slugify(protocol.categoryCode || protocol.category);
+    if (["sc", "so"].includes(id)) continue;
     const category = categories.get(id) ?? {
       id,
       title: protocol.category,
@@ -74,6 +74,7 @@ export function createOfflineRoutes(categories) {
 }
 
 const staticResources = [
+  printManualPath,
   "/offline-data.json",
   "/manifest.webmanifest",
   "/icon.png",

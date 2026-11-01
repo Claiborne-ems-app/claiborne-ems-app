@@ -1,0 +1,646 @@
+{
+  "appVersion": "2.34.0",
+  "manifestSha256": "9bc6185beae058904db01b2aefef3d74712f1ddceae2cf491b801945a89c2618",
+  "protocols": [
+    {
+      "id": "ac-01",
+      "pages": 4,
+      "links": 5,
+      "bytes": 55242,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-02",
+      "pages": 5,
+      "links": 4,
+      "bytes": 56601,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-03",
+      "pages": 5,
+      "links": 6,
+      "bytes": 58158,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-04",
+      "pages": 6,
+      "links": 3,
+      "bytes": 59500,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-05",
+      "pages": 5,
+      "links": 4,
+      "bytes": 58302,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-06",
+      "pages": 6,
+      "links": 6,
+      "bytes": 60672,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-07",
+      "pages": 5,
+      "links": 6,
+      "bytes": 57467,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-08",
+      "pages": 5,
+      "links": 5,
+      "bytes": 56290,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-09",
+      "pages": 5,
+      "links": 7,
+      "bytes": 58062,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-10",
+      "pages": 5,
+      "links": 9,
+      "bytes": 58934,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-11",
+      "pages": 3,
+      "links": 6,
+      "bytes": 52705,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-12",
+      "pages": 4,
+      "links": 8,
+      "bytes": 54259,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-13",
+      "pages": 3,
+      "links": 6,
+      "bytes": 52711,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-14",
+      "pages": 4,
+      "links": 8,
+      "bytes": 56553,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-15",
+      "pages": 4,
+      "links": 8,
+      "bytes": 55608,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ac-16",
+      "pages": 3,
+      "links": 8,
+      "bytes": 53608,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "am-01",
+      "pages": 5,
+      "links": 3,
+      "bytes": 57063,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "am-02",
+      "pages": 5,
+      "links": 5,
+      "bytes": 57254,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "am-03",
+      "pages": 5,
+      "links": 6,
+      "bytes": 57735,
+      "deduplicatedParagraphs": 15
+    },
+    {
+      "id": "am-04",
+      "pages": 3,
+      "links": 5,
+      "bytes": 51773,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "am-05",
+      "pages": 5,
+      "links": 16,
+      "bytes": 60780,
+      "deduplicatedParagraphs": 24
+    },
+    {
+      "id": "am-06",
+      "pages": 3,
+      "links": 7,
+      "bytes": 53260,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "am-07",
+      "pages": 3,
+      "links": 8,
+      "bytes": 51829,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ao-01",
+      "pages": 3,
+      "links": 0,
+      "bytes": 49017,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ao-02",
+      "pages": 3,
+      "links": 1,
+      "bytes": 50324,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ao-03",
+      "pages": 3,
+      "links": 4,
+      "bytes": 51843,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-01",
+      "pages": 2,
+      "links": 1,
+      "bytes": 48977,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-02",
+      "pages": 2,
+      "links": 1,
+      "bytes": 49011,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-03",
+      "pages": 3,
+      "links": 6,
+      "bytes": 53220,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-04",
+      "pages": 3,
+      "links": 5,
+      "bytes": 51726,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-05",
+      "pages": 3,
+      "links": 5,
+      "bytes": 52326,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-06",
+      "pages": 3,
+      "links": 5,
+      "bytes": 51852,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-07",
+      "pages": 3,
+      "links": 5,
+      "bytes": 51682,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-08",
+      "pages": 3,
+      "links": 5,
+      "bytes": 52327,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-09",
+      "pages": 3,
+      "links": 4,
+      "bytes": 51375,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-10",
+      "pages": 3,
+      "links": 3,
+      "bytes": 50224,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "ar-11",
+      "pages": 3,
+      "links": 4,
+      "bytes": 52122,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pc-01",
+      "pages": 2,
+      "links": 5,
+      "bytes": 50165,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pc-02",
+      "pages": 3,
+      "links": 5,
+      "bytes": 50878,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pc-03",
+      "pages": 3,
+      "links": 5,
+      "bytes": 50692,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pc-04",
+      "pages": 2,
+      "links": 5,
+      "bytes": 50158,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pc-05",
+      "pages": 3,
+      "links": 4,
+      "bytes": 50123,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pc-06",
+      "pages": 3,
+      "links": 5,
+      "bytes": 50385,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pc-07",
+      "pages": 3,
+      "links": 5,
+      "bytes": 50310,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pc-08",
+      "pages": 3,
+      "links": 5,
+      "bytes": 50630,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pm-01",
+      "pages": 3,
+      "links": 4,
+      "bytes": 50390,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pm-02",
+      "pages": 3,
+      "links": 4,
+      "bytes": 50760,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pm-03",
+      "pages": 3,
+      "links": 6,
+      "bytes": 52508,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "pm-04",
+      "pages": 3,
+      "links": 2,
+      "bytes": 50095,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-01",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47806,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-02",
+      "pages": 2,
+      "links": 3,
+      "bytes": 49435,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-03",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47882,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-04",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47819,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-05",
+      "pages": 2,
+      "links": 1,
+      "bytes": 49216,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-06",
+      "pages": 3,
+      "links": 4,
+      "bytes": 51638,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-07",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47017,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-08",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47775,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-09",
+      "pages": 3,
+      "links": 2,
+      "bytes": 51519,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-10",
+      "pages": 2,
+      "links": 3,
+      "bytes": 49067,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "tb-11",
+      "pages": 4,
+      "links": 4,
+      "bytes": 54866,
+      "deduplicatedParagraphs": 13
+    },
+    {
+      "id": "tb-12",
+      "pages": 5,
+      "links": 6,
+      "bytes": 59521,
+      "deduplicatedParagraphs": 13
+    },
+    {
+      "id": "te-01",
+      "pages": 2,
+      "links": 1,
+      "bytes": 47238,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "te-02",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47283,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "te-03",
+      "pages": 2,
+      "links": 0,
+      "bytes": 46798,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "te-04",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47413,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "te-05",
+      "pages": 2,
+      "links": 0,
+      "bytes": 47646,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "te-07",
+      "pages": 2,
+      "links": 3,
+      "bytes": 48221,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "te-08",
+      "pages": 2,
+      "links": 3,
+      "bytes": 48665,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "te-09",
+      "pages": 6,
+      "links": 5,
+      "bytes": 61473,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-01",
+      "pages": 7,
+      "links": 0,
+      "bytes": 61198,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-02",
+      "pages": 4,
+      "links": 0,
+      "bytes": 54196,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-03",
+      "pages": 5,
+      "links": 2,
+      "bytes": 58047,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-04",
+      "pages": 5,
+      "links": 0,
+      "bytes": 58773,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-05",
+      "pages": 3,
+      "links": 2,
+      "bytes": 50589,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-06",
+      "pages": 3,
+      "links": 0,
+      "bytes": 51687,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-07",
+      "pages": 4,
+      "links": 2,
+      "bytes": 54020,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-08",
+      "pages": 3,
+      "links": 0,
+      "bytes": 52103,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-09",
+      "pages": 4,
+      "links": 0,
+      "bytes": 54439,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-10",
+      "pages": 5,
+      "links": 0,
+      "bytes": 56744,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-11",
+      "pages": 6,
+      "links": 2,
+      "bytes": 62187,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-12",
+      "pages": 6,
+      "links": 0,
+      "bytes": 59126,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-13",
+      "pages": 5,
+      "links": 0,
+      "bytes": 56760,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-14",
+      "pages": 5,
+      "links": 0,
+      "bytes": 57731,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-15",
+      "pages": 6,
+      "links": 0,
+      "bytes": 60069,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-16",
+      "pages": 5,
+      "links": 0,
+      "bytes": 57041,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-17",
+      "pages": 7,
+      "links": 0,
+      "bytes": 63662,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-18",
+      "pages": 7,
+      "links": 0,
+      "bytes": 62950,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-19",
+      "pages": 1,
+      "links": 1,
+      "bytes": 45213,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-20",
+      "pages": 4,
+      "links": 1,
+      "bytes": 55337,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-21",
+      "pages": 4,
+      "links": 2,
+      "bytes": 55629,
+      "deduplicatedParagraphs": 0
+    },
+    {
+      "id": "up-22",
+      "pages": 5,
+      "links": 2,
+      "bytes": 57591,
+      "deduplicatedParagraphs": 0
+    }
+  ],
+  "pageCount": 330,
+  "combinedPdfSha256": "ba4f910892a3c959c2423bfd6fe8e93c33d675b645d4061a580c1611461757ee",
+  "errors": []
+}

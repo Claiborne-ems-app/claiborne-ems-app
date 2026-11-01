@@ -1,0 +1,37 @@
+{
+  "title": "Claiborne EMS Protocol Manual",
+  "revisionDate": "2026-11-01",
+  "clinicalSourceAppVersion": "2.34.0",
+  "path": "/protocols/claiborne/claiborne-ems-compact-vehicle-manual.pdf",
+  "sha256": "e5c378a4ab6f37bcc2c56aad84529e25ab6a4da2736fcbcd049c2ed8a6a6cb08",
+  "bytes": 1109763,
+  "pages": 237,
+  "duplexSheets": 119,
+  "visualQa": "passed",
+  "sourceSha256": {
+    "protocols": "9fc1ed2c3fbcf57aa269635f4b283e4cc4b73d69191346d2c72cdbff86a2e824",
+    "catalog": "c4f31c2e5a21c66e0a3b0ad83f69ba055e6e76c4b990eb254fd1200278accee4"
+  },
+  "sourceSerialization": "UTF-8 JSON.stringify(value) followed by one LF",
+  "protocolCount": 91,
+  "sectionCount": 9,
+  "medicationReferenceCount": 43,
+  "sourceFieldsAccountedFor": 12609,
+  "retainedStringsVerified": 9200,
+  "internalLinksVerified": 1291,
+  "bookmarks": 146,
+  "flowNodes": 611,
+  "clinicalOmissions": [],
+  "internalReviewNotes": {
+    "total": 319,
+    "governanceOnly": 185,
+    "clinicalEquivalentMapped": 134,
+    "displayed": 0
+  },
+  "visualProof": {
+    "initialEveryPageInspection": 237,
+    "changedPagesReinspected": 105,
+    "unchangedFullPngIdentity": 132
+  },
+  "rebuildVerification": "All237 pages equal in text, fonts, bounding boxes, vector geometry and raster pixels; exported source bytes identical."
+}

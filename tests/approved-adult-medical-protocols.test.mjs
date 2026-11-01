@@ -1,8 +1,10 @@
+import { readFile } from "node:fs/promises";
+import { readProtocolAware } from "./protocol-source-helper.mjs";
 import assert from "node:assert/strict";
-import { readFile, stat } from "node:fs/promises";
+import { stat } from "node:fs/promises";
 import test from "node:test";
 
-const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
+const read = (path) => readProtocolAware(path, import.meta.url);
 
 test("approved adult medical protocols are reconciled in both catalogs", async () => {
   const [jsonCatalog, tsCatalog, structured] = await Promise.all([
@@ -60,7 +62,7 @@ test("AM replacement fixes linked pathways and key source content", async () => 
   assert.match(structured, /id: "am-07"[\s\S]*?label: "TB-06 Multiple Trauma"/);
   assert.match(structured, /id: "am-06"[\s\S]*?TNK is a single IV bolus/);
   assert.doesNotMatch(structured, /id: "am-06"[\s\S]*?sourcePdf: "[^"\n]*activase/i);
-  assert.match(medicationReference, /Medical shock \(AM-05\): 0\.05–0\.5 mcg\/kg\/min/);
+  assert.match(medicationReference, /0\.05–0\.5 mcg\/kg\/min[\s\S]*?maximum 0\.5 mcg\/kg\/min under AM-05/);
 });
 
 test("approved adult medical source PDFs are present and recognizable as PDFs", async () => {

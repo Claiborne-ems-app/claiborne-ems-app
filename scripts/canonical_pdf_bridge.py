@@ -1,8 +1,8 @@
-"""Keep historical PDF commands on the single native clinical source."""
+"""Route historical generation commands through one canonical clinical source."""
 from pathlib import Path
 import runpy
 
 
 def build_canonical(protocol_id):
-    generator = Path(__file__).with_name('generate-canonical-trauma-pdfs.py')
-    runpy.run_path(str(generator))['main']([protocol_id.lower()])
+    ids=protocol_id if isinstance(protocol_id,list) else [protocol_id]
+    runpy.run_path(str(Path(__file__).with_name('generate-canonical-all-pdfs.py')))['main']([key.lower() for key in ids])

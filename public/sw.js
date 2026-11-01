@@ -304,8 +304,16 @@ async function activeCacheMatch(request, state) {
   if (isDocumentResource(url.pathname)) {
     return (await caches.open(names.documents)).match(url.href);
   }
+  // Saved packages contain HTML, not router-state-dependent Flight payloads.
+  // Failed offline Flight fetches let Next fall back to document navigation.
+  if (request.headers.get("RSC") === "1" ||
+      request.headers.get("Accept")?.includes("text/x-component") ||
+      url.searchParams.has("_rsc")) return null;
   const shell = await caches.open(names.shell);
-  return shell.match(url.href) || shell.match(`${url.origin}${url.pathname}`);
+  const exact = await shell.match(request);
+  if (exact) return exact;
+  if (request.mode !== "navigate" || !url.search) return null;
+  return shell.match(`${url.origin}${url.pathname}`);
 }
 
 if (typeof self !== "undefined" && self.addEventListener) {
@@ -390,5 +398,6 @@ if (typeof module !== "undefined") {
     extractBuildResources,
     completedVerification,
     staleCachesToDelete,
+    activeCacheMatch,
   };
 }

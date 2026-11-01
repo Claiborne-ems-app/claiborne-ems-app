@@ -1,0 +1,674 @@
+{
+  "status": "passed",
+  "reviewer": "audit_final_protocol_consistency",
+  "findings": [],
+  "method": "Fresh visual inspection of all18 AC and5 new-AM contact sheets; all91 assigned pages inspected, no clipping/overlap/glyph failures. Sparse reference ending pages cosmetic. AC01/AC14 migrated warnings and AM01 P-only safeguard visible. No old visual verdict reused.",
+  "manifestSha256": "473416762b3bb4a23fb057e67274d8b6f9f7ae550eb98ca63c5695ceed364425",
+  "protocols": [
+    {
+      "id": "ac-01",
+      "pdfPath": "/protocols/claiborne/ac-01-asystole-pulseless-electrical-activity-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "62867f462c45b5969554d73fb2c7cee2ff6b3533ac4464958dbe3641045fa7a9",
+      "pdfSha256": "ee7f40454cb7174895a0a7932b39a47ff9ebefd5fbeda08bdba2ca9bb92d902f",
+      "bytes": 55242,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-01/page-1.png",
+          "pngSha256": "c07b66f6cf80ddc374a62ab4e81e2483a5fc598c5ca516ab834dd29096b0e1cf"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-01/page-2.png",
+          "pngSha256": "aa5e5154a0d3a15858d8d32ceda7e2d5f3748037ddfe2f06e99c559a545b7ae7"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-01/page-3.png",
+          "pngSha256": "cc3fb914aa338670548f1713feb7e18159f58115cab87088dfa9ad9acb3ce5ef"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-01/page-4.png",
+          "pngSha256": "8d00836bfa9a92b6ca04f6b45624a31bba66b1c2e0dc2e134171f629c7e954bb"
+        }
+      ]
+    },
+    {
+      "id": "ac-02",
+      "pdfPath": "/protocols/claiborne/ac-02-bradycardia-pulse-present-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "9c67bc2c390c6c6997070e61e6b31168a31673f3458cbb691b5902ddef842b95",
+      "pdfSha256": "81a38fa8330665b9ef6af6dd164b8552a26e1e043bee545d4e59640f048e888a",
+      "bytes": 56601,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-02/page-1.png",
+          "pngSha256": "ed94af8359c4d0d48aad1e266ba045f158b6929e359d5631155116d1ac364843"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-02/page-2.png",
+          "pngSha256": "8b60b1d596f01fa213cf83456611d11ded4d7ac717c02e1c52f48cdc62a47369"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-02/page-3.png",
+          "pngSha256": "1678489b6042940c4ee81661db257d7637ed01f3132f9f7ec6c100814bb917a4"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-02/page-4.png",
+          "pngSha256": "08ee2f636fa84ce1816db9f06ba63dc1781ff6614292577ccb15e36b0c3bcee9"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/ac-02/page-5.png",
+          "pngSha256": "d5d0db771ee95a0d7ae3153c9ee783dff8590ef0d413a6a4ce187862abe9c5aa"
+        }
+      ]
+    },
+    {
+      "id": "ac-03",
+      "pdfPath": "/protocols/claiborne/ac-03-cardiac-arrest-adult-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "a89090fe1251b880d548c34e1683d65e9605e756dd40c97b2536f2ba51fd034b",
+      "pdfSha256": "2976b4d9bd990ba92a4f7920bf1d5f4c2518cef0cc8380cc8f6d816ad23ca6cb",
+      "bytes": 58158,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-03/page-1.png",
+          "pngSha256": "bcef224c803d2f1705a78798d75030f261927c787ac8b18237a9f5d660892f1a"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-03/page-2.png",
+          "pngSha256": "ac69ddbc89b5bb365c3593ec45399641d73df56e9796adaa9dbf3270e5b6544e"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-03/page-3.png",
+          "pngSha256": "6bb2f7dd191aa57b2f1f0b9f7c9f23cc645bcf121463b0d8773380e09b497d03"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-03/page-4.png",
+          "pngSha256": "43f47009722e650094ea41a662d99c9ed3c4e98e16b8591758a27c00db71361f"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/ac-03/page-5.png",
+          "pngSha256": "39b189ec346f424489ed90c407fba65ac8d4469f65830f5861641e08a387c598"
+        }
+      ]
+    },
+    {
+      "id": "ac-04",
+      "pdfPath": "/protocols/claiborne/ac-04-chest-pain-and-stemi-protocol.pdf",
+      "pages": 6,
+      "canonicalSha256": "3a8166f9fbeeae37717865080f8b7a4188bb628ee7f74e2493d91e734bcfbfb9",
+      "pdfSha256": "41e0793b9bc39f9f89158c71df8f831b0b58daa876fa9bdb0f9f0a8b4ead732f",
+      "bytes": 59500,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-04/page-1.png",
+          "pngSha256": "9be9b9b37edbf9b65882d26c7f191ae6f82936d4cf466ecce279ef7d7a073278"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-04/page-2.png",
+          "pngSha256": "18169a8859a8fcdf6ea256489f4b6f4f59df7d4081fc04d1714e74c71b8782b5"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-04/page-3.png",
+          "pngSha256": "ba8f001141160b36538d567c0da26599d24ff17e5ac649942f6869700bb86624"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-04/page-4.png",
+          "pngSha256": "5f7c4cb63eda18f92e0c3b13f733ab3cc3b60c3a18f74b2349258ef0056e03c8"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/ac-04/page-5.png",
+          "pngSha256": "e30c786d082c538ff9956c1f4b1eb2c916ef98be5d8ef4a76e9859c19bfa36e9"
+        },
+        {
+          "page": 6,
+          "path": "tmp/pdfs/canonical-review/pages/ac-04/page-6.png",
+          "pngSha256": "b87dc48ec1262896bd924b142fed121a7b8ac92548b710fb32b6e3b4cea14dfc"
+        }
+      ]
+    },
+    {
+      "id": "ac-05",
+      "pdfPath": "/protocols/claiborne/ac-05-chf-pulmonary-edema-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "467f3cf2b05a1931449fbc6da40a746531d10350f6a7e02ae9182d1880c9f1c7",
+      "pdfSha256": "2a7c72e618948f1a09b22f2cbb4fb870dbe4141be73527b316773d825344a940",
+      "bytes": 58302,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-05/page-1.png",
+          "pngSha256": "03fc0f6a3ab75825882774a16f043655b9c0c51662a8b7a36bfbbe023c697caf"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-05/page-2.png",
+          "pngSha256": "62be8f8bb8c540ced1e594060457149bdf19539df4101a813268e5965c5e0cf4"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-05/page-3.png",
+          "pngSha256": "72faecdb7cb43c7ae9c3f74eebc87592973c716b3d658887169d00dc206140f4"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-05/page-4.png",
+          "pngSha256": "38ae66492ca16f99560c3c8632335c6e3b0309f8144576836fda7396edb78626"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/ac-05/page-5.png",
+          "pngSha256": "b92817731f5a7a4484f1258f8420778a312f8312790a37cebea4a2a0ca14f80b"
+        }
+      ]
+    },
+    {
+      "id": "ac-06",
+      "pdfPath": "/protocols/claiborne/ac-06-adult-tachycardia-narrow-protocol.pdf",
+      "pages": 6,
+      "canonicalSha256": "8327443e304c275dbc683d34759b915904381f6e6356bfb4d028be2f547a6fc3",
+      "pdfSha256": "ea6a5073c6321607cf31bb82fe79c4e3e2e911b80ca2178b2d75bdd46f3ab175",
+      "bytes": 60672,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-06/page-1.png",
+          "pngSha256": "7358e8fdf79207ea8aa1fecb7244c98c742fc65bb42af536b487f151bccd6dfc"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-06/page-2.png",
+          "pngSha256": "df483707f64f8bf478255d57c4b154607ebb10f839b99f210d4967d0d7354d21"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-06/page-3.png",
+          "pngSha256": "f45bec952c6b5e2c78e9814b91f64c9633157aa6aa643803daa09c7deb3c2179"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-06/page-4.png",
+          "pngSha256": "76b0195d8b6337b6fdd49d0472de05fb468a080519f431fabc20241e01071ed2"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/ac-06/page-5.png",
+          "pngSha256": "578bef311c1e0161dacd632b360f3e2d6dbed3dda0d4781f196b6cf4b6857a89"
+        },
+        {
+          "page": 6,
+          "path": "tmp/pdfs/canonical-review/pages/ac-06/page-6.png",
+          "pngSha256": "8cb3a56972bc917731da15057a94e1bb0758fd699d1577791c35ffe224116f82"
+        }
+      ]
+    },
+    {
+      "id": "ac-07",
+      "pdfPath": "/protocols/claiborne/ac-07-adult-tachycardia-monomorphic-wide-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "7651dfad3dd5331d6d5bc39fc4a8dccc241c839958b2baa2084e56ec8a2358bd",
+      "pdfSha256": "0dba71bbf45ca175c64df0e43a1a0c2d80e4fece3a1380b17013bc962e35d85b",
+      "bytes": 57467,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-07/page-1.png",
+          "pngSha256": "06654b4b9c59916d241d2e7f4fe71ee29531d6ea944a0b22086da2bd6f8cc8e8"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-07/page-2.png",
+          "pngSha256": "9610f4670e59234c51c95cf494dfbb98c56c949b4e9d074e0537524300a84311"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-07/page-3.png",
+          "pngSha256": "df814f6dd51e4e2cd7d26af300d5c13b5102ae7c9e95ab855197c520f58e56e7"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-07/page-4.png",
+          "pngSha256": "e2ffdfac7c19ac0edc918b3e6c7ececdc0c10e7286db73f203b02ee9239368d1"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/ac-07/page-5.png",
+          "pngSha256": "61fc78fbfc1c1c237dcc238f37f39fa3a118eae03c61c5ea2425d8ab11c2cef0"
+        }
+      ]
+    },
+    {
+      "id": "ac-08",
+      "pdfPath": "/protocols/claiborne/ac-08-adult-tachycardia-polymorphic-wide-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "7a28d0f85d46dd1449ca758104dfe65ee7c55c924c4d59c8a0f82d55282d27f8",
+      "pdfSha256": "b9e179c9384e78ab0f4b24ad6db2e3e8a555f0858c143c4f73cb5a22268e3795",
+      "bytes": 56290,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-08/page-1.png",
+          "pngSha256": "0862b6b6a64d035d7cb3d540503a7fbaa32752cf460d11dc8de2ba9128f24958"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-08/page-2.png",
+          "pngSha256": "c9a9bc1ff2e8ae3732dd0b3258e711cf7239d6f3a0b868c4ba9026a1d3a0463c"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-08/page-3.png",
+          "pngSha256": "e069f1eab0939ef0ff0006b535a919287b64cec6df7991d540bee5f134b580db"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-08/page-4.png",
+          "pngSha256": "2c3f047bce1c31d3e266275ecd99818a472a5991cd286c344455538b2a3d5e4c"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/ac-08/page-5.png",
+          "pngSha256": "ca111c32a59614ceb4bd9d720abd3b44417c3f6c7e07eb74f0e1fc3d31ad72c4"
+        }
+      ]
+    },
+    {
+      "id": "ac-09",
+      "pdfPath": "/protocols/claiborne/ac-09-vf-pulseless-vt-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "a04950c280158663fd9220091a9863dbf0718684d47ac472626762c2459ae0a9",
+      "pdfSha256": "80c5a9402351f1eb7e0ef0eb3faf1b41121b1cecedd91dc58b922c2756ff2cb0",
+      "bytes": 58062,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-09/page-1.png",
+          "pngSha256": "420d517eff955042234682bd0050ec3c92da68497a544d183824dd38cde6ca7f"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-09/page-2.png",
+          "pngSha256": "d32aa21d9576a9b5e176b752418c09230fc7175938ae5c050161932599071573"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-09/page-3.png",
+          "pngSha256": "103f4f27dcdca2207926c8478fbcef496f64b9a7c63be9a4730381021bf58cba"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-09/page-4.png",
+          "pngSha256": "e8fdaa06faa16c1b8ed27044c206cf63e7f147a1b345d609db1a7658c738c2b7"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/ac-09/page-5.png",
+          "pngSha256": "c86ebe13559f38339299da388a13eaa0c034fad825d2409bc48ad3e0d6865c72"
+        }
+      ]
+    },
+    {
+      "id": "ac-10",
+      "pdfPath": "/protocols/claiborne/ac-10-post-resuscitation-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "54411b8297f1b107723d907e0e67c96030bb0f59cc895dc536bec69ffd954658",
+      "pdfSha256": "d7ecc535880bc165472a6509ec6a76d8fc0d531c2cba63075f8c5f809a1f2294",
+      "bytes": 58934,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-10/page-1.png",
+          "pngSha256": "1f2b57c133610088ea59adb1f1f808c0e6ee0eae8f02ea2bc08a2eb05ecfdea0"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-10/page-2.png",
+          "pngSha256": "2fbeffdf6425b6dc8e71153247257bc65b33e1c05e4813933af1c3665b6039b0"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-10/page-3.png",
+          "pngSha256": "ea99be65f26ba61bf5fd3eb183950accc456894377f192d33d8367d223c771d1"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-10/page-4.png",
+          "pngSha256": "0b4fe255950ee0d9ab5ba6a968ce72b066f9381d1b1034dd896e6cb96ab49e0f"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/ac-10/page-5.png",
+          "pngSha256": "258ad8a400fbc5050c7678dda8668e9b6627ae849ce4707c4cc22d681f49e65e"
+        }
+      ]
+    },
+    {
+      "id": "ac-11",
+      "pdfPath": "/protocols/claiborne/ac-11-team-focused-cpr-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "260376e86f1f7dbb6d7ec96e13108a46423b792174a0b06f56bca70585e7eb85",
+      "pdfSha256": "76c3e4ccaa61468adea3e90eb2ba632d7c3918164b98717955368f57f4707146",
+      "bytes": 52705,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-11/page-1.png",
+          "pngSha256": "63e9822815d85a0a202706d8eed44e7b77d68e8910314ef8478fa0ee7b8a72bb"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-11/page-2.png",
+          "pngSha256": "76a33487f1263267f56266133f56468a7141e82a9bf0f4ae86c21de93825d4f1"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-11/page-3.png",
+          "pngSha256": "c23d5e5cfb0fe658a71dbd7400e52c01cc7538529975061be4092a929b727bd4"
+        }
+      ]
+    },
+    {
+      "id": "ac-12",
+      "pdfPath": "/protocols/claiborne/ac-12-termination-of-cpr-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "c42c30f805406d36dd9aeecafd103a7193fc6bec7c8cf26e618ed4b46af61d94",
+      "pdfSha256": "ddc8e3bb429a033f1e2fc5ddd0ae7b99fc11b26f92b0ec1cc85df8d6cb5531cd",
+      "bytes": 54259,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-12/page-1.png",
+          "pngSha256": "3cde72bf828fd20d6c3b8c54039db704314b375752bc83b237c549d32178e2c7"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-12/page-2.png",
+          "pngSha256": "47dc6c6d0ee005023aa30def41f4319f59139ee11a2794b1fb7f802875fbdd35"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-12/page-3.png",
+          "pngSha256": "43bc4579b48192747290b0ed648ad1a4f389f0d522ed32906e7542fd1fa36ecc"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-12/page-4.png",
+          "pngSha256": "52d92d254a528e4f77ee7c14c21f71b578921b39d9543919ac9c766966411632"
+        }
+      ]
+    },
+    {
+      "id": "ac-13",
+      "pdfPath": "/protocols/claiborne/ac-13-targeted-temperature-management-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "d7ff67958545198a9908813e49ae0453f228b6093f13e4623db9f8ebf84a3788",
+      "pdfSha256": "501545f553a4189ad7b574a1b81fd58acef623fda5be12faaf078e6923263241",
+      "bytes": 52711,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-13/page-1.png",
+          "pngSha256": "9869ed1a41c756af715e5eefa1919405bf1a4997d9155185a0f6d0e18f5fa07e"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-13/page-2.png",
+          "pngSha256": "e247133a8aa43a9b8938f117f55b1a0b03fd1113ac5c378b4fb517cdec7b9f95"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-13/page-3.png",
+          "pngSha256": "aa750d53b7d6f1d7ad208c74749074a8712ad1945ec743aef1454681e3f87e58"
+        }
+      ]
+    },
+    {
+      "id": "ac-14",
+      "pdfPath": "/protocols/claiborne/ac-14-lvad-emergency-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "9a9a11adb986ca2237e6fd2899ab6626914517fe235adf0d605a497f4f0d4bab",
+      "pdfSha256": "855430a694a20f0a4c0f7cadffa25f7459fabe7e3a11244b8e503f99319c637d",
+      "bytes": 56553,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-14/page-1.png",
+          "pngSha256": "4c7aaab22899ce4f30b94dfbc33ed10f16ec87d8a794289818e87e4a1110cc29"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-14/page-2.png",
+          "pngSha256": "56cd14d8d603689efb678b3ae190ceb170c531d2acc3fe3dbfe0a3ca45b41956"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-14/page-3.png",
+          "pngSha256": "eb15265ef8260fe7b3231d68cb1295519c0342a8debf2ad8d10219bc0f3c680f"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-14/page-4.png",
+          "pngSha256": "183b1d8fa37d1801143f365176d036abcebebd2470ab3adbd491bb1c9874afba"
+        }
+      ]
+    },
+    {
+      "id": "ac-15",
+      "pdfPath": "/protocols/claiborne/ac-15-total-mechanic-circulation-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "7690ac18411a951f865e8da4397875c4bc3c2c57dbdd9278a6dec639c66bc372",
+      "pdfSha256": "2d677e3ac4a694f335f040dff0cda72534d21bac128aef65aa8b0543a572295e",
+      "bytes": 55608,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-15/page-1.png",
+          "pngSha256": "f3cba38fb031fff8af15602e88c355bb9ca9af8be05d5bcea3ab62c5149bc2a9"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-15/page-2.png",
+          "pngSha256": "eb8d08eb82264f48a0de0ef6a9e020cb4827b7d99fad42e55672cc8799d623ed"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-15/page-3.png",
+          "pngSha256": "eef200195fcb0a8493ea457f080420998d77b8bfc7874d62d88fc2b5c7febb49"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/ac-15/page-4.png",
+          "pngSha256": "16d9562b1d06e9ad820dc72d7d3566acf28d5dccb311fd9d5996107e0574506a"
+        }
+      ]
+    },
+    {
+      "id": "ac-16",
+      "pdfPath": "/protocols/claiborne/ac-16-wearable-cardioverter-defibrillator-vest-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "4dbbd46a602d42d1cdf154a7333f951d27dd9f04caaea04e2952cd89e5a5943c",
+      "pdfSha256": "c71be128b4fc4b3f5b0aaa1ea008026d6809f9683a58bae560765859c9808b8b",
+      "bytes": 53608,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/ac-16/page-1.png",
+          "pngSha256": "6414286e5b5444511c94aaeb78c76f115c79d51c7219695ec92e0eb0450bc240"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/ac-16/page-2.png",
+          "pngSha256": "65c3ee6ae3d825527c5bdcfe23efef7894fc28ecef7548ec42ebfee1abfe73be"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/ac-16/page-3.png",
+          "pngSha256": "bb2ee1f9cb402fcf9cfb6d36a919315762c4fbf14e5e539e394c098b3f68cc38"
+        }
+      ]
+    },
+    {
+      "id": "am-01",
+      "pdfPath": "/protocols/claiborne/am-01-allergic-reaction-anaphylaxis-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "c0106acd7cc875c7bda40970d3f2ef719b68864d702c01e3f6992af57caa8042",
+      "pdfSha256": "25c5232e20bd9ad7c82677a1df34d8811d45c29ea455969505b6e1accdcbeabd",
+      "bytes": 57063,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/am-01/page-1.png",
+          "pngSha256": "f907e7883bf155b50a2a131b7986af5862b6081cff496ed9973a805c121e0ee4"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/am-01/page-2.png",
+          "pngSha256": "78c92b81e3688c761ad2729f25eeb4268c957fe71ea64ad5c92305a7e6933869"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/am-01/page-3.png",
+          "pngSha256": "18e39202061a3a329001631aab806820213922d282d4abf027f5f2c4086b3a97"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/am-01/page-4.png",
+          "pngSha256": "74b018c41f9c0d54a4048bca021da55ffb1ca29a55fad8bd04d14861bec8be52"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/am-01/page-5.png",
+          "pngSha256": "a784f9aac90b7da455ee28a272406453ae86d3931a197bad2896f1c69574b31d"
+        }
+      ]
+    },
+    {
+      "id": "am-02",
+      "pdfPath": "/protocols/claiborne/am-02-diabetic-adult-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "d59cc84f0889e1ff2c94652312de6563b7e7fd14529ea2a4431f4371e4ea5d76",
+      "pdfSha256": "5ae38ed75684b271e61156de7f431e30df0a538b3d18782e2f0c5e3d3527e6df",
+      "bytes": 57254,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/am-02/page-1.png",
+          "pngSha256": "a0e15a004d24be2567379ef723ebfaa4e2748650dee073961bffee2b85029451"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/am-02/page-2.png",
+          "pngSha256": "24f938e6afdedaec8a11419a2bd8e6852601c754534692c82555b18ece9c1c61"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/am-02/page-3.png",
+          "pngSha256": "247922b668198880e7161d8f7fe6c7bf247e3ee90428bd28f27f2732318a9f7f"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/am-02/page-4.png",
+          "pngSha256": "d48882f39acde0543ee7a71a7a0b8cc8dfd1c2359e3937e91f1ea7399b136687"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/am-02/page-5.png",
+          "pngSha256": "8771070152878dd26006868e85d00fce063a2a4c4c76199600d4ad718f1575d5"
+        }
+      ]
+    },
+    {
+      "id": "am-04",
+      "pdfPath": "/protocols/claiborne/am-04-hypertension-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "da61ea8c00236882afdafc9f208718ee343eecc456a1afe6f17945fac091789a",
+      "pdfSha256": "8eefd428524f49f918c595ddcb7402abff2a537108004242f95869213a85448b",
+      "bytes": 51773,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/am-04/page-1.png",
+          "pngSha256": "9c6f8f322d9a95734060e06f48f4e50282e7d993cb838feb2970c0c8c9e68b09"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/am-04/page-2.png",
+          "pngSha256": "9ac59f074745a69cf42fb6d3c35cf0ae3920016d1543f327034b7b246e71dd8a"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/am-04/page-3.png",
+          "pngSha256": "4a7e3800b543f8b0e108f9eb3f525c18e5c92550d9ff16d3596fe551985d5e41"
+        }
+      ]
+    },
+    {
+      "id": "am-06",
+      "pdfPath": "/protocols/claiborne/am-06-suspected-stroke-tnk-transfer-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "a24b168be0f4d0ce223ea7de988dc71c4332e0fbd8d7ee98035e2576d8548183",
+      "pdfSha256": "4793f4bba27abf218897ebe3fb44607136ee636529d1b67d922ab53cf4e8a263",
+      "bytes": 53260,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/am-06/page-1.png",
+          "pngSha256": "49b78c77a7395118a829bc8408aa84adac9984ab165d48d07351b063edb42a01"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/am-06/page-2.png",
+          "pngSha256": "a22c15c04f201812415f4e4f044d92db353c7993792d84105c88a17921de0d22"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/am-06/page-3.png",
+          "pngSha256": "ed00d9e6fefb5655bfb1309b278e6d04603fe34c164d13f82f2eb3896465a76d"
+        }
+      ]
+    },
+    {
+      "id": "am-07",
+      "pdfPath": "/protocols/claiborne/am-07-crashing-patient-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "f126e4ab87c918607e43c84352b1b898b4cf25efdfe5e94505d085bd7d23ec70",
+      "pdfSha256": "232c8b5d1482c10fadf9a82dc0c473295c9adc8830cf9d41f39b1c60346baefd",
+      "bytes": 51829,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/am-07/page-1.png",
+          "pngSha256": "12e10ec39c8b296b819ebebe69c35985d92228e1b2e341304643b8629421b4c3"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/am-07/page-2.png",
+          "pngSha256": "f3be7b47895ab3d1398b448b26217e71ef6581cbba8b6390933c7188c15478f5"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/am-07/page-3.png",
+          "pngSha256": "5224bca3eea8728e96a9cd8b64dd14145043b740ab99fe07fe91c78f24b32e30"
+        }
+      ]
+    }
+  ]
+}

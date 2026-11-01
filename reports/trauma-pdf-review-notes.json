@@ -1,7 +1,7 @@
 [
   {
     "id": "tb-01",
-    "canonicalSha256": "9634f3ca0b0af114fb911b0c28ea679a3364eadd07e11b46fca498ff9d9a893b",
+    "canonicalSha256": "609963478282081e74b25dd31bcc8fbd013b02a59595ee3f195555be7c98645c",
     "reviewStatus": "Reviewed",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
@@ -12,7 +12,7 @@
   },
   {
     "id": "tb-02",
-    "canonicalSha256": "73253dd662f79544b65b4c00aa791e39dd1bcceccaefa290aa5cdf0c599aebc0",
+    "canonicalSha256": "4297282942c32c80a13cd0a56643a385cfe842bf9571441824d16b4c23e085a0",
     "reviewStatus": "Reviewed",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
@@ -23,19 +23,19 @@
   },
   {
     "id": "tb-03",
-    "canonicalSha256": "7f8e122f07ce0aca88ac97657a925ef7decb71be8e324737fafa8a91628cc88e",
+    "canonicalSha256": "c26c9ed952ffb95845756853e590ad9438c560673fc17613debf47d5c137e178",
     "reviewStatus": "Reviewed",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Medical-director approval is required before clinical release.",
       "Verify medication dosing and invasive procedures against current Claiborne County standing orders.",
       "The controlled Claiborne PDF mirrors this native content and replaces the imported sheet. Reconciliation does not establish full-system clinical release.",
-      "The existing AM-03 calcium-gluconate repeat instruction conflicts with its 3 g per-episode maximum. A reconciled repeat/cumulative-limit order remains pending; no new numeric regimen is chosen."
+      "Medical director adopted the AM-03 Medical Control-directed calcium-gluconate repeat safeguard for this release on October 31, 2026. No automatic repeat or higher standing-order cumulative dose is authorized."
     ]
   },
   {
     "id": "tb-04",
-    "canonicalSha256": "1420614863edd7e0637b212899818de8b59efb5a6dca04578505d7642041720c",
+    "canonicalSha256": "a462fe54893600c4285865c2b3a0c3f52e5a41e92f49452c0e2fb5e8503566f4",
     "reviewStatus": "Reviewed",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
@@ -46,32 +46,32 @@
   },
   {
     "id": "tb-05",
-    "canonicalSha256": "4fb69e09c146751630a65b10a3ff4473da9af7ab9579d8972b6d5803f7bda911",
+    "canonicalSha256": "89a5db4f703ca4882a79ca4f880d5a5529a5e99b859507a463513c932bed6a33",
     "reviewStatus": "Reviewed",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Medical-director approval is required before clinical release.",
       "Verify medication dosing and invasive procedures against current Claiborne County standing orders.",
       "The controlled Claiborne PDF mirrors this native content and replaces the imported sheet. Reconciliation does not establish full-system clinical release.",
-      "The pediatric TBI numeric target table and age boundaries remain unpublished/unapproved. No pediatric numeric target is selected by this reconciliation."
+      "Medical director adopted Medical Control-directed pediatric TBI blood-pressure targets for this release on October 31, 2026. No numeric pediatric target table or age boundaries are established as standing orders."
     ]
   },
   {
     "id": "tb-06",
-    "canonicalSha256": "84aba8cb908c036635fdd0699188f33880f0510067fff1d725107ca007920443",
+    "canonicalSha256": "81710d0c1d9f12a94e454738ad32cb96f9e70950c19eaca4e154db482938cdf5",
     "reviewStatus": "Reviewed",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Medical-director approval is required before clinical release.",
       "Verify medication dosing and invasive procedures against current Claiborne County standing orders.",
       "The controlled Claiborne PDF mirrors this native content and replaces the imported sheet. Reconciliation does not establish full-system clinical release.",
-      "Adult TXA dose/rate accepted October 30, 2026: 1 g IV/IO over 10 minutes or 2 g IV/IO over 20 minutes, not exceeding 100 mg/min. No automatic repeat dose is provided. Verify stocked concentration/dilution using existing preparation instructions. Pediatric 15 mg/kg is the retained local reference; pediatric maximum/rate/age eligibility and general IO/state-authority reconciliation remain separate requirements.",
-      "A numeric pediatric traumatic-hemorrhage branch remains pending; a medical/septic-shock link alone does not establish one."
+      "Adult TXA dose/rate accepted October 30, 2026: 1 g IV/IO over 10 minutes or 2 g IV/IO over 20 minutes, not exceeding 100 mg/min. No automatic repeat dose is provided. Verify stocked concentration/dilution using existing preparation instructions. Pediatric 15 mg/kg is the retained local reference; the medical director adopted Medical Control-directed pediatric eligibility, maximum, rate and preparation for this release on October 31, 2026. Device/route authority and competency remain required.",
+      "Medical director adopted Medical Control-directed pediatric traumatic-hemorrhage fluid orders for this release on October 31, 2026; a medical/septic-shock link alone does not establish a trauma order."
     ]
   },
   {
     "id": "tb-07",
-    "canonicalSha256": "2423a508c41281513b9209929db032ac6b598aecbbf3e313709d34a82dc2f9c5",
+    "canonicalSha256": "6a9f9de926ce38db9972b6e3ab672e64eab33b9fb27d68bfeea841369e201e9a",
     "reviewStatus": "Reviewed",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
@@ -82,7 +82,7 @@
   },
   {
     "id": "tb-08",
-    "canonicalSha256": "23a9721d12dea94e4265b9f8daa3c3ce5169566f23ed037a4353dfa400c47d77",
+    "canonicalSha256": "e51a574096574f41c49b8fae93a256d58d3a28ecb7a128a98bb159ea43a1c490",
     "reviewStatus": "Reviewed",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
@@ -94,7 +94,7 @@
   },
   {
     "id": "tb-09",
-    "canonicalSha256": "dd3298c27cab68c3de0e4380b95aa84989c271e491b527dd287167bae0fe9dbf",
+    "canonicalSha256": "007cccb665231ece3f1443fc36d9f2cbca981e44ada315e13ec985e35b3f413d",
     "reviewStatus": "Reviewed",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
@@ -129,25 +129,25 @@
   },
   {
     "id": "tb-12",
-    "canonicalSha256": "6f80257d0aa7ea9ea80be04e4f073ccfea1a6fe7929954f2c28bb3967e4a9773",
+    "canonicalSha256": "f703f705ebfcfe90fd8610be325058ffe469a03307954b8da0df52c06988cf27",
     "reviewStatus": "Approved",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Base content approved October 17, 2026; scoped trauma-review revisions accepted October 30, 2026. This does not establish full-system clinical release.",
-      "Adult traumatic hemorrhage uses the AM-05 perfusion-directed warmed isotonic crystalloid strategy when blood is unavailable; the suspected-TBI adult SBP target is at least 110 mmHg. Pediatric traumatic-hemorrhage numeric instructions remain pending.",
-      "Trauma TXA is Paramedic-only after immediate lifesaving interventions for traumatic hemorrhage with clinical hemorrhagic shock within 3 hours. Adult dose/rate accepted October 30, 2026: 1 g IV/IO over 10 minutes or 2 g IV/IO over 20 minutes, maximum 100 mg/min. No automatic repeat dose is provided. Verify stocked concentration/dilution using existing preparation instructions. Pediatric 15 mg/kg is the retained local reference; pediatric maximum/rate/age eligibility remain separate requirements.",
-      "The retained local TXA references are not a claim of exact equivalence to the current state dosing sheet. IO authorization, pediatric age eligibility, pediatric administration rate/maximum, and any separately proposed repeat order require final director/state-authority reconciliation before clinical release; the approved adult dose/rate pairings are not pending.",
+      "Adult traumatic hemorrhage uses the AM-05 perfusion-directed warmed isotonic crystalloid strategy when blood is unavailable; the suspected-TBI adult SBP target is at least 110 mmHg. Medical director adopted Medical Control-directed pediatric traumatic-hemorrhage fluid orders for this release on October 31, 2026; no numeric pediatric standing order is established.",
+      "Trauma TXA is Paramedic-only after immediate lifesaving interventions for traumatic hemorrhage with clinical hemorrhagic shock within 3 hours. Adult dose/rate accepted October 30, 2026: 1 g IV/IO over 10 minutes or 2 g IV/IO over 20 minutes, maximum 100 mg/min. No automatic repeat dose is provided. Verify stocked concentration/dilution using existing preparation instructions. Pediatric 15 mg/kg is the retained local reference; the medical director adopted Medical Control-directed pediatric eligibility, maximum, rate and preparation for this release on October 31, 2026.",
+      "The retained local TXA references are not a claim of exact equivalence to the current state dosing sheet. Verify route authority and competency. Pediatric eligibility, administration rate/maximum and preparation are Medical Control-directed as adopted for this release; no automatic repeat is authorized. The approved adult dose/rate pairings are not pending.",
       "Maintain current pelvic-binder model/sizing and placement training, evisceration supplies, trauma-destination plan, and access to current analgesic/antiemetic orders. Record the approved adult TXA dose/rate pairings in the controlled administration order and verify the stocked preparation before clinical release; resolve pediatric maximum/rate separately."
     ]
   },
   {
     "id": "am-03",
-    "canonicalSha256": "e65428562275858c406d9f313d771cb76fdcef47189b2495bfd76d2325f4a4af",
+    "canonicalSha256": "8491aa656198f5a962b92c4f06d6d8ece7d42c08b99f9b00ada12aa63936690c",
     "reviewStatus": "Approved",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
-      "The prior calcium-gluconate automatic repeat instruction conflicts with the retained 3 g per-episode maximum. A reconciled numeric repeat/cumulative-limit order remains pending; this reconciliation does not choose a new regimen.",
-      "Scoped trauma-review safeguards accepted October 30, 2026. Calcium-gluconate automatic repeat is held pending a reconciled specific Medical Control repeat/cumulative-limit order; no new numeric regimen is selected. This is not full-system clinical release.",
+      "Medical director adopted Medical Control-directed calcium-gluconate repeat dosing for this release on October 31, 2026. Retain the initial 1.5–3 g dose and 3 g per-episode standing-order maximum; any repeat requires a specific Medical Control order confirming the cumulative dose. No automatic repeat is authorized.",
+      "Scoped trauma-review safeguards accepted October 30, 2026. Medical director adopted Medical Control-directed calcium-gluconate repeat for this release on October 31, 2026; any repeat requires a specific order confirming the cumulative dose, and no automatic repeat or new numeric standing-order regimen is selected. This is not full-system clinical release.",
       "Clinical content, provider permissions, medication doses, dialysis-access precautions, and source-PDF replacement approved by the Claiborne EMS medical director on October 16, 2026.",
       "Medical-director decision: calcium chloride is 500–1,000 mg IV/IO and calcium gluconate is 1.5–3 g IV for hyperkalemia/arrhythmia; calcium gluconate is preferred through a peripheral IV.",
       "Dialysis-catheter access remains governed by the separate interfacility-transfer policy.",
@@ -169,16 +169,17 @@
   },
   {
     "id": "up-11",
-    "canonicalSha256": "72aadcaf48e25199c8cc71727f219e3cdf5cccc8591a3a8aa4b3e218381ed1a4",
+    "canonicalSha256": "476b35a569bc7d89d25d7459cd46d928387feca75ecf035a46d01fcab9edb9aa",
     "reviewStatus": "Reviewed",
-    "revisionDate": "2026-10-30",
+    "revisionDate": "October 31, 2026",
     "reviewFlags": [
-      "The retained local ketorolac 60 mg IM dose is not dose-identical to the current Tennessee 10–30 mg IM reference. Director/state-authority reconciliation remains pending before clinical release; this record does not claim dose equivalence or establish expanded AEMT authority.",
+      "Highlighted UP recommendations accepted by the medical director October 31, 2026 and incorporated into the review build. This is not full-system clinical release; product/device-specific, credentialing and legal/agency validation gates remain where stated.",
+      "Medical director revised all adult ketorolac dosing to 15 mg IV once or 30 mg IM once, maximum; no 60 mg IM dose. This applies also to age ≥65 or weight <50 kg and does not establish expanded AEMT authority.",
       "Scoped trauma-review revisions accepted October 30, 2026: expanded AEMT parenteral analgesia is disabled by default until current Tennessee drug/route authority, documented approved training, agency credentialing/competency, and medication-/route-/patient-specific medical-director standing orders are verified. This is not full-system clinical release.",
       "TB-11 express Medical Control authorization remains required for ketamine analgesia in suspected penetrating/open-globe injury.",
       "Medical-director approved adult UP-11 for patients 16 years of age or older and directed provider-specific care: oral acetaminophen/ibuprofen by EMT, AEMT, or Paramedic; IV acetaminophen/ketorolac by Paramedic, with expanded AEMT authority disabled until separately verified for the specified drug, route, and patient group; and opioids/analgesic-dose ketamine by Paramedic only.",
       "Medical-director removed nitrous oxide because it is not on the Claiborne formulary and removed aspirin as an analgesic while retaining aspirin only for its approved cardiac indication.",
-      "Medical-director approved acetaminophen 650–1,000 mg PO, ibuprofen 400 mg PO, acetaminophen 1 g IV/IO once, and ketorolac 15–30 mg IV or 60 mg IM once with the medication-specific contraindications documented in UP-11.",
+      "Medical-director approved acetaminophen 650–1,000 mg PO, ibuprofen 400 mg PO, weight-based acetaminophen infused over 15 minutes once (≥50 kg: 1,000 mg; <50 kg: 15 mg/kg, maximum 750 mg; IV, or IO only with separately verified authorization), and ketorolac 15 mg IV or 30 mg IM once with the medication-specific contraindications documented in UP-11.",
       "Medical-director approved Paramedic opioid limits: fentanyl maximum total 100 mcg, morphine maximum total 10 mg, and hydromorphone maximum total 1 mg; one opioid is selected and different opioids are not combined.",
       "Medical-director approved analgesic ketamine 0.3 mg/kg IV/IO slowly over 10 minutes to maximum 30 mg per dose, repeat every 20 minutes for maximum three doses; or 0.5–1 mg/kg IN once to maximum 100 mg when vascular access is unavailable.",
       "Medical-director directed against routine initial opioid/ketamine combination therapy and required full reassessment before changing agents.",
@@ -190,98 +191,98 @@
   },
   {
     "id": "pm-03",
-    "canonicalSha256": "b37087065a88a72088ef8bf15f11521aab2fc2b01eb1715a0fd2ceb8c48795d5",
+    "canonicalSha256": "515e0c797c875d2ad62665577ce91ea4c137f6be79f8e751fcc80ab07ee570a0",
     "reviewStatus": "Approved",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
-      "October 30, 2026 trauma reconciliation separates medical/septic fluid instructions from traumatic hemorrhage. Pediatric traumatic-hemorrhage fluid parameters and the pediatric TBI numeric target table/age boundaries remain unresolved release requirements; no new numeric orders are supplied here.",
+      "October 30, 2026 trauma reconciliation separates medical/septic fluid instructions from traumatic hemorrhage. Medical director adopted Medical Control-directed pediatric traumatic-hemorrhage fluid parameters and pediatric TBI blood-pressure targets for this release on October 31, 2026; no numeric pediatric standing orders or target table are supplied here.",
       "Clinical pediatric shock recognition, type-specific fluid strategy, cardiogenic safeguards, fluid-refractory septic-shock support, obstructive/anaphylactic/adrenal pathways, monitoring, and destination planning approved by the Claiborne EMS medical director on October 26, 2026."
     ]
   },
   {
     "id": "ar-01",
-    "canonicalSha256": "122008686386e76f754968d14ea13f4a869ccf07a31e3f0ddbc5d1a1abf9856e",
+    "canonicalSha256": "b7deadb2cf6b15a16349e999f348a0612806bfeed0a3214ccbc82afe8dd5f5c3",
     "reviewStatus": "Approved",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Clinical airway assessment, provider permissions, BVM/advanced-airway pathway, failed-airway threshold, confirmation, and cross-links approved by the Claiborne EMS medical director on August 14, 2026.",
       "Airway-difficulty acronym item removed at medical-director direction.",
-      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Pediatric TBI numeric targets/age boundaries remain pending; this update is not full-system clinical-release approval."
+      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Medical director adopted Medical Control-directed pediatric TBI blood-pressure targets for this release on October 31, 2026; no numeric pediatric target table or age boundaries are established as standing orders. This is not full-system clinical-release approval."
     ]
   },
   {
     "id": "ar-02",
-    "canonicalSha256": "82781fffd7517e460c46c9da69ba27e87c4116538abde94a5281081e1b09c6b0",
+    "canonicalSha256": "5f4a2d811e5da1e98b6af7d7f64da9f7d9d303c34d972b81f4a7e2107103b0fb",
     "reviewStatus": "Approved",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Clinical failed-airway definition, rescue sequence, provider permissions, confirmation, ventilation, transport, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
-      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Pediatric TBI numeric targets/age boundaries remain pending; this update is not full-system clinical-release approval."
+      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Medical director adopted Medical Control-directed pediatric TBI blood-pressure targets for this release on October 31, 2026; no numeric pediatric target table or age boundaries are established as standing orders. This is not full-system clinical-release approval."
     ]
   },
   {
     "id": "ar-03",
-    "canonicalSha256": "21bef8e641b1d80e31cb9175d9b187955cecc02fb990c83f009958ed7d46ced5",
+    "canonicalSha256": "4121ef260dba43da5dbb4eb46616d5b79f73f0db3ffd280a15611773a4c7afae",
     "reviewStatus": "Approved",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Clinical DAI indications, staffing and preparation requirements, medications, rescue threshold, confirmation, post-airway care, documentation, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
       "Pediatric DAI remains restricted to a direct online Claiborne EMS Medical Director or Assistant Medical Director order.",
-      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Pediatric TBI numeric targets/age boundaries remain pending; this update is not full-system clinical-release approval."
+      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Medical director adopted Medical Control-directed pediatric TBI blood-pressure targets for this release on October 31, 2026; no numeric pediatric target table or age boundaries are established as standing orders. This is not full-system clinical-release approval."
     ]
   },
   {
     "id": "ar-05",
-    "canonicalSha256": "ce66244cacbc46cf5360843076bbe5e804f68d213731dba7a9be8408d3c268bc",
+    "canonicalSha256": "4cb1a8557d04a2443da2d2251df63d39aab4538d667f55bf91c332858b7a69f6",
     "reviewStatus": "Approved",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Clinical pediatric assessment, provider permissions, BVM-first pathway, ventilation, foreign-body management, failed-airway threshold, confirmation, pediatric DAI restriction, bradycardia crossover, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
       "Pediatric cricothyrotomy remains a rare, specifically authorized last-resort procedure.",
-      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Pediatric TBI numeric targets/age boundaries remain pending; this update is not full-system clinical-release approval."
+      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Medical director adopted Medical Control-directed pediatric TBI blood-pressure targets for this release on October 31, 2026; no numeric pediatric target table or age boundaries are established as standing orders. This is not full-system clinical-release approval."
     ]
   },
   {
     "id": "ar-06",
-    "canonicalSha256": "ea80983244527763774d89384f32d8733f77362b402b4368e6c6559bc813914f",
+    "canonicalSha256": "1fa0a801be5d324b476a71e1b9508c89655aeb450b41cd3ee8d393022a11ef12",
     "reviewStatus": "Approved",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Clinical pediatric failed-airway definition, BVM-first rescue sequence, provider permissions, confirmation, pediatric arrest crossover, transport, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
       "Pediatric surgical airway remains a rare, age-appropriate, specifically authorized last-resort procedure.",
-      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Pediatric TBI numeric targets/age boundaries remain pending; this update is not full-system clinical-release approval."
+      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Medical director adopted Medical Control-directed pediatric TBI blood-pressure targets for this release on October 31, 2026; no numeric pediatric target table or age boundaries are established as standing orders. This is not full-system clinical-release approval."
     ]
   },
   {
     "id": "ar-08",
-    "canonicalSha256": "9f08eb109e542b163c21b51350790d42572900b012e399a64e83e3755b0adb3d",
+    "canonicalSha256": "35b27a34fa9ca42000da6b16b078206cddcd002ac7b206a6de7b415d4f6fc636",
     "reviewStatus": "Approved",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Clinical airway confirmation, monitoring, ventilation, adult analgesia/sedation, pediatric safeguards, DOPE rescue, transport, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
       "This protocol does not authorize routine repeat paralysis; pediatric post-airway medication requires pediatric pathway and direct order.",
-      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Pediatric TBI numeric targets/age boundaries remain pending; this update is not full-system clinical-release approval."
+      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Medical director adopted Medical Control-directed pediatric TBI blood-pressure targets for this release on October 31, 2026; no numeric pediatric target table or age boundaries are established as standing orders. This is not full-system clinical-release approval."
     ]
   },
   {
     "id": "ar-09",
-    "canonicalSha256": "86e42093d0b50b9fa072028ada1fc2fd4c2114cf702f2068eaca6ffdd55493a7",
+    "canonicalSha256": "0bba25b6dc6a1a549d6f501d96eb5a65abd8685c67fbc08cda56508adcbc172e",
     "reviewStatus": "Approved",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Clinical ventilator-emergency assessment, manual-ventilation trigger, equipment and patient troubleshooting, auto-PEEP safeguards, transport, and linked pathways approved by the Claiborne EMS medical director on August 14, 2026.",
-      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Pediatric TBI numeric targets/age boundaries remain pending; this update is not full-system clinical-release approval."
+      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Medical director adopted Medical Control-directed pediatric TBI blood-pressure targets for this release on October 31, 2026; no numeric pediatric target table or age boundaries are established as standing orders. This is not full-system clinical-release approval."
     ]
   },
   {
     "id": "ar-11",
-    "canonicalSha256": "e10bea7553fd0c15bb5338bb750edfebd38fd374ebf5584d973cba412f191d7e",
+    "canonicalSha256": "c334822ecda338128c8b5882611cbd30feeddf8ecf986c8280d3fd9350fd71d9",
     "reviewStatus": "Approved",
     "revisionDate": "2026-10-30",
     "reviewFlags": [
       "Clinical content, IBW labeling, initial settings, obstructive-lung branch, pressure limits, post-ROSC safeguards, troubleshooting, linked pathways, and direct source-PDF replacement approved by the Claiborne EMS medical director on October 17, 2026.",
       "The approved source PDF matches the controlled Claiborne EMS app content; the application remains a beta field reference until full-system release and implementation approval.",
-      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Pediatric TBI numeric targets/age boundaries remain pending; this update is not full-system clinical-release approval."
+      "TBI-specific oxygenation, routine EtCO₂ 35–45 mmHg, brief herniation-rescue EtCO₂ 30–35 mmHg, and adult SBP at least 110 mmHg reconciled October 30, 2026. Medical director adopted Medical Control-directed pediatric TBI blood-pressure targets for this release on October 31, 2026; no numeric pediatric target table or age boundaries are established as standing orders. This is not full-system clinical-release approval."
     ]
   }
 ]

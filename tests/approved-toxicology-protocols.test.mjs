@@ -34,7 +34,7 @@ test("approved TE-01 direct source PDF is present and recognizable", async () =>
 test("TE-02 is released as approved Claiborne content without a field cyanide-antidote dose", () => {
   const te02 = catalog.find((item) => item.id === "TE-02");
   const structured = structuredToxicologyEnvironmentalProtocols.find((item) => item.id === "te-02");
-  assert.equal(te02?.title, "Carbon Monoxide / Cyanide Exposure");
+  assert.equal(te02?.title, "Carbon Monoxide / Cyanide");
   assert.equal(te02?.status, "approved");
   assert.equal(te02?.source, "Claiborne County EMS Clinical Protocols");
   assert.equal(structured?.reviewStatus, "Approved");

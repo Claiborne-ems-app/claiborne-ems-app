@@ -56,7 +56,7 @@ export default async function CategoryProtocolsPage({
             {category.title}
           </h1>
           <p className="mt-2 text-sm leading-6 text-slate-300">
-            Search or select a protocol for the native field view.
+            Search or select a protocol for the field view.
           </p>
         </header>
 

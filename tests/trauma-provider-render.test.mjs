@@ -101,9 +101,9 @@ test("UP-11 actual rendered AEMT view defaults to unverified without Paramedic a
   assert.match(flow, /disabled by default.*authorization is unverified/);
   assert.match(flow, /Tennessee drug\/route authority.*training.*credentialing.*medical-director standing orders/);
   assert.match(care, /Do not administer IV\/IO acetaminophen or IV\/IM ketorolac from this unverified AEMT view/);
-  assert.doesNotMatch(flow + care, /1 g IV\/IO|15–30 mg IV|60 mg IM|50 mcg slow IV\/IO/);
+  assert.doesNotMatch(flow + care, /maximum 750 mg|15 mg IV once|30 mg IM once|50 mcg slow IV\/IO/);
   const paramedic = render(protocol, "Paramedic");
   assert.ok(headings(paramedic.flow, "h3").includes("Parenteral Nonopioid Appropriate?"));
-  assert.match(paramedic.care, /acetaminophen 1 g IV\/IO once/);
+  assert.match(paramedic.care, /weight-based acetaminophen infused over 15 minutes once.*maximum 750 mg/);
   assert.match(paramedic.care, /open-globe eye trauma.*Medical Control expressly authorizes/);
 });

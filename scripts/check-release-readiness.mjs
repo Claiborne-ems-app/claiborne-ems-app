@@ -10,13 +10,13 @@ console.table([{
   reviewed: readiness.reviewed,
   "in review": readiness.inReview,
   "not started": readiness.notStarted,
-  "clinical release ready": readiness.clinicallyReady ? "yes" : "no",
+  "release metadata complete": readiness.clinicallyReady ? "yes" : "no",
   "current app status": appConfig.betaStatus,
 }]);
 
 if (!readiness.clinicallyReady) {
   console.error(
-    `Clinical-release gate is closed: ${readiness.pendingProtocols} protocol${readiness.pendingProtocols === 1 ? "" : "s"} still require final approval.`,
+    `Production-release governance gate remains closed: ${readiness.pendingProtocols} protocol${readiness.pendingProtocols === 1 ? "" : "s"} still have pending governance metadata; this is not a claim that their clinical content lacks user approval. See docs/release-handoff-2.34.0.md.`,
   );
   process.exitCode = 1;
 }

@@ -1,8 +1,11 @@
+import { canonicalPdfPages } from "../data/canonical-pdf-pages.ts";
+import { readFile } from "node:fs/promises";
+import { readProtocolAware } from "./protocol-source-helper.mjs";
 import assert from "node:assert/strict";
-import { readFile, stat } from "node:fs/promises";
+import { stat } from "node:fs/promises";
 import test from "node:test";
 
-const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
+const read = (path) => readProtocolAware(path, import.meta.url);
 
 const APPROVED_PC = [
   "PC-01", "PC-02", "PC-03", "PC-04",
@@ -33,7 +36,7 @@ test("approved Pediatric Cardiac protocols are released in both catalogs", async
     assert.equal(protocol?.status, "approved");
     assert.equal(protocol?.year, 2026);
     assert.equal(protocol?.source, "Claiborne County EMS Clinical Protocols");
-    assert.equal(protocol?.pages, 2);
+    assert.equal(protocol?.pages, canonicalPdfPages[id.toLowerCase()]);
     assert.match(tsCatalog, new RegExp(`"id": "${id}"[\\s\\S]*?"status": "approved"`));
   }
 
@@ -42,7 +45,7 @@ test("approved Pediatric Cardiac protocols are released in both catalogs", async
   }
 });
 
-test("released Pediatric Cardiac source PDFs are direct two-page Claiborne PDFs", async () => {
+test("released Pediatric Cardiac source PDFs are direct controlled Claiborne PDFs", async () => {
   for (const path of PEDIATRIC_CARDIAC_PDFS) {
     const pdf = new URL(`../public/protocols/claiborne/${path}`, import.meta.url);
     const [metadata, header] = await Promise.all([

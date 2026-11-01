@@ -64,8 +64,8 @@ export type NativeProtocolSection = {
   title: string;
 };
 
-export const BETA_CLINICAL_DISCLAIMER =
-  "This beta application is for evaluation and reference purposes only. Verify all clinical decisions against the current approved Claiborne County EMS protocols.";
+export const CLINICAL_REFERENCE_NOTICE =
+  "Verify all clinical decisions against the current approved Claiborne County EMS protocols.";
 
 export function getNativeProtocolSections(content: StructuredProtocolContent) {
   const sections: NativeProtocolSection[] = [];

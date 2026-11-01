@@ -1,0 +1,807 @@
+{
+  "status": "passed",
+  "reviewer": "review_recovered_universal_pages",
+  "reviewedAt": "2026-11-01T03:01:16.290103Z",
+  "findings": [],
+  "protocols": [
+    {
+      "id": "up-01",
+      "pdfPath": "/protocols/claiborne/up-01-universal-patient-care-protocol.pdf",
+      "pages": 7,
+      "canonicalSha256": "012f490460aaf3573dad5ebdbcd6c567bd07532256a6ecbf8d980f3a2e72cbf1",
+      "pdfSha256": "13f92d386210c85583cce549787ffecbdebe0ad78cbe43f5a731f77904abb20b",
+      "bytes": 61198,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-01/page-1.png",
+          "pngSha256": "3851b8667a2a92af3b58d58a3a3748a0bddd8943b7249bc4412dda953fd61499"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-01/page-2.png",
+          "pngSha256": "95fbca7e8856f3734cde7a4656d62091a689234f17b328b03a5e25b8051611c9"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-01/page-3.png",
+          "pngSha256": "4bb42bdd1f6f0175592f29ee8f7f19e4b6f75746a62447c6fa32f48f9a692379"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-01/page-4.png",
+          "pngSha256": "dd75f7bcc678c8244a5ccc44e6daefe134a3cae37956d06368144850edd8fb14"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-01/page-5.png",
+          "pngSha256": "fd279f7d57283e1a7f0691fa98447afe8bd20c0860499884201afde27ff65484"
+        },
+        {
+          "page": 6,
+          "path": "tmp/pdfs/canonical-review/pages/up-01/page-6.png",
+          "pngSha256": "1691c0caa01de3f21d83e4da16ae1d4dcff1847b74a09b4f19c6ab3898f74901"
+        },
+        {
+          "page": 7,
+          "path": "tmp/pdfs/canonical-review/pages/up-01/page-7.png",
+          "pngSha256": "3ae675f49f98fafd83778106185e708a49b75fbe23f9880732cbf6002e1ee884"
+        }
+      ]
+    },
+    {
+      "id": "up-02",
+      "pdfPath": "/protocols/claiborne/up-02-triage-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "f646d462fcb1c695341f5924e04f4a2ebc2db167ad3a6154bda7bcd86ce3b44d",
+      "pdfSha256": "3e07db15adb0a1e094bf44f0d2bac84816b5755525e01b389390c294c1d91979",
+      "bytes": 54196,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-02/page-1.png",
+          "pngSha256": "5f83e38fc3e11f523add338cdcef1137561a8c4cc0f4699e21e95263ad919e99"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-02/page-2.png",
+          "pngSha256": "78ede03088ba2b4324fd5567b227b3f7b6d877913e9abfdcad79d3087ec1a2be"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-02/page-3.png",
+          "pngSha256": "56492f3e9f41838b66fe43a6cd68b08472e57d50c3f2e8cfedd46fefc3be21e6"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-02/page-4.png",
+          "pngSha256": "c0a363280b3419411ffa19a100cc328cd7c20d7a75f87bad9d6781bcff6b741b"
+        }
+      ]
+    },
+    {
+      "id": "up-03",
+      "pdfPath": "/protocols/claiborne/up-03-abd-pain-vomiting-and-diarrhea-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "29cc83494682167d4cdd2e50778d818190bd3b283373584755115ee9d9f85e26",
+      "pdfSha256": "4fd3b67d09e7c248e698addec505e25075ba3ad514454b82bbeeeee828fe3481",
+      "bytes": 58047,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-03/page-1.png",
+          "pngSha256": "7083719e0aa44cf038dd46c692422a8e48317b57eadd8639de538e045e9fd522"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-03/page-2.png",
+          "pngSha256": "b97b39a2a0254be38a6df2eb807a5b3757590a7f2d7d56971e74a6bf755fb3ea"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-03/page-3.png",
+          "pngSha256": "33ec2060055b5be5d3d86e5b4369d3498907b00e7b337ab2bc81aaf07ef6ed99"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-03/page-4.png",
+          "pngSha256": "4b912b7a48c419fe8164555e91ac5b12edeebfa16cb32e7cd8ab3402c5e40c5c"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-03/page-5.png",
+          "pngSha256": "babf7bb00af2d9751a055031c2c7b76af51190ece72e913e50220e4b3e1378cb"
+        }
+      ]
+    },
+    {
+      "id": "up-04",
+      "pdfPath": "/protocols/claiborne/up-04-altered-mental-status-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "ec77fbcd1c6d4cd1e50154bdc75068759ac79cf94902dd66748c308deea7c7a9",
+      "pdfSha256": "d5378425bfd7bda910db501f790be3e0c2fce7cd00c86c807a72f11eb821e3e3",
+      "bytes": 58773,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-04/page-1.png",
+          "pngSha256": "428f876dae088c18b69ed2e8067f726b10c77d823cae5aee432e49c2ae6e2a4a"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-04/page-2.png",
+          "pngSha256": "dbede83abb5f020c5b9528b5465d511c0780dfa856ad380231f577da5b9108ba"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-04/page-3.png",
+          "pngSha256": "c3b14ea32b588d116d617e5887250247038533dff164e85b19b30cf334dcfa84"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-04/page-4.png",
+          "pngSha256": "d212d064a8105829de0b6771d00464e00c1892b6bdb66642f0b4303d5714d340"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-04/page-5.png",
+          "pngSha256": "601e0944f14bd695748cc3204130e617637a3b340c269309a420bf4e9f367b0d"
+        }
+      ]
+    },
+    {
+      "id": "up-05",
+      "pdfPath": "/protocols/claiborne/up-05-back-pain-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "38f36c630bad6fc1c0246b047cfad558eb384a443dfd5b75977efd7a114b8f1d",
+      "pdfSha256": "8b59661e9ba933348a2f8264e6b782d364383020dd445a146ed84c254336ef74",
+      "bytes": 50589,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-05/page-1.png",
+          "pngSha256": "a231fd39ed339f2c2786ee9a84a1d5018cafac32bd34b4d93600d71db2fc25d3"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-05/page-2.png",
+          "pngSha256": "a4571c305fdda4be711ab1e1d9658adb965669cd2f6df21ce5ef920f0274bbee"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-05/page-3.png",
+          "pngSha256": "3c0ea78485559b4e00ddab410675fe2134eb658731842182bce67ac5d3508437"
+        }
+      ]
+    },
+    {
+      "id": "up-06",
+      "pdfPath": "/protocols/claiborne/up-06-iv-or-io-access-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "104de7c0b1d635f78bb69afa0f94732a99d1be0fe079ca5ed279c6394c24ee55",
+      "pdfSha256": "e6339d4d2fc1d5e012f572add871884a3fd805ae8bbadd2cebef38f108b26a19",
+      "bytes": 51687,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-06/page-1.png",
+          "pngSha256": "20522561cc0d9a9b3b155c7c025760be2107bfa8d68e120eab3b9a62d9c1ce0f"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-06/page-2.png",
+          "pngSha256": "2d88c08bffa8c8a2c1ef9c7698dadbc9a896c4a839ec87aec63f11f55d113ecd"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-06/page-3.png",
+          "pngSha256": "9a42c2c5ae454d3f5cdbe0fbf5e2d8ff47b27ce0e89d74c91e28e3ac5f257721"
+        }
+      ]
+    },
+    {
+      "id": "up-07",
+      "pdfPath": "/protocols/claiborne/up-07-dental-problems-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "94848c9cf509e9a9c7f7f5e9d90729caeee6948c8c7ecd76b8fca59335194c45",
+      "pdfSha256": "1ce03a9770ff7d1279210077a14fa0dcdaf42abed7ddc3c3d13069cb2ae08316",
+      "bytes": 54020,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-07/page-1.png",
+          "pngSha256": "82db6842c34560b9fc99e7111d15a753bc5dd789b0b1a1bff995db6ebeb713dc"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-07/page-2.png",
+          "pngSha256": "816556ce631f5ba1b7ba03b829b3cc39a2c0646b4810851237fd4798210d7662"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-07/page-3.png",
+          "pngSha256": "f642405e89648e15be1f1d4b51655dc83f5ea5be217a69f32228192e13a225e2"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-07/page-4.png",
+          "pngSha256": "05c842245a48d80ca1da53d0bf127bc5c34c2f5ebe840548944fab389e5bdbae"
+        }
+      ]
+    },
+    {
+      "id": "up-08",
+      "pdfPath": "/protocols/claiborne/up-08-emergency-indwelling-central-lines-protocol.pdf",
+      "pages": 3,
+      "canonicalSha256": "fe6e57d33b5f8f3488c707521a61e7f1410984e8cd8e48cd2e5d929df669592c",
+      "pdfSha256": "d0d9ebf3cd74cf096c27768421c61d131172aa2476c32272e89f3374b7308022",
+      "bytes": 52103,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-08/page-1.png",
+          "pngSha256": "8f46b67c1f353451e212d2c9c448f150a4322c02636b8f73bb573ca4e378860b"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-08/page-2.png",
+          "pngSha256": "812bb7d0c0a243c49967fb3aabd07730e0d175b276f18c0b07cc4a8881a7534f"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-08/page-3.png",
+          "pngSha256": "aee57373bcd087ddca13cf9184f1a03d821ad2b985a5b6addd36e821d79dde41"
+        }
+      ]
+    },
+    {
+      "id": "up-09",
+      "pdfPath": "/protocols/claiborne/up-09-epistaxis-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "3a1997425edaff11eb0b687bd6b51f6f578098396a03f609af097e4c6ae9876f",
+      "pdfSha256": "7ab2ed24810b035abe685e6f0e97a3ef1f48a2f20c6f63a657eed427b988ff80",
+      "bytes": 54439,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-09/page-1.png",
+          "pngSha256": "c9ebb531f1906304ea6f5c77d2d117de83587ebe3d5732d8ea0ba1277236cb1f"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-09/page-2.png",
+          "pngSha256": "8a3a9fbbd8ce04bab29a53844b7cd6864246a9e3b2db9667ca2797a05eafc0ec"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-09/page-3.png",
+          "pngSha256": "1dd9de4ee5bdff2489c4169560c3df13dca2687189c3bd3147cd17a00aa31288"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-09/page-4.png",
+          "pngSha256": "afcdaa60a04b4cb47483f8d9f535ac366ad7d35687e041b9e443540529a7bef6"
+        }
+      ]
+    },
+    {
+      "id": "up-10",
+      "pdfPath": "/protocols/claiborne/up-10-fever-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "5e20ceb505657af8a4475a5c783a2890a17b054d03cbbe0b23e23ebc4dac1fea",
+      "pdfSha256": "fc16e84ac7d5c55830af5737a087735bba74e04b51c6fa75bef71ab14ecc4f20",
+      "bytes": 56744,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-10/page-1.png",
+          "pngSha256": "ee1f02b24709387eb50e0280429a8ef56ee74ddc7b3c9a95d1a44f695d123e37"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-10/page-2.png",
+          "pngSha256": "fa4ffd018c6e22578cdaf5541b5c17dc2a8876f3d8081215aafbfa128b69bf05"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-10/page-3.png",
+          "pngSha256": "5c0a875da9a910da545679d918df7bea244346296a290d20bfae9e5ecbbe2d3c"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-10/page-4.png",
+          "pngSha256": "d6cad333b57071a732668423eb7eb49211efbd78eb6f2906c040c9a3cffd254b"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-10/page-5.png",
+          "pngSha256": "8e39fd93080f7dbf1091017d5983703b6eb26a8e4f1bde2b50a2e8621baf4cb5"
+        }
+      ]
+    },
+    {
+      "id": "up-11",
+      "pdfPath": "/protocols/claiborne/up-11-pain-control-adult-protocol.pdf",
+      "pages": 6,
+      "canonicalSha256": "476b35a569bc7d89d25d7459cd46d928387feca75ecf035a46d01fcab9edb9aa",
+      "pdfSha256": "5d60fcff4930d1a5c461872e41e2f532647905b73f050332e670e05881e7c67f",
+      "bytes": 62187,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-11/page-1.png",
+          "pngSha256": "7368dda540d445f3525df14c1a7c1c2139b4dd1b8cd14a9a31bcd5ba57a155df"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-11/page-2.png",
+          "pngSha256": "31009a554f0a453a3f20c6a177cb9c77da5f8410b450c366f61a5f7d26482fca"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-11/page-3.png",
+          "pngSha256": "5f7e9d9cb7527a40585fce50f4dedc7df5e07347f2884ff2354b10871e3c6cdc"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-11/page-4.png",
+          "pngSha256": "f2755440aef76430dabcfe74b50dd76103da52e38e49b982ab338ea43f0900e1"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-11/page-5.png",
+          "pngSha256": "4103c69ede97e3d4a9f41a43269b61997d2e82b8554f879bdadce4900ad2039f"
+        },
+        {
+          "page": 6,
+          "path": "tmp/pdfs/canonical-review/pages/up-11/page-6.png",
+          "pngSha256": "5ec1db2cab8b79f63d7fea2613ae62ca4d281f22110d7259cce4bc56a57197dc"
+        }
+      ]
+    },
+    {
+      "id": "up-12",
+      "pdfPath": "/protocols/claiborne/up-12-police-custody-protocol.pdf",
+      "pages": 6,
+      "canonicalSha256": "e5eb14b67576d0d6de57dfbd539c7f6df52047c3bd7b5136c686ad155067d5ce",
+      "pdfSha256": "56276d42b5d813595ba7b85b8733322ed65006486ba47ffc13fc59c7c386e339",
+      "bytes": 59126,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-12/page-1.png",
+          "pngSha256": "e15581a4539ca9f513076eea8c14a640bac1cf1f4aaf0fa35cc93c37628ebc52"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-12/page-2.png",
+          "pngSha256": "f42c7aa5d38af5e3e935b6e501d77d8b90f6c2c379fb1e2a2f5854a5e264ebb6"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-12/page-3.png",
+          "pngSha256": "2c143adedd14775e45a60622cf6eb5f322ba9aa28ea540d0d2d0477a48439ae6"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-12/page-4.png",
+          "pngSha256": "42eba8bdba721c2109165a4e43c65d3470f9b54d54f488e9b48f38fb4c10e3e7"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-12/page-5.png",
+          "pngSha256": "abaa3d0b70820a5a7228ac58e599d68b7d60ee577b9d7a5849f6e820c2ded473"
+        },
+        {
+          "page": 6,
+          "path": "tmp/pdfs/canonical-review/pages/up-12/page-6.png",
+          "pngSha256": "4eb21a71d0941a6e1a4707e6a059945a5a49132fd748822c43e38c685f263cc2"
+        }
+      ]
+    },
+    {
+      "id": "up-13",
+      "pdfPath": "/protocols/claiborne/up-13-seizure-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "1dacced79b2ffe831842592c2e7299fb7f6d4af9ce2916fe77762c57a627ffbe",
+      "pdfSha256": "2f6bfdf06037e3ef14d3f0cd6a719cbea23bbf979a4b8cf20ae25c6237428864",
+      "bytes": 56760,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-13/page-1.png",
+          "pngSha256": "de6bc953019b9997fe0f2af919ec10ffbde9931802df19a76889376326d9a489"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-13/page-2.png",
+          "pngSha256": "3db8e4b7acebb15b308439427202de9b041f4d8829f6b141f028f4b300f8bf56"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-13/page-3.png",
+          "pngSha256": "68a1aab4dfe6143935a4662af1d3b5a90578341c4832422b2b940bc6f5ac4d17"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-13/page-4.png",
+          "pngSha256": "0add9d9bebae6bec4bc8729abce67f31e8b3249b5b39031b09c31c961fced55b"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-13/page-5.png",
+          "pngSha256": "2c9d6edca2cb0fb78bf59fa61cd687989eebd18d970a7ba317498f18cfcb4f82"
+        }
+      ]
+    },
+    {
+      "id": "up-14",
+      "pdfPath": "/protocols/claiborne/up-14-suspected-stroke-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "a3646fa9cd594753b2559b24293ede41c6cb49b7a190a0a4cf1d43185999ee42",
+      "pdfSha256": "7b0787c90883faad503f236c4a9fea287654c0490bb4df1258759d4cfe786438",
+      "bytes": 57731,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-14/page-1.png",
+          "pngSha256": "f20d466f515ee995b3f2452d908e274309c5dd6c7ff73fa12da6d6885a5bad5f"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-14/page-2.png",
+          "pngSha256": "a84a687a92b7a999a077a8cd0b39511cf79d0297cb7256a6e3692d9f5083fa56"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-14/page-3.png",
+          "pngSha256": "656341f593f535021eac095c36cd9675e50f1c5c8fe70e2ee93b34471ed5bd50"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-14/page-4.png",
+          "pngSha256": "d95a17e50022b328626c1fcf8d093363df55bd0191c2151a8b66235b93189fcb"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-14/page-5.png",
+          "pngSha256": "dd3c934c3fabbf078fb4162ffdb9919f49392ba0f59d74533691a88ba43bbc52"
+        }
+      ]
+    },
+    {
+      "id": "up-15",
+      "pdfPath": "/protocols/claiborne/up-15-suspected-sepsis-protocol.pdf",
+      "pages": 6,
+      "canonicalSha256": "4eabc07ee88431e39ab7de39ce337030f07591eaf599d28561ce39586c4d5e75",
+      "pdfSha256": "65c47e19dc6937dbb6efe6d1708fe41f9a1b458634dafa890c62473d2780ff38",
+      "bytes": 60069,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-15/page-1.png",
+          "pngSha256": "b0557e6a9fbe21b664f63b037abf9ded32780892543eefd92904959df19ad3d7"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-15/page-2.png",
+          "pngSha256": "5c8d618c851dedcccf3347d73c68af8bdec6a8338ace573ac400cb415c44ff12"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-15/page-3.png",
+          "pngSha256": "4358f308869486c5732f12ddf49c1bac67d6a23cfc1a5ef98769612d4441bca0"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-15/page-4.png",
+          "pngSha256": "a61b721890f597afd7ee1b816bc1ad35ba55757e608d6f0edd4cba2e8191d31f"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-15/page-5.png",
+          "pngSha256": "96300e75ac083d75131140d83d72c64632d0513ea9669f602961c86939e1bc9f"
+        },
+        {
+          "page": 6,
+          "path": "tmp/pdfs/canonical-review/pages/up-15/page-6.png",
+          "pngSha256": "8345cc0cc08623b41cacd66ebd99041a39c968907af318f0123ff46a132639b1"
+        }
+      ]
+    },
+    {
+      "id": "up-16",
+      "pdfPath": "/protocols/claiborne/up-16-syncope-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "8e87623e47891ca864dfb93e2fd780573044b13f5d56de4b76263043a76364ff",
+      "pdfSha256": "f6475c3ad55d1266d3c842cb5dfcf39b19b55c482c1cdcb36a700cc428ec1c10",
+      "bytes": 57041,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-16/page-1.png",
+          "pngSha256": "aea8f7e7771f5f24962e2a5925a5efb9a593cede4e4ba5596c14f0ea8beee7b7"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-16/page-2.png",
+          "pngSha256": "c8fa0f4a24d0893a70740cc40fb3911ffbe550281007129239e8f74e24bcdbe8"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-16/page-3.png",
+          "pngSha256": "461dd5ba8af6633e4b7fefa8f8ee5bd7f09a4c55254ed9e75b6a9d8b86549d87"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-16/page-4.png",
+          "pngSha256": "857041814c75cc48e8d1b0c582325a41ba266f90e729798ef592cde80e66b579"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-16/page-5.png",
+          "pngSha256": "137b5d45ebe604972f033a7c4f52ae6e18579fa166cd17c8b5333f86ac24d814"
+        }
+      ]
+    },
+    {
+      "id": "up-17",
+      "pdfPath": "/protocols/claiborne/up-17-behavioral-health-crisis-protocol.pdf",
+      "pages": 7,
+      "canonicalSha256": "98cccf6eb0c65993efe5895c76cc795d2dc607b73ede3094c7e28b7825a0edac",
+      "pdfSha256": "ab2ed3a7e84bb07472006ca2127cfc13482df0e3e71a38210617ad18f30ee685",
+      "bytes": 63662,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-17/page-1.png",
+          "pngSha256": "21c9469c2c688e295bfff6d01b6b84eaef3a21d4030d4005aab430fd95ced283"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-17/page-2.png",
+          "pngSha256": "442845989e4c47100925e97bbd88cf99d8b61b2f4eafdb8f76642670aed7e972"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-17/page-3.png",
+          "pngSha256": "3787e5edac928657de3b4ff5c6e03c47d7c22b2dd206a8393e8ebc54761f0ab7"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-17/page-4.png",
+          "pngSha256": "aad64a81912d98c293a9948e163c2d70b688534eb8684cc21fe57f03aac3b200"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-17/page-5.png",
+          "pngSha256": "1e314da55965274953a99f80bf22ab5d3248763a29cbe0f557e3160a4e1437b4"
+        },
+        {
+          "page": 6,
+          "path": "tmp/pdfs/canonical-review/pages/up-17/page-6.png",
+          "pngSha256": "6d80c7d1d8d6029c83a0ce8f54e05f9d2ebf14aa93247cb9a168019abcca030d"
+        },
+        {
+          "page": 7,
+          "path": "tmp/pdfs/canonical-review/pages/up-17/page-7.png",
+          "pngSha256": "4b88ff8505d30a1358ab68128231bdfbd04cdc112c61d5018a28b07742ad0862"
+        }
+      ]
+    },
+    {
+      "id": "up-18",
+      "pdfPath": "/protocols/claiborne/up-18-behavioral-agitation-sedation-guide-protocol.pdf",
+      "pages": 7,
+      "canonicalSha256": "1906333cc4217afa6a790ac02c0229c6efbc12936820ad28be41e420041e239f",
+      "pdfSha256": "2f8f49f2ad123cb8625280bfb5f492f6fa2beaab7c798f43371532bfeb13fca9",
+      "bytes": 62950,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-18/page-1.png",
+          "pngSha256": "43f7a48be52becbab77378afaba17b244f17263fe3f1657118762ebad2bb3522"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-18/page-2.png",
+          "pngSha256": "4a49719b0c2713cfb02e0389d1e0d8d7c74c6d0eea47dc350d4a4475acec8be6"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-18/page-3.png",
+          "pngSha256": "6ea22b364a2486206b92ee0f40103cf9f5799a34415aecca198464b553f9cc6e"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-18/page-4.png",
+          "pngSha256": "a09d89f1d923508ddc84a0e9c1032586120e3da874fe54dd9c1fbaac79776e25"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-18/page-5.png",
+          "pngSha256": "8a37c512cdd503f72fa72a593e0314c6825b0bc0bf6cea09039d69b9db2e7064"
+        },
+        {
+          "page": 6,
+          "path": "tmp/pdfs/canonical-review/pages/up-18/page-6.png",
+          "pngSha256": "288595d1ab49490562310203ccb4afc72401db504e0c2dc8aae581da05d2785c"
+        },
+        {
+          "page": 7,
+          "path": "tmp/pdfs/canonical-review/pages/up-18/page-7.png",
+          "pngSha256": "2d38013caae23effd6c1559c61184c78f43df4a7bc5eb012801d08aa96cb08b5"
+        }
+      ]
+    },
+    {
+      "id": "up-19",
+      "pdfPath": "/protocols/claiborne/up-19-hyperactive-delirium-with-severe-agitation-protocol.pdf",
+      "pages": 1,
+      "canonicalSha256": "61c185e07da5f19c6bec30e3c32646afaee4250a2e285fc0e66d6b67189853bc",
+      "pdfSha256": "39f7c3a3e9f6086c54ca0d999df6c921ecd703cc31304b09be747151e0f43d50",
+      "bytes": 45213,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-19/page-1.png",
+          "pngSha256": "d1821815a8b2e24cd185a7738ae94700d6975bedfecb8fae46f1e7638d29439b"
+        }
+      ]
+    },
+    {
+      "id": "up-20",
+      "pdfPath": "/protocols/claiborne/up-20-sickle-cell-crisis-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "1feef62c59bacd355342198c549ac113a98c60c5120a18ab651ef78b1d02857d",
+      "pdfSha256": "55bb6f9a1be6fe89e366eed54a04efdd221f54e387cbd01eaeb6a9d47946b5fa",
+      "bytes": 55337,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-20/page-1.png",
+          "pngSha256": "0b5cb3f258c70e83d6e924d3886456f6a7e4e0bb08365956db2a238d1dbd24b7"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-20/page-2.png",
+          "pngSha256": "f106e8b9aca63697986b5e1479fde72291bb2bfab22df28118c2e8c5f78a0dfe"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-20/page-3.png",
+          "pngSha256": "961859cefd0f1e88b55eb60bf4b8297a273e36913c07b5c2d1c4e7c29b4c5f19"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-20/page-4.png",
+          "pngSha256": "11aad62c2685389ae84cea414c185a63e7443b47f5b2703ae836afff6fdadf47"
+        }
+      ]
+    },
+    {
+      "id": "up-21",
+      "pdfPath": "/protocols/claiborne/up-21-family-violence-abuse-protocol.pdf",
+      "pages": 4,
+      "canonicalSha256": "4d3b8305832d2d79e240abe2ae4da6cc9e7f9c78fabe04cedd5e4b59545823ff",
+      "pdfSha256": "9ac9744cd53e3600785d19f68c99fd96132194aad8f2a3e98d0bb0d4405c5587",
+      "bytes": 55629,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-21/page-1.png",
+          "pngSha256": "6cf0082a87e730373bc6f9c4ebc406689fa98ab8df81eab86f9895e2f4c13dc7"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-21/page-2.png",
+          "pngSha256": "27a81912098efc6839c533c3be88a00f6994ab27ce9ec98d0447ed71068fa4be"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-21/page-3.png",
+          "pngSha256": "8f2ea072f9650e8b96ff93e040b2f276d3cba3785bf2118d8b0f2a185abda2f4"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-21/page-4.png",
+          "pngSha256": "61ea9b21260c89340ca7f934ffdd5fb94a1ab7fe89f4c03d91dd425bcae8cdb8"
+        }
+      ]
+    },
+    {
+      "id": "up-22",
+      "pdfPath": "/protocols/claiborne/up-22-sexual-assault-protocol.pdf",
+      "pages": 5,
+      "canonicalSha256": "f741465689b9b112d23d16d1ab63745f09c7a83a3b1bff301d31172446679dfb",
+      "pdfSha256": "33c467aa0d30d60947e472cada583ba948f942a957d290f0e6bac654f2349d66",
+      "bytes": 57591,
+      "renderedPages": [
+        {
+          "page": 1,
+          "path": "tmp/pdfs/canonical-review/pages/up-22/page-1.png",
+          "pngSha256": "df24a50c094e3e8b4c73464cefdc3797065970220a71fa94f4c31b4e6c06e0d7"
+        },
+        {
+          "page": 2,
+          "path": "tmp/pdfs/canonical-review/pages/up-22/page-2.png",
+          "pngSha256": "e8a0a06b25cee5823387635f92edd2bf215f036c6736cb337662939c7982ae58"
+        },
+        {
+          "page": 3,
+          "path": "tmp/pdfs/canonical-review/pages/up-22/page-3.png",
+          "pngSha256": "72d58814fcfd1ae77985fecab6997747d5af2e5ed257ab6233e6a3d1d6f6a5cd"
+        },
+        {
+          "page": 4,
+          "path": "tmp/pdfs/canonical-review/pages/up-22/page-4.png",
+          "pngSha256": "91ca78e3b5d7e9ca516cb54cd58685237e5e5fb1cd2ac5a59cbb8993263fedbc"
+        },
+        {
+          "page": 5,
+          "path": "tmp/pdfs/canonical-review/pages/up-22/page-5.png",
+          "pngSha256": "80ff399beef1435444595a8ef20c037fa313075f6bd29edae49f3d8c537db04a"
+        }
+      ]
+    }
+  ],
+  "renderManifestSha256": "473416762b3bb4a23fb057e67274d8b6f9f7ae550eb98ca63c5695ceed364425",
+  "reviewMethod": "Fresh visual inspection of every page on all 26 Universal contact sheets; selected 150-DPI original-size detail views. No previous visual verdict reused.",
+  "inspectedContactSheets": [
+    "tmp/pdfs/canonical-review/category-up/sheet-01.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-02.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-03.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-04.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-05.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-06.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-07.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-08.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-09.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-10.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-11.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-12.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-13.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-14.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-15.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-16.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-17.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-18.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-19.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-20.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-21.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-22.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-23.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-24.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-25.jpg",
+    "tmp/pdfs/canonical-review/category-up/sheet-26.jpg"
+  ],
+  "inspectedPageCount": 104,
+  "originalSizeDetailViews": [
+    {
+      "id": "up-04",
+      "page": 4
+    },
+    {
+      "id": "up-08",
+      "page": 1
+    },
+    {
+      "id": "up-11",
+      "page": 4
+    },
+    {
+      "id": "up-21",
+      "page": 4
+    }
+  ],
+  "checked": [
+    "clipping",
+    "overlap",
+    "missing or unreadable glyphs",
+    "contrast and legibility",
+    "layout and margins",
+    "header/footer clearance",
+    "page numbering",
+    "title wrapping"
+  ]
+}

@@ -1,9 +1,11 @@
+import { readFile } from "node:fs/promises";
+import { readProtocolAware } from "./protocol-source-helper.mjs";
 import assert from "node:assert/strict";
-import { readFile, stat } from "node:fs/promises";
+import { stat } from "node:fs/promises";
 import test from "node:test";
 import { canonicalPdfPages } from "../data/canonical-pdf-pages.ts";
 
-const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
+const read = (path) => readProtocolAware(path, import.meta.url);
 
 test("UP-11 routes pediatric patients to PM-04, never to UP-12 Police Custody", async () => {
   const [up11Source, pm04Source, catalogSource] = await Promise.all([
